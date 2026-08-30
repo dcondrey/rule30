@@ -1,0 +1,15 @@
+{"k": 2, "R": 2, "sec": 0.01, "states": 1445, "verdict": "NONEMPTY"}
+{"k": 2, "R": 3, "sec": 0.05, "states": 5574, "verdict": "NONEMPTY"}
+{"k": 2, "R": 4, "sec": 0.29, "states": 22087, "verdict": "NONEMPTY"}
+{"k": 3, "R": 2, "sec": 0.07, "states": 5861, "verdict": "NONEMPTY"}
+{"k": 3, "R": 3, "sec": 0.29, "states": 22374, "verdict": "NONEMPTY"}
+{"k": 3, "R": 4, "sec": 1.38, "states": 88423, "verdict": "NONEMPTY"}
+{"k": 4, "R": 2, "sec": 0.26, "states": 23397, "verdict": "NONEMPTY"}
+{"k": 4, "R": 3, "sec": 1.09, "states": 89958, "verdict": "NONEMPTY"}
+{"k": 4, "R": 4, "sec": 4.98, "states": 354151, "verdict": "NONEMPTY"}
+{"k": 5, "R": 2, "sec": 1.04, "states": 92005, "verdict": "NONEMPTY"}
+{"k": 5, "R": 3, "sec": 4.56, "states": 358758, "verdict": "NONEMPTY"}
+{"k": 5, "R": 4, "sec": 19.42, "states": 1416039, "verdict": "NONEMPTY"}
+{"k": 6, "R": 2, "sec": 4.64, "states": 362533, "verdict": "NONEMPTY"}
+{"k": 6, "R": 3, "sec": 23.9, "states": 1426790, "verdict": "NONEMPTY"}
+{"k": 6, "R": 4, "sec": 32.11, "states": 2000000, "verdict": "INCONCLUSIVE (state cap hit)"}
