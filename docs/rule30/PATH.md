@@ -22,6 +22,30 @@ does.  This filter is what killed the expansivity family, and it is the only
 filter in this problem with a track record.  Routes below are ordered by how
 cleanly they pass it.
 
+### 0.1 Second filter: single-column sensitivity (added 2026-08-30)
+
+P1 and P2 are statements about ONE column.  So ask of every proposed quantity:
+
+> Overwrite column 0 of the lone-seed diagram with a periodic word, changing
+> nothing else.  Does the quantity move?
+
+If it moves by `O(1/W)` or less in the window width `W`, the quantity is
+continuous under a density-zero modification and **cannot decide P1 or P2**,
+however strongly it discriminates between rules.  This is R6 obstruction (i)
+below, stated generally, and it retires an entire family -- geometric,
+spectral, topological, information-theoretic -- in advance and for a few
+seconds of compute.
+
+Measured for three geometric proposals in
+`experiments/rule30/p_geometric_attack/GEOMETRIC-TRIAGE.md`: hyperbolic
+lightcone embedding, curvature of a multilinear relaxation, and spectral
+dimension of a Dirac operator all move by `O(1/W)` (the spectral dimension
+halving to three digits per doubling of `W`) while a positive control that
+reads column 0 moves by 96%.  All three separate Rule 30 from Rule 90 by
+26-98%.  **Rule-sensitivity is not evidence of P1-relevance.**
+`discriminator.py` takes a new statistic as a one-function drop-in; run a
+proposal through this filter before building anything.
+
 ## 0.5 PRIOR WORK IN THIS REPO — read before crediting anything below
 
 The pin mechanism in section 1 is **not new to this repo.**  It was already
