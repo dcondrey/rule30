@@ -1,0 +1,16 @@
+# Q-conjunction climb, p=2 tail 01, R=2 k=2
+{"tag": "qclimb Q=1", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 1, "wedge_right": true, "pin_audit": false, "states": 472, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 4, "wv": "onset=5"}
+{"tag": "qclimb Q=2", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 2, "wedge_right": true, "pin_audit": false, "states": 520, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 4, "wv": "onset=5"}
+{"tag": "qclimb Q=3", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 3, "wedge_right": true, "pin_audit": false, "states": 1032, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 4, "wv": "onset=6"}
+{"tag": "qclimb Q=4", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 4, "wedge_right": true, "pin_audit": false, "states": 2040, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 10, "wv": "onset=5"}
+{"tag": "qclimb Q=5", "sec": 0.02, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 5, "wedge_right": true, "pin_audit": false, "states": 4096, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 10, "wv": "onset=5"}
+{"tag": "qclimb Q=6", "sec": 0.05, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 6, "wedge_right": true, "pin_audit": false, "states": 8144, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 12, "wv": "onset=5"}
+{"tag": "qclimb Q=7", "sec": 0.09, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 7, "wedge_right": true, "pin_audit": false, "states": 16312, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 22, "wv": "onset=5"}
+{"tag": "qclimb Q=8", "sec": 0.17, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 8, "wedge_right": true, "pin_audit": false, "states": 32736, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 26, "wv": "onset=7"}
+{"tag": "qclimb Q=9", "sec": 0.33, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 9, "wedge_right": true, "pin_audit": false, "states": 65848, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 30, "wv": "onset=7"}
+{"tag": "qclimb Q=10", "sec": 0.65, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 10, "wedge_right": true, "pin_audit": false, "states": 132152, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 32, "wv": "onset=7"}
+{"tag": "qclimb Q=11", "sec": 1.38, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 11, "wedge_right": true, "pin_audit": false, "states": 265112, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 32, "wv": "onset=7"}
+{"tag": "qclimb Q=12", "sec": 2.89, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 12, "wedge_right": true, "pin_audit": false, "states": 531576, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 42, "wv": "onset=7"}
+{"tag": "qclimb Q=13", "sec": 5.87, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 13, "wedge_right": true, "pin_audit": false, "states": 1065392, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 38, "wv": "onset=7"}
+{"tag": "qclimb Q=14", "sec": 12.14, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 14, "wedge_right": true, "pin_audit": false, "states": 2134760, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 50, "wv": "onset=7"}
+{"tag": "qclimb Q=15", "sec": 18.16, "rule": 30, "R": 2, "k": 2, "w": "01", "Q": 15, "wedge_right": true, "pin_audit": false, "states": 3000000, "pin_violations": 0, "verdict": "INCONCLUSIVE (state cap hit)"}

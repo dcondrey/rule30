@@ -1,0 +1,17 @@
+# pin audit OFF vs ON; pin_violations must be 0 and states equal
+regression rule=30 R=2 k=2 pin_audit: 0 mismatches, accepted=True, pin_hits=0
+regression rule=30 R=3 k=2 pin_audit: 0 mismatches, accepted=True, pin_hits=0
+regression rule=30 R=4 k=2 pin_audit: 0 mismatches, accepted=True, pin_hits=0
+regression rule=30 R=3 k=3 pin_audit: 0 mismatches, accepted=True, pin_hits=0
+{"tag": "pin w=10 pa=False", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "10", "Q": 2, "wedge_right": true, "pin_audit": false, "states": 526, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 4, "wv": "onset=4"}
+{"tag": "pin w=10 pa=True", "sec": 0.02, "rule": 30, "R": 2, "k": 2, "w": "10", "Q": 2, "wedge_right": true, "pin_audit": true, "states": 323, "pin_violations": 100, "verdict": "NONEMPTY", "cycle_len": 4, "wv": "onset=4"}
+{"tag": "pin w=100 pa=False", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "100", "Q": 2, "wedge_right": true, "pin_audit": false, "states": 546, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 9, "wv": "onset=4"}
+{"tag": "pin w=100 pa=True", "sec": 0.02, "rule": 30, "R": 2, "k": 2, "w": "100", "Q": 2, "wedge_right": true, "pin_audit": true, "states": 341, "pin_violations": 100, "verdict": "NONEMPTY", "cycle_len": 6, "wv": "onset=4"}
+{"tag": "pin w=110 pa=False", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "110", "Q": 2, "wedge_right": true, "pin_audit": false, "states": 599, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 3, "wv": "onset=0"}
+{"tag": "pin w=110 pa=True", "sec": 0.02, "rule": 30, "R": 2, "k": 2, "w": "110", "Q": 2, "wedge_right": true, "pin_audit": true, "states": 354, "pin_violations": 100, "verdict": "NONEMPTY", "cycle_len": 6, "wv": "onset=0"}
+{"tag": "pin w=1000 pa=False", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "1000", "Q": 2, "wedge_right": true, "pin_audit": false, "states": 570, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 12, "wv": "onset=4"}
+{"tag": "pin w=1000 pa=True", "sec": 0.02, "rule": 30, "R": 2, "k": 2, "w": "1000", "Q": 2, "wedge_right": true, "pin_audit": true, "states": 362, "pin_violations": 100, "verdict": "NONEMPTY", "cycle_len": 16, "wv": "onset=4"}
+{"tag": "pin w=1100 pa=False", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "1100", "Q": 2, "wedge_right": true, "pin_audit": false, "states": 611, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 4, "wv": "onset=3"}
+{"tag": "pin w=1100 pa=True", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "1100", "Q": 2, "wedge_right": true, "pin_audit": true, "states": 364, "pin_violations": 100, "verdict": "NONEMPTY", "cycle_len": 8, "wv": "onset=3"}
+{"tag": "pin w=1110 pa=False", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "1110", "Q": 2, "wedge_right": true, "pin_audit": false, "states": 657, "pin_violations": 0, "verdict": "NONEMPTY", "cycle_len": 8, "wv": "onset=3"}
+{"tag": "pin w=1110 pa=True", "sec": 0.01, "rule": 30, "R": 2, "k": 2, "w": "1110", "Q": 2, "wedge_right": true, "pin_audit": true, "states": 380, "pin_violations": 100, "verdict": "NONEMPTY", "cycle_len": 8, "wv": "onset=3"}

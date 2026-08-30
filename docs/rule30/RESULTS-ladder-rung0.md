@@ -131,13 +131,18 @@ Note this is *not* vacuity: for p = 1 the same constraint set does bite, mode i
 NONEMPTY and mode ii EMPTY.  The `Diff_q` tightening is doing real work at
 p = 1 and stops doing it at p = 2.
 
-## 4. What would have to change
+## 4. What would have to change  [SUPERSEDED 2026-08-30, see section 6]
+
+*The three candidates listed here were all assessed wrongly.  Section 6
+records what the runs showed; this section is kept only so the correction is
+legible.*
 
 R7's remaining hope is a constraint that binds the right side.  Candidates, in
 the order their cost suggests:
 
-* a right-wedge constraint (`col_x(t) = 0` for `x > t`) on the modelled columns,
-  which the current encoding never imposes;
+* a right-wedge constraint (`col_x(t) = 0` for `x > t`) on the modelled
+  columns, which the current encoding never imposes;
+
 That is the only live candidate, and two others that suggest themselves are
 already dead:
 
@@ -172,3 +177,47 @@ cd ../p1_attack && PYTHONPATH=../ladder uv run python sweep_periods.py 8 2 2
 PYTHONPATH=../ladder uv run python sweep_k.py
 PYTHONPATH=../ladder uv run python deep_small_p.py
 ```
+
+## 6. Correction: all three section-4 assessments were wrong
+
+Run 2026-08-30, same day.  Code and logs:
+`experiments/rule30/p1_constrained_attack/`.  Full write-ups:
+`p1_agent1_right_wedge.md`, `p1_agent2_pincascade.md`,
+`p1_agent3_universal_q.md`.
+
+| section 4 said | actually |
+|---|---|
+| right-wedge "never imposed", the one live candidate | **already imposed** -- `ax = abs(x)` in `step_window` covers positive x. Confirmed live by disabling it: state space grows 1.38-1.51x. No verdict changes. |
+| pin cascade "dead by construction, entailed" | **not entailed at x = R**, where the forward rule has no `col_{R+1}` to hold against. A genuine constraint: cascade prunes 39%, the full 1-pin `s(t,x+1)=1 => s(t,x) = NOT s(t+1,x+1)` prunes 58%. No verdict changes. |
+| all-q Diff "dead, no choice of q escapes" | **not a choice of q.** `S(1..Q)` is a subset of every `S(q)`, so EMPTY is strictly easier, and the disjunctive conclusion still discharges Jen/Kopra. A real new mode; calibrated; still NONEMPTY to Q = 14. |
+
+The unconstrained region is `x > R`, not `x > t`.  Agent 2's pin is the only
+thing found so far that reaches it.
+
+**New, and it closes the Q direction the way section 3 closed the depth
+direction.**  `S(1..Q)` is omega-regular, so nonempty implies an ultimately
+periodic witness `u v^omega`, whose `col_{-1}` is eventually `|v|`-periodic;
+membership forbids every period `<= Q`, so `|v| > Q`.  Hence `S(1..Q)` is
+empty iff every admissible lasso has `col_{-1}` period at most `Q`, while the
+available cycle lengths are bounded only by `N(Q)`, measured to double per
+unit `Q`.  Constraint and freedom grow together again.  Measured witness cycle
+length tracks about `3.5 Q`.
+
+Sharper, and a trap for any later session: `col_{-1}`'s eventual period is the
+cycle length of the *base* window state, bounded by the fixed count
+`N_base(R,k)` (472 at R=2,k=2 without the pin, at most 199 with it).  The
+lemma forces that period to exceed `Q`.  So at `Q >= N_base` the language is
+empty for automaton-theoretic reasons independent of Rule 30, and **an EMPTY
+there is an artifact, not a theorem.**  The measured escape reaches that
+threshold near `Q = 135`.  Check any EMPTY against `N_base` before believing
+it.
+
+**A cost to record.**  The pin is Rule-30-specific by design, so the true
+Rule 90 word is rejected by it and the Rule 90 control collapses to EMPTY.
+The pin-augmented ladder therefore has **no section-0 soundness control**;
+what remains is the Rule 30 regression and the `p = 1` calibration, both of
+which pass.  State this wherever an EMPTY from that encoding is reported.
+
+Still no `Thm(p)` for any `p >= 2`: all 69 primitive necklaces `p = 2..8` are
+NONEMPTY under wedge + full pin + Q = 4, zero state caps, every witness
+verified.

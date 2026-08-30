@@ -1,0 +1,24 @@
+# soundness: true lone-seed word must survive both pin modes
+rule=30 R=2 k=2 cascade=True full=False: 0 mismatches, accepted=True, hits=0
+rule=30 R=2 k=2 cascade=False full=True: 0 mismatches, accepted=True, hits=0
+rule=30 R=3 k=2 cascade=True full=False: 0 mismatches, accepted=True, hits=0
+rule=30 R=3 k=2 cascade=False full=True: 0 mismatches, accepted=True, hits=0
+rule=30 R=4 k=2 cascade=True full=False: 0 mismatches, accepted=True, hits=0
+rule=30 R=4 k=2 cascade=False full=True: 0 mismatches, accepted=True, hits=0
+rule=30 R=3 k=3 cascade=True full=False: 0 mismatches, accepted=True, hits=0
+rule=30 R=3 k=3 cascade=False full=True: 0 mismatches, accepted=True, hits=0
+rule=90 R=2 k=2 cascade=True full=False: 0 mismatches, accepted=False, hits=1
+rule=90 R=2 k=2 cascade=False full=True: 0 mismatches, accepted=False, hits=1
+rule=90 R=3 k=2 cascade=True full=False: 0 mismatches, accepted=False, hits=1
+rule=90 R=3 k=2 cascade=False full=True: 0 mismatches, accepted=False, hits=1
+rule=90 R=4 k=2 cascade=True full=False: 0 mismatches, accepted=False, hits=1
+rule=90 R=4 k=2 cascade=False full=True: 0 mismatches, accepted=False, hits=1
+rule=90 R=3 k=3 cascade=True full=False: 0 mismatches, accepted=False, hits=1
+rule=90 R=3 k=3 cascade=False full=True: 0 mismatches, accepted=False, hits=1
+# calibration under pins: r30 p=1 EMPTY, r90 w=0 NONEMPTY
+{"tag": "cal r30 w=1 cascade=True full=False", "sec": 0.0, "rule": 30, "R": 1, "k": 1, "w": "1", "Q": 2, "wedge_right": true, "pin_audit": true, "pin_full": false, "states": 53, "pin_violations": 10, "verdict": "EMPTY"}
+{"tag": "cal r30 w=0 cascade=True full=False", "sec": 0.0, "rule": 30, "R": 2, "k": 1, "w": "0", "Q": 2, "wedge_right": true, "pin_audit": true, "pin_full": false, "states": 142, "pin_violations": 29, "verdict": "EMPTY"}
+{"tag": "ctrl r90 w=0 cascade=True full=False", "sec": 0.0, "rule": 90, "R": 2, "k": 1, "w": "0", "Q": 2, "wedge_right": true, "pin_audit": true, "pin_full": false, "states": 3, "pin_violations": 1, "verdict": "EMPTY"}
+{"tag": "cal r30 w=1 cascade=False full=True", "sec": 0.0, "rule": 30, "R": 1, "k": 1, "w": "1", "Q": 2, "wedge_right": true, "pin_audit": false, "pin_full": true, "states": 45, "pin_violations": 13, "verdict": "EMPTY"}
+{"tag": "cal r30 w=0 cascade=False full=True", "sec": 0.0, "rule": 30, "R": 2, "k": 1, "w": "0", "Q": 2, "wedge_right": true, "pin_audit": false, "pin_full": true, "states": 105, "pin_violations": 39, "verdict": "EMPTY"}
+{"tag": "ctrl r90 w=0 cascade=False full=True", "sec": 0.0, "rule": 90, "R": 2, "k": 1, "w": "0", "Q": 2, "wedge_right": true, "pin_audit": false, "pin_full": true, "states": 3, "pin_violations": 1, "verdict": "EMPTY"}

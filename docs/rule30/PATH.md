@@ -272,9 +272,13 @@ does not run without its own pre-registration.
 mechanizing R1.  RUN 2026-08-30.  Calibration PASSED; all open cases p = 2..8
 NONEMPTY with verified witnesses; verdict independent of depth (R and k) over
 the whole decided range.  `Thm(1)` mechanised, no `Thm(p)` for p >= 2.  Do NOT
-re-run at larger R or k — see `RESULTS-ladder-rung0.md` section 3 for the
-measurement that retires depth, and section 4 for the constraint changes that
-are the only remaining way in.**
+re-run at larger R or k, and do NOT raise the Diff bound Q — both directions
+are now measured closed by the same mechanism, constraint and freedom growing
+together.  `RESULTS-ladder-rung0.md` section 3 retires depth; section 6
+retires Q and corrects all three of section 4's assessments.  The one
+constraint found that reaches the unmodelled region x > R is the full 1-pin
+at the boundary column, which prunes 58% and flips no verdict, and which costs
+the Rule 90 soundness control.**
 Target family, one theorem per period: *Thm(p): no word eventually periodic
 with period `p` is the centre column of a Rule 30 diagram satisfying the
 lone-seed wedge constraints, for ANY transient length.*  Qualitatively beyond
@@ -370,6 +374,19 @@ be evidence against the route entirely, and news on its own.
 Honest risk, named: controlling what `Y` contains may require knowing the
 column; the circularity is the research question.
 
+**DIAGNOSTIC RESULT (2026-08-30): route stays alive; no theorem.  See
+`RESULTS-orbit-closure-diagnostic.md`.**  `T = 1,100,000` (smallest length
+admitting the full window ladder to `W = 2^20`).  Block-frequency sup-deviations
+decay with slope `-0.483` to `-0.532` in `log2 W` for `L = 1..12`, i.e. the
+`W^{-1/2}` law, and sit inside the 20-seed i.i.d. Bernoulli(1/2) band at
+essentially every window and depth (1 exceedance in 25 cells at `L=2, W=2^14`,
+within the multiple-comparison rate).  None of the three pre-registered
+disconfirming criteria fired: no deep-window drift, no depth-dependent plateau,
+no exceedance cluster.  Rule 90 control PASSED at every cell, saturating the
+exact `1 - 2^-L` value, so the pipeline detects the failure mode it was built
+to detect.  Verdict as pre-registered: CONSISTENT WITH unique ergodicity, which
+proves nothing.  The route is not killed and not advanced.
+
 **R9 — proof-complexity irreducibility.  PROPOSED, restricted-model arm for
 prize Problem 3.  Sweep-verified unexplored.**
 Encode the light cone as a CNF (each cell one XOR-of-OR constraint); row
@@ -395,6 +412,30 @@ derivations plausibly exist there; a technique insensitive to the OR
 nonlinearity proves too much.  Inverted kill condition worth wanting: a
 sub-quadratic resolution derivation family for Rule 30 would be a publishable
 upper bound and a mechanism candidate for the Arm 3 tournament.
+
+**PROBE RESULT (2026-08-30): precondition holds; no lower bound, no shortcut.
+See `RESULTS-proof-complexity-probe.md`.**  Metric is a cell-level GROUP MUS
+(one selector per cell), after the prereg caught that the clause-level MUS is
+degenerate: the firing-clause set is a MUS of ~the whole diamond for any rule,
+so it measures cone area, not rule structure.  Re-verified from the raw JSON by
+the parent session.  Rule 30: GMUS `= 33, 119, 445, 1604, 6535, 25108` cells at
+`n = 8..256`, a near-constant **76-82% of the backward diamond at every band**,
+fitted exponent **1.932** (`n >= 16`); largest band `n=256` took 2021 s.  The
+cell set is left-heavy 2:1 (16,380 left / 8,472 right at `n=256`), matching the
+damage-cone asymmetry.  Rule 90 control: GMUS `= 17, 43, 113, 307, 857`, an
+**exact match to the analytic odd-binomial Sierpinski set at every band and
+every seed**, with the fraction *decaying* `0.415 -> 0.103`.  That contrast is
+the pipeline's separation proof: constant fraction for the nonlinear rule,
+vanishing fraction for the additive one, so the probe measures rule structure
+and passes the section 0 filter.
+**The inverted outcome did NOT fire.**  No small sufficient constraint set for
+Rule 30, hence no centre-column shortcut candidate for the Arm 3 tournament.
+This supports the R9 conjecture's *precondition* (the cone is derivationally
+necessary in the axiom-subset sense) and is NOT evidence of a derivation-length
+lower bound; it says nothing whatever about Wolfram's Turing-machine Problem 3.
+Aside, not a finding: Rule 90's `n=256` GMUS stalled in CDCL parity reasoning
+(Tseitin-style hardness in the control), so that ladder stops at 128 with 5
+usable bands, above the kill threshold.
 
 This is a $10,000 prize problem, open since 2019 and worked by Wolfram, Jen,
 Kopra and Rowland, with no prize claimed.  The realistic output of R1/R2 is a
