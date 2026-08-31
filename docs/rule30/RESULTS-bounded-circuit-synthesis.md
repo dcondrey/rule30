@@ -25,7 +25,12 @@ gates over the full basis `B2` minus the six degenerate operators (two
 constants, four projections/negations); the output must be a chain step, so a
 bare negated input is not free.  `k_min` in this convention is Knuth's
 combinational complexity `C(f)`, comparable against `u(2)=1, u(3)=4, u(4)=7,
-u(5)=12` (TAOCP 4A, 7.1.2).
+u(5)=12` (TAOCP 4A, 7.1.2).  Those `u(m)` values are quoted from the
+literature and were **not** verified locally; `u(3)=4` is corroborated here by
+the upper-side sanity test (all 256 three-bit functions realizable at `k=4`),
+but `u(4)` and `u(5)` are not.  This matters for exactly one claim -- the
+inherited `m=5` upper bound -- and for nothing else.  Every lower bound in this
+document is machine-derived and independent of it.
 
 ## 2. This is not a repeat of prior work in this tree
 
@@ -129,7 +134,11 @@ Reported only for completeness; the whole range of `k_min` at this arity is
 | AND of all bits | 2 |
 | MAJ-3 | 4 |
 
-Random 3-bit null (60 seeded samples): median 2, support `{0,1,2,3,4}`.
+Random 3-bit null (60 seeded samples): median 2, support `{0,1,2,3,4}`.  Two
+of the 60 came back `k_min = 0`, i.e. the sampled table was a constant or a
+bare projection; roughly 4% of 3-bit functions are, so this is expected, but
+those two are degenerate members of the null rather than measurements of
+synthesis cost.
 
 ### m = 4 (N = 16)
 
