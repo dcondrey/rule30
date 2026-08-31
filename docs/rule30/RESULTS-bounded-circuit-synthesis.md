@@ -167,7 +167,30 @@ table density rather than structure): **[FILL m4-null-w9]**
 
 ### m = 5 (N = 32)
 
-**[FILL m5]**
+Exact `k_min` is out of reach here; what is obtained is a bracket.  Every
+value of `k` from 1 upward was run as a separate complete call, so the lower
+bound does not lean on monotonicity in `k` (which the no-dead-step constraint
+denies -- see the pre-registration).
+
+| k | result | time |
+|---|---|---|
+| 1 | UNSAT | 0.02 s |
+| 2 | UNSAT | 0.07 s |
+| 3 | UNSAT | 0.11 s |
+| 4 | UNSAT | 0.61 s |
+| 5 | UNSAT | 9.49 s |
+| 6 | UNSAT | 357 s |
+**[FILL m5rest]**
+
+**Lower bound obtained: `k_min(m=5) >= 7`.**  No Boolean chain of six or fewer
+two-input gates computes `c(n)` for all `n < 32`.
+
+*Conditionality, stated plainly:* the `m = 5` UNSAT results were run with the
+distinct-fanin-pair symmetry break enabled.  That break is validated
+exhaustively at `m = 3` (all 256 functions, every `k`) and directly at `m = 4`
+(the theorem reproduced with all breaks off), but **not** at `m = 5`, where a
+no-breaks re-run of the decisive calls is out of reach.  The `m = 4` theorem is
+unconditional; the `m = 5` lower bound is conditional on that break.
 
 ### m = 6 and beyond
 
