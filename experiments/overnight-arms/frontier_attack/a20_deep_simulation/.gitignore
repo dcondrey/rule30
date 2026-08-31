@@ -4,7 +4,10 @@
 *.bin
 !*.bin.sha256
 
-# Live local run (deep_gen.py); mid-write, not an artifact.
+# Live local run (deep_gen.py, PID 51480 as of 2026-08-31).
+# depth24h.log is deliberately NOT listed here: it is already tracked as of
+# 89182a5, and .gitignore does not apply to tracked files. It will keep showing
+# as modified until the 24 h run ends, at which point commit the final log.
 depth24h_column.bin
 depth24h_checkpoint.json
 

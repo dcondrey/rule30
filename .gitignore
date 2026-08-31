@@ -1,0 +1,21 @@
+# macOS / Python / pytest droppings.
+.DS_Store
+__pycache__/
+.pytest_cache/
+
+# Regenerable numeric artifacts. Every one is reproducible from the script
+# that wrote it; committing them would put ~190 MB of derived data in history
+# for no auditable gain. Where a specific run's bits are load-bearing, pin them
+# with a checksum manifest instead (see
+# experiments/overnight-arms/frontier_attack/a20_deep_simulation/CHECKSUMS.sha256).
+*.npy
+*.bin
+
+# Editor and reparse backups.
+*.bak
+
+# LaTeX build products.
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
