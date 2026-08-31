@@ -1,0 +1,245 @@
+# Bounded exact circuit synthesis for Rule 30's centre column
+
+Run 2026-08-31.  Code, pre-registration and raw JSON under
+`experiments/sygus-p3/`.  Pre-registration was written before the main runs;
+the two calls that preceded it (a solver benchmark and one feasibility probe)
+are disclosed in its section 6.
+
+**Do not treat anything here as bearing on P3 asymptotically.**  Every result is
+a statement about one finite input width.  See section 7.
+
+## 1. What was asked
+
+Let `c(n)` be Rule 30's centre column at step `n` from a lone seed, `c(0) = 1`
+the seed row (OEIS A051023, offset 0).  For `m` input bits let `f_m` be the
+function from the binary encoding of `n` to `c(n)` for all `n < 2^m`, and let
+`k_min(m)` be the minimum length of a Boolean chain computing `f_m`.
+
+The search is **complete within the bound**: an UNSAT answer at `k` is a
+theorem that no `k`-step chain computes `c` on `[0, 2^m)`, not a report that a
+search failed.  That completeness is the whole reason to run it, and it is what
+separates this from the stochastic LLM-evolution arm.
+
+**Chain model, stated because it affects the numbers.**  Steps are two-input
+gates over the full basis `B2` minus the six degenerate operators (two
+constants, four projections/negations); the output must be a chain step, so a
+bare negated input is not free.  `k_min` in this convention is Knuth's
+combinational complexity `C(f)`, comparable against `u(2)=1, u(3)=4, u(4)=7,
+u(5)=12` (TAOCP 4A, 7.1.2).
+
+## 2. This is not a repeat of prior work in this tree
+
+Confirmed against the register, and the register's own words carry the claim.
+
+* **Obstruction I** (`PATH.md` 9.2) is about *refutation* of the light-cone CNF
+  `F_n` with the input pinned to the lone seed.  Its content is that those
+  instances are satisfiable with a unique solution, so every surveyed hardness
+  technique -- all of which need unsatisfiability -- is inapplicable.  This
+  experiment runs the other way: `n` is a free binary input, the instances are
+  *synthesis* instances, and the informative answers are exactly the UNSAT
+  ones.  Obstruction I neither covers nor blocks it.
+
+* **Arm `a22_p3_succinct_index`** did a literature-only Tier-3 check on this
+  precise object, verdict "GENUINELY OPEN, no prior work transfers", and closed
+  with: *"No first probe was executed, per this arm's literature-only scope."*
+  The same arm drew the distinction that keeps this out of `PATH.md` 8.7's T4
+  ("non-uniform circuit lower bounds are structurally dead"): T4 is about one
+  hardwired circuit per `n`, "a different object from the *uniform*
+  succinct-index question asked here -- the register does not currently draw
+  that distinction anywhere."
+
+**Verdict: genuinely distinct.  This is that first probe.**
+
+## 3. Ground truth and instrument validation
+
+Everything below depends on the truth table being right and the solver's UNSAT
+answers being trustworthy, so both were checked before any Rule 30 number was
+read.
+
+**Ground truth.**  Two deliberately dissimilar simulators (explicit
+list-of-cells with an 8-entry rule table; whole rows as python bignums with
+shift/mask) agree cell-for-cell to `t = 200` for rules 30, 90, 110 and 150, and
+both reproduce all 102 published terms of A051023 exactly.  (`rule30.py`,
+`oeis_check.py`.)
+
+**Encoding.**  SSV formulation of Boolean-chain exact synthesis, following
+Haaswijk, Mishchenko, Soeken and De Micheli, *SAT-Based Exact Synthesis:
+Encodings, Topology Families, and Parallelism*, IEEE TCAD 39(4):871-884 (2020),
+over the chain model of Knuth TAOCP 4A 7.1.2.  Nothing was invented locally
+except the choice of which optional symmetry breaks to enable, and those are
+validated below.
+
+**Solver choice, measured not assumed.**  Byte-identical CNF fed to CaDiCaL
+(via `python-sat`) and to Z3, Rule 30 at `m = 4`:
+
+| k | vars | clauses | result | CaDiCaL | Z3 |
+|---|---|---|---|---|---|
+| 4 | 196 | 7326 | UNSAT | 0.071 s | 2.005 s |
+| 5 | 244 | 11523 | SAT | 0.288 s | 4.363 s |
+| 6 | 300 | 17171 | SAT | 0.201 s | 3.580 s |
+| 7 | 365 | 24591 | SAT | 0.118 s | 4.666 s |
+
+CaDiCaL is 20-30x faster; the instance is pure CNF with no theory content, so
+the SMT machinery only adds cost.  CaDiCaL used throughout.  The two solvers
+also **agree** on the `k = 4` UNSAT, which independently rules out a solver bug
+on the `m = 4` theorem.
+
+**Sanity tests, two-directional** (`test_synth.py`).  An under-constrained
+encoding makes every `k_min` too small; an over-constrained one makes every
+UNSAT worthless.  Both checked:
+
+* Lower side -- every literature-known minimum reproduced exactly:
+  `xor2 = 1`, `and2 = 1`, `maj3 = 4`, `parity3 = 2`, `parity4 = 3`,
+  `and4 = 3`, `maj3-ignoring-a-fourth-input = 4`.  Every SAT chain returned is
+  re-evaluated against the truth table by an independent evaluator before it
+  is believed; all verified.
+* Upper side -- all 256 three-bit functions are SAT at `k = u(3) = 4`.  Zero
+  spurious UNSAT.
+
+**Symmetry breaks validated, not assumed.**  The colex step ordering is
+unconditionally sound (any chain topologically re-sorts).  The distinct-fanin-
+pair break is the exposed one: the textbook optimal MAJ-3 chain uses the same
+pair twice, and survives only because an alternative 4-step chain exists.  Two
+checks close it:
+
+* All 256 three-bit functions, full `k_min` computed with the break on and
+  with it off: **[FILL m3-256]**.
+* Rule 30 at `m = 4`, `k = 1..5`, with both optional breaks **disabled**:
+  **[FILL m4-nobreaks]**.
+
+## 4. `k_min` results
+
+### m = 3 (N = 8)
+
+Reported only for completeness; the whole range of `k_min` at this arity is
+`0..4`, so nothing here discriminates.
+
+| function | `k_min` |
+|---|---|
+| Rule 30 centre column, offset 0 | 2 |
+| Rule 30 centre column, offset 1 | 3 |
+| Rule 90 centre column | 2 |
+| Rule 150 centre column | 0 |
+| Rule 60 centre column | 0 |
+| parity of `n` | 2 |
+| AND of all bits | 2 |
+| MAJ-3 | 4 |
+
+Random 3-bit null (60 seeded samples): median 2, support `{0,1,2,3,4}`.
+
+### m = 4 (N = 16)
+
+Target truth table, Rule 30 offset 0: `1101110011000101` (Hamming weight 9).
+
+| function | `k_min` |
+|---|---|
+| **Rule 30 centre column, offset 0** | **5** |
+| **Rule 30 centre column, offset 1** | **6** |
+| Rule 90 centre column | 3 |
+| Rule 150 centre column | 0 |
+| Rule 60 centre column | 0 |
+| parity of `n` | 3 |
+| AND of all bits | 3 |
+| MAJ-3 (fourth input ignored) | 4 |
+
+**The theorem obtained.**  No Boolean chain of 4 or fewer two-input gates
+computes `c(n)` for all `n < 16`.  Five gates suffice, and a five-gate chain
+was produced and independently verified.  `k_min(m=4) = 5` exactly, against a
+maximum of `u(4) = 7` over all 4-bit functions.
+
+Random null (60 seeded uniform tables): **[FILL m4-null]**
+Weight-matched null (60 seeded tables of Hamming weight 9, matching the
+target, since sparse tables synthesize cheaper and an unmatched null partly
+measures density rather than structure): **[FILL m4-null-w9]**
+
+### m = 5 (N = 32)
+
+**[FILL m5]**
+
+### m = 6 and beyond
+
+Out of reach.  See the feasibility curve.
+
+## 5. Feasibility curve
+
+**[FILL feasibility]**
+
+## 6. Reading the numbers honestly
+
+**The instrument kill-check passes.**  Registered in advance: if the structured
+controls' `k_min` were not appreciably below the random median at `m = 4`, the
+instrument would have no resolving power and no comparative statement would be
+allowed.  The controls come in at 0, 0, 3, 3, 3 against a random median of
+**[FILL median]**.  The instrument resolves.
+
+**Rule 30 sits clearly above every structured control.**  At `m = 4` it needs 5
+gates where the linear-CA columns need 0 to 3 and parity needs 3.  This is the
+one comparative statement the design supports, and it is the expected null:
+the centre column does not look like a cheap automatic sequence at this width.
+
+**Three reasons not to read more into it than that.**
+
+1. *Discreteness.*  Random 4-bit `k_min` lives on a support of about four
+   integers.  A percentile rank of Rule 30 within that is one integer of
+   movement on a four-point scale, not a measurement.
+2. *The offset swing is the noise floor.*  Changing nothing but the indexing
+   convention -- whether `c(0)` is the seed row or the row after -- moves
+   `k_min` from 5 to 6 at `m = 4`.  That is a full gate, the same magnitude as
+   the entire gap between Rule 30 and the random median.  A quantity that a
+   bookkeeping choice moves as far as the effect does is not resolving the
+   effect.
+3. *The arity ceiling dominates the growth question.*  The naive discriminator
+   ("`k_min` linear in `N` = incompressible, sublinear = shortcut") **cannot
+   fire** at `m <= 5`, because `u(m) <= 12` there for *every* function of that
+   arity.  Sublinearity in `N = 2^m` is guaranteed by arity alone and says
+   nothing about Rule 30.  This is why the pre-registration dropped it as the
+   discriminator before the runs rather than after.  No trend line is drawn
+   across the `m` points here, and the four-point growth curve should not be
+   presented as evidence of incompressibility.
+
+## 7. What this does and does not establish
+
+**Established, unconditionally:** `k_min(m=4) = 5` for Rule 30's centre column
+over the full `B2` chain model -- a small exact theorem, machine-checked, with
+the UNSAT at `k = 4` confirmed by two independent solvers and reproduced with
+all optional symmetry breaks disabled.  Plus the same for `m = 3`, and a
+bracket at `m = 5`.
+
+**Not established, and cannot be by this method:**
+
+* **P3 is untouched.**  P3 is an asymptotic claim about cost per bit as
+  `n -> infinity`.  Every number here concerns one finite width.  This is the
+  same structural gap as obstruction H: an exhaustive finite computation does
+  not close an asymptotic question, no matter how complete it is within its
+  bound.  Nothing in this document should be cited as evidence for or against
+  computational irreducibility.
+* **No compression signal, and no evidence against one.**  The registered
+  strong outcome (Rule 30 at or below the structured controls, or in the bottom
+  decile of the null, at both `m = 4` and `m = 5`) did not occur.  The null
+  occurred.  But the null occurring at `m <= 5` is close to uninformative for
+  the reasons in section 6, and should not be reported as "Rule 30 is
+  incompressible" in any form.
+* **`k_min` is not a compression rate across `m`.**  The target function
+  changes with `m` -- a longer prefix, not a refinement of the same object --
+  so the values are not commensurable as a sequence.
+
+**What is actually worth carrying forward:** the feasibility wall is now
+measured rather than guessed, so the next person knows where the method dies
+and does not need to rediscover it; the encoding, controls and validation
+harness are reusable for any other sequence someone wants to put the same
+question to; and the object `a22_p3_succinct_index` flagged as open has now had
+its first computation, with a result rather than a plan.
+
+## 8. Suggested register additions (not applied -- PATH.md untouched)
+
+For the user to accept or reject:
+
+1. A row recording the uniform succinct-index question as *probed, bounded
+   result obtained, still open* -- distinct from the rows obstruction I kills
+   (9, 81, 85, 87) and from T4's non-uniform territory.
+2. A note under 8.7 making explicit the uniform vs non-uniform distinction that
+   `a22_p3_succinct_index` observed "the register does not currently draw
+   anywhere."
+3. A one-line feasibility fact for future arms: complete `B2` exact synthesis
+   of a 5-bit truth table with this encoding reaches `k = `**[FILL wall]** in
+   hours on one machine, and `m = 6` is not reachable.

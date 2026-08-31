@@ -1,0 +1,6 @@
+{"m3_all256_mismatches": []}
+{'k': 1, 'sat': False, 's': 0.0}
+{'k': 2, 'sat': False, 's': 0.0}
+{'k': 3, 'sat': False, 's': 0.07}
+{'k': 4, 'sat': False, 's': 0.42}
+{'k': 5, 'sat': True, 's': 0.71}
