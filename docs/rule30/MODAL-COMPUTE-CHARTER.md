@@ -130,11 +130,25 @@ stay off the network, and the staged ceilings still gate release.
 
 **Retroactive entry.**  The `a20` arm ran before any of this existed: the guard
 was imported by none of its scripts and no ledger was created, so no stage was
-opened and no unit hash reserved.  Measured spend was **$1.89** across the 19
-container invocations still visible to `modal app list` (1,723 s of wall time at
-the $3.95/hr H100 rate), with earlier invocations aged out of that window.  It is
-booked against the calibration stage as `admitted-in-arrears`.  The exposure was
-procedural, not financial: $1.89 against a $200 lifetime ceiling.
+opened and no unit hash reserved.  It is booked against the calibration stage by
+`modal_guard.py backfill`, which stores the row with status `completed` and
+`"admitted": false` in its manifest JSON — the accounting statuses are fixed
+(`reserved`, `submitted`, `ambiguous`, `completed`, `failed`) because
+`_committed_total` refuses an unknown one, so the in-arrears fact lives in the
+manifest rather than in a status of its own.
+
+**The booked figure is a floor, not the total.**  $1.89 is what the 19 container
+invocations still visible to `modal app list` come to (1,723 s of wall time at
+the $3.95/hr H100 rate).  The calibrate, calibrate-v2, sweep-v3/v4/v5, deep-run,
+race-a/b and agreement-runs invocations have aged out of that listing window and
+are **not** included, so true spend is higher by an unmeasured amount.  The
+authoritative number is on the Modal dashboard and has not been checked.  This
+matters more than the size of the gap: the ledger is what every later
+reservation reasons from, and an understated total is the one error that
+compounds.  Anyone opening a paid stage should reconcile against the dashboard
+first and re-book the difference.  The exposure remains procedural rather than
+financial — the floor is $1.89 against a $200 lifetime ceiling — but "procedural"
+is a judgement about the gap's size, and the gap is not measured.
 
 ## Explicit exclusions
 

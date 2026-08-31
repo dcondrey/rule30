@@ -998,10 +998,15 @@ its measured throughput, what its output was validated against, and evidence
 paths that resolve in-repo — priced through a new `rate_snapshot.gpu_second_usd`
 that is charged for the full timeout on every work unit.  See
 `MODAL-COMPUTE-CHARTER.md`, "GPU measured justification".  The lifetime ledger
-now exists and books the arm at `$1.89` as `admitted-in-arrears` via a
-`backfill` path that deliberately does **not** synthesise a passing manifest:
-`a20` used `@app.function` rather than `modal-sandbox` and took no same-day rate
-snapshot, so a clean admission record would have been a false one.
+now exists and books the arm at `$1.89` via a `backfill` path that deliberately
+does **not** synthesise a passing manifest: `a20` used `@app.function` rather
+than `modal-sandbox` and took no same-day rate snapshot, so a clean admission
+record would have been a false one.  The row carries status `completed` with
+`"admitted": false` in its manifest JSON, the accounting statuses being fixed;
+there is no `admitted-in-arrears` status and `status` will not print one.  The
+`$1.89` is a **floor**: the calibrate, sweep-v3/v4/v5, deep-run, race and
+agreement invocations aged out of the `modal app list` window and are not in it,
+and the authoritative figure on the Modal dashboard has not been checked.
 
 Three limits survive the amendment and still block a 3e9 run, none of them
 waived: the explicit exclusion on regenerating published center-column prefixes
