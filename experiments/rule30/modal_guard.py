@@ -223,8 +223,47 @@ def validate_manifest(
         raise GuardError("execution.backend must be modal-sandbox to avoid preemption retries")
     if execution.get("network_access") is not False:
         raise GuardError("paid workers must not have network access")
-    if execution.get("gpu") is not False:
-        raise GuardError("GPU work is prohibited until a separate measured justification exists")
+    gpu = execution.get("gpu")
+    gpu_seconds_rate = Decimal("0")
+    if gpu is not False:
+        # GPU work was prohibited outright until a separate measured
+        # justification existed. One now does (see MODAL-COMPUTE-CHARTER.md,
+        # "GPU measured justification"), so the clause is a gate rather than a
+        # ban: a GPU manifest must name the device, carry its own measured
+        # justification with evidence that resolves in-repo, and price the
+        # device so the stage ceiling covers the full-timeout cost.
+        gpu_type = _require_text(gpu, "execution.gpu")
+        justification = _require_mapping(
+            execution.get("gpu_measured_justification"),
+            "execution.gpu_measured_justification",
+        )
+        _require_text(
+            justification.get("measured_throughput"),
+            "execution.gpu_measured_justification.measured_throughput",
+        )
+        _require_text(
+            justification.get("validated_against"),
+            "execution.gpu_measured_justification.validated_against",
+        )
+        if justification.get("device") != gpu_type:
+            raise GuardError(
+                "execution.gpu_measured_justification.device must name the same device as execution.gpu"
+            )
+        evidence = _require_list(
+            justification.get("evidence"),
+            "execution.gpu_measured_justification.evidence",
+        )
+        for index, raw_path in enumerate(evidence):
+            relative = Path(
+                _require_text(
+                    raw_path, f"execution.gpu_measured_justification.evidence[{index}]"
+                )
+            )
+            if relative.is_absolute() or ".." in relative.parts:
+                raise GuardError("GPU evidence paths must stay within the repository")
+            if not (repo_root / relative).is_file():
+                raise GuardError(f"GPU evidence path does not exist: {relative}")
+        # The device is priced below, once the rate snapshot has been parsed.
     if execution.get("retries") != 0:
         raise GuardError("execution.retries must be zero")
     if execution.get("resubmit_ambiguous") is not False:
@@ -290,6 +329,14 @@ def validate_manifest(
         rate.get("fixed_overhead_usd"),
         "execution.rate_snapshot.fixed_overhead_usd",
     )
+    if gpu is not False:
+        # A GPU manifest must price its device from the same snapshot, or the
+        # reservation would understate the run by the whole cost of the GPU.
+        gpu_seconds_rate = _decimal(
+            rate.get("gpu_second_usd"),
+            "execution.rate_snapshot.gpu_second_usd",
+            positive=True,
+        )
 
     raw_units = _require_list(execution.get("work_units"), "execution.work_units")
     analysis_core = {
@@ -320,7 +367,7 @@ def validate_manifest(
         seen_unit_hashes.add(unit_hash)
         units.append((unit_hash, unit_id, payload_json))
 
-    per_second = cpu_cores * cpu_rate + memory_gib * memory_rate
+    per_second = cpu_cores * cpu_rate + memory_gib * memory_rate + gpu_seconds_rate
     raw_cost = per_second * Decimal(timeout) * Decimal(len(units)) + fixed_overhead
     reserve = (raw_cost * safety_multiplier).quantize(Decimal("0.000001"), rounding=ROUND_UP)
     if reserve <= 0:
@@ -495,6 +542,79 @@ def reserve_manifest(
         raise
 
 
+def backfill_unadmitted(
+    connection: sqlite3.Connection,
+    *,
+    analysis_family: str,
+    stage: str,
+    note: str,
+    actual_cost_usd: Decimal,
+    lifetime_budget_usd: Decimal = LIFETIME_BUDGET_USD,
+) -> str:
+    """Book spend that was incurred without ever passing admission.
+
+    This exists because `a20_deep_simulation` ran GPU work before the guard was
+    consulted at all, and that money is real whether or not the process was
+    followed.  Leaving it unrecorded would make every later reservation reason
+    from a total it knows to be wrong.
+
+    It deliberately does NOT construct a `ValidatedManifest`.  Retrofitting one
+    would mean asserting things about the run that are false — `a20` used
+    `@app.function` rather than `modal-sandbox`, and no rate snapshot was taken
+    within a day of it — and a ledger that launders a breach into a clean
+    admission record is worse than no ledger.  The row is stored `completed`
+    with an explicit in-arrears note so the accounting is right and the history
+    stays legible.
+    """
+
+    if stage not in STAGE_CAPS_USD:
+        raise GuardError(f"unknown stage {stage}")
+    if actual_cost_usd <= 0:
+        raise GuardError("backfilled cost must be positive")
+    if not FAMILY.fullmatch(analysis_family):
+        raise GuardError("analysis_family must be lowercase kebab-case")
+    identity = {
+        "backfill": True,
+        "analysis_family": analysis_family,
+        "stage": stage,
+        "note": note,
+    }
+    job_id = _digest(identity)
+    now = datetime.now(timezone.utc).isoformat()
+    try:
+        connection.execute("BEGIN IMMEDIATE")
+        if connection.execute("SELECT 1 FROM jobs WHERE job_id = ?", (job_id,)).fetchone():
+            raise GuardError(f"this spend was already backfilled: {job_id}")
+        projected = _committed_total(connection) + actual_cost_usd
+        if projected > lifetime_budget_usd:
+            raise GuardError(
+                f"backfill would put lifetime spend at ${projected}, beyond ${lifetime_budget_usd}"
+            )
+        connection.execute(
+            """
+            INSERT INTO jobs (
+                job_id, analysis_family, stage, purpose, manifest_json, status,
+                reserved_usd, actual_usd, created_at, updated_at
+            ) VALUES (?, ?, ?, 'infrastructure', ?, 'completed', ?, ?, ?, ?)
+            """,
+            (
+                job_id,
+                analysis_family,
+                stage,
+                _canonical({**identity, "admitted": False, "reason": note}),
+                str(actual_cost_usd),
+                str(actual_cost_usd),
+                now,
+                now,
+            ),
+        )
+        connection.commit()
+    except Exception:
+        connection.rollback()
+        raise
+    return job_id
+
+
 def mark_submitted(connection: sqlite3.Connection, job_id: str, external_id: str) -> None:
     external_id = _require_text(external_id, "external_id")
     now = datetime.now(timezone.utc).isoformat()
@@ -590,6 +710,14 @@ def _parser() -> argparse.ArgumentParser:
     submitted.add_argument("job_id")
     submitted.add_argument("external_id")
     submitted.add_argument("--ledger", type=Path, required=True)
+    backfill = subparsers.add_parser(
+        "backfill", help="book spend incurred before the guard was consulted"
+    )
+    backfill.add_argument("analysis_family")
+    backfill.add_argument("--stage", required=True, choices=STAGES)
+    backfill.add_argument("--actual-cost-usd", required=True)
+    backfill.add_argument("--note", required=True)
+    backfill.add_argument("--ledger", type=Path, required=True)
     terminal = subparsers.add_parser("record-terminal")
     terminal.add_argument("job_id")
     terminal.add_argument("status", choices=("completed", "failed", "ambiguous"))
@@ -622,6 +750,24 @@ def main(argv: Iterable[str] | None = None) -> int:
         elif args.command == "status":
             with connect_ledger(args.ledger) as connection:
                 _print_json(ledger_summary(connection))
+        elif args.command == "backfill":
+            with connect_ledger(args.ledger) as connection:
+                job_id = backfill_unadmitted(
+                    connection,
+                    analysis_family=args.analysis_family,
+                    stage=args.stage,
+                    note=args.note,
+                    actual_cost_usd=_decimal(args.actual_cost_usd, "actual_cost_usd"),
+                )
+                _print_json(
+                    {
+                        "job_id": job_id,
+                        "stage": args.stage,
+                        "actual_usd": args.actual_cost_usd,
+                        "status": "completed",
+                        "admitted": False,
+                    }
+                )
         elif args.command == "mark-submitted":
             with connect_ledger(args.ledger) as connection:
                 mark_submitted(connection, args.job_id, args.external_id)

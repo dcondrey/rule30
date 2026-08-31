@@ -986,8 +986,30 @@ window total **1,723 s of container wall time, `$1.89` at the `$3.95/hr` H100
 rate**; the earlier calibrate/sweep-v3-v5/deep invocations have aged out of
 that listing and are not included, so the arm's true cost is somewhat above
 `$1.89` and far below the `$200` lifetime ceiling.  The exposure is procedural,
-not financial.  Reconciliation is a standing question for the author; until it
-is answered, no further GPU job may be submitted.
+not financial.
+
+**Resolved 2026-08-31, by amendment.**  The author's decision was to amend the
+GPU clause rather than leave the arm outside the charter or retro-manifest it
+under a prohibition still standing.  The guard's own error text said GPU work was
+barred "until a separate measured justification exists", and one now does, so the
+clause became a gate: `execution.gpu` is a device name rather than a flag, and is
+admitted only with an `execution.gpu_measured_justification` naming the device,
+its measured throughput, what its output was validated against, and evidence
+paths that resolve in-repo — priced through a new `rate_snapshot.gpu_second_usd`
+that is charged for the full timeout on every work unit.  See
+`MODAL-COMPUTE-CHARTER.md`, "GPU measured justification".  The lifetime ledger
+now exists and books the arm at `$1.89` as `admitted-in-arrears` via a
+`backfill` path that deliberately does **not** synthesise a passing manifest:
+`a20` used `@app.function` rather than `modal-sandbox` and took no same-day rate
+snapshot, so a clean admission record would have been a false one.
+
+Three limits survive the amendment and still block a 3e9 run, none of them
+waived: the explicit exclusion on regenerating published center-column prefixes
+(the validation regenerates them as a correctness oracle, which is why it is
+evidence rather than output); the `3600 s` timeout cap, which makes a `~6 h` run
+at least six separately-hashed resumable work units rather than one; and the
+`modal-sandbox` backend requirement, which the `a20` scripts do not meet.
+Porting them is a prerequisite, not a formality.
 
 **Largest computations.**  `10^9` bits by **Xiangdong Wen**, Wolfram Data
 Repository, 2019-09-23 (125 MB packed); **method and hardware unpublished, no

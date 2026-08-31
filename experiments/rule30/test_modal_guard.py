@@ -10,6 +10,7 @@ from pathlib import Path
 
 from modal_guard import (
     GuardError,
+    backfill_unadmitted,
     connect_ledger,
     ledger_summary,
     mark_submitted,
@@ -132,7 +133,9 @@ class ModalGuardTests(unittest.TestCase):
     def test_network_gpu_retries_and_resubmission_are_fail_closed(self) -> None:
         cases = (
             ("network_access", True, "network access"),
-            ("gpu", True, "GPU work"),
+            # `gpu` is now a device name rather than a flag, so a bare True is
+            # rejected for not naming a device. It is still fail-closed.
+            ("gpu", True, "execution.gpu must be non-empty text"),
             ("retries", 1, "retries must be zero"),
             ("resubmit_ambiguous", True, "never be resubmitted"),
         )
@@ -142,6 +145,99 @@ class ModalGuardTests(unittest.TestCase):
                 document["execution"][field] = value
                 with self.assertRaisesRegex(GuardError, message):
                     self.validate(document)
+
+    def _gpu_manifest(self) -> dict:
+        """A manifest naming a device, with a complete measured justification."""
+        document = manifest()
+        execution = document["execution"]
+        execution["gpu"] = "H100"
+        execution["gpu_measured_justification"] = {
+            "device": "H100",
+            "measured_throughput": "1.06e14 cell-updates/s at R=16 H=16 W=4",
+            "validated_against": "WDR 1,980,000 bits bit-exact; OEIS b051023 100,001 bits",
+            "evidence": ["negative.md"],
+        }
+        execution["rate_snapshot"]["gpu_second_usd"] = "0.0011"
+        return document
+
+    def test_gpu_requires_a_measured_justification(self) -> None:
+        """Naming a device is not enough; the justification gates admission."""
+        document = self._gpu_manifest()
+        del document["execution"]["gpu_measured_justification"]
+        with self.assertRaisesRegex(GuardError, "gpu_measured_justification"):
+            self.validate(document)
+
+    def test_gpu_justification_must_name_the_same_device(self) -> None:
+        document = self._gpu_manifest()
+        document["execution"]["gpu_measured_justification"]["device"] = "A100"
+        with self.assertRaisesRegex(GuardError, "must name the same device"):
+            self.validate(document)
+
+    def test_gpu_evidence_must_resolve_in_repo(self) -> None:
+        """The justification's evidence is checked to exist, as prior art is."""
+        document = self._gpu_manifest()
+        document["execution"]["gpu_measured_justification"]["evidence"] = ["absent.md"]
+        with self.assertRaisesRegex(GuardError, "GPU evidence path does not exist"):
+            self.validate(document)
+        document["execution"]["gpu_measured_justification"]["evidence"] = ["../escape.md"]
+        with self.assertRaisesRegex(GuardError, "must stay within the repository"):
+            self.validate(document)
+
+    def test_gpu_requires_a_device_rate_and_charges_for_it(self) -> None:
+        """Without a device rate the reservation would understate the run."""
+        document = self._gpu_manifest()
+        del document["execution"]["rate_snapshot"]["gpu_second_usd"]
+        with self.assertRaisesRegex(GuardError, "gpu_second_usd"):
+            self.validate(document)
+
+        # A priced GPU manifest is admitted, and the device is billed for the
+        # full timeout on top of CPU and memory rather than ignored.
+        cpu_only = self.validate(manifest()).worst_case_cost_usd
+        with_gpu = self.validate(self._gpu_manifest()).worst_case_cost_usd
+        self.assertGreater(with_gpu, cpu_only)
+        # 10 s timeout x 1 unit x $0.0011/s x 1.25 safety = $0.01375 of device.
+        self.assertEqual(with_gpu - cpu_only, Decimal("0.013750"))
+
+    def test_backfilled_spend_counts_against_later_reservations(self) -> None:
+        """In-arrears spend is real money and must constrain what follows."""
+        ledger = self.root / "ledger.sqlite3"
+        with connect_ledger(ledger) as connection:
+            job_id = backfill_unadmitted(
+                connection,
+                analysis_family="rule30-deep-simulation",
+                stage="calibration",
+                note="ran before the guard was consulted",
+                actual_cost_usd=Decimal("1.89"),
+            )
+            summary = ledger_summary(connection)
+            self.assertEqual(summary["committed_usd"], "1.89")
+            # Booked as spent, and explicitly not as an admitted experiment.
+            row = connection.execute(
+                "SELECT status, manifest_json FROM jobs WHERE job_id = ?", (job_id,)
+            ).fetchone()
+            self.assertEqual(row["status"], "completed")
+            self.assertIn('"admitted":false', row["manifest_json"].replace(" ", ""))
+
+            # The same breach cannot be booked twice.
+            with self.assertRaisesRegex(GuardError, "already backfilled"):
+                backfill_unadmitted(
+                    connection,
+                    analysis_family="rule30-deep-simulation",
+                    stage="calibration",
+                    note="ran before the guard was consulted",
+                    actual_cost_usd=Decimal("1.89"),
+                )
+
+    def test_backfill_cannot_exceed_the_lifetime_ceiling(self) -> None:
+        with connect_ledger(self.root / "ledger.sqlite3") as connection:
+            with self.assertRaisesRegex(GuardError, "beyond"):
+                backfill_unadmitted(
+                    connection,
+                    analysis_family="rule30-deep-simulation",
+                    stage="calibration",
+                    note="implausible",
+                    actual_cost_usd=Decimal("250.00"),
+                )
 
     def test_duplicate_job_and_duplicate_work_unit_are_rejected(self) -> None:
         validated = self.validate(manifest())

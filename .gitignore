@@ -14,6 +14,12 @@ __pycache__/
 # Editor and reparse backups.
 *.bak
 
+# Modal spend ledger. Operational state, not a record to publish: the charter's
+# local-workflow section says it must not be committed if it carries remote
+# invocation identifiers, and mark-submitted writes exactly those. Manifests,
+# rate snapshots and result hashes are archived instead.
+*.sqlite3
+
 # LaTeX build products.
 *.aux
 *.fdb_latexmk
