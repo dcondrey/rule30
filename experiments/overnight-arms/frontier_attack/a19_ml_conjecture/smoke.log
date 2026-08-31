@@ -1,0 +1,62 @@
+== rule 30: building exact windows to depth 60000 (W=24)
+   built in 0.4s
+ TARGET A: predict c_{t+1}
+  A/col-history K=4                                    bits= 4 train-table=  16 conflicts OOR acc=   n/a cov=0.000 break@None
+  A/col-history K=8                                    bits= 8 train-table= 256 conflicts OOR acc=   n/a cov=0.000 break@None
+  A/col-history K=12                                   bits=12 train-table= 377 conflicts OOR acc=0.4970 cov=0.433 break@20002
+  A/col-history K=16                                   bits=16 train-table=  32 conflicts OOR acc=0.5095 cov=0.045 break@20015
+  A/col-history K=20                                   bits=20 train-table=   1 conflicts OOR acc=0.4587 cov=0.003 break@20062
+  A/col-history K=8 + t mod 2                          bits= 9 train-table= 468 conflicts OOR acc=0.4988 cov=0.083 break@20045
+  A/col-history K=8 + t mod 3                          bits=10 train-table= 575 conflicts OOR acc=0.4972 cov=0.237 break@20007
+  A/col-history K=8 + t mod 4                          bits=10 train-table= 596 conflicts OOR acc=0.5026 cov=0.351 break@20018
+  A/col-history K=8 + t mod 6                          bits=11 train-table= 597 conflicts OOR acc=0.5004 cov=0.468 break@20003
+  A/col-history K=8 + t mod 8                          bits=11 train-table= 536 conflicts OOR acc=0.5053 cov=0.505 break@20001
+  A/col-history K=12 + t mod 16                        bits=16 train-table=  32 conflicts OOR acc=0.5169 cov=0.047 break@20016
+  A/left-window W=2                                    bits= 3 train-table=   4 conflicts OOR acc=1.0000 cov=0.499 break@None
+  A/left-window W=4                                    bits= 5 train-table=  16 conflicts OOR acc=1.0000 cov=0.499 break@None
+  A/left-window W=8                                    bits= 9 train-table= 229 conflicts OOR acc=0.9497 cov=0.549 break@20099
+  A/left-window W=12                                   bits=13 train-table= 110 conflicts OOR acc=0.7617 cov=0.290 break@20010
+  A/left-window W=16                                   bits=17 train-table=   6 conflicts OOR acc=0.7534 cov=0.020 break@20136
+  A/left-window W=20                                   bits=21 train-table=   1 conflicts OOR acc=0.7551 cov=0.001 break@23043
+  A/CONTROL full window W=1 (rule itself)              bits= 3 train-table=    CONSISTENT OOR acc=1.0000 cov=1.000 break@None
+ TARGET B: predict r_t = s(t,1) restricted to the zero-set {c_t=0} (R1)
+  B/left-window W=2                                    bits= 3 train-table=   4 conflicts OOR acc=   n/a cov=0.000 break@None
+  B/left-window W=4                                    bits= 5 train-table=  16 conflicts OOR acc=   n/a cov=0.000 break@None
+  B/left-window W=8                                    bits= 9 train-table= 229 conflicts OOR acc=0.4844 cov=0.107 break@20099
+  B/left-window W=12                                   bits=13 train-table= 110 conflicts OOR acc=0.5085 cov=0.281 break@20010
+  B/left-window W=16                                   bits=17 train-table=   6 conflicts OOR acc=0.5227 cov=0.021 break@20136
+  B/left-window W=20                                   bits=21 train-table=   1 conflicts OOR acc=0.5714 cov=0.001 break@23043
+  B/left-window W=24                                   bits=25 train-table=    CONSISTENT OOR acc=1.0000 cov=0.000 break@None
+  B/left-window W=8 + col-history K=8                  bits=17 train-table=  15 conflicts OOR acc=0.7489 cov=0.045 break@20336
+  B/left-window W=8 + col-history K=16                 bits=25 train-table=   1 conflicts OOR acc=0.0000 cov=0.000 break@47952
+ TARGET C: predict m_{t+1} from (m_t, left window) -- is m finite-state?
+  C/m-bits + left-window W=0                           bits= 5 train-table=   1 conflicts OOR acc=1.0000 cov=0.499 break@None
+  C/m-bits + left-window W=4                           bits=10 train-table=    CONSISTENT OOR acc=1.0000 cov=0.984 break@None
+  C/m-bits + left-window W=8                           bits=14 train-table=    CONSISTENT OOR acc=1.0000 cov=0.761 break@None
+  C/m-bits + left-window W=12                          bits=18 train-table=    CONSISTENT OOR acc=1.0000 cov=0.114 break@None
+ TARGET D: predict 1[c_t != c_{t+p}] (periodicity-break events)
+  D/p=1 left-window W=12                               bits=13 train-table= 110 conflicts OOR acc=0.7617 cov=0.290 break@20010
+  D/p=1 col-history K=12 + t mod 1                     bits=13 train-table= 220 conflicts OOR acc=0.4985 cov=0.283 break@20002
+  D/p=1 left-window W=12 on zero-set                   bits=13 train-table= 110 conflicts OOR acc=0.5085 cov=0.281 break@20010
+  D/p=2 left-window W=12                               bits=13 train-table=  98 conflicts OOR acc=0.8210 cov=0.292 break@20015
+  D/p=2 col-history K=12 + t mod 2                     bits=13 train-table= 226 conflicts OOR acc=0.4944 cov=0.282 break@20001
+  D/p=2 left-window W=12 on zero-set                   bits=13 train-table=  55 conflicts OOR acc=0.8190 cov=0.294 break@20096
+  D/p=3 left-window W=12                               bits=13 train-table= 163 conflicts OOR acc=0.6513 cov=0.284 break@20022
+  D/p=3 col-history K=12 + t mod 3                     bits=14 train-table= 185 conflicts OOR acc=0.5076 cov=0.200 break@20000
+  D/p=3 left-window W=12 on zero-set                   bits=13 train-table= 111 conflicts OOR acc=0.5254 cov=0.281 break@20024
+  D/p=4 left-window W=12                               bits=13 train-table= 166 conflicts OOR acc=0.6762 cov=0.284 break@20015
+  D/p=4 col-history K=12 + t mod 4                     bits=14 train-table= 146 conflicts OOR acc=0.5053 cov=0.159 break@20000
+  D/p=4 left-window W=12 on zero-set                   bits=13 train-table=  97 conflicts OOR acc=0.6401 cov=0.285 break@20045
+  D/p=5 left-window W=12                               bits=13 train-table= 158 conflicts OOR acc=0.6245 cov=0.284 break@20015
+  D/p=5 col-history K=12 + t mod 5                     bits=15 train-table=  84 conflicts OOR acc=0.5060 cov=0.132 break@20011
+  D/p=5 left-window W=12 on zero-set                   bits=13 train-table=  82 conflicts OOR acc=0.6217 cov=0.287 break@20024
+  D/p=6 left-window W=12                               bits=13 train-table= 155 conflicts OOR acc=0.6455 cov=0.285 break@20023
+  D/p=6 col-history K=12 + t mod 6                     bits=15 train-table=  96 conflicts OOR acc=0.4918 cov=0.111 break@20001
+  D/p=6 left-window W=12 on zero-set                   bits=13 train-table=  80 conflicts OOR acc=0.6344 cov=0.288 break@20045
+  D/p=7 left-window W=12                               bits=13 train-table= 162 conflicts OOR acc=0.6355 cov=0.285 break@20010
+  D/p=7 col-history K=12 + t mod 7                     bits=15 train-table=  73 conflicts OOR acc=0.5080 cov=0.097 break@20016
+  D/p=7 left-window W=12 on zero-set                   bits=13 train-table=  84 conflicts OOR acc=0.6254 cov=0.289 break@20010
+  D/p=8 left-window W=12                               bits=13 train-table= 178 conflicts OOR acc=0.6365 cov=0.283 break@20000
+  D/p=8 col-history K=12 + t mod 8                     bits=15 train-table=  70 conflicts OOR acc=0.4975 cov=0.090 break@20015
+  D/p=8 left-window W=12 on zero-set                   bits=13 train-table=  92 conflicts OOR acc=0.6245 cov=0.287 break@20000
+   rule 30 done in 0.9s, 55 framings

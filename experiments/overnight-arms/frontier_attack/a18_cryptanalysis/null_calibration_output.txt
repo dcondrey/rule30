@@ -1,0 +1,23 @@
+Null calibration of the test 3 battery
+
+1. DFT variance constant, 2000 pure-null blocks (20 seeds x 100 blocks):
+variant                                            mean p        P_T       KS p  frac<.01
+d=4.0 (SP 800-22 2001), DC included                0.4991  1.146e-17  0.0002429    0.0085
+d=3.8 (Kim-Umeno-Hasegawa 2004), DC included       0.5071  2.061e-15  8.647e-05    0.0085
+d=4.0, DC dropped                                  0.5006  5.594e-16  4.981e-05    0.0080
+d=3.8, DC dropped                                  0.5086  4.222e-14  2.021e-05    0.0080
+
+The constant used in test3_nist.py is d=4.0 (SP 800-22 2001), DC included. Best calibrated on 2000 pure-null blocks: d=4.0 (SP 800-22 2001), DC included (KS p = 0.0002429). The variant actually used has KS p = 0.0002429 and frac(p<0.01) = 0.0085 against the nominal 0.01, so it is MISCALIBRATED and the DFT stream's result must be discounted.
+
+2. Per-stream battery calibration on the 20 i.i.d. null seeds:
+stream               prop fail/20 unif fail/20  null med P_T  rule30 P_T  rule30 prop
+monobit                         1            0         0.514      0.1025         0.99
+block_frequency                 0            0         0.447      0.6993         0.99
+runs                            0            0         0.505      0.6579         0.99
+longest_run                     0            0         0.341      0.0519         1.00
+cusum_fwd                       1            0         0.351      0.4012         0.98
+cusum_rev                       1            0         0.447      0.6993         0.99
+approx_entropy_m3               0            0         0.419      0.8343         0.99
+serial_m3_p1                    0            0         0.616      0.9241         0.99
+serial_m3_p2                    0            0         0.554      0.6993         1.00
+dft_spectral                    0            1         0.130      0.2248         0.99

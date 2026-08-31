@@ -1,0 +1,1003 @@
+[
+ {
+  "n": 2,
+  "rule": 30,
+  "nvars": 5,
+  "naxioms": 6,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 5,
+   "2": 1
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 5,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 14,
+    "rounds": 1,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 3,
+  "rule": 30,
+  "nvars": 8,
+  "naxioms": 9,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 6,
+   "2": 3
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 6,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 35,
+    "rounds": 1,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 1
+ },
+ {
+  "n": 4,
+  "rule": 30,
+  "nvars": 13,
+  "naxioms": 14,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 8,
+   "2": 6
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 8,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 83,
+    "rounds": 1,
+    "secs": 0.001
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 1
+ },
+ {
+  "n": 5,
+  "rule": 30,
+  "nvars": 18,
+  "naxioms": 19,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 9,
+   "2": 10
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 9,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 155,
+    "rounds": 1,
+    "secs": 0.006
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 1
+ },
+ {
+  "n": 6,
+  "rule": 30,
+  "nvars": 25,
+  "naxioms": 26,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 11,
+   "2": 15
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 11,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 298,
+    "rounds": 1,
+    "secs": 0.012
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 7,
+  "rule": 30,
+  "nvars": 32,
+  "naxioms": 33,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 12,
+   "2": 21
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 12,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 502,
+    "rounds": 1,
+    "secs": 0.036
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 8,
+  "rule": 30,
+  "nvars": 41,
+  "naxioms": 42,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 14,
+   "2": 28
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 14,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 826,
+    "rounds": 1,
+    "secs": 0.091
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 1
+ },
+ {
+  "n": 2,
+  "rule": 90,
+  "nvars": 5,
+  "naxioms": 6,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 6
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 6,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 3,
+  "rule": 90,
+  "nvars": 8,
+  "naxioms": 9,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 9
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 9,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 4,
+  "rule": 90,
+  "nvars": 13,
+  "naxioms": 14,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 14
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 14,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 5,
+  "rule": 90,
+  "nvars": 18,
+  "naxioms": 19,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 19
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 19,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 6,
+  "rule": 90,
+  "nvars": 25,
+  "naxioms": 26,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 26
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 26,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 7,
+  "rule": 90,
+  "nvars": 32,
+  "naxioms": 33,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 33
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 33,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 8,
+  "rule": 90,
+  "nvars": 41,
+  "naxioms": 42,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 42
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 42,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 2,
+  "rule": 160,
+  "nvars": 5,
+  "naxioms": 6,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 5,
+   "2": 1
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 5,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 12,
+    "rounds": 1,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 3,
+  "rule": 160,
+  "nvars": 8,
+  "naxioms": 9,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 7,
+   "2": 2
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 7,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 31,
+    "rounds": 1,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 4,
+  "rule": 160,
+  "nvars": 13,
+  "naxioms": 14,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 9,
+   "2": 5
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 9,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 77,
+    "rounds": 1,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 5,
+  "rule": 160,
+  "nvars": 18,
+  "naxioms": 19,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 11,
+   "2": 8
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 11,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 146,
+    "rounds": 1,
+    "secs": 0.001
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 6,
+  "rule": 160,
+  "nvars": 25,
+  "naxioms": 26,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 13,
+   "2": 13
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 13,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 283,
+    "rounds": 1,
+    "secs": 0.002
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 7,
+  "rule": 160,
+  "nvars": 32,
+  "naxioms": 33,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 15,
+   "2": 18
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 15,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 467,
+    "rounds": 1,
+    "secs": 0.004
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 8,
+  "rule": 160,
+  "nvars": 41,
+  "naxioms": 42,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 17,
+   "2": 25
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 17,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 775,
+    "rounds": 1,
+    "secs": 0.011
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 2,
+  "rule": 128,
+  "nvars": 5,
+  "naxioms": 6,
+  "max_axiom_degree": 3,
+  "axiom_degree_hist": {
+   "1": 5,
+   "3": 1
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 5,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": false,
+    "dim_Vd": 15,
+    "rounds": 2,
+    "secs": 0.0
+   },
+   {
+    "d": 3,
+    "one_in_Vd": true,
+    "dim_Vd": 14,
+    "rounds": 1,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 3,
+  "c_n": 0
+ },
+ {
+  "n": 3,
+  "rule": 128,
+  "nvars": 8,
+  "naxioms": 9,
+  "max_axiom_degree": 3,
+  "axiom_degree_hist": {
+   "1": 7,
+   "3": 2
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 7,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": false,
+    "dim_Vd": 35,
+    "rounds": 2,
+    "secs": 0.001
+   },
+   {
+    "d": 3,
+    "one_in_Vd": true,
+    "dim_Vd": 58,
+    "rounds": 1,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 3,
+  "c_n": 0
+ },
+ {
+  "n": 4,
+  "rule": 128,
+  "nvars": 13,
+  "naxioms": 14,
+  "max_axiom_degree": 3,
+  "axiom_degree_hist": {
+   "1": 9,
+   "3": 5
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 9,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": false,
+    "dim_Vd": 81,
+    "rounds": 2,
+    "secs": 0.002
+   },
+   {
+    "d": 3,
+    "one_in_Vd": true,
+    "dim_Vd": 216,
+    "rounds": 1,
+    "secs": 0.002
+   }
+  ],
+  "pc_degree": 3,
+  "c_n": 0
+ },
+ {
+  "n": 5,
+  "rule": 128,
+  "nvars": 18,
+  "naxioms": 19,
+  "max_axiom_degree": 3,
+  "axiom_degree_hist": {
+   "1": 11,
+   "3": 8
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 11,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": false,
+    "dim_Vd": 143,
+    "rounds": 2,
+    "secs": 0.002
+   },
+   {
+    "d": 3,
+    "one_in_Vd": true,
+    "dim_Vd": 620,
+    "rounds": 1,
+    "secs": 0.004
+   }
+  ],
+  "pc_degree": 3,
+  "c_n": 0
+ },
+ {
+  "n": 6,
+  "rule": 128,
+  "nvars": 25,
+  "naxioms": 26,
+  "max_axiom_degree": 3,
+  "axiom_degree_hist": {
+   "1": 13,
+   "3": 13
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 13,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": false,
+    "dim_Vd": 247,
+    "rounds": 2,
+    "secs": 0.007
+   },
+   {
+    "d": 3,
+    "one_in_Vd": true,
+    "dim_Vd": 1842,
+    "rounds": 1,
+    "secs": 0.016
+   }
+  ],
+  "pc_degree": 3,
+  "c_n": 0
+ },
+ {
+  "n": 7,
+  "rule": 128,
+  "nvars": 32,
+  "naxioms": 33,
+  "max_axiom_degree": 3,
+  "axiom_degree_hist": {
+   "1": 15,
+   "3": 18
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 15,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": false,
+    "dim_Vd": 375,
+    "rounds": 2,
+    "secs": 0.01
+   },
+   {
+    "d": 3,
+    "one_in_Vd": true,
+    "dim_Vd": 4140,
+    "rounds": 1,
+    "secs": 0.037
+   }
+  ],
+  "pc_degree": 3,
+  "c_n": 0
+ },
+ {
+  "n": 8,
+  "rule": 128,
+  "nvars": 41,
+  "naxioms": 42,
+  "max_axiom_degree": 3,
+  "axiom_degree_hist": {
+   "1": 17,
+   "3": 25
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 17,
+    "rounds": 1,
+    "secs": 0.001
+   },
+   {
+    "d": 2,
+    "one_in_Vd": false,
+    "dim_Vd": 561,
+    "rounds": 2,
+    "secs": 0.023
+   },
+   {
+    "d": 3,
+    "one_in_Vd": true,
+    "dim_Vd": 9230,
+    "rounds": 1,
+    "secs": 0.152
+   }
+  ],
+  "pc_degree": 3,
+  "c_n": 0
+ }
+]

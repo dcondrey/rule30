@@ -1,0 +1,67 @@
+{
+ "core": {
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5,
+  "6": 6
+ },
+ "rule184": [
+  {
+   "monoid": "S3",
+   "w": 2,
+   "nontrivial_found": 30,
+   "orbits_profiled": 12,
+   "violations_of_bound": 0,
+   "max_preperiod_plus_period": 1,
+   "max_information_bits": 0.0,
+   "bound_log2_M": 2.585
+  },
+  {
+   "monoid": "S3",
+   "w": 3,
+   "nontrivial_found": 1080,
+   "orbits_profiled": 12,
+   "violations_of_bound": 0,
+   "max_preperiod_plus_period": 1,
+   "max_information_bits": 0.0,
+   "bound_log2_M": 2.585
+  },
+  {
+   "monoid": "Z3",
+   "w": 2,
+   "nontrivial_found": 6,
+   "orbits_profiled": 12,
+   "violations_of_bound": 0,
+   "max_preperiod_plus_period": 1,
+   "max_information_bits": 0.0,
+   "bound_log2_M": 1.585
+  }
+ ],
+ "rule30": [
+  {
+   "monoid": "Z3",
+   "w": 3,
+   "survivors": 27,
+   "orbits_profiled": 16,
+   "max_information_bits": 0.0,
+   "all_constant": true
+  },
+  {
+   "monoid": "S3",
+   "w": 3,
+   "survivors": 216,
+   "orbits_profiled": 16,
+   "max_information_bits": 0.0,
+   "all_constant": true
+  },
+  {
+   "monoid": "Z6",
+   "w": 3,
+   "survivors": 216,
+   "orbits_profiled": 16,
+   "max_information_bits": 0.0,
+   "all_constant": true
+  }
+ ]
+}

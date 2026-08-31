@@ -1,0 +1,60 @@
+framings considered (rule 30, non-control): 56
+ADMITTED as candidates by the pre-registered threshold: 30
+  A/col-history K=16                             cov=0.241 acc=0.49770223132716906 DEVbrk=20012 TESTbrk=200011
+  A/col-history K=12 + t mod 16                  cov=0.242 acc=0.5011844424856765 DEVbrk=20003 TESTbrk=200006
+  A/left-window W=12                             cov=0.428 acc=0.5014029618082618 DEVbrk=20005 TESTbrk=200007
+  B/left-window W=12                             cov=0.428 acc=0.5014029618082618 DEVbrk=20005 TESTbrk=200007
+  B/left-window W=8 + col-history K=8            cov=0.247 acc=0.7452360329146817 DEVbrk=20006 TESTbrk=200005
+  C/branch(m=1,c=1) left-window W=12             cov=0.550 acc=0.6476363636363636 DEVbrk=20038 TESTbrk=200040
+  D/p=1 left-window W=12                         cov=0.677 acc=0.8424811011794834 DEVbrk=20005 TESTbrk=200007
+  D/p=1 col-history K=12 + t mod 1               cov=0.414 acc=0.4999919519693531 DEVbrk=20005 TESTbrk=200000
+  D/p=1 left-window W=12 on zero-set             cov=0.428 acc=0.5014029618082618 DEVbrk=20005 TESTbrk=200007
+  D/p=2 left-window W=12                         cov=0.733 acc=0.8796166209721786 DEVbrk=20005 TESTbrk=200017
+  D/p=2 col-history K=12 + t mod 2               cov=0.417 acc=0.5030026672629411 DEVbrk=20002 TESTbrk=200000
+  D/p=2 left-window W=12 on zero-set             cov=0.727 acc=0.8786185087469319 DEVbrk=20005 TESTbrk=200017
+  D/p=3 left-window W=12                         cov=0.570 acc=0.7227196123867705 DEVbrk=20013 TESTbrk=200007
+  D/p=3 col-history K=12 + t mod 3               cov=0.496 acc=0.5018720297911528 DEVbrk=20000 TESTbrk=200001
+  D/p=3 left-window W=12 on zero-set             cov=0.442 acc=0.5200580428670758 DEVbrk=20013 TESTbrk=200007
+  D/p=4 left-window W=12                         cov=0.599 acc=0.7476318559232839 DEVbrk=20019 TESTbrk=200007
+  D/p=4 col-history K=12 + t mod 4               cov=0.498 acc=0.5001237499581925 DEVbrk=20000 TESTbrk=200004
+  D/p=4 left-window W=12 on zero-set             cov=0.559 acc=0.7036634195900316 DEVbrk=20019 TESTbrk=200007
+  D/p=5 left-window W=12                         cov=0.542 acc=0.6869790257936019 DEVbrk=20005 TESTbrk=200018
+  D/p=5 col-history K=12 + t mod 5               cov=0.477 acc=0.5027491745481001 DEVbrk=20002 TESTbrk=200006
+  D/p=5 left-window W=12 on zero-set             cov=0.525 acc=0.6723701773342656 DEVbrk=20005 TESTbrk=200018
+  D/p=6 left-window W=12                         cov=0.562 acc=0.7066403494733597 DEVbrk=20013 TESTbrk=200017
+  D/p=6 col-history K=12 + t mod 6               cov=0.444 acc=0.5015513601634751 DEVbrk=20001 TESTbrk=200002
+  D/p=6 left-window W=12 on zero-set             cov=0.548 acc=0.6946768477585765 DEVbrk=20013 TESTbrk=200017
+  D/p=7 left-window W=12                         cov=0.544 acc=0.685365315823002 DEVbrk=20013 TESTbrk=200007
+  D/p=7 col-history K=12 + t mod 7               cov=0.420 acc=0.501577262000302 DEVbrk=20008 TESTbrk=200001
+  D/p=7 left-window W=12 on zero-set             cov=0.529 acc=0.6757452933823251 DEVbrk=20013 TESTbrk=200007
+  D/p=8 left-window W=12                         cov=0.550 acc=0.6919460281492162 DEVbrk=20000 TESTbrk=200007
+  D/p=8 col-history K=12 + t mod 8               cov=0.386 acc=0.5005830072811132 DEVbrk=20001 TESTbrk=200006
+  D/p=8 left-window W=12 on zero-set             cov=0.527 acc=0.6715908802718673 DEVbrk=20000 TESTbrk=200007
+
+rejected, with the failing condition:
+  A/col-history K=4                              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/col-history K=8                              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/col-history K=12                             cov=0.16570  fails ['cond1_consistent_or_cov>=0.20']
+  A/col-history K=20                             cov=0.01831  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/col-history K=8 + t mod 2                    cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/col-history K=8 + t mod 3                    cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/col-history K=8 + t mod 4                    cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/col-history K=8 + t mod 6                    cov=0.00403  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/col-history K=8 + t mod 8                    cov=0.01770  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/left-window W=2                              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/left-window W=4                              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/left-window W=8                              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  A/left-window W=16                             cov=0.13439  fails ['cond1_consistent_or_cov>=0.20']
+  A/left-window W=20                             cov=0.00930  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  B/left-window W=2                              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  B/left-window W=4                              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  B/left-window W=8                              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  B/left-window W=16                             cov=0.13439  fails ['cond1_consistent_or_cov>=0.20']
+  B/left-window W=20                             cov=0.00930  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  B/left-window W=24                             cov=0.00070  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  B/left-window W=8 + col-history K=16           cov=0.00110  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  C/branch(m=1,c=1) left-window W=4              cov=0.00000  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  C/branch(m=1,c=1) left-window W=8              cov=0.00401  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  C/branch(m=1,c=1) left-window W=20             cov=0.00526  fails ['cond1_consistent_or_cov>=0.20', 'cond2_cov>=0.05']
+  C/branch(m=1,c=1) left-W=8 + col-history K=8   cov=0.18853  fails ['cond1_consistent_or_cov>=0.20']
+  C/branch(m=1,c=1) left-W=8 + col-history K=16  cov=0.00071  fails ['cond2_cov>=0.05']

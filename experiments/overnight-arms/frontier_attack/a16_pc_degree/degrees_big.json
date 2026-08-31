@@ -1,0 +1,502 @@
+[
+ {
+  "n": 10,
+  "rule": 30,
+  "nvars": 61,
+  "naxioms": 62,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 17,
+   "2": 45
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 17,
+    "rounds": 1,
+    "secs": 0.001
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 1798,
+    "rounds": 1,
+    "secs": 0.46
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 12,
+  "rule": 30,
+  "nvars": 85,
+  "naxioms": 86,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 20,
+   "2": 66
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 20,
+    "rounds": 1,
+    "secs": 0.001
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 3576,
+    "rounds": 1,
+    "secs": 2.578
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 14,
+  "rule": 30,
+  "nvars": 113,
+  "naxioms": 114,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 23,
+   "2": 91
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 23,
+    "rounds": 1,
+    "secs": 0.001
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 6250,
+    "rounds": 1,
+    "secs": 9.89
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 16,
+  "rule": 30,
+  "nvars": 145,
+  "naxioms": 146,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 26,
+   "2": 120
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 26,
+    "rounds": 1,
+    "secs": 0.003
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 10333,
+    "rounds": 1,
+    "secs": 31.997
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 1
+ },
+ {
+  "n": 20,
+  "rule": 30,
+  "nvars": 221,
+  "naxioms": 222,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 32,
+   "2": 190
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 32,
+    "rounds": 1,
+    "secs": 0.003
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 24133,
+    "rounds": 1,
+    "secs": 210.36
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 10,
+  "rule": 90,
+  "nvars": 61,
+  "naxioms": 62,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 62
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 62,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 12,
+  "rule": 90,
+  "nvars": 85,
+  "naxioms": 86,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 86
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 86,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 14,
+  "rule": 90,
+  "nvars": 113,
+  "naxioms": 114,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 114
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 114,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 16,
+  "rule": 90,
+  "nvars": 145,
+  "naxioms": 146,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 146
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 146,
+    "rounds": 0,
+    "secs": 0.001
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 20,
+  "rule": 90,
+  "nvars": 221,
+  "naxioms": 222,
+  "max_axiom_degree": 1,
+  "axiom_degree_hist": {
+   "1": 222
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": true,
+    "dim_Vd": 222,
+    "rounds": 0,
+    "secs": 0.0
+   }
+  ],
+  "pc_degree": 1,
+  "c_n": 0
+ },
+ {
+  "n": 10,
+  "rule": 160,
+  "nvars": 61,
+  "naxioms": 62,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 21,
+   "2": 41
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 21,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 1749,
+    "rounds": 1,
+    "secs": 0.027
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 12,
+  "rule": 160,
+  "nvars": 85,
+  "naxioms": 86,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 25,
+   "2": 61
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 25,
+    "rounds": 1,
+    "secs": 0.001
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 3445,
+    "rounds": 1,
+    "secs": 0.084
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 14,
+  "rule": 160,
+  "nvars": 113,
+  "naxioms": 114,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 29,
+   "2": 85
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 29,
+    "rounds": 1,
+    "secs": 0.001
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 6151,
+    "rounds": 1,
+    "secs": 0.23
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 16,
+  "rule": 160,
+  "nvars": 145,
+  "naxioms": 146,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 33,
+   "2": 113
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 33,
+    "rounds": 1,
+    "secs": 0.001
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 10203,
+    "rounds": 1,
+    "secs": 0.579
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ },
+ {
+  "n": 20,
+  "rule": 160,
+  "nvars": 221,
+  "naxioms": 222,
+  "max_axiom_degree": 2,
+  "axiom_degree_hist": {
+   "1": 41,
+   "2": 181
+  },
+  "levels": [
+   {
+    "d": 0,
+    "one_in_Vd": false,
+    "dim_Vd": 0,
+    "rounds": 1,
+    "secs": 0.0
+   },
+   {
+    "d": 1,
+    "one_in_Vd": false,
+    "dim_Vd": 41,
+    "rounds": 1,
+    "secs": 0.003
+   },
+   {
+    "d": 2,
+    "one_in_Vd": true,
+    "dim_Vd": 23929,
+    "rounds": 1,
+    "secs": 2.995
+   }
+  ],
+  "pc_degree": 2,
+  "c_n": 0
+ }
+]

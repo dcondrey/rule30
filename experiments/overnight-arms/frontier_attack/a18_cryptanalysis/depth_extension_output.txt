@@ -1,0 +1,20 @@
+Depth extension: T = 2^21 = 2097152 (row 8 reference: T >= 2,000,000)
+GATE vs repo center_column.py: MATCH
+density = 0.5002918  (1049188 ones)
+NOT part of the N = 100,838 pre-registered ledger; same statistics, same thresholds.
+
+test 4 (autocorrelation, 100,000 lags):
+  max |z|              4.393 at lag 36578
+  Bonferroni-adjusted  1.0000
+  lags > 5.032         0 of 100000
+  frac |z| > 1.96      0.0505 (expected 0.0500)
+  KS vs N(0,1)         p = 0.6087
+  iid seed max band    [4.160, 4.907]; exceeds = False
+
+test 2 (correlation attack, 780 cells):
+  max z                3.802 at k=2, Delta=47, eps=0.001321
+  Bonferroni-adjusted  1.0000
+  surviving Bonferroni 0 of 780
+  exceeding seed max   0 of 780
+
+NO BIAS FOUND at T = 2^21 = 2097152, which exceeds register row 8's T >= 2,000,000. Autocorrelation max |z| = 4.393 over 100,000 lags (Bonferroni-adjusted p = 1.000); correlation-attack max z = 3.802 over 780 cells (adjusted p = 1.000). Doubling the depth moved nothing. As everywhere in this arm, finite data bounds a test's power at that depth and cannot establish an infinite statement (obstruction H).

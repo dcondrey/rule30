@@ -1,0 +1,30 @@
+Test 1b: artifact audit of the D(65536) hit from test 1
+Audit A: 500 i.i.d. seeds to n=262144, exact integer G(n) = sum_(m<=n) (2L(m) - m)
+Empirical p-value floor 1/501 = 0.00200; global Bonferroni threshold 4.958e-07. This audit can refute a hit, not confirm one.
+
+       n  rule30 G  null med  null min  null max  inside #distinct    p_emp
+    1024       512     512.0       452       512    True         6   1.0000
+    2048      1024    1024.0       984      1024    True         5   1.0000
+    4096      2048    2048.0      2008      2048    True         5   1.0000
+    8192      4096    4096.0      4056      4096    True         5   1.0000
+   16384      8192    8192.0      8152      8192    True         5   1.0000
+   32768     16384   16384.0     16344     16384    True         5   1.0000
+   65536     32756   32768.0     32744     32768    True         4   0.0639
+  131072     65536   65536.0     65476     65536    True         6   1.0000
+  262144    131072  131072.0    131012    131072    True         5   1.0000
+
+Audit B: replication across depth (rule30 to 2^20)
+         n         G   G - null median
+      1024       512              +0.0
+      2048      1024              +0.0
+      4096      2048              +0.0
+      8192      4096              +0.0
+     16384      8192              +0.0
+     32768     16384              +0.0
+     65536     32756             -12.0
+    131072     65536              +0.0
+    262144    131072              +0.0
+    524288    262140               n/a
+   1048576    524288               n/a
+
+ARTIFACT. rule30's G(n) lies inside the 500-seed null range at every prefix (True); the smallest empirical two-sided p is 0.0639, nowhere near the global Bonferroni threshold 4.958e-07, and the deviation does not persist with depth (audit B). The test-1 z = 5.42 was produced by a normal approximation applied to a lattice-valued statistic whose 20-seed s.d. estimate (1.5e-5) is an artifact of near-degeneracy: the null takes only 4 distinct values at n = 65536 across 500 seeds. D is retired as a z-scored statistic; G with an empirical null replaces it.

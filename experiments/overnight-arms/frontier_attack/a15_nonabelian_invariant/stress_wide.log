@@ -1,0 +1,13 @@
+{"candidates_entering_R4": 2555, "duplicates_dropped": 49}
+{"rule": 30, "monoid": "FlipFlop3", "w": 2, "entering": 2, "R4_wide_survivors": 2, "R4_killed": 0, "step0_FLAT": 0, "step0_vanishes_by_W64": 0, "step0_zero": 2, "commutative_image": 2, "f_not_identity": 0, "max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "FlipFlop3", "w": 3, "entering": 22, "R4_wide_survivors": 22, "R4_killed": 0, "step0_FLAT": 0, "step0_vanishes_by_W64": 0, "step0_zero": 22, "commutative_image": 12, "f_not_identity": 0, "max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "T2", "w": 2, "entering": 4, "R4_wide_survivors": 4, "R4_killed": 0, "step0_FLAT": 0, "step0_vanishes_by_W64": 0, "step0_zero": 4, "commutative_image": 2, "f_not_identity": 0, "max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "T2", "w": 3, "entering": 160, "R4_wide_survivors": 160, "R4_killed": 0, "step0_FLAT": 0, "step0_vanishes_by_W64": 0, "step0_zero": 160, "commutative_image": 12, "f_not_identity": 0, "max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "T2", "w": 4, "entering": 4, "R4_wide_survivors": 4, "R4_killed": 0, "step0_FLAT": 0, "step0_vanishes_by_W64": 0, "step0_zero": 4, "commutative_image": 0, "f_not_identity": 4, "max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "T3", "w": 2, "entering": 1584, "R4_wide_survivors": 1584, "R4_killed": 0, "step0_FLAT": 0, "step0_vanishes_by_W64": 72, "step0_zero": 1512, "commutative_image": 72, "f_not_identity": 72, "max_orbit_bits": 1.585}
+{"rule": 30, "monoid": "T3", "w": 3, "entering": 206, "R4_wide_survivors": 206, "R4_killed": 0, "step0_FLAT": 0, "step0_vanishes_by_W64": 28, "step0_zero": 178, "commutative_image": 0, "f_not_identity": 206, "max_orbit_bits": 1.585}
+{"rule": 30, "monoid": "T3", "w": 4, "entering": 6, "R4_wide_survivors": 6, "R4_killed": 0, "step0_FLAT": 0, "step0_vanishes_by_W64": 0, "step0_zero": 6, "commutative_image": 0, "f_not_identity": 6, "max_orbit_bits": 1.585}
+{"rule": 90, "monoid": "T2", "w": 3, "entering": 8, "R4_wide_survivors": 8, "R4_killed": 0, "step0_FLAT": 8, "step0_vanishes_by_W64": 0, "step0_zero": 0, "commutative_image": 8, "f_not_identity": 8, "max_orbit_bits": 1.0}
+{"rule": 90, "monoid": "T3", "w": 2, "entering": 558, "R4_wide_survivors": 558, "R4_killed": 0, "step0_FLAT": 558, "step0_vanishes_by_W64": 0, "step0_zero": 0, "commutative_image": 30, "f_not_identity": 558, "max_orbit_bits": 1.0}
+{"rule": 90, "monoid": "T3", "w": 3, "entering": 1, "R4_wide_survivors": 1, "R4_killed": 0, "step0_FLAT": 1, "step0_vanishes_by_W64": 0, "step0_zero": 0, "commutative_image": 0, "f_not_identity": 1, "max_orbit_bits": 1.585}
+{"TOTAL_entering_R4": 2555, "TOTAL_surviving_R4": 2555}

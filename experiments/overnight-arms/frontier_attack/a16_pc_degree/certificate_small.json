@@ -1,0 +1,146 @@
+[
+ {
+  "rule": 30,
+  "n": 4,
+  "nvars": 13,
+  "lines": 47,
+  "max_degree": 2,
+  "claimed_degree": 2,
+  "secs": 0.0
+ },
+ {
+  "rule": 30,
+  "n": 8,
+  "nvars": 41,
+  "lines": 180,
+  "max_degree": 2,
+  "claimed_degree": 2,
+  "secs": 0.0
+ },
+ {
+  "rule": 30,
+  "n": 16,
+  "nvars": 145,
+  "lines": 707,
+  "max_degree": 2,
+  "claimed_degree": 2,
+  "secs": 0.0
+ },
+ {
+  "rule": 30,
+  "n": 32,
+  "nvars": 545,
+  "lines": 2812,
+  "max_degree": 2,
+  "claimed_degree": 2,
+  "secs": 0.01
+ },
+ {
+  "rule": 90,
+  "n": 4,
+  "nvars": 13,
+  "lines": 31,
+  "max_degree": 1,
+  "claimed_degree": 1,
+  "secs": 0.0
+ },
+ {
+  "rule": 90,
+  "n": 8,
+  "nvars": 41,
+  "lines": 107,
+  "max_degree": 1,
+  "claimed_degree": 1,
+  "secs": 0.0
+ },
+ {
+  "rule": 90,
+  "n": 16,
+  "nvars": 145,
+  "lines": 403,
+  "max_degree": 1,
+  "claimed_degree": 1,
+  "secs": 0.0
+ },
+ {
+  "rule": 90,
+  "n": 32,
+  "nvars": 545,
+  "lines": 1571,
+  "max_degree": 1,
+  "claimed_degree": 1,
+  "secs": 0.0
+ },
+ {
+  "rule": 160,
+  "n": 4,
+  "nvars": 13,
+  "lines": 25,
+  "max_degree": 2,
+  "claimed_degree": 2,
+  "secs": 0.0
+ },
+ {
+  "rule": 160,
+  "n": 8,
+  "nvars": 41,
+  "lines": 93,
+  "max_degree": 2,
+  "claimed_degree": 2,
+  "secs": 0.0
+ },
+ {
+  "rule": 160,
+  "n": 16,
+  "nvars": 145,
+  "lines": 373,
+  "max_degree": 2,
+  "claimed_degree": 2,
+  "secs": 0.0
+ },
+ {
+  "rule": 160,
+  "n": 32,
+  "nvars": 545,
+  "lines": 1509,
+  "max_degree": 2,
+  "claimed_degree": 2,
+  "secs": 0.0
+ },
+ {
+  "rule": 128,
+  "n": 4,
+  "nvars": 13,
+  "lines": 30,
+  "max_degree": 3,
+  "claimed_degree": 3,
+  "secs": 0.0
+ },
+ {
+  "rule": 128,
+  "n": 8,
+  "nvars": 41,
+  "lines": 118,
+  "max_degree": 3,
+  "claimed_degree": 3,
+  "secs": 0.0
+ },
+ {
+  "rule": 128,
+  "n": 16,
+  "nvars": 145,
+  "lines": 486,
+  "max_degree": 3,
+  "claimed_degree": 3,
+  "secs": 0.0
+ },
+ {
+  "rule": 128,
+  "n": 32,
+  "nvars": 545,
+  "lines": 1990,
+  "max_degree": 3,
+  "claimed_degree": 3,
+  "secs": 0.0
+ }
+]

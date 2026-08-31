@@ -1,0 +1,63 @@
+{
+  "W": 1048576,
+  "true": {
+    "density": 0.5006561279296875,
+    "acf_max_abs_z_lag<=1000": 3.498647509206177,
+    "bm_L_over_half_n_at_16384": 1.0,
+    "bm_jumps_at_16384": 4095,
+    "corr_eps_k1_delta1": 0.0006556517178074872,
+    "nist_monobit_p": 0.17902924288386346,
+    "nist_approx_entropy_p": 0.1467733629999717
+  },
+  "overwritten": {
+    "period2_0101": {
+      "density": 0.5,
+      "acf_max_abs_z_lag<=1000": 1023.999511718634,
+      "bm_L_over_half_n_at_16384": 0.000244140625,
+      "bm_jumps_at_16384": 1,
+      "corr_eps_k1_delta1": 0.5,
+      "nist_monobit_p": 1.0,
+      "nist_approx_entropy_p": 0.0
+    },
+    "period7_0110100": {
+      "density": 0.4285717010498047,
+      "acf_max_abs_z_lag<=1000": 1023.9965820255455,
+      "bm_L_over_half_n_at_16384": 0.00048828125,
+      "bm_jumps_at_16384": 2,
+      "corr_eps_k1_delta1": 0.0714288439072074,
+      "nist_monobit_p": 0.0,
+      "nist_approx_entropy_p": 0.0
+    }
+  },
+  "relative_movement": {
+    "period2_0101": {
+      "density": 0.0013105361006979367,
+      "acf_max_abs_z_lag<=1000": 0.9965833504126049,
+      "bm_L_over_half_n_at_16384": 0.999755859375,
+      "bm_jumps_at_16384": 0.9997557997557998,
+      "corr_eps_k1_delta1": 0.9986886965643851,
+      "nist_monobit_p": 0.8209707571161365,
+      "nist_approx_entropy_p": 1.0
+    },
+    "period7_0110100": {
+      "density": 0.1439799152723172,
+      "acf_max_abs_z_lag<=1000": 0.9965833406374408,
+      "bm_L_over_half_n_at_16384": 0.99951171875,
+      "bm_jumps_at_16384": 0.9995115995115995,
+      "corr_eps_k1_delta1": 0.9908209109661744,
+      "nist_monobit_p": 1.0,
+      "nist_approx_entropy_p": 1.0
+    }
+  },
+  "max_relative_movement_per_statistic": {
+    "density": 0.1439799152723172,
+    "acf_max_abs_z_lag<=1000": 0.9965833504126049,
+    "bm_L_over_half_n_at_16384": 0.999755859375,
+    "bm_jumps_at_16384": 0.9997557997557998,
+    "corr_eps_k1_delta1": 0.9986886965643851,
+    "nist_monobit_p": 1.0,
+    "nist_approx_entropy_p": 1.0
+  },
+  "min_over_statistics_of_max_over_words": 0.1439799152723172,
+  "verdict": "PASSES PATH.md 0.1 trivially: every statistic is a functional of column 0 alone, so overwriting column 0 replaces the input entirely rather than perturbing it. Six of seven statistics move by >= 0.82; the weakest is density at 0.144, and its small movement under the period-2 word is a coincidence of that word having density exactly 1/2, not insensitivity. Movement is O(1), not O(1/W). This arm IS the column; it is not a functional insensitive to it, so 0.1 is not a live constraint here."
+}

@@ -1,0 +1,21 @@
+Test 2: correlation-attack statistic eps(k,Delta) along the lone-seed orbit
+k in (1, 2, 3, 4, 6, 8); Delta in [k,128] U (256, 512, 1024, 2048, 4096); ledger 780; global N 100838
+Delta >= k enforced (overlap would give eps = 1/2 by construction).
+
+sequence       max z   k  Delta        eps  #bonf  #>seedmax
+rule30         3.062   3     38   0.001953      0          0
+rule90      1918.351   1      1   0.500000    780        780
+lfsr32         3.274   6     14   0.004061      0          0
+bern51        35.639   1   4096   0.009837    780        780
+lag1000        3.281   3     83   0.002015      0          0
+copy1000       3.426   8    115   0.007207      0          0
+
+i.i.d. null, pooled per k:
+  k=1: n=2660 mean=0.000559 sd=0.000260 seed-max band [0.001092, 0.001810]
+  k=2: n=2640 mean=0.000777 sd=0.000273 seed-max band [0.001327, 0.001956]
+  k=3: n=2620 mean=0.001090 sd=0.000282 seed-max band [0.001587, 0.002370]
+  k=4: n=2600 mean=0.001544 sd=0.000284 seed-max band [0.002039, 0.002640]
+  k=6: n=2560 mean=0.003111 sd=0.000290 seed-max band [0.003683, 0.004360]
+  k=8: n=2520 mean=0.006234 sd=0.000284 seed-max band [0.006681, 0.007362]
+
+rule30 verdict: no (k,Delta) survives Bonferroni

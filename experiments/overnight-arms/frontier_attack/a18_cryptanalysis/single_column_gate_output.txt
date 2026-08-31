@@ -1,0 +1,15 @@
+PATH.md 0.1 single-column sensitivity gate
+W = 1048576
+
+statistic                                 true         period2     move         period7     move
+density                               0.500656             0.5    0.001        0.428572    0.144
+acf_max_abs_z_lag<=1000                3.49865            1024    0.997            1024    0.997
+bm_L_over_half_n_at_16384                    1     0.000244141    1.000     0.000488281    1.000
+bm_jumps_at_16384                         4095               1    1.000               2    1.000
+corr_eps_k1_delta1                 0.000655652             0.5    0.999       0.0714288    0.991
+nist_monobit_p                        0.179029               1    0.821               0    1.000
+nist_approx_entropy_p                 0.146773               0    1.000               0    1.000
+
+minimum relative movement: 0.001
+
+PASSES PATH.md 0.1 trivially: every statistic is a functional of column 0 alone, so overwriting column 0 replaces the input entirely. The movement is O(1), minimum 0.001 across all statistics and both periodic words, not O(1/W). This arm IS the column; it is not a functional insensitive to it, so the gate is not a live constraint here.

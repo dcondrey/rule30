@@ -1,0 +1,5 @@
+rule 90: ones in first 20000 = 1 (density 0.0001); nonzero t>0: none
+   prefix: 1000000000000000000000000000000000000000
+rule 30: ones in first 20000 = 10120 (density 0.5060); nonzero t>0: 10119 of them
+   prefix: 1101110011000101100100111010111001110101
+Conclusion: rule 90's single-seed center column is 1 then 0 forever (eventually periodic, period 1, density 0), despite rule 90 being ergodic and strongly mixing w.r.t. uniform Bernoulli. Ensemble chaos does not constrain the single-seed column.

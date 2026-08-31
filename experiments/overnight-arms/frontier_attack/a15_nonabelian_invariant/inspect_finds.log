@@ -1,0 +1,13 @@
+{"rule": 30, "monoid": "T2", "w": 2, "ladder_survivors": 4, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 4, "R1_killed": 0, "R2_column_blind_at_every_W": 4, "R2_column_sensitive": 0, "R3_max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "T2", "w": 3, "ladder_survivors": 160, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 160, "R1_killed": 0, "R2_column_blind_at_every_W": 160, "R2_column_sensitive": 0, "R3_max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "T3", "w": 2, "ladder_survivors": 1584, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 1584, "R1_killed": 0, "R2_column_blind_at_every_W": 1512, "R2_column_sensitive": 72, "R3_max_orbit_bits": 1.585}
+{"rule": 30, "monoid": "FlipFlop3", "w": 2, "ladder_survivors": 2, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 2, "R1_killed": 0, "R2_column_blind_at_every_W": 2, "R2_column_sensitive": 0, "R3_max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "FlipFlop3", "w": 3, "ladder_survivors": 22, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 22, "R1_killed": 0, "R2_column_blind_at_every_W": 22, "R2_column_sensitive": 0, "R3_max_orbit_bits": 1.0}
+{"rule": 90, "monoid": "T2", "w": 3, "ladder_survivors": 8, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 8, "R1_killed": 0, "R2_column_blind_at_every_W": 0, "R2_column_sensitive": 8, "R3_max_orbit_bits": 1.0}
+{"rule": 90, "monoid": "T3", "w": 2, "ladder_survivors": 558, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 558, "R1_killed": 0, "R2_column_blind_at_every_W": 0, "R2_column_sensitive": 558, "R3_max_orbit_bits": 1.0}
+{"rule": 30, "monoid": "T2", "w": 4, "sampled_strict_finds": 5, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 4}
+{"rule": 30, "monoid": "T2", "w": 6, "sampled_strict_finds": 6, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 0}
+{"rule": 30, "monoid": "T3", "w": 3, "sampled_strict_finds": 40, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 38}
+{"rule": 30, "monoid": "T3", "w": 4, "sampled_strict_finds": 23, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 6}
+{"rule": 90, "monoid": "T3", "w": 3, "sampled_strict_finds": 1, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 1}
+{"TOTAL_ladder_survivors": 2413, "killed_at_R0_orbit_phase": 0, "killed_at_R1_broken_star_identity": 13, "killed_at_R1_became_trivial": 13, "survived_fresh_banks": 2387, "AND_column_sensitive_at_some_W": 643}

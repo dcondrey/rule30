@@ -1,0 +1,4 @@
+rule  30  ANF l + c + r + cr ones in first 201 centre bits =  106  prefix 110111001100010110010011101011100111010101100001
+rule  90  ANF l + r          ones in first 201 centre bits =    1  prefix 100000000000000000000000000000000000000000000000
+rule 160  ANF lr             ones in first 201 centre bits =    1  prefix 100000000000000000000000000000000000000000000000
+rule 128  ANF lcr            ones in first 201 centre bits =    1  prefix 100000000000000000000000000000000000000000000000

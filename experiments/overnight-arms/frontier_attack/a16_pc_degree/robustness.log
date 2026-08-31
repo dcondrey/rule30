@@ -1,0 +1,89 @@
+
+rule 30 -- CNF-TRANSLATION encoding, a13 convention (relevant parents only)
+     n    vars   axioms   maxdeg  PC-degree
+     2       5       16        4          4
+     3       8       32        4          4
+     4      13       60        4          4
+     5      18       92        4          4
+     6      25      136        4          4
+
+rule 90 -- CNF-TRANSLATION encoding, a13 convention (relevant parents only)
+     n    vars   axioms   maxdeg  PC-degree
+     2       5       11        3          3
+     3       8       19        3          3
+     4      13       35        3          3
+     5      18       51        3          3
+     6      25       75        3          3
+
+rule 160 -- CNF-TRANSLATION encoding, a13 convention (relevant parents only)
+     n    vars   axioms   maxdeg  PC-degree
+     2       5       11        3          3
+     3       8       19        3          3
+     4      13       35        3          3
+     5      18       51        3          3
+     6      25       75        3          3
+
+rule 128 -- CNF-TRANSLATION encoding, a13 convention (relevant parents only)
+     n    vars   axioms   maxdeg  PC-degree
+     2       5       16        4          4
+     3       8       32        4          4
+     4      13       60        4          4
+     5      18       92        4          4
+     6      25      136        4          4
+
+rule 30 -- CNF-TRANSLATION encoding, redundant variant (all 3 parents)
+     n    vars   axioms   maxdeg  PC-degree
+     2       5       16        4          4
+     3       8       32        4          4
+     4      13       60        4          4
+     5      18       92        4          4
+     6      25      136        4          4
+
+rule 90 -- CNF-TRANSLATION encoding, redundant variant (all 3 parents)
+     n    vars   axioms   maxdeg  PC-degree
+     2       5       16        4          4
+     3       8       32        4          4
+     4      13       60        4          4
+     5      18       92        4          4
+     6      25      136        4          4
+
+rule 160 -- CNF-TRANSLATION encoding, redundant variant (all 3 parents)
+     n    vars   axioms   maxdeg  PC-degree
+     2       5       16        4          4
+     3       8       32        4          4
+     4      13       60        4          4
+     5      18       92        4          4
+     6      25      136        4          4
+
+rule 128 -- CNF-TRANSLATION encoding, redundant variant (all 3 parents)
+     n    vars   axioms   maxdeg  PC-degree
+     2       5       16        4          4
+     3       8       32        4          4
+     4      13       60        4          4
+     5      18       92        4          4
+     6      25      136        4          4
+
+TRANSFER: published size-degree relations evaluated at the measured degree
+  ANF encoding -> IPS Cor 5.3 (hypothesis: inconsistent CONSTANT-DEGREE
+  polynomials; satisfied here).  CNF encoding -> Miksa-Nordstrom Thm 2.2
+  (stated for a CNF formula with W(F) = clause width).  Each relation is
+  applied only where its own hypothesis is literally met.
+  rule      n  N(vars)  d_ANF IPS  M >= 2^(d^2/N)             d_CNF   W(F) MN  exp((d-W)^2/N)        
+    30      8       41      2 1.0699630500                        4      4 1.0000000000              
+    30     64     2113      2 1.0013130187                        4      4 1.0000000000              
+    30    512   131585      2 1.0000210709                        4      4 1.0000000000              
+    30   4096  8392705      2 1.0000003304                        4      4 1.0000000000              
+    90      8       41      1 1.0170497444                        3      3 1.0000000000              
+    90     64     2113      1 1.0003280932                        3      3 1.0000000000              
+    90    512   131585      1 1.0000052677                        3      3 1.0000000000              
+    90   4096  8392705      1 1.0000000826                        3      3 1.0000000000              
+   160      8       41      2 1.0699630500                        3      3 1.0000000000              
+   160     64     2113      2 1.0013130187                        3      3 1.0000000000              
+   160    512   131585      2 1.0000210709                        3      3 1.0000000000              
+   160   4096  8392705      2 1.0000003304                        3      3 1.0000000000              
+   128      8       41      3 1.1643398326                        4      4 1.0000000000              
+   128     64     2113      3 1.0029567168                        4      4 1.0000000000              
+   128    512   131585      3 1.0000474102                        4      4 1.0000000000              
+   128   4096  8392705      3 1.0000007433                        4      4 1.0000000000              
+
+wrote robustness.json

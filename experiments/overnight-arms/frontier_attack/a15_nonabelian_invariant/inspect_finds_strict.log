@@ -1,0 +1,6 @@
+{"rule": 30, "monoid": "T2", "w": 4, "sampled_strict_finds": 5, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 4}
+{"rule": 30, "monoid": "T2", "w": 6, "sampled_strict_finds": 6, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 0}
+{"rule": 30, "monoid": "T3", "w": 3, "sampled_strict_finds": 208, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 206}
+{"rule": 30, "monoid": "T3", "w": 4, "sampled_strict_finds": 23, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 6}
+{"rule": 90, "monoid": "T3", "w": 3, "sampled_strict_finds": 1, "R0_killed_by_orbit_phase_bound": 0, "R1_survived_fresh_banks": 1}
+{"TOTAL_ladder_survivors": 243, "killed_at_R0_orbit_phase": 0, "killed_at_R1_broken_star_identity": 13, "killed_at_R1_became_trivial": 13, "survived_fresh_banks": 217, "AND_column_sensitive_at_some_W": 29}

@@ -1,0 +1,30 @@
+a18 gen_sequences  T=1048576
+GATE vs repo center_column.py: MATCH (65536 bits)
+GATE vs common/rule30.py:      MATCH (65536 bits)
+
+rule30    len=1048576 ones=524976 density=0.500656
+rule90    len=1048576 ones=1 density=0.000001
+lfsr32    len=1048576 ones=523917 density=0.499646
+bern51    len=1048576 ones=534571 density=0.509807
+lag1000   len=1048576 ones=524160 density=0.499878
+copy1000  len=1048576 ones=524085 density=0.499806
+iid_00    len=1048576 ones=523889 density=0.499619
+iid_01    len=1048576 ones=524471 density=0.500175
+iid_02    len=1048576 ones=524487 density=0.500190
+iid_03    len=1048576 ones=524950 density=0.500631
+iid_04    len=1048576 ones=524600 density=0.500298
+iid_05    len=1048576 ones=524123 density=0.499843
+iid_06    len=1048576 ones=524051 density=0.499774
+iid_07    len=1048576 ones=524134 density=0.499853
+iid_08    len=1048576 ones=523665 density=0.499406
+iid_09    len=1048576 ones=523316 density=0.499073
+iid_10    len=1048576 ones=523480 density=0.499229
+iid_11    len=1048576 ones=524704 density=0.500397
+iid_12    len=1048576 ones=523966 density=0.499693
+iid_13    len=1048576 ones=524279 density=0.499991
+iid_14    len=1048576 ones=523759 density=0.499496
+iid_15    len=1048576 ones=524757 density=0.500447
+iid_16    len=1048576 ones=525029 density=0.500707
+iid_17    len=1048576 ones=525084 density=0.500759
+iid_18    len=1048576 ones=524203 density=0.499919
+iid_19    len=1048576 ones=523534 density=0.499281

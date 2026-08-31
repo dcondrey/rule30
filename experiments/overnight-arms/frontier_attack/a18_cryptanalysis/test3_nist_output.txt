@@ -1,0 +1,98 @@
+Test 3: NIST SP 800-22 subtests, K=100 blocks of 10000 bits + whole T=2^20
+meta-tests: pass proportion in [0.9602, 1.0] and p-value uniformity P_T >= 0.0001
+
+--- rule30 ---
+stream                pass/K  prop_ok         P_T  P_T_ok       KS p     whole p
+monobit               99/100     True      0.1025    True      0.475       0.179
+block_frequency       99/100     True      0.6993    True       0.73      0.4218
+runs                  99/100     True      0.6579    True      0.494       0.264
+longest_run          100/100     True     0.05194    True    0.00702     0.08718
+cusum_fwd             98/100     True      0.4012    True      0.544      0.1771
+cusum_rev             99/100     True      0.6993    True      0.883      0.2215
+approx_entropy_m3     99/100     True      0.8343    True      0.422      0.1468
+serial_m3_p1          99/100     True      0.9241    True      0.888     0.06225
+serial_m3_p2         100/100     True      0.6993    True      0.423      0.0521
+dft_spectral          99/100     True      0.2248    True      0.181      0.8395
+verdict: all 10 streams pass both meta-tests; no whole-sequence p survives Bonferroni
+
+--- rule90 ---
+stream                pass/K  prop_ok         P_T  P_T_ok       KS p     whole p
+monobit                0/100    False  6.187e-188   False          0           0
+block_frequency        0/100    False  6.187e-188   False          0           0
+runs                   0/100    False  6.187e-188   False          0           0
+longest_run            0/100    False  6.187e-188   False          0   1.931e-77
+cusum_fwd              0/100    False  6.187e-188   False          0           0
+cusum_rev              0/100    False  6.187e-188   False          0           0
+approx_entropy_m3      0/100    False  6.187e-188   False          0           0
+serial_m3_p1           0/100    False  6.187e-188   False          0           0
+serial_m3_p2           0/100    False  6.187e-188   False          0           0
+dft_spectral           0/100    False  6.187e-188   False          0           0
+verdict: REJECT (bias detected)
+
+--- lfsr32 ---
+stream                pass/K  prop_ok         P_T  P_T_ok       KS p     whole p
+monobit               97/100     True      0.5955    True      0.233      0.4687
+block_frequency      100/100     True      0.7792    True      0.694      0.8175
+runs                 100/100     True      0.9463    True      0.849      0.5622
+longest_run           99/100     True     0.09658    True      0.093      0.5371
+cusum_fwd             97/100     True      0.9241    True      0.539      0.6508
+cusum_rev             97/100     True      0.7197    True      0.479      0.5561
+approx_entropy_m3     98/100     True      0.3345    True      0.381      0.6355
+serial_m3_p1         100/100     True      0.9357    True      0.903      0.3973
+serial_m3_p2          99/100     True      0.3345    True      0.102      0.2018
+dft_spectral         100/100     True    0.008266    True    0.00691      0.9044
+verdict: all 10 streams pass both meta-tests; no whole-sequence p survives Bonferroni
+
+--- bern51 ---
+stream                pass/K  prop_ok         P_T  P_T_ok       KS p     whole p
+monobit               69/100    False   9.501e-56   False   3.29e-29   1.019e-89
+block_frequency       96/100    False     0.04872    True    0.00389    0.001855
+runs                  96/100    False      0.1816    True      0.321           0
+longest_run           98/100     True      0.1917    True    0.00726      0.2078
+cusum_fwd             74/100    False   1.678e-50   False   5.01e-29           0
+cusum_rev             70/100    False   1.253e-50   False    7.3e-25           0
+approx_entropy_m3     89/100    False   7.089e-14   False   3.41e-10    9.08e-85
+serial_m3_p1          83/100    False   9.381e-26   False   2.53e-15   2.331e-88
+serial_m3_p2          98/100     True      0.5749    True      0.817    0.005624
+dft_spectral          98/100     True      0.1088    True       0.12      0.6502
+verdict: REJECT (bias detected)
+
+--- lag1000 ---
+stream                pass/K  prop_ok         P_T  P_T_ok       KS p     whole p
+monobit              100/100     True      0.9717    True      0.775      0.8026
+block_frequency      100/100     True      0.5341    True       0.34       0.898
+runs                 100/100     True      0.5955    True      0.626      0.6157
+longest_run           98/100     True      0.7792    True      0.395      0.3175
+cusum_fwd            100/100     True       0.419    True       0.78      0.7522
+cusum_rev            100/100     True      0.7792    True      0.332      0.6035
+approx_entropy_m3     98/100     True      0.7399    True      0.285      0.3944
+serial_m3_p1         100/100     True      0.6787    True      0.677      0.5898
+serial_m3_p2          98/100     True      0.6371    True      0.537      0.2866
+dft_spectral          99/100     True      0.2493    True      0.568      0.2528
+verdict: all 10 streams pass both meta-tests; no whole-sequence p survives Bonferroni
+
+--- copy1000 ---
+stream                pass/K  prop_ok         P_T  P_T_ok       KS p     whole p
+monobit               99/100     True      0.6371    True      0.245      0.6917
+block_frequency      100/100     True     0.09094    True     0.0993      0.1424
+runs                  98/100     True      0.9241    True      0.983      0.8483
+longest_run           99/100     True      0.8165    True      0.786       0.488
+cusum_fwd            100/100     True      0.4373    True       0.66      0.6508
+cusum_rev            100/100     True      0.5341    True      0.634      0.9674
+approx_entropy_m3     99/100     True      0.9915    True      0.883      0.8982
+serial_m3_p1          97/100     True      0.6371    True       0.49      0.9062
+serial_m3_p2          96/100    False      0.9717    True      0.863      0.6605
+dft_spectral         100/100     True    0.001895    True     0.0731    0.004182
+verdict: REJECT (bias detected)
+
+i.i.d. null seeds with at least one block-meta failure: 2 of 20
+
+SP 800-22 has 15 tests. 8 implemented above (10 p-value streams).
+The 7 NOT run, and why:
+  - binary_matrix_rank: Not implemented. Needs GF(2) rank of 32x32 submatrices; a 10^4-bit block supplies only ~9 matrices against the 38 NIST requires for the chi-square to be valid, so it could not be run under this arm's block protocol without changing the block size.
+  - non_overlapping_template: Not implemented. 148 templates x 100 blocks would add ~14,800 hypotheses to a ledger fixed at N = 100,838 before data; adding it post hoc would break the pre-registration.
+  - overlapping_template: Not implemented, same reason, plus it needs the Pi-value table for m = 9 at the NIST-recommended n = 10^6 per block, which this block protocol does not supply.
+  - maurer_universal: Not implemented. NIST requires n >= 387,840 for L = 6 and much more for larger L; a 10^4-bit block cannot support it. It would run on the whole 2^20 sequence but not under the block protocol, and a whole-sequence-only stream is the weaker statement this test 3 avoids.
+  - linear_complexity: Deliberately omitted as REDUNDANT: test 1 measures the Berlekamp-Massey profile directly, to n = 2^20, with a 500-seed non-parametric null. NIST's version is a coarser chi-square on jump classes over short blocks and would add nothing test 1 does not cover.
+  - random_excursions: Not implemented. Requires at least 500 cycles of the cumulative-sum random walk; a 10^4-bit block yields far fewer, so NIST's own applicability condition fails at this block size.
+  - random_excursions_variant: Not implemented, same applicability failure.

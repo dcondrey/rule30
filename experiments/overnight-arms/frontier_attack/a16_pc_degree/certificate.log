@@ -1,0 +1,46 @@
+
+rule 30   explicit PC refutation, EVERY line independently re-checked
+     n    vars     lines    maxdeg     secs lines/n^2
+     4      13        47         2     0.00    2.9375
+     8      41       180         2     0.00    2.8125
+    16     145       707         2     0.00    2.7617
+    32     545      2812         2     0.01    2.7461
+    64    2113     11251         2     0.05    2.7468
+   128    8321     44999         2     0.22    2.7465
+   256   33025    180132         2     1.28    2.7486
+   512  131585    720810         2     4.37    2.7497
+
+rule 90   explicit PC refutation, EVERY line independently re-checked
+     n    vars     lines    maxdeg     secs lines/n^2
+     4      13        31         1     0.10    1.9375
+     8      41       107         1     0.00    1.6719
+    16     145       403         1     0.00    1.5742
+    32     545      1571         1     0.00    1.5342
+    64    2113      6211         1     0.01    1.5164
+   128    8321     24707         1     0.06    1.5080
+   256   33025     98563         1     0.29    1.5040
+   512  131585    393731         1     1.83    1.5020
+
+rule 160   explicit PC refutation, EVERY line independently re-checked
+     n    vars     lines    maxdeg     secs lines/n^2
+     4      13        25         2     0.04    1.5625
+     8      41        93         2     0.00    1.4531
+    16     145       373         2     0.00    1.4570
+    32     545      1509         2     0.00    1.4736
+    64    2113      6085         2     0.01    1.4856
+   128    8321     24453         2     0.05    1.4925
+   256   33025     98053         2     0.47    1.4962
+   512  131585    392709         2     2.10    1.4981
+
+rule 128   explicit PC refutation, EVERY line independently re-checked
+     n    vars     lines    maxdeg     secs lines/n^2
+     4      13        30         3     0.04    1.8750
+     8      41       118         3     0.00    1.8438
+    16     145       486         3     0.00    1.8984
+    32     545      1990         3     0.00    1.9434
+    64    2113      8070         3     0.02    1.9702
+   128    8321     32518         3     0.07    1.9847
+   256   33025    130566         3     0.68    1.9923
+   512  131585    523270         3     2.86    1.9961
+
+wrote certificate.json

@@ -1,0 +1,11 @@
+Test 2b: supplementary power check at Delta = 1000 (NOT in the N=100,838 ledger)
+
+  k   null mean    null sd   rule30 eps        z   copy1000 eps          z
+  1    0.000568   0.000229     0.000675     0.47       0.010131      41.82
+  2    0.000759   0.000219     0.000675    -0.38       0.010131      42.82
+  3    0.001143   0.000244     0.001159     0.06       0.010131      36.78
+  4    0.001546   0.000275     0.001397    -0.54       0.010131      31.18
+  6    0.003169   0.000359     0.002717    -1.26       0.010131      19.42
+  8    0.006319   0.000379     0.005917    -1.06       0.010652      11.43
+
+Test 2 HAS power at a planted correlation: copy1000 reaches z = 42.8 at Delta = 1000, far past the Bonferroni line, while rule30 reaches only z = 0.47 at the same lag. The control's absence from the registered test-2 result is a lag-grid coverage gap, not a lack of sensitivity.

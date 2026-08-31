@@ -1,0 +1,173 @@
+====================================================================================================
+MAIN SEARCH -- Rule 30 and the Rule 90 filter
+====================================================================================================
+rule     monoid  w       mode   candidates     surv   verif      T1      T3  FIND STRICT  predicted    match E[coboundary hits]
+  30         Z2  1 exhaustive            2        1       1       1       1     0      0          1       OK                   
+  30         Z2  2 exhaustive            8        2       2       2       2     0      0          2       OK                   
+  30         Z2  3 exhaustive          128        8       8       8       8     0      0          8       OK                   
+  30         Z2  4 exhaustive        32768      128     128     128     128     0      0        128       OK                   
+  30         Z2  5    sampled       300000        4       4       4       4     0      0                                   4.58
+  30         Z2  6    sampled       300000        0       0       0       0     0      0                               6.98e-05
+  30         Z3  1 exhaustive            3        1       1       1       1     0      0          1       OK                   
+  30         Z3  2 exhaustive           27        3       3       3       3     0      0          3       OK                   
+  30         Z3  3 exhaustive         2187       27      27      27      27     0      0         27       OK                   
+  30         Z3  4    sampled       300000       48      48      48      48     0      0                                   45.7
+  30         Z3  5    sampled       300000        0       0       0       0     0      0                                0.00697
+  30         Z3  6    sampled       300000        0       0       0       0     0      0                               1.62e-10
+  30         Z4  1 exhaustive            4        1       1       1       1     0      0          1       OK                   
+  30         Z4  2 exhaustive           64        4       4       4       4     0      0          4       OK                   
+  30         Z4  3 exhaustive        16384       64      64      64      64     0      0         64       OK                   
+  30         Z4  4    sampled       300000        5       5       5       5     0      0                                   4.58
+  30         Z4  5    sampled       300000        0       0       0       0     0      0                               6.98e-05
+  30         Z4  6    sampled       300000        0       0       0       0     0      0                               1.63e-14
+  30      Z2xZ2  1 exhaustive            4        1       1       1       1     0      0          1       OK                   
+  30      Z2xZ2  2 exhaustive           64        4       4       4       4     0      0          4       OK                   
+  30      Z2xZ2  3 exhaustive        16384       64      64      64      64     0      0         64       OK                   
+  30      Z2xZ2  4    sampled       300000        7       7       7       7     0      0                                   4.58
+  30      Z2xZ2  5    sampled       300000        0       0       0       0     0      0                               6.98e-05
+  30      Z2xZ2  6    sampled       300000        0       0       0       0     0      0                               1.63e-14
+  30         Z5  1 exhaustive            5        1       1       1       1     0      0          1       OK                   
+  30         Z5  2 exhaustive          125        5       5       5       5     0      0          5       OK                   
+  30         Z5  3 exhaustive        78125      125     125     125     125     0      0        125       OK                   
+  30         Z5  4    sampled       300000        1       1       1       1     0      0                                  0.768
+  30         Z5  5    sampled       300000        0       0       0       0     0      0                               1.97e-06
+  30         Z5  6    sampled       300000        0       0       0       0     0      0                               1.29e-17
+  30         Z6  1 exhaustive            6        1       1       1       1     0      0          1       OK                   
+  30         Z6  2 exhaustive          216        6       6       6       6     0      0          6       OK                   
+  30         Z6  3 exhaustive       279936      216     216     216     216     0      0        216       OK                   
+  30         Z6  4    sampled       300000        0       0       0       0     0      0                                  0.179
+  30         Z6  5    sampled       300000        0       0       0       0     0      0                               1.06e-07
+  30         Z6  6    sampled       300000        0       0       0       0     0      0                               3.77e-20
+  30         S3  1 exhaustive            6        1       1       1       1     0      0          1       OK                   
+  30         S3  2 exhaustive          216        6       6       6       6     0      0          6       OK                   
+  30         S3  3 exhaustive       279936      216     216     216     216     0      0        216       OK                   
+  30         S3  4    sampled       300000        0       0       0       0     0      0                                  0.179
+  30         S3  5    sampled       300000        0       0       0       0     0      0                               1.06e-07
+  30         S3  6    sampled       300000        0       0       0       0     0      0                               3.77e-20
+  30         T2  1 exhaustive            4        3       3       3       3     0      0                                       
+  30         T2  2 exhaustive           64       50      50      42      46     4      0                                       
+  30         T2  3 exhaustive        16384    11784   11784    9928   11624   160      0                                       
+  30         T2  4    sampled       300000   205952  205952  177036  205817   135      5                                       
+  30         T2  5    sampled       300000   203265  203264  175826  203257     7      0                                       
+  30         T2  6    sampled       300000   202959  202959  175920  202935    16      6                                       
+  30         T3  1 exhaustive           27       16      16      10      16     0      0                                       
+  30         T3  2 exhaustive        19683     8673    8673    4965    7089  1584     72                                       
+  30         T3  3    sampled       300000    93136   93136   65135   89709  3427    208                                       
+  30         T3  4    sampled       300000    76271   76267   61411   76105   161     23                                       
+  30  FlipFlop3  1 exhaustive            3        3       3       3       3     0      0                                       
+  30  FlipFlop3  2 exhaustive           27       27      27      23      25     2      0                                       
+  30  FlipFlop3  3 exhaustive         2187     1989    1989    1717    1967    22      0                                       
+  90         Z2  1 exhaustive            2        2       2       1       1     1      0          2       OK                   
+  90         Z2  2 exhaustive            8        4       4       2       2     2      0          4       OK                   
+  90         Z2  3 exhaustive          128       16      16       8       8     8      0         16       OK                   
+  90         Z2  4 exhaustive        32768      256     256     128     128   128      0        256       OK                   
+  90         Z2  5    sampled       300000       10      10       4       4     6      0                                   9.16
+  90         Z2  6    sampled       300000        0       0       0       0     0      0                                0.00014
+  90         Z3  1 exhaustive            3        1       1       1       1     0      0          1       OK                   
+  90         Z3  2 exhaustive           27        3       3       3       3     0      0          3       OK                   
+  90         Z3  3 exhaustive         2187       27      27      27      27     0      0         27       OK                   
+  90         Z3  4    sampled       300000       48      48      48      48     0      0                                   45.7
+  90         Z3  5    sampled       300000        0       0       0       0     0      0                                0.00697
+  90         Z3  6    sampled       300000        0       0       0       0     0      0                               1.62e-10
+  90         Z4  1 exhaustive            4        2       2       1       1     1      0          2       OK                   
+  90         Z4  2 exhaustive           64        8       8       4       4     4      0          8       OK                   
+  90         Z4  3 exhaustive        16384      128     128      64      64    64      0        128       OK                   
+  90         Z4  4    sampled       300000       11      11       5       5     6      0                                   9.16
+  90         Z4  5    sampled       300000        0       0       0       0     0      0                                0.00014
+  90         Z4  6    sampled       300000        0       0       0       0     0      0                               3.25e-14
+  90      Z2xZ2  1 exhaustive            4        4       4       1       1     3      0          4       OK                   
+  90      Z2xZ2  2 exhaustive           64       16      16       4       4    12      0         16       OK                   
+  90      Z2xZ2  3 exhaustive        16384      256     256      64      64   192      0        256       OK                   
+  90      Z2xZ2  4    sampled       300000       22      22       7       7    15      0                                   18.3
+  90      Z2xZ2  5    sampled       300000        0       0       0       0     0      0                               0.000279
+  90      Z2xZ2  6    sampled       300000        0       0       0       0     0      0                               6.51e-14
+  90         Z5  1 exhaustive            5        1       1       1       1     0      0          1       OK                   
+  90         Z5  2 exhaustive          125        5       5       5       5     0      0          5       OK                   
+  90         Z5  3 exhaustive        78125      125     125     125     125     0      0        125       OK                   
+  90         Z5  4    sampled       300000        1       1       1       1     0      0                                  0.768
+  90         Z5  5    sampled       300000        0       0       0       0     0      0                               1.97e-06
+  90         Z5  6    sampled       300000        0       0       0       0     0      0                               1.29e-17
+  90         Z6  1 exhaustive            6        2       2       1       1     1      0          2       OK                   
+  90         Z6  2 exhaustive          216       12      12       6       6     6      0         12       OK                   
+  90         Z6  3 exhaustive       279936      432     432     216     216   216      0        432       OK                   
+  90         Z6  4    sampled       300000        0       0       0       0     0      0                                  0.357
+  90         Z6  5    sampled       300000        0       0       0       0     0      0                               2.13e-07
+  90         Z6  6    sampled       300000        0       0       0       0     0      0                               7.54e-20
+  90         S3  1 exhaustive            6        4       4       1       1     3      0          4       OK                   
+  90         S3  2 exhaustive          216       24      24       6       6    18      0         24       OK                   
+  90         S3  3 exhaustive       279936      864     864     216     216   648      0        864       OK                   
+  90         S3  4    sampled       300000        0       0       0       0     0      0                                  0.714
+  90         S3  5    sampled       300000        0       0       0       0     0      0                               4.25e-07
+  90         S3  6    sampled       300000        0       0       0       0     0      0                               1.51e-19
+  90         T2  1 exhaustive            4        4       4       3       3     1      0                                       
+  90         T2  2 exhaustive           64       48      48      42      46     2      0                                       
+  90         T2  3 exhaustive        16384    11472   11472    9928   11464     8      0                                       
+  90         T3  1 exhaustive           27       25      25      10      16     9      0                                       
+  90         T3  2 exhaustive        19683     7719    7719    4965    7161   558      0                                       
+  90         T3  3    sampled       300000    84741   84741   65135   84653    88      1                                       
+  90  FlipFlop3  1 exhaustive            3        3       3       3       3     0      0                                       
+  90  FlipFlop3  2 exhaustive           27       25      25      23      25     0      0                                       
+  90  FlipFlop3  3 exhaustive         2187     1945    1945    1717    1945     0      0                                       
+
+CONTROLS -- 204 identity, 170 shift (saturation); 184 number-conserving
+rule     monoid  w candidates     surv    verif   FIND  noncomm_find
+ 204         Z2  1          2        2        2      1             0
+ 204         Z2  2          8        8        8      6             0
+ 204         Z2  3        128      128      128    120             0
+ 204         Z3  1          3        3        3      2             0
+ 204         Z3  2         27       27       27     24             0
+ 204         Z3  3       2187     2187     2187   2160             0
+ 204         S3  1          6        6        6      5             0
+ 204         S3  2        216      216      216    210           162
+ 204         S3  3      30000    30000    30000  29984         29688
+ 204         T3  1         27       27       27     11             0
+ 204         T3  2      19683    19683    19683  11478         10905
+ 204         T3  3      30000    30000    30000  18367         18367
+ 204  FlipFlop3  1          3        3        3      0             0
+ 204  FlipFlop3  2         27       27       27      2             0
+ 204  FlipFlop3  3       2187     2187     2187    118             0
+ 170         Z2  1          2        2        2      1             0
+ 170         Z2  2          8        8        8      6             0
+ 170         Z2  3        128      128      128    120             0
+ 170         Z3  1          3        3        3      2             0
+ 170         Z3  2         27       27       27     24             0
+ 170         Z3  3       2187     2187     2187   2160             0
+ 170         S3  1          6        6        6      5             0
+ 170         S3  2        216      216      216    210           162
+ 170         S3  3      30000    30000    30000  29984         29688
+ 170         T3  1         27       27       27     11             0
+ 170         T3  2      19683    19683    19683  11478         10905
+ 170         T3  3      30000    30000    30000  18367         18367
+ 170  FlipFlop3  1          3        3        3      0             0
+ 170  FlipFlop3  2         27       27       27      2             0
+ 170  FlipFlop3  3       2187     2187     2187    118             0
+ 184         Z2  1          2        2        2      1             0
+ 184         Z2  2          8        4        4      2             0
+ 184         Z2  3        128       16       16      8             0
+ 184         Z3  1          3        3        3      2             0
+ 184         Z3  2         27        9        9      6             0
+ 184         Z3  3       2187       81       81     54             0
+ 184         S3  1          6        6        6      5             0
+ 184         S3  2        216       36       36     30            12
+ 184         S3  3      30000      115      115     99            86
+ 184         T3  1         27       27       27     11             0
+ 184         T3  2      19683     9819     9819   2406          2031
+ 184         T3  3      30000    15270    15220   4865          4865
+ 184  FlipFlop3  1          3        3        3      0             0
+ 184  FlipFlop3  2         27       25       25      0             0
+ 184  FlipFlop3  3       2187     2095     2095     56             0
+
+----------------------------------------------------------------------------------------------------
+saturation controls (204,170) return every candidate : True
+rule 184 returns a PROPER subset                     : True
+rule 184 nontrivial invariants found                 : 7545
+  of which with a NON-COMMUTATIVE image (>=)         : 6994
+coboundary-count prediction mismatches               : 0  []
+rule 30: strictly-nontrivial candidates, GROUP cells      : 0   (over 6,706,598 candidates)
+rule 30: strictly-nontrivial candidates, NON-GROUP cells  : 314   -> all triaged in inspect_finds.py
+rule 90: strictly-nontrivial candidates, GROUP cells      : 0   (over 6,706,598 candidates)
+rule 90: strictly-nontrivial candidates, NON-GROUP cells  : 1   -> all triaged in inspect_finds.py
+RULE 30 / RULE 90 ladder survivors (pre-triage)      : 7518
+sampled group cells with E[coboundary hits] < 1      : 32   (their zeros carry NO information and are not claimed)
+(monoid,w) cells where Rule 30 and Rule 90 agree     : 24/55
+total candidates tested                              : 15,289,954 (main) + 253,512 (controls)

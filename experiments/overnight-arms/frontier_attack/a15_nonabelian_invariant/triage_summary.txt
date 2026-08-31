@@ -1,0 +1,15 @@
+rule     monoid  w verified  max disagreeAB    @W=256  nonzero W>=64  f != id  max orbit bits
+  30  FlipFlop3  2        2        0.000000  0.000000              0        0          1.0000
+  30  FlipFlop3  3       22        0.000000  0.000000              0        0          1.0000
+  30         T2  2        4        0.000000  0.000000              0        0          1.0000
+  30         T2  3      160        0.000000  0.000000              0        0          1.0000
+  30         T2  4        4        0.000000  0.000000              0        4          1.0000
+  30         T3  2     1584        0.004975  0.000000              0       72          1.5850
+  30         T3  3      206        0.009950  0.000000              0      206          1.5850
+  30         T3  4        6        0.000000  0.000000              0        6          1.5850
+  90         T2  3        8        0.522388  0.522388              8        8          1.0000
+  90         T3  2      558        0.522388  0.522388            558      558          1.0000
+  90         T3  3        1        0.522388  0.522388              1        1          1.5850
+
+rule 30: 1988 VERIFIED | col-0 disagreement at W>=64: 0 | max disagreeAB anywhere: 0.00995 | f != id: 288 | max orbit info: 1.585 bits
+rule 90: 567 VERIFIED | col-0 disagreement at W>=64: 567 | max disagreeAB anywhere: 0.522388 | f != id: 567 | max orbit info: 1.585 bits

@@ -1,0 +1,18 @@
+1. COMBINATORIAL CORE, exhaustive over all maps of an n-set
+   n=2:      4 maps, worst preperiod+period = 2 <= 2  OK
+   n=3:     27 maps, worst preperiod+period = 3 <= 3  OK
+   n=4:    256 maps, worst preperiod+period = 4 <= 4  OK
+   n=5:   3125 maps, worst preperiod+period = 5 <= 5  OK
+   n=6:  46656 maps, worst preperiod+period = 6 <= 6  OK
+
+2. PREMISE CHAIN on rule 184, where invariants DO exist
+   S3 w=2:   30 nontrivial invariants; 12 orbits x 400 steps; bound violations = 0; max preperiod+period = 1 <= |M| = 6; max info = 0.0 <= 2.585 bits
+   S3 w=3: 1080 nontrivial invariants; 12 orbits x 400 steps; bound violations = 0; max preperiod+period = 1 <= |M| = 6; max info = 0.0 <= 2.585 bits
+   Z3 w=2:    6 nontrivial invariants; 12 orbits x 400 steps; bound violations = 0; max preperiod+period = 1 <= |M| = 3; max info = 0.0 <= 1.585 bits
+
+3. RULE 30's surviving invariants, same measurement
+   Z3 w=3:    27 survivors; 16 orbits; max info = 0.0 bits; every profiled orbit constant = True
+   S3 w=3:   216 survivors; 16 orbits; max info = 0.0 bits; every profiled orbit constant = True
+   Z6 w=3:   216 survivors; 16 orbits; max info = 0.0 bits; every profiled orbit constant = True
+
+wrote orbit_bound.json

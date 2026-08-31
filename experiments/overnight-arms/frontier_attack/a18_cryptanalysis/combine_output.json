@@ -1,0 +1,404 @@
+{
+  "global_N": 100838,
+  "alpha": 0.05,
+  "bonferroni_threshold": 4.958448204050061e-07,
+  "fdr_q": 0.05,
+  "sequences": {
+    "rule30": {
+      "min_p_raw": 6.2140774681324975e-06,
+      "min_p_bonferroni_adjusted": 0.6266151437315448,
+      "n_bonferroni_rejections": 0,
+      "bonferroni_rejections": [],
+      "n_bh_rejections_q0.05": 0,
+      "bh_cutoff_p": 0.0,
+      "verdict": "NO BIAS FOUND"
+    },
+    "rule90": {
+      "min_p_raw": 0.0,
+      "min_p_bonferroni_adjusted": 0.0,
+      "n_bonferroni_rejections": 57,
+      "bonferroni_rejections": [
+        {
+          "family": "t1_bm_profile",
+          "id": "J@1024",
+          "p_raw": 8.839168006779612e-144,
+          "p_adj": 8.913240234676425e-139
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@1024",
+          "p_raw": 1.1167619146678782e-37,
+          "p_adj": 1.1261203795127951e-32
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@1024",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "J@4096",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@4096",
+          "p_raw": 1.6073291101016438e-201,
+          "p_adj": 1.6207985280442956e-196
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@4096",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "J@16384",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@16384",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@16384",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "J@65536",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@65536",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@65536",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "J@131072",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@131072",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@131072",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t2_correlation",
+          "id": "max k=1 d=1",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t3_nist",
+          "id": "monobit/pass_proportion",
+          "p_raw": 1.0000000000000887e-200,
+          "p_adj": 1.0083800000000896e-195
+        },
+        {
+          "family": "t3_nist",
+          "id": "monobit/uniformity_chi2",
+          "p_raw": 6.186801032394592e-188,
+          "p_adj": 6.238646425046059e-183
+        },
+        {
+          "family": "t3_nist",
+          "id": "monobit/uniformity_ks",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t3_nist",
+          "id": "monobit/whole_sequence",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        }
+      ],
+      "n_bh_rejections_q0.05": 57,
+      "bh_cutoff_p": 1.1167619146678782e-37,
+      "verdict": "BIAS FOUND"
+    },
+    "lfsr32": {
+      "min_p_raw": 0.0,
+      "min_p_bonferroni_adjusted": 0.0,
+      "n_bonferroni_rejections": 15,
+      "bonferroni_rejections": [
+        {
+          "family": "t1_bm_profile",
+          "id": "J@1024",
+          "p_raw": 3.899864551409396e-123,
+          "p_adj": 3.9325454163502065e-118
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@1024",
+          "p_raw": 6.872410639428396e-08,
+          "p_adj": 0.0069300014405868065
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@1024",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "J@4096",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@4096",
+          "p_raw": 8.353680823825678e-36,
+          "p_adj": 8.423684669129336e-31
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@4096",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "J@16384",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@16384",
+          "p_raw": 4.110843451699281e-102,
+          "p_adj": 4.145292319824521e-97
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@16384",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "J@65536",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@65536",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@65536",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "J@131072",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "Hbar@131072",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t1_bm_profile",
+          "id": "D@131072",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        }
+      ],
+      "n_bh_rejections_q0.05": 15,
+      "bh_cutoff_p": 6.872410639428396e-08,
+      "verdict": "BIAS FOUND"
+    },
+    "bern51": {
+      "min_p_raw": 0.0,
+      "min_p_bonferroni_adjusted": 0.0,
+      "n_bonferroni_rejections": 22,
+      "bonferroni_rejections": [
+        {
+          "family": "t2_correlation",
+          "id": "max k=1 d=4096",
+          "p_raw": 1.7153209051169385e-278,
+          "p_adj": 1.7296952943018184e-273
+        },
+        {
+          "family": "t3_nist",
+          "id": "monobit/pass_proportion",
+          "p_raw": 3.3888894005635123e-37,
+          "p_adj": 3.4172882937402343e-32
+        },
+        {
+          "family": "t3_nist",
+          "id": "monobit/uniformity_chi2",
+          "p_raw": 9.50100473710194e-56,
+          "p_adj": 9.580623156798854e-51
+        },
+        {
+          "family": "t3_nist",
+          "id": "monobit/uniformity_ks",
+          "p_raw": 3.294467308299013e-29,
+          "p_adj": 3.3220749443425586e-24
+        },
+        {
+          "family": "t3_nist",
+          "id": "monobit/whole_sequence",
+          "p_raw": 1.0188566642637275e-89,
+          "p_adj": 1.0273946831102576e-84
+        },
+        {
+          "family": "t3_nist",
+          "id": "runs/whole_sequence",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t3_nist",
+          "id": "cusum_fwd/pass_proportion",
+          "p_raw": 3.419905970864747e-29,
+          "p_adj": 3.4485647829005935e-24
+        },
+        {
+          "family": "t3_nist",
+          "id": "cusum_fwd/uniformity_chi2",
+          "p_raw": 1.6778767771832606e-50,
+          "p_adj": 1.6919373845760563e-45
+        },
+        {
+          "family": "t3_nist",
+          "id": "cusum_fwd/uniformity_ks",
+          "p_raw": 5.010616068496918e-29,
+          "p_adj": 5.052605031150923e-24
+        },
+        {
+          "family": "t3_nist",
+          "id": "cusum_fwd/whole_sequence",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t3_nist",
+          "id": "cusum_rev/pass_proportion",
+          "p_raw": 1.4873458206704477e-35,
+          "p_adj": 1.499809778647666e-30
+        },
+        {
+          "family": "t3_nist",
+          "id": "cusum_rev/uniformity_chi2",
+          "p_raw": 1.253053298660738e-50,
+          "p_adj": 1.263553885303515e-45
+        },
+        {
+          "family": "t3_nist",
+          "id": "cusum_rev/uniformity_ks",
+          "p_raw": 7.304172543003288e-25,
+          "p_adj": 7.365381508913655e-20
+        },
+        {
+          "family": "t3_nist",
+          "id": "cusum_rev/whole_sequence",
+          "p_raw": 0.0,
+          "p_adj": 0.0
+        },
+        {
+          "family": "t3_nist",
+          "id": "approx_entropy_m3/pass_proportion",
+          "p_raw": 6.25551838283413e-09,
+          "p_adj": 0.000630793962688228
+        },
+        {
+          "family": "t3_nist",
+          "id": "approx_entropy_m3/uniformity_chi2",
+          "p_raw": 7.088715473830042e-14,
+          "p_adj": 7.148118909500738e-09
+        },
+        {
+          "family": "t3_nist",
+          "id": "approx_entropy_m3/uniformity_ks",
+          "p_raw": 3.405033286983904e-10,
+          "p_adj": 3.433567465928829e-05
+        },
+        {
+          "family": "t3_nist",
+          "id": "approx_entropy_m3/whole_sequence",
+          "p_raw": 9.079804079882149e-85,
+          "p_adj": 9.155892838071562e-80
+        },
+        {
+          "family": "t3_nist",
+          "id": "serial_m3_p1/pass_proportion",
+          "p_raw": 3.0283096087799943e-16,
+          "p_adj": 3.0536868433015706e-11
+        },
+        {
+          "family": "t3_nist",
+          "id": "serial_m3_p1/uniformity_chi2",
+          "p_raw": 9.38074188864551e-26,
+          "p_adj": 9.459352505672359e-21
+        }
+      ],
+      "n_bh_rejections_q0.05": 23,
+      "bh_cutoff_p": 2.2359745098854802e-06,
+      "verdict": "BIAS FOUND"
+    },
+    "lag1000": {
+      "min_p_raw": 4.915508092543142e-06,
+      "min_p_bonferroni_adjusted": 0.49567000503586534,
+      "n_bonferroni_rejections": 0,
+      "bonferroni_rejections": [],
+      "n_bh_rejections_q0.05": 0,
+      "bh_cutoff_p": 0.0,
+      "verdict": "NO BIAS FOUND"
+    },
+    "copy1000": {
+      "min_p_raw": 1.5600758850445325e-95,
+      "min_p_bonferroni_adjusted": 1.5731493209612057e-90,
+      "n_bonferroni_rejections": 1,
+      "bonferroni_rejections": [
+        {
+          "family": "t4_autocorr",
+          "id": "lag 1000",
+          "p_raw": 1.5600758850445325e-95,
+          "p_adj": 1.5731493209612057e-90
+        }
+      ],
+      "n_bh_rejections_q0.05": 1,
+      "bh_cutoff_p": 1.5600758850445325e-95,
+      "verdict": "BIAS FOUND"
+    }
+  },
+  "test1_power_limit": "Test 1's 18 hypotheses use empirical p-values on 500 seeds, floor 1/501 = 0.00200. That floor is 4025x the Bonferroni threshold, so test 1 CANNOT produce a Bonferroni-surviving rejection at this seed count. It refutes; it does not confirm. Stated, not hidden.",
+  "headline": "NO BIAS FOUND"
+}

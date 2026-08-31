@@ -1,0 +1,111 @@
+{
+  "dft_variants": {
+    "d=4.0 (SP 800-22 2001), DC included": {
+      "n": 2000,
+      "mean": 0.4990507837595488,
+      "chi2": 100.67999999999999,
+      "P_T": 1.146308426433489e-17,
+      "ks_p": 0.00024291002827620138,
+      "frac_below_0.01": 0.0085
+    },
+    "d=3.8 (Kim-Umeno-Hasegawa 2004), DC included": {
+      "n": 2000,
+      "mean": 0.5071275024476862,
+      "chi2": 89.49,
+      "P_T": 2.060530008642021e-15,
+      "ks_p": 8.646623581276757e-05,
+      "frac_below_0.01": 0.0085
+    },
+    "d=4.0, DC dropped": {
+      "n": 2000,
+      "mean": 0.5005686699272356,
+      "chi2": 92.31,
+      "P_T": 5.593878199855071e-16,
+      "ks_p": 4.9809025982552586e-05,
+      "frac_below_0.01": 0.008
+    },
+    "d=3.8, DC dropped": {
+      "n": 2000,
+      "mean": 0.5086137907899703,
+      "chi2": 82.92999999999999,
+      "P_T": 4.222031443962938e-14,
+      "ks_p": 2.0207803406707123e-05,
+      "frac_below_0.01": 0.008
+    }
+  },
+  "dft_best_calibrated": "d=4.0 (SP 800-22 2001), DC included",
+  "dft_used_in_test3": "d=4.0 (SP 800-22 2001), DC included",
+  "dft_verdict": "The constant used in test3_nist.py is d=4.0 (SP 800-22 2001), DC included. Best calibrated on 2000 pure-null blocks: d=4.0 (SP 800-22 2001), DC included (KS p = 0.0002429). The variant actually used has KS p = 0.0002429 and frac(p<0.01) = 0.0085 against the nominal 0.01, so it is MISCALIBRATED and the DFT stream's result must be discounted.",
+  "per_stream_null": {
+    "monobit": {
+      "seeds_failing_pass_proportion": 1,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.514268951695907,
+      "rule30_P_T": 0.1025256802140477,
+      "rule30_pass_proportion": 0.99
+    },
+    "block_frequency": {
+      "seeds_failing_pass_proportion": 0,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.4470034266291014,
+      "rule30_P_T": 0.6993125708664081,
+      "rule30_pass_proportion": 0.99
+    },
+    "runs": {
+      "seeds_failing_pass_proportion": 0,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.5045659517788508,
+      "rule30_P_T": 0.657933306213629,
+      "rule30_pass_proportion": 0.99
+    },
+    "longest_run": {
+      "seeds_failing_pass_proportion": 0,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.3406349606025786,
+      "rule30_P_T": 0.05194163979552406,
+      "rule30_pass_proportion": 1.0
+    },
+    "cusum_fwd": {
+      "seeds_failing_pass_proportion": 1,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.3507279753733793,
+      "rule30_P_T": 0.40119928658025733,
+      "rule30_pass_proportion": 0.98
+    },
+    "cusum_rev": {
+      "seeds_failing_pass_proportion": 1,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.4466056920672645,
+      "rule30_P_T": 0.6993125708664081,
+      "rule30_pass_proportion": 0.99
+    },
+    "approx_entropy_m3": {
+      "seeds_failing_pass_proportion": 0,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.41923673774706227,
+      "rule30_P_T": 0.8343082601934075,
+      "rule30_pass_proportion": 0.99
+    },
+    "serial_m3_p1": {
+      "seeds_failing_pass_proportion": 0,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.6164183650390422,
+      "rule30_P_T": 0.9240759301265984,
+      "rule30_pass_proportion": 0.99
+    },
+    "serial_m3_p2": {
+      "seeds_failing_pass_proportion": 0,
+      "seeds_failing_uniformity": 0,
+      "median_P_T_over_null_seeds": 0.5544204358728568,
+      "rule30_P_T": 0.6993125708664081,
+      "rule30_pass_proportion": 1.0
+    },
+    "dft_spectral": {
+      "seeds_failing_pass_proportion": 0,
+      "seeds_failing_uniformity": 1,
+      "median_P_T_over_null_seeds": 0.12980379058262345,
+      "rule30_P_T": 0.22482064155775416,
+      "rule30_pass_proportion": 0.99
+    }
+  }
+}

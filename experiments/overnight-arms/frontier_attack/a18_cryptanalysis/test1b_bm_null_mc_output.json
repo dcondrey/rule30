@@ -1,0 +1,206 @@
+{
+  "n_seeds": 500,
+  "n_mc": 262144,
+  "n_deep": 1048576,
+  "global_bonferroni_threshold": 4.958448204050061e-07,
+  "empirical_p_floor": 0.001996007984031936,
+  "audit_A": {
+    "1024": {
+      "rule30_G": 512,
+      "null_G_median": 512.0,
+      "null_G_min": 452,
+      "null_G_max": 512,
+      "null_G_distinct_values": 6,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 1.0,
+      "rule30_J": 273,
+      "null_J_mean": 254.87,
+      "null_J_sd": 11.096457215050709,
+      "empirical_p_J": 0.1277445109780439
+    },
+    "2048": {
+      "rule30_G": 1024,
+      "null_G_median": 1024.0,
+      "null_G_min": 984,
+      "null_G_max": 1024,
+      "null_G_distinct_values": 5,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 1.0,
+      "rule30_J": 513,
+      "null_J_mean": 510.706,
+      "null_J_sd": 15.260975025123226,
+      "empirical_p_J": 0.9101796407185628
+    },
+    "4096": {
+      "rule30_G": 2048,
+      "null_G_median": 2048.0,
+      "null_G_min": 2008,
+      "null_G_max": 2048,
+      "null_G_distinct_values": 5,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 1.0,
+      "rule30_J": 1048,
+      "null_J_mean": 1021.914,
+      "null_J_sd": 22.031736173020846,
+      "empirical_p_J": 0.22954091816367264
+    },
+    "8192": {
+      "rule30_G": 4096,
+      "null_G_median": 4096.0,
+      "null_G_min": 4056,
+      "null_G_max": 4096,
+      "null_G_distinct_values": 5,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 1.0,
+      "rule30_J": 2066,
+      "null_J_mean": 2044.574,
+      "null_J_sd": 32.153011621193826,
+      "empirical_p_J": 0.4311377245508982
+    },
+    "16384": {
+      "rule30_G": 8192,
+      "null_G_median": 8192.0,
+      "null_G_min": 8152,
+      "null_G_max": 8192,
+      "null_G_distinct_values": 5,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 1.0,
+      "rule30_J": 4095,
+      "null_J_mean": 4092.968,
+      "null_J_sd": 45.861066831265525,
+      "empirical_p_J": 0.9840319361277445
+    },
+    "32768": {
+      "rule30_G": 16384,
+      "null_G_median": 16384.0,
+      "null_G_min": 16344,
+      "null_G_max": 16384,
+      "null_G_distinct_values": 5,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 1.0,
+      "rule30_J": 8123,
+      "null_J_mean": 8189.954,
+      "null_J_sd": 65.29215891691791,
+      "empirical_p_J": 0.2874251497005988
+    },
+    "65536": {
+      "rule30_G": 32756,
+      "null_G_median": 32768.0,
+      "null_G_min": 32744,
+      "null_G_max": 32768,
+      "null_G_distinct_values": 4,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 0.06387225548902195,
+      "rule30_J": 16340,
+      "null_J_mean": 16382.76,
+      "null_J_sd": 93.2146143512771,
+      "empirical_p_J": 0.6207584830339321
+    },
+    "131072": {
+      "rule30_G": 65536,
+      "null_G_median": 65536.0,
+      "null_G_min": 65476,
+      "null_G_max": 65536,
+      "null_G_distinct_values": 6,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 1.0,
+      "rule30_J": 32829,
+      "null_J_mean": 32772.026,
+      "null_J_sd": 133.03142502464664,
+      "empirical_p_J": 0.7584830339321357
+    },
+    "262144": {
+      "rule30_G": 131072,
+      "null_G_median": 131072.0,
+      "null_G_min": 131012,
+      "null_G_max": 131072,
+      "null_G_distinct_values": 5,
+      "rule30_G_inside_null_range": true,
+      "empirical_p_G": 1.0,
+      "rule30_J": 65502,
+      "null_J_mean": 65541.198,
+      "null_J_sd": 175.46653186179756,
+      "empirical_p_J": 0.8423153692614771
+    }
+  },
+  "audit_B": {
+    "1024": {
+      "G": 512,
+      "J": 273,
+      "L": null,
+      "null_median_G": 512.0,
+      "G_minus_null_median": 0.0
+    },
+    "2048": {
+      "G": 1024,
+      "J": 513,
+      "L": null,
+      "null_median_G": 1024.0,
+      "G_minus_null_median": 0.0
+    },
+    "4096": {
+      "G": 2048,
+      "J": 1048,
+      "L": null,
+      "null_median_G": 2048.0,
+      "G_minus_null_median": 0.0
+    },
+    "8192": {
+      "G": 4096,
+      "J": 2066,
+      "L": null,
+      "null_median_G": 4096.0,
+      "G_minus_null_median": 0.0
+    },
+    "16384": {
+      "G": 8192,
+      "J": 4095,
+      "L": null,
+      "null_median_G": 8192.0,
+      "G_minus_null_median": 0.0
+    },
+    "32768": {
+      "G": 16384,
+      "J": 8123,
+      "L": null,
+      "null_median_G": 16384.0,
+      "G_minus_null_median": 0.0
+    },
+    "65536": {
+      "G": 32756,
+      "J": 16340,
+      "L": null,
+      "null_median_G": 32768.0,
+      "G_minus_null_median": -12.0
+    },
+    "131072": {
+      "G": 65536,
+      "J": 32829,
+      "L": null,
+      "null_median_G": 65536.0,
+      "G_minus_null_median": 0.0
+    },
+    "262144": {
+      "G": 131072,
+      "J": 65502,
+      "L": null,
+      "null_median_G": 131072.0,
+      "G_minus_null_median": 0.0
+    },
+    "524288": {
+      "G": 262140,
+      "J": 130952,
+      "L": null,
+      "null_median_G": null,
+      "G_minus_null_median": null
+    },
+    "1048576": {
+      "G": 524288,
+      "J": 261724,
+      "L": null,
+      "null_median_G": null,
+      "G_minus_null_median": null
+    }
+  },
+  "verdict": "ARTIFACT. rule30's G(n) lies inside the 500-seed null range at every prefix (True); the smallest empirical two-sided p is 0.0639, nowhere near the global Bonferroni threshold 4.958e-07, and the deviation does not persist with depth (audit B). The test-1 z = 5.42 was produced by a normal approximation applied to a lattice-valued statistic whose 20-seed s.d. estimate (1.5e-5) is an artifact of near-degeneracy: the null takes only 4 distinct values at n = 65536 across 500 seeds. D is retired as a z-scored statistic; G with an empirical null replaces it."
+}

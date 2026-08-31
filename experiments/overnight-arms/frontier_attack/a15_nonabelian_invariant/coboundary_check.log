@@ -1,0 +1,10 @@
+{"monoid": "Z2", "w": 3, "|G|": 2, "predicted": 8, "coboundaries_built": 8, "telescoping_failures": 0, "survivors_rule30": 8, "set_equal_rule30": true, "survivors_rule90": 16, "set_equal_rule90": false}
+{"monoid": "Z2", "w": 4, "|G|": 2, "predicted": 128, "coboundaries_built": 128, "telescoping_failures": 0, "survivors_rule30": 128, "set_equal_rule30": true, "survivors_rule90": 256, "set_equal_rule90": false}
+{"monoid": "Z3", "w": 3, "|G|": 3, "predicted": 27, "coboundaries_built": 27, "telescoping_failures": 0, "survivors_rule30": 27, "set_equal_rule30": true, "survivors_rule90": 27, "set_equal_rule90": true}
+{"monoid": "Z4", "w": 3, "|G|": 4, "predicted": 64, "coboundaries_built": 64, "telescoping_failures": 0, "survivors_rule30": 64, "set_equal_rule30": true, "survivors_rule90": 128, "set_equal_rule90": false}
+{"monoid": "Z2xZ2", "w": 3, "|G|": 4, "predicted": 64, "coboundaries_built": 64, "telescoping_failures": 0, "survivors_rule30": 64, "set_equal_rule30": true, "survivors_rule90": 256, "set_equal_rule90": false}
+{"monoid": "Z5", "w": 3, "|G|": 5, "predicted": 125, "coboundaries_built": 125, "telescoping_failures": 0, "survivors_rule30": 125, "set_equal_rule30": true, "survivors_rule90": 125, "set_equal_rule90": true}
+{"monoid": "Z6", "w": 3, "|G|": 6, "predicted": 216, "coboundaries_built": 216, "telescoping_failures": 0, "survivors_rule30": 216, "set_equal_rule30": true, "survivors_rule90": 432, "set_equal_rule90": false}
+{"monoid": "S3", "w": 2, "|G|": 6, "predicted": 6, "coboundaries_built": 6, "telescoping_failures": 0, "survivors_rule30": 6, "set_equal_rule30": true, "survivors_rule90": 24, "set_equal_rule90": false}
+{"monoid": "S3", "w": 3, "|G|": 6, "predicted": 216, "coboundaries_built": 216, "telescoping_failures": 0, "survivors_rule30": 216, "set_equal_rule30": true, "survivors_rule90": 864, "set_equal_rule90": false}
+{"all_cells_identify_exactly_the_coboundary_space": false, "cells": 9}
