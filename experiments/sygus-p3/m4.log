@@ -57,3 +57,97 @@ random null distribution, 60 seeded samples:
   random_045       m=4 k_min=3 verified=True (0.066s)
   random_046       m=4 k_min=5 verified=True (0.518s)
   random_047       m=4 k_min=5 verified=True (0.585s)
+  random_048       m=4 k_min=6 verified=True (8.087s)
+  random_049       m=4 k_min=6 verified=True (7.61s)
+  random_050       m=4 k_min=6 verified=True (8.121s)
+  random_051       m=4 k_min=6 verified=True (10.147s)
+  random_052       m=4 k_min=5 verified=True (0.301s)
+  random_053       m=4 k_min=5 verified=True (0.6s)
+  random_054       m=4 k_min=5 verified=True (0.444s)
+  random_055       m=4 k_min=4 verified=True (0.133s)
+  random_056       m=4 k_min=5 verified=True (0.269s)
+  random_057       m=4 k_min=6 verified=True (7.16s)
+  random_058       m=4 k_min=5 verified=True (0.568s)
+  random_059       m=4 k_min=4 verified=True (0.082s)
+{
+  "m": 4,
+  "kmax": 7,
+  "controls": {
+    "rule30_offset0": 5,
+    "rule30_offset1": 6,
+    "rule90": 3,
+    "rule150": 0,
+    "rule60": 0,
+    "parity": 3,
+    "and_m": 3,
+    "maj3": 4
+  },
+  "random_kmin_sorted": [
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    7,
+    7
+  ],
+  "random_median": 5,
+  "rule30_percentile_of_random": 36.7,
+  "instrument_check": {
+    "structured_min": 0,
+    "random_median": 5
+  }
+}

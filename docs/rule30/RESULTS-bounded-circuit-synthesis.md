@@ -103,9 +103,13 @@ pair twice, and survives only because an alternative 4-step chain exists.  Two
 checks close it:
 
 * All 256 three-bit functions, full `k_min` computed with the break on and
-  with it off: **[FILL m3-256]**.
+  with it off: **zero mismatches**.  Complete across every `k` at that arity,
+  which is strictly stronger than the realizability pass above.
 * Rule 30 at `m = 4`, `k = 1..5`, with both optional breaks **disabled**:
-  **[FILL m4-nobreaks]**.
+  UNSAT at `k = 1, 2, 3, 4` and SAT at `k = 5`.  The `m = 4` theorem below is
+  therefore **unconditional** -- it does not rest on any symmetry break.
+
+(`validate_break.py`, `validate_break.json`.)
 
 ## 4. `k_min` results
 
@@ -147,10 +151,19 @@ computes `c(n)` for all `n < 16`.  Five gates suffice, and a five-gate chain
 was produced and independently verified.  `k_min(m=4) = 5` exactly, against a
 maximum of `u(4) = 7` over all 4-bit functions.
 
-Random null (60 seeded uniform tables): **[FILL m4-null]**
-Weight-matched null (60 seeded tables of Hamming weight 9, matching the
-target, since sparse tables synthesize cheaper and an unmatched null partly
-measures density rather than structure): **[FILL m4-null-w9]**
+Random null, 60 seeded uniform 4-bit tables:
+
+| `k_min` | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|
+| count | 3 | 10 | 18 | 27 | 2 |
+
+Median 5.  **Rule 30 lands exactly on the random median.**  Its rank within the
+null is the 37th percentile, which given a five-point support means "in the
+bulk", nothing more.
+
+Weight-matched null (60 seeded tables of Hamming weight 9, matching the target,
+since sparse tables synthesize cheaper and an unmatched null partly measures
+table density rather than structure): **[FILL m4-null-w9]**
 
 ### m = 5 (N = 32)
 
@@ -169,13 +182,16 @@ Out of reach.  See the feasibility curve.
 **The instrument kill-check passes.**  Registered in advance: if the structured
 controls' `k_min` were not appreciably below the random median at `m = 4`, the
 instrument would have no resolving power and no comparative statement would be
-allowed.  The controls come in at 0, 0, 3, 3, 3 against a random median of
-**[FILL median]**.  The instrument resolves.
+allowed.  The controls come in at 0, 0, 3, 3, 3 against a random median of 5, with only 3 of
+60 random tables at or below the best structured control's 3.  The instrument
+resolves.
 
-**Rule 30 sits clearly above every structured control.**  At `m = 4` it needs 5
-gates where the linear-CA columns need 0 to 3 and parity needs 3.  This is the
-one comparative statement the design supports, and it is the expected null:
-the centre column does not look like a cheap automatic sequence at this width.
+**Rule 30 sits clearly above every structured control, and exactly on the
+random median.**  At `m = 4` it needs 5 gates where the linear-CA columns need
+0 to 3 and parity needs 3, while the median uniform random 4-bit table also
+needs 5.  This is the one comparative statement the design supports, and it is
+the registered null: the centre column does not look like a cheap automatic
+sequence at this width, and it does not look unusual against random either.
 
 **Three reasons not to read more into it than that.**
 
