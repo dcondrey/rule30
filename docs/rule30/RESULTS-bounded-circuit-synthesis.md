@@ -192,6 +192,12 @@ the one that produces the theorem, so it is the branch to extrapolate on.
 | 5 | 6 | UNSAT | 43 705 | 357 s |
 **[FILL feas5]**
 
+All `m = 3` and `m = 4` rows and the `m = 5, k = 6` row were measured on an
+otherwise idle machine.  The remaining `m = 5` rows were measured with six to
+eight solver processes sharing ten cores and are inflated by an amount not
+separately quantified; they are upper bounds on the uncontended time, and the
+per-gate growth factor should be extrapolated from the uncontended rows only.
+
 Two facts dominate and should be quoted at anyone planning a follow-up.
 
 * **The UNSAT branch costs roughly 4-8x per additional gate at fixed `m`**
@@ -228,6 +234,14 @@ sequence at this width, and it does not look unusual against random either.
 1. *Discreteness.*  Random 4-bit `k_min` lives on a support of about four
    integers.  A percentile rank of Rule 30 within that is one integer of
    movement on a four-point scale, not a measurement.
+   *Interpretation frame for the weight-matched null, written before that
+   number was seen:* balanced tables synthesize harder than sparse ones, so the
+   weight-9 median may well come back at 6, putting Rule 30's 5 *below* it.
+   That would be the shape of a false compression signal and is not to be read
+   as one.  A one-gate deviation from the weight-matched median is exactly the
+   size of the offset swing in point 2, i.e. inside the noise floor of a pure
+   bookkeeping choice.  Only a deviation of two or more gates would be worth a
+   second look at this arity, and the support does not have room for one.
 2. *The offset swing is the noise floor.*  Changing nothing but the indexing
    convention -- whether `c(0)` is the seed row or the row after -- moves
    `k_min` from 5 to 6 at `m = 4`.  That is a full gate, the same magnitude as

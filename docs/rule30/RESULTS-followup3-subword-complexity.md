@@ -86,6 +86,22 @@ which is `> n` for every `n < r+q`, hence in particular for every
 `n <= n_max` whenever `n_max < r+q`. So the observation "`p(n)>n` for
 `n<=n_max`" is **logically compatible** with `w` being eventually periodic —
 it merely excludes periods (`r+q`) at most around `n_max`. Since P1 requires
+
+> **CORRECTION (superseded by `RESULTS-subword-complexity-extended.md`).**
+> The clause "it merely excludes periods (`r+q`) at most around `n_max`" is
+> **wrong, and understates this route by roughly three orders of magnitude.**
+> The bound `p(n) <= r+q` holds for *every* `n`, so a single measured
+> `p(n_0) = V` already forces `r+q >= V` — the exclusion tracks the largest
+> measured *complexity value*, not the largest `n` reached. The correct
+> exclusion is `max_n p_hat(n) = N - L` (`L` = longest repeated factor,
+> empirically `~2 log_2 N`), i.e. **linear in prefix length `N`**. The
+> 200,000-bit run described below therefore already excluded
+> `r+q <= 199,966`, not `r+q <= 64`. Everything after this point in §2-§3
+> that reasons from `n_max` as the exclusion bound inherits the same error.
+> The conclusion (KILLED under obstruction H) is unaffected: a finite prefix
+> still leaves all sufficiently large `r+q` open.
+
+Since P1 requires
 `p(n) > n` for **every** `n` with no exception, and a finite computation only
 ever reaches finitely many `n`, no finite computation can certify the
 universal statement; it can only ever rule out periods below whatever bound
@@ -104,6 +120,17 @@ direct inspection — several orders of magnitude beyond `n_max=64` (or even
 saturation wall in §2). So this route, even run at its full stated scope, is
 not just logically unable to close P1 — it is **strictly weaker**, as an
 empirical exclusion, than a check this program's own register already
+
+> **CORRECTION (superseded by `RESULTS-subword-complexity-extended.md`).**
+> "Strictly weaker" is also wrong. A repeated factor of length `L` at offset
+> `q` **is** a period-`q` agreement running `L` positions, so the subword
+> route executed optimally *is* the direct periodicity scan restated in
+> different notation — the same statement, not a weaker cousin. The
+> comparison to the prize announcement's `~10^9`-bit check stands only as a
+> difference in prefix length reached, not in method strength.
+
+Continuing the (superseded) original argument, this route was taken to be
+weaker than a check this program's own register already
 credits as insufficient (obstruction H's own closing line: "the prize
 announcement's own `10^9`-bit check cannot exclude 'a trillion-step
 transient'"). The subword-complexity framing reproduces a strictly smaller
