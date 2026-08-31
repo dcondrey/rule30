@@ -232,8 +232,14 @@ the one that produces the theorem, so it is the branch to extrapolate on.
 | 4 | 3 | UNSAT | 4 304 | 0.012 s |
 | 4 | 4 | UNSAT | 7 326 | 0.102 s |
 | 4 | 5 | SAT | 11 523 | 0.608 s |
+| 5 | 1 | UNSAT | 2 804 | 0.02 s |
+| 5 | 2 | UNSAT | 6 802 | 0.07 s |
+| 5 | 3 | UNSAT | 12 506 | 0.11 s |
+| 5 | 4 | UNSAT | 20 281 | 0.61 s |
+| 5 | 5 | UNSAT | 30 531 | 9.49 s |
 | 5 | 6 | UNSAT | 43 705 | 357 s |
-**[FILL feas5]**
+| 5 | 7 | unresolved | 60 303 | > 86 min |
+| 5 | 8 | unresolved | 80 882 | > 86 min |
 
 All `m = 3` and `m = 4` rows and the `m = 5, k = 6` row were measured on an
 otherwise idle machine.  The remaining `m = 5` rows were measured with six to
