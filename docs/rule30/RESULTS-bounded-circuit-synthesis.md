@@ -190,10 +190,20 @@ denies -- see the pre-registration).
 | 4 | UNSAT | 0.61 s |
 | 5 | UNSAT | 9.49 s |
 | 6 | UNSAT | 357 s |
-**[FILL m5rest]**
+| 7 | unresolved | > 86 min, killed |
+| 8 | unresolved | > 86 min, killed |
+| 9, 10, 11, 12 | unresolved | killed at ~13 min to free cores |
 
 **Lower bound obtained: `k_min(m=5) >= 7`.**  No Boolean chain of six or fewer
 two-input gates computes `c(n)` for all `n < 32`.
+
+**Upper bound: `k_min(m=5) <= 12`, from the literature, not from this run.**
+`u(5) = 12` (Knuth 7.1.2) bounds every 5-bit function.  No 5-bit chain was
+synthesized here: the SAT-side probes at `k = 9..12` did not resolve either,
+which is itself informative -- at `m = 5` neither branch is cheap, and the
+usual "SAT at `k_min` is fast" intuition from `m <= 4` does not carry over.
+So the honest `m = 5` statement is a bracket `7 <= k_min <= 12` whose upper end
+is inherited and whose lower end is the only part this experiment earned.
 
 *Conditionality, stated plainly:* the `m = 5` UNSAT results were run with the
 distinct-fanin-pair symmetry break enabled.  That break is validated
@@ -239,6 +249,10 @@ Two facts dominate and should be quoted at anyone planning a follow-up.
   factor.**  The last UNSAT at `m = 4` is 0.1 s; the corresponding one at
   `m = 5` is 357 s -- a factor of ~3 500 for one extra bit, from the truth
   table doubling *and* the chain search space widening at once.
+
+* **The wall is at `m = 5, k = 7`.**  That single call ran over 86 minutes
+  without resolving in either direction, and the `k = 8..12` calls likewise.
+  Everything up to and including `m = 5, k = 6` finishes; nothing past it does.
 
 Composing those two: `m = 6` would put the decisive UNSAT calls at years on
 this encoding and one machine.  `m = 6` is not reachable, and no amount of
@@ -297,8 +311,11 @@ sequence at this width, and it does not look unusual against random either.
 **Established, unconditionally:** `k_min(m=4) = 5` for Rule 30's centre column
 over the full `B2` chain model -- a small exact theorem, machine-checked, with
 the UNSAT at `k = 4` confirmed by two independent solvers and reproduced with
-all optional symmetry breaks disabled.  Plus the same for `m = 3`, and a
-bracket at `m = 5`.
+all optional symmetry breaks disabled.  Plus the same for `m = 3`.
+
+**Established, conditional on a symmetry break validated at lower arity:**
+`k_min(m=5) >= 7` -- no chain of six or fewer gates computes `c` on `[0, 32)`.
+The matching upper bound `<= 12` is inherited from `u(5)`, not earned here.
 
 **Not established, and cannot be by this method:**
 
@@ -336,5 +353,8 @@ For the user to accept or reject:
    `a22_p3_succinct_index` observed "the register does not currently draw
    anywhere."
 3. A one-line feasibility fact for future arms: complete `B2` exact synthesis
-   of a 5-bit truth table with this encoding reaches `k = `**[FILL wall]** in
-   hours on one machine, and `m = 6` is not reachable.
+   with this encoding resolves everything up to `m = 5, k = 6` (357 s) and
+   nothing beyond -- `m = 5, k = 7` runs past 86 minutes unresolved in either
+   direction, and `m = 6` is unreachable by orders of magnitude.  A future arm
+   wanting `m = 6` needs a different encoding (topology families, DAG-canonical
+   symmetry breaking, distributed portfolio), not more patience.

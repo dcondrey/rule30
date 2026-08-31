@@ -67,9 +67,12 @@ only calls `evaluate()`, it changes no scoring):
 
 Mean tail 1.729, stdev 0.135, range 1.586-1.833. Every one of the four
 lands in the band the pre-registration reserves for a genuine exponent
-improvement, and the fits are clean (`r2 > 0.999`) — the measurement is
-mis-calibrated, not noisy. Repeating it more would measure the same wrong
-thing more precisely.
+improvement, while each individual fit looks clean (`r2 > 0.999`).
+
+A clean `r2` on every run alongside a 0.25-wide spread across runs is the
+tell: the *within-run* fit is tight and the *between-run* scatter is
+large, so no single evaluation can report its own unreliability. Section
+3b pins this down by measuring the baseline against itself.
 
 ## 3. Root cause — and it is not only the load
 
@@ -209,9 +212,10 @@ it could score anything.
 
 ## 5. Cost
 
-Approximately zero. No LLM calls were made — the search never launched.
-About 35 minutes of (heavily contended) CPU went to the sanity gate and
-the repeat measurements.
+Zero LLM spend — the search never launched, so no OpenRouter calls were
+made at all. About 50 minutes of wall clock (heavily contended, ~1/3 of
+one core) went to the sanity gate, the six repeat measurements of (c) and
+the interleaved A/B/A/B passes.
 
 ## 6. Related prior art in this repo
 

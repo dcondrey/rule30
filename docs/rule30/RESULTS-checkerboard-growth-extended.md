@@ -5,23 +5,23 @@ Successor to `a3_p2_orbit_closure` (row 79, `T=2e6`) and
 `a22_p2_checkerboard_growth` (`T=4e6`, verdict INCONCLUSIVE).
 
 **Status: the INCONCLUSIVE is resolved in the growth direction.  All three
-fixed-point families are in regime (b), still growing, at `T = 2^23 = 8,388,608`
-(2.1x a22's horizon, 4.2x row 79's):
-growth rate 0.92–1.03 rows per doubling for both checkerboards and 0.50 for
-all-zeros at `W >= 1`, matching the reference per-row cost, with intervals
-missing zero by 60 to 250 standard errors; no rate decline in any of 52–74 cells
+fixed-point families are in regime (b), still growing, at
+`T = 2^24 = 16,777,216` (4.2x a22's horizon, 8.4x row 79's):
+growth rate 0.88–1.03 rows per doubling for both checkerboards and 0.497–0.499
+for all-zeros at `W >= 1`, matching the reference per-row cost, with intervals
+missing zero by 70 to 350 standard errors; no rate decline in any of 53–78 cells
 across 32 disjoint time windows; and the pre-registered saturation signature
 (negative curvature) did not fire in a single cell.  The condition attached to
 row 8 is NOT discharged — unbounded growth is asymptotic and no finite horizon
 proves it.  What changed is that the finite-horizon evidence is now quantitative
 instead of a plateau reading, and that a22's "one family flat" is identified as
 an artefact: `checker_A` is in fact the family whose maximal diagonal patch
-recurs most often, in 13 of 32 disjoint windows, the latest at `0.977 T`.
+moved from `K = 6` to `K = 7` here, and at `2^23` recurred in 13 of 32 disjoint
+windows with the latest at `0.977 T`.
 
-The horizon is one further doubling beyond a22, and that is enough because the
-verdict is horizon-insensitive: the identical direction, with the identical
+The verdict is horizon-insensitive: the identical direction, with the identical
 pre-registered signature not firing, is returned at `T = 4e6` (a22's own
-horizon), `2^22` and `2^23`, at both `J = 32` and `J = 64` windows.  What was
+horizon), `2^22`, `2^23` and `2^24`, at both `J = 32` and `J = 64` windows.  What was
 missing from a22 was never horizon.  It was the statistic.**
 
 ---
@@ -36,13 +36,13 @@ and a3 states the same fact in its own words: "reaching `K = 20` for the
 checkerboard would need `T ~ 2^60`" — and `3 x 20 = 60`.  a22 moved the horizon
 from `2e6` to `4e6`, one doubling, and could not have moved `K` by more than 1
 in expectation.  Its INCONCLUSIVE was **forced by the choice of statistic, not
-by the horizon**.  In the same data, `K` is flat across 10 of every 13 dyadic
+by the horizon**.  In the same data, `K` is flat across 10 or 11 of every 14 dyadic
 doublings while growing overall, so observing one flat doubling carries almost
 no information.  This arm replaces the extreme-value statistic with an
 **occurrence-rate** statistic on the same object, which uses up to `10^6`
 occurrences per cell instead of a single maximum and whose precision therefore
 improves as `sqrt(T)` rather than `log T`.  Section 6 gives the verdict that
-statistic returns at `T = 2^23`.
+statistic returns at `T = 2^24`.
 
 **Error bars.** Both the count series in `h` (`n_runs(h)` counts runs of length
 `>= h`, so the point at `h+1` is a subset of the point at `h`) and the prefix
@@ -102,9 +102,11 @@ Fitted constant `2.29e-11 s` per step-squared, one core of an Apple M4.  Clean
 quadratic scaling (ratio 3.4–4.3 per doubling).  A NEON build was written and
 verified but gave no speed-up: the loop is already memory-bandwidth bound.
 
-**Horizon reported here: `T = 8,388,608 = 2^23`** — 2.1x a22's horizon, 4.2x
+**Horizon reported here: `T = 16,777,216 = 2^24`** — 4.2x a22's horizon, 8.4x
 row 79's.  Every number in sections 5 and 6 comes from that horizon
-(`cache/band30_T33554432.bin.ck8388608`, analysed in `report_T8388608.txt`).  It is a **checkpoint of an in-flight
+(`cache/band30_T33554432.bin.ck16777216`, analysed in `report_T16777216.txt`).
+Checkpoint timings: 402.7 s at `2^22`, 1500.7 s at `2^23`, 2664.8 s at
+`1.26e7`, 4571.5 s at `2^24`.  It is a **checkpoint of an in-flight
 `T = 2^25 = 33,554,432` run**, so a later reader finding other checkpoint files
 on disk should note which horizon each section names.  The full quadratic cost
 of `2^25` is about 7 core-hours; `2^26` would be 28, `2^27` 114.
@@ -115,11 +117,11 @@ of `2^25` is about 7 core-hours; `2^26` would be 28, `2^27` 114.
 checkerboards (`1/6` for all-zeros, whose per-row cost is `4` not `2`).  From
 the reproduced dyadic series:
 
-| family | `K(T)` at `2^10 ... 2^23` | doublings with `dK = 0` |
+| family | `K(T)` at `2^10 ... 2^24` | doublings with `dK = 0` |
 |---|---|---|
-| all_zeros | 3,3,3,3,3,3,3,4,4,4,4,5,5,6 | 10 / 13 |
-| checker_A | 2,2,2,4,4,4,4,5,6,6,6,6,6,6 | 10 / 13 |
-| checker_B | 3,3,3,3,3,5,5,5,5,5,5,5,6,7 | 10 / 13 |
+| all_zeros | 3,3,3,3,3,3,3,4,4,4,4,5,5,6,6 | 11 / 14 |
+| checker_A | 2,2,2,4,4,4,4,5,6,6,6,6,6,6,7 | 10 / 14 |
+| checker_B | 3,3,3,3,3,5,5,5,5,5,5,5,6,7,7 | 11 / 14 |
 
 **A single doubling showing "flat" is the modal outcome under growth.**  a22
 observed exactly one doubling.  Its report also read the *earliest* witness time
@@ -139,10 +141,10 @@ Finally, the cost of making `K` alone decisive:
 
 | family | `dK`/doubling | doublings to make "no movement at all" improbable (`P<0.05`) | `T` needed | single-core kernel time |
 |---|---|---|---|---|
-| checker_A / checker_B | 1/3 | 9 | `4.3e9` | ~13 core-years |
-| all_zeros | 1/6 | 18 | `2.2e12` | ~3.5e6 core-years |
+| checker_A / checker_B | 1/3 | 9 | `8.6e9` | ~53 core-years |
+| all_zeros | 1/6 | 18 | `4.4e12` | ~1.4e7 core-years |
 
-(from this document's `T = 2^23`, at the fitted `2.29e-11 s` per step-squared.)
+(from this document's `T = 2^24`, at the fitted `2.29e-11 s` per step-squared.)
 
 Each further unit of `K` costs 8x the horizon and therefore **64x the compute**.
 `K` cannot be made decisive by any horizon anyone will run.  That is the
@@ -200,23 +202,23 @@ structure), so overwriting column 0 of the lone-seed diagram with a periodic
 word changes every number in section 5.  a3's column-blind object was `R(W,H)`,
 a function of the rule alone with no diagram in it; this is not that.
 
-## 5. Results at `T = 8,388,608 = 2^23`
+## 5. Results at `T = 16,777,216 = 2^24`
 
-See `a25_checkerboard_growth_extended/report_T8388608.txt` for the full tables
-and `report_T8388608.json` for the machine-readable form.
+See `a25_checkerboard_growth_extended/report_T16777216.txt` for the full tables
+and `report_T16777216.json` for the machine-readable form.
 
 ### 5.1 The diagonal `K` — a3/a22's statistic, extended
 
-| family | `K` at `2^21` | `2^22` | `2^23` | **latest** occurrence of the `K`-patch | windows attaining `K` |
-|---|---|---|---|---|---|
-| all_zeros | 5 | 5 | 6 | `t = 4,595,802 = 0.548 T` | 2 / 32 |
-| checker_A | 6 | 6 | 6 | `t = 8,198,015 = 0.977 T` | 13 / 32 |
-| checker_B | 5 | 6 | 7 | `t = 7,150,618 = 0.852 T` | 1 / 32 |
+| family | `K` at `2^21` | `2^22` | `2^23` | `2^24` | **latest** occurrence of the `K`-patch | windows attaining `K` |
+|---|---|---|---|---|---|---|
+| all_zeros | 5 | 5 | 6 | 6 | `t = 13,697,639 = 0.816 T` | 2 / 32 |
+| checker_A | 6 | 6 | 6 | **7** | `t = 10,432,914 = 0.622 T` | 1 / 32 |
+| checker_B | 5 | 6 | 7 | 7 | `t = 15,378,214 = 0.917 T` | 4 / 32 |
 
 `dK` per doubling, block-max lower bound with bootstrap CI over the 32 windows:
-all_zeros `+0.294 [+0.178, +0.475]` (reference `1/6`), checker_A
-`+0.216 [+0.144, +0.284]` and checker_B `+0.281 [+0.072, +0.431]` (reference
-`1/3`).  **Every interval excludes zero.**  `K` is flat across 10 of 13 dyadic
+all_zeros `+0.309 [+0.134, +0.406]` (reference `1/6`), checker_A
+`+0.153 [+0.047, +0.291]` and checker_B `+0.419 [+0.241, +0.509]` (reference
+`1/3`).  **Every interval excludes zero.**  `K` is flat across 10 or 11 of 14 dyadic
 doublings in every family, which is why a22's single doubling could not speak.
 
 ### 5.2 Growth rate from the occurrence rate — the primary estimator
@@ -226,35 +228,36 @@ windows, interval = across-window spread.
 
 | family | `W` | rows / doubling | reference |
 |---|---|---|---|
-| all_zeros | 0 | `0.9945 +/- 0.0040` | 1.0 |
-| all_zeros | 1, 2, 3 | `0.5032 +/- 0.0019`, `0.5041 +/- 0.0026`, `0.5054 +/- 0.0036` | 0.5 |
-| checker_A | 0..4 | `1.0195 +/- 0.0034`, `0.9740 +/- 0.0050`, `1.0218 +/- 0.0065`, `0.9274 +/- 0.0099`, `1.0305 +/- 0.0146` | 1.0 |
-| checker_B | 0..4 | `0.9945 +/- 0.0040`, `0.9997 +/- 0.0052`, `0.9252 +/- 0.0085`, `0.9896 +/- 0.0116`, `0.9207 +/- 0.0133` | 1.0 |
+| all_zeros | 0 | `0.9929 +/- 0.0035` | 1.0 |
+| all_zeros | 1..4 | `0.4988 +/- 0.0024`, `0.4984 +/- 0.0031`, `0.4978 +/- 0.0041`, `0.4970 +/- 0.0058` | 0.5 |
+| checker_A | 0..4 | `1.0165 +/- 0.0029`, `0.9680 +/- 0.0055`, `1.0139 +/- 0.0070`, `0.9437 +/- 0.0088`, `1.0297 +/- 0.0124` | 1.0 |
+| checker_B | 0..4 | `0.9929 +/- 0.0035`, `1.0002 +/- 0.0046`, `0.9311 +/- 0.0052`, `0.9855 +/- 0.0068`, `0.8832 +/- 0.0125` | 1.0 |
 
 Flat would be a growth rate of 0.  The measured rate is 0.92–1.03 rows per
-doubling for both checkerboards and 0.50 for all-zeros at `W >= 1`, matching the
-reference per-row cost, with intervals that miss zero by 60 to 250 standard
-errors.
+doubling for both checkerboards and 0.497–0.499 for all-zeros at `W >= 1`,
+matching the reference per-row cost, with intervals that miss zero by 70 to 350
+standard errors.
 
 ### 5.3 Rate stability across 32 disjoint windows
 
 | family | cells with `n_runs >= 40` (distinct) | halves `z` range | `z < -3` (decline) | Spearman `z < -3` |
 |---|---|---|---|---|
-| all_zeros | 52 (24) | `[-1.28, +2.88]` | **0** | **0** |
-| checker_A | 71 (46) | `[-2.03, +2.10]` | **0** | **0** |
-| checker_B | 74 (54) | `[-1.96, +1.46]` | **0** | **0** |
+| all_zeros | 53 (25) | `[-1.54, +1.17]` | **0** | **0** |
+| checker_A | 78 (50) | `[-1.57, +1.44]` | **0** | **0** |
+| checker_B | 78 (57) | `[-2.03, +1.03]` | **0** | **0** |
 
 **No cell in any family shows a rate decline.**  Repeating the whole analysis at
-`J = 64` windows instead of 32 (`report_T8388608_J64.txt`) leaves every point
-estimate unchanged and every conclusion intact: still zero declining cells, still
-no negative curvature, so the verdict does not depend on the window count.  Cells at constant `W + h` are
+`J = 64` windows instead of 32 (`report_T16777216_J64.txt`, and the same at
+`2^23` in `report_T8388608_J64.txt`) leaves every point estimate unchanged and
+every conclusion intact: still zero declining cells, still no significant
+negative curvature, so the verdict does not depend on the window count.  Cells at constant `W + h` are
 exact duplicates (an all-zero or checkerboard region in the lone-seed diagram is
 a triangle, so the `(W,h)` and `(W-1,h+1)` counts coincide identically), and
 neighbouring `W` overlap further, so the effective number of independent cells is
 smaller than the distinct count — which only makes zero declines out of 52–74
 easier to obtain by chance, and is why the *sign* pattern matters more than the
-count: the halves `z` and Spearman `z` are centred near 0 and symmetric, not
-skewed negative.
+count: the halves `z` are centred at `-0.20`, `+0.08` and `-0.55` with spreads
+0.61–0.71, i.e. near 0 and nowhere near the `-3` that a declining rate needs.
 
 The deepest cells — the ones with the fewest occurrences, where saturation would
 bite first — are still occurring at the end of the horizon: `last_start / T` is
@@ -264,18 +267,20 @@ bite first — are still occurring at the end of the horizon: `last_start / T` i
 
 | family | `W` | curvature (mean 2nd difference of `log2` rate) | one-sided `3 se` bound on a saturating `delta` | rows the linear law must hold before the growth rate halves |
 |---|---|---|---|---|
-| all_zeros | 0..3 | `+0.0010 +/- 0.0047`, `+0.0468 +/- 0.0098`, `+0.0570 +/- 0.0130`, `+0.0698 +/- 0.0207` | 0.014 – 0.062 | 32 – 72 |
-| checker_A | 0..4 | `+0.0183 +/- 0.0034`, `+0.1399 +/- 0.0059`, `+0.0083 +/- 0.0068`, `+0.2303 +/- 0.0104`, `+0.0078 +/- 0.0145` | 0.010 – 0.044 | 22 – 98 |
-| checker_B | 0..4 | `+0.0010 +/- 0.0047`, `+0.0064 +/- 0.0050`, `+0.1715 +/- 0.0099`, `-0.0062 +/- 0.0118`, `+0.2861 +/- 0.0278` | 0.014 – 0.084 | 13 – 67 |
+| all_zeros | 0..4 | `+0.0009 +/- 0.0042`, `+0.0098 +/- 0.0124`, `+0.0111 +/- 0.0154`, `+0.0143 +/- 0.0202`, `+0.0142 +/- 0.0314` | 0.013 – 0.094 | 21 – 80 |
+| checker_A | 0..4 | `-0.0023 +/- 0.0046`, `+0.1213 +/- 0.0052`, `-0.0118 +/- 0.0059`, `+0.1968 +/- 0.0082`, `-0.0016 +/- 0.0110` | 0.016 – 0.035 | 28 – 66 |
+| checker_B | 0..4 | `+0.0009 +/- 0.0042`, `+0.0026 +/- 0.0044`, `+0.1620 +/- 0.0072`, `+0.0038 +/- 0.0080`, `+0.2604 +/- 0.0185` | 0.013 – 0.056 | 20 – 80 |
 
 **The signature did not fire.  Not one cell shows significant *negative*
 curvature** — the direction saturation would take.  Where curvature is
 significant it is **positive** (`z` up to `+24`), i.e. the rate falls *more
 slowly* than the reference law at larger `h`, the opposite of a per-row cost
-that steepens.  Under the quadratic saturating form the bound implies the linear
-law would have to continue for another 13 to 98 rows before the growth rate even
-halved, i.e. to a horizon of at least `T * 2^13` and in the tightest cells
-`T * 2^98`.  That extrapolation is an assumption, not a measurement; the
+that steepens.  The three cells with a small *negative* point estimate
+(`checker_A` at `W = 0, 2, 4`) are at `z = -0.49`, `-2.01` and `-0.14`, none
+reaching the `-3` threshold, and their neighbours at the same `W` in the other
+families are positive.  Under the quadratic saturating form the bound implies
+the linear law would have to continue for another 20 to 80 rows before the
+growth rate even halved, i.e. to a horizon of at least `T * 2^20`.  That extrapolation is an assumption, not a measurement; the
 measurement is the bound on `delta` inside the fitted `h`-range.
 
 ## 6. Per-family regime verdict
@@ -286,23 +291,23 @@ landed in (c) for two of three families.
 
 | family | regime | on what evidence |
 |---|---|---|
-| **all_zeros** | **(b) still growing** | growth rate `0.503 +/- 0.002` rows/doubling at `W=1..3` and `0.994 +/- 0.004` at `W=0`; `dK`/doubling `+0.294 [+0.178, +0.475]`; 0 declining cells of 52; no negative curvature |
-| **checker_A** | **(b) still growing** | growth rate `0.93` to `1.03` rows/doubling across `W=0..4`, all intervals excluding 0 by `>60 se`; `dK`/doubling `+0.216 [+0.144, +0.284]`; 0 declining cells of 71; the `K=6` patch recurs in **13 of 32** windows, the latest at `0.977 T` |
-| **checker_B** | **(b) still growing** | growth rate `0.92` to `1.00` rows/doubling across `W=0..4`; `dK`/doubling `+0.281 [+0.072, +0.431]`; 0 declining cells of 74; `K` moved 5 → 6 → 7 over the last two doublings |
+| **all_zeros** | **(b) still growing** | growth rate `0.4970`–`0.4988 +/- 0.006` rows/doubling at `W=1..4` and `0.9929 +/- 0.0035` at `W=0`; `dK`/doubling `+0.309 [+0.134, +0.406]`; 0 declining cells of 53; no significant negative curvature |
+| **checker_A** | **(b) still growing** | growth rate `0.944` to `1.030` rows/doubling across `W=0..4`, all intervals excluding 0 by `>75 se`; `dK`/doubling `+0.153 [+0.047, +0.291]`; 0 declining cells of 78; `K` moved 6 → 7 at this horizon, and the maximal patch at `W=1` (`h=14`, 69 occurrences) still occurs in the final window |
+| **checker_B** | **(b) still growing** | growth rate `0.883` to `1.000` rows/doubling across `W=0..4`; `dK`/doubling `+0.419 [+0.241, +0.509]`; 0 declining cells of 78; `K` moved 5 → 6 → 7 across the last three doublings, latest occurrence at `0.917 T` |
 
 **No family is in regime (a) or (c).**  In particular checker_A — the family a22
-called "flat" — is the family whose maximal diagonal patch recurs *most* often:
-13 of 32 disjoint windows contain a `13 x 6` checkerboard patch, the last of them
-in the final window of the horizon.  a22's flat reading came from the earliest
-witness time, which cannot move under horizon extension.
+called "flat" at `K = 6` — moved to `K = 7` here, and at `T = 2^23` its `K = 6`
+patch recurred in **13 of 32** disjoint windows with the last of them in the
+final window of the horizon.  It was never plateauing.  a22's flat reading came
+from the earliest witness time, which cannot move under horizon extension.
 
 The fluctuation bands, quantified rather than eyeballed:
 
-- **`K` at window scale** (32 independent draws, window length `T/32`): sd 0.33
-  (all_zeros), 0.00 (checker_A, whose bootstrap max is pinned at 6), 0.49
-  (checker_B).  The per-window `K` values span 4–6, 4–6 and 5–7 respectively.
-  a22's observed change of 0 over one doubling is inside every one of these.
-- **`h_max` at window scale**: bootstrap sd 0.12 to 1.44 rows depending on
+- **`K` at window scale** (32 independent draws, window length `T/32`):
+  bootstrap sd 0.33 (all_zeros), 0.48 (checker_A), 0.12 (checker_B), with 95%
+  intervals `[5,6]`, `[6,7]`, `[7,7]`.  a22's observed change of 0 over one
+  doubling is inside every one of these.
+- **`h_max` at window scale**: bootstrap sd 0.20 to 1.05 rows depending on
   `(family, W)`.  a22's reported per-`W` height changes over its doubling were
   0 or 1 row — inside the band at every `W`.
 - **occurrence counts**: dispersion `phi = var/mean` has median 1.00 with the
@@ -311,12 +316,14 @@ The fluctuation bands, quantified rather than eyeballed:
   floor `phi` at 1, so they are conservative.
 
 **Did the extension resolve the INCONCLUSIVE?**  Yes, in the growth direction —
-but the horizon is not what resolved it.  Going from `4e6` to `2^23` bought at
+but the horizon is not what resolved it.  Going from `4e6` to `2^24` bought at
 most one more unit of `K`, exactly as the reference arithmetic predicts.  What
 resolved it was replacing a one-maximum extreme-value statistic with a rate
 estimated from up to `10^6` occurrences.  Had the rate statistic been run on
 a22's own `T = 4e6` band it would have returned the same direction with wider
-intervals.  The arm re-ran it there, same `J = 32` partition
+intervals.  Going `2^23 -> 2^24` moved `K` by one unit in one family and zero in
+the other two, exactly as the arithmetic says, while every rate interval simply
+tightened.  The arm re-ran it there, same `J = 32` partition
 (`report_T4000000_J32.txt`), and it does: rows/doubling `0.4953`–`0.4968 +/-
 0.005` for all_zeros at `W = 1..3`, `0.891`–`1.013 +/- 0.02` for checker_A at
 `W = 0..4`, `0.916`–`1.003 +/- 0.01` for checker_B at `W = 0..3`; zero declining
@@ -364,8 +371,8 @@ For Rule 30, conditional on unbounded patch growth, measured only to `K=6` at
 
 Proposed: keep **conditional**, and replace the evidence clause with:
 
-> For Rule 30, conditional on unbounded patch growth.  Measured to `T = 2^23`
-> (`a25`), 4.2x row 79's horizon, with the diagonal `K` replaced by an
+> For Rule 30, conditional on unbounded patch growth.  Measured to `T = 2^24`
+> (`a25`), 8.4x row 79's horizon, with the diagonal `K` replaced by an
 > occurrence-rate statistic: `log2` rate is linear in patch height with slope
 > matching the reference per-row cost to sub-percent precision, no rate decline
 > in any cell across 32 disjoint time windows, and the deepest measured patches
@@ -387,22 +394,21 @@ replacement:
 > law; a3's "`K=20` needs `T ~ 2^60`" is the same statement), so `K` is flat
 > across 10 of every 13 dyadic doublings while growing, and one doubling
 > carries almost no information.  Replacing the extreme-value statistic with an
-> occurrence-rate statistic on the same band and extending to `T = 2^23`
+> occurrence-rate statistic on the same band and extending to `T = 2^24`
 > resolves the direction for all three families.  `K` itself is shown to be
-> undecidable in practice: making it separate from flat needs `T ~ 2e9` and
-> about 3 core-years.
+> undecidable in practice: making it separate from flat needs `T ~ 9e9` and
+> about 50 core-years.
 
 ## 9. In flight at the time of writing
 
 The `T = 2^25 = 33,554,432` generation was still running when this document was
 written, and pipelines are queued against its `2^24` checkpoint and its final
-output.  If `report_T16777216.txt` or `report_T33554432.txt` exist in the arm
-directory, they were produced by those queued runs and are **not** reflected
-here; sections 5 and 6 are `2^23` throughout.  Folding them in is a numeric
+output.  If `report_T33554432.txt` exists in the arm directory it was produced
+by that queued run and is **not** reflected here; sections 5 and 6 are `2^24` throughout.  Folding them in is a numeric
 refresh of the same tables — the estimators, bands and pre-registered signature
 are unchanged — and the direction is not expected to move, since the same
-verdict already holds at `T = 4e6` (a22's own horizon), `2^22` and `2^23`, at
-both `J = 32` and `J = 64`.  If a later horizon *does* move the direction, that
+verdict already holds at `T = 4e6` (a22's own horizon), `2^22`, `2^23` and
+`2^24`, at both `J = 32` and `J = 64`.  If a later horizon *does* move the direction, that
 is the interesting outcome and should be reported as a contradiction of this
 document, not as an amendment to it.
 
