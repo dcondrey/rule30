@@ -163,7 +163,17 @@ bulk", nothing more.
 
 Weight-matched null (60 seeded tables of Hamming weight 9, matching the target,
 since sparse tables synthesize cheaper and an unmatched null partly measures
-table density rather than structure): **[FILL m4-null-w9]**
+table density rather than structure):
+
+| `k_min` | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|
+| count | 7 | 17 | 32 | 4 |
+
+Median 6.  Rule 30's 5 sits **one gate below** the weight-matched median.  The
+interpretation of exactly this outcome was written into section 6 point 1
+before the number was seen: a one-gate deviation is the same size as the
+offset swing, i.e. inside the noise floor of a bookkeeping choice, and is not
+read as a compression signal.
 
 ### m = 5 (N = 32)
 
@@ -261,7 +271,9 @@ sequence at this width, and it does not look unusual against random either.
    number was seen:* balanced tables synthesize harder than sparse ones, so the
    weight-9 median may well come back at 6, putting Rule 30's 5 *below* it.
    That would be the shape of a false compression signal and is not to be read
-   as one.  A one-gate deviation from the weight-matched median is exactly the
+   as one.  **This is what happened** -- weight-matched median 6, Rule 30 at 5.
+   The frame was fixed in advance precisely so this outcome could not be
+   written up as a discovery.  A one-gate deviation from the weight-matched median is exactly the
    size of the offset swing in point 2, i.e. inside the noise floor of a pure
    bookkeeping choice.  Only a deviation of two or more gates would be worth a
    second look at this arity, and the support does not have room for one.

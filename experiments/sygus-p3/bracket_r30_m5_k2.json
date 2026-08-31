@@ -1,0 +1,10 @@
+{
+ "rule": 30,
+ "m": 5,
+ "k": 2,
+ "sat": false,
+ "seconds": 0.07,
+ "clauses": 6802,
+ "chain_verified": null,
+ "chain": null
+}
