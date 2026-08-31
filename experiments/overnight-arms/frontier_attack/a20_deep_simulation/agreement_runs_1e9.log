@@ -1,0 +1,43 @@
+self-test OK: shift_msb and longest_zero_run pinned
+WDR centre column loaded: T = 1,000,000,000 bits
+p=           1  comparisons=    999,999,984  longest agreement run=  28  log2(n)=29.9
+p=           2  comparisons=    999,999,984  longest agreement run=  31  log2(n)=29.9
+p=           3  comparisons=    999,999,984  longest agreement run=  27  log2(n)=29.9
+p=           7  comparisons=    999,999,984  longest agreement run=  26  log2(n)=29.9
+p=          13  comparisons=    999,999,976  longest agreement run=  28  log2(n)=29.9
+p=          64  comparisons=    999,999,928  longest agreement run=  28  log2(n)=29.9
+p=         101  comparisons=    999,999,888  longest agreement run=  29  log2(n)=29.9
+p=         115  comparisons=    999,999,872  longest agreement run=  35  log2(n)=29.9
+p=         207  comparisons=    999,999,784  longest agreement run=  28  log2(n)=29.9
+p=         373  comparisons=    999,999,616  longest agreement run=  30  log2(n)=29.9
+p=         671  comparisons=    999,999,320  longest agreement run=  29  log2(n)=29.9
+p=       1,001  comparisons=    999,998,984  longest agreement run=  27  log2(n)=29.9
+p=       1,209  comparisons=    999,998,776  longest agreement run=  29  log2(n)=29.9
+p=       2,177  comparisons=    999,997,808  longest agreement run=  29  log2(n)=29.9
+p=       3,919  comparisons=    999,996,072  longest agreement run=  28  log2(n)=29.9
+p=       7,054  comparisons=    999,992,936  longest agreement run=  30  log2(n)=29.9
+p=      12,699  comparisons=    999,987,288  longest agreement run=  28  log2(n)=29.9
+p=      22,859  comparisons=    999,977,128  longest agreement run=  28  log2(n)=29.9
+p=      41,148  comparisons=    999,958,840  longest agreement run=  27  log2(n)=29.9
+p=      65,537  comparisons=    999,934,448  longest agreement run=  32  log2(n)=29.9
+p=      74,069  comparisons=    999,925,920  longest agreement run=  27  log2(n)=29.9
+p=     133,330  comparisons=    999,866,656  longest agreement run=  30  log2(n)=29.9
+p=     240,004  comparisons=    999,759,984  longest agreement run=  29  log2(n)=29.9
+p=     432,023  comparisons=    999,567,968  longest agreement run=  29  log2(n)=29.9
+p=     777,671  comparisons=    999,222,320  longest agreement run=  30  log2(n)=29.9
+p=     999,983  comparisons=    999,000,008  longest agreement run=  29  log2(n)=29.9
+p=   1,399,860  comparisons=    998,600,128  longest agreement run=  27  log2(n)=29.9
+p=   2,519,842  comparisons=    997,480,144  longest agreement run=  27  log2(n)=29.9
+p=   4,535,883  comparisons=    995,464,104  longest agreement run=  29  log2(n)=29.9
+p=   8,164,890  comparisons=    991,835,096  longest agreement run=  29  log2(n)=29.9
+p=  14,697,344  comparisons=    985,302,648  longest agreement run=  28  log2(n)=29.9
+p=  26,456,196  comparisons=    973,543,792  longest agreement run=  28  log2(n)=29.9
+p=  47,622,909  comparisons=    952,377,080  longest agreement run=  27  log2(n)=29.8
+p=  85,724,398  comparisons=    914,275,592  longest agreement run=  26  log2(n)=29.8
+p= 154,309,606  comparisons=    845,690,384  longest agreement run=  30  log2(n)=29.7
+p= 277,767,534  comparisons=    722,232,456  longest agreement run=  31  log2(n)=29.4
+p= 500,000,000  comparisons=    499,999,992  longest agreement run=  31  log2(n)=28.9
+
+max over 37 sampled periods: 35   median 29.0   mean run/log2(n) = 0.96
+a1's seed-pair construction already gave exact agreement over 4000 steps.
+-> /Volumes/A/researchpapers/13-rule30/experiments/overnight-arms/frontier_attack/a20_deep_simulation/agreement_runs_1e9.json

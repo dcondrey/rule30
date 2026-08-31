@@ -1,0 +1,74 @@
+{
+  "wdr_uuid": "368ea1f8-e51f-468a-aac7-06de2d6f94cc",
+  "comparisons": [
+    {
+      "name": "OEIS b-file b051023.txt",
+      "bits_compared": 100001,
+      "match": true
+    },
+    {
+      "name": "deep_gen.py depth24h_column.bin",
+      "bits_compared": 7340032,
+      "match": true
+    },
+    {
+      "name": "band GPU band_n2000000_w4_col+0.bin",
+      "bits_compared": 2000000,
+      "match": false,
+      "first_diff_bit": 14416,
+      "ours_window": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "ref_window": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "n_diff": 22
+    }
+  ],
+  "wdr_container_bytes": 125000345,
+  "alignment_hits": [
+    {
+      "offset": 239,
+      "order": "msb"
+    }
+  ],
+  "payload_offset": 239,
+  "payload_order": "msb",
+  "payload_bytes": 125000000,
+  "trailer_bytes": 106,
+  "payload_sha256": "d92f0f9ddc96f3315cfa8d904bc848618e906615aa2356ca58db96f21325e464",
+  "payload_ones": 500025038,
+  "payload_density": 0.500025038,
+  "all_match": false,
+  "n_comparisons": 3
+}

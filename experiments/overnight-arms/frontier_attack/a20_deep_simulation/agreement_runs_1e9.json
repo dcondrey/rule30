@@ -1,0 +1,232 @@
+{
+  "source": "Wolfram Data Repository 1e9 centre-column bits",
+  "n_periods": 37,
+  "max_over_all_p": 35,
+  "median_longest_run": 29.0,
+  "mean_ratio_run_over_log2n": 0.9637224916540348,
+  "a1_seed_pair_window_for_comparison": 4000,
+  "rows": [
+    {
+      "p": 1,
+      "comparisons": 999999984,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.89735283090314
+    },
+    {
+      "p": 2,
+      "comparisons": 999999984,
+      "longest_agreement_run": 31,
+      "log2_comparisons": 29.89735283090314
+    },
+    {
+      "p": 3,
+      "comparisons": 999999984,
+      "longest_agreement_run": 27,
+      "log2_comparisons": 29.89735283090314
+    },
+    {
+      "p": 7,
+      "comparisons": 999999984,
+      "longest_agreement_run": 26,
+      "log2_comparisons": 29.89735283090314
+    },
+    {
+      "p": 13,
+      "comparisons": 999999976,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.89735281936158
+    },
+    {
+      "p": 64,
+      "comparisons": 999999928,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.897352750112216
+    },
+    {
+      "p": 101,
+      "comparisons": 999999888,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.897352692404407
+    },
+    {
+      "p": 115,
+      "comparisons": 999999872,
+      "longest_agreement_run": 35,
+      "log2_comparisons": 29.897352669321283
+    },
+    {
+      "p": 207,
+      "comparisons": 999999784,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.8973525423641
+    },
+    {
+      "p": 373,
+      "comparisons": 999999616,
+      "longest_agreement_run": 30,
+      "log2_comparisons": 29.897352299991258
+    },
+    {
+      "p": 671,
+      "comparisons": 999999320,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.8973518729533
+    },
+    {
+      "p": 1001,
+      "comparisons": 999998984,
+      "longest_agreement_run": 27,
+      "log2_comparisons": 29.897351388207355
+    },
+    {
+      "p": 1209,
+      "comparisons": 999998776,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.89735108812645
+    },
+    {
+      "p": 2177,
+      "comparisons": 999997808,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.897349691595267
+    },
+    {
+      "p": 3919,
+      "comparisons": 999996072,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.89734718706901
+    },
+    {
+      "p": 7054,
+      "comparisons": 999992936,
+      "longest_agreement_run": 30,
+      "log2_comparisons": 29.897342662752497
+    },
+    {
+      "p": 12699,
+      "comparisons": 999987288,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.897334514330336
+    },
+    {
+      "p": 22859,
+      "comparisons": 999977128,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.897319856287922
+    },
+    {
+      "p": 41148,
+      "comparisons": 999958840,
+      "longest_agreement_run": 27,
+      "log2_comparisons": 29.897293471436278
+    },
+    {
+      "p": 65537,
+      "comparisons": 999934448,
+      "longest_agreement_run": 32,
+      "log2_comparisons": 29.897258279341127
+    },
+    {
+      "p": 74069,
+      "comparisons": 999925920,
+      "longest_agreement_run": 27,
+      "log2_comparisons": 29.89724597517879
+    },
+    {
+      "p": 133330,
+      "comparisons": 999866656,
+      "longest_agreement_run": 30,
+      "log2_comparisons": 29.89716046643158
+    },
+    {
+      "p": 240004,
+      "comparisons": 999759984,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.897006542531518
+    },
+    {
+      "p": 432023,
+      "comparisons": 999567968,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.89672942888286
+    },
+    {
+      "p": 777671,
+      "comparisons": 999222320,
+      "longest_agreement_run": 30,
+      "log2_comparisons": 29.89623046241954
+    },
+    {
+      "p": 999983,
+      "comparisons": 999000008,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.895909448669705
+    },
+    {
+      "p": 1399860,
+      "comparisons": 998600128,
+      "longest_agreement_run": 27,
+      "log2_comparisons": 29.895331850690752
+    },
+    {
+      "p": 2519842,
+      "comparisons": 997480144,
+      "longest_agreement_run": 27,
+      "log2_comparisons": 29.89371288220045
+    },
+    {
+      "p": 4535883,
+      "comparisons": 995464104,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.890794053030728
+    },
+    {
+      "p": 8164890,
+      "comparisons": 991835096,
+      "longest_agreement_run": 29,
+      "log2_comparisons": 29.885525034994068
+    },
+    {
+      "p": 14697344,
+      "comparisons": 985302648,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.87599169351957
+    },
+    {
+      "p": 26456196,
+      "comparisons": 973543792,
+      "longest_agreement_run": 28,
+      "log2_comparisons": 29.858670634891165
+    },
+    {
+      "p": 47622909,
+      "comparisons": 952377080,
+      "longest_agreement_run": 27,
+      "log2_comparisons": 29.8269576600849
+    },
+    {
+      "p": 85724398,
+      "comparisons": 914275592,
+      "longest_agreement_run": 26,
+      "log2_comparisons": 29.768053864515405
+    },
+    {
+      "p": 154309606,
+      "comparisons": 845690384,
+      "longest_agreement_run": 30,
+      "log2_comparisons": 29.655554333525497
+    },
+    {
+      "p": 277767534,
+      "comparisons": 722232456,
+      "longest_agreement_run": 31,
+      "log2_comparisons": 29.427888013306983
+    },
+    {
+      "p": 500000000,
+      "comparisons": 499999992,
+      "longest_agreement_run": 31,
+      "log2_comparisons": 28.89735283090314
+    }
+  ]
+}

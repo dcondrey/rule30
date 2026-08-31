@@ -1,0 +1,159 @@
+{
+  "results": [
+    {
+      "warps_per_block": 4,
+      "halo_lanes": 1,
+      "threads": 128,
+      "steps_per_batch": 32,
+      "useful_lanes": 30,
+      "useful_words_per_block": 120,
+      "lane_efficiency": 0.9375,
+      "gate_ok": true,
+      "cellsteps_per_s": 34186973805208.367,
+      "speedup_vs_v1": 0.8367334835725381
+    },
+    {
+      "warps_per_block": 4,
+      "halo_lanes": 2,
+      "threads": 128,
+      "steps_per_batch": 64,
+      "useful_lanes": 28,
+      "useful_words_per_block": 112,
+      "lane_efficiency": 0.875,
+      "gate_ok": true,
+      "cellsteps_per_s": 33644260085410.5,
+      "speedup_vs_v1": 0.8234504493988641
+    },
+    {
+      "warps_per_block": 4,
+      "halo_lanes": 4,
+      "threads": 128,
+      "steps_per_batch": 128,
+      "useful_lanes": 24,
+      "useful_words_per_block": 96,
+      "lane_efficiency": 0.75,
+      "gate_ok": true,
+      "cellsteps_per_s": 29718301446239.13,
+      "speedup_vs_v1": 0.7273617734244174
+    },
+    {
+      "warps_per_block": 8,
+      "halo_lanes": 1,
+      "threads": 256,
+      "steps_per_batch": 32,
+      "useful_lanes": 30,
+      "useful_words_per_block": 240,
+      "lane_efficiency": 0.9375,
+      "gate_ok": true,
+      "cellsteps_per_s": 34235702120407.617,
+      "speedup_vs_v1": 0.8379261194916342
+    },
+    {
+      "warps_per_block": 8,
+      "halo_lanes": 2,
+      "threads": 256,
+      "steps_per_batch": 64,
+      "useful_lanes": 28,
+      "useful_words_per_block": 224,
+      "lane_efficiency": 0.875,
+      "gate_ok": true,
+      "cellsteps_per_s": 33847733679961.453,
+      "speedup_vs_v1": 0.8284305090717009
+    },
+    {
+      "warps_per_block": 8,
+      "halo_lanes": 4,
+      "threads": 256,
+      "steps_per_batch": 128,
+      "useful_lanes": 24,
+      "useful_words_per_block": 192,
+      "lane_efficiency": 0.75,
+      "gate_ok": true,
+      "cellsteps_per_s": 29729029798273.562,
+      "speedup_vs_v1": 0.7276243521312054
+    },
+    {
+      "warps_per_block": 16,
+      "halo_lanes": 2,
+      "threads": 512,
+      "steps_per_batch": 64,
+      "useful_lanes": 28,
+      "useful_words_per_block": 448,
+      "lane_efficiency": 0.875,
+      "gate_ok": true,
+      "cellsteps_per_s": 34059719486169.777,
+      "speedup_vs_v1": 0.833618906942401
+    },
+    {
+      "warps_per_block": 16,
+      "halo_lanes": 4,
+      "threads": 512,
+      "steps_per_batch": 128,
+      "useful_lanes": 24,
+      "useful_words_per_block": 384,
+      "lane_efficiency": 0.75,
+      "gate_ok": true,
+      "cellsteps_per_s": 29950680745229.047,
+      "speedup_vs_v1": 0.7330493063854179
+    },
+    {
+      "warps_per_block": 8,
+      "halo_lanes": 8,
+      "threads": 256,
+      "steps_per_batch": 256,
+      "useful_lanes": 16,
+      "useful_words_per_block": 128,
+      "lane_efficiency": 0.5,
+      "gate_ok": true,
+      "cellsteps_per_s": 19864086363950.12,
+      "speedup_vs_v1": 0.4861777551881923
+    },
+    {
+      "warps_per_block": 4,
+      "halo_lanes": 8,
+      "threads": 128,
+      "steps_per_batch": 256,
+      "useful_lanes": 16,
+      "useful_words_per_block": 64,
+      "lane_efficiency": 0.5,
+      "gate_ok": true,
+      "cellsteps_per_s": 19860322379384.633,
+      "speedup_vs_v1": 0.48608563086225637
+    }
+  ],
+  "best": {
+    "warps_per_block": 8,
+    "halo_lanes": 1,
+    "threads": 256,
+    "steps_per_batch": 32,
+    "useful_lanes": 30,
+    "useful_words_per_block": 240,
+    "lane_efficiency": 0.9375,
+    "gate_ok": true,
+    "cellsteps_per_s": 34235702120407.617,
+    "speedup_vs_v1": 0.8379261194916342
+  },
+  "v1_rate": 40857661939430.0,
+  "projections_best": {
+    "1e9": {
+      "hours": 4.05684359562465,
+      "usd": 16.024532202717367
+    },
+    "2e9": {
+      "hours": 16.2273743824986,
+      "usd": 64.09812881086947
+    },
+    "3e9": {
+      "hours": 36.51159236062185,
+      "usd": 144.2207898244563
+    },
+    "4e9": {
+      "hours": 64.9094975299944,
+      "usd": 256.3925152434779
+    },
+    "5e9": {
+      "hours": 101.42108989061624,
+      "usd": 400.61330506793416
+    }
+  }
+}

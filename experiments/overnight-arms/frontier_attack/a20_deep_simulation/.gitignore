@@ -1,0 +1,11 @@
+# Generated column data. Regenerable from the verified kernel; see
+# CHECKSUMS.sha256 for the digests that pin the runs referenced in
+# KERNEL-V6-DEFECT.md and docs/rule30/PATH.md 8.5.
+*.bin
+!*.bin.sha256
+
+# Live local run (deep_gen.py); mid-write, not an artifact.
+depth24h_column.bin
+depth24h_checkpoint.json
+
+__pycache__/

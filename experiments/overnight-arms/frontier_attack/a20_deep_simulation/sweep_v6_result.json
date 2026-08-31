@@ -1,0 +1,181 @@
+{
+  "results": [
+    {
+      "words_per_lane": 4,
+      "halo_words": 4,
+      "warps_per_block": 4,
+      "threads": 128,
+      "steps_per_batch": 128,
+      "warp_words": 128,
+      "useful_words_per_warp": 120,
+      "shared_KB": 2.0,
+      "efficiency": 0.9375,
+      "gate_ok": true,
+      "cellsteps_per_s": 27633418930224.99,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6763338286755255
+    },
+    {
+      "words_per_lane": 8,
+      "halo_words": 8,
+      "warps_per_block": 4,
+      "threads": 128,
+      "steps_per_batch": 256,
+      "warp_words": 256,
+      "useful_words_per_warp": 240,
+      "shared_KB": 4.0,
+      "efficiency": 0.9375,
+      "gate_ok": true,
+      "cellsteps_per_s": 26991021997116.867,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6606110265714684
+    },
+    {
+      "words_per_lane": 8,
+      "halo_words": 8,
+      "warps_per_block": 8,
+      "threads": 256,
+      "steps_per_batch": 256,
+      "warp_words": 256,
+      "useful_words_per_warp": 240,
+      "shared_KB": 8.0,
+      "efficiency": 0.9375,
+      "gate_ok": true,
+      "cellsteps_per_s": 26790321938116.58,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6556988497734466
+    },
+    {
+      "words_per_lane": 8,
+      "halo_words": 16,
+      "warps_per_block": 4,
+      "threads": 128,
+      "steps_per_batch": 512,
+      "warp_words": 256,
+      "useful_words_per_warp": 224,
+      "shared_KB": 4.0,
+      "efficiency": 0.875,
+      "gate_ok": true,
+      "cellsteps_per_s": 25230250013280.09,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6175157563025271
+    },
+    {
+      "words_per_lane": 16,
+      "halo_words": 8,
+      "warps_per_block": 4,
+      "threads": 128,
+      "steps_per_batch": 256,
+      "warp_words": 512,
+      "useful_words_per_warp": 496,
+      "shared_KB": 8.0,
+      "efficiency": 0.96875,
+      "gate_ok": true,
+      "cellsteps_per_s": 27378805618780.504,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6701021135122365
+    },
+    {
+      "words_per_lane": 16,
+      "halo_words": 16,
+      "warps_per_block": 4,
+      "threads": 128,
+      "steps_per_batch": 512,
+      "warp_words": 512,
+      "useful_words_per_warp": 480,
+      "shared_KB": 8.0,
+      "efficiency": 0.9375,
+      "gate_ok": true,
+      "cellsteps_per_s": 26849905206321.613,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6571571629851366
+    },
+    {
+      "words_per_lane": 16,
+      "halo_words": 16,
+      "warps_per_block": 2,
+      "threads": 64,
+      "steps_per_batch": 512,
+      "warp_words": 512,
+      "useful_words_per_warp": 480,
+      "shared_KB": 4.0,
+      "efficiency": 0.9375,
+      "gate_ok": true,
+      "cellsteps_per_s": 26774146085944.29,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6553029423376205
+    },
+    {
+      "words_per_lane": 8,
+      "halo_words": 4,
+      "warps_per_block": 8,
+      "threads": 256,
+      "steps_per_batch": 128,
+      "warp_words": 256,
+      "useful_words_per_warp": 248,
+      "shared_KB": 8.0,
+      "efficiency": 0.96875,
+      "gate_ok": true,
+      "cellsteps_per_s": 27276462207978.777,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6675972366802374
+    },
+    {
+      "words_per_lane": 4,
+      "halo_words": 8,
+      "warps_per_block": 8,
+      "threads": 256,
+      "steps_per_batch": 256,
+      "warp_words": 128,
+      "useful_words_per_warp": 112,
+      "shared_KB": 4.0,
+      "efficiency": 0.875,
+      "gate_ok": true,
+      "cellsteps_per_s": 26148088193024.742,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6399800417309325
+    },
+    {
+      "words_per_lane": 16,
+      "halo_words": 32,
+      "warps_per_block": 2,
+      "threads": 64,
+      "steps_per_batch": 1024,
+      "warp_words": 512,
+      "useful_words_per_warp": 448,
+      "shared_KB": 4.0,
+      "efficiency": 0.875,
+      "gate_ok": true,
+      "cellsteps_per_s": 24638102001994.84,
+      "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6030228072893631
+    }
+  ],
+  "best": {
+    "words_per_lane": 4,
+    "halo_words": 4,
+    "warps_per_block": 4,
+    "threads": 128,
+    "steps_per_batch": 128,
+    "warp_words": 128,
+    "useful_words_per_warp": 120,
+    "shared_KB": 2.0,
+    "efficiency": 0.9375,
+    "gate_ok": true,
+    "cellsteps_per_s": 27633418930224.99,
+    "speedup_vs_v1_UNVERIFIED_BASELINE": 0.6763338286755255
+  },
+  "v1_rate": 40857661939430.0,
+  "projections_best": {
+    "1e9": {
+      "hours": 5.026120337826691,
+      "usd": 19.85317533441543
+    },
+    "2e9": {
+      "hours": 20.104481351306763,
+      "usd": 79.41270133766172
+    },
+    "3e9": {
+      "hours": 45.235083040440216,
+      "usd": 178.67857800973886
+    },
+    "4e9": {
+      "hours": 80.41792540522705,
+      "usd": 317.65080535064686
+    },
+    "5e9": {
+      "hours": 125.65300844566727,
+      "usd": 496.32938336038575
+    }
+  }
+}

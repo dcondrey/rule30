@@ -1,0 +1,94 @@
+{
+  "results": [
+    {
+      "variant": "fixed",
+      "words_per_lane": 16,
+      "halo_words": 16,
+      "warps_per_block": 4,
+      "num_regs": 40,
+      "local_size_bytes": 0,
+      "max_threads_per_block": 1024,
+      "cellsteps_per_s": 106274738867755.62
+    },
+    {
+      "variant": "array_form",
+      "words_per_lane": 16,
+      "halo_words": 16,
+      "warps_per_block": 4,
+      "num_regs": 39,
+      "local_size_bytes": 256,
+      "max_threads_per_block": 1024,
+      "cellsteps_per_s": 26795303056379.645
+    },
+    {
+      "variant": "prefix_ownership",
+      "words_per_lane": 16,
+      "halo_words": 16,
+      "warps_per_block": 4,
+      "num_regs": 40,
+      "local_size_bytes": 0,
+      "max_threads_per_block": 1024,
+      "cellsteps_per_s": 106544820682639.95
+    },
+    {
+      "variant": "no_recording",
+      "words_per_lane": 16,
+      "halo_words": 16,
+      "warps_per_block": 4,
+      "num_regs": 37,
+      "local_size_bytes": 0,
+      "max_threads_per_block": 1024,
+      "cellsteps_per_s": 109708012618407.75
+    },
+    {
+      "variant": "fixed",
+      "words_per_lane": 4,
+      "halo_words": 4,
+      "warps_per_block": 4,
+      "num_regs": 38,
+      "local_size_bytes": 0,
+      "max_threads_per_block": 1024,
+      "cellsteps_per_s": 75040452005131.94
+    },
+    {
+      "variant": "array_form",
+      "words_per_lane": 4,
+      "halo_words": 4,
+      "warps_per_block": 4,
+      "num_regs": 32,
+      "local_size_bytes": 208,
+      "max_threads_per_block": 1024,
+      "cellsteps_per_s": 27606951405747.977
+    },
+    {
+      "variant": "prefix_ownership",
+      "words_per_lane": 4,
+      "halo_words": 4,
+      "warps_per_block": 4,
+      "num_regs": 38,
+      "local_size_bytes": 0,
+      "max_threads_per_block": 1024,
+      "cellsteps_per_s": 75177458568521.58
+    },
+    {
+      "variant": "no_recording",
+      "words_per_lane": 4,
+      "halo_words": 4,
+      "warps_per_block": 4,
+      "num_regs": 24,
+      "local_size_bytes": 0,
+      "max_threads_per_block": 1024,
+      "cellsteps_per_s": 99099321351800.5
+    }
+  ],
+  "ratios_R16_H16_W4": {
+    "fix_cost_x": 1.0025413547731263,
+    "recording_code_cost_x": 1.0323056427823771,
+    "range_form_gain_x": 3.9661704383094434
+  },
+  "ratios_R4_H4_W4": {
+    "fix_cost_x": 1.001825769431403,
+    "recording_code_cost_x": 1.3206119993123602,
+    "range_form_gain_x": 2.7181723509502738
+  }
+}

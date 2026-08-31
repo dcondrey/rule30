@@ -1,0 +1,254 @@
+{
+  "tag": "band_n219999_w4",
+  "bits": 219999,
+  "cap_steps": 219999,
+  "B_transduction": {
+    "pass": true,
+    "n_checks": 7,
+    "columns": {
+      "-4": {
+        "from": [
+          "-3",
+          "-2"
+        ],
+        "bits_compared": 219998,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null
+      },
+      "-3": {
+        "from": [
+          "-2",
+          "-1"
+        ],
+        "bits_compared": 219998,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null
+      },
+      "-2": {
+        "from": [
+          "-1",
+          "+0"
+        ],
+        "bits_compared": 219998,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null
+      },
+      "-1": {
+        "from": [
+          "+0",
+          "+1"
+        ],
+        "bits_compared": 219998,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null
+      },
+      "+0": {
+        "from": [
+          "+1",
+          "+2"
+        ],
+        "bits_compared": 219998,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null
+      },
+      "+1": {
+        "from": [
+          "+2",
+          "+3"
+        ],
+        "bits_compared": 219998,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null
+      },
+      "+2": {
+        "from": [
+          "+3",
+          "+4"
+        ],
+        "bits_compared": 219998,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null
+      }
+    }
+  },
+  "C_density": {
+    "pass": true,
+    "columns": {
+      "-4": {
+        "bits": 219999,
+        "ones": 109863,
+        "density": 0.4993795426342847,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      },
+      "-3": {
+        "bits": 219999,
+        "ones": 109973,
+        "density": 0.4998795449070223,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      },
+      "-2": {
+        "bits": 219999,
+        "ones": 109865,
+        "density": 0.4993886335846981,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      },
+      "-1": {
+        "bits": 219999,
+        "ones": 109977,
+        "density": 0.4998977268078491,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      },
+      "+0": {
+        "bits": 219999,
+        "ones": 110154,
+        "density": 0.500702275919436,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      },
+      "+1": {
+        "bits": 219999,
+        "ones": 110218,
+        "density": 0.5009931863326651,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      },
+      "+2": {
+        "bits": 219999,
+        "ones": 109594,
+        "density": 0.49815680980368093,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      },
+      "+3": {
+        "bits": 219999,
+        "ones": 110377,
+        "density": 0.5017159168905313,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      },
+      "+4": {
+        "bits": 219999,
+        "ones": 109973,
+        "density": 0.4998795449070223,
+        "window": [
+          0.4,
+          0.6
+        ],
+        "in_range": true
+      }
+    }
+  },
+  "A_reference": {
+    "pass": true,
+    "columns": {
+      "-4": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      },
+      "-3": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      },
+      "-2": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      },
+      "-1": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      },
+      "+0": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      },
+      "+1": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      },
+      "+2": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      },
+      "+3": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      },
+      "+4": {
+        "bits_compared": 219999,
+        "match": true,
+        "n_diff": 0,
+        "first_diff_bit": null,
+        "gpu0_ref1": 0,
+        "gpu1_ref0": 0
+      }
+    }
+  },
+  "all_pass": true
+}

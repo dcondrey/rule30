@@ -1,0 +1,11 @@
+{
+  "n": 2000000,
+  "n_words": 63360,
+  "t_done": 2000000,
+  "half_width": 4,
+  "n_rec": 9,
+  "centre_cell": 1013760,
+  "steps_per_batch": 512,
+  "format": "uint32 LE, step i = bit (i&31) of word (i>>5)",
+  "elapsed_s": 1.1733980178833008
+}

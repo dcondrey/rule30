@@ -1,0 +1,183 @@
+{
+  "results": [
+    {
+      "threads": 256,
+      "wpt": 4,
+      "steps_per_tile": 256,
+      "tile_words": 1024,
+      "halo_words": 8,
+      "useful_words": 1008,
+      "shared_KB": 8.0,
+      "accesses_per_word": 2.5,
+      "gate_ok": true,
+      "cellsteps_per_s": 28068691530294.508,
+      "speedup_vs_v1": 0.6869872185027456
+    },
+    {
+      "threads": 256,
+      "wpt": 8,
+      "steps_per_tile": 256,
+      "tile_words": 2048,
+      "halo_words": 8,
+      "useful_words": 2032,
+      "shared_KB": 16.0,
+      "accesses_per_word": 2.25,
+      "gate_ok": true,
+      "cellsteps_per_s": 15082896225838.21,
+      "speedup_vs_v1": 0.3691571056659595
+    },
+    {
+      "threads": 256,
+      "wpt": 16,
+      "steps_per_tile": 256,
+      "tile_words": 4096,
+      "halo_words": 8,
+      "useful_words": 4080,
+      "shared_KB": 32.0,
+      "accesses_per_word": 2.125,
+      "gate_ok": true,
+      "cellsteps_per_s": 7822993598732.8125,
+      "speedup_vs_v1": 0.19146943871458225
+    },
+    {
+      "threads": 256,
+      "wpt": 8,
+      "steps_per_tile": 512,
+      "tile_words": 2048,
+      "halo_words": 16,
+      "useful_words": 2016,
+      "shared_KB": 16.0,
+      "accesses_per_word": 2.25,
+      "gate_ok": true,
+      "cellsteps_per_s": 15104137932660.133,
+      "speedup_vs_v1": 0.3696770009760096
+    },
+    {
+      "threads": 256,
+      "wpt": 16,
+      "steps_per_tile": 512,
+      "tile_words": 4096,
+      "halo_words": 16,
+      "useful_words": 4064,
+      "shared_KB": 32.0,
+      "accesses_per_word": 2.125,
+      "gate_ok": true,
+      "cellsteps_per_s": 7830033275539.138,
+      "speedup_vs_v1": 0.19164173630754686
+    },
+    {
+      "threads": 128,
+      "wpt": 8,
+      "steps_per_tile": 256,
+      "tile_words": 1024,
+      "halo_words": 8,
+      "useful_words": 1008,
+      "shared_KB": 8.0,
+      "accesses_per_word": 2.25,
+      "gate_ok": true,
+      "cellsteps_per_s": 14989748350194.334,
+      "speedup_vs_v1": 0.366877291520403
+    },
+    {
+      "threads": 128,
+      "wpt": 16,
+      "steps_per_tile": 256,
+      "tile_words": 2048,
+      "halo_words": 8,
+      "useful_words": 2032,
+      "shared_KB": 16.0,
+      "accesses_per_word": 2.125,
+      "gate_ok": true,
+      "cellsteps_per_s": 7798704668088.389,
+      "speedup_vs_v1": 0.1908749619508254
+    },
+    {
+      "threads": 128,
+      "wpt": 32,
+      "steps_per_tile": 256,
+      "tile_words": 4096,
+      "halo_words": 8,
+      "useful_words": 4080,
+      "shared_KB": 32.0,
+      "accesses_per_word": 2.0625,
+      "gate_ok": true,
+      "cellsteps_per_s": 2654226111735.6714,
+      "speedup_vs_v1": 0.06496275082187682
+    },
+    {
+      "threads": 512,
+      "wpt": 4,
+      "steps_per_tile": 256,
+      "tile_words": 2048,
+      "halo_words": 8,
+      "useful_words": 2032,
+      "shared_KB": 16.0,
+      "accesses_per_word": 2.5,
+      "gate_ok": true,
+      "cellsteps_per_s": 28381702146788.613,
+      "speedup_vs_v1": 0.6946482201762659
+    },
+    {
+      "threads": 512,
+      "wpt": 8,
+      "steps_per_tile": 256,
+      "tile_words": 4096,
+      "halo_words": 8,
+      "useful_words": 4080,
+      "shared_KB": 32.0,
+      "accesses_per_word": 2.25,
+      "gate_ok": true,
+      "cellsteps_per_s": 15143717551185.4,
+      "speedup_vs_v1": 0.37064572059055684
+    },
+    {
+      "threads": 256,
+      "wpt": 8,
+      "steps_per_tile": 128,
+      "tile_words": 2048,
+      "halo_words": 4,
+      "useful_words": 2040,
+      "shared_KB": 16.0,
+      "accesses_per_word": 2.25,
+      "gate_ok": true,
+      "cellsteps_per_s": 15038629664599.38,
+      "speedup_vs_v1": 0.36807367212772973
+    }
+  ],
+  "best": {
+    "threads": 512,
+    "wpt": 4,
+    "steps_per_tile": 256,
+    "tile_words": 2048,
+    "halo_words": 8,
+    "useful_words": 2032,
+    "shared_KB": 16.0,
+    "accesses_per_word": 2.5,
+    "gate_ok": true,
+    "cellsteps_per_s": 28381702146788.613,
+    "speedup_vs_v1": 0.6946482201762659
+  },
+  "v1_rate": 40857661939430.0,
+  "projections_best": {
+    "1e9": {
+      "hours": 4.893606738967351,
+      "usd": 19.32974661892104
+    },
+    "2e9": {
+      "hours": 19.574426955869406,
+      "usd": 77.31898647568416
+    },
+    "3e9": {
+      "hours": 44.04246065070616,
+      "usd": 173.96771957028935
+    },
+    "4e9": {
+      "hours": 78.29770782347762,
+      "usd": 309.2759459027366
+    },
+    "5e9": {
+      "hours": 122.34016847418377,
+      "usd": 483.2436654730259
+    }
+  }
+}
