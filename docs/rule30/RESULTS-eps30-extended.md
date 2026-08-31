@@ -38,7 +38,7 @@ arrives. Accordingly:
 4. **The numerator sequence is not in OEIS** (searched whole, by prefix, and by
    interior window; also `"Rule 30" + Bayes/entropy` and the decimal `0.17330`).
    No prior closed form or asymptotic to meet first.
-5. **Symbolic regression finds a survivor, and it does not settle anything.**
+5. **Symbolic regression found a survivor, and it does not settle anything.**
    `eps(m) ~ 0.142455 + 0.123447 / sqrt(m)` passes held-out validation
    comfortably. But so does `b / (log m)^p`, whose limit is **zero**. A test
    that both sides pass does not discriminate. **The limit of `eps_30(m)` is
@@ -212,7 +212,42 @@ read with that discount.
 
 ### PySR Pareto front
 
-<!--PYSR-->
+Front from the first search (fit `10 <= m <= 21`, held out `m = 22..26`,
+threshold `2.184e-4`). Trailing near-duplicates that only add a vanishing
+nuisance term are collapsed; full output in `sr_output.txt`.
+
+| cplx | fit MSE | fit maxerr | HOLD maxerr | /thresh | m->inf | verdict | equation |
+|---|---|---|---|---|---|---|---|
+| 1 | 1.405e-5 | 6.96e-3 | 7.712e-3 | 35.3 | 0.174435 | fails | `0.1744349` |
+| 5 | 7.185e-8 | 4.50e-4 | 8.577e-4 | 3.9 | 0.158666 | fails | `0.15866551 + 0.2317924/x` |
+| **6** | **1.176e-8** | **2.23e-4** | **5.800e-5** | **0.3** | **0.142455** | **SURVIVES** | **`0.14245495 + 0.12344677/sqrt(x)`** |
+| 7 | 8.391e-9 | 2.02e-4 | 3.452e-4 | 1.6 | 0 | fails | `0.5776412/(sqrt(log x) + 1.6668488)` |
+| 8 | 8.336e-9 | 2.08e-4 | 3.737e-4 | 1.7 | 0.082394 | fails | `0.082394 + 0.5281369/(log x + 3.0326273)` |
+| 9 | 8.332e-9 | 2.02e-4 | 3.675e-4 | 1.7 | -0.015135 | fails | `-0.0151346 + 0.68238807/(sqrt(log x) + 1.9549013)` |
+| 10 | 1.621e-8 | 2.47e-4 | 5.709e-5 | 0.3 | 0.142455 | (same as cplx 6) | cplx-6 expression + a vanishing `0.7665^x` term |
+| 11-22 | ~1.4e-8 | ~3.0e-4 | 3.1-3.7e-4 | 1.4-1.7 | 0 | fails | `sqrt(log x)` forms plus vanishing nuisance terms |
+
+Reading the front:
+
+* Exactly **one** expression survives, at complexity 6:
+  `eps(m) ~ 0.14245495 + 0.12344677 / sqrt(m)`. The complexity-10 entry is the
+  same expression plus a `0.7665^m` term that vanishes; it is not a second
+  survivor and should not be counted as one.
+* Everything the search produced *above* complexity 6 fits better in-sample and
+  predicts worse out of sample -- the front's own accuracy/complexity trade-off
+  turns over exactly where the held-out verdict does. That is the overfitting
+  signature the held-out block was set up to catch, and it fired.
+* Several higher-complexity members have limit exactly 0, and one has limit
+  `-0.015`, i.e. a negative Bayes error. That such expressions sit at the top of
+  the in-sample front is itself a warning about reading limits off fits.
+
+**Seed replication was launched (seeds `20260831`, `7`, `991`) and did not
+complete within this arm's budget; the front above is from a single seed.**
+So `a + b/sqrt(m)` is reported as a form the search *found*, not as a verified
+attractor of the search. This does not weaken the arm's conclusion, because
+that conclusion does not rest on the SR expression -- the decisive comparison
+below reaches the same form by a different route and then shows it does not
+settle the limit anyway.
 
 ### The comparison that actually decides the limit question
 
