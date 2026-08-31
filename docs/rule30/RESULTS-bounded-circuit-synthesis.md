@@ -175,7 +175,37 @@ Out of reach.  See the feasibility curve.
 
 ## 5. Feasibility curve
 
-**[FILL feasibility]**
+Solve time on the Rule 30 target, single core, CaDiCaL.  **UNSAT and SAT times
+are reported separately because they behave differently**: the SAT call at
+`k_min` is usually cheap, and the UNSAT branch is both the expensive one and
+the one that produces the theorem, so it is the branch to extrapolate on.
+
+| m | k | result | clauses | time |
+|---|---|---|---|---|
+| 3 | 1 | UNSAT | 234 | 0.001 s |
+| 3 | 2 | SAT | 646 | 0.001 s |
+| 4 | 1 | UNSAT | 870 | 0.001 s |
+| 4 | 2 | UNSAT | 2 220 | 0.003 s |
+| 4 | 3 | UNSAT | 4 304 | 0.012 s |
+| 4 | 4 | UNSAT | 7 326 | 0.102 s |
+| 4 | 5 | SAT | 11 523 | 0.608 s |
+| 5 | 6 | UNSAT | 43 705 | 357 s |
+**[FILL feas5]**
+
+Two facts dominate and should be quoted at anyone planning a follow-up.
+
+* **The UNSAT branch costs roughly 4-8x per additional gate at fixed `m`**
+  (0.001 -> 0.003 -> 0.012 -> 0.102 s across `k = 1..4` at `m = 4`).
+* **Adding one input bit costs several orders of magnitude, not a constant
+  factor.**  The last UNSAT at `m = 4` is 0.1 s; the corresponding one at
+  `m = 5` is 357 s -- a factor of ~3 500 for one extra bit, from the truth
+  table doubling *and* the chain search space widening at once.
+
+Composing those two: `m = 6` would put the decisive UNSAT calls at years on
+this encoding and one machine.  `m = 6` is not reachable, and no amount of
+patience on this approach changes that -- it would need a fundamentally better
+encoding (topology families, DAG-canonical symmetry breaking, or a distributed
+portfolio in the sense of Haaswijk et al. section VI).
 
 ## 6. Reading the numbers honestly
 
