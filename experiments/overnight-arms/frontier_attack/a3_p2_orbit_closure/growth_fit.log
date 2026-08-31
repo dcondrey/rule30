@@ -1,0 +1,49 @@
+generating ensemble null: 20 seeds x 131072
+
+RULE 30 lone seed: max patch height by horizon (T = 2^10 .. 2000000)
+  all_zeros
+    W=0 heights=[10, 12, 12, 12, 14, 19, 19, 19, 19, 19, 19, 19] slope=0.916  | null mean slope=1.19 null max@131072=22
+    W=1 heights=[5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8, 8] slope=0.312  | null mean slope=0.55 null max@131072=14
+    W=2 heights=[4, 4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 7] slope=0.312  | null mean slope=0.55 null max@131072=13
+    W=3 heights=[3, 3, 3, 4, 4, 4, 4, 5, 5, 6, 6, 6] slope=0.312  | null mean slope=0.55 null max@131072=12
+    W=4 heights=[2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5] slope=0.312  | null mean slope=0.55 null max@131072=11
+    W=5 heights=[1, 1, 1, 2, 2, 2, 2, 3, 3, 4, 4, 4] slope=0.312  | null mean slope=0.53 null max@131072=10
+    W=6 heights=[0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 3] slope=0.318  | null mean slope=0.433 null max@131072=9
+    W=7 heights=[0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 2, 2] slope=0.306  | null mean slope=0.323 null max@131072=8
+    W=8 heights=[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1] slope=-0.0  | null mean slope=0.185 null max@131072=7
+  checker_A
+    W=0 heights=[7, 9, 9, 13, 13, 16, 21, 21, 21, 21, 22, 23] slope=1.564  | null mean slope=1.035 null max@131072=21
+    W=1 heights=[5, 7, 7, 11, 11, 14, 17, 17, 17, 17, 17, 17] slope=1.204  | null mean slope=0.957 null max@131072=17
+    W=2 heights=[4, 6, 6, 10, 10, 13, 16, 16, 16, 16, 16, 16] slope=1.204  | null mean slope=0.957 null max@131072=16
+    W=3 heights=[2, 2, 2, 6, 6, 6, 11, 11, 11, 11, 11, 12] slope=1.049  | null mean slope=0.984 null max@131072=15
+    W=4 heights=[1, 1, 1, 5, 5, 5, 10, 10, 10, 10, 10, 11] slope=1.049  | null mean slope=0.984 null max@131072=14
+    W=5 heights=[0, 0, 0, 2, 2, 3, 3, 5, 8, 8, 8, 8] slope=0.955  | null mean slope=0.733 null max@131072=10
+    W=6 heights=[0, 0, 0, 1, 1, 2, 2, 4, 7, 7, 7, 7] slope=0.955  | null mean slope=0.61 null max@131072=9
+    W=7 heights=[0, 0, 0, 0, 0, 0, 0, 1, 1, 5, 5, 5] slope=1.222  | null mean slope=0.321 null max@131072=8
+    W=8 heights=[0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4] slope=-0.0  | null mean slope=0.375 null max@131072=7
+  checker_B
+    W=0 heights=[10, 12, 12, 12, 14, 19, 19, 19, 19, 19, 19, 19] slope=0.916  | null mean slope=1.19 null max@131072=22
+    W=1 heights=[7, 8, 8, 10, 12, 17, 17, 17, 17, 17, 17, 17] slope=1.067  | null mean slope=1.147 null max@131072=20
+    W=2 heights=[5, 6, 6, 6, 7, 13, 13, 13, 13, 13, 14, 14] slope=0.958  | null mean slope=1.111 null max@131072=18
+    W=3 heights=[4, 5, 5, 5, 6, 12, 12, 12, 12, 12, 13, 13] slope=0.958  | null mean slope=1.111 null max@131072=17
+    W=4 heights=[1, 2, 2, 3, 3, 11, 11, 11, 11, 11, 11, 11] slope=1.116  | null mean slope=0.93 null max@131072=16
+    W=5 heights=[0, 1, 1, 2, 2, 10, 10, 10, 10, 10, 10, 10] slope=1.105  | null mean slope=0.888 null max@131072=15
+    W=6 heights=[0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 5] slope=0.107  | null mean slope=0.53 null max@131072=13
+    W=7 heights=[0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 4] slope=0.107  | null mean slope=0.553 null max@131072=12
+    W=8 heights=[0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1] slope=0.0  | null mean slope=0.137 null max@131072=4
+
+RULE 90 control: max patch height by horizon
+  all_zeros W=0 heights=[1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 1999999] slope=128182.844
+  all_zeros W=1 heights=[511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 951424] slope=62234.743
+  all_zeros W=4 heights=[508, 1020, 2044, 4092, 8188, 16380, 32764, 65532, 131068, 262140, 524284, 951424] slope=62234.858
+  all_zeros W=8 heights=[504, 1016, 2040, 4088, 8184, 16376, 32760, 65528, 131064, 262136, 524280, 951424] slope=62235.01
+  checker_A W=0 heights=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] slope=0.0
+  checker_A W=1 heights=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] slope=nan
+  checker_A W=4 heights=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] slope=nan
+  checker_A W=8 heights=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] slope=nan
+  checker_B W=0 heights=[1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 1999999] slope=128182.844
+  checker_B W=1 heights=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] slope=0.0
+  checker_B W=4 heights=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] slope=0.0
+  checker_B W=8 heights=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] slope=0.0
+
+wrote /Volumes/A/researchpapers/13-rule30/experiments/overnight-arms/frontier_attack/a3_p2_orbit_closure/growth_fit.json

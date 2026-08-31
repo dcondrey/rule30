@@ -1,0 +1,19 @@
+n      cells   |D_n| formula  bwd30  n^2/2+n   bwd90  n^2/4+n
+2      5       5             4      4         3      3       ok
+4      13      13            12     12        8      8       ok
+6      25      25            24     24        15     15      ok
+8      41      41            40     40        24     24      ok
+10     61      61            60     60        35     35      ok
+12     85      85            84     84        48     48      ok
+14     113     113           112    112       63     63      ok
+16     145     145           144    144       80     80      ok
+50     1301    1301          1300   1300      675    675     ok
+100    5101    5101          5100   5100      2600   2600    ok
+150    11401   11401         11400  11400     5775   5775    ok
+200    20201   20201         20200  20200     10200  10200   ok
+
+CLOSED FORM VERIFIED for every even n in 2..200
+  |D_n|            = n^2/2 + n + 1
+  rule 30 backward = n^2/2 + n = |D_n| - 1   (exponent exactly 2)
+  rule 90 backward = n^2/4 + n               (exponent exactly 2)
+A least-squares fit over n=4..128 reads 1.8935 and 1.8165 for these two exact quadratics.  Short ladders manufacture sub-quadratic exponents.

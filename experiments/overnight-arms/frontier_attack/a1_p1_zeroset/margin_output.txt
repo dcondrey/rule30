@@ -1,0 +1,25 @@
+cross-check OK against common/rule30.simulate_seed
+
+=== distinct-seed pairing (step 0's mandated test) ===
+rule 30 w=14: 1469876 pairs agreeing on a 24-step centre prefix; margin histogram {'1': 1461685, 'no_zero_set_defect_before_A': 8191}; max margin 1
+rule 30 w=16: 23582131 pairs agreeing on a 24-step centre prefix; margin histogram {'1': 23549364, 'no_zero_set_defect_before_A': 32767}; max margin 1
+rule 90 w=14: 0 pairs agreeing on a 24-step centre prefix; margin histogram {}; max margin None
+rule 90 w=16: 0 pairs agreeing on a 24-step centre prefix; margin histogram {}; max margin None
+
+=== stroboscopic pairing (the pairing R1 needs; row 31) ===
+rule 30 T=16384 P=512: max margin 24
+  margin histogram: {"1": 423945, "10": 764, "11": 420, "12": 196, "13": 102, "14": 53, "15": 26, "16": 14, "17": 8, "18": 5, "19": 1, "2": 213025, "20": 1, "22": 2, "24": 1, "3": 106577, "4": 52630, "5": 26584, "6": 13371, "7": 6704, "8": 3386, "9": 1647, "no_zero_set_defect_in_run": 1214434}
+    {"p": 110, "run_start": 13219, "run_end": 13243, "run_len": 24, "D": 13219, "margin": 24}
+    {"p": 328, "run_start": 9317, "run_end": 9339, "run_len": 22, "D": 9317, "margin": 22}
+    {"p": 500, "run_start": 4005, "run_end": 4029, "run_len": 24, "D": 4007, "margin": 22}
+    {"p": 423, "run_start": 9603, "run_end": 9623, "run_len": 20, "D": 9603, "margin": 20}
+    {"p": 306, "run_start": 14980, "run_end": 14999, "run_len": 19, "D": 14980, "margin": 19}
+rule 90 T=4096 P=8: max margin 4094
+  margin histogram: {"4087": 2, "4088": 1, "4090": 1, "4091": 2, "4092": 1, "4094": 1}
+    {"p": 1, "run_start": 1, "run_end": 4095, "run_len": 4094, "D": 1, "margin": 4094}
+    {"p": 3, "run_start": 1, "run_end": 4093, "run_len": 4092, "D": 1, "margin": 4092}
+    {"p": 2, "run_start": 1, "run_end": 4094, "run_len": 4093, "D": 3, "margin": 4091}
+    {"p": 4, "run_start": 1, "run_end": 4092, "run_len": 4091, "D": 1, "margin": 4091}
+    {"p": 5, "run_start": 1, "run_end": 4091, "run_len": 4090, "D": 1, "margin": 4090}
+
+wrote margin_output.json

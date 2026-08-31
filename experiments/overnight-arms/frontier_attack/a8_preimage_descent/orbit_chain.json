@@ -1,0 +1,9 @@
+{
+ "T": 400,
+ "rows_reconstructed": 400,
+ "reconstruction_mismatches": 0,
+ "mismatch_detail": [],
+ "branch_points_on_orbit": 0,
+ "pin_instances_checked": 80634,
+ "pin_violations": 0
+}

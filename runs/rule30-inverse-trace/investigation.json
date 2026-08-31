@@ -1,0 +1,106 @@
+{
+  "schema": "crosstalk.investigation.v1",
+  "id": "20260828T154348Z",
+  "problem": {
+    "statement": "Using the exact left-permutive inverse-trace construction, derive a period-uniform contradiction from an eventually periodic Rule 30 lone-seed center. The target is a closed transition state or invariant proving that the periodic reconstruction cannot equal the finite actual left half. State all quantifiers and return no theorem if the obstruction is missing.",
+    "objectives": [],
+    "constraints": [],
+    "success_criteria": [],
+    "forbidden_failures": []
+  },
+  "hypotheses": {},
+  "evidence": {
+    "artifact:docs/rule30/RESULTS-inverse-trace.md:312b3e3888e65a8e": {
+      "id": "artifact:docs/rule30/RESULTS-inverse-trace.md:312b3e3888e65a8e",
+      "kind": "SourceSnapshot",
+      "title": "docs/rule30/RESULTS-inverse-trace.md",
+      "content_sha256": "312b3e3888e65a8e906b51e18c4ba7e47b535eef935d250fcef3af18bab9bda6",
+      "media_type": "text/markdown",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "docs/rule30/RESULTS-inverse-trace.md",
+      "verification_id": null,
+      "captured_at": 1787931832,
+      "independent": false,
+      "metadata": {}
+    },
+    "artifact:docs/rule30/RESULTS-periodicity-bridge.md:022bb75cb8a9ca33": {
+      "id": "artifact:docs/rule30/RESULTS-periodicity-bridge.md:022bb75cb8a9ca33",
+      "kind": "SourceSnapshot",
+      "title": "docs/rule30/RESULTS-periodicity-bridge.md",
+      "content_sha256": "022bb75cb8a9ca3330997250040a9ab4208df8e831d60cafe5c24b3be78dc906",
+      "media_type": "text/markdown",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "docs/rule30/RESULTS-periodicity-bridge.md",
+      "verification_id": null,
+      "captured_at": 1787931832,
+      "independent": false,
+      "metadata": {}
+    },
+    "artifact:experiments/rule30/inverse_trace_probe.py:297b5a68aa315e7a": {
+      "id": "artifact:experiments/rule30/inverse_trace_probe.py:297b5a68aa315e7a",
+      "kind": "Code",
+      "title": "experiments/rule30/inverse_trace_probe.py",
+      "content_sha256": "297b5a68aa315e7a63dafb200eb14b85ea74bae5a748fd3c6f67b7d154d9fad1",
+      "media_type": "text/x-python",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "experiments/rule30/inverse_trace_probe.py",
+      "verification_id": null,
+      "captured_at": 1787931832,
+      "independent": false,
+      "metadata": {}
+    },
+    "artifact:experiments/rule30/periodicity_bridge_probe.py:bc42707baab16f9e": {
+      "id": "artifact:experiments/rule30/periodicity_bridge_probe.py:bc42707baab16f9e",
+      "kind": "Code",
+      "title": "experiments/rule30/periodicity_bridge_probe.py",
+      "content_sha256": "bc42707baab16f9e775c1eddebdb161d7c51d74fd3be7b76f15195d832010e12",
+      "media_type": "text/x-python",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "experiments/rule30/periodicity_bridge_probe.py",
+      "verification_id": null,
+      "captured_at": 1787931832,
+      "independent": false,
+      "metadata": {}
+    }
+  },
+  "verifications": {
+    "proof:Lean4:artifact_1.lean:v1:ba4510ea636216d6": {
+      "id": "proof:Lean4:artifact_1.lean:v1:ba4510ea636216d6",
+      "kind": "FormalProof",
+      "status": "PolicyViolation",
+      "subject_id": "artifact_1.lean",
+      "evaluator_id": "Lean4",
+      "evaluator_version": "version-unavailable",
+      "specification_sha256": "d6311c1f0c08714f12e591ce6372da48201acfa588e76db042a0ee94afd04930",
+      "input_sha256": "ba4510ea636216d65f6e2f9557b7c461341cc2736f79efee92b25dfee099c2df",
+      "output_sha256": "c46cd9d55e2e5b0cd3c91a52b11d8362385d826f359587fad5e062064965b1d3",
+      "measurements": [],
+      "diagnostics": "untrusted proof placeholder rejected: sorry",
+      "started_at": 1787932987,
+      "completed_at": 1787932987,
+      "reproduction_of": null
+    },
+    "proof:Lean4:artifact_1.lean:v1:d2f02efbba4ec145": {
+      "id": "proof:Lean4:artifact_1.lean:v1:d2f02efbba4ec145",
+      "kind": "FormalProof",
+      "status": "PolicyViolation",
+      "subject_id": "artifact_1.lean",
+      "evaluator_id": "Lean4",
+      "evaluator_version": "version-unavailable",
+      "specification_sha256": "d6311c1f0c08714f12e591ce6372da48201acfa588e76db042a0ee94afd04930",
+      "input_sha256": "d2f02efbba4ec145f3c9fb06b9057ce1f7d60f3d66d733e111bcbf9a21eac28c",
+      "output_sha256": "5a68967ff4ba3ddf4a310aeb57c23c6e8942850a5a098121231508e3105e98f0",
+      "measurements": [],
+      "diagnostics": "untrusted proof placeholder rejected: sorry",
+      "started_at": 1787932840,
+      "completed_at": 1787932840,
+      "reproduction_of": null
+    }
+  },
+  "created_at": 1787931832,
+  "updated_at": 1787932987
+}

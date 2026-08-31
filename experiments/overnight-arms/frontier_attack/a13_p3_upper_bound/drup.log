@@ -1,0 +1,14 @@
+rule 30 n=4   UNSAT=True  DRUP lemmas=0     level-0 forced literals=13      cells=13      checked resolution steps=24
+rule 30 n=8   UNSAT=True  DRUP lemmas=0     level-0 forced literals=41      cells=41      checked resolution steps=96
+rule 30 n=16  UNSAT=True  DRUP lemmas=0     level-0 forced literals=145     cells=145     checked resolution steps=384
+rule 30 n=32  UNSAT=True  DRUP lemmas=0     level-0 forced literals=545     cells=545     checked resolution steps=1536
+rule 30 n=64  UNSAT=True  DRUP lemmas=0     level-0 forced literals=2113    cells=2113    checked resolution steps=6144
+rule 30 n=128 UNSAT=True  DRUP lemmas=0     level-0 forced literals=8321    cells=8321    checked resolution steps=24576
+rule 90 n=4   UNSAT=True  DRUP lemmas=0     level-0 forced literals=9       cells=13      checked resolution steps=16
+rule 90 n=8   UNSAT=True  DRUP lemmas=0     level-0 forced literals=25      cells=41      checked resolution steps=64
+rule 90 n=16  UNSAT=True  DRUP lemmas=0     level-0 forced literals=81      cells=145     checked resolution steps=256
+rule 90 n=32  UNSAT=True  DRUP lemmas=0     level-0 forced literals=289     cells=545     checked resolution steps=1024
+rule 90 n=64  UNSAT=True  DRUP lemmas=0     level-0 forced literals=1089    cells=2113    checked resolution steps=4096
+rule 90 n=128 UNSAT=True  DRUP lemmas=0     level-0 forced literals=4225    cells=8321    checked resolution steps=16384
+wrote drup.json
+READ THIS: DRUP lemma count is NOT a resolution length here; the whole refutation lives in the level-0 propagation trail.

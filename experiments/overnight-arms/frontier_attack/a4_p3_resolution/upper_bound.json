@@ -1,0 +1,162 @@
+{
+ "rules": {
+  "30": [
+   {
+    "rule": 30,
+    "n": 4,
+    "diamond_cells": 13,
+    "axiom_clauses": 59,
+    "derivation_steps": 24,
+    "refutation_steps": 25,
+    "centre_value": 1,
+    "steps_over_n2": 1.5,
+    "steps_over_axioms": 0.4067796610169492
+   },
+   {
+    "rule": 30,
+    "n": 8,
+    "diamond_cells": 41,
+    "axiom_clauses": 243,
+    "derivation_steps": 96,
+    "refutation_steps": 97,
+    "centre_value": 1,
+    "steps_over_n2": 1.5,
+    "steps_over_axioms": 0.3950617283950617
+   },
+   {
+    "rule": 30,
+    "n": 16,
+    "diamond_cells": 145,
+    "axiom_clauses": 995,
+    "derivation_steps": 384,
+    "refutation_steps": 385,
+    "centre_value": 1,
+    "steps_over_n2": 1.5,
+    "steps_over_axioms": 0.385929648241206
+   },
+   {
+    "rule": 30,
+    "n": 32,
+    "diamond_cells": 545,
+    "axiom_clauses": 4035,
+    "derivation_steps": 1536,
+    "refutation_steps": 1537,
+    "centre_value": 0,
+    "steps_over_n2": 1.5,
+    "steps_over_axioms": 0.38066914498141263
+   },
+   {
+    "rule": 30,
+    "n": 64,
+    "diamond_cells": 2113,
+    "axiom_clauses": 16259,
+    "derivation_steps": 6144,
+    "refutation_steps": 6145,
+    "centre_value": 1,
+    "steps_over_n2": 1.5,
+    "steps_over_axioms": 0.37788301863583246
+   },
+   {
+    "rule": 30,
+    "n": 96,
+    "diamond_cells": 4705,
+    "axiom_clauses": 36675,
+    "derivation_steps": 13824,
+    "refutation_steps": 13825,
+    "centre_value": 1,
+    "steps_over_n2": 1.5,
+    "steps_over_axioms": 0.37693251533742334
+   },
+   {
+    "rule": 30,
+    "n": 128,
+    "diamond_cells": 8321,
+    "axiom_clauses": 65283,
+    "derivation_steps": 24576,
+    "refutation_steps": 24577,
+    "centre_value": 1,
+    "steps_over_n2": 1.5,
+    "steps_over_axioms": 0.3764532879922798
+   }
+  ],
+  "90": [
+   {
+    "rule": 90,
+    "n": 4,
+    "diamond_cells": 13,
+    "axiom_clauses": 34,
+    "derivation_steps": 16,
+    "refutation_steps": 17,
+    "centre_value": 0,
+    "steps_over_n2": 1.0,
+    "steps_over_axioms": 0.47058823529411764
+   },
+   {
+    "rule": 90,
+    "n": 8,
+    "diamond_cells": 41,
+    "axiom_clauses": 130,
+    "derivation_steps": 64,
+    "refutation_steps": 65,
+    "centre_value": 0,
+    "steps_over_n2": 1.0,
+    "steps_over_axioms": 0.49230769230769234
+   },
+   {
+    "rule": 90,
+    "n": 16,
+    "diamond_cells": 145,
+    "axiom_clauses": 514,
+    "derivation_steps": 256,
+    "refutation_steps": 257,
+    "centre_value": 0,
+    "steps_over_n2": 1.0,
+    "steps_over_axioms": 0.4980544747081712
+   },
+   {
+    "rule": 90,
+    "n": 32,
+    "diamond_cells": 545,
+    "axiom_clauses": 2050,
+    "derivation_steps": 1024,
+    "refutation_steps": 1025,
+    "centre_value": 0,
+    "steps_over_n2": 1.0,
+    "steps_over_axioms": 0.4995121951219512
+   },
+   {
+    "rule": 90,
+    "n": 64,
+    "diamond_cells": 2113,
+    "axiom_clauses": 8194,
+    "derivation_steps": 4096,
+    "refutation_steps": 4097,
+    "centre_value": 0,
+    "steps_over_n2": 1.0,
+    "steps_over_axioms": 0.4998779594825482
+   },
+   {
+    "rule": 90,
+    "n": 96,
+    "diamond_cells": 4705,
+    "axiom_clauses": 18434,
+    "derivation_steps": 9216,
+    "refutation_steps": 9217,
+    "centre_value": 0,
+    "steps_over_n2": 1.0,
+    "steps_over_axioms": 0.49994575241401756
+   },
+   {
+    "rule": 90,
+    "n": 128,
+    "diamond_cells": 8321,
+    "axiom_clauses": 32770,
+    "derivation_steps": 16384,
+    "refutation_steps": 16385,
+    "centre_value": 0,
+    "steps_over_n2": 1.0,
+    "steps_over_axioms": 0.49996948428440646
+   }
+  ]
+ }
+}

@@ -1,0 +1,5 @@
+w=12 cap=   400: 2047 surviving pairs
+w=12 cap=  4000: 2047 surviving pairs, 0 with a zero-set r defect, 21 with a one-phase r defect
+w=12 cap= 40000: 2047 surviving pairs, 0 with a zero-set r defect, 21 with a one-phase r defect
+cap-independent across 400 / 4,000 / 40,000: True (counts [2047]; 2^11 - 1 = 2047)
+wrote cap_independence_output.json

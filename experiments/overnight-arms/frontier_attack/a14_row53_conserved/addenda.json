@@ -1,0 +1,478 @@
+{
+ "A_class_gap": [
+  {
+   "rule": 30,
+   "w": 1,
+   "modulus": 2147483647,
+   "dim_periodic_class": 1,
+   "dim_finite_support_class": 0,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 0,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 2,
+   "modulus": 2147483647,
+   "dim_periodic_class": 2,
+   "dim_finite_support_class": 1,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 1,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 3,
+   "modulus": 2147483647,
+   "dim_periodic_class": 4,
+   "dim_finite_support_class": 3,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 3,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 4,
+   "modulus": 2147483647,
+   "dim_periodic_class": 8,
+   "dim_finite_support_class": 7,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 7,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 5,
+   "modulus": 2147483647,
+   "dim_periodic_class": 16,
+   "dim_finite_support_class": 15,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 15,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 6,
+   "modulus": 2147483647,
+   "dim_periodic_class": 32,
+   "dim_finite_support_class": 31,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 31,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 7,
+   "modulus": 2147483647,
+   "dim_periodic_class": 64,
+   "dim_finite_support_class": 63,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 63,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 8,
+   "modulus": 2147483647,
+   "dim_periodic_class": 128,
+   "dim_finite_support_class": 127,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 127,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 9,
+   "modulus": 2147483647,
+   "dim_periodic_class": 256,
+   "dim_finite_support_class": 255,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 255,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 10,
+   "modulus": 2147483647,
+   "dim_periodic_class": 512,
+   "dim_finite_support_class": 511,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 511,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 1,
+   "modulus": 2,
+   "dim_periodic_class": 1,
+   "dim_finite_support_class": 0,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 0,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 2,
+   "modulus": 2,
+   "dim_periodic_class": 2,
+   "dim_finite_support_class": 1,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 1,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 3,
+   "modulus": 2,
+   "dim_periodic_class": 4,
+   "dim_finite_support_class": 3,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 3,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 4,
+   "modulus": 2,
+   "dim_periodic_class": 8,
+   "dim_finite_support_class": 7,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 7,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 5,
+   "modulus": 2,
+   "dim_periodic_class": 16,
+   "dim_finite_support_class": 15,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 15,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 6,
+   "modulus": 2,
+   "dim_periodic_class": 32,
+   "dim_finite_support_class": 31,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 31,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 7,
+   "modulus": 2,
+   "dim_periodic_class": 64,
+   "dim_finite_support_class": 63,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 63,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 8,
+   "modulus": 2,
+   "dim_periodic_class": 128,
+   "dim_finite_support_class": 127,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 127,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 9,
+   "modulus": 2,
+   "dim_periodic_class": 256,
+   "dim_finite_support_class": 255,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 255,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 30,
+   "w": 10,
+   "modulus": 2,
+   "dim_periodic_class": 512,
+   "dim_finite_support_class": 511,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 511,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 1,
+   "modulus": 2147483647,
+   "dim_periodic_class": 1,
+   "dim_finite_support_class": 0,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 0,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 2,
+   "modulus": 2147483647,
+   "dim_periodic_class": 2,
+   "dim_finite_support_class": 1,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 1,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 3,
+   "modulus": 2147483647,
+   "dim_periodic_class": 4,
+   "dim_finite_support_class": 3,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 3,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 4,
+   "modulus": 2147483647,
+   "dim_periodic_class": 8,
+   "dim_finite_support_class": 7,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 7,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 5,
+   "modulus": 2147483647,
+   "dim_periodic_class": 16,
+   "dim_finite_support_class": 15,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 15,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 6,
+   "modulus": 2147483647,
+   "dim_periodic_class": 32,
+   "dim_finite_support_class": 31,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 31,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 7,
+   "modulus": 2147483647,
+   "dim_periodic_class": 64,
+   "dim_finite_support_class": 63,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 63,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 8,
+   "modulus": 2147483647,
+   "dim_periodic_class": 128,
+   "dim_finite_support_class": 127,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 127,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 9,
+   "modulus": 2147483647,
+   "dim_periodic_class": 256,
+   "dim_finite_support_class": 255,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 255,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 10,
+   "modulus": 2147483647,
+   "dim_periodic_class": 512,
+   "dim_finite_support_class": 511,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 511,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 1,
+   "modulus": 2,
+   "dim_periodic_class": 1,
+   "dim_finite_support_class": 0,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 0,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 2,
+   "modulus": 2,
+   "dim_periodic_class": 2,
+   "dim_finite_support_class": 1,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 1,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 3,
+   "modulus": 2,
+   "dim_periodic_class": 4,
+   "dim_finite_support_class": 3,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 3,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 4,
+   "modulus": 2,
+   "dim_periodic_class": 8,
+   "dim_finite_support_class": 7,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 7,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 5,
+   "modulus": 2,
+   "dim_periodic_class": 16,
+   "dim_finite_support_class": 15,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 15,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 6,
+   "modulus": 2,
+   "dim_periodic_class": 32,
+   "dim_finite_support_class": 31,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 31,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 7,
+   "modulus": 2,
+   "dim_periodic_class": 64,
+   "dim_finite_support_class": 63,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 63,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 8,
+   "modulus": 2,
+   "dim_periodic_class": 128,
+   "dim_finite_support_class": 127,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 127,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 9,
+   "modulus": 2,
+   "dim_periodic_class": 256,
+   "dim_finite_support_class": 255,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 255,
+   "new_nontrivial_finite_support": 0
+  },
+  {
+   "rule": 90,
+   "w": 10,
+   "modulus": 2,
+   "dim_periodic_class": 512,
+   "dim_finite_support_class": 511,
+   "expected_drop": 1,
+   "drop": 1,
+   "coboundary_dim_2^(w-1)-1": 511,
+   "new_nontrivial_finite_support": 0
+  }
+ ],
+ "B_majority_numerator": [
+  {
+   "W": 32,
+   "numerator_A": 3146,
+   "numerator_B": 3146,
+   "numerator_absdiff": 0,
+   "windows_touching_col0_per_row": 3,
+   "note": "exact cancellation: majority is unchanged on each of the w affected windows for this diagram"
+  },
+  {
+   "W": 64,
+   "numerator_A": 6348,
+   "numerator_B": 6348,
+   "numerator_absdiff": 0,
+   "windows_touching_col0_per_row": 3,
+   "note": "exact cancellation: majority is unchanged on each of the w affected windows for this diagram"
+  },
+  {
+   "W": 128,
+   "numerator_A": 12708,
+   "numerator_B": 12708,
+   "numerator_absdiff": 0,
+   "windows_touching_col0_per_row": 3,
+   "note": "exact cancellation: majority is unchanged on each of the w affected windows for this diagram"
+  },
+  {
+   "W": 256,
+   "numerator_A": 25456,
+   "numerator_B": 25456,
+   "numerator_absdiff": 0,
+   "windows_touching_col0_per_row": 3,
+   "note": "exact cancellation: majority is unchanged on each of the w affected windows for this diagram"
+  }
+ ]
+}

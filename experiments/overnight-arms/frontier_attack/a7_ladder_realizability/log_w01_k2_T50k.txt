@@ -1,0 +1,7 @@
+[centre] col_0 == lone-seed prefix + tail 01 from t=5: True
+[rowsim] diagonal vs row simulation, x in [-4,13], T=2000: 0 mismatches
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-2,13]: 0 violations (4 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 4096 on t>=9: None
+[col_-1] Diff_q event counts q=1..8: [10714, 10713, 10713, 10711, 10712, 8928, 10712, 10712]
+[io-lemma] col_1 = 1 on 5357/24996 of the col_0 zero set (density 0.2143), last at t=49999
+uv run python realize.py -w 01 -k 2 -T 50000 --verify-T 2000 --qmax 4096  12   12.60s user 0.20s system 67% cpu 18.824 total

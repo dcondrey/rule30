@@ -1,0 +1,8 @@
+cross-check OK against common/rule30.simulate_seed
+rule 30 w=10 cap=4000: 511 surviving pairs (centre traces never separate), of which 0 have a zero-set r defect and 17 have a one-phase r defect; 5190 pairs broke before the cap
+rule 30 w=12 cap=4000: 2047 surviving pairs (centre traces never separate), of which 0 have a zero-set r defect and 21 have a one-phase r defect; 89124 pairs broke before the cap
+rule 30 w=14 cap=4000: 8191 surviving pairs (centre traces never separate), of which 0 have a zero-set r defect and 25 have a one-phase r defect; 1461685 pairs broke before the cap
+rule 90 w=10 cap=4000: 0 surviving pairs (centre traces never separate), of which 0 have a zero-set r defect and 0 have a one-phase r defect; 0 pairs broke before the cap
+rule 90 w=12 cap=4000: 0 surviving pairs (centre traces never separate), of which 0 have a zero-set r defect and 0 have a one-phase r defect; 0 pairs broke before the cap
+rule 90 w=14 cap=4000: 0 surviving pairs (centre traces never separate), of which 0 have a zero-set r defect and 0 have a one-phase r defect; 0 pairs broke before the cap
+wrote verify_infinite_collisions_output.json

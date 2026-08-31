@@ -1,0 +1,88 @@
+cross-check OK: columns match common/rule30.simulate_seed, 200 steps
+
+=== rule 30, T=4096, p<=256 (row 37's first regime) ===
+{
+  "rule": "30",
+  "T": 4096,
+  "max_p": 256,
+  "min_run": 12,
+  "longest_agreement_run": {
+    "len": 18,
+    "p": 148,
+    "t0": 1855
+  },
+  "defect_identity_checks": 254369,
+  "defect_identity_violations": 0,
+  "n_long_runs": 116,
+  "long_runs_with_a_zero_phase_r_defect": 100,
+  "long_runs_with_NO_zero_phase_r_defect": 16
+}
+longest runs found: [{"p": 42, "t0": 2172, "len": 17, "zero_phase_times": 11, "zero_phase_r_defects": 5, "one_phase_r_defects": 5, "first_zero_phase_defect": 2172}, {"p": 18, "t0": 2295, "len": 16, "zero_phase_times": 6, "zero_phase_r_defects": 1, "one_phase_r_defects": 0, "first_zero_phase_defect": 2296}, {"p": 18, "t0": 3971, "len": 16, "zero_phase_times": 8, "zero_phase_r_defects": 5, "one_phase_r_defects": 5, "first_zero_phase_defect": 3972}, {"p": 30, "t0": 370, "len": 15, "zero_phase_times": 9, "zero_phase_r_defects": 0, "one_phase_r_defects": 2, "first_zero_phase_defect": null}, {"p": 6, "t0": 2884, "len": 14, "zero_phase_times": 5, "zero_phase_r_defects": 0, "one_phase_r_defects": 1, "first_zero_phase_defect": null}, {"p": 27, "t0": 638, "len": 14, "zero_phase_times": 8, "zero_phase_r_defects": 1, "one_phase_r_defects": 1, "first_zero_phase_defect": 641}]
+
+=== rule 30, T=16384, p<=512 (row 37's second regime) ===
+{
+  "rule": "30",
+  "T": 16384,
+  "max_p": 512,
+  "min_run": 16,
+  "longest_agreement_run": {
+    "len": 24,
+    "p": 110,
+    "t0": 13219
+  },
+  "defect_identity_checks": 2065066,
+  "defect_identity_violations": 0,
+  "n_long_runs": 67,
+  "long_runs_with_a_zero_phase_r_defect": 57,
+  "long_runs_with_NO_zero_phase_r_defect": 10
+}
+longest runs found: [{"p": 110, "t0": 13219, "len": 24, "zero_phase_times": 9, "zero_phase_r_defects": 1, "one_phase_r_defects": 3, "first_zero_phase_defect": 13219}, {"p": 273, "t0": 4968, "len": 21, "zero_phase_times": 12, "zero_phase_r_defects": 0, "one_phase_r_defects": 1, "first_zero_phase_defect": null}, {"p": 276, "t0": 3299, "len": 19, "zero_phase_times": 7, "zero_phase_r_defects": 2, "one_phase_r_defects": 2, "first_zero_phase_defect": 3303}, {"p": 306, "t0": 14980, "len": 19, "zero_phase_times": 9, "zero_phase_r_defects": 3, "one_phase_r_defects": 1, "first_zero_phase_defect": 14980}, {"p": 317, "t0": 7022, "len": 19, "zero_phase_times": 10, "zero_phase_r_defects": 1, "one_phase_r_defects": 2, "first_zero_phase_defect": 7023}, {"p": 64, "t0": 9255, "len": 18, "zero_phase_times": 6, "zero_phase_r_defects": 1, "one_phase_r_defects": 1, "first_zero_phase_defect": 9268}]
+
+=== rule 90 control, T=4096, p<=8 ===
+{
+  "rule": "90",
+  "T": 4096,
+  "max_p": 8,
+  "min_run": 12,
+  "longest_agreement_run": {
+    "len": 4094,
+    "p": 1,
+    "t0": 1
+  },
+  "defect_identity_checks": 32716,
+  "defect_identity_violations": 0,
+  "n_long_runs": 8,
+  "long_runs_with_a_zero_phase_r_defect": 8,
+  "long_runs_with_NO_zero_phase_r_defect": 0
+}
+first 3 long runs: [
+  {
+    "p": 1,
+    "t0": 1,
+    "len": 4094,
+    "zero_phase_times": 4094,
+    "zero_phase_r_defects": 22,
+    "one_phase_r_defects": 0,
+    "first_zero_phase_defect": 1
+  },
+  {
+    "p": 2,
+    "t0": 1,
+    "len": 4093,
+    "zero_phase_times": 4093,
+    "zero_phase_r_defects": 20,
+    "one_phase_r_defects": 0,
+    "first_zero_phase_defect": 3
+  },
+  {
+    "p": 3,
+    "t0": 1,
+    "len": 4092,
+    "zero_phase_times": 4092,
+    "zero_phase_r_defects": 21,
+    "one_phase_r_defects": 0,
+    "first_zero_phase_defect": 1
+  }
+]
+
+wrote agreement_runs_output.json

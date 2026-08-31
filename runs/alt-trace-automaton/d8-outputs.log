@@ -1,0 +1,78 @@
+controls C6-C7: PASS
+phase 01 d=8 prune=outputs:
+  k=  1: prefixes      2  states   2  distinct A>>d 1  B>>d 1
+      x1     A 10  B 1
+      x1     A 11  B 0
+  k=  2: prefixes      4  states   3  distinct A>>d 1  B>>d 1
+      x2     A 1010  B 101
+      x1     A 1100  B 010
+      x1     A 1101  B 010
+  k=  3: prefixes      8  states   6  distinct A>>d 1  B>>d 1
+      x2     A 101010  B 10101
+      x2     A 110011  B 01010
+      x1     A 101000  B 10100
+      x1     A 110101  B 01011
+      x1     A 101001  B 10101
+      x1     A 110101  B 01010
+  k=  4: prefixes     16  states  10  distinct A>>d 1  B>>d 1
+      x2     A 10101010  B 1010101
+      x2     A 11001100  B 0101010
+      x2     A 10100010  B 1010010
+      x2     A 11010101  B 0101101
+      x2     A 10100110  B 1010101
+      x2     A 11010101  B 0101010
+      x1     A 10101010  B 1010111
+      x1     A 11001111  B 0101000
+      x1     A 10101010  B 1010110
+      x1     A 11001110  B 0101001
+  k=  5: prefixes      3  states   2  distinct A>>d 1  B>>d 1  forced tail A 10
+      x2     A 10100110|10  B 10101011|0
+      x1     A 10100010|10  B 10100101|0
+  k=  6: prefixes      1  states   1  distinct A>>d 1  B>>d 1  forced tail A 0100
+      x1     A 11001111|0100  B 01010001|100
+  k=  7: prefixes      1  states   1  distinct A>>d 1  B>>d 1  forced tail A 101000
+      x1     A 10100010|101000  B 10100101|01000
+  k=  8: prefixes      1  states   1  distinct A>>d 1  B>>d 1  forced tail A 11010000
+      x1     A 10101010|11010000  B 10101110|0110000
+  k=  9: prefixes      0  states   0  distinct A>>d 0  B>>d 0
+  certified at level 9
+  window w= 4: quotient states 16, transition collisions 13
+  window w= 6: quotient states 30, transition collisions 12
+  window w= 8: quotient states 48, transition collisions 4
+  window w=10: quotient states 52, transition collisions 2
+  window w=12: quotient states 52, transition collisions 2
+  window w=16: quotient states 52, transition collisions 2
+phase 10 d=8 prune=outputs:
+  k=  1: prefixes      2  states   2  distinct A>>d 1  B>>d 1
+      x1     A 101  B 10
+      x1     A 110  B 01
+  k=  2: prefixes      4  states   4  distinct A>>d 1  B>>d 1
+      x1     A 10101  B 1010
+      x1     A 11001  B 0101
+      x1     A 10100  B 1010
+      x1     A 11010  B 0101
+  k=  3: prefixes      8  states   8  distinct A>>d 1  B>>d 1
+      x1     A 1010101  B 101010
+      x1     A 1100110  B 010101
+      x1     A 1010001  B 101001
+      x1     A 1101010  B 010110
+      x1     A 1010101  B 101011
+      x1     A 1100111  B 010100
+      x1     A 1010011  B 101010
+      x1     A 1101010  B 010101
+  k=  4: prefixes      4  states   4  distinct A>>d 1  B>>d 1  forced tail A 0
+      x1     A 11001111|0  B 01010001
+      x1     A 11010101|0  B 01011010
+      x1     A 10100110|0  B 10101010
+      x1     A 11010101|0  B 01010101
+  k=  5: prefixes      1  states   1  distinct A>>d 1  B>>d 1  forced tail A 100
+      x1     A 10100110|100  B 10101011|00
+  k=  6: prefixes      0  states   0  distinct A>>d 0  B>>d 0
+  certified at level 6
+  window w= 4: quotient states 12, transition collisions 14
+  window w= 6: quotient states 30, transition collisions 4
+  window w= 8: quotient states 40, transition collisions 0
+  window w=10: quotient states 40, transition collisions 0
+  window w=12: quotient states 40, transition collisions 0
+  window w=16: quotient states 40, transition collisions 0
+dumped ../../runs/alt-trace-automaton/d8-outputs.json

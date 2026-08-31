@@ -1,0 +1,581 @@
+{
+  "claims": {
+    "turn-1-claim-11": {
+      "id": "turn-1-claim-11",
+      "text": "The **center column** is the sequence $c(t) = s(t,0)$ for $t \\geq 0$.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-13": {
+      "id": "turn-1-claim-13",
+      "text": "**Prize Problem 1** (rule30prize.org): Is the sequence $\\{c(t)\\}_{t \\geq 0}$ eventually periodic? That is, do there exist $T \\geq 0$ and $p \\geq 1$ such that $c(t+p) = c(t)$ for all $t \\geq T$?",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-160": {
+      "id": "turn-1-claim-160",
+      "text": "The center-column nonperiodicity of Rule 30 from a lone seed remains an **open problem**.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-162": {
+      "id": "turn-1-claim-162",
+      "text": "The artifacts establish a rigorous framework:",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-17": {
+      "id": "turn-1-claim-17",
+      "text": "Rule 30 is **left-permutive**: for every fixed $(b,c)$, the map $a \\mapsto a \\oplus (b \\lor c)$ is a bijection on $\\{0,1\\}$. Equivalently, $f(0,b,c) \\neq f(1,b,c)$ for all $b,c$.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-170": {
+      "id": "turn-1-claim-170",
+      "text": "Any valid proof of center-column nonperiodicity must establish:",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-19": {
+      "id": "turn-1-claim-19",
+      "text": "The lone-seed orbit has **finite support**: $s(t,x) = 0$ for $|x| > t$.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-21": {
+      "id": "turn-1-claim-21",
+      "text": "(Kopra, 2022, Corollary 3.7) For Rule 30 from the lone seed, the **width-two trace** $(s(t,0), s(t,1))_{t \\geq 0}$ is not eventually periodic.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-25": {
+      "id": "turn-1-claim-25",
+      "text": "The inverse-trace reconstruction is an exact, deterministic procedure: given a desired center trace $c(0), c(1), \\ldots, c(H)$ and the right half $s(0,x)$ for $x \\geq 0$, left-permutivity uniquely determines $s(0,-1), s(0,-2), \\ldots, s(0,-H)$ via a triangular system.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-27": {
+      "id": "turn-1-claim-27",
+      "text": "The defect identity: when $D(t,x) := s(t+p,x) \\oplus s(t,x)$ and $D(t,0) = D(t+1,0) = 0$:",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-30": {
+      "id": "turn-1-claim-30",
+      "text": "The finite measurements in the artifacts are:",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-39": {
+      "id": "turn-1-claim-39",
+      "text": "**Rule 90 control**: Rule 90 from lone seed has center trace $1, 0, 0, 0, \\ldots$ The center *is* eventually periodic (period 1, offset 1). The inverse-trace method correctly does *not* produce a contradiction for Rule 90. This validates that the method is not vacuously contradictory.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-41": {
+      "id": "turn-1-claim-41",
+      "text": "**Non-injectivity of center trace**: The initial conditions $\\{0\\}$ and $\\{0,1\\}$ produce identical Rule 30 center traces (verified computationally). This means the center trace alone does not determine the full configuration—any proof strategy relying on center-trace injectivity is invalid.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-43": {
+      "id": "turn-1-claim-43",
+      "text": "**Doubling separation failure**: $s(p,0) \\neq s(2p,0)$ fails at $p=4$ where both equal 1.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-47": {
+      "id": "turn-1-claim-47",
+      "text": "Suppose $c(t)$ is eventually periodic with period $p$ and offset $T$. Then for any base time $t_0 \\geq T$, the inverse reconstruction from the periodic trace and the actual right half at $t_0$ must recover the actual left half at $t_0$.",
+      "kind": "Assumption",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-49": {
+      "id": "turn-1-claim-49",
+      "text": "The contradiction would require showing: for *every* $p \\geq 1$ and *every* sufficiently large $T$, the reconstructed left half differs from the actual left half. The artifacts show this happens for specific $(T,p)$ pairs but establish no universal mechanism.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-53": {
+      "id": "turn-1-claim-53",
+      "text": "The center column has been computed to at least $10^8$ steps (various sources in the literature) with no period found. This is strong empirical evidence but not a proof.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-55": {
+      "id": "turn-1-claim-55",
+      "text": "No period $p \\leq 512$ survives past $T = 16384$ in the finite sweep described.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-6": {
+      "id": "turn-1-claim-6",
+      "text": "**Rule 30** is the elementary cellular automaton defined by:",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-61": {
+      "id": "turn-1-claim-61",
+      "text": "Kopra proves the width-two trace $(c(t), s(t,1))$ is not eventually periodic. If $c(t)$ were eventually periodic with period $p$, then the width-two trace would have its first component periodic. For the width-two trace to also be eventually periodic, $s(t,1)$ would need to be eventually periodic with some period $p'$ (and then the joint period divides $\\text{lcm}(p, p')$). Kopra's result says this joint periodicity is impossible.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-67": {
+      "id": "turn-1-claim-67",
+      "text": "If $c(t)$ has period $p$ for all $t \\geq T$, then $D(t,0) = 0$ for all $t \\geq T$. The defect identity gives:",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-73": {
+      "id": "turn-1-claim-73",
+      "text": "This constrains the defect but does not close it: the defect $D(t,1)$ evolves according to its own dynamics involving $D(t,2)$, etc. Without a closure relation, this is an open recurrence, not a contradiction.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-77": {
+      "id": "turn-1-claim-77",
+      "text": "Model the Rule 30 time evolution restricted to a finite window as a de Bruijn-like graph. If eventual periodicity of $c(t)$ implied that the system enters a finite cycle in some appropriate quotient space, one could enumerate and exclude all cycles.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-79": {
+      "id": "turn-1-claim-79",
+      "text": "The difficulty is that the causal cone grows linearly: $s(t,0)$ depends on $s(0,x)$ for $|x| \\leq t$. Any finite-state model must account for the expanding boundary, and the boundary conditions (all-zero beyond support $t$) inject fresh information at each step. This is not obviously reducible to a finite automaton.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-83": {
+      "id": "turn-1-claim-83",
+      "text": "Rule 30 over $\\text{GF}(2)$: $s(t+1,x) = s(t,x-1) + s(t,x) \\cdot s(t,x+1) + s(t,x) + s(t,x+1)$ where $+$ is XOR and $\\cdot$ is AND. The nonlinearity (the $s(t,x) \\cdot s(t,x+1)$ term) is what makes this hard—it prevents the polynomial growth / Sierpiński structure that makes Rule 90 tractable.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-85": {
+      "id": "turn-1-claim-85",
+      "text": "No known algebraic technique handles the degree explosion of iterated nonlinear maps over $\\text{GF}(2)$ well enough to establish periodicity or nonperiodicity of a single output bit.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-9": {
+      "id": "turn-1-claim-9",
+      "text": "The **lone-seed initial condition** is $s(0,x) = [x=0]$ (Iverson bracket).",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-101": {
+      "id": "turn-2-claim-101",
+      "text": "$a \\lor b = a \\oplus b \\oplus (a \\wedge b) = a + b + ab$ over $\\mathbb{F}_2$. So:",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-106": {
+      "id": "turn-2-claim-106",
+      "text": "The algebraic degree of $s(t,0)$ as a polynomial in $2t+1$ binary variables can grow at most as $2^t$ (since each step at most doubles degree due to the quadratic term). For Rule 30 specifically, the degree growth is believed to be exponential. If one could show that the polynomial $s(T+t, 0)$ (viewed as a function of the row at time $T$) has degree exceeding the degree achievable by any periodic function of $t$... but periodic functions of $t$ can have arbitrary algebraic structure in the spatial variables, so this line seems circular.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-112": {
+      "id": "turn-2-claim-112",
+      "text": "If $c(t)$ is eventually periodic with period $p$, then consider the spacetime pattern restricted to a width-$(2p+1)$ strip centered at $x=0$. The state at each time step is a word of length $2p+1$. The update rule maps this word to the next (with boundary conditions from cells outside the strip). If the center is periodic, then this word sequence lives in a subset of $\\{0,1\\}^{2p+1}$ that projects to a periodic sequence under the center-extraction map.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-114": {
+      "id": "turn-2-claim-114",
+      "text": "The difficulty is that the strip boundaries interact with the exterior, which is not periodic. The causal cone grows linearly, so the strip cannot be isolated from the exterior without tracking the entire expanding front.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-120": {
+      "id": "turn-2-claim-120",
+      "text": "Rule 30 has different statistical properties on its left and right boundaries. The left boundary from the lone seed is eventually periodic (period 1 after transient: the leftmost nonzero cell follows a predictable pattern). The right boundary is believed to be complex. If the center were periodic, this would impose strong constraints on how the left and right halves interact.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-122": {
+      "id": "turn-2-claim-122",
+      "text": "The left boundary of the Rule 30 lone-seed spacetime: $s(t, -t) = 1$ for all $t \\geq 0$ (the leftmost cell of the expanding front is always 1), and the pattern near the left boundary is regular (essentially a periodic stripe pattern with period 2 or related small period).",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-124": {
+      "id": "turn-2-claim-124",
+      "text": "The right boundary is more complex. The rightmost nonzero position is $s(t, t)$, and the right-boundary pattern is irregular.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-126": {
+      "id": "turn-2-claim-126",
+      "text": "Under the periodicity assumption for the center, the defect $D(t,x) = s(t+p,x) \\oplus s(t,x)$ satisfies $D(t,0) = 0$ for $t \\geq T$. We showed $D(t,-1) = 0$ when $s(t,0) = 1$. Now consider the left half more broadly. The regularity of the left boundary means $D(t,-t)$ and nearby cells can be analyzed explicitly. If the left boundary has period $q$, and the center has period $p$, then $D(t,-t) = 0$ whenever $\\text{lcm}(p,q) | (t - T')$ for some $T'$. Between those times, $D$ can be nonzero near the boundary.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-128": {
+      "id": "turn-2-claim-128",
+      "text": "The defect $D(t, \\cdot)$ must have total support that evolves consistently with the Rule 30 dynamics. On the left, it is constrained by the regular boundary; on the right, by the expanding irregular boundary. The defect satisfies its own update equation (derived from Rule 30 applied to two time-shifted copies). The question is whether a nonzero defect field can persist indefinitely while maintaining $D(t,0) = 0$.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-130": {
+      "id": "turn-2-claim-130",
+      "text": "There exists no infinite-time, nonzero, finite-support defect field for Rule 30 that vanishes identically on the center column. This is essentially a restatement of the nonperiodicity conjecture in defect language.",
+      "kind": "Conjecture",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-134": {
+      "id": "turn-2-claim-134",
+      "text": "Suppose for contradiction that $c(t)$ is eventually periodic with period $p$ and pre-period $T$. Kopra tells us $(c(t), s(t,1))$ is not eventually periodic. Therefore $s(t,1)$ is not eventually periodic modulo any multiple of $p$. Under the periodicity assumption for $c(t)$, analyze $s(t,1)$ using the defect identity.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-136": {
+      "id": "turn-2-claim-136",
+      "text": "From our defect analysis: at center-zero times, $D(t,-1) = D(t,1)$. So $D(t,1)$ tells us about $D(t,-1)$ at center-zero times. At center-one times, $D(t,-1) = 0$ but $D(t,1)$ is unconstrained.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-140": {
+      "id": "turn-2-claim-140",
+      "text": "So there are infinitely many times $t \\geq T$ where $D(t,1) \\neq 0$ while $D(t,0) = 0$. At center-zero such times, $D(t,-1) = D(t,1) = 1$. The defect is nonzero at position $-1$.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-142": {
+      "id": "turn-2-claim-142",
+      "text": "Now consider what happens at $x = -1$ in the next step. We need to track $D(t+1, -1)$:",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-165": {
+      "id": "turn-2-claim-165",
+      "text": "The recurrence for $D(t,1)$ depends on $D(t,1)$ and $D(t,2)$ through the OR nonlinearity, and pulls in $D(t,2)$, which in turn pulls in $D(t,3)$, etc. This is the rightward cascade. Each column to the right is needed to close the system. This is the core reason the width-1 problem is harder than width-2.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-169": {
+      "id": "turn-2-claim-169",
+      "text": "Assume $c(t)$ has period $p$ from time $T$ onward. Define the *state* at time $t$ as $\\sigma(t) = (s(t, 1), s(t, 2), \\ldots, s(t, t))$ — the right half. The center-column value $c(t)$ is determined by $s(t-1, -1), s(t-1, 0), s(t-1, 1)$. Under left-permutivity, given the center and right half at time $t$, the entire left half is determined.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-17": {
+      "id": "turn-2-claim-17",
+      "text": "**Left-permutivity.** For fixed $b,c \\in \\{0,1\\}$, the map $a \\mapsto a \\oplus (b \\lor c)$ is a bijection. This is the XOR-with-constant map and is trivially verified by truth table.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-171": {
+      "id": "turn-2-claim-171",
+      "text": "So the \"state\" is effectively just the right half, which grows linearly with $t$. The periodicity assumption $c(t+p) = c(t)$ does not obviously bound the state space. The right half at time $t$ lives in $\\{0,1\\}^t$, so the state space grows exponentially.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-173": {
+      "id": "turn-2-claim-173",
+      "text": "For a finite-state proof, we would need to show that some finite projection of the state enters a cycle whose properties are incompatible with center periodicity. But Rule 90's counterexample shows that finite projections can be consistent with periodic centers even for left-permutive rules.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-19": {
+      "id": "turn-2-claim-19",
+      "text": "**Finite light cone.** $s(t,x) = 0$ for $|x| > t$. The lone-seed initial condition has support $\\{0\\}$, and the rule has speed $\\leq 1$.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-21": {
+      "id": "turn-2-claim-21",
+      "text": "**Kopra's width-2 theorem (2022).** The trace $(s(t,0), s(t,1))_{t \\geq 0}$ is not eventually periodic. This follows from Corollary 3.7 of Kopra's paper, which applies to left-permutive, left-spreading rules with nondegenerate initial conditions.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-220": {
+      "id": "turn-2-claim-220",
+      "text": "The `sorry` represents the actual open problem. No proof strategy surveyed in this analysis yields a complete argument.",
+      "kind": "Conjecture",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-23": {
+      "id": "turn-2-claim-23",
+      "text": "**Rule 90 counterexample to naive width-1 extension.** Rule 90 ($a \\oplus b \\oplus c$) is left-permutive and left-spreading, yet from the lone seed its center column is $1,0,0,0,\\ldots$ — eventually periodic with period 1. Therefore no proof strategy that uses only left-permutivity and left-spreading can establish center-column nonperiodicity.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-249": {
+      "id": "turn-2-claim-249",
+      "text": "**The center column of Rule 30 from the lone seed is not eventually periodic.** Convergence assessment: ~26% (unchanged from prior iteration). The fundamental obstruction is that every proof strategy either:",
+      "kind": "Conjecture",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-25": {
+      "id": "turn-2-claim-25",
+      "text": "**OEIS A070950.** The center column begins $1,1,0,1,1,1,0,0,1,1,0,0,0,1,0,1,\\ldots$ and has been computed to $\\geq 10^{10}$ steps without period detection (Wolfram, various sources). This is empirical evidence, not proof.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-262": {
+      "id": "turn-2-claim-262",
+      "text": "The most promising unexplored direction is **analyzing the defect column dynamics as a driven system**. Under the center-periodicity assumption, the center column has period $p$, creating a periodic forcing term. The defect at column 1 evolves under Rule 30 dynamics with this periodic forcing. Kopra guarantees column 1's defect is nonzero infinitely often. The question becomes: can this nonzero defect remain confined to the right half while maintaining $D(t,0) = 0$? The nonlinearity of OR means defect cancellation is possible but constrained. A careful analysis of the parity and support of the defect under periodic forcing, specifically exploiting $g(b,c) = b \\lor c$ (which makes $g$ monotone and asymmetric, unlike Rule 90's $g(b,c) = b \\oplus c$), may yield the needed contradiction.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-264": {
+      "id": "turn-2-claim-264",
+      "text": "The monotonicity of OR ($b \\lor c \\geq b$ and $b \\lor c \\geq c$) means that the nonlinear contribution to the defect has a bias: flipping a 0 to a 1 in the right argument can change the OR output, but flipping a 1 to a 0 cannot (when the center argument is 1). This asymmetry is absent in Rule 90 (where $g = \\oplus$ is symmetric and linear). This is the Rule-30-specific ingredient that any successful proof must exploit.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-33": {
+      "id": "turn-2-claim-33",
+      "text": "The gap between Kopra's result and the prize problem is not merely technical — it reflects a structural obstruction. Consider the projection $\\pi: \\{0,1\\}^2 \\to \\{0,1\\}$ defined by $\\pi(a,b) = a$. Even if the pair sequence $(c(t), s(t,1))$ is nonperiodic, the projection $c(t)$ can be periodic if the \"complexity\" resides entirely in the second coordinate. This is exactly what happens with Rule 90.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-35": {
+      "id": "turn-2-claim-35",
+      "text": "More precisely, for the pair trace to be nonperiodic while the first component is periodic with period $p$, we need: $s(t,1)$ is not eventually periodic modulo $p$. The defect identity constrains this but does not eliminate it *a priori*.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-39": {
+      "id": "turn-2-claim-39",
+      "text": "The defect identity from the prior iteration: when $D(t,x) := s(t+p,x) \\oplus s(t,x)$ and we assume $D(t,0) = 0$ for all $t \\geq T$ (periodic center with period $p$, pre-period $T$):",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-50": {
+      "id": "turn-2-claim-50",
+      "text": "When $s(t,0) = 1$: both OR terms are 1, so $D(t,-1) = 0$. ✓ (agrees with prior result)",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-52": {
+      "id": "turn-2-claim-52",
+      "text": "When $s(t,0) = 0$: $D(t,-1) = s(t,1) \\oplus s(t+p,1) = D(t,1)$. ✓",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-54": {
+      "id": "turn-2-claim-54",
+      "text": "**New observation.** Under the periodicity assumption, define the *right defect column* $d_1(t) := D(t,1)$. We have established:",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-65": {
+      "id": "turn-2-claim-65",
+      "text": "This shows $d_1(t+1)$ depends on $D(t,1)$ and $D(t,2)$ through the nonlinear OR. There is no closed finite-dimensional recurrence for the right defect column alone — each step pulls in one more column to the right. This is the fundamental obstruction to a finite-state argument.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-69": {
+      "id": "turn-2-claim-69",
+      "text": "Kopra's proof works by showing that if the width-2 trace were periodic, the entire bi-infinite configuration at time $T$ would be periodic (spatially, with a related period), contradicting the known properties of Rule 30's spacetime. The key is that width-2 provides enough information via left-permutivity and right-permutivity-like properties to reconstruct both spatial directions. Width-1 only gives left reconstruction.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-71": {
+      "id": "turn-2-claim-71",
+      "text": "Rule 30 is left-permutive but **not** right-permutive. $f(a,b,c)$ with $a,b$ fixed: $f(a,b,0) = a \\oplus (b \\lor 0) = a \\oplus b$ and $f(a,b,1) = a \\oplus (b \\lor 1) = a \\oplus 1$. So $f(a,b,0) \\neq f(a,b,1)$ iff $b \\neq 1$, i.e., right-permutivity fails when $b=1$. Specifically: $f(a,1,0) = a \\oplus 1$ and $f(a,1,1) = a \\oplus 1$ — these are equal. So Rule 30 is **not right-permutive**.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-73": {
+      "id": "turn-2-claim-73",
+      "text": "However, for the OR operation $g(b,c) = b \\lor c$: $g(0,0)=0, g(0,1)=1, g(1,0)=1, g(1,1)=1$. The function $g$ is not injective in either argument. This non-invertibility on the right side is what makes center-only reconstruction impossible rightward.",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-77": {
+      "id": "turn-2-claim-77",
+      "text": "The inverse-trace construction (artifact 1) reformulates the problem as follows. Suppose $c(t) = c(t+p)$ for all $t \\geq T$. At row $T$, the actual state is $s(T, \\cdot)$. Define the *forced left half* $\\ell_k$ for $k = 1, 2, \\ldots$ as the unique value at position $-k$ that makes the center at time $T+k$ equal to $c(T+k) = c(T+k+p)$ (the periodically continued value), given the actual right half $s(T, x)$ for $x \\geq 0$ and the already-determined $\\ell_1, \\ldots, \\ell_{k-1}$.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-79": {
+      "id": "turn-2-claim-79",
+      "text": "By left-permutivity, this is well-defined and unique. The contradiction would come from showing $\\ell_k \\neq s(T, -k)$ for some $k \\leq T$ (spatial mismatch within support) or $\\ell_k = 1$ for some $k > T$ (nonzero beyond support).",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-8": {
+      "id": "turn-2-claim-8",
+      "text": "**Conjecture (Rule 30 Prize Problem 1).** Let $s : \\mathbb{N}_0 \\times \\mathbb{Z} \\to \\{0,1\\}$ satisfy:",
+      "kind": "Fact",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-81": {
+      "id": "turn-2-claim-81",
+      "text": "The empirical finding that agreement can persist for $O(1)$ steps beyond the first period block (18 steps at $T=1855, p=148$; 24 steps at $T=13219, p=110$) but always eventually fails is suggestive but proves nothing. The critical question is whether agreement length is bounded or can grow without bound as $T, p \\to \\infty$.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-83": {
+      "id": "turn-2-claim-83",
+      "text": "For Rule 30 from the lone seed, for any period $p \\geq 1$, the maximum $T$ such that $c(t) = c(t+p)$ for $T \\leq t \\leq T + L$ satisfies $L = O(\\log T)$ or similar sub-linear growth. This would imply nonperiodicity but is itself unproven.",
+      "kind": "Conjecture",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-91": {
+      "id": "turn-2-claim-91",
+      "text": "If $c(t)$ is eventually periodic, then the first $N$ bits of $c$ have Kolmogorov complexity $K(c_0 \\cdots c_{N-1}) \\leq K(T) + K(p) + O(1) = O(\\log N)$. A proof that $K(c_0 \\cdots c_N) = \\Omega(N^\\alpha)$ for some $\\alpha > 0$ would suffice.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-93": {
+      "id": "turn-2-claim-93",
+      "text": "This is essentially equivalent to proving the sequence has positive entropy or is \"complex\" in an information-theoretic sense. Wolfram and others have conjectured that the center column passes standard randomness tests. However, proving Kolmogorov complexity lower bounds for specific computable sequences is notoriously hard — it would resolve questions of the same difficulty as the original problem.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-2-claim-99": {
+      "id": "turn-2-claim-99",
+      "text": "Represent $s(t,x)$ as a polynomial over $\\mathbb{F}_2$ in the initial conditions. The Rule 30 update $s(t+1,x) = s(t,x-1) \\oplus s(t,x) \\cdot s(t,x+1) \\oplus s(t,x) \\oplus s(t,x+1)$ (expanding the OR) shows that the algebraic degree of $s(t,0)$ as a polynomial in the initial bits grows with $t$.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    }
+  },
+  "edges": []
+}

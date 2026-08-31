@@ -1,0 +1,848 @@
+{
+  "rule30_T4096_p256": {
+    "rule": "30",
+    "T": 4096,
+    "max_p": 256,
+    "min_run": 12,
+    "longest_agreement_run": {
+      "len": 18,
+      "p": 148,
+      "t0": 1855
+    },
+    "defect_identity_checks": 254369,
+    "defect_identity_violations": 0,
+    "n_long_runs": 116,
+    "long_runs_with_a_zero_phase_r_defect": 100,
+    "long_runs_with_NO_zero_phase_r_defect": 16,
+    "long_runs": [
+      {
+        "p": 6,
+        "t0": 2884,
+        "len": 14,
+        "zero_phase_times": 5,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 11,
+        "t0": 1161,
+        "len": 13,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 1163
+      },
+      {
+        "p": 11,
+        "t0": 3962,
+        "len": 12,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 3963
+      },
+      {
+        "p": 14,
+        "t0": 3100,
+        "len": 13,
+        "zero_phase_times": 4,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 4,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 15,
+        "t0": 3697,
+        "len": 12,
+        "zero_phase_times": 4,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 3,
+        "first_zero_phase_defect": 3699
+      },
+      {
+        "p": 18,
+        "t0": 1075,
+        "len": 12,
+        "zero_phase_times": 5,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 4,
+        "first_zero_phase_defect": 1080
+      },
+      {
+        "p": 18,
+        "t0": 2295,
+        "len": 16,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 2296
+      },
+      {
+        "p": 18,
+        "t0": 3971,
+        "len": 16,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 5,
+        "one_phase_r_defects": 5,
+        "first_zero_phase_defect": 3972
+      },
+      {
+        "p": 20,
+        "t0": 1893,
+        "len": 13,
+        "zero_phase_times": 5,
+        "zero_phase_r_defects": 4,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 1894
+      },
+      {
+        "p": 21,
+        "t0": 3259,
+        "len": 13,
+        "zero_phase_times": 10,
+        "zero_phase_r_defects": 5,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 3260
+      },
+      {
+        "p": 25,
+        "t0": 3670,
+        "len": 12,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 4,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 3670
+      },
+      {
+        "p": 27,
+        "t0": 638,
+        "len": 14,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 641
+      },
+      {
+        "p": 29,
+        "t0": 3962,
+        "len": 12,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 3962
+      },
+      {
+        "p": 30,
+        "t0": 272,
+        "len": 12,
+        "zero_phase_times": 4,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 30,
+        "t0": 370,
+        "len": 15,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 30,
+        "t0": 388,
+        "len": 14,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 4,
+        "one_phase_r_defects": 5,
+        "first_zero_phase_defect": 388
+      },
+      {
+        "p": 31,
+        "t0": 1663,
+        "len": 12,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 4,
+        "first_zero_phase_defect": 1668
+      },
+      {
+        "p": 32,
+        "t0": 2807,
+        "len": 12,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 2807
+      },
+      {
+        "p": 33,
+        "t0": 1882,
+        "len": 12,
+        "zero_phase_times": 4,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 1883
+      },
+      {
+        "p": 34,
+        "t0": 331,
+        "len": 12,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 331
+      },
+      {
+        "p": 40,
+        "t0": 3652,
+        "len": 12,
+        "zero_phase_times": 5,
+        "zero_phase_r_defects": 4,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 3655
+      },
+      {
+        "p": 42,
+        "t0": 2172,
+        "len": 17,
+        "zero_phase_times": 11,
+        "zero_phase_r_defects": 5,
+        "one_phase_r_defects": 5,
+        "first_zero_phase_defect": 2172
+      },
+      {
+        "p": 42,
+        "t0": 3805,
+        "len": 13,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 3806
+      },
+      {
+        "p": 44,
+        "t0": 455,
+        "len": 12,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 45,
+        "t0": 4038,
+        "len": 12,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 4038
+      },
+      {
+        "p": 49,
+        "t0": 965,
+        "len": 12,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 967
+      },
+      {
+        "p": 49,
+        "t0": 997,
+        "len": 13,
+        "zero_phase_times": 5,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 1002
+      },
+      {
+        "p": 50,
+        "t0": 2834,
+        "len": 12,
+        "zero_phase_times": 4,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 7,
+        "first_zero_phase_defect": 2845
+      },
+      {
+        "p": 51,
+        "t0": 603,
+        "len": 14,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 4,
+        "one_phase_r_defects": 4,
+        "first_zero_phase_defect": 603
+      },
+      {
+        "p": 51,
+        "t0": 2098,
+        "len": 14,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 2098
+      },
+      {
+        "p": 51,
+        "t0": 2466,
+        "len": 12,
+        "zero_phase_times": 5,
+        "zero_phase_r_defects": 4,
+        "one_phase_r_defects": 4,
+        "first_zero_phase_defect": 2470
+      },
+      {
+        "p": 56,
+        "t0": 2833,
+        "len": 13,
+        "zero_phase_times": 5,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 7,
+        "first_zero_phase_defect": 2833
+      },
+      {
+        "p": 60,
+        "t0": 190,
+        "len": 12,
+        "zero_phase_times": 3,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 61,
+        "t0": 1155,
+        "len": 12,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 67,
+        "t0": 2384,
+        "len": 13,
+        "zero_phase_times": 5,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 2384
+      },
+      {
+        "p": 68,
+        "t0": 1030,
+        "len": 14,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 1039
+      },
+      {
+        "p": 68,
+        "t0": 2318,
+        "len": 12,
+        "zero_phase_times": 4,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 5,
+        "first_zero_phase_defect": 2324
+      },
+      {
+        "p": 69,
+        "t0": 3985,
+        "len": 12,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 3988
+      },
+      {
+        "p": 70,
+        "t0": 79,
+        "len": 13,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 82
+      },
+      {
+        "p": 73,
+        "t0": 3912,
+        "len": 13,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 3915
+      }
+    ]
+  },
+  "rule30_T16384_p512": {
+    "rule": "30",
+    "T": 16384,
+    "max_p": 512,
+    "min_run": 16,
+    "longest_agreement_run": {
+      "len": 24,
+      "p": 110,
+      "t0": 13219
+    },
+    "defect_identity_checks": 2065066,
+    "defect_identity_violations": 0,
+    "n_long_runs": 67,
+    "long_runs_with_a_zero_phase_r_defect": 57,
+    "long_runs_with_NO_zero_phase_r_defect": 10,
+    "long_runs": [
+      {
+        "p": 18,
+        "t0": 2295,
+        "len": 16,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 2296
+      },
+      {
+        "p": 18,
+        "t0": 3971,
+        "len": 16,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 5,
+        "one_phase_r_defects": 5,
+        "first_zero_phase_defect": 3972
+      },
+      {
+        "p": 19,
+        "t0": 6904,
+        "len": 17,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 4,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 6904
+      },
+      {
+        "p": 21,
+        "t0": 14023,
+        "len": 17,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 14023
+      },
+      {
+        "p": 37,
+        "t0": 6790,
+        "len": 16,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 6791
+      },
+      {
+        "p": 42,
+        "t0": 2172,
+        "len": 17,
+        "zero_phase_times": 11,
+        "zero_phase_r_defects": 5,
+        "one_phase_r_defects": 5,
+        "first_zero_phase_defect": 2172
+      },
+      {
+        "p": 54,
+        "t0": 14884,
+        "len": 17,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 14884
+      },
+      {
+        "p": 60,
+        "t0": 9132,
+        "len": 17,
+        "zero_phase_times": 12,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 9132
+      },
+      {
+        "p": 61,
+        "t0": 14067,
+        "len": 16,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 4,
+        "first_zero_phase_defect": 14073
+      },
+      {
+        "p": 64,
+        "t0": 7266,
+        "len": 16,
+        "zero_phase_times": 10,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 3,
+        "first_zero_phase_defect": 7269
+      },
+      {
+        "p": 64,
+        "t0": 9255,
+        "len": 18,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 9268
+      },
+      {
+        "p": 68,
+        "t0": 14126,
+        "len": 16,
+        "zero_phase_times": 6,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 3,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 80,
+        "t0": 992,
+        "len": 16,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 992
+      },
+      {
+        "p": 84,
+        "t0": 13870,
+        "len": 17,
+        "zero_phase_times": 4,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 13885
+      },
+      {
+        "p": 97,
+        "t0": 9593,
+        "len": 18,
+        "zero_phase_times": 10,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 4,
+        "first_zero_phase_defect": 9596
+      },
+      {
+        "p": 97,
+        "t0": 13037,
+        "len": 16,
+        "zero_phase_times": 4,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 110,
+        "t0": 13219,
+        "len": 24,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 3,
+        "first_zero_phase_defect": 13219
+      },
+      {
+        "p": 148,
+        "t0": 1855,
+        "len": 18,
+        "zero_phase_times": 13,
+        "zero_phase_r_defects": 5,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 1855
+      },
+      {
+        "p": 148,
+        "t0": 8350,
+        "len": 17,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 150,
+        "t0": 282,
+        "len": 16,
+        "zero_phase_times": 10,
+        "zero_phase_r_defects": 6,
+        "one_phase_r_defects": 5,
+        "first_zero_phase_defect": 285
+      },
+      {
+        "p": 150,
+        "t0": 15135,
+        "len": 17,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 4,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 15135
+      },
+      {
+        "p": 156,
+        "t0": 14980,
+        "len": 16,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 14985
+      },
+      {
+        "p": 205,
+        "t0": 12859,
+        "len": 18,
+        "zero_phase_times": 10,
+        "zero_phase_r_defects": 5,
+        "one_phase_r_defects": 5,
+        "first_zero_phase_defect": 12861
+      },
+      {
+        "p": 213,
+        "t0": 6364,
+        "len": 16,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 228,
+        "t0": 11882,
+        "len": 16,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 11882
+      },
+      {
+        "p": 230,
+        "t0": 1172,
+        "len": 17,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 1174
+      },
+      {
+        "p": 237,
+        "t0": 8314,
+        "len": 16,
+        "zero_phase_times": 11,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 8314
+      },
+      {
+        "p": 241,
+        "t0": 1158,
+        "len": 16,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 1158
+      },
+      {
+        "p": 257,
+        "t0": 7401,
+        "len": 16,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 273,
+        "t0": 4968,
+        "len": 21,
+        "zero_phase_times": 12,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 276,
+        "t0": 3299,
+        "len": 19,
+        "zero_phase_times": 7,
+        "zero_phase_r_defects": 2,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 3303
+      },
+      {
+        "p": 285,
+        "t0": 3323,
+        "len": 16,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 3328
+      },
+      {
+        "p": 285,
+        "t0": 13215,
+        "len": 16,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 0,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": null
+      },
+      {
+        "p": 286,
+        "t0": 14620,
+        "len": 18,
+        "zero_phase_times": 10,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 7,
+        "first_zero_phase_defect": 14628
+      },
+      {
+        "p": 290,
+        "t0": 4001,
+        "len": 17,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 4001
+      },
+      {
+        "p": 295,
+        "t0": 10831,
+        "len": 18,
+        "zero_phase_times": 11,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 10831
+      },
+      {
+        "p": 306,
+        "t0": 14980,
+        "len": 19,
+        "zero_phase_times": 9,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 1,
+        "first_zero_phase_defect": 14980
+      },
+      {
+        "p": 317,
+        "t0": 7022,
+        "len": 19,
+        "zero_phase_times": 10,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 7023
+      },
+      {
+        "p": 321,
+        "t0": 10015,
+        "len": 17,
+        "zero_phase_times": 12,
+        "zero_phase_r_defects": 3,
+        "one_phase_r_defects": 2,
+        "first_zero_phase_defect": 10024
+      },
+      {
+        "p": 324,
+        "t0": 565,
+        "len": 16,
+        "zero_phase_times": 8,
+        "zero_phase_r_defects": 1,
+        "one_phase_r_defects": 6,
+        "first_zero_phase_defect": 577
+      }
+    ]
+  },
+  "rule90_T4096_p8": {
+    "rule": "90",
+    "T": 4096,
+    "max_p": 8,
+    "min_run": 12,
+    "longest_agreement_run": {
+      "len": 4094,
+      "p": 1,
+      "t0": 1
+    },
+    "defect_identity_checks": 32716,
+    "defect_identity_violations": 0,
+    "n_long_runs": 8,
+    "long_runs_with_a_zero_phase_r_defect": 8,
+    "long_runs_with_NO_zero_phase_r_defect": 0,
+    "long_runs": [
+      {
+        "p": 1,
+        "t0": 1,
+        "len": 4094,
+        "zero_phase_times": 4094,
+        "zero_phase_r_defects": 22,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 1
+      },
+      {
+        "p": 2,
+        "t0": 1,
+        "len": 4093,
+        "zero_phase_times": 4093,
+        "zero_phase_r_defects": 20,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 3
+      },
+      {
+        "p": 3,
+        "t0": 1,
+        "len": 4092,
+        "zero_phase_times": 4092,
+        "zero_phase_r_defects": 21,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 1
+      },
+      {
+        "p": 4,
+        "t0": 1,
+        "len": 4091,
+        "zero_phase_times": 4091,
+        "zero_phase_r_defects": 19,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 1
+      },
+      {
+        "p": 5,
+        "t0": 1,
+        "len": 4090,
+        "zero_phase_times": 4090,
+        "zero_phase_r_defects": 21,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 1
+      },
+      {
+        "p": 6,
+        "t0": 1,
+        "len": 4089,
+        "zero_phase_times": 4089,
+        "zero_phase_r_defects": 19,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 3
+      },
+      {
+        "p": 7,
+        "t0": 1,
+        "len": 4088,
+        "zero_phase_times": 4088,
+        "zero_phase_r_defects": 20,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 1
+      },
+      {
+        "p": 8,
+        "t0": 1,
+        "len": 4087,
+        "zero_phase_times": 4087,
+        "zero_phase_r_defects": 18,
+        "one_phase_r_defects": 0,
+        "first_zero_phase_defect": 1
+      }
+    ]
+  }
+}

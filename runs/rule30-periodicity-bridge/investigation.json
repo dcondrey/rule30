@@ -1,0 +1,104 @@
+{
+  "schema": "crosstalk.investigation.v1",
+  "id": "20260828T061348Z",
+  "problem": {
+    "statement": "Assume there exist integers p>=1 and T such that the Rule 30 lone-seed center c(t+p)=c(t) for every t>=T. Derive a period-independent contradiction. Use the exact defect identity in the supplied result and the known width-two theorem, but do not claim a theorem unless every quantified step is supplied. Each candidate must state its variables, exact lemma, proof mechanism, and a bounded falsifier.",
+    "objectives": [],
+    "constraints": [],
+    "success_criteria": [],
+    "forbidden_failures": []
+  },
+  "hypotheses": {},
+  "evidence": {
+    "artifact:docs/rule30/RESULTS-periodicity-bridge.md:2993dc1a4fac873c": {
+      "id": "artifact:docs/rule30/RESULTS-periodicity-bridge.md:2993dc1a4fac873c",
+      "kind": "SourceSnapshot",
+      "title": "docs/rule30/RESULTS-periodicity-bridge.md",
+      "content_sha256": "2993dc1a4fac873c513236ee6c26c3addba81d490a77f941b4d77c8196595d21",
+      "media_type": "text/markdown",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "docs/rule30/RESULTS-periodicity-bridge.md",
+      "verification_id": null,
+      "captured_at": 1787897633,
+      "independent": false,
+      "metadata": {}
+    },
+    "artifact:evolution/checkpoint.json:1c5258ed0668938e": {
+      "id": "artifact:evolution/checkpoint.json:1c5258ed0668938e",
+      "kind": "Observation",
+      "title": "evolution/checkpoint.json",
+      "content_sha256": "1c5258ed0668938ed00f5873d1b381f32f022b43aff4a1344ad9756a5188c6df",
+      "media_type": "application/json",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "evolution/checkpoint.json",
+      "verification_id": null,
+      "captured_at": 1787898225,
+      "independent": false,
+      "metadata": {}
+    },
+    "artifact:evolution/generation-reports.json:a09c5121bf1721f8": {
+      "id": "artifact:evolution/generation-reports.json:a09c5121bf1721f8",
+      "kind": "Observation",
+      "title": "evolution/generation-reports.json",
+      "content_sha256": "a09c5121bf1721f87fda54ec1fccda58b04b647ff23bf7e7d81fd1a95bb8619f",
+      "media_type": "application/json",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "evolution/generation-reports.json",
+      "verification_id": null,
+      "captured_at": 1787898225,
+      "independent": false,
+      "metadata": {}
+    },
+    "artifact:evolution/native-candidates.json:693981f5ee56acc3": {
+      "id": "artifact:evolution/native-candidates.json:693981f5ee56acc3",
+      "kind": "Observation",
+      "title": "evolution/native-candidates.json",
+      "content_sha256": "693981f5ee56acc382862bf70e029b14abd718e26671389e1f746fdb3ab944b2",
+      "media_type": "application/json",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "evolution/native-candidates.json",
+      "verification_id": null,
+      "captured_at": 1787898225,
+      "independent": false,
+      "metadata": {}
+    },
+    "artifact:experiments/rule30/periodicity_bridge_probe.py:bc42707baab16f9e": {
+      "id": "artifact:experiments/rule30/periodicity_bridge_probe.py:bc42707baab16f9e",
+      "kind": "Code",
+      "title": "experiments/rule30/periodicity_bridge_probe.py",
+      "content_sha256": "bc42707baab16f9e775c1eddebdb161d7c51d74fd3be7b76f15195d832010e12",
+      "media_type": "text/x-python",
+      "source_uri": null,
+      "locator": null,
+      "artifact_name": "experiments/rule30/periodicity_bridge_probe.py",
+      "verification_id": null,
+      "captured_at": 1787897633,
+      "independent": false,
+      "metadata": {}
+    }
+  },
+  "verifications": {
+    "proof:Lean4:Rule30CenterDefect.lean:v1:fcd1067c96fc1f71": {
+      "id": "proof:Lean4:Rule30CenterDefect.lean:v1:fcd1067c96fc1f71",
+      "kind": "FormalProof",
+      "status": "PolicyViolation",
+      "subject_id": "Rule30CenterDefect.lean",
+      "evaluator_id": "Lean4",
+      "evaluator_version": "version-unavailable",
+      "specification_sha256": "d6311c1f0c08714f12e591ce6372da48201acfa588e76db042a0ee94afd04930",
+      "input_sha256": "fcd1067c96fc1f71b9f4bd062a27b10ef587e1204575e42be0565501a3befb1f",
+      "output_sha256": "aea0fb38112f17445f36d05f7109c1b81bb3710014c14b36eb373df6122db0ac",
+      "measurements": [],
+      "diagnostics": "untrusted proof placeholder rejected: sorry",
+      "started_at": 1787898314,
+      "completed_at": 1787898314,
+      "reproduction_of": null
+    }
+  },
+  "created_at": 1787897633,
+  "updated_at": 1787898314
+}

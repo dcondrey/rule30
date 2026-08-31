@@ -1,0 +1,68 @@
+[
+ {
+  "rule": 30,
+  "n": 2,
+  "baseline": 6,
+  "sliced": 5,
+  "backward": 4,
+  "cap": 3,
+  "min_tree_below_cap": null,
+  "settled": 145,
+  "sec": 0.0
+ },
+ {
+  "rule": 30,
+  "n": 3,
+  "baseline": 13,
+  "sliced": 13,
+  "backward": 7,
+  "cap": 6,
+  "min_tree_below_cap": null,
+  "settled": 6039,
+  "sec": 8.5
+ },
+ {
+  "rule": 30,
+  "n": 4,
+  "baseline": 24,
+  "sliced": 20,
+  "backward": 12,
+  "cap": 11,
+  "min_tree_below_cap": null,
+  "settled": 32001,
+  "sec": 1490.8
+ },
+ {
+  "rule": 90,
+  "n": 2,
+  "baseline": 4,
+  "sliced": 4,
+  "backward": 3,
+  "cap": 2,
+  "min_tree_below_cap": null,
+  "settled": 40,
+  "sec": 0.0
+ },
+ {
+  "rule": 90,
+  "n": 3,
+  "baseline": 8,
+  "sliced": 4,
+  "backward": 3,
+  "cap": 2,
+  "min_tree_below_cap": null,
+  "settled": 78,
+  "sec": 0.0
+ },
+ {
+  "rule": 90,
+  "n": 4,
+  "baseline": 16,
+  "sliced": 12,
+  "backward": 8,
+  "cap": 7,
+  "min_tree_below_cap": null,
+  "settled": 17238,
+  "sec": 26.8
+ }
+]

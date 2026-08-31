@@ -1,0 +1,262 @@
+{
+  "schema": "crosstalk.wasm-i64-tests.v1",
+  "export_name": "solve",
+  "cases": [
+    {
+      "input": 1007,
+      "expected": 1
+    },
+    {
+      "input": 1024,
+      "expected": 1
+    },
+    {
+      "input": 1026,
+      "expected": 0
+    },
+    {
+      "input": 1030,
+      "expected": 0
+    },
+    {
+      "input": 1049,
+      "expected": 0
+    },
+    {
+      "input": 1069,
+      "expected": 0
+    },
+    {
+      "input": 1074,
+      "expected": 1
+    },
+    {
+      "input": 1083,
+      "expected": 0
+    },
+    {
+      "input": 1097,
+      "expected": 1
+    },
+    {
+      "input": 1114,
+      "expected": 1
+    },
+    {
+      "input": 1132,
+      "expected": 1
+    },
+    {
+      "input": 1137,
+      "expected": 0
+    },
+    {
+      "input": 1163,
+      "expected": 0
+    },
+    {
+      "input": 1215,
+      "expected": 0
+    },
+    {
+      "input": 1248,
+      "expected": 1
+    },
+    {
+      "input": 1254,
+      "expected": 0
+    },
+    {
+      "input": 1258,
+      "expected": 0
+    },
+    {
+      "input": 1263,
+      "expected": 0
+    },
+    {
+      "input": 1285,
+      "expected": 1
+    },
+    {
+      "input": 1286,
+      "expected": 0
+    },
+    {
+      "input": 1296,
+      "expected": 1
+    },
+    {
+      "input": 1316,
+      "expected": 0
+    },
+    {
+      "input": 1319,
+      "expected": 0
+    },
+    {
+      "input": 1356,
+      "expected": 0
+    },
+    {
+      "input": 1385,
+      "expected": 0
+    },
+    {
+      "input": 1406,
+      "expected": 1
+    },
+    {
+      "input": 1411,
+      "expected": 0
+    },
+    {
+      "input": 1439,
+      "expected": 1
+    },
+    {
+      "input": 1472,
+      "expected": 0
+    },
+    {
+      "input": 1506,
+      "expected": 1
+    },
+    {
+      "input": 1534,
+      "expected": 1
+    },
+    {
+      "input": 1543,
+      "expected": 1
+    },
+    {
+      "input": 1548,
+      "expected": 0
+    },
+    {
+      "input": 1552,
+      "expected": 0
+    },
+    {
+      "input": 1575,
+      "expected": 0
+    },
+    {
+      "input": 1576,
+      "expected": 0
+    },
+    {
+      "input": 1579,
+      "expected": 1
+    },
+    {
+      "input": 1613,
+      "expected": 0
+    },
+    {
+      "input": 1625,
+      "expected": 0
+    },
+    {
+      "input": 1628,
+      "expected": 1
+    },
+    {
+      "input": 1636,
+      "expected": 0
+    },
+    {
+      "input": 1654,
+      "expected": 0
+    },
+    {
+      "input": 1656,
+      "expected": 0
+    },
+    {
+      "input": 1669,
+      "expected": 0
+    },
+    {
+      "input": 1670,
+      "expected": 1
+    },
+    {
+      "input": 1688,
+      "expected": 1
+    },
+    {
+      "input": 1690,
+      "expected": 1
+    },
+    {
+      "input": 1781,
+      "expected": 1
+    },
+    {
+      "input": 1824,
+      "expected": 0
+    },
+    {
+      "input": 1827,
+      "expected": 1
+    },
+    {
+      "input": 1835,
+      "expected": 1
+    },
+    {
+      "input": 1846,
+      "expected": 0
+    },
+    {
+      "input": 1849,
+      "expected": 1
+    },
+    {
+      "input": 1851,
+      "expected": 1
+    },
+    {
+      "input": 1862,
+      "expected": 0
+    },
+    {
+      "input": 1898,
+      "expected": 1
+    },
+    {
+      "input": 1903,
+      "expected": 1
+    },
+    {
+      "input": 1916,
+      "expected": 0
+    },
+    {
+      "input": 1930,
+      "expected": 0
+    },
+    {
+      "input": 1939,
+      "expected": 0
+    },
+    {
+      "input": 1954,
+      "expected": 1
+    },
+    {
+      "input": 1956,
+      "expected": 0
+    },
+    {
+      "input": 1993,
+      "expected": 1
+    },
+    {
+      "input": 1995,
+      "expected": 1
+    }
+  ]
+}

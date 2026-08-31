@@ -1,0 +1,95 @@
+== Lemma B, exhaustive over all 16 states of {0,1}^2 x {0,1}^2 ==
+
+### rule 30: leftward 2-periodic transduction (U,V) -> (W,U)
+closed form matches brute-force inversion on all 16 states: True
+
+full transition table (state -> successor), 16 of 16 states:
+  ((0, 0), (0, 0)) -> ((0, 0), (0, 0))
+  ((0, 0), (0, 1)) -> ((0, 1), (0, 0))
+  ((0, 0), (1, 0)) -> ((1, 0), (0, 0))
+  ((0, 0), (1, 1)) -> ((1, 1), (0, 0))
+  ((0, 1), (0, 0)) -> ((1, 1), (0, 1))
+  ((0, 1), (0, 1)) -> ((1, 1), (0, 1))
+  ((0, 1), (1, 0)) -> ((0, 1), (0, 1))
+  ((0, 1), (1, 1)) -> ((0, 1), (0, 1))
+  ((1, 0), (0, 0)) -> ((1, 1), (1, 0))
+  ((1, 0), (0, 1)) -> ((1, 0), (1, 0))
+  ((1, 0), (1, 0)) -> ((1, 1), (1, 0))
+  ((1, 0), (1, 1)) -> ((1, 0), (1, 0))
+  ((1, 1), (0, 0)) -> ((0, 0), (1, 1))
+  ((1, 1), (0, 1)) -> ((0, 0), (1, 1))
+  ((1, 1), (1, 0)) -> ((0, 0), (1, 1))
+  ((1, 1), (1, 1)) -> ((0, 0), (1, 1))
+
+all-zero state ((0, 0), (0, 0)): successor ((0, 0), (0, 0)), fixed point = True
+predecessors of all-zero: [((0, 0), (0, 0))]
+all-zero unreachable from any other state: True
+
+union of all cycles (= image of all 16 states under succ^16), 3 states: [((0, 0), (0, 0)), ((0, 0), (1, 1)), ((1, 1), (0, 0))]
+cycles, partitioning that image: [(((0, 0), (0, 0)),), (((0, 0), (1, 1)), ((1, 1), (0, 0)))]
+number of cycles: 2  (sum of lengths 3 == |image| 3: True)
+cycle audit (criterion: does the cycle contain a nonzero column?):
+  cycle (((0, 0), (0, 0)),): columns [(0, 0)] -> ALL-ZERO (benign); columns with a 1 at t=0: []
+  cycle (((0, 0), (1, 1)), ((1, 1), (0, 0))): columns [(0, 0), (1, 1)] -> has nonzero column; columns with a 1 at t=0: [(1, 1)]
+cycles with NO nonzero column (would break Lemma B): []
+every cycle except the all-zero fixed point contains a nonzero column: True
+
+max transient before entering a cycle, over the 15 non-all-zero states: 3 steps
+states reaching the specific 2-cycle [((0, 0), (1, 1)), ((1, 1), (0, 0))]: 15 of 16
+
+admissible start states for a nonconstant 2-periodic centre trace (V = col_0 in {(0,1),(1,0)}): 8 of 16
+no admissible start state is the all-zero state: True
+admissible start states landing in an all-zero cycle: 0 of 8
+=> Lemma B conclusion (infinitely many nonzero columns to the left) holds for every admissible start state: True
+
+== Rule 90 control, same frame ==
+
+### rule 90: leftward 2-periodic transduction (U,V) -> (W,U)
+closed form matches brute-force inversion on all 16 states: True
+
+full transition table (state -> successor), 16 of 16 states:
+  ((0, 0), (0, 0)) -> ((0, 0), (0, 0))
+  ((0, 0), (0, 1)) -> ((0, 1), (0, 0))
+  ((0, 0), (1, 0)) -> ((1, 0), (0, 0))
+  ((0, 0), (1, 1)) -> ((1, 1), (0, 0))
+  ((0, 1), (0, 0)) -> ((1, 0), (0, 1))
+  ((0, 1), (0, 1)) -> ((1, 1), (0, 1))
+  ((0, 1), (1, 0)) -> ((0, 0), (0, 1))
+  ((0, 1), (1, 1)) -> ((0, 1), (0, 1))
+  ((1, 0), (0, 0)) -> ((0, 1), (1, 0))
+  ((1, 0), (0, 1)) -> ((0, 0), (1, 0))
+  ((1, 0), (1, 0)) -> ((1, 1), (1, 0))
+  ((1, 0), (1, 1)) -> ((1, 0), (1, 0))
+  ((1, 1), (0, 0)) -> ((1, 1), (1, 1))
+  ((1, 1), (0, 1)) -> ((1, 0), (1, 1))
+  ((1, 1), (1, 0)) -> ((0, 1), (1, 1))
+  ((1, 1), (1, 1)) -> ((0, 0), (1, 1))
+
+all-zero state ((0, 0), (0, 0)): successor ((0, 0), (0, 0)), fixed point = True
+predecessors of all-zero: [((0, 0), (0, 0))]
+all-zero unreachable from any other state: True
+
+union of all cycles (= image of all 16 states under succ^16), 16 states: [((0, 0), (0, 0)), ((0, 0), (0, 1)), ((0, 0), (1, 0)), ((0, 0), (1, 1)), ((0, 1), (0, 0)), ((0, 1), (0, 1)), ((0, 1), (1, 0)), ((0, 1), (1, 1)), ((1, 0), (0, 0)), ((1, 0), (0, 1)), ((1, 0), (1, 0)), ((1, 0), (1, 1)), ((1, 1), (0, 0)), ((1, 1), (0, 1)), ((1, 1), (1, 0)), ((1, 1), (1, 1))]
+cycles, partitioning that image: [(((0, 0), (0, 0)),), (((0, 0), (0, 1)), ((0, 1), (0, 0)), ((1, 0), (0, 1)), ((0, 0), (1, 0)), ((1, 0), (0, 0)), ((0, 1), (1, 0))), (((0, 0), (1, 1)), ((1, 1), (0, 0)), ((1, 1), (1, 1))), (((0, 1), (0, 1)), ((1, 1), (0, 1)), ((1, 0), (1, 1)), ((1, 0), (1, 0)), ((1, 1), (1, 0)), ((0, 1), (1, 1)))]
+number of cycles: 4  (sum of lengths 16 == |image| 16: True)
+cycle audit (criterion: does the cycle contain a nonzero column?):
+  cycle (((0, 0), (0, 0)),): columns [(0, 0)] -> ALL-ZERO (benign); columns with a 1 at t=0: []
+  cycle (((0, 0), (0, 1)), ((0, 1), (0, 0)), ((1, 0), (0, 1)), ((0, 0), (1, 0)), ((1, 0), (0, 0)), ((0, 1), (1, 0))): columns [(0, 0), (0, 1), (1, 0)] -> has nonzero column; columns with a 1 at t=0: [(1, 0)]
+  cycle (((0, 0), (1, 1)), ((1, 1), (0, 0)), ((1, 1), (1, 1))): columns [(0, 0), (1, 1)] -> has nonzero column; columns with a 1 at t=0: [(1, 1)]
+  cycle (((0, 1), (0, 1)), ((1, 1), (0, 1)), ((1, 0), (1, 1)), ((1, 0), (1, 0)), ((1, 1), (1, 0)), ((0, 1), (1, 1))): columns [(0, 1), (1, 0), (1, 1)] -> has nonzero column; columns with a 1 at t=0: [(1, 0), (1, 1)]
+cycles with NO nonzero column (would break Lemma B): []
+every cycle except the all-zero fixed point contains a nonzero column: True
+
+max transient before entering a cycle, over the 15 non-all-zero states: 0 steps
+states reaching the specific 2-cycle [((0, 0), (1, 1)), ((1, 1), (0, 0))]: 3 of 16
+
+admissible start states for a nonconstant 2-periodic centre trace (V = col_0 in {(0,1),(1,0)}): 8 of 16
+no admissible start state is the all-zero state: True
+admissible start states landing in an all-zero cycle: 0 of 8
+=> Lemma B conclusion (infinitely many nonzero columns to the left) holds for every admissible start state: True
+
+== Concrete finite-row control (MEASUREMENT, bounded; obstruction H) ==
+rule 30, all 524287 nonzero rows in [-9,9]: max agreement with (01)^inf = 17 of 24 steps, witness support [-8, -1, 6, 9]
+rule 30, all 524287 nonzero rows in [-9,9]: max agreement with (10)^inf = 16 of 24 steps, witness support [-9, -8, -6, -5, -3, -1, 0, 2, 3, 4]
+rule 90, all 524287 nonzero rows in [-9,9]: max agreement with (01)^inf = 11 of 24 steps, witness support [-7, -5, -1]
+rule 90, all 524287 nonzero rows in [-9,9]: max agreement with (10)^inf = 10 of 24 steps, witness support [-8, -4, -2, 0]

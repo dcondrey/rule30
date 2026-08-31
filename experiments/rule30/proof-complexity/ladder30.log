@@ -1,0 +1,22 @@
+{"rule": 30, "n": 8, "group": "cell", "diamond_cells": 41, "trimmed_core": 40, "seconds": 0.0}
+  seed=0 mus_cells=36 sel=36 calls=40 lrc=[16, 13, 7]
+  seed=1 mus_cells=33 sel=33 calls=39 lrc=[13, 13, 7]
+  seed=2 mus_cells=33 sel=33 calls=35 lrc=[13, 13, 7]
+{"rule": 30, "n": 16, "group": "cell", "diamond_cells": 145, "trimmed_core": 144, "seconds": 0.02}
+  seed=0 mus_cells=119 sel=119 calls=127 lrc=[62, 41, 16]
+  seed=1 mus_cells=119 sel=119 calls=119 lrc=[62, 41, 16]
+  seed=2 mus_cells=119 sel=119 calls=119 lrc=[62, 41, 16]
+{"rule": 30, "n": 32, "group": "cell", "diamond_cells": 545, "trimmed_core": 544, "seconds": 0.4}
+  seed=0 mus_cells=445 sel=445 calls=460 lrc=[254, 159, 32]
+  seed=1 mus_cells=445 sel=445 calls=446 lrc=[254, 159, 32]
+  seed=2 mus_cells=445 sel=445 calls=445 lrc=[254, 159, 32]
+{"rule": 30, "n": 64, "group": "cell", "diamond_cells": 2113, "trimmed_core": 2112, "seconds": 9.06}
+  seed=0 mus_cells=1806 sel=1806 calls=1820 lrc=[1020, 722, 64]
+  seed=1 mus_cells=1604 sel=1604 calls=1615 lrc=[1020, 520, 64]
+  seed=2 mus_cells=1604 sel=1604 calls=1605 lrc=[1020, 520, 64]
+{"rule": 30, "n": 128, "group": "cell", "diamond_cells": 8321, "trimmed_core": 8320, "seconds": 207.27}
+  seed=0 mus_cells=6544 sel=6544 calls=6562 lrc=[4092, 2324, 128]
+  seed=1 mus_cells=6535 sel=6535 calls=6538 lrc=[4092, 2315, 128]
+  seed=2 mus_cells=6535 sel=6535 calls=6535 lrc=[4092, 2315, 128]
+{"rule": 30, "n": 256, "group": "cell", "diamond_cells": 33025, "trimmed_core": 33024, "seconds": 2021.46}
+  seed=0 mus_cells=25108 sel=25108 calls=25146 lrc=[16380, 8472, 256]

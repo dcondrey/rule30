@@ -1,0 +1,262 @@
+{
+  "schema": "crosstalk.wasm-i64-tests.v1",
+  "export_name": "solve",
+  "cases": [
+    {
+      "input": 1000,
+      "expected": 0
+    },
+    {
+      "input": 1001,
+      "expected": 0
+    },
+    {
+      "input": 1002,
+      "expected": 0
+    },
+    {
+      "input": 1003,
+      "expected": 0
+    },
+    {
+      "input": 1004,
+      "expected": 1
+    },
+    {
+      "input": 1005,
+      "expected": 1
+    },
+    {
+      "input": 1006,
+      "expected": 1
+    },
+    {
+      "input": 1007,
+      "expected": 1
+    },
+    {
+      "input": 1008,
+      "expected": 1
+    },
+    {
+      "input": 1009,
+      "expected": 1
+    },
+    {
+      "input": 1010,
+      "expected": 0
+    },
+    {
+      "input": 1011,
+      "expected": 0
+    },
+    {
+      "input": 1012,
+      "expected": 0
+    },
+    {
+      "input": 1013,
+      "expected": 0
+    },
+    {
+      "input": 1014,
+      "expected": 1
+    },
+    {
+      "input": 1015,
+      "expected": 0
+    },
+    {
+      "input": 1016,
+      "expected": 0
+    },
+    {
+      "input": 1017,
+      "expected": 1
+    },
+    {
+      "input": 1018,
+      "expected": 0
+    },
+    {
+      "input": 1019,
+      "expected": 0
+    },
+    {
+      "input": 1020,
+      "expected": 0
+    },
+    {
+      "input": 1021,
+      "expected": 1
+    },
+    {
+      "input": 1022,
+      "expected": 0
+    },
+    {
+      "input": 1023,
+      "expected": 0
+    },
+    {
+      "input": 1024,
+      "expected": 1
+    },
+    {
+      "input": 1025,
+      "expected": 0
+    },
+    {
+      "input": 1026,
+      "expected": 0
+    },
+    {
+      "input": 1027,
+      "expected": 0
+    },
+    {
+      "input": 1028,
+      "expected": 0
+    },
+    {
+      "input": 1029,
+      "expected": 0
+    },
+    {
+      "input": 1030,
+      "expected": 0
+    },
+    {
+      "input": 1031,
+      "expected": 0
+    },
+    {
+      "input": 1032,
+      "expected": 0
+    },
+    {
+      "input": 1033,
+      "expected": 0
+    },
+    {
+      "input": 1034,
+      "expected": 1
+    },
+    {
+      "input": 1035,
+      "expected": 1
+    },
+    {
+      "input": 1036,
+      "expected": 1
+    },
+    {
+      "input": 1037,
+      "expected": 0
+    },
+    {
+      "input": 1038,
+      "expected": 0
+    },
+    {
+      "input": 1039,
+      "expected": 0
+    },
+    {
+      "input": 1040,
+      "expected": 0
+    },
+    {
+      "input": 1041,
+      "expected": 0
+    },
+    {
+      "input": 1042,
+      "expected": 1
+    },
+    {
+      "input": 1043,
+      "expected": 1
+    },
+    {
+      "input": 1044,
+      "expected": 1
+    },
+    {
+      "input": 1045,
+      "expected": 0
+    },
+    {
+      "input": 1046,
+      "expected": 1
+    },
+    {
+      "input": 1047,
+      "expected": 0
+    },
+    {
+      "input": 1048,
+      "expected": 1
+    },
+    {
+      "input": 1049,
+      "expected": 0
+    },
+    {
+      "input": 1050,
+      "expected": 0
+    },
+    {
+      "input": 1051,
+      "expected": 0
+    },
+    {
+      "input": 1052,
+      "expected": 0
+    },
+    {
+      "input": 1053,
+      "expected": 1
+    },
+    {
+      "input": 1054,
+      "expected": 1
+    },
+    {
+      "input": 1055,
+      "expected": 1
+    },
+    {
+      "input": 1056,
+      "expected": 1
+    },
+    {
+      "input": 1057,
+      "expected": 1
+    },
+    {
+      "input": 1058,
+      "expected": 1
+    },
+    {
+      "input": 1059,
+      "expected": 1
+    },
+    {
+      "input": 1060,
+      "expected": 1
+    },
+    {
+      "input": 1061,
+      "expected": 1
+    },
+    {
+      "input": 1062,
+      "expected": 0
+    },
+    {
+      "input": 1063,
+      "expected": 0
+    }
+  ]
+}

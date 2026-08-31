@@ -1,0 +1,38 @@
+[
+  {
+    "generation": 1,
+    "attempts": 5,
+    "accepted": [],
+    "rejected": 5,
+    "rejection_reasons": {
+      "score_below_threshold": 5
+    },
+    "failures": [],
+    "pareto_frontier": [],
+    "usage": {
+      "generations_completed": 1,
+      "attempts_started": 5,
+      "model_call_slots_reserved": 10,
+      "failed_attempts": 0
+    },
+    "budget_exhausted": true
+  },
+  {
+    "generation": 2,
+    "attempts": 5,
+    "accepted": [],
+    "rejected": 5,
+    "rejection_reasons": {
+      "score_below_threshold": 5
+    },
+    "failures": [],
+    "pareto_frontier": [],
+    "usage": {
+      "generations_completed": 2,
+      "attempts_started": 10,
+      "model_call_slots_reserved": 20,
+      "failed_attempts": 0
+    },
+    "budget_exhausted": true
+  }
+]

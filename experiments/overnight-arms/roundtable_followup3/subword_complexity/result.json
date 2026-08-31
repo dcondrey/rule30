@@ -1,0 +1,203 @@
+{
+ "prefix_length": 200000,
+ "nmax": 24,
+ "naive_crosscheck_length": 4000,
+ "naive_crosscheck_ok": true,
+ "rows": [
+  {
+   "n": 1,
+   "p_n": 2,
+   "windows_available": 200000,
+   "saturation": 1e-05,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 2
+  },
+  {
+   "n": 2,
+   "p_n": 4,
+   "windows_available": 199999,
+   "saturation": 2.0000100000500002e-05,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 4
+  },
+  {
+   "n": 3,
+   "p_n": 8,
+   "windows_available": 199998,
+   "saturation": 4.000040000400004e-05,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 8
+  },
+  {
+   "n": 4,
+   "p_n": 16,
+   "windows_available": 199997,
+   "saturation": 8.000120001800027e-05,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 16
+  },
+  {
+   "n": 5,
+   "p_n": 32,
+   "windows_available": 199996,
+   "saturation": 0.0001600032000640013,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 32
+  },
+  {
+   "n": 6,
+   "p_n": 64,
+   "windows_available": 199995,
+   "saturation": 0.000320008000200005,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 64
+  },
+  {
+   "n": 7,
+   "p_n": 128,
+   "windows_available": 199994,
+   "saturation": 0.0006400192005760173,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 128
+  },
+  {
+   "n": 8,
+   "p_n": 256,
+   "windows_available": 199993,
+   "saturation": 0.001280044801568055,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 256
+  },
+  {
+   "n": 9,
+   "p_n": 512,
+   "windows_available": 199992,
+   "saturation": 0.002560102404096164,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 512
+  },
+  {
+   "n": 10,
+   "p_n": 1024,
+   "windows_available": 199991,
+   "saturation": 0.0051202304103684666,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 1024
+  },
+  {
+   "n": 11,
+   "p_n": 2048,
+   "windows_available": 199990,
+   "saturation": 0.01024051202560128,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 2048
+  },
+  {
+   "n": 12,
+   "p_n": 4096,
+   "windows_available": 199989,
+   "saturation": 0.020481126461955407,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 4096
+  },
+  {
+   "n": 13,
+   "p_n": 8192,
+   "windows_available": 199988,
+   "saturation": 0.04096245774746485,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 8192
+  },
+  {
+   "n": 14,
+   "p_n": 16384,
+   "windows_available": 199987,
+   "saturation": 0.0819253251461345,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 16384
+  },
+  {
+   "n": 15,
+   "p_n": 32683,
+   "windows_available": 199986,
+   "saturation": 0.16342643985078956,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 32768
+  },
+  {
+   "n": 16,
+   "p_n": 62377,
+   "windows_available": 199985,
+   "saturation": 0.3119083931294847,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 65536
+  },
+  {
+   "n": 17,
+   "p_n": 102485,
+   "windows_available": 199984,
+   "saturation": 0.5124659972797824,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 131072
+  },
+  {
+   "n": 18,
+   "p_n": 139865,
+   "windows_available": 199983,
+   "saturation": 0.6993844476780526,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 262144
+  },
+  {
+   "n": 19,
+   "p_n": 166239,
+   "windows_available": 199982,
+   "saturation": 0.8312698142832855,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 524288
+  },
+  {
+   "n": 20,
+   "p_n": 181993,
+   "windows_available": 199981,
+   "saturation": 0.9100514548882144,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 1048576
+  },
+  {
+   "n": 21,
+   "p_n": 190644,
+   "windows_available": 199980,
+   "saturation": 0.9533153315331533,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 2097152
+  },
+  {
+   "n": 22,
+   "p_n": 195179,
+   "windows_available": 199979,
+   "saturation": 0.9759974797353722,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 4194304
+  },
+  {
+   "n": 23,
+   "p_n": 197529,
+   "windows_available": 199978,
+   "saturation": 0.9877536529018192,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 8388608
+  },
+  {
+   "n": 24,
+   "p_n": 198743,
+   "windows_available": 199977,
+   "saturation": 0.9938292903683924,
+   "exceeds_n": true,
+   "morse_hedlund_upper_bound_2n": 16777216
+  }
+ ],
+ "all_n_exceed": true,
+ "first_n_where_saturation_gt_0.99": 24,
+ "morse_hedlund": "MORSE-HEDLUND THEOREM (1938). For an infinite word w over a finite alphabet with factor complexity p(n) = #{distinct length-n factors of w}: w is eventually periodic (purely periodic from some point on, i.e. exists preperiod r, period q, w[i]=w[i+q] for all i>=r) IFF p is bounded IFF there exists some n with p(n) <= n. Equivalently: w is NOT eventually periodic iff p(n) >= n+1 for EVERY n. If w has eventual period q and preperiod r, then for all n, p(n) <= r + q (a fixed constant), so satisfying p(n) > n on a finite checked range n <= NMAX only excludes eventual periods (r+q) that are <~ NMAX; it says nothing about any larger period."
+}

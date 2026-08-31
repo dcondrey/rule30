@@ -1,0 +1,41 @@
+a21 / witness.py -- Theorem W (eps(m) > 0 for all m) and Theorem N
+
+Theorem W witness: gamma = 0^m, w = (0,...,0,b)  =>  r_t = b
+  rule 30: m = 1..64, both b: 0 failures
+  rule 90: m = 1..64, both b: 0 failures
+
+Theorem W consistency with the block simulator used by eps_theorem.py:
+  rule 30: 3000 random (m,t,row) triples, 0 mismatches
+  rule 90: 3000 random (m,t,row) triples, 0 mismatches
+
+Realisability of the Theorem W witness by ACTUAL left-supported rows
+(Theorem U guarantees every (gamma,w) occurs; this exhibits the pair):
+  rule 30 m=2 t=5: gamma=0^2, both hidden blocks realised; b=(s(0,0),s(0,-1),..) = [0, 0, 0, 0, 0, 1] -> r_t=0   [1, 1, 1, 0, 1, 0] -> r_t=1
+  rule 30 m=3 t=7: gamma=0^3, both hidden blocks realised; b=(s(0,0),s(0,-1),..) = [0, 0, 0, 0, 0, 0, 0, 1] -> r_t=0   [1, 0, 0, 0, 1, 0, 1, 0] -> r_t=1
+  rule 30 m=4 t=9: gamma=0^4, both hidden blocks realised; b=(s(0,0),s(0,-1),..) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1] -> r_t=0   [1, 1, 1, 1, 0, 1, 0, 1, 1, 0] -> r_t=1
+  rule 30 m=5 t=11: gamma=0^5, both hidden blocks realised; b=(s(0,0),s(0,-1),..) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] -> r_t=0   [1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0] -> r_t=1
+  rule 90 m=2 t=5: gamma=0^2, both hidden blocks realised; b=(s(0,0),s(0,-1),..) = [0, 0, 0, 0, 0, 1] -> r_t=0   [1, 0, 1, 0, 0, 0] -> r_t=1
+  rule 90 m=3 t=7: gamma=0^3, both hidden blocks realised; b=(s(0,0),s(0,-1),..) = [0, 0, 0, 0, 0, 0, 0, 1] -> r_t=0   [1, 0, 0, 0, 0, 0, 0, 0] -> r_t=1
+  rule 90 m=4 t=9: gamma=0^4, both hidden blocks realised; b=(s(0,0),s(0,-1),..) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1] -> r_t=0   [1, 0, 1, 0, 1, 0, 1, 0, 0, 0] -> r_t=1
+  rule 90 m=5 t=11: gamma=0^5, both hidden blocks realised; b=(s(0,0),s(0,-1),..) = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1] -> r_t=0   [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0] -> r_t=1
+
+Theorem N check: rule 90, r_t is affine in (gamma, w); coefficient of w_{m+1} is 1
+  m= 1: coeff(w_{m+1}) = 1, w-coefficients [0, 1], affine=True
+  m= 2: coeff(w_{m+1}) = 1, w-coefficients [1, 0, 1], affine=True
+  m= 3: coeff(w_{m+1}) = 1, w-coefficients [0, 0, 0, 1], affine=True
+  m= 4: coeff(w_{m+1}) = 1, w-coefficients [0, 0, 1, 0, 1], affine=True
+  m= 5: coeff(w_{m+1}) = 1, w-coefficients [0, 1, 0, 0, 0, 1], affine=True
+  m= 6: coeff(w_{m+1}) = 1, w-coefficients [1, 0, 1, 0, 1, 0, 1], affine=True
+  m= 7: coeff(w_{m+1}) = 1, w-coefficients [0, 0, 0, 0, 0, 0, 0, 1], affine=not tested
+  m= 8: coeff(w_{m+1}) = 1, w-coefficients [0, 0, 0, 0, 0, 0, 1, 0, 1], affine=not tested
+  m= 9: coeff(w_{m+1}) = 1, w-coefficients [0, 0, 0, 0, 0, 1, 0, 0, 0, 1], affine=not tested
+  m=10: coeff(w_{m+1}) = 1, w-coefficients [0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1], affine=not tested
+  m=11: coeff(w_{m+1}) = 1, w-coefficients [0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1], affine=not tested
+  m=12: coeff(w_{m+1}) = 1, w-coefficients [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1], affine=not tested
+
+Rule 30 contrast: the same coefficient probe is meaningless because r_t is NOT affine.
+  m=2: gamma=0^m, 3 of 8 hidden blocks violate affinity
+  m=3: gamma=0^m, 7 of 16 hidden blocks violate affinity
+  m=4: gamma=0^m, 15 of 32 hidden blocks violate affinity
+
+ALL CHECKS PASSED

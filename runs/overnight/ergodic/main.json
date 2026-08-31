@@ -1,0 +1,47 @@
+[
+ {
+  "m": 2,
+  "solve_len": 6,
+  "verify_len": 9,
+  "solutions": [
+   {
+    "q00": "0",
+    "verified_to": "has-free-symbols; verify manually"
+   },
+   {
+    "q00": "0",
+    "q01": "2*q10*q11 - 2*q10 - 2*q11 + 2",
+    "verified_to": "has-free-symbols; verify manually"
+   },
+   {
+    "q01": "0",
+    "q10": "1",
+    "verified_to": "has-free-symbols; verify manually"
+   },
+   {
+    "q01": "0",
+    "q11": "1",
+    "verified_to": "has-free-symbols; verify manually"
+   },
+   {
+    "q00": "0",
+    "q01": "0",
+    "q10": "1",
+    "verified_to": "has-free-symbols; verify manually"
+   },
+   {
+    "q00": "0",
+    "q01": "0",
+    "q11": "1",
+    "verified_to": "has-free-symbols; verify manually"
+   },
+   {
+    "q00": "1/2",
+    "q01": "1/2",
+    "q10": "1/2",
+    "q11": "1/2",
+    "verified_to": 9
+   }
+  ]
+ }
+]

@@ -1,0 +1,37 @@
+{
+  "claims": {
+    "turn-1-claim-51": {
+      "id": "turn-1-claim-51",
+      "text": "The sub-area but super-polylogarithmic tile vocabulary in ARM7 is consistent with Rule 30 having **moderate** redundancy (as any deterministic system must) without that redundancy being capturable by a fixed finite algebra.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-53": {
+      "id": "turn-1-claim-53",
+      "text": "The non-2-automaticity (ARM6) is a **hard negative**: it eliminates the entire class of finite-state transducers reading binary digits of n. This is the strongest structural result obtained.",
+      "kind": "Inference",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-67": {
+      "id": "turn-1-claim-67",
+      "text": "The discriminating test is already implicit in ARM7: measure tile vocabulary V(n) for horizons n = 2^k, k = 6..16. If V(n)/polylog(n) → constant, composition may exist. If V(n) ~ n^α for α > 0, composition is implausible.",
+      "kind": "Proposal",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    },
+    "turn-1-claim-79": {
+      "id": "turn-1-claim-79",
+      "text": "No exact dyadic composition algebra with poly(log n) state exists for the Rule 30 center cell. The measured anomaly (sub-area tile reuse) reflects deterministic redundancy intrinsic to any ECA, not an exploitable algebraic structure.",
+      "kind": "Conjecture",
+      "status": "Open",
+      "confidence": 0.98,
+      "evidence": []
+    }
+  },
+  "edges": []
+}

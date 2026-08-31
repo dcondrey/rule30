@@ -1,0 +1,12 @@
+{
+ "rule": 30,
+ "k": 2,
+ "w": "01",
+ "T": 1000000,
+ "qmax": 4096,
+ "phase": 0,
+ "T0": 5,
+ "col_m1_min_eventual_period_le_qmax": null,
+ "tail_len": 999991,
+ "wall_s": 179.09
+}

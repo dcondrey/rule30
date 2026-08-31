@@ -1,0 +1,4982 @@
+{
+ "steps": 2000000,
+ "horizons": [
+  1024,
+  2048,
+  4096,
+  8192,
+  16384,
+  32768,
+  65536,
+  131072,
+  262144,
+  524288,
+  1048576,
+  2000000
+ ],
+ "rules": {
+  "30": {
+   "height_profile": {
+    "all_zeros_W0": {
+     "_hmax": 19,
+     "1": {
+      "occurrences": 999291,
+      "late_occurrences": 500059,
+      "last_start_t": 1999997
+     },
+     "2": {
+      "occurrences": 499119,
+      "late_occurrences": 250172,
+      "last_start_t": 1999996
+     },
+     "3": {
+      "occurrences": 249810,
+      "late_occurrences": 125296,
+      "last_start_t": 1999990
+     },
+     "4": {
+      "occurrences": 124856,
+      "late_occurrences": 62614,
+      "last_start_t": 1999989
+     },
+     "5": {
+      "occurrences": 62430,
+      "late_occurrences": 31356,
+      "last_start_t": 1999988
+     },
+     "6": {
+      "occurrences": 31226,
+      "late_occurrences": 15657,
+      "last_start_t": 1999973
+     },
+     "7": {
+      "occurrences": 15552,
+      "late_occurrences": 7819,
+      "last_start_t": 1999972
+     },
+     "8": {
+      "occurrences": 7763,
+      "late_occurrences": 3931,
+      "last_start_t": 1999928
+     },
+     "9": {
+      "occurrences": 3811,
+      "late_occurrences": 1921,
+      "last_start_t": 1996431
+     },
+     "10": {
+      "occurrences": 1848,
+      "late_occurrences": 916,
+      "last_start_t": 1996430
+     },
+     "11": {
+      "occurrences": 906,
+      "late_occurrences": 421,
+      "last_start_t": 1995670
+     },
+     "12": {
+      "occurrences": 464,
+      "late_occurrences": 199,
+      "last_start_t": 1993789
+     },
+     "13": {
+      "occurrences": 237,
+      "late_occurrences": 95,
+      "last_start_t": 1982833
+     },
+     "14": {
+      "occurrences": 114,
+      "late_occurrences": 45,
+      "last_start_t": 1982832
+     },
+     "15": {
+      "occurrences": 57,
+      "late_occurrences": 23,
+      "last_start_t": 1854049
+     },
+     "16": {
+      "occurrences": 31,
+      "late_occurrences": 12,
+      "last_start_t": 1830469
+     },
+     "17": {
+      "occurrences": 16,
+      "late_occurrences": 6,
+      "last_start_t": 1640474
+     },
+     "18": {
+      "occurrences": 9,
+      "late_occurrences": 3,
+      "last_start_t": 1640473
+     },
+     "19": {
+      "occurrences": 3,
+      "late_occurrences": 1,
+      "last_start_t": 1640472
+     }
+    },
+    "all_zeros_W1": {
+     "_hmax": 8,
+     "1": {
+      "occurrences": 249092,
+      "late_occurrences": 125058,
+      "last_start_t": 1999996
+     },
+     "2": {
+      "occurrences": 62557,
+      "late_occurrences": 31528,
+      "last_start_t": 1999973
+     },
+     "3": {
+      "occurrences": 15504,
+      "late_occurrences": 7831,
+      "last_start_t": 1999972
+     },
+     "4": {
+      "occurrences": 3825,
+      "late_occurrences": 1950,
+      "last_start_t": 1999078
+     },
+     "5": {
+      "occurrences": 943,
+      "late_occurrences": 480,
+      "last_start_t": 1999077
+     },
+     "6": {
+      "occurrences": 226,
+      "late_occurrences": 109,
+      "last_start_t": 1972439
+     },
+     "7": {
+      "occurrences": 50,
+      "late_occurrences": 26,
+      "last_start_t": 1933847
+     },
+     "8": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1788566
+     }
+    },
+    "all_zeros_W2": {
+     "_hmax": 7,
+     "1": {
+      "occurrences": 62557,
+      "late_occurrences": 31528,
+      "last_start_t": 1999973
+     },
+     "2": {
+      "occurrences": 15504,
+      "late_occurrences": 7831,
+      "last_start_t": 1999972
+     },
+     "3": {
+      "occurrences": 3825,
+      "late_occurrences": 1950,
+      "last_start_t": 1999078
+     },
+     "4": {
+      "occurrences": 943,
+      "late_occurrences": 480,
+      "last_start_t": 1999077
+     },
+     "5": {
+      "occurrences": 226,
+      "late_occurrences": 109,
+      "last_start_t": 1972439
+     },
+     "6": {
+      "occurrences": 50,
+      "late_occurrences": 26,
+      "last_start_t": 1933847
+     },
+     "7": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1788566
+     }
+    },
+    "all_zeros_W3": {
+     "_hmax": 6,
+     "1": {
+      "occurrences": 15504,
+      "late_occurrences": 7831,
+      "last_start_t": 1999972
+     },
+     "2": {
+      "occurrences": 3825,
+      "late_occurrences": 1950,
+      "last_start_t": 1999078
+     },
+     "3": {
+      "occurrences": 943,
+      "late_occurrences": 480,
+      "last_start_t": 1999077
+     },
+     "4": {
+      "occurrences": 226,
+      "late_occurrences": 109,
+      "last_start_t": 1972439
+     },
+     "5": {
+      "occurrences": 50,
+      "late_occurrences": 26,
+      "last_start_t": 1933847
+     },
+     "6": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1788566
+     }
+    },
+    "all_zeros_W4": {
+     "_hmax": 5,
+     "1": {
+      "occurrences": 3825,
+      "late_occurrences": 1950,
+      "last_start_t": 1999078
+     },
+     "2": {
+      "occurrences": 943,
+      "late_occurrences": 480,
+      "last_start_t": 1999077
+     },
+     "3": {
+      "occurrences": 226,
+      "late_occurrences": 109,
+      "last_start_t": 1972439
+     },
+     "4": {
+      "occurrences": 50,
+      "late_occurrences": 26,
+      "last_start_t": 1933847
+     },
+     "5": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1788566
+     }
+    },
+    "all_zeros_W5": {
+     "_hmax": 4,
+     "1": {
+      "occurrences": 943,
+      "late_occurrences": 480,
+      "last_start_t": 1999077
+     },
+     "2": {
+      "occurrences": 226,
+      "late_occurrences": 109,
+      "last_start_t": 1972439
+     },
+     "3": {
+      "occurrences": 50,
+      "late_occurrences": 26,
+      "last_start_t": 1933847
+     },
+     "4": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1788566
+     }
+    },
+    "all_zeros_W6": {
+     "_hmax": 3,
+     "1": {
+      "occurrences": 226,
+      "late_occurrences": 109,
+      "last_start_t": 1972439
+     },
+     "2": {
+      "occurrences": 50,
+      "late_occurrences": 26,
+      "last_start_t": 1933847
+     },
+     "3": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1788566
+     }
+    },
+    "all_zeros_W7": {
+     "_hmax": 2,
+     "1": {
+      "occurrences": 50,
+      "late_occurrences": 26,
+      "last_start_t": 1933847
+     },
+     "2": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1788566
+     }
+    },
+    "all_zeros_W8": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1788566
+     }
+    },
+    "checker_A_W0": {
+     "_hmax": 23,
+     "1": {
+      "occurrences": 1000709,
+      "late_occurrences": 499941,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 500536,
+      "late_occurrences": 250054,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 250050,
+      "late_occurrences": 124723,
+      "last_start_t": 1999981
+     },
+     "4": {
+      "occurrences": 125102,
+      "late_occurrences": 62125,
+      "last_start_t": 1999955
+     },
+     "5": {
+      "occurrences": 62573,
+      "late_occurrences": 31008,
+      "last_start_t": 1999779
+     },
+     "6": {
+      "occurrences": 31350,
+      "late_occurrences": 15526,
+      "last_start_t": 1999778
+     },
+     "7": {
+      "occurrences": 15727,
+      "late_occurrences": 7833,
+      "last_start_t": 1999770
+     },
+     "8": {
+      "occurrences": 7853,
+      "late_occurrences": 3927,
+      "last_start_t": 1999769
+     },
+     "9": {
+      "occurrences": 3950,
+      "late_occurrences": 1976,
+      "last_start_t": 1999365
+     },
+     "10": {
+      "occurrences": 1954,
+      "late_occurrences": 985,
+      "last_start_t": 1999364
+     },
+     "11": {
+      "occurrences": 974,
+      "late_occurrences": 496,
+      "last_start_t": 1998759
+     },
+     "12": {
+      "occurrences": 510,
+      "late_occurrences": 258,
+      "last_start_t": 1998758
+     },
+     "13": {
+      "occurrences": 278,
+      "late_occurrences": 143,
+      "last_start_t": 1998757
+     },
+     "14": {
+      "occurrences": 157,
+      "late_occurrences": 75,
+      "last_start_t": 1998756
+     },
+     "15": {
+      "occurrences": 95,
+      "late_occurrences": 39,
+      "last_start_t": 1929865
+     },
+     "16": {
+      "occurrences": 53,
+      "late_occurrences": 16,
+      "last_start_t": 1929864
+     },
+     "17": {
+      "occurrences": 35,
+      "late_occurrences": 10,
+      "last_start_t": 1337993
+     },
+     "18": {
+      "occurrences": 23,
+      "late_occurrences": 8,
+      "last_start_t": 1337992
+     },
+     "19": {
+      "occurrences": 15,
+      "late_occurrences": 6,
+      "last_start_t": 1337991
+     },
+     "20": {
+      "occurrences": 9,
+      "late_occurrences": 4,
+      "last_start_t": 1174515
+     },
+     "21": {
+      "occurrences": 6,
+      "late_occurrences": 3,
+      "last_start_t": 1174514
+     },
+     "22": {
+      "occurrences": 3,
+      "late_occurrences": 2,
+      "last_start_t": 1174513
+     },
+     "23": {
+      "occurrences": 1,
+      "late_occurrences": 1,
+      "last_start_t": 1174512
+     }
+    },
+    "checker_A_W1": {
+     "_hmax": 17,
+     "1": {
+      "occurrences": 249866,
+      "late_occurrences": 124948,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 62811,
+      "late_occurrences": 31385,
+      "last_start_t": 1999981
+     },
+     "3": {
+      "occurrences": 31391,
+      "late_occurrences": 15555,
+      "last_start_t": 1999862
+     },
+     "4": {
+      "occurrences": 15760,
+      "late_occurrences": 7754,
+      "last_start_t": 1999369
+     },
+     "5": {
+      "occurrences": 7938,
+      "late_occurrences": 3883,
+      "last_start_t": 1999226
+     },
+     "6": {
+      "occurrences": 4003,
+      "late_occurrences": 1949,
+      "last_start_t": 1999225
+     },
+     "7": {
+      "occurrences": 2027,
+      "late_occurrences": 989,
+      "last_start_t": 1991808
+     },
+     "8": {
+      "occurrences": 1009,
+      "late_occurrences": 489,
+      "last_start_t": 1991807
+     },
+     "9": {
+      "occurrences": 499,
+      "late_occurrences": 239,
+      "last_start_t": 1990162
+     },
+     "10": {
+      "occurrences": 240,
+      "late_occurrences": 115,
+      "last_start_t": 1961890
+     },
+     "11": {
+      "occurrences": 129,
+      "late_occurrences": 57,
+      "last_start_t": 1925032
+     },
+     "12": {
+      "occurrences": 72,
+      "late_occurrences": 31,
+      "last_start_t": 1925031
+     },
+     "13": {
+      "occurrences": 45,
+      "late_occurrences": 17,
+      "last_start_t": 1925030
+     },
+     "14": {
+      "occurrences": 25,
+      "late_occurrences": 7,
+      "last_start_t": 1888562
+     },
+     "15": {
+      "occurrences": 12,
+      "late_occurrences": 1,
+      "last_start_t": 1857126
+     },
+     "16": {
+      "occurrences": 5,
+      "late_occurrences": 0,
+      "last_start_t": 731777
+     },
+     "17": {
+      "occurrences": 2,
+      "late_occurrences": 0,
+      "last_start_t": 731776
+     }
+    },
+    "checker_A_W2": {
+     "_hmax": 16,
+     "1": {
+      "occurrences": 62811,
+      "late_occurrences": 31385,
+      "last_start_t": 1999981
+     },
+     "2": {
+      "occurrences": 31391,
+      "late_occurrences": 15555,
+      "last_start_t": 1999862
+     },
+     "3": {
+      "occurrences": 15760,
+      "late_occurrences": 7754,
+      "last_start_t": 1999369
+     },
+     "4": {
+      "occurrences": 7938,
+      "late_occurrences": 3883,
+      "last_start_t": 1999226
+     },
+     "5": {
+      "occurrences": 4003,
+      "late_occurrences": 1949,
+      "last_start_t": 1999225
+     },
+     "6": {
+      "occurrences": 2027,
+      "late_occurrences": 989,
+      "last_start_t": 1991808
+     },
+     "7": {
+      "occurrences": 1009,
+      "late_occurrences": 489,
+      "last_start_t": 1991807
+     },
+     "8": {
+      "occurrences": 499,
+      "late_occurrences": 239,
+      "last_start_t": 1990162
+     },
+     "9": {
+      "occurrences": 240,
+      "late_occurrences": 115,
+      "last_start_t": 1961890
+     },
+     "10": {
+      "occurrences": 129,
+      "late_occurrences": 57,
+      "last_start_t": 1925032
+     },
+     "11": {
+      "occurrences": 72,
+      "late_occurrences": 31,
+      "last_start_t": 1925031
+     },
+     "12": {
+      "occurrences": 45,
+      "late_occurrences": 17,
+      "last_start_t": 1925030
+     },
+     "13": {
+      "occurrences": 25,
+      "late_occurrences": 7,
+      "last_start_t": 1888562
+     },
+     "14": {
+      "occurrences": 12,
+      "late_occurrences": 1,
+      "last_start_t": 1857126
+     },
+     "15": {
+      "occurrences": 5,
+      "late_occurrences": 0,
+      "last_start_t": 731777
+     },
+     "16": {
+      "occurrences": 2,
+      "late_occurrences": 0,
+      "last_start_t": 731776
+     }
+    },
+    "checker_A_W3": {
+     "_hmax": 12,
+     "1": {
+      "occurrences": 15844,
+      "late_occurrences": 7830,
+      "last_start_t": 1999370
+     },
+     "2": {
+      "occurrences": 4123,
+      "late_occurrences": 2070,
+      "last_start_t": 1999227
+     },
+     "3": {
+      "occurrences": 2079,
+      "late_occurrences": 1057,
+      "last_start_t": 1999226
+     },
+     "4": {
+      "occurrences": 1037,
+      "late_occurrences": 536,
+      "last_start_t": 1990165
+     },
+     "5": {
+      "occurrences": 526,
+      "late_occurrences": 273,
+      "last_start_t": 1990164
+     },
+     "6": {
+      "occurrences": 255,
+      "late_occurrences": 131,
+      "last_start_t": 1990163
+     },
+     "7": {
+      "occurrences": 125,
+      "late_occurrences": 64,
+      "last_start_t": 1961891
+     },
+     "8": {
+      "occurrences": 60,
+      "late_occurrences": 28,
+      "last_start_t": 1961890
+     },
+     "9": {
+      "occurrences": 29,
+      "late_occurrences": 16,
+      "last_start_t": 1888565
+     },
+     "10": {
+      "occurrences": 14,
+      "late_occurrences": 9,
+      "last_start_t": 1888564
+     },
+     "11": {
+      "occurrences": 6,
+      "late_occurrences": 4,
+      "last_start_t": 1888563
+     },
+     "12": {
+      "occurrences": 1,
+      "late_occurrences": 1,
+      "last_start_t": 1857127
+     }
+    },
+    "checker_A_W4": {
+     "_hmax": 11,
+     "1": {
+      "occurrences": 4123,
+      "late_occurrences": 2070,
+      "last_start_t": 1999227
+     },
+     "2": {
+      "occurrences": 2079,
+      "late_occurrences": 1057,
+      "last_start_t": 1999226
+     },
+     "3": {
+      "occurrences": 1037,
+      "late_occurrences": 536,
+      "last_start_t": 1990165
+     },
+     "4": {
+      "occurrences": 526,
+      "late_occurrences": 273,
+      "last_start_t": 1990164
+     },
+     "5": {
+      "occurrences": 255,
+      "late_occurrences": 131,
+      "last_start_t": 1990163
+     },
+     "6": {
+      "occurrences": 125,
+      "late_occurrences": 64,
+      "last_start_t": 1961891
+     },
+     "7": {
+      "occurrences": 60,
+      "late_occurrences": 28,
+      "last_start_t": 1961890
+     },
+     "8": {
+      "occurrences": 29,
+      "late_occurrences": 16,
+      "last_start_t": 1888565
+     },
+     "9": {
+      "occurrences": 14,
+      "late_occurrences": 9,
+      "last_start_t": 1888564
+     },
+     "10": {
+      "occurrences": 6,
+      "late_occurrences": 4,
+      "last_start_t": 1888563
+     },
+     "11": {
+      "occurrences": 1,
+      "late_occurrences": 1,
+      "last_start_t": 1857127
+     }
+    },
+    "checker_A_W5": {
+     "_hmax": 8,
+     "1": {
+      "occurrences": 1020,
+      "late_occurrences": 514,
+      "last_start_t": 1999226
+     },
+     "2": {
+      "occurrences": 236,
+      "late_occurrences": 117,
+      "last_start_t": 1961894
+     },
+     "3": {
+      "occurrences": 109,
+      "late_occurrences": 50,
+      "last_start_t": 1961893
+     },
+     "4": {
+      "occurrences": 49,
+      "late_occurrences": 18,
+      "last_start_t": 1903747
+     },
+     "5": {
+      "occurrences": 19,
+      "late_occurrences": 2,
+      "last_start_t": 1796726
+     },
+     "6": {
+      "occurrences": 7,
+      "late_occurrences": 0,
+      "last_start_t": 655659
+     },
+     "7": {
+      "occurrences": 3,
+      "late_occurrences": 0,
+      "last_start_t": 415494
+     },
+     "8": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 196745
+     }
+    },
+    "checker_A_W6": {
+     "_hmax": 7,
+     "1": {
+      "occurrences": 236,
+      "late_occurrences": 117,
+      "last_start_t": 1961894
+     },
+     "2": {
+      "occurrences": 109,
+      "late_occurrences": 50,
+      "last_start_t": 1961893
+     },
+     "3": {
+      "occurrences": 49,
+      "late_occurrences": 18,
+      "last_start_t": 1903747
+     },
+     "4": {
+      "occurrences": 19,
+      "late_occurrences": 2,
+      "last_start_t": 1796726
+     },
+     "5": {
+      "occurrences": 7,
+      "late_occurrences": 0,
+      "last_start_t": 655659
+     },
+     "6": {
+      "occurrences": 3,
+      "late_occurrences": 0,
+      "last_start_t": 415494
+     },
+     "7": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 196745
+     }
+    },
+    "checker_A_W7": {
+     "_hmax": 5,
+     "1": {
+      "occurrences": 54,
+      "late_occurrences": 26,
+      "last_start_t": 1961893
+     },
+     "2": {
+      "occurrences": 15,
+      "late_occurrences": 4,
+      "last_start_t": 1903747
+     },
+     "3": {
+      "occurrences": 8,
+      "late_occurrences": 1,
+      "last_start_t": 1796726
+     },
+     "4": {
+      "occurrences": 3,
+      "late_occurrences": 0,
+      "last_start_t": 655659
+     },
+     "5": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 415494
+     }
+    },
+    "checker_A_W8": {
+     "_hmax": 4,
+     "1": {
+      "occurrences": 15,
+      "late_occurrences": 4,
+      "last_start_t": 1903747
+     },
+     "2": {
+      "occurrences": 8,
+      "late_occurrences": 1,
+      "last_start_t": 1796726
+     },
+     "3": {
+      "occurrences": 3,
+      "late_occurrences": 0,
+      "last_start_t": 655659
+     },
+     "4": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 415494
+     }
+    },
+    "checker_B_W0": {
+     "_hmax": 19,
+     "1": {
+      "occurrences": 999291,
+      "late_occurrences": 500059,
+      "last_start_t": 1999997
+     },
+     "2": {
+      "occurrences": 499119,
+      "late_occurrences": 250172,
+      "last_start_t": 1999996
+     },
+     "3": {
+      "occurrences": 249810,
+      "late_occurrences": 125296,
+      "last_start_t": 1999990
+     },
+     "4": {
+      "occurrences": 124856,
+      "late_occurrences": 62614,
+      "last_start_t": 1999989
+     },
+     "5": {
+      "occurrences": 62430,
+      "late_occurrences": 31356,
+      "last_start_t": 1999988
+     },
+     "6": {
+      "occurrences": 31226,
+      "late_occurrences": 15657,
+      "last_start_t": 1999973
+     },
+     "7": {
+      "occurrences": 15552,
+      "late_occurrences": 7819,
+      "last_start_t": 1999972
+     },
+     "8": {
+      "occurrences": 7763,
+      "late_occurrences": 3931,
+      "last_start_t": 1999928
+     },
+     "9": {
+      "occurrences": 3811,
+      "late_occurrences": 1921,
+      "last_start_t": 1996431
+     },
+     "10": {
+      "occurrences": 1848,
+      "late_occurrences": 916,
+      "last_start_t": 1996430
+     },
+     "11": {
+      "occurrences": 906,
+      "late_occurrences": 421,
+      "last_start_t": 1995670
+     },
+     "12": {
+      "occurrences": 464,
+      "late_occurrences": 199,
+      "last_start_t": 1993789
+     },
+     "13": {
+      "occurrences": 237,
+      "late_occurrences": 95,
+      "last_start_t": 1982833
+     },
+     "14": {
+      "occurrences": 114,
+      "late_occurrences": 45,
+      "last_start_t": 1982832
+     },
+     "15": {
+      "occurrences": 57,
+      "late_occurrences": 23,
+      "last_start_t": 1854049
+     },
+     "16": {
+      "occurrences": 31,
+      "late_occurrences": 12,
+      "last_start_t": 1830469
+     },
+     "17": {
+      "occurrences": 16,
+      "late_occurrences": 6,
+      "last_start_t": 1640474
+     },
+     "18": {
+      "occurrences": 9,
+      "late_occurrences": 3,
+      "last_start_t": 1640473
+     },
+     "19": {
+      "occurrences": 3,
+      "late_occurrences": 1,
+      "last_start_t": 1640472
+     }
+    },
+    "checker_B_W1": {
+     "_hmax": 17,
+     "1": {
+      "occurrences": 250027,
+      "late_occurrences": 125114,
+      "last_start_t": 1999991
+     },
+     "2": {
+      "occurrences": 124980,
+      "late_occurrences": 62564,
+      "last_start_t": 1999990
+     },
+     "3": {
+      "occurrences": 62674,
+      "late_occurrences": 31484,
+      "last_start_t": 1999989
+     },
+     "4": {
+      "occurrences": 31390,
+      "late_occurrences": 15780,
+      "last_start_t": 1999988
+     },
+     "5": {
+      "occurrences": 15715,
+      "late_occurrences": 7916,
+      "last_start_t": 1999930
+     },
+     "6": {
+      "occurrences": 7867,
+      "late_occurrences": 3980,
+      "last_start_t": 1999929
+     },
+     "7": {
+      "occurrences": 3917,
+      "late_occurrences": 1981,
+      "last_start_t": 1999842
+     },
+     "8": {
+      "occurrences": 1923,
+      "late_occurrences": 954,
+      "last_start_t": 1996431
+     },
+     "9": {
+      "occurrences": 955,
+      "late_occurrences": 460,
+      "last_start_t": 1996430
+     },
+     "10": {
+      "occurrences": 482,
+      "late_occurrences": 224,
+      "last_start_t": 1995670
+     },
+     "11": {
+      "occurrences": 245,
+      "late_occurrences": 105,
+      "last_start_t": 1993789
+     },
+     "12": {
+      "occurrences": 123,
+      "late_occurrences": 50,
+      "last_start_t": 1982833
+     },
+     "13": {
+      "occurrences": 59,
+      "late_occurrences": 25,
+      "last_start_t": 1854050
+     },
+     "14": {
+      "occurrences": 31,
+      "late_occurrences": 14,
+      "last_start_t": 1830470
+     },
+     "15": {
+      "occurrences": 16,
+      "late_occurrences": 7,
+      "last_start_t": 1745637
+     },
+     "16": {
+      "occurrences": 9,
+      "late_occurrences": 4,
+      "last_start_t": 1640474
+     },
+     "17": {
+      "occurrences": 4,
+      "late_occurrences": 2,
+      "last_start_t": 1640473
+     }
+    },
+    "checker_B_W2": {
+     "_hmax": 14,
+     "1": {
+      "occurrences": 62441,
+      "late_occurrences": 31389,
+      "last_start_t": 1999989
+     },
+     "2": {
+      "occurrences": 15722,
+      "late_occurrences": 7979,
+      "last_start_t": 1999942
+     },
+     "3": {
+      "occurrences": 7864,
+      "late_occurrences": 4022,
+      "last_start_t": 1999941
+     },
+     "4": {
+      "occurrences": 3930,
+      "late_occurrences": 2000,
+      "last_start_t": 1999878
+     },
+     "5": {
+      "occurrences": 1957,
+      "late_occurrences": 992,
+      "last_start_t": 1999843
+     },
+     "6": {
+      "occurrences": 960,
+      "late_occurrences": 470,
+      "last_start_t": 1999842
+     },
+     "7": {
+      "occurrences": 482,
+      "late_occurrences": 229,
+      "last_start_t": 1996431
+     },
+     "8": {
+      "occurrences": 250,
+      "late_occurrences": 113,
+      "last_start_t": 1996430
+     },
+     "9": {
+      "occurrences": 124,
+      "late_occurrences": 50,
+      "last_start_t": 1879462
+     },
+     "10": {
+      "occurrences": 61,
+      "late_occurrences": 23,
+      "last_start_t": 1879461
+     },
+     "11": {
+      "occurrences": 31,
+      "late_occurrences": 9,
+      "last_start_t": 1722887
+     },
+     "12": {
+      "occurrences": 14,
+      "late_occurrences": 2,
+      "last_start_t": 1640477
+     },
+     "13": {
+      "occurrences": 6,
+      "late_occurrences": 1,
+      "last_start_t": 1640476
+     },
+     "14": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 688776
+     }
+    },
+    "checker_B_W3": {
+     "_hmax": 13,
+     "1": {
+      "occurrences": 15722,
+      "late_occurrences": 7979,
+      "last_start_t": 1999942
+     },
+     "2": {
+      "occurrences": 7864,
+      "late_occurrences": 4022,
+      "last_start_t": 1999941
+     },
+     "3": {
+      "occurrences": 3930,
+      "late_occurrences": 2000,
+      "last_start_t": 1999878
+     },
+     "4": {
+      "occurrences": 1957,
+      "late_occurrences": 992,
+      "last_start_t": 1999843
+     },
+     "5": {
+      "occurrences": 960,
+      "late_occurrences": 470,
+      "last_start_t": 1999842
+     },
+     "6": {
+      "occurrences": 482,
+      "late_occurrences": 229,
+      "last_start_t": 1996431
+     },
+     "7": {
+      "occurrences": 250,
+      "late_occurrences": 113,
+      "last_start_t": 1996430
+     },
+     "8": {
+      "occurrences": 124,
+      "late_occurrences": 50,
+      "last_start_t": 1879462
+     },
+     "9": {
+      "occurrences": 61,
+      "late_occurrences": 23,
+      "last_start_t": 1879461
+     },
+     "10": {
+      "occurrences": 31,
+      "late_occurrences": 9,
+      "last_start_t": 1722887
+     },
+     "11": {
+      "occurrences": 14,
+      "late_occurrences": 2,
+      "last_start_t": 1640477
+     },
+     "12": {
+      "occurrences": 6,
+      "late_occurrences": 1,
+      "last_start_t": 1640476
+     },
+     "13": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 688776
+     }
+    },
+    "checker_B_W4": {
+     "_hmax": 11,
+     "1": {
+      "occurrences": 3936,
+      "late_occurrences": 1991,
+      "last_start_t": 1999879
+     },
+     "2": {
+      "occurrences": 1006,
+      "late_occurrences": 498,
+      "last_start_t": 1999844
+     },
+     "3": {
+      "occurrences": 521,
+      "late_occurrences": 246,
+      "last_start_t": 1999843
+     },
+     "4": {
+      "occurrences": 272,
+      "late_occurrences": 119,
+      "last_start_t": 1994265
+     },
+     "5": {
+      "occurrences": 148,
+      "late_occurrences": 57,
+      "last_start_t": 1994264
+     },
+     "6": {
+      "occurrences": 79,
+      "late_occurrences": 27,
+      "last_start_t": 1879463
+     },
+     "7": {
+      "occurrences": 42,
+      "late_occurrences": 13,
+      "last_start_t": 1879462
+     },
+     "8": {
+      "occurrences": 19,
+      "late_occurrences": 4,
+      "last_start_t": 1722888
+     },
+     "9": {
+      "occurrences": 8,
+      "late_occurrences": 0,
+      "last_start_t": 688779
+     },
+     "10": {
+      "occurrences": 4,
+      "late_occurrences": 0,
+      "last_start_t": 688778
+     },
+     "11": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 32202
+     }
+    },
+    "checker_B_W5": {
+     "_hmax": 10,
+     "1": {
+      "occurrences": 1006,
+      "late_occurrences": 498,
+      "last_start_t": 1999844
+     },
+     "2": {
+      "occurrences": 521,
+      "late_occurrences": 246,
+      "last_start_t": 1999843
+     },
+     "3": {
+      "occurrences": 272,
+      "late_occurrences": 119,
+      "last_start_t": 1994265
+     },
+     "4": {
+      "occurrences": 148,
+      "late_occurrences": 57,
+      "last_start_t": 1994264
+     },
+     "5": {
+      "occurrences": 79,
+      "late_occurrences": 27,
+      "last_start_t": 1879463
+     },
+     "6": {
+      "occurrences": 42,
+      "late_occurrences": 13,
+      "last_start_t": 1879462
+     },
+     "7": {
+      "occurrences": 19,
+      "late_occurrences": 4,
+      "last_start_t": 1722888
+     },
+     "8": {
+      "occurrences": 8,
+      "late_occurrences": 0,
+      "last_start_t": 688779
+     },
+     "9": {
+      "occurrences": 4,
+      "late_occurrences": 0,
+      "last_start_t": 688778
+     },
+     "10": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 32202
+     }
+    },
+    "checker_B_W6": {
+     "_hmax": 5,
+     "1": {
+      "occurrences": 254,
+      "late_occurrences": 121,
+      "last_start_t": 1994266
+     },
+     "2": {
+      "occurrences": 62,
+      "late_occurrences": 33,
+      "last_start_t": 1956372
+     },
+     "3": {
+      "occurrences": 28,
+      "late_occurrences": 13,
+      "last_start_t": 1719880
+     },
+     "4": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1450085
+     },
+     "5": {
+      "occurrences": 1,
+      "late_occurrences": 1,
+      "last_start_t": 1191798
+     }
+    },
+    "checker_B_W7": {
+     "_hmax": 4,
+     "1": {
+      "occurrences": 62,
+      "late_occurrences": 33,
+      "last_start_t": 1956372
+     },
+     "2": {
+      "occurrences": 28,
+      "late_occurrences": 13,
+      "last_start_t": 1719880
+     },
+     "3": {
+      "occurrences": 8,
+      "late_occurrences": 4,
+      "last_start_t": 1450085
+     },
+     "4": {
+      "occurrences": 1,
+      "late_occurrences": 1,
+      "last_start_t": 1191798
+     }
+    },
+    "checker_B_W8": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 13,
+      "late_occurrences": 5,
+      "last_start_t": 1450086
+     }
+    }
+   },
+   "diagonal_K": {
+    "all_zeros": {
+     "1024": {
+      "K": 3,
+      "witness_t": 442
+     },
+     "2048": {
+      "K": 3,
+      "witness_t": 442
+     },
+     "4096": {
+      "K": 3,
+      "witness_t": 442
+     },
+     "8192": {
+      "K": 3,
+      "witness_t": 442
+     },
+     "16384": {
+      "K": 3,
+      "witness_t": 442
+     },
+     "32768": {
+      "K": 3,
+      "witness_t": 442
+     },
+     "65536": {
+      "K": 3,
+      "witness_t": 442
+     },
+     "131072": {
+      "K": 4,
+      "witness_t": 101063
+     },
+     "262144": {
+      "K": 4,
+      "witness_t": 101063
+     },
+     "524288": {
+      "K": 4,
+      "witness_t": 101063
+     },
+     "1048576": {
+      "K": 4,
+      "witness_t": 101063
+     },
+     "2000000": {
+      "K": 4,
+      "witness_t": 101063
+     }
+    },
+    "checker_A": {
+     "1024": {
+      "K": 2,
+      "witness_t": 63
+     },
+     "2048": {
+      "K": 2,
+      "witness_t": 63
+     },
+     "4096": {
+      "K": 2,
+      "witness_t": 63
+     },
+     "8192": {
+      "K": 4,
+      "witness_t": 4241
+     },
+     "16384": {
+      "K": 4,
+      "witness_t": 4241
+     },
+     "32768": {
+      "K": 4,
+      "witness_t": 4241
+     },
+     "65536": {
+      "K": 4,
+      "witness_t": 4241
+     },
+     "131072": {
+      "K": 5,
+      "witness_t": 102927
+     },
+     "262144": {
+      "K": 6,
+      "witness_t": 196745
+     },
+     "524288": {
+      "K": 6,
+      "witness_t": 196745
+     },
+     "1048576": {
+      "K": 6,
+      "witness_t": 196745
+     },
+     "2000000": {
+      "K": 6,
+      "witness_t": 196745
+     }
+    },
+    "checker_B": {
+     "1024": {
+      "K": 3,
+      "witness_t": 295
+     },
+     "2048": {
+      "K": 3,
+      "witness_t": 295
+     },
+     "4096": {
+      "K": 3,
+      "witness_t": 295
+     },
+     "8192": {
+      "K": 3,
+      "witness_t": 295
+     },
+     "16384": {
+      "K": 3,
+      "witness_t": 295
+     },
+     "32768": {
+      "K": 5,
+      "witness_t": 26220
+     },
+     "65536": {
+      "K": 5,
+      "witness_t": 26220
+     },
+     "131072": {
+      "K": 5,
+      "witness_t": 26220
+     },
+     "262144": {
+      "K": 5,
+      "witness_t": 26220
+     },
+     "524288": {
+      "K": 5,
+      "witness_t": 26220
+     },
+     "1048576": {
+      "K": 5,
+      "witness_t": 26220
+     },
+     "2000000": {
+      "K": 5,
+      "witness_t": 26220
+     }
+    }
+   }
+  },
+  "90": {
+   "height_profile": {
+    "all_zeros_W0": {
+     "_hmax": 1999999,
+     "1": {
+      "occurrences": 1999999,
+      "late_occurrences": 1000000,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999998,
+      "late_occurrences": 999999,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999997,
+      "late_occurrences": 999998,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999996,
+      "late_occurrences": 999997,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999995,
+      "late_occurrences": 999996,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999994,
+      "late_occurrences": 999995,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999993,
+      "late_occurrences": 999994,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999992,
+      "late_occurrences": 999993,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999991,
+      "late_occurrences": 999992,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999990,
+      "late_occurrences": 999991,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999989,
+      "late_occurrences": 999990,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999988,
+      "late_occurrences": 999989,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999987,
+      "late_occurrences": 999988,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999986,
+      "late_occurrences": 999987,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999985,
+      "late_occurrences": 999986,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999984,
+      "late_occurrences": 999985,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999983,
+      "late_occurrences": 999984,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999982,
+      "late_occurrences": 999983,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999981,
+      "late_occurrences": 999982,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999980,
+      "late_occurrences": 999981,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999979,
+      "late_occurrences": 999980,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999978,
+      "late_occurrences": 999979,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999977,
+      "late_occurrences": 999978,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999976,
+      "late_occurrences": 999977,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999975,
+      "late_occurrences": 999976,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999974,
+      "late_occurrences": 999975,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999973,
+      "late_occurrences": 999974,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999972,
+      "late_occurrences": 999973,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999971,
+      "late_occurrences": 999972,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999970,
+      "late_occurrences": 999971,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999969,
+      "late_occurrences": 999970,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999968,
+      "late_occurrences": 999969,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999967,
+      "late_occurrences": 999968,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999966,
+      "late_occurrences": 999967,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999965,
+      "late_occurrences": 999966,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999964,
+      "late_occurrences": 999965,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999963,
+      "late_occurrences": 999964,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999962,
+      "late_occurrences": 999963,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999961,
+      "late_occurrences": 999962,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999960,
+      "late_occurrences": 999961,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999959,
+      "late_occurrences": 999960,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999958,
+      "late_occurrences": 999959,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999957,
+      "late_occurrences": 999958,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999956,
+      "late_occurrences": 999957,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999955,
+      "late_occurrences": 999956,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999954,
+      "late_occurrences": 999955,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999953,
+      "late_occurrences": 999954,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999952,
+      "late_occurrences": 999953,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999951,
+      "late_occurrences": 999952,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999950,
+      "late_occurrences": 999951,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999949,
+      "late_occurrences": 999950,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999948,
+      "late_occurrences": 999949,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999947,
+      "late_occurrences": 999948,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999946,
+      "late_occurrences": 999947,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999945,
+      "late_occurrences": 999946,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999944,
+      "late_occurrences": 999945,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1999943,
+      "late_occurrences": 999944,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1999942,
+      "late_occurrences": 999943,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1999941,
+      "late_occurrences": 999942,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1999940,
+      "late_occurrences": 999941,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1999939,
+      "late_occurrences": 999940,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1999938,
+      "late_occurrences": 999939,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1999937,
+      "late_occurrences": 999938,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1999936,
+      "late_occurrences": 999937,
+      "last_start_t": 1999936
+     }
+    },
+    "all_zeros_W1": {
+     "_hmax": 951424,
+     "1": {
+      "occurrences": 1999979,
+      "late_occurrences": 999999,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999959,
+      "late_occurrences": 999997,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999940,
+      "late_occurrences": 999995,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999921,
+      "late_occurrences": 999993,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999903,
+      "late_occurrences": 999991,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999885,
+      "late_occurrences": 999989,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999867,
+      "late_occurrences": 999987,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999849,
+      "late_occurrences": 999985,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999832,
+      "late_occurrences": 999983,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999815,
+      "late_occurrences": 999981,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999798,
+      "late_occurrences": 999979,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999781,
+      "late_occurrences": 999977,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999764,
+      "late_occurrences": 999975,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999747,
+      "late_occurrences": 999973,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999730,
+      "late_occurrences": 999971,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999713,
+      "late_occurrences": 999969,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999697,
+      "late_occurrences": 999967,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999681,
+      "late_occurrences": 999965,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999665,
+      "late_occurrences": 999963,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999649,
+      "late_occurrences": 999961,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999633,
+      "late_occurrences": 999959,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999617,
+      "late_occurrences": 999957,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999601,
+      "late_occurrences": 999955,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999585,
+      "late_occurrences": 999953,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999569,
+      "late_occurrences": 999951,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999553,
+      "late_occurrences": 999949,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999537,
+      "late_occurrences": 999947,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999521,
+      "late_occurrences": 999945,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999505,
+      "late_occurrences": 999943,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999489,
+      "late_occurrences": 999941,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999473,
+      "late_occurrences": 999939,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999457,
+      "late_occurrences": 999937,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999442,
+      "late_occurrences": 999935,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999427,
+      "late_occurrences": 999933,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999412,
+      "late_occurrences": 999931,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999397,
+      "late_occurrences": 999929,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999382,
+      "late_occurrences": 999927,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999367,
+      "late_occurrences": 999925,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999352,
+      "late_occurrences": 999923,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999337,
+      "late_occurrences": 999921,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999322,
+      "late_occurrences": 999919,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999307,
+      "late_occurrences": 999917,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999292,
+      "late_occurrences": 999915,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999277,
+      "late_occurrences": 999913,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999262,
+      "late_occurrences": 999911,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999247,
+      "late_occurrences": 999909,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999232,
+      "late_occurrences": 999907,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999217,
+      "late_occurrences": 999905,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999202,
+      "late_occurrences": 999903,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999187,
+      "late_occurrences": 999901,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999172,
+      "late_occurrences": 999899,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999157,
+      "late_occurrences": 999897,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999142,
+      "late_occurrences": 999895,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999127,
+      "late_occurrences": 999893,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999112,
+      "late_occurrences": 999891,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999097,
+      "late_occurrences": 999889,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1999082,
+      "late_occurrences": 999887,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1999067,
+      "late_occurrences": 999885,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1999052,
+      "late_occurrences": 999883,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1999037,
+      "late_occurrences": 999881,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1999022,
+      "late_occurrences": 999879,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1999007,
+      "late_occurrences": 999877,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1998992,
+      "late_occurrences": 999875,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1998977,
+      "late_occurrences": 999873,
+      "last_start_t": 1999936
+     }
+    },
+    "all_zeros_W2": {
+     "_hmax": 951424,
+     "1": {
+      "occurrences": 1999960,
+      "late_occurrences": 999998,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999941,
+      "late_occurrences": 999996,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999922,
+      "late_occurrences": 999994,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999904,
+      "late_occurrences": 999992,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999886,
+      "late_occurrences": 999990,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999868,
+      "late_occurrences": 999988,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999850,
+      "late_occurrences": 999986,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999833,
+      "late_occurrences": 999984,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999816,
+      "late_occurrences": 999982,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999799,
+      "late_occurrences": 999980,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999782,
+      "late_occurrences": 999978,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999765,
+      "late_occurrences": 999976,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999748,
+      "late_occurrences": 999974,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999731,
+      "late_occurrences": 999972,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999714,
+      "late_occurrences": 999970,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999698,
+      "late_occurrences": 999968,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999682,
+      "late_occurrences": 999966,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999666,
+      "late_occurrences": 999964,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999650,
+      "late_occurrences": 999962,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999634,
+      "late_occurrences": 999960,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999618,
+      "late_occurrences": 999958,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999602,
+      "late_occurrences": 999956,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999586,
+      "late_occurrences": 999954,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999570,
+      "late_occurrences": 999952,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999554,
+      "late_occurrences": 999950,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999538,
+      "late_occurrences": 999948,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999522,
+      "late_occurrences": 999946,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999506,
+      "late_occurrences": 999944,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999490,
+      "late_occurrences": 999942,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999474,
+      "late_occurrences": 999940,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999458,
+      "late_occurrences": 999938,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999443,
+      "late_occurrences": 999936,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999428,
+      "late_occurrences": 999934,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999413,
+      "late_occurrences": 999932,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999398,
+      "late_occurrences": 999930,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999383,
+      "late_occurrences": 999928,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999368,
+      "late_occurrences": 999926,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999353,
+      "late_occurrences": 999924,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999338,
+      "late_occurrences": 999922,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999323,
+      "late_occurrences": 999920,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999308,
+      "late_occurrences": 999918,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999293,
+      "late_occurrences": 999916,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999278,
+      "late_occurrences": 999914,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999263,
+      "late_occurrences": 999912,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999248,
+      "late_occurrences": 999910,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999233,
+      "late_occurrences": 999908,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999218,
+      "late_occurrences": 999906,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999203,
+      "late_occurrences": 999904,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999188,
+      "late_occurrences": 999902,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999173,
+      "late_occurrences": 999900,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999158,
+      "late_occurrences": 999898,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999143,
+      "late_occurrences": 999896,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999128,
+      "late_occurrences": 999894,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999113,
+      "late_occurrences": 999892,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999098,
+      "late_occurrences": 999890,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999083,
+      "late_occurrences": 999888,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1999068,
+      "late_occurrences": 999886,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1999053,
+      "late_occurrences": 999884,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1999038,
+      "late_occurrences": 999882,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1999023,
+      "late_occurrences": 999880,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1999008,
+      "late_occurrences": 999878,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1998993,
+      "late_occurrences": 999876,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1998978,
+      "late_occurrences": 999874,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1998964,
+      "late_occurrences": 999872,
+      "last_start_t": 1999936
+     }
+    },
+    "all_zeros_W3": {
+     "_hmax": 951424,
+     "1": {
+      "occurrences": 1999942,
+      "late_occurrences": 999997,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999923,
+      "late_occurrences": 999995,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999905,
+      "late_occurrences": 999993,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999887,
+      "late_occurrences": 999991,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999869,
+      "late_occurrences": 999989,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999851,
+      "late_occurrences": 999987,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999834,
+      "late_occurrences": 999985,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999817,
+      "late_occurrences": 999983,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999800,
+      "late_occurrences": 999981,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999783,
+      "late_occurrences": 999979,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999766,
+      "late_occurrences": 999977,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999749,
+      "late_occurrences": 999975,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999732,
+      "late_occurrences": 999973,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999715,
+      "late_occurrences": 999971,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999699,
+      "late_occurrences": 999969,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999683,
+      "late_occurrences": 999967,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999667,
+      "late_occurrences": 999965,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999651,
+      "late_occurrences": 999963,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999635,
+      "late_occurrences": 999961,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999619,
+      "late_occurrences": 999959,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999603,
+      "late_occurrences": 999957,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999587,
+      "late_occurrences": 999955,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999571,
+      "late_occurrences": 999953,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999555,
+      "late_occurrences": 999951,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999539,
+      "late_occurrences": 999949,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999523,
+      "late_occurrences": 999947,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999507,
+      "late_occurrences": 999945,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999491,
+      "late_occurrences": 999943,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999475,
+      "late_occurrences": 999941,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999459,
+      "late_occurrences": 999939,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999444,
+      "late_occurrences": 999937,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999429,
+      "late_occurrences": 999935,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999414,
+      "late_occurrences": 999933,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999399,
+      "late_occurrences": 999931,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999384,
+      "late_occurrences": 999929,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999369,
+      "late_occurrences": 999927,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999354,
+      "late_occurrences": 999925,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999339,
+      "late_occurrences": 999923,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999324,
+      "late_occurrences": 999921,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999309,
+      "late_occurrences": 999919,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999294,
+      "late_occurrences": 999917,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999279,
+      "late_occurrences": 999915,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999264,
+      "late_occurrences": 999913,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999249,
+      "late_occurrences": 999911,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999234,
+      "late_occurrences": 999909,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999219,
+      "late_occurrences": 999907,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999204,
+      "late_occurrences": 999905,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999189,
+      "late_occurrences": 999903,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999174,
+      "late_occurrences": 999901,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999159,
+      "late_occurrences": 999899,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999144,
+      "late_occurrences": 999897,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999129,
+      "late_occurrences": 999895,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999114,
+      "late_occurrences": 999893,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999099,
+      "late_occurrences": 999891,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999084,
+      "late_occurrences": 999889,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999069,
+      "late_occurrences": 999887,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1999054,
+      "late_occurrences": 999885,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1999039,
+      "late_occurrences": 999883,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1999024,
+      "late_occurrences": 999881,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1999009,
+      "late_occurrences": 999879,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1998994,
+      "late_occurrences": 999877,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1998979,
+      "late_occurrences": 999875,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1998965,
+      "late_occurrences": 999873,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1998951,
+      "late_occurrences": 999871,
+      "last_start_t": 1999936
+     }
+    },
+    "all_zeros_W4": {
+     "_hmax": 951424,
+     "1": {
+      "occurrences": 1999924,
+      "late_occurrences": 999996,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999906,
+      "late_occurrences": 999994,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999888,
+      "late_occurrences": 999992,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999870,
+      "late_occurrences": 999990,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999852,
+      "late_occurrences": 999988,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999835,
+      "late_occurrences": 999986,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999818,
+      "late_occurrences": 999984,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999801,
+      "late_occurrences": 999982,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999784,
+      "late_occurrences": 999980,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999767,
+      "late_occurrences": 999978,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999750,
+      "late_occurrences": 999976,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999733,
+      "late_occurrences": 999974,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999716,
+      "late_occurrences": 999972,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999700,
+      "late_occurrences": 999970,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999684,
+      "late_occurrences": 999968,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999668,
+      "late_occurrences": 999966,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999652,
+      "late_occurrences": 999964,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999636,
+      "late_occurrences": 999962,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999620,
+      "late_occurrences": 999960,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999604,
+      "late_occurrences": 999958,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999588,
+      "late_occurrences": 999956,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999572,
+      "late_occurrences": 999954,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999556,
+      "late_occurrences": 999952,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999540,
+      "late_occurrences": 999950,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999524,
+      "late_occurrences": 999948,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999508,
+      "late_occurrences": 999946,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999492,
+      "late_occurrences": 999944,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999476,
+      "late_occurrences": 999942,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999460,
+      "late_occurrences": 999940,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999445,
+      "late_occurrences": 999938,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999430,
+      "late_occurrences": 999936,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999415,
+      "late_occurrences": 999934,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999400,
+      "late_occurrences": 999932,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999385,
+      "late_occurrences": 999930,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999370,
+      "late_occurrences": 999928,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999355,
+      "late_occurrences": 999926,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999340,
+      "late_occurrences": 999924,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999325,
+      "late_occurrences": 999922,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999310,
+      "late_occurrences": 999920,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999295,
+      "late_occurrences": 999918,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999280,
+      "late_occurrences": 999916,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999265,
+      "late_occurrences": 999914,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999250,
+      "late_occurrences": 999912,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999235,
+      "late_occurrences": 999910,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999220,
+      "late_occurrences": 999908,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999205,
+      "late_occurrences": 999906,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999190,
+      "late_occurrences": 999904,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999175,
+      "late_occurrences": 999902,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999160,
+      "late_occurrences": 999900,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999145,
+      "late_occurrences": 999898,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999130,
+      "late_occurrences": 999896,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999115,
+      "late_occurrences": 999894,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999100,
+      "late_occurrences": 999892,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999085,
+      "late_occurrences": 999890,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999070,
+      "late_occurrences": 999888,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999055,
+      "late_occurrences": 999886,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1999040,
+      "late_occurrences": 999884,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1999025,
+      "late_occurrences": 999882,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1999010,
+      "late_occurrences": 999880,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1998995,
+      "late_occurrences": 999878,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1998980,
+      "late_occurrences": 999876,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1998966,
+      "late_occurrences": 999874,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1998952,
+      "late_occurrences": 999872,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1998938,
+      "late_occurrences": 999870,
+      "last_start_t": 1999936
+     }
+    },
+    "all_zeros_W5": {
+     "_hmax": 951424,
+     "1": {
+      "occurrences": 1999907,
+      "late_occurrences": 999995,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999889,
+      "late_occurrences": 999993,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999871,
+      "late_occurrences": 999991,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999853,
+      "late_occurrences": 999989,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999836,
+      "late_occurrences": 999987,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999819,
+      "late_occurrences": 999985,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999802,
+      "late_occurrences": 999983,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999785,
+      "late_occurrences": 999981,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999768,
+      "late_occurrences": 999979,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999751,
+      "late_occurrences": 999977,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999734,
+      "late_occurrences": 999975,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999717,
+      "late_occurrences": 999973,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999701,
+      "late_occurrences": 999971,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999685,
+      "late_occurrences": 999969,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999669,
+      "late_occurrences": 999967,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999653,
+      "late_occurrences": 999965,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999637,
+      "late_occurrences": 999963,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999621,
+      "late_occurrences": 999961,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999605,
+      "late_occurrences": 999959,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999589,
+      "late_occurrences": 999957,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999573,
+      "late_occurrences": 999955,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999557,
+      "late_occurrences": 999953,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999541,
+      "late_occurrences": 999951,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999525,
+      "late_occurrences": 999949,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999509,
+      "late_occurrences": 999947,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999493,
+      "late_occurrences": 999945,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999477,
+      "late_occurrences": 999943,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999461,
+      "late_occurrences": 999941,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999446,
+      "late_occurrences": 999939,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999431,
+      "late_occurrences": 999937,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999416,
+      "late_occurrences": 999935,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999401,
+      "late_occurrences": 999933,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999386,
+      "late_occurrences": 999931,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999371,
+      "late_occurrences": 999929,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999356,
+      "late_occurrences": 999927,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999341,
+      "late_occurrences": 999925,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999326,
+      "late_occurrences": 999923,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999311,
+      "late_occurrences": 999921,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999296,
+      "late_occurrences": 999919,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999281,
+      "late_occurrences": 999917,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999266,
+      "late_occurrences": 999915,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999251,
+      "late_occurrences": 999913,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999236,
+      "late_occurrences": 999911,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999221,
+      "late_occurrences": 999909,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999206,
+      "late_occurrences": 999907,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999191,
+      "late_occurrences": 999905,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999176,
+      "late_occurrences": 999903,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999161,
+      "late_occurrences": 999901,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999146,
+      "late_occurrences": 999899,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999131,
+      "late_occurrences": 999897,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999116,
+      "late_occurrences": 999895,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999101,
+      "late_occurrences": 999893,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999086,
+      "late_occurrences": 999891,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999071,
+      "late_occurrences": 999889,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999056,
+      "late_occurrences": 999887,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999041,
+      "late_occurrences": 999885,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1999026,
+      "late_occurrences": 999883,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1999011,
+      "late_occurrences": 999881,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1998996,
+      "late_occurrences": 999879,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1998981,
+      "late_occurrences": 999877,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1998967,
+      "late_occurrences": 999875,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1998953,
+      "late_occurrences": 999873,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1998939,
+      "late_occurrences": 999871,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1998925,
+      "late_occurrences": 999869,
+      "last_start_t": 1999936
+     }
+    },
+    "all_zeros_W6": {
+     "_hmax": 951424,
+     "1": {
+      "occurrences": 1999890,
+      "late_occurrences": 999994,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999872,
+      "late_occurrences": 999992,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999854,
+      "late_occurrences": 999990,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999837,
+      "late_occurrences": 999988,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999820,
+      "late_occurrences": 999986,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999803,
+      "late_occurrences": 999984,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999786,
+      "late_occurrences": 999982,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999769,
+      "late_occurrences": 999980,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999752,
+      "late_occurrences": 999978,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999735,
+      "late_occurrences": 999976,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999718,
+      "late_occurrences": 999974,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999702,
+      "late_occurrences": 999972,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999686,
+      "late_occurrences": 999970,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999670,
+      "late_occurrences": 999968,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999654,
+      "late_occurrences": 999966,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999638,
+      "late_occurrences": 999964,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999622,
+      "late_occurrences": 999962,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999606,
+      "late_occurrences": 999960,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999590,
+      "late_occurrences": 999958,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999574,
+      "late_occurrences": 999956,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999558,
+      "late_occurrences": 999954,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999542,
+      "late_occurrences": 999952,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999526,
+      "late_occurrences": 999950,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999510,
+      "late_occurrences": 999948,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999494,
+      "late_occurrences": 999946,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999478,
+      "late_occurrences": 999944,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999462,
+      "late_occurrences": 999942,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999447,
+      "late_occurrences": 999940,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999432,
+      "late_occurrences": 999938,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999417,
+      "late_occurrences": 999936,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999402,
+      "late_occurrences": 999934,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999387,
+      "late_occurrences": 999932,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999372,
+      "late_occurrences": 999930,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999357,
+      "late_occurrences": 999928,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999342,
+      "late_occurrences": 999926,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999327,
+      "late_occurrences": 999924,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999312,
+      "late_occurrences": 999922,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999297,
+      "late_occurrences": 999920,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999282,
+      "late_occurrences": 999918,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999267,
+      "late_occurrences": 999916,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999252,
+      "late_occurrences": 999914,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999237,
+      "late_occurrences": 999912,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999222,
+      "late_occurrences": 999910,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999207,
+      "late_occurrences": 999908,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999192,
+      "late_occurrences": 999906,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999177,
+      "late_occurrences": 999904,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999162,
+      "late_occurrences": 999902,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999147,
+      "late_occurrences": 999900,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999132,
+      "late_occurrences": 999898,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999117,
+      "late_occurrences": 999896,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999102,
+      "late_occurrences": 999894,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999087,
+      "late_occurrences": 999892,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999072,
+      "late_occurrences": 999890,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999057,
+      "late_occurrences": 999888,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999042,
+      "late_occurrences": 999886,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999027,
+      "late_occurrences": 999884,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1999012,
+      "late_occurrences": 999882,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1998997,
+      "late_occurrences": 999880,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1998982,
+      "late_occurrences": 999878,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1998968,
+      "late_occurrences": 999876,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1998954,
+      "late_occurrences": 999874,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1998940,
+      "late_occurrences": 999872,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1998926,
+      "late_occurrences": 999870,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1998912,
+      "late_occurrences": 999868,
+      "last_start_t": 1999936
+     }
+    },
+    "all_zeros_W7": {
+     "_hmax": 951424,
+     "1": {
+      "occurrences": 1999873,
+      "late_occurrences": 999993,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999855,
+      "late_occurrences": 999991,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999838,
+      "late_occurrences": 999989,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999821,
+      "late_occurrences": 999987,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999804,
+      "late_occurrences": 999985,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999787,
+      "late_occurrences": 999983,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999770,
+      "late_occurrences": 999981,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999753,
+      "late_occurrences": 999979,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999736,
+      "late_occurrences": 999977,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999719,
+      "late_occurrences": 999975,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999703,
+      "late_occurrences": 999973,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999687,
+      "late_occurrences": 999971,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999671,
+      "late_occurrences": 999969,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999655,
+      "late_occurrences": 999967,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999639,
+      "late_occurrences": 999965,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999623,
+      "late_occurrences": 999963,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999607,
+      "late_occurrences": 999961,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999591,
+      "late_occurrences": 999959,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999575,
+      "late_occurrences": 999957,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999559,
+      "late_occurrences": 999955,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999543,
+      "late_occurrences": 999953,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999527,
+      "late_occurrences": 999951,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999511,
+      "late_occurrences": 999949,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999495,
+      "late_occurrences": 999947,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999479,
+      "late_occurrences": 999945,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999463,
+      "late_occurrences": 999943,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999448,
+      "late_occurrences": 999941,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999433,
+      "late_occurrences": 999939,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999418,
+      "late_occurrences": 999937,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999403,
+      "late_occurrences": 999935,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999388,
+      "late_occurrences": 999933,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999373,
+      "late_occurrences": 999931,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999358,
+      "late_occurrences": 999929,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999343,
+      "late_occurrences": 999927,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999328,
+      "late_occurrences": 999925,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999313,
+      "late_occurrences": 999923,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999298,
+      "late_occurrences": 999921,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999283,
+      "late_occurrences": 999919,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999268,
+      "late_occurrences": 999917,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999253,
+      "late_occurrences": 999915,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999238,
+      "late_occurrences": 999913,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999223,
+      "late_occurrences": 999911,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999208,
+      "late_occurrences": 999909,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999193,
+      "late_occurrences": 999907,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999178,
+      "late_occurrences": 999905,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999163,
+      "late_occurrences": 999903,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999148,
+      "late_occurrences": 999901,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999133,
+      "late_occurrences": 999899,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999118,
+      "late_occurrences": 999897,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999103,
+      "late_occurrences": 999895,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999088,
+      "late_occurrences": 999893,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999073,
+      "late_occurrences": 999891,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999058,
+      "late_occurrences": 999889,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999043,
+      "late_occurrences": 999887,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999028,
+      "late_occurrences": 999885,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999013,
+      "late_occurrences": 999883,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1998998,
+      "late_occurrences": 999881,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1998983,
+      "late_occurrences": 999879,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1998969,
+      "late_occurrences": 999877,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1998955,
+      "late_occurrences": 999875,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1998941,
+      "late_occurrences": 999873,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1998927,
+      "late_occurrences": 999871,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1998913,
+      "late_occurrences": 999869,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1998899,
+      "late_occurrences": 999867,
+      "last_start_t": 1999936
+     }
+    },
+    "all_zeros_W8": {
+     "_hmax": 951424,
+     "1": {
+      "occurrences": 1999856,
+      "late_occurrences": 999992,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999839,
+      "late_occurrences": 999990,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999822,
+      "late_occurrences": 999988,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999805,
+      "late_occurrences": 999986,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999788,
+      "late_occurrences": 999984,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999771,
+      "late_occurrences": 999982,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999754,
+      "late_occurrences": 999980,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999737,
+      "late_occurrences": 999978,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999720,
+      "late_occurrences": 999976,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999704,
+      "late_occurrences": 999974,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999688,
+      "late_occurrences": 999972,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999672,
+      "late_occurrences": 999970,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999656,
+      "late_occurrences": 999968,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999640,
+      "late_occurrences": 999966,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999624,
+      "late_occurrences": 999964,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999608,
+      "late_occurrences": 999962,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999592,
+      "late_occurrences": 999960,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999576,
+      "late_occurrences": 999958,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999560,
+      "late_occurrences": 999956,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999544,
+      "late_occurrences": 999954,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999528,
+      "late_occurrences": 999952,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999512,
+      "late_occurrences": 999950,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999496,
+      "late_occurrences": 999948,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999480,
+      "late_occurrences": 999946,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999464,
+      "late_occurrences": 999944,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999449,
+      "late_occurrences": 999942,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999434,
+      "late_occurrences": 999940,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999419,
+      "late_occurrences": 999938,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999404,
+      "late_occurrences": 999936,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999389,
+      "late_occurrences": 999934,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999374,
+      "late_occurrences": 999932,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999359,
+      "late_occurrences": 999930,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999344,
+      "late_occurrences": 999928,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999329,
+      "late_occurrences": 999926,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999314,
+      "late_occurrences": 999924,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999299,
+      "late_occurrences": 999922,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999284,
+      "late_occurrences": 999920,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999269,
+      "late_occurrences": 999918,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999254,
+      "late_occurrences": 999916,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999239,
+      "late_occurrences": 999914,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999224,
+      "late_occurrences": 999912,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999209,
+      "late_occurrences": 999910,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999194,
+      "late_occurrences": 999908,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999179,
+      "late_occurrences": 999906,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999164,
+      "late_occurrences": 999904,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999149,
+      "late_occurrences": 999902,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999134,
+      "late_occurrences": 999900,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999119,
+      "late_occurrences": 999898,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999104,
+      "late_occurrences": 999896,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999089,
+      "late_occurrences": 999894,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999074,
+      "late_occurrences": 999892,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999059,
+      "late_occurrences": 999890,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999044,
+      "late_occurrences": 999888,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999029,
+      "late_occurrences": 999886,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999014,
+      "late_occurrences": 999884,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1998999,
+      "late_occurrences": 999882,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1998984,
+      "late_occurrences": 999880,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1998970,
+      "late_occurrences": 999878,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1998956,
+      "late_occurrences": 999876,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1998942,
+      "late_occurrences": 999874,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1998928,
+      "late_occurrences": 999872,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1998914,
+      "late_occurrences": 999870,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1998900,
+      "late_occurrences": 999868,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1998886,
+      "late_occurrences": 999866,
+      "last_start_t": 1999936
+     }
+    },
+    "checker_A_W0": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 1,
+      "late_occurrences": 0,
+      "last_start_t": 0
+     }
+    },
+    "checker_A_W1": {},
+    "checker_A_W2": {},
+    "checker_A_W3": {},
+    "checker_A_W4": {},
+    "checker_A_W5": {},
+    "checker_A_W6": {},
+    "checker_A_W7": {},
+    "checker_A_W8": {},
+    "checker_B_W0": {
+     "_hmax": 1999999,
+     "1": {
+      "occurrences": 1999999,
+      "late_occurrences": 1000000,
+      "last_start_t": 1999999
+     },
+     "2": {
+      "occurrences": 1999998,
+      "late_occurrences": 999999,
+      "last_start_t": 1999998
+     },
+     "3": {
+      "occurrences": 1999997,
+      "late_occurrences": 999998,
+      "last_start_t": 1999997
+     },
+     "4": {
+      "occurrences": 1999996,
+      "late_occurrences": 999997,
+      "last_start_t": 1999996
+     },
+     "5": {
+      "occurrences": 1999995,
+      "late_occurrences": 999996,
+      "last_start_t": 1999995
+     },
+     "6": {
+      "occurrences": 1999994,
+      "late_occurrences": 999995,
+      "last_start_t": 1999994
+     },
+     "7": {
+      "occurrences": 1999993,
+      "late_occurrences": 999994,
+      "last_start_t": 1999993
+     },
+     "8": {
+      "occurrences": 1999992,
+      "late_occurrences": 999993,
+      "last_start_t": 1999992
+     },
+     "9": {
+      "occurrences": 1999991,
+      "late_occurrences": 999992,
+      "last_start_t": 1999991
+     },
+     "10": {
+      "occurrences": 1999990,
+      "late_occurrences": 999991,
+      "last_start_t": 1999990
+     },
+     "11": {
+      "occurrences": 1999989,
+      "late_occurrences": 999990,
+      "last_start_t": 1999989
+     },
+     "12": {
+      "occurrences": 1999988,
+      "late_occurrences": 999989,
+      "last_start_t": 1999988
+     },
+     "13": {
+      "occurrences": 1999987,
+      "late_occurrences": 999988,
+      "last_start_t": 1999987
+     },
+     "14": {
+      "occurrences": 1999986,
+      "late_occurrences": 999987,
+      "last_start_t": 1999986
+     },
+     "15": {
+      "occurrences": 1999985,
+      "late_occurrences": 999986,
+      "last_start_t": 1999985
+     },
+     "16": {
+      "occurrences": 1999984,
+      "late_occurrences": 999985,
+      "last_start_t": 1999984
+     },
+     "17": {
+      "occurrences": 1999983,
+      "late_occurrences": 999984,
+      "last_start_t": 1999983
+     },
+     "18": {
+      "occurrences": 1999982,
+      "late_occurrences": 999983,
+      "last_start_t": 1999982
+     },
+     "19": {
+      "occurrences": 1999981,
+      "late_occurrences": 999982,
+      "last_start_t": 1999981
+     },
+     "20": {
+      "occurrences": 1999980,
+      "late_occurrences": 999981,
+      "last_start_t": 1999980
+     },
+     "21": {
+      "occurrences": 1999979,
+      "late_occurrences": 999980,
+      "last_start_t": 1999979
+     },
+     "22": {
+      "occurrences": 1999978,
+      "late_occurrences": 999979,
+      "last_start_t": 1999978
+     },
+     "23": {
+      "occurrences": 1999977,
+      "late_occurrences": 999978,
+      "last_start_t": 1999977
+     },
+     "24": {
+      "occurrences": 1999976,
+      "late_occurrences": 999977,
+      "last_start_t": 1999976
+     },
+     "25": {
+      "occurrences": 1999975,
+      "late_occurrences": 999976,
+      "last_start_t": 1999975
+     },
+     "26": {
+      "occurrences": 1999974,
+      "late_occurrences": 999975,
+      "last_start_t": 1999974
+     },
+     "27": {
+      "occurrences": 1999973,
+      "late_occurrences": 999974,
+      "last_start_t": 1999973
+     },
+     "28": {
+      "occurrences": 1999972,
+      "late_occurrences": 999973,
+      "last_start_t": 1999972
+     },
+     "29": {
+      "occurrences": 1999971,
+      "late_occurrences": 999972,
+      "last_start_t": 1999971
+     },
+     "30": {
+      "occurrences": 1999970,
+      "late_occurrences": 999971,
+      "last_start_t": 1999970
+     },
+     "31": {
+      "occurrences": 1999969,
+      "late_occurrences": 999970,
+      "last_start_t": 1999969
+     },
+     "32": {
+      "occurrences": 1999968,
+      "late_occurrences": 999969,
+      "last_start_t": 1999968
+     },
+     "33": {
+      "occurrences": 1999967,
+      "late_occurrences": 999968,
+      "last_start_t": 1999967
+     },
+     "34": {
+      "occurrences": 1999966,
+      "late_occurrences": 999967,
+      "last_start_t": 1999966
+     },
+     "35": {
+      "occurrences": 1999965,
+      "late_occurrences": 999966,
+      "last_start_t": 1999965
+     },
+     "36": {
+      "occurrences": 1999964,
+      "late_occurrences": 999965,
+      "last_start_t": 1999964
+     },
+     "37": {
+      "occurrences": 1999963,
+      "late_occurrences": 999964,
+      "last_start_t": 1999963
+     },
+     "38": {
+      "occurrences": 1999962,
+      "late_occurrences": 999963,
+      "last_start_t": 1999962
+     },
+     "39": {
+      "occurrences": 1999961,
+      "late_occurrences": 999962,
+      "last_start_t": 1999961
+     },
+     "40": {
+      "occurrences": 1999960,
+      "late_occurrences": 999961,
+      "last_start_t": 1999960
+     },
+     "41": {
+      "occurrences": 1999959,
+      "late_occurrences": 999960,
+      "last_start_t": 1999959
+     },
+     "42": {
+      "occurrences": 1999958,
+      "late_occurrences": 999959,
+      "last_start_t": 1999958
+     },
+     "43": {
+      "occurrences": 1999957,
+      "late_occurrences": 999958,
+      "last_start_t": 1999957
+     },
+     "44": {
+      "occurrences": 1999956,
+      "late_occurrences": 999957,
+      "last_start_t": 1999956
+     },
+     "45": {
+      "occurrences": 1999955,
+      "late_occurrences": 999956,
+      "last_start_t": 1999955
+     },
+     "46": {
+      "occurrences": 1999954,
+      "late_occurrences": 999955,
+      "last_start_t": 1999954
+     },
+     "47": {
+      "occurrences": 1999953,
+      "late_occurrences": 999954,
+      "last_start_t": 1999953
+     },
+     "48": {
+      "occurrences": 1999952,
+      "late_occurrences": 999953,
+      "last_start_t": 1999952
+     },
+     "49": {
+      "occurrences": 1999951,
+      "late_occurrences": 999952,
+      "last_start_t": 1999951
+     },
+     "50": {
+      "occurrences": 1999950,
+      "late_occurrences": 999951,
+      "last_start_t": 1999950
+     },
+     "51": {
+      "occurrences": 1999949,
+      "late_occurrences": 999950,
+      "last_start_t": 1999949
+     },
+     "52": {
+      "occurrences": 1999948,
+      "late_occurrences": 999949,
+      "last_start_t": 1999948
+     },
+     "53": {
+      "occurrences": 1999947,
+      "late_occurrences": 999948,
+      "last_start_t": 1999947
+     },
+     "54": {
+      "occurrences": 1999946,
+      "late_occurrences": 999947,
+      "last_start_t": 1999946
+     },
+     "55": {
+      "occurrences": 1999945,
+      "late_occurrences": 999946,
+      "last_start_t": 1999945
+     },
+     "56": {
+      "occurrences": 1999944,
+      "late_occurrences": 999945,
+      "last_start_t": 1999944
+     },
+     "57": {
+      "occurrences": 1999943,
+      "late_occurrences": 999944,
+      "last_start_t": 1999943
+     },
+     "58": {
+      "occurrences": 1999942,
+      "late_occurrences": 999943,
+      "last_start_t": 1999942
+     },
+     "59": {
+      "occurrences": 1999941,
+      "late_occurrences": 999942,
+      "last_start_t": 1999941
+     },
+     "60": {
+      "occurrences": 1999940,
+      "late_occurrences": 999941,
+      "last_start_t": 1999940
+     },
+     "61": {
+      "occurrences": 1999939,
+      "late_occurrences": 999940,
+      "last_start_t": 1999939
+     },
+     "62": {
+      "occurrences": 1999938,
+      "late_occurrences": 999939,
+      "last_start_t": 1999938
+     },
+     "63": {
+      "occurrences": 1999937,
+      "late_occurrences": 999938,
+      "last_start_t": 1999937
+     },
+     "64": {
+      "occurrences": 1999936,
+      "late_occurrences": 999937,
+      "last_start_t": 1999936
+     }
+    },
+    "checker_B_W1": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 20,
+      "late_occurrences": 1,
+      "last_start_t": 1048575
+     }
+    },
+    "checker_B_W2": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 19,
+      "late_occurrences": 1,
+      "last_start_t": 1048575
+     }
+    },
+    "checker_B_W3": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 19,
+      "late_occurrences": 1,
+      "last_start_t": 1048575
+     }
+    },
+    "checker_B_W4": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 18,
+      "late_occurrences": 1,
+      "last_start_t": 1048575
+     }
+    },
+    "checker_B_W5": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 18,
+      "late_occurrences": 1,
+      "last_start_t": 1048575
+     }
+    },
+    "checker_B_W6": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 18,
+      "late_occurrences": 1,
+      "last_start_t": 1048575
+     }
+    },
+    "checker_B_W7": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 18,
+      "late_occurrences": 1,
+      "last_start_t": 1048575
+     }
+    },
+    "checker_B_W8": {
+     "_hmax": 1,
+     "1": {
+      "occurrences": 17,
+      "late_occurrences": 1,
+      "last_start_t": 1048575
+     }
+    }
+   },
+   "diagonal_K": {
+    "all_zeros": {
+     "1024": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "2048": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "4096": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "8192": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "16384": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "32768": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "65536": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "131072": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "262144": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "524288": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "1048576": {
+      "K": 8,
+      "witness_t": 16
+     },
+     "2000000": {
+      "K": 8,
+      "witness_t": 16
+     }
+    },
+    "checker_A": {
+     "1024": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "2048": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "4096": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "8192": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "16384": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "32768": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "65536": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "131072": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "262144": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "524288": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "1048576": {
+      "K": 0,
+      "witness_t": 0
+     },
+     "2000000": {
+      "K": 0,
+      "witness_t": 0
+     }
+    },
+    "checker_B": {
+     "1024": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "2048": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "4096": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "8192": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "16384": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "32768": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "65536": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "131072": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "262144": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "524288": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "1048576": {
+      "K": 1,
+      "witness_t": 1
+     },
+     "2000000": {
+      "K": 1,
+      "witness_t": 1
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,32 @@
+[
+ {
+  "m": 1,
+  "L": 6,
+  "n_eqs": 126,
+  "seconds": 0.2,
+  "gb_size": 3,
+  "gb": [
+   "2*q0 - 1",
+   "2*q1 - 1",
+   "z - 16"
+  ],
+  "empty_variety": false,
+  "uniform_satisfies_gb": false
+ },
+ {
+  "m": 2,
+  "L": 6,
+  "n_eqs": 126,
+  "seconds": 0.9,
+  "gb_size": 5,
+  "gb": [
+   "2*q00 - 1",
+   "2*q01 - 1",
+   "2*q10 - 1",
+   "2*q11 - 1",
+   "z - 256"
+  ],
+  "empty_variety": false,
+  "uniform_satisfies_gb": false
+ }
+]

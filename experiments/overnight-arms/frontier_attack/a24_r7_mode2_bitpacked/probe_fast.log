@@ -1,0 +1,19 @@
+== 1. trend sweep: k growing, T=200000, qmax=4096, rule=30, w=01 ==
+[trend] rule=30 k=1 w=01 T=200000 qmax=4096 phase=0 T0=3 col_m1_min_eventual_period_le_qmax=None tail_len=199993 wall_s=6.69
+[trend] rule=30 k=2 w=01 T=200000 qmax=4096 phase=0 T0=5 col_m1_min_eventual_period_le_qmax=None tail_len=199991 wall_s=7.41
+[trend] rule=30 k=3 w=01 T=200000 qmax=4096 phase=0 T0=7 col_m1_min_eventual_period_le_qmax=None tail_len=199989 wall_s=7.69
+[trend] rule=30 k=4 w=01 T=200000 qmax=4096 phase=0 T0=9 col_m1_min_eventual_period_le_qmax=None tail_len=199987 wall_s=8.71
+[trend] rule=30 k=6 w=01 T=200000 qmax=4096 phase=0 T0=13 col_m1_min_eventual_period_le_qmax=None tail_len=199983 wall_s=9.0
+[trend] rule=30 k=8 w=01 T=200000 qmax=4096 phase=0 T0=17 col_m1_min_eventual_period_le_qmax=None tail_len=199979 wall_s=7.78
+[trend] rule=30 k=12 w=01 T=200000 qmax=4096 phase=0 T0=25 col_m1_min_eventual_period_le_qmax=None tail_len=199971 wall_s=8.3
+[trend] rule=30 k=16 w=01 T=200000 qmax=4096 phase=0 T0=33 col_m1_min_eventual_period_le_qmax=None tail_len=199963 wall_s=9.04
+[trend] rule=30 k=24 w=01 T=200000 qmax=4096 phase=0 T0=49 col_m1_min_eventual_period_le_qmax=None tail_len=199947 wall_s=9.11
+[trend] rule=30 k=32 w=01 T=200000 qmax=4096 phase=0 T0=65 col_m1_min_eventual_period_le_qmax=None tail_len=199931 wall_s=9.77
+[trend] rule=30 k=48 w=01 T=200000 qmax=4096 phase=0 T0=97 col_m1_min_eventual_period_le_qmax=None tail_len=199899 wall_s=10.77
+[trend] rule=30 k=64 w=01 T=200000 qmax=4096 phase=0 T0=129 col_m1_min_eventual_period_le_qmax=None tail_len=199867 wall_s=11.08
+
+== 2. horizon robustness at k=2, rule=30, w=01, qmax=4096 ==
+[horizon_k2] rule=30 k=2 w=01 T=20000 qmax=4096 phase=0 T0=5 col_m1_min_eventual_period_le_qmax=None tail_len=19991 wall_s=0.29
+[horizon_k2] rule=30 k=2 w=01 T=100000 qmax=4096 phase=0 T0=5 col_m1_min_eventual_period_le_qmax=None tail_len=99991 wall_s=2.58
+[horizon_k2] rule=30 k=2 w=01 T=400000 qmax=4096 phase=0 T0=5 col_m1_min_eventual_period_le_qmax=None tail_len=399991 wall_s=28.7
+[horizon_k2] rule=30 k=2 w=01 T=1000000 qmax=4096 phase=0 T0=5 col_m1_min_eventual_period_le_qmax=None tail_len=999991 wall_s=149.29

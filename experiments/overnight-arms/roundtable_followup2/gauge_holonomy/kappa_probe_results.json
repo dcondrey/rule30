@@ -1,0 +1,42 @@
+{
+  "algebraic_identity_check": {
+    "rule30": {
+      "total_cases": 32,
+      "nonzero_cases": 0,
+      "examples": []
+    },
+    "rule90": {
+      "total_cases": 32,
+      "nonzero_cases": 0,
+      "examples": []
+    }
+  },
+  "measured_true_diagram": {
+    "rule30": {
+      "total": 2000,
+      "nonzero": 0
+    },
+    "rule90": {
+      "total": 2000,
+      "nonzero": 0
+    }
+  },
+  "periodic_injection_p2_00": {
+    "period": [
+      0,
+      0
+    ],
+    "total": 14578,
+    "kappa_nonzero": 154,
+    "kappa_nonzero_without_local_mismatch": 0
+  },
+  "periodic_injection_p2_01": {
+    "period": [
+      0,
+      1
+    ],
+    "total": 14578,
+    "kappa_nonzero": 141,
+    "kappa_nonzero_without_local_mismatch": 0
+  }
+}

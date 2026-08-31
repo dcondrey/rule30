@@ -1,0 +1,17 @@
+rule 30, k=2, w=01, q=1, T=20000
+ R  saturate  fed  rejected_at  centre_mism  col-1_mism  pin_antecedents  pin_violations
+ 1         6   14         None            0           0             8207               0
+ 2         7   15         None            0           0            11790               0
+ 3         8   16         None            0           0             9654               0
+ 4         9   17         None            0           0            13925               0
+ 5        10   18         None            0           0             7103               0
+ 6        11   19         None            0           0            12132               0
+ 7        12   20         None            0           0            10083               0
+ 8        13   21         None            0           0            10735               0
+ 9        14   22         None            0           0            10144               0
+10        15   23         None            0           0             9307               0
+11        16   24         None            0           0            10919               0
+12        17   25         None            0           0             9963               0
+ALL PASS: True
+col_-1 smallest eventual period <= 512 on t in [9,20000]: None
+Diff_q events, q=1..16: [4274, 4274, 4274, 4272, 4273, 3585, 4273, 4273, 4273, 690, 4272, 4272, 4272, 4268, 4271, 2895]

@@ -1,0 +1,22 @@
+{
+  "400": {
+    "cap": 400,
+    "surviving": 2047
+  },
+  "4000": {
+    "cap": 4000,
+    "surviving": 2047,
+    "with_zero_set_r_defect": 0,
+    "with_one_phase_r_defect": 21
+  },
+  "40000": {
+    "cap": 40000,
+    "surviving": 2047,
+    "with_zero_set_r_defect": 0,
+    "with_one_phase_r_defect": 21
+  },
+  "cap_independent": true,
+  "count": [
+    2047
+  ]
+}

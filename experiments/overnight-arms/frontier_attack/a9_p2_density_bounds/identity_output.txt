@@ -1,0 +1,37 @@
+## Gate 1 - published horizon tables, recomputed two ways
+
+| w | zero H_max (sim) | 2*ceil(w/2) | extremal | 2^w-1 | one H_max (sim) | formula | extremizers | 2^w |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | 2 | 2 | 1 | 1 | 1 | 1 | 2 | 2 |
+| 2 | 2 | 2 | 3 | 3 | 3 | 3 | 4 | 4 |
+| 3 | 4 | 4 | 7 | 7 | 3 | 3 | 8 | 8 |
+| 4 | 4 | 4 | 15 | 15 | 5 | 5 | 16 | 16 |
+| 5 | 6 | 6 | 31 | 31 | 5 | 5 | 32 | 32 |
+| 6 | 6 | 6 | 63 | 63 | 7 | 7 | 64 | 64 |
+| 7 | 8 | 8 | 127 | 127 | 7 | 7 | 128 | 128 |
+| 8 | 8 | 8 | 255 | 255 | 9 | 9 | 256 | 256 |
+
+Gate 1: PASS  (both tables reproduced; identity holds on every nonzero row of radius <= 8: 174,752 rows)
+
+Gate 2 (random finite rows, n=4000, radius 1..14): PASS; longest run seen 14
+
+Gate 3a: frame-trick row extraction == naive simulator, all cells, t<300. PASS
+Gate 3b: identity holds for every T in 1..3000: PASS
+  max D(T) over that range = 12  (EXACT COMPUTATION, validation only)
+  m = index of nearest right-hand one, over centre-zero T: m=1: 750, m=2: 386, m=3: 202, m=4: 91, m=5: 46, m=6: 21, m=7: 13, m=8: 5, m=9: 1, m=10: 1, m=11: 1
+
+Gate 3c: row 47 Theorem A, violations in 1..3000: N_1(T) >= floor(log2(T+4))-1 -> 0; N_0(T) >= floor(log2(T+6))-2 -> 0  (re-check only; the bound is NOT new here)
+
+Gate 4a: Rule 90 lone-seed centre column, t<4096: ones at [0] -> identically 0 for t>=1, density 0.
+Gate 4b: Rule 90 finite row {-1,+1} has centre 0 through t=256: True. So Rule 90's zero-trace fibre contains a nonzero finite row, no left half is forced, and D is UNDEFINED for Rule 90. The identity has no Rule 90 analogue and cannot leak a positive-density conclusion to it.
+
+Gate 5 (forced zero-trace left half is a function of m alone, closed form 0^(m-1) 1 then k mod 2; exhaustive over all 32,766 right words of length <= 14): PASS
+  Consequence: every structure theorem about the right cone (Rowland 2006 Lemma 2 power-of-two periodic diagonals; row 47 obstruction 2) is inert for this criterion - only m survives.
+  Note P_m = 1 and P_(m+1) = (m+1) mod 2, so for EVEN m the forced pattern has two adjacent ones at m, m+1 and is not alternating there.
+
+## Summary
+- gate1_horizon_tables: PASS
+- gate2_random_rows: PASS
+- gate3_lone_seed: PASS
+- gate4_rule90: PASS
+- gate5_forced_form: PASS

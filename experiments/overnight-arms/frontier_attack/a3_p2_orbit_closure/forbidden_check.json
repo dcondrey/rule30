@@ -1,0 +1,525 @@
+{
+ "steps": 2000000,
+ "cells": {
+  "W0_H11": {
+   "R": 2048,
+   "P": 2048,
+   "missing": 0,
+   "missing_at_half_horizon": 0,
+   "recovered_between_T_half_and_T": 0,
+   "count_histogram_0_to_5": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "min_positive_count": 871,
+   "missing_detail": []
+  },
+  "W1_H9": {
+   "R": 13928,
+   "P": 13925,
+   "missing": 3,
+   "missing_at_half_horizon": 8,
+   "recovered_between_T_half_and_T": 5,
+   "count_histogram_0_to_5": {
+    "0": 3,
+    "1": 1,
+    "2": 5,
+    "3": 7,
+    "4": 12,
+    "5": 14
+   },
+   "min_positive_count": 1,
+   "missing_detail": [
+    {
+     "patch_key": 0,
+     "prefix_count": 8,
+     "suffix_count": 8
+    },
+    {
+     "patch_key": 7933952,
+     "prefix_count": 17,
+     "suffix_count": 14
+    },
+    {
+     "patch_key": 105119744,
+     "prefix_count": 15,
+     "suffix_count": 10
+    }
+   ]
+  },
+  "W1_H10": {
+   "R": 32952,
+   "P": 32898,
+   "missing": 54,
+   "missing_at_half_horizon": 219,
+   "recovered_between_T_half_and_T": 165,
+   "count_histogram_0_to_5": {
+    "0": 54,
+    "1": 85,
+    "2": 161,
+    "3": 230,
+    "4": 281,
+    "5": 291
+   },
+   "min_positive_count": 1,
+   "missing_detail": [
+    {
+     "patch_key": 0,
+     "prefix_count": 0,
+     "suffix_count": 0
+    },
+    {
+     "patch_key": 7,
+     "prefix_count": 8,
+     "suffix_count": 0
+    },
+    {
+     "patch_key": 52428800,
+     "prefix_count": 5,
+     "suffix_count": 1
+    },
+    {
+     "patch_key": 52458449,
+     "prefix_count": 11,
+     "suffix_count": 6
+    },
+    {
+     "patch_key": 52677178,
+     "prefix_count": 51,
+     "suffix_count": 18
+    },
+    {
+     "patch_key": 54791802,
+     "prefix_count": 8,
+     "suffix_count": 9
+    },
+    {
+     "patch_key": 63471616,
+     "prefix_count": 5,
+     "suffix_count": 0
+    },
+    {
+     "patch_key": 63471623,
+     "prefix_count": 12,
+     "suffix_count": 0
+    },
+    {
+     "patch_key": 63963136,
+     "prefix_count": 11,
+     "suffix_count": 11
+    },
+    {
+     "patch_key": 134217728,
+     "prefix_count": 0,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 149961864,
+     "prefix_count": 30,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 186676177,
+     "prefix_count": 11,
+     "suffix_count": 5
+    },
+    {
+     "patch_key": 188551228,
+     "prefix_count": 65,
+     "suffix_count": 17
+    },
+    {
+     "patch_key": 197689344,
+     "prefix_count": 5,
+     "suffix_count": 2
+    },
+    {
+     "patch_key": 198357504,
+     "prefix_count": 33,
+     "suffix_count": 11
+    },
+    {
+     "patch_key": 253755392,
+     "prefix_count": 2,
+     "suffix_count": 7
+    },
+    {
+     "patch_key": 285212672,
+     "prefix_count": 4,
+     "suffix_count": 3
+    },
+    {
+     "patch_key": 285242787,
+     "prefix_count": 79,
+     "suffix_count": 86
+    },
+    {
+     "patch_key": 304087040,
+     "prefix_count": 3,
+     "suffix_count": 6
+    },
+    {
+     "patch_key": 373555200,
+     "prefix_count": 0,
+     "suffix_count": 5
+    }
+   ]
+  },
+  "W2_H8": {
+   "R": 23328,
+   "P": 23322,
+   "missing": 6,
+   "missing_at_half_horizon": 30,
+   "recovered_between_T_half_and_T": 24,
+   "count_histogram_0_to_5": {
+    "0": 6,
+    "1": 6,
+    "2": 17,
+    "3": 36,
+    "4": 46,
+    "5": 49
+   },
+   "min_positive_count": 1,
+   "missing_detail": [
+    {
+     "patch_key": 0,
+     "prefix_count": 8,
+     "suffix_count": 8
+    },
+    {
+     "patch_key": 175053471744,
+     "prefix_count": 15,
+     "suffix_count": 10
+    },
+    {
+     "patch_key": 219214282752,
+     "prefix_count": 4,
+     "suffix_count": 8
+    },
+    {
+     "patch_key": 417787281408,
+     "prefix_count": 10,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 642196479041,
+     "prefix_count": 11,
+     "suffix_count": 26
+    },
+    {
+     "patch_key": 803329835008,
+     "prefix_count": 4,
+     "suffix_count": 14
+    }
+   ]
+  },
+  "W2_H9": {
+   "R": 55712,
+   "P": 55539,
+   "missing": 173,
+   "missing_at_half_horizon": 787,
+   "recovered_between_T_half_and_T": 614,
+   "count_histogram_0_to_5": {
+    "0": 173,
+    "1": 373,
+    "2": 582,
+    "3": 815,
+    "4": 899,
+    "5": 943
+   },
+   "min_positive_count": 1,
+   "missing_detail": [
+    {
+     "patch_key": 0,
+     "prefix_count": 0,
+     "suffix_count": 0
+    },
+    {
+     "patch_key": 31,
+     "prefix_count": 8,
+     "suffix_count": 0
+    },
+    {
+     "patch_key": 519792754688,
+     "prefix_count": 2,
+     "suffix_count": 1
+    },
+    {
+     "patch_key": 525435208704,
+     "prefix_count": 6,
+     "suffix_count": 12
+    },
+    {
+     "patch_key": 542636555395,
+     "prefix_count": 21,
+     "suffix_count": 10
+    },
+    {
+     "patch_key": 1069549603268,
+     "prefix_count": 8,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 1099511627776,
+     "prefix_count": 0,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 1133403170150,
+     "prefix_count": 21,
+     "suffix_count": 5
+    },
+    {
+     "patch_key": 1619304383474,
+     "prefix_count": 10,
+     "suffix_count": 6
+    },
+    {
+     "patch_key": 1625488033824,
+     "prefix_count": 3,
+     "suffix_count": 3
+    },
+    {
+     "patch_key": 1642126705664,
+     "prefix_count": 8,
+     "suffix_count": 1
+    },
+    {
+     "patch_key": 1642312635489,
+     "prefix_count": 30,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 2684457292712,
+     "prefix_count": 15,
+     "suffix_count": 10
+    },
+    {
+     "patch_key": 2707278595072,
+     "prefix_count": 10,
+     "suffix_count": 2
+    },
+    {
+     "patch_key": 3234212117661,
+     "prefix_count": 8,
+     "suffix_count": 7
+    },
+    {
+     "patch_key": 3332894621696,
+     "prefix_count": 4,
+     "suffix_count": 3
+    },
+    {
+     "patch_key": 3332927288583,
+     "prefix_count": 10,
+     "suffix_count": 9
+    },
+    {
+     "patch_key": 3783968920488,
+     "prefix_count": 15,
+     "suffix_count": 5
+    },
+    {
+     "patch_key": 3806790222848,
+     "prefix_count": 10,
+     "suffix_count": 1
+    },
+    {
+     "patch_key": 3806790252701,
+     "prefix_count": 19,
+     "suffix_count": 17
+    }
+   ]
+  },
+  "W3_H7": {
+   "R": 38656,
+   "P": 38646,
+   "missing": 10,
+   "missing_at_half_horizon": 102,
+   "recovered_between_T_half_and_T": 92,
+   "count_histogram_0_to_5": {
+    "0": 10,
+    "1": 37,
+    "2": 56,
+    "3": 145,
+    "4": 158,
+    "5": 220
+   },
+   "min_positive_count": 1,
+   "missing_detail": [
+    {
+     "patch_key": 0,
+     "prefix_count": 8,
+     "suffix_count": 8
+    },
+    {
+     "patch_key": 26457266978816,
+     "prefix_count": 15,
+     "suffix_count": 10
+    },
+    {
+     "patch_key": 48585209020416,
+     "prefix_count": 10,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 67933529244033,
+     "prefix_count": 8,
+     "suffix_count": 11
+    },
+    {
+     "patch_key": 110330734723072,
+     "prefix_count": 4,
+     "suffix_count": 14
+    },
+    {
+     "patch_key": 190587651654918,
+     "prefix_count": 19,
+     "suffix_count": 8
+    },
+    {
+     "patch_key": 211899738275968,
+     "prefix_count": 10,
+     "suffix_count": 9
+    },
+    {
+     "patch_key": 387407664922624,
+     "prefix_count": 4,
+     "suffix_count": 8
+    },
+    {
+     "patch_key": 391836925887495,
+     "prefix_count": 26,
+     "suffix_count": 7
+    },
+    {
+     "patch_key": 481774306296323,
+     "prefix_count": 11,
+     "suffix_count": 26
+    }
+   ]
+  },
+  "W3_H8": {
+   "R": 93312,
+   "P": 92729,
+   "missing": 583,
+   "missing_at_half_horizon": 2613,
+   "recovered_between_T_half_and_T": 2030,
+   "count_histogram_0_to_5": {
+    "0": 583,
+    "1": 1384,
+    "2": 2019,
+    "3": 2681,
+    "4": 2856,
+    "5": 3033
+   },
+   "min_positive_count": 1,
+   "missing_detail": [
+    {
+     "patch_key": 0,
+     "prefix_count": 0,
+     "suffix_count": 0
+    },
+    {
+     "patch_key": 127,
+     "prefix_count": 8,
+     "suffix_count": 0
+    },
+    {
+     "patch_key": 277699172024448,
+     "prefix_count": 4,
+     "suffix_count": 6
+    },
+    {
+     "patch_key": 277699418578193,
+     "prefix_count": 5,
+     "suffix_count": 9
+    },
+    {
+     "patch_key": 278343224575238,
+     "prefix_count": 3,
+     "suffix_count": 7
+    },
+    {
+     "patch_key": 559202129380487,
+     "prefix_count": 1,
+     "suffix_count": 5
+    },
+    {
+     "patch_key": 559796659011841,
+     "prefix_count": 4,
+     "suffix_count": 5
+    },
+    {
+     "patch_key": 562949953421312,
+     "prefix_count": 0,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 840677106091143,
+     "prefix_count": 9,
+     "suffix_count": 3
+    },
+    {
+     "patch_key": 843474989222900,
+     "prefix_count": 26,
+     "suffix_count": 8
+    },
+    {
+     "patch_key": 843474989230009,
+     "prefix_count": 18,
+     "suffix_count": 16
+    },
+    {
+     "patch_key": 843481040587532,
+     "prefix_count": 21,
+     "suffix_count": 5
+    },
+    {
+     "patch_key": 1130297953353728,
+     "prefix_count": 4,
+     "suffix_count": 3
+    },
+    {
+     "patch_key": 1130332198717583,
+     "prefix_count": 10,
+     "suffix_count": 9
+    },
+    {
+     "patch_key": 1399201032355968,
+     "prefix_count": 2,
+     "suffix_count": 4
+    },
+    {
+     "patch_key": 1962150985793298,
+     "prefix_count": 10,
+     "suffix_count": 12
+    },
+    {
+     "patch_key": 1962178966422663,
+     "prefix_count": 10,
+     "suffix_count": 1
+    },
+    {
+     "patch_key": 2520737498979601,
+     "prefix_count": 9,
+     "suffix_count": 3
+    },
+    {
+     "patch_key": 2523563114545922,
+     "prefix_count": 10,
+     "suffix_count": 3
+    },
+    {
+     "patch_key": 2523568971710464,
+     "prefix_count": 9,
+     "suffix_count": 18
+    }
+   ]
+  }
+ }
+}

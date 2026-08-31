@@ -1,0 +1,393 @@
+{
+ "A4_complexity": {
+  "prefix_length": 200000,
+  "nmax": 64,
+  "rows": [
+   {
+    "n": 1,
+    "p_n": 2,
+    "exceeds_n": true,
+    "cap_2n": 2
+   },
+   {
+    "n": 2,
+    "p_n": 4,
+    "exceeds_n": true,
+    "cap_2n": 4
+   },
+   {
+    "n": 3,
+    "p_n": 8,
+    "exceeds_n": true,
+    "cap_2n": 8
+   },
+   {
+    "n": 4,
+    "p_n": 16,
+    "exceeds_n": true,
+    "cap_2n": 16
+   },
+   {
+    "n": 5,
+    "p_n": 32,
+    "exceeds_n": true,
+    "cap_2n": 32
+   },
+   {
+    "n": 6,
+    "p_n": 64,
+    "exceeds_n": true,
+    "cap_2n": 64
+   },
+   {
+    "n": 7,
+    "p_n": 128,
+    "exceeds_n": true,
+    "cap_2n": 128
+   },
+   {
+    "n": 8,
+    "p_n": 256,
+    "exceeds_n": true,
+    "cap_2n": 256
+   },
+   {
+    "n": 9,
+    "p_n": 512,
+    "exceeds_n": true,
+    "cap_2n": 512
+   },
+   {
+    "n": 10,
+    "p_n": 1024,
+    "exceeds_n": true,
+    "cap_2n": 1024
+   },
+   {
+    "n": 11,
+    "p_n": 2048,
+    "exceeds_n": true,
+    "cap_2n": 2048
+   },
+   {
+    "n": 12,
+    "p_n": 4096,
+    "exceeds_n": true,
+    "cap_2n": 4096
+   },
+   {
+    "n": 13,
+    "p_n": 8192,
+    "exceeds_n": true,
+    "cap_2n": 8192
+   },
+   {
+    "n": 14,
+    "p_n": 16384,
+    "exceeds_n": true,
+    "cap_2n": 16384
+   },
+   {
+    "n": 15,
+    "p_n": 32683,
+    "exceeds_n": true,
+    "cap_2n": 32768
+   },
+   {
+    "n": 16,
+    "p_n": 62377,
+    "exceeds_n": true,
+    "cap_2n": 65536
+   },
+   {
+    "n": 17,
+    "p_n": 102485,
+    "exceeds_n": true,
+    "cap_2n": 131072
+   },
+   {
+    "n": 18,
+    "p_n": 139865,
+    "exceeds_n": true,
+    "cap_2n": 262144
+   },
+   {
+    "n": 19,
+    "p_n": 166239,
+    "exceeds_n": true,
+    "cap_2n": 524288
+   },
+   {
+    "n": 20,
+    "p_n": 181993,
+    "exceeds_n": true,
+    "cap_2n": 1048576
+   },
+   {
+    "n": 21,
+    "p_n": 190644,
+    "exceeds_n": true,
+    "cap_2n": 2097152
+   },
+   {
+    "n": 22,
+    "p_n": 195179,
+    "exceeds_n": true,
+    "cap_2n": 4194304
+   },
+   {
+    "n": 23,
+    "p_n": 197529,
+    "exceeds_n": true,
+    "cap_2n": 8388608
+   },
+   {
+    "n": 24,
+    "p_n": 198743,
+    "exceeds_n": true,
+    "cap_2n": 16777216
+   },
+   {
+    "n": 25,
+    "p_n": 199366,
+    "exceeds_n": true,
+    "cap_2n": 33554432
+   },
+   {
+    "n": 26,
+    "p_n": 199681,
+    "exceeds_n": true,
+    "cap_2n": 67108864
+   },
+   {
+    "n": 27,
+    "p_n": 199830,
+    "exceeds_n": true,
+    "cap_2n": 134217728
+   },
+   {
+    "n": 28,
+    "p_n": 199899,
+    "exceeds_n": true,
+    "cap_2n": 268435456
+   },
+   {
+    "n": 29,
+    "p_n": 199939,
+    "exceeds_n": true,
+    "cap_2n": 536870912
+   },
+   {
+    "n": 30,
+    "p_n": 199957,
+    "exceeds_n": true,
+    "cap_2n": 1073741824
+   },
+   {
+    "n": 31,
+    "p_n": 199963,
+    "exceeds_n": true,
+    "cap_2n": 2147483648
+   },
+   {
+    "n": 32,
+    "p_n": 199965,
+    "exceeds_n": true,
+    "cap_2n": 4294967296
+   },
+   {
+    "n": 33,
+    "p_n": 199966,
+    "exceeds_n": true,
+    "cap_2n": 8589934592
+   },
+   {
+    "n": 34,
+    "p_n": 199967,
+    "exceeds_n": true,
+    "cap_2n": 17179869184
+   },
+   {
+    "n": 35,
+    "p_n": 199966,
+    "exceeds_n": true,
+    "cap_2n": 34359738368
+   },
+   {
+    "n": 36,
+    "p_n": 199965,
+    "exceeds_n": true,
+    "cap_2n": 68719476736
+   },
+   {
+    "n": 37,
+    "p_n": 199964,
+    "exceeds_n": true,
+    "cap_2n": 137438953472
+   },
+   {
+    "n": 38,
+    "p_n": 199963,
+    "exceeds_n": true,
+    "cap_2n": 274877906944
+   },
+   {
+    "n": 39,
+    "p_n": 199962,
+    "exceeds_n": true,
+    "cap_2n": 549755813888
+   },
+   {
+    "n": 40,
+    "p_n": 199961,
+    "exceeds_n": true,
+    "cap_2n": 1099511627776
+   },
+   {
+    "n": 41,
+    "p_n": 199960,
+    "exceeds_n": true,
+    "cap_2n": 2199023255552
+   },
+   {
+    "n": 42,
+    "p_n": 199959,
+    "exceeds_n": true,
+    "cap_2n": 4398046511104
+   },
+   {
+    "n": 43,
+    "p_n": 199958,
+    "exceeds_n": true,
+    "cap_2n": 8796093022208
+   },
+   {
+    "n": 44,
+    "p_n": 199957,
+    "exceeds_n": true,
+    "cap_2n": 17592186044416
+   },
+   {
+    "n": 45,
+    "p_n": 199956,
+    "exceeds_n": true,
+    "cap_2n": 35184372088832
+   },
+   {
+    "n": 46,
+    "p_n": 199955,
+    "exceeds_n": true,
+    "cap_2n": 70368744177664
+   },
+   {
+    "n": 47,
+    "p_n": 199954,
+    "exceeds_n": true,
+    "cap_2n": 140737488355328
+   },
+   {
+    "n": 48,
+    "p_n": 199953,
+    "exceeds_n": true,
+    "cap_2n": 281474976710656
+   },
+   {
+    "n": 49,
+    "p_n": 199952,
+    "exceeds_n": true,
+    "cap_2n": 562949953421312
+   },
+   {
+    "n": 50,
+    "p_n": 199951,
+    "exceeds_n": true,
+    "cap_2n": 1125899906842624
+   },
+   {
+    "n": 51,
+    "p_n": 199950,
+    "exceeds_n": true,
+    "cap_2n": 2251799813685248
+   },
+   {
+    "n": 52,
+    "p_n": 199949,
+    "exceeds_n": true,
+    "cap_2n": 4503599627370496
+   },
+   {
+    "n": 53,
+    "p_n": 199948,
+    "exceeds_n": true,
+    "cap_2n": 9007199254740992
+   },
+   {
+    "n": 54,
+    "p_n": 199947,
+    "exceeds_n": true,
+    "cap_2n": 18014398509481984
+   },
+   {
+    "n": 55,
+    "p_n": 199946,
+    "exceeds_n": true,
+    "cap_2n": 36028797018963968
+   },
+   {
+    "n": 56,
+    "p_n": 199945,
+    "exceeds_n": true,
+    "cap_2n": 72057594037927936
+   },
+   {
+    "n": 57,
+    "p_n": 199944,
+    "exceeds_n": true,
+    "cap_2n": 144115188075855872
+   },
+   {
+    "n": 58,
+    "p_n": 199943,
+    "exceeds_n": true,
+    "cap_2n": 288230376151711744
+   },
+   {
+    "n": 59,
+    "p_n": 199942,
+    "exceeds_n": true,
+    "cap_2n": 576460752303423488
+   },
+   {
+    "n": 60,
+    "p_n": 199941,
+    "exceeds_n": true,
+    "cap_2n": 1152921504606846976
+   },
+   {
+    "n": 61,
+    "p_n": 199940,
+    "exceeds_n": true,
+    "cap_2n": 2305843009213693952
+   },
+   {
+    "n": 62,
+    "p_n": 199939,
+    "exceeds_n": true,
+    "cap_2n": 4611686018427387904
+   },
+   {
+    "n": 63,
+    "p_n": 199938,
+    "exceeds_n": true,
+    "cap_2n": 9223372036854775808
+   },
+   {
+    "n": 64,
+    "p_n": 199937,
+    "exceeds_n": true,
+    "cap_2n": 18446744073709551616
+   }
+  ],
+  "morse_hedlund": "eventually periodic iff p(n) <= n for SOME n; a word of eventual period q has p(n) <= q + preperiod for all n, so p(n) > n on n <= 64 excludes only periods in that range"
+ }
+}

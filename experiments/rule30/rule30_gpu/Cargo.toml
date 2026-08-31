@@ -1,0 +1,12 @@
+[package]
+name = "rule30_gpu"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wgpu = "26"
+pollster = "0.4"
+bytemuck = { version = "1", features = ["derive"] }
+
+[profile.release]
+opt-level = 3

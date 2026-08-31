@@ -1,0 +1,142 @@
+{
+ "left_permutive": [
+  15,
+  30,
+  45,
+  60,
+  75,
+  90,
+  105,
+  120,
+  135,
+  150,
+  165,
+  180,
+  195,
+  210,
+  225,
+  240
+ ],
+ "n": 9,
+ "rows": [
+  {
+   "rule": 15,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 30,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 45,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 60,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 75,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 90,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 105,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 120,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 135,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 150,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 165,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 180,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 195,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 210,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 225,
+   "n": 9,
+   "count": 512,
+   "full": true
+  },
+  {
+   "rule": 240,
+   "n": 9,
+   "count": 512,
+   "full": true
+  }
+ ],
+ "exceptions": [],
+ "controls": [
+  [
+   110,
+   310
+  ],
+  [
+   128,
+   10
+  ],
+  [
+   4,
+   3
+  ],
+  [
+   0,
+   2
+  ],
+  [
+   232,
+   18
+  ]
+ ]
+}

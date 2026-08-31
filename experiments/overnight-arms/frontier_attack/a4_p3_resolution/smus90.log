@@ -1,0 +1,6 @@
+rule 90 n=4   ground=12    mu=7      iters=11    0.0s
+rule 90 n=6   ground=24    mu=9      iters=27    0.0s
+rule 90 n=8   ground=40    mu=17     iters=86    0.0s
+rule 90 n=10  ground=60    mu=21     iters=137   0.1s
+rule 90 n=12  ground=84    mu=25     iters=315   2.3s
+wrote smus90.json

@@ -1,0 +1,78 @@
+== 0. calibration (instrument must find known relations) ==
+calib Thue-Morse (n=1,d=2): nullity=0  (expect 0: instrument is tight)
+calib Thue-Morse (n=1,d=3): nullity=1  (expect >0: known witness)
+calib Rule 90 centre  (n=0,d=0): nullity=1  (expect >0: caught at order 0)
+
+== 1. Theorem N: witness family, positive half, exact series arithmetic ==
+Theorem N  G_1 = sum_j x^(2^(1j)):  x + G + G^(2^1) has 0 nonzero coefficients below x^(2^2048) (expect 0); Frobenius supports i=0..0 pairwise disjoint: True; separation lemma at d=100, 34 blocks past the threshold 2^e > d pairwise disjoint and all above d: True
+Theorem N  G_2 = sum_j x^(2^(2j)):  x + G + G^(2^2) has 0 nonzero coefficients below x^(2^2048) (expect 0); Frobenius supports i=0..1 pairwise disjoint: True; separation lemma at d=100, 75 blocks past the threshold 2^e > d pairwise disjoint and all above d: True
+Theorem N  G_3 = sum_j x^(2^(3j)):  x + G + G^(2^3) has 0 nonzero coefficients below x^(2^2048) (expect 0); Frobenius supports i=0..2 pairwise disjoint: True; separation lemma at d=100, 116 blocks past the threshold 2^e > d pairwise disjoint and all above d: True
+Theorem N  G_4 = sum_j x^(2^(4j)):  x + G + G^(2^4) has 0 nonzero coefficients below x^(2^2048) (expect 0); Frobenius supports i=0..3 pairwise disjoint: True; separation lemma at d=100, 157 blocks past the threshold 2^e > d pairwise disjoint and all above d: True
+Theorem N  G_5 = sum_j x^(2^(5j)):  x + G + G^(2^5) has 0 nonzero coefficients below x^(2^2048) (expect 0); Frobenius supports i=0..4 pairwise disjoint: True; separation lemma at d=100, 198 blocks past the threshold 2^e > d pairwise disjoint and all above d: True
+Theorem N  G_6 = sum_j x^(2^(6j)):  x + G + G^(2^6) has 0 nonzero coefficients below x^(2^2048) (expect 0); Frobenius supports i=0..5 pairwise disjoint: True; separation lemma at d=100, 239 blocks past the threshold 2^e > d pairwise disjoint and all above d: True
+Theorem N  G_7 = sum_j x^(2^(7j)):  x + G + G^(2^7) has 0 nonzero coefficients below x^(2^2048) (expect 0); Frobenius supports i=0..6 pairwise disjoint: True; separation lemma at d=100, 280 blocks past the threshold 2^e > d pairwise disjoint and all above d: True
+Theorem N  G_8 = sum_j x^(2^(8j)):  x + G + G^(2^8) has 0 nonzero coefficients below x^(2^2048) (expect 0); Frobenius supports i=0..7 pairwise disjoint: True; separation lemma at d=100, 321 blocks past the threshold 2^e > d pairwise disjoint and all above d: True
+Theorem N  disconfirming control: same check with the 2^e > d threshold REMOVED (n=3, d=100) -> disjoint: False (expect False; a True here would mean the separation check is vacuous)
+
+== 2. Theorem U: counting + explicit-witness forms, on A051023 ==
+Theorem U Rule30 (n=0,d=6,N=8): unknowns=14 rows=8 nullity=6 counting bound=6  ok
+Theorem U Rule30 (n=0,d=6,N=14): unknowns=14 rows=14 nullity=1 counting bound=0  ok
+Theorem U Rule30 (n=0,d=6,N=40): unknowns=14 rows=40 nullity=0 counting bound=0  ok
+Theorem U Rule30 (n=1,d=5,N=12): unknowns=18 rows=12 nullity=6 counting bound=6  ok
+Theorem U Rule30 (n=1,d=5,N=18): unknowns=18 rows=18 nullity=2 counting bound=0  ok
+Theorem U Rule30 (n=1,d=5,N=60): unknowns=18 rows=60 nullity=0 counting bound=0  ok
+Theorem U Rule30 (n=2,d=4,N=15): unknowns=20 rows=15 nullity=5 counting bound=5  ok
+Theorem U Rule30 (n=2,d=4,N=20): unknowns=20 rows=20 nullity=0 counting bound=0  ok
+Theorem U Rule30 (n=2,d=4,N=80): unknowns=20 rows=80 nullity=0 counting bound=0  ok
+Theorem U Rule30 (n=3,d=3,N=16): unknowns=20 rows=16 nullity=4 counting bound=4  ok
+Theorem U Rule30 (n=3,d=3,N=20): unknowns=20 rows=20 nullity=1 counting bound=0  ok
+Theorem U Rule30 (n=3,d=3,N=90): unknowns=20 rows=90 nullity=0 counting bound=0  ok
+Theorem U Rule30 (n=4,d=2,N=15): unknowns=18 rows=15 nullity=4 counting bound=3  ok
+Theorem U Rule30 (n=4,d=2,N=18): unknowns=18 rows=18 nullity=2 counting bound=0  ok
+Theorem U Rule30 (n=4,d=2,N=70): unknowns=18 rows=70 nullity=0 counting bound=0  ok
+Theorem U Rule30 explicit witness (n=0,d=N-1=16,N=17): nullity=17 (expect >0); named witness P_{-1}=sum_{m<N} a(m)x^m, P_0=1 residual on rows [0,17) = 0 (expect 0)
+Theorem U Rule30 explicit witness (n=0,d=N-1=32,N=33): nullity=33 (expect >0); named witness P_{-1}=sum_{m<N} a(m)x^m, P_0=1 residual on rows [0,33) = 0 (expect 0)
+Theorem U Rule30 explicit witness (n=0,d=N-1=64,N=65): nullity=65 (expect >0); named witness P_{-1}=sum_{m<N} a(m)x^m, P_0=1 residual on rows [0,65) = 0 (expect 0)
+
+== 3. Theorem U on the Thue-Morse control (must hold for any sequence) ==
+Theorem U ThueMorse (n=0,d=6,N=8): unknowns=14 rows=8 nullity=6 counting bound=6  ok
+Theorem U ThueMorse (n=0,d=6,N=14): unknowns=14 rows=14 nullity=0 counting bound=0  ok
+Theorem U ThueMorse (n=0,d=6,N=40): unknowns=14 rows=40 nullity=0 counting bound=0  ok
+Theorem U ThueMorse (n=1,d=5,N=12): unknowns=18 rows=12 nullity=6 counting bound=6  ok
+Theorem U ThueMorse (n=1,d=5,N=18): unknowns=18 rows=18 nullity=3 counting bound=0  ok
+Theorem U ThueMorse (n=1,d=5,N=60): unknowns=18 rows=60 nullity=3 counting bound=0  ok
+Theorem U ThueMorse (n=2,d=4,N=15): unknowns=20 rows=15 nullity=5 counting bound=5  ok
+Theorem U ThueMorse (n=2,d=4,N=20): unknowns=20 rows=20 nullity=3 counting bound=0  ok
+Theorem U ThueMorse (n=2,d=4,N=80): unknowns=20 rows=80 nullity=3 counting bound=0  ok
+Theorem U ThueMorse (n=3,d=3,N=16): unknowns=20 rows=16 nullity=4 counting bound=4  ok
+Theorem U ThueMorse (n=3,d=3,N=20): unknowns=20 rows=20 nullity=1 counting bound=0  ok
+Theorem U ThueMorse (n=3,d=3,N=90): unknowns=20 rows=90 nullity=1 counting bound=0  ok
+Theorem U ThueMorse (n=4,d=2,N=15): unknowns=18 rows=15 nullity=4 counting bound=3  ok
+Theorem U ThueMorse (n=4,d=2,N=18): unknowns=18 rows=18 nullity=2 counting bound=0  ok
+Theorem U ThueMorse (n=4,d=2,N=70): unknowns=18 rows=70 nullity=0 counting bound=0  ok
+Theorem U ThueMorse explicit witness (n=0,d=N-1=16,N=17): nullity=17 (expect >0); named witness P_{-1}=sum_{m<N} a(m)x^m, P_0=1 residual on rows [0,17) = 0 (expect 0)
+Theorem U ThueMorse explicit witness (n=0,d=N-1=32,N=33): nullity=33 (expect >0); named witness P_{-1}=sum_{m<N} a(m)x^m, P_0=1 residual on rows [0,33) = 0 (expect 0)
+Theorem U ThueMorse explicit witness (n=0,d=N-1=64,N=65): nullity=65 (expect >0); named witness P_{-1}=sum_{m<N} a(m)x^m, P_0=1 residual on rows [0,65) = 0 (expect 0)
+
+== 4. Rule 90 / Rule 30 continuity control ==
+control Rule 90 (n=0,d=0,N=208): nullity=1 RELATION EXISTS -> n* = 0
+control Rule 90 (n=1,d=5,N=272): nullity=12 RELATION EXISTS -> n* = 0
+control Rule 30 (n=0,d=50,N=608): nullity=0 none -> S(n,d) certified
+control Rule 30 (n=1,d=20,N=452): nullity=0 none -> S(n,d) certified
+control Rule 30 (n=2,d=20,N=536): nullity=0 none -> S(n,d) certified
+control Rule 30 (n=3,d=20,N=620): nullity=0 none -> S(n,d) certified
+
+== 5. exchange rate ==
+Theorem U exchange rate at N=32000 terms: certifiable region is {(n,d) : (n+2)(d+1) <= N}
+  order n=    0 -> max certifiable height d = 15999
+  order n=    1 -> max certifiable height d = 10665
+  order n=    2 -> max certifiable height d = 7999
+  order n=    3 -> max certifiable height d = 6399
+  order n=    6 -> max certifiable height d = 3999
+  order n=   12 -> max certifiable height d = 2284
+  order n=  100 -> max certifiable height d = 312
+  order n= 1000 -> max certifiable height d = 30
+  max order certifiable at height >= 1: n = 15998
+  This bounds a complexity function on a finite prefix and can never establish the infinite statement (Theorem O / obstruction H).
+
+VERDICT: all checks passed. Scope: Theorem N's lower bound is proved on paper, not here; every table above is finite-prefix data and bounds a complexity function only.

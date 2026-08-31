@@ -1,0 +1,143 @@
+{
+ "caveat": "LOWER BOUND ONLY -- truncated follower sets; see obstruction H",
+ "k": 2,
+ "N": 12,
+ "results": {
+  "30": [
+   {
+    "n": 1,
+    "m": 11,
+    "prefixes": 4,
+    "distinct_followers_lower_bound": 4
+   },
+   {
+    "n": 2,
+    "m": 10,
+    "prefixes": 12,
+    "distinct_followers_lower_bound": 12
+   },
+   {
+    "n": 3,
+    "m": 9,
+    "prefixes": 32,
+    "distinct_followers_lower_bound": 32
+   },
+   {
+    "n": 4,
+    "m": 8,
+    "prefixes": 80,
+    "distinct_followers_lower_bound": 73
+   },
+   {
+    "n": 5,
+    "m": 7,
+    "prefixes": 200,
+    "distinct_followers_lower_bound": 137
+   },
+   {
+    "n": 6,
+    "m": 6,
+    "prefixes": 496,
+    "distinct_followers_lower_bound": 169
+   },
+   {
+    "n": 7,
+    "m": 5,
+    "prefixes": 1208,
+    "distinct_followers_lower_bound": 126
+   },
+   {
+    "n": 8,
+    "m": 4,
+    "prefixes": 2916,
+    "distinct_followers_lower_bound": 55
+   },
+   {
+    "n": 9,
+    "m": 3,
+    "prefixes": 6964,
+    "distinct_followers_lower_bound": 19
+   },
+   {
+    "n": 10,
+    "m": 2,
+    "prefixes": 16476,
+    "distinct_followers_lower_bound": 7
+   },
+   {
+    "n": 11,
+    "m": 1,
+    "prefixes": 38616,
+    "distinct_followers_lower_bound": 3
+   }
+  ],
+  "90": [
+   {
+    "n": 1,
+    "m": 11,
+    "prefixes": 4,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 2,
+    "m": 10,
+    "prefixes": 16,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 3,
+    "m": 9,
+    "prefixes": 64,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 4,
+    "m": 8,
+    "prefixes": 256,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 5,
+    "m": 7,
+    "prefixes": 1024,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 6,
+    "m": 6,
+    "prefixes": 4096,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 7,
+    "m": 5,
+    "prefixes": 16384,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 8,
+    "m": 4,
+    "prefixes": 65536,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 9,
+    "m": 3,
+    "prefixes": 262144,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 10,
+    "m": 2,
+    "prefixes": 1048576,
+    "distinct_followers_lower_bound": 1
+   },
+   {
+    "n": 11,
+    "m": 1,
+    "prefixes": 4194304,
+    "distinct_followers_lower_bound": 1
+   }
+  ]
+ }
+}

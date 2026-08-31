@@ -1,0 +1,62 @@
+[
+ {
+  "rule": 30,
+  "k": 1,
+  "w": "01",
+  "T": 4000,
+  "qmax": 256,
+  "phase": 0,
+  "T0": 3,
+  "col_m1_min_eventual_period_le_qmax": null,
+  "tail_len": 3993,
+  "seconds": 0.0933370590209961
+ },
+ {
+  "rule": 30,
+  "k": 2,
+  "w": "01",
+  "T": 4000,
+  "qmax": 256,
+  "phase": 0,
+  "T0": 5,
+  "col_m1_min_eventual_period_le_qmax": null,
+  "tail_len": 3991,
+  "seconds": 0.09003186225891113
+ },
+ {
+  "rule": 30,
+  "k": 4,
+  "w": "01",
+  "T": 4000,
+  "qmax": 256,
+  "phase": 0,
+  "T0": 9,
+  "col_m1_min_eventual_period_le_qmax": null,
+  "tail_len": 3987,
+  "seconds": 0.09404492378234863
+ },
+ {
+  "rule": 30,
+  "k": 8,
+  "w": "01",
+  "T": 4000,
+  "qmax": 256,
+  "phase": 0,
+  "T0": 17,
+  "col_m1_min_eventual_period_le_qmax": null,
+  "tail_len": 3979,
+  "seconds": 0.09414196014404297
+ },
+ {
+  "rule": 30,
+  "k": 16,
+  "w": "01",
+  "T": 4000,
+  "qmax": 256,
+  "phase": 0,
+  "T0": 33,
+  "col_m1_min_eventual_period_le_qmax": null,
+  "tail_len": 3963,
+  "seconds": 0.09875988960266113
+ }
+]

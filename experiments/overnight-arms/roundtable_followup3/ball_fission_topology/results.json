@@ -1,0 +1,115 @@
+{
+  "premise_check": {
+    "rule30": {
+      "parent_violations": 0,
+      "reading1_final_component_count": 1,
+      "reading1_component_trace_sample": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reading2_events": {
+        "total_fissions": 1937,
+        "total_merges": 4984,
+        "total_annihilations": 0,
+        "total_creations": 0
+      }
+    },
+    "rule90": {
+      "parent_violations": 0,
+      "reading1_final_component_count": 1,
+      "reading1_component_trace_sample": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reading2_events": {
+        "total_fissions": 2409,
+        "total_merges": 0,
+        "total_annihilations": 2394,
+        "total_creations": 0
+      }
+    }
+  },
+  "kill_condition_test": {
+    "baseline": {
+      "reading1_final_components": 1,
+      "reading2_events": {
+        "total_fissions": 1937,
+        "total_merges": 4984,
+        "total_annihilations": 0,
+        "total_creations": 0
+      }
+    },
+    "[0,0]_period2": {
+      "reading1_final_components": 45,
+      "reading1_component_delta": 44,
+      "reading2_events": {
+        "total_fissions": 1935,
+        "total_merges": 4920,
+        "total_annihilations": 46,
+        "total_creations": 41
+      },
+      "reading2_delta_from_baseline": {
+        "total_fissions": -2,
+        "total_merges": -64,
+        "total_annihilations": 46,
+        "total_creations": 41
+      }
+    },
+    "[0,1]_period2": {
+      "reading1_final_components": 37,
+      "reading1_component_delta": 36,
+      "reading2_events": {
+        "total_fissions": 1936,
+        "total_merges": 5009,
+        "total_annihilations": 19,
+        "total_creations": 18
+      },
+      "reading2_delta_from_baseline": {
+        "total_fissions": -1,
+        "total_merges": 25,
+        "total_annihilations": 19,
+        "total_creations": 18
+      }
+    },
+    "[0,1,1]_period3": {
+      "reading1_final_components": 7,
+      "reading1_component_delta": 6,
+      "reading2_events": {
+        "total_fissions": 1934,
+        "total_merges": 5015,
+        "total_annihilations": 15,
+        "total_creations": 12
+      },
+      "reading2_delta_from_baseline": {
+        "total_fissions": -3,
+        "total_merges": 31,
+        "total_annihilations": 15,
+        "total_creations": 12
+      }
+    }
+  },
+  "context": {
+    "steps": 300,
+    "half_width": 320,
+    "full_width": 641,
+    "column0_fraction_of_columns": 0.0015600624024961
+  }
+}

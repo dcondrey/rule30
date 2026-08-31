@@ -1,0 +1,69 @@
+{
+ "steps": 2000000,
+ "theorem_mismatches": 0,
+ "n_verified": 8054,
+ "allzero_band_height": {
+  "0": {
+   "measured": 1999999,
+   "closed_form": 1999999
+  },
+  "1": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "2": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "4": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "8": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "16": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "32": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "64": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "128": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "1024": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "8192": {
+   "measured": 951424,
+   "closed_form": 951424
+  },
+  "65536": {
+   "measured": 951424,
+   "closed_form": 951424
+  }
+ },
+ "diagonal_K_rule90": {
+  "1024": 256,
+  "2048": 512,
+  "4096": 1024,
+  "8192": 2048,
+  "16384": 4096,
+  "32768": 8192,
+  "65536": 16384,
+  "131072": 32768,
+  "262144": 65536,
+  "524288": 131072,
+  "1048576": 262144,
+  "2000000": 524288
+ }
+}

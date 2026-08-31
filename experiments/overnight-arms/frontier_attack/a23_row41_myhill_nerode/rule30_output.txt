@@ -1,0 +1,73 @@
+
+=== rule 30 sweep: pairs=20 W=30 kseeds=[6, 8, 10, 12, 14, 16] ===
+  kseed= 6 (d=12) phase=01  index(19)=     27  n_seeds=     64  n_prefixes=     27  anomalies=    0  [0.1s]
+  kseed= 6 (d=12) phase=10  index(19)=     35  n_seeds=     64  n_prefixes=     37  anomalies=    0  [0.1s]
+  kseed= 8 (d=16) phase=01  index(19)=     88  n_seeds=    256  n_prefixes=     89  anomalies=    0  [0.2s]
+  kseed= 8 (d=16) phase=10  index(19)=    120  n_seeds=    256  n_prefixes=    120  anomalies=    0  [0.2s]
+  kseed=10 (d=20) phase=01  index(19)=    281  n_seeds=   1024  n_prefixes=    285  anomalies=    0  [1.1s]
+  kseed=10 (d=20) phase=10  index(19)=    362  n_seeds=   1024  n_prefixes=    366  anomalies=    0  [1.1s]
+  kseed=12 (d=24) phase=01  index(19)=    890  n_seeds=   4096  n_prefixes=    905  anomalies=    1  [4.6s]
+  kseed=12 (d=24) phase=10  index(19)=   1190  n_seeds=   4096  n_prefixes=   1203  anomalies=    0  [4.6s]
+  kseed=14 (d=28) phase=01  index(19)=   2842  n_seeds=  16384  n_prefixes=   2872  anomalies=    2  [20.2s]
+  kseed=14 (d=28) phase=10  index(19)=   3804  n_seeds=  16384  n_prefixes=   3833  anomalies=    7  [20.2s]
+  kseed=16 (d=32) phase=01  index(19)=   8951  n_seeds=  65536  n_prefixes=   8974  anomalies=   35  [90.1s]
+  kseed=16 (d=32) phase=10  index(19)=  11982  n_seeds=  65536  n_prefixes=  11995  anomalies=   66  [90.1s]
+
+  headline table: kseed, d, phase, index_lower_bound(s=pairs-1)
+  kseed   d  phase   index
+      6   12   01       27
+      6   12   10       35
+      8   16   01       88
+      8   16   10      120
+     10   20   01      281
+     10   20   10      362
+     12   24   01      890
+     12   24   10     1190
+     14   28   01     2842
+     14   28   10     3804
+     16   32   01     8951
+     16   32   10    11982
+
+  full per-s curve at the largest kseed tested:
+  phase 01:
+    s=  0  index=   9008  n_prefixes=      2  anomalies=    2
+    s=  1  index=   9008  n_prefixes=      4  anomalies=    4
+    s=  2  index=   9002  n_prefixes=      8  anomalies=    8
+    s=  3  index=   8997  n_prefixes=     16  anomalies=   16
+    s=  4  index=   8996  n_prefixes=     32  anomalies=   32
+    s=  5  index=   8993  n_prefixes=     64  anomalies=   64
+    s=  6  index=   8990  n_prefixes=    128  anomalies=  128
+    s=  7  index=   8987  n_prefixes=    256  anomalies=  256
+    s=  8  index=   8982  n_prefixes=    512  anomalies=  512
+    s=  9  index=   8980  n_prefixes=   1024  anomalies= 1023
+    s= 10  index=   8977  n_prefixes=   2017  anomalies= 1913
+    s= 11  index=   8974  n_prefixes=   3644  anomalies= 2653
+    s= 12  index=   8969  n_prefixes=   5511  anomalies= 2438
+    s= 13  index=   8968  n_prefixes=   6998  anomalies= 1684
+    s= 14  index=   8966  n_prefixes=   7916  anomalies= 1014
+    s= 15  index=   8963  n_prefixes=   8422  anomalies=  565
+    s= 16  index=   8958  n_prefixes=   8732  anomalies=  272
+    s= 17  index=   8955  n_prefixes=   8878  anomalies=  129
+    s= 18  index=   8954  n_prefixes=   8952  anomalies=   56
+    s= 19  index=   8951  n_prefixes=   8974  anomalies=   35
+  phase 10:
+    s=  0  index=  12061  n_prefixes=      2  anomalies=    2
+    s=  1  index=  12059  n_prefixes=      4  anomalies=    4
+    s=  2  index=  12056  n_prefixes=      8  anomalies=    8
+    s=  3  index=  12052  n_prefixes=     16  anomalies=   16
+    s=  4  index=  12048  n_prefixes=     32  anomalies=   32
+    s=  5  index=  12043  n_prefixes=     64  anomalies=   64
+    s=  6  index=  12036  n_prefixes=    128  anomalies=  128
+    s=  7  index=  12031  n_prefixes=    256  anomalies=  256
+    s=  8  index=  12025  n_prefixes=    512  anomalies=  512
+    s=  9  index=  12019  n_prefixes=   1024  anomalies= 1024
+    s= 10  index=  12015  n_prefixes=   2041  anomalies= 2009
+    s= 11  index=  12011  n_prefixes=   3883  anomalies= 3254
+    s= 12  index=  12005  n_prefixes=   6316  anomalies= 3572
+    s= 13  index=  12001  n_prefixes=   8552  anomalies= 2769
+    s= 14  index=  11996  n_prefixes=  10111  anomalies= 1741
+    s= 15  index=  11993  n_prefixes=  11007  anomalies=  996
+    s= 16  index=  11991  n_prefixes=  11520  anomalies=  528
+    s= 17  index=  11987  n_prefixes=  11793  anomalies=  264
+    s= 18  index=  11984  n_prefixes=  11935  anomalies=  125
+    s= 19  index=  11982  n_prefixes=  11995  anomalies=   66

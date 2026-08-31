@@ -1,0 +1,39 @@
+{
+  "schema": "crosstalk.algorithm-challenge-file.v1",
+  "id": "rule30-effort-500-564-v1",
+  "title": "Rule 30 centre column: metered effort, n in [500,564)",
+  "evaluator_id": "wasm-i64-primary",
+  "evaluation": {
+    "id": "rule30-centre-column-500-564",
+    "version": "1",
+    "description": "Metered effort to return bit n of OEIS A051023 for n in [500,564)",
+    "metrics": [
+      {
+        "name": "accuracy",
+        "unit": "ratio",
+        "direction": "Maximize",
+        "reproduction_tolerance": 0.0
+      },
+      {
+        "name": "fuel_consumed",
+        "unit": "fuel",
+        "direction": "Minimize",
+        "reproduction_tolerance": 0.0
+      }
+    ],
+    "hard_constraints": [
+      "all_cases_correct",
+      "resource_limit_not_hit"
+    ],
+    "timeout_secs": 1800,
+    "deterministic": true,
+    "independent_reproduction_required": true,
+    "reproduction_evaluator_id": "wasm-i64-reproduction",
+    "distinct_attestation_keys_required": false
+  },
+  "primary_metric": "fuel_consumed",
+  "minimum_improvement": 1.0,
+  "hidden_test_commitment_sha256": "9fe70c809040e44baa1ec57c20a6c9e7d68344ff50c20495c3cefe7fe556fac4",
+  "baseline_id": "naive",
+  "max_candidates": 8
+}

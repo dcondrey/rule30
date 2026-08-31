@@ -1,0 +1,15 @@
+{"empty": false, "tail_nodes": 38, "bisim_classes": 10, "raw_states": 428, "R": 1, "pin": false, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 14, "bisim_classes": 9, "raw_states": 224, "R": 1, "pin": true, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 108, "bisim_classes": 15, "raw_states": 1445, "R": 2, "pin": false, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 53, "bisim_classes": 20, "raw_states": 607, "R": 2, "pin": true, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 432, "bisim_classes": 34, "raw_states": 5574, "R": 3, "pin": false, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 113, "bisim_classes": 44, "raw_states": 1776, "R": 3, "pin": true, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 1536, "bisim_classes": 73, "raw_states": 22087, "R": 4, "pin": false, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 273, "bisim_classes": 91, "raw_states": 5253, "R": 4, "pin": true, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 4864, "bisim_classes": 140, "raw_states": 88136, "R": 5, "pin": false, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 739, "bisim_classes": 165, "raw_states": 15700, "R": 5, "pin": true, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 17152, "bisim_classes": 229, "raw_states": 352329, "R": 6, "pin": false, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 2036, "bisim_classes": 267, "raw_states": 47059, "R": 6, "pin": true, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 61440, "bisim_classes": 349, "raw_states": 1409098, "R": 7, "pin": false, "k": 2, "q": 1, "w": "01", "rule": 30}
+{"empty": false, "tail_nodes": 5297, "bisim_classes": 466, "raw_states": 141112, "R": 7, "pin": true, "k": 2, "q": 1, "w": "01", "rule": 30}
+DONE

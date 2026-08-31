@@ -1,0 +1,10 @@
+rule 30: wrote /Volumes/A/researchpapers/13-rule30/experiments/overnight-arms/frontier_attack/a3_p2_orbit_closure/band_census_rule30.json (178.12s gen)
+  validation: {"band_vs_naive_simulator": true, "centre_vs_common_rule30": true, "centre_vs_stored_bin": true, "centre_vs_stored_bin_len": 2000000, "fixed_points": {"all_zeros": {"centre_density": 0.0, "rule30_fixed": true, "rule90_fixed": true}, "checker_A": {"centre_density": 1.0, "rule30_fixed": true, "rule90_fixed": false}, "checker_B": {"centre_density": 0.0, "rule30_fixed": true, "rule90_fixed": false}}}
+  all_zeros  max height by W=0..8: [19, 8, 7, 6, 5, 4, 3, 2, 1]
+  checker_A  max height by W=0..8: [23, 17, 16, 12, 11, 8, 7, 5, 4]
+  checker_B  max height by W=0..8: [19, 17, 14, 13, 11, 10, 5, 4, 1]
+rule 90: wrote /Volumes/A/researchpapers/13-rule30/experiments/overnight-arms/frontier_attack/a3_p2_orbit_closure/band_census_rule90.json (206.04s gen)
+  validation: {"band_vs_lucas_rule90": true, "centre_vs_closed_form_rule90": true, "centre_vs_stored_bin": true, "centre_vs_stored_bin_len": 2000000, "fixed_points": {"all_zeros": {"centre_density": 0.0, "rule30_fixed": true, "rule90_fixed": true}, "checker_A": {"centre_density": 1.0, "rule30_fixed": true, "rule90_fixed": false}, "checker_B": {"centre_density": 0.0, "rule30_fixed": true, "rule90_fixed": false}}
+  all_zeros  max height by W=0..8: [1999999, 951424, 951424, 951424, 951424, 951424, 951424, 951424, 951424]
+  checker_A  max height by W=0..8: [1, 0, 0, 0, 0, 0, 0, 0, 0]
+  checker_B  max height by W=0..8: [1999999, 1, 1, 1, 1, 1, 1, 1, 1]

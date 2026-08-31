@@ -1,0 +1,11 @@
+cross-check OK: rule 90 column 0 matches common/ensemble_filter for 4096 steps
+c_t = 0 for every 1 <= t < 65536: True
+r_t = 1 exactly at t in [1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535]  (N = 65536)
+matches the closed form t = 2^j - 1: True
+consecutive gaps between ones of r: [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768] (strictly increasing: True)
+finite search for an eventual period of r|Z: {"found": false, "max_p": 4096, "max_t0": 512, "n": 65535}
+column -1 equals column +1 from t=1 (mirror symmetry): True
+OR-latch pin s(t,x)=1 => s(t,x-1) = NOT s(t+1,x), T=300: rule 30 {'antecedents': 45477, 'violations': 0} ; rule 90 {'antecedents': 7227, 'violations': 7227}
+
+VERDICT: rule 90 falsifies the rule-generic form of R1's implication: True
+wrote rule90_output.json

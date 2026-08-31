@@ -1,0 +1,3 @@
+controls C6-C7: PASS
+phase 01 d=32: parity closed form verified on every transition (19108 post-knee states), certified level 33
+phase 10 d=32: parity closed form verified on every transition (12981 post-knee states), certified level 33

@@ -1,0 +1,78 @@
+cross-check OK: `columns` matches common/rule30.simulate_seed for 4 seeds x 4 columns x 200 steps
+
+=== 0a. register row 38's pair: {0} vs {0,1}, rule 30 ===
+{
+  "rule": "30",
+  "seed_a": "0b1",
+  "seed_b": "0b11",
+  "n": 4000,
+  "centre_traces_agree_up_to": 4000,
+  "zero_set_size": 2018,
+  "r_differences_on_zero_set": 0,
+  "first_r_difference": null,
+  "last_r_difference": null,
+  "r_differs_anywhere": 2
+}
+defect front (leftmost differing column) t=0..59: [1, 1, 3, 3, 5, 5, 7, 7, 9, 9, 11, 11, 13, 13, 15, 15, 17, 17, 19, 19, 21, 21, 23, 23, 25, 25, 27, 27, 29, 29, 31, 31, 33, 33, 35, 35, 37, 37, 39, 39, 41, 41, 43, 43, 45, 45, 47, 47, 49, 49, 51, 51, 53, 53, 55, 55, 57, 57, 59, 59]
+front at column <= 1 at 2 of 4000 times, last t = 1
+
+=== 0a'. rule 90 on the same pair: VACUOUS, not a control ===
+(rule 90's two seeds' centre traces diverge at t=1, so the zero set
+ of the shared trace is empty and nothing is tested.  The real rule 90
+ control is the rule-90 branch of the sweep in 0b.)
+{
+  "rule": "90",
+  "seed_a": "0b1",
+  "seed_b": "0b11",
+  "n": 4000,
+  "centre_traces_agree_up_to": 1,
+  "zero_set_size": 0,
+  "r_differences_on_zero_set": 0,
+  "first_r_difference": null,
+  "last_r_difference": null,
+  "r_differs_anywhere": 1
+}
+
+=== 0b. exhaustive seed sweep, centre-trace collision classes ===
+rule 30 w= 8:    128 seeds ->     64 trace classes,    32 collision classes,    127 colliding pairs; pairs with r differing on Z: 0 (at some t>=2: 0)
+    class ['0b1', '0b101', '0b10101', '0b1010101', '0b11010101', '0b110101', '0b1101', '0b11']: 1 distinct r|Z (|Z|=193), last disagreement t=None
+    class ['0b1000001', '0b11000001']: 1 distinct r|Z (|Z|=197), last disagreement t=None
+    class ['0b100001', '0b10100001', '0b1100001']: 1 distinct r|Z (|Z|=211), last disagreement t=None
+    class ['0b10001', '0b1010001', '0b11010001', '0b110001']: 1 distinct r|Z (|Z|=203), last disagreement t=None
+    class ['0b10110001', '0b1110001']: 1 distinct r|Z (|Z|=199), last disagreement t=None
+    class ['0b1001', '0b101001', '0b10101001', '0b1101001', '0b11001']: 1 distinct r|Z (|Z|=196), last disagreement t=None
+    class ['0b1001001', '0b11001001']: 1 distinct r|Z (|Z|=196), last disagreement t=None
+    class ['0b1011001', '0b11011001', '0b111001']: 1 distinct r|Z (|Z|=200), last disagreement t=None
+    class ['0b10111001', '0b1111001']: 1 distinct r|Z (|Z|=205), last disagreement t=None
+    class ['0b1000101', '0b11000101']: 1 distinct r|Z (|Z|=210), last disagreement t=None
+    class ['0b100101', '0b10100101', '0b1100101']: 1 distinct r|Z (|Z|=207), last disagreement t=None
+    class ['0b10110101', '0b1110101']: 1 distinct r|Z (|Z|=187), last disagreement t=None
+    class ['0b1001101', '0b11001101']: 1 distinct r|Z (|Z|=197), last disagreement t=None
+    class ['0b101101', '0b10101101', '0b1101101', '0b11101']: 1 distinct r|Z (|Z|=212), last disagreement t=None
+    class ['0b1011101', '0b11011101', '0b111101']: 1 distinct r|Z (|Z|=214), last disagreement t=None
+    class ['0b10111101', '0b1111101']: 1 distinct r|Z (|Z|=210), last disagreement t=None
+    class ['0b1000011', '0b11000011']: 1 distinct r|Z (|Z|=199), last disagreement t=None
+    class ['0b100011', '0b10100011', '0b1100011']: 1 distinct r|Z (|Z|=217), last disagreement t=None
+    class ['0b10011', '0b1010011', '0b11010011', '0b110011']: 1 distinct r|Z (|Z|=199), last disagreement t=None
+    class ['0b10110011', '0b1110011']: 1 distinct r|Z (|Z|=193), last disagreement t=None
+    class ['0b1011', '0b101011', '0b10101011', '0b1101011', '0b11011', '0b111']: 1 distinct r|Z (|Z|=213), last disagreement t=None
+    class ['0b1001011', '0b11001011']: 1 distinct r|Z (|Z|=189), last disagreement t=None
+    class ['0b1011011', '0b11011011', '0b111011']: 1 distinct r|Z (|Z|=195), last disagreement t=None
+    class ['0b10111011', '0b1111011']: 1 distinct r|Z (|Z|=194), last disagreement t=None
+    class ['0b1000111', '0b11000111']: 1 distinct r|Z (|Z|=198), last disagreement t=None
+    class ['0b100111', '0b10100111', '0b1100111']: 1 distinct r|Z (|Z|=204), last disagreement t=None
+    class ['0b10111', '0b1010111', '0b11010111', '0b110111', '0b1111']: 1 distinct r|Z (|Z|=190), last disagreement t=None
+    class ['0b10110111', '0b1110111']: 1 distinct r|Z (|Z|=206), last disagreement t=None
+    class ['0b1001111', '0b11001111']: 1 distinct r|Z (|Z|=190), last disagreement t=None
+    class ['0b101111', '0b10101111', '0b1101111', '0b11111']: 1 distinct r|Z (|Z|=209), last disagreement t=None
+    class ['0b1011111', '0b11011111', '0b111111']: 1 distinct r|Z (|Z|=219), last disagreement t=None
+    class ['0b10111111', '0b1111111']: 1 distinct r|Z (|Z|=203), last disagreement t=None
+rule 30 w=12:   2048 seeds ->   1024 trace classes,   512 collision classes,   2047 colliding pairs; pairs with r differing on Z: 0 (at some t>=2: 0)
+rule 30 w=16:  32768 seeds ->  16365 trace classes,  8190 collision classes,  32842 colliding pairs; pairs with r differing on Z: 18 (at some t>=2: 18)
+rule 30 w=20: 524288 seeds -> 258980 trace classes, 130897 collision classes, 539078 colliding pairs; pairs with r differing on Z: 558 (at some t>=2: 558)
+rule 90 w= 8:    128 seeds ->    128 trace classes,     0 collision classes,      0 colliding pairs; pairs with r differing on Z: 0 (at some t>=2: 0)
+rule 90 w=12:   2048 seeds ->   2048 trace classes,     0 collision classes,      0 colliding pairs; pairs with r differing on Z: 0 (at some t>=2: 0)
+rule 90 w=16:  32768 seeds ->  32768 trace classes,     0 collision classes,      0 colliding pairs; pairs with r differing on Z: 0 (at some t>=2: 0)
+rule 90 w=20: 524288 seeds -> 524288 trace classes,     0 collision classes,      0 colliding pairs; pairs with r differing on Z: 0 (at some t>=2: 0)
+
+wrote step0_output.json

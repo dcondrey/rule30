@@ -1,0 +1,341 @@
+{
+  "schema": "crosstalk.algorithm-report.v1",
+  "challenge_id": "rule30-effort-500-564-v1",
+  "challenge_sha256": "c6780abacbfde7060375002390b28064a4e46ecbec4e1fd78d68fb800ad430f9",
+  "hidden_test_commitment_sha256": "9fe70c809040e44baa1ec57c20a6c9e7d68344ff50c20495c3cefe7fe556fac4",
+  "baseline": {
+    "primary": {
+      "id": "evaluation:eb25f4cf6bd63e756d2ae36d",
+      "evaluator_id": "wasm-i64-primary",
+      "evaluator_version": "0.1.0+wasmtime-29",
+      "specification_sha256": "0fbb880f65f2e0d90cfb8e6708b9edbd9239601b425182fac37bb2386c6af178",
+      "candidate_id": "naive",
+      "candidate_sha256": "fbbd0a4390f8dee1b9161b676f4acb24cf23b2ff566910901e962558c5ed0023",
+      "status": "Verified",
+      "measurements": [
+        {
+          "name": "accuracy",
+          "value": 1.0,
+          "unit": "ratio",
+          "uncertainty": null,
+          "sample_size": 64
+        },
+        {
+          "name": "fuel_consumed",
+          "value": 1307699296.0,
+          "unit": "fuel",
+          "uncertainty": null,
+          "sample_size": 64
+        }
+      ],
+      "constraints": [
+        {
+          "name": "all_cases_correct",
+          "passed": true,
+          "diagnostics": "passed"
+        },
+        {
+          "name": "resource_limit_not_hit",
+          "passed": true,
+          "diagnostics": "passed"
+        }
+      ],
+      "diagnostics": "evaluated 64 committed hidden cases; correct=64; trapped=false; resource_limit_hit=false",
+      "raw_output_sha256": "61c8ae075a6177a5a257349327773144c0c4fa75bd0407cf8af53630eeaabaef",
+      "started_at": 1787809595,
+      "completed_at": 1787809595,
+      "environment": {
+        "function_export": "solve",
+        "runtime": "wasmtime",
+        "test_count": "64",
+        "test_set_commitment_sha256": "9fe70c809040e44baa1ec57c20a6c9e7d68344ff50c20495c3cefe7fe556fac4"
+      }
+    },
+    "reproduction": {
+      "id": "evaluation:e9902284b4d1d93e33a1021c",
+      "evaluator_id": "wasm-i64-reproduction",
+      "evaluator_version": "0.1.0+wasmtime-29",
+      "specification_sha256": "0fbb880f65f2e0d90cfb8e6708b9edbd9239601b425182fac37bb2386c6af178",
+      "candidate_id": "naive",
+      "candidate_sha256": "fbbd0a4390f8dee1b9161b676f4acb24cf23b2ff566910901e962558c5ed0023",
+      "status": "Verified",
+      "measurements": [
+        {
+          "name": "accuracy",
+          "value": 1.0,
+          "unit": "ratio",
+          "uncertainty": null,
+          "sample_size": 64
+        },
+        {
+          "name": "fuel_consumed",
+          "value": 1307699296.0,
+          "unit": "fuel",
+          "uncertainty": null,
+          "sample_size": 64
+        }
+      ],
+      "constraints": [
+        {
+          "name": "all_cases_correct",
+          "passed": true,
+          "diagnostics": "passed"
+        },
+        {
+          "name": "resource_limit_not_hit",
+          "passed": true,
+          "diagnostics": "passed"
+        }
+      ],
+      "diagnostics": "evaluated 64 committed hidden cases; correct=64; trapped=false; resource_limit_hit=false",
+      "raw_output_sha256": "c3a3360dff7170f3868a25716df5e526fda822642ad6847ceb5ac42fa9f6360f",
+      "started_at": 1787809595,
+      "completed_at": 1787809595,
+      "environment": {
+        "function_export": "solve",
+        "runtime": "wasmtime",
+        "test_count": "64",
+        "test_set_commitment_sha256": "9fe70c809040e44baa1ec57c20a6c9e7d68344ff50c20495c3cefe7fe556fac4"
+      }
+    },
+    "agreed": true,
+    "mismatches": []
+  },
+  "baseline_value": 1307699296.0,
+  "trials": [
+    {
+      "candidate_id": "bitparallel",
+      "candidate_sha256": "b5a38fc7f1e943b84aa687c6ecf48bad70b79bf8dc8979fc4a297ee1df0d60c5",
+      "outcome": {
+        "primary": {
+          "id": "evaluation:66a6d0f2e92fdddf48228065",
+          "evaluator_id": "wasm-i64-primary",
+          "evaluator_version": "0.1.0+wasmtime-29",
+          "specification_sha256": "0fbb880f65f2e0d90cfb8e6708b9edbd9239601b425182fac37bb2386c6af178",
+          "candidate_id": "bitparallel",
+          "candidate_sha256": "b5a38fc7f1e943b84aa687c6ecf48bad70b79bf8dc8979fc4a297ee1df0d60c5",
+          "status": "Verified",
+          "measurements": [
+            {
+              "name": "accuracy",
+              "value": 1.0,
+              "unit": "ratio",
+              "uncertainty": null,
+              "sample_size": 64
+            },
+            {
+              "name": "fuel_consumed",
+              "value": 32332990.0,
+              "unit": "fuel",
+              "uncertainty": null,
+              "sample_size": 64
+            }
+          ],
+          "constraints": [
+            {
+              "name": "all_cases_correct",
+              "passed": true,
+              "diagnostics": "passed"
+            },
+            {
+              "name": "resource_limit_not_hit",
+              "passed": true,
+              "diagnostics": "passed"
+            }
+          ],
+          "diagnostics": "evaluated 64 committed hidden cases; correct=64; trapped=false; resource_limit_hit=false",
+          "raw_output_sha256": "140e4f023df9c58eabbd1fc00694431278cecb4471bc58b56a166cdd024e1fef",
+          "started_at": 1787809595,
+          "completed_at": 1787809595,
+          "environment": {
+            "function_export": "solve",
+            "runtime": "wasmtime",
+            "test_count": "64",
+            "test_set_commitment_sha256": "9fe70c809040e44baa1ec57c20a6c9e7d68344ff50c20495c3cefe7fe556fac4"
+          }
+        },
+        "reproduction": {
+          "id": "evaluation:feeeb1c83e6f1efe5ebc4dfa",
+          "evaluator_id": "wasm-i64-reproduction",
+          "evaluator_version": "0.1.0+wasmtime-29",
+          "specification_sha256": "0fbb880f65f2e0d90cfb8e6708b9edbd9239601b425182fac37bb2386c6af178",
+          "candidate_id": "bitparallel",
+          "candidate_sha256": "b5a38fc7f1e943b84aa687c6ecf48bad70b79bf8dc8979fc4a297ee1df0d60c5",
+          "status": "Verified",
+          "measurements": [
+            {
+              "name": "accuracy",
+              "value": 1.0,
+              "unit": "ratio",
+              "uncertainty": null,
+              "sample_size": 64
+            },
+            {
+              "name": "fuel_consumed",
+              "value": 32332990.0,
+              "unit": "fuel",
+              "uncertainty": null,
+              "sample_size": 64
+            }
+          ],
+          "constraints": [
+            {
+              "name": "all_cases_correct",
+              "passed": true,
+              "diagnostics": "passed"
+            },
+            {
+              "name": "resource_limit_not_hit",
+              "passed": true,
+              "diagnostics": "passed"
+            }
+          ],
+          "diagnostics": "evaluated 64 committed hidden cases; correct=64; trapped=false; resource_limit_hit=false",
+          "raw_output_sha256": "0d2764dc2f9ba8bfde6cf4088f0451a38a4f8e376fe29904e8218becbbf299ce",
+          "started_at": 1787809595,
+          "completed_at": 1787809596,
+          "environment": {
+            "function_export": "solve",
+            "runtime": "wasmtime",
+            "test_count": "64",
+            "test_set_commitment_sha256": "9fe70c809040e44baa1ec57c20a6c9e7d68344ff50c20495c3cefe7fe556fac4"
+          }
+        },
+        "agreed": true,
+        "mismatches": []
+      },
+      "primary_value": 32332990.0,
+      "improvement": 1275366306.0,
+      "eligible": true,
+      "rejection_reasons": []
+    }
+  ],
+  "winner_candidate_id": "bitparallel",
+  "winner_improvement": 1275366306.0,
+  "verification_records": [
+    {
+      "id": "evaluation:eb25f4cf6bd63e756d2ae36d",
+      "kind": "Benchmark",
+      "status": "Verified",
+      "subject_id": "naive",
+      "evaluator_id": "wasm-i64-primary",
+      "evaluator_version": "0.1.0+wasmtime-29",
+      "specification_sha256": "0fbb880f65f2e0d90cfb8e6708b9edbd9239601b425182fac37bb2386c6af178",
+      "input_sha256": "fbbd0a4390f8dee1b9161b676f4acb24cf23b2ff566910901e962558c5ed0023",
+      "output_sha256": "61c8ae075a6177a5a257349327773144c0c4fa75bd0407cf8af53630eeaabaef",
+      "measurements": [
+        {
+          "name": "accuracy",
+          "value": 1.0,
+          "unit": "ratio",
+          "uncertainty": null,
+          "sample_size": 64
+        },
+        {
+          "name": "fuel_consumed",
+          "value": 1307699296.0,
+          "unit": "fuel",
+          "uncertainty": null,
+          "sample_size": 64
+        }
+      ],
+      "diagnostics": "evaluated 64 committed hidden cases; correct=64; trapped=false; resource_limit_hit=false",
+      "started_at": 1787809595,
+      "completed_at": 1787809595,
+      "reproduction_of": null
+    },
+    {
+      "id": "evaluation:e9902284b4d1d93e33a1021c",
+      "kind": "Reproduction",
+      "status": "Verified",
+      "subject_id": "naive",
+      "evaluator_id": "wasm-i64-reproduction",
+      "evaluator_version": "0.1.0+wasmtime-29",
+      "specification_sha256": "0fbb880f65f2e0d90cfb8e6708b9edbd9239601b425182fac37bb2386c6af178",
+      "input_sha256": "fbbd0a4390f8dee1b9161b676f4acb24cf23b2ff566910901e962558c5ed0023",
+      "output_sha256": "c3a3360dff7170f3868a25716df5e526fda822642ad6847ceb5ac42fa9f6360f",
+      "measurements": [
+        {
+          "name": "accuracy",
+          "value": 1.0,
+          "unit": "ratio",
+          "uncertainty": null,
+          "sample_size": 64
+        },
+        {
+          "name": "fuel_consumed",
+          "value": 1307699296.0,
+          "unit": "fuel",
+          "uncertainty": null,
+          "sample_size": 64
+        }
+      ],
+      "diagnostics": "evaluated 64 committed hidden cases; correct=64; trapped=false; resource_limit_hit=false",
+      "started_at": 1787809595,
+      "completed_at": 1787809595,
+      "reproduction_of": "evaluation:eb25f4cf6bd63e756d2ae36d"
+    },
+    {
+      "id": "evaluation:66a6d0f2e92fdddf48228065",
+      "kind": "Benchmark",
+      "status": "Verified",
+      "subject_id": "bitparallel",
+      "evaluator_id": "wasm-i64-primary",
+      "evaluator_version": "0.1.0+wasmtime-29",
+      "specification_sha256": "0fbb880f65f2e0d90cfb8e6708b9edbd9239601b425182fac37bb2386c6af178",
+      "input_sha256": "b5a38fc7f1e943b84aa687c6ecf48bad70b79bf8dc8979fc4a297ee1df0d60c5",
+      "output_sha256": "140e4f023df9c58eabbd1fc00694431278cecb4471bc58b56a166cdd024e1fef",
+      "measurements": [
+        {
+          "name": "accuracy",
+          "value": 1.0,
+          "unit": "ratio",
+          "uncertainty": null,
+          "sample_size": 64
+        },
+        {
+          "name": "fuel_consumed",
+          "value": 32332990.0,
+          "unit": "fuel",
+          "uncertainty": null,
+          "sample_size": 64
+        }
+      ],
+      "diagnostics": "evaluated 64 committed hidden cases; correct=64; trapped=false; resource_limit_hit=false",
+      "started_at": 1787809595,
+      "completed_at": 1787809595,
+      "reproduction_of": null
+    },
+    {
+      "id": "evaluation:feeeb1c83e6f1efe5ebc4dfa",
+      "kind": "Reproduction",
+      "status": "Verified",
+      "subject_id": "bitparallel",
+      "evaluator_id": "wasm-i64-reproduction",
+      "evaluator_version": "0.1.0+wasmtime-29",
+      "specification_sha256": "0fbb880f65f2e0d90cfb8e6708b9edbd9239601b425182fac37bb2386c6af178",
+      "input_sha256": "b5a38fc7f1e943b84aa687c6ecf48bad70b79bf8dc8979fc4a297ee1df0d60c5",
+      "output_sha256": "0d2764dc2f9ba8bfde6cf4088f0451a38a4f8e376fe29904e8218becbbf299ce",
+      "measurements": [
+        {
+          "name": "accuracy",
+          "value": 1.0,
+          "unit": "ratio",
+          "uncertainty": null,
+          "sample_size": 64
+        },
+        {
+          "name": "fuel_consumed",
+          "value": 32332990.0,
+          "unit": "fuel",
+          "uncertainty": null,
+          "sample_size": 64
+        }
+      ],
+      "diagnostics": "evaluated 64 committed hidden cases; correct=64; trapped=false; resource_limit_hit=false",
+      "started_at": 1787809595,
+      "completed_at": 1787809596,
+      "reproduction_of": "evaluation:66a6d0f2e92fdddf48228065"
+    }
+  ]
+}

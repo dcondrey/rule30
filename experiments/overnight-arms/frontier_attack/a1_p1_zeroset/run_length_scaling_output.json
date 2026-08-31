@@ -1,0 +1,88 @@
+{
+  "rows": [
+    {
+      "T": 1024,
+      "P": 64,
+      "log2_TP": 16.0,
+      "rule30_longest_run": 15,
+      "rule30_p": 30,
+      "rule30_t0": 370,
+      "bernoulli_null_mean": 15.35,
+      "bernoulli_null_min": 14,
+      "bernoulli_null_max": 18
+    },
+    {
+      "T": 2048,
+      "P": 128,
+      "log2_TP": 18.0,
+      "rule30_longest_run": 16,
+      "rule30_p": 80,
+      "rule30_t0": 992,
+      "bernoulli_null_mean": 17.15,
+      "bernoulli_null_min": 15,
+      "bernoulli_null_max": 21
+    },
+    {
+      "T": 4096,
+      "P": 256,
+      "log2_TP": 20.0,
+      "rule30_longest_run": 18,
+      "rule30_p": 148,
+      "rule30_t0": 1855,
+      "bernoulli_null_mean": 19.35,
+      "bernoulli_null_min": 17,
+      "bernoulli_null_max": 23
+    },
+    {
+      "T": 8192,
+      "P": 256,
+      "log2_TP": 21.0,
+      "rule30_longest_run": 18,
+      "rule30_p": 148,
+      "rule30_t0": 1855,
+      "bernoulli_null_mean": 20.65,
+      "bernoulli_null_min": 18,
+      "bernoulli_null_max": 25
+    },
+    {
+      "T": 16384,
+      "P": 512,
+      "log2_TP": 23.0,
+      "rule30_longest_run": 24,
+      "rule30_p": 110,
+      "rule30_t0": 13219,
+      "bernoulli_null_mean": 22.5,
+      "bernoulli_null_min": 20,
+      "bernoulli_null_max": 28
+    },
+    {
+      "T": 32768,
+      "P": 512,
+      "log2_TP": 24.0,
+      "rule30_longest_run": 24,
+      "rule30_p": 110,
+      "rule30_t0": 13219,
+      "bernoulli_null_mean": 23.05,
+      "bernoulli_null_min": 21,
+      "bernoulli_null_max": 28
+    },
+    {
+      "T": 65536,
+      "P": 512,
+      "log2_TP": 25.0,
+      "rule30_longest_run": 24,
+      "rule30_p": 110,
+      "rule30_t0": 13219,
+      "bernoulli_null_mean": 24.25,
+      "bernoulli_null_min": 22,
+      "bernoulli_null_max": 28
+    }
+  ],
+  "rule90": {
+    "T": 4096,
+    "P": 8,
+    "longest_run": 4094,
+    "p": 1,
+    "t0": 1
+  }
+}

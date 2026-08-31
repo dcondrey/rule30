@@ -1,0 +1,72 @@
+a21 / phi_anf.py -- exact ANF of  r_t = phi_t(c_0..c_{t-1})
+tmax = 16
+
+=== rule 30 ===
+  t  well-def   deg  #monomials  supp  min_var  reach  dep(c_0)  missing vars                c_{t-1} linear+isolated
+   1  True        1           1     1  0            1  True      []                          True
+   2  True        1           2     2  0            2  True      []                          True
+   3  True        2           4     3  0            3  True      []                          True
+   4  True        2           6     4  0            4  True      []                          True
+   5  True        3          10     5  0            5  True      []                          True
+   6  True        3          18     6  0            6  True      []                          True
+   7  True        4          34     7  0            7  True      []                          True
+   8  True        5          60     8  0            8  True      []                          True
+   9  True        6         106     9  0            9  True      []                          True
+  10  True        6         188    10  0           10  True      []                          True
+  11  True        7         370    11  0           11  True      []                          True
+  12  True        8         712    12  0           12  True      []                          True
+  13  True        9        1366    13  0           13  True      []                          True
+  14  True        9        2650    14  0           14  True      []                          True
+  15  True       11        5144    15  0           15  True      []                          True
+  16  True       12        9942    16  0           16  True      []                          True
+
+=== rule 90 ===
+  t  well-def   deg  #monomials  supp  min_var  reach  dep(c_0)  missing vars                c_{t-1} linear+isolated
+   1  True        1           1     1  0            1  True      []                          True
+   2  True        1           1     1  1            1  False     [0]                         True
+   3  True        1           2     2  0            3  True      [1]                         True
+   4  True        1           2     2  1            3  False     [0, 2]                      True
+   5  True        1           2     2  2            3  False     [0, 1, 3]                   True
+   6  True        1           2     2  3            3  False     [0, 1, 2, 4]                True
+   7  True        1           3     3  0            7  True      [1, 2, 3, 5]                True
+   8  True        1           3     3  1            7  False     [0, 2, 3, 4, 6]             True
+   9  True        1           3     3  2            7  False     [0, 1, 3, 4, 5, 7]          True
+  10  True        1           3     3  3            7  False     [0, 1, 2, 4, 5, 6]... (7)   True
+  11  True        1           3     3  4            7  False     [0, 1, 2, 3, 5, 6]... (8)   True
+  12  True        1           3     3  5            7  False     [0, 1, 2, 3, 4, 6]... (9)   True
+  13  True        1           3     3  6            7  False     [0, 1, 2, 3, 4, 5]... (10)  True
+  14  True        1           3     3  7            7  False     [0, 1, 2, 3, 4, 5]... (11)  True
+  15  True        1           4     4  0           15  True      [1, 2, 3, 4, 5, 6]... (11)  True
+  16  True        1           4     4  1           15  False     [0, 2, 3, 4, 5, 6]... (12)  True
+
+=== arity / width independence (extra free bits b_t..b_{t+e-1}) ===
+  rule 30  t= 4  extra=1  well-defined=True  identical to extra=0: True
+  rule 30  t= 4  extra=2  well-defined=True  identical to extra=0: True
+  rule 30  t= 4  extra=3  well-defined=True  identical to extra=0: True
+  rule 30  t= 6  extra=1  well-defined=True  identical to extra=0: True
+  rule 30  t= 6  extra=2  well-defined=True  identical to extra=0: True
+  rule 30  t= 6  extra=3  well-defined=True  identical to extra=0: True
+  rule 30  t= 8  extra=1  well-defined=True  identical to extra=0: True
+  rule 30  t= 8  extra=2  well-defined=True  identical to extra=0: True
+  rule 30  t= 8  extra=3  well-defined=True  identical to extra=0: True
+  rule 30  t=10  extra=1  well-defined=True  identical to extra=0: True
+  rule 30  t=10  extra=2  well-defined=True  identical to extra=0: True
+  rule 30  t=10  extra=3  well-defined=True  identical to extra=0: True
+  rule 90  t= 4  extra=1  well-defined=True  identical to extra=0: True
+  rule 90  t= 4  extra=2  well-defined=True  identical to extra=0: True
+  rule 90  t= 4  extra=3  well-defined=True  identical to extra=0: True
+  rule 90  t= 6  extra=1  well-defined=True  identical to extra=0: True
+  rule 90  t= 6  extra=2  well-defined=True  identical to extra=0: True
+  rule 90  t= 6  extra=3  well-defined=True  identical to extra=0: True
+  rule 90  t= 8  extra=1  well-defined=True  identical to extra=0: True
+  rule 90  t= 8  extra=2  well-defined=True  identical to extra=0: True
+  rule 90  t= 8  extra=3  well-defined=True  identical to extra=0: True
+  rule 90  t=10  extra=1  well-defined=True  identical to extra=0: True
+  rule 90  t=10  extra=2  well-defined=True  identical to extra=0: True
+  rule 90  t=10  extra=3  well-defined=True  identical to extra=0: True
+
+=== phi_t predicts r_t on random wide left-supported rows ===
+  rule 30  t=14: 2000 random rows, 0 mispredictions
+  rule 90  t=14: 2000 random rows, 0 mispredictions
+
+wrote phi_anf_results.json

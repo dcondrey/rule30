@@ -1,0 +1,19 @@
+
+Kill 1 coverage past the knee: 2^12 seeds, offset 5
+  phase 01: 180 surviving states, active width 27..29, state length 34
+    M  classes  non-singleton  classes with >1 DISTINCT state
+     8       15             15                              8
+    12       30             28                              4
+    16       35             33                              0
+    20       35             33                              0
+    24       35             33                              0
+    28       35             33                              0
+  phase 10: 142 surviving states, active width 27..30, state length 35
+    M  classes  non-singleton  classes with >1 DISTINCT state
+     8       15             14                              9
+    12       31             29                             10
+    16       39             37                              3
+    20       40             38                              2
+    24       42             39                              0
+    28       42             39                              0
+  Where the last column is 0 the H(M) measurement has no discriminating power: every class is one state seen twice.

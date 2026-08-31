@@ -1,0 +1,88 @@
+== k=1 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-1,9]: 0 violations (5 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=7: None
+[io-lemma] col_1 = 1 on 2142/9997 of the col_0 zero set (density 0.2143), last at t=19997
+== k=1 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-1,9]: 0 violations (3 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=7: None
+[io-lemma] col_1 = 1 on 2139/9997 of the col_0 zero set (density 0.2140), last at t=19992
+== k=2 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-2,9]: 0 violations (4 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=9: None
+[io-lemma] col_1 = 1 on 2137/9996 of the col_0 zero set (density 0.2138), last at t=19991
+== k=2 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-2,9]: 0 violations (1 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=9: None
+[io-lemma] col_1 = 1 on 2147/9996 of the col_0 zero set (density 0.2148), last at t=19996
+== k=3 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-3,9]: 0 violations (2 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=11: None
+[io-lemma] col_1 = 1 on 2167/9995 of the col_0 zero set (density 0.2168), last at t=19995
+== k=3 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-3,9]: 0 violations (3 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=11: None
+[io-lemma] col_1 = 1 on 2147/9995 of the col_0 zero set (density 0.2148), last at t=19996
+== k=4 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-4,9]: 0 violations (6 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=13: None
+[io-lemma] col_1 = 1 on 2167/9994 of the col_0 zero set (density 0.2168), last at t=19995
+== k=4 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-4,9]: 0 violations (2 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=13: None
+[io-lemma] col_1 = 1 on 2132/9994 of the col_0 zero set (density 0.2133), last at t=20000
+== k=5 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-5,9]: 0 violations (2 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=15: None
+[io-lemma] col_1 = 1 on 2147/9993 of the col_0 zero set (density 0.2149), last at t=19999
+== k=5 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-5,9]: 0 violations (6 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=15: None
+[io-lemma] col_1 = 1 on 2132/9993 of the col_0 zero set (density 0.2133), last at t=20000
+== k=6 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-6,9]: 0 violations (3 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=17: None
+[io-lemma] col_1 = 1 on 2144/9992 of the col_0 zero set (density 0.2146), last at t=19999
+== k=6 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-6,9]: 0 violations (1 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=17: None
+[io-lemma] col_1 = 1 on 2140/9992 of the col_0 zero set (density 0.2142), last at t=19998
+== k=7 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-7,9]: 0 violations (5 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=19: None
+[io-lemma] col_1 = 1 on 2133/9991 of the col_0 zero set (density 0.2135), last at t=19995
+== k=7 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-7,9]: 0 violations (3 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=19: None
+[io-lemma] col_1 = 1 on 2140/9991 of the col_0 zero set (density 0.2142), last at t=19998
+== k=8 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-8,9]: 0 violations (4 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=21: None
+[io-lemma] col_1 = 1 on 2140/9990 of the col_0 zero set (density 0.2142), last at t=19997
+== k=8 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-8,9]: 0 violations (3 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=21: None
+[io-lemma] col_1 = 1 on 2142/9990 of the col_0 zero set (density 0.2144), last at t=19992
+== k=10 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-10,9]: 0 violations (2 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=25: None
+[io-lemma] col_1 = 1 on 2141/9988 of the col_0 zero set (density 0.2144), last at t=19993
+== k=10 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-10,9]: 0 violations (6 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=25: None
+[io-lemma] col_1 = 1 on 2136/9988 of the col_0 zero set (density 0.2139), last at t=19994
+== k=12 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-12,9]: 0 violations (0 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=29: None
+[io-lemma] col_1 = 1 on 2150/9986 of the col_0 zero set (density 0.2153), last at t=19995
+== k=12 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-12,9]: 0 violations (4 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=29: None
+[io-lemma] col_1 = 1 on 2129/9986 of the col_0 zero set (density 0.2132), last at t=19994
+== k=16 phase=0 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-16,9]: 0 violations (6 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=37: None
+[io-lemma] col_1 = 1 on 2139/9982 of the col_0 zero set (density 0.2143), last at t=19991
+== k=16 phase=1 ==
+[wedge] light-cone + both edges on the ladder-modelled columns x in [-16,9]: 0 violations (4 deviations at x < -k, outside ladder scope)
+[col_-1] smallest eventual period <= 1024 on t>=37: None
+[io-lemma] col_1 = 1 on 2145/9982 of the col_0 zero set (density 0.2149), last at t=19994

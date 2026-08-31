@@ -1,0 +1,4 @@
+rule 30 n=4   ground=12    mu=9      iters=24    0.0s
+rule 30 n=6   ground=24    mu=17     iters=160   0.1s
+rule 30 n=8   ground=40    mu=33     iters=997   17.1s
+wrote smus30.json

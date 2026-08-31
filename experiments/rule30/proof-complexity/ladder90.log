@@ -1,0 +1,20 @@
+{"rule": 90, "n": 8, "group": "cell", "diamond_cells": 41, "trimmed_core": 24, "seconds": 0.0, "odd_binomial_cells": 17}
+  seed=0 mus_cells=17 sel=17 calls=21 lrc=[8, 8, 1]
+  seed=1 mus_cells=17 sel=17 calls=17 lrc=[8, 8, 1]
+  seed=2 mus_cells=17 sel=17 calls=17 lrc=[8, 8, 1]
+{"rule": 90, "n": 16, "group": "cell", "diamond_cells": 145, "trimmed_core": 80, "seconds": 0.0, "odd_binomial_cells": 43}
+  seed=0 mus_cells=43 sel=43 calls=56 lrc=[21, 21, 1]
+  seed=1 mus_cells=43 sel=43 calls=43 lrc=[21, 21, 1]
+  seed=2 mus_cells=43 sel=43 calls=43 lrc=[21, 21, 1]
+{"rule": 90, "n": 32, "group": "cell", "diamond_cells": 545, "trimmed_core": 288, "seconds": 0.09, "odd_binomial_cells": 113}
+  seed=0 mus_cells=113 sel=113 calls=133 lrc=[56, 56, 1]
+  seed=1 mus_cells=113 sel=113 calls=115 lrc=[56, 56, 1]
+  seed=2 mus_cells=113 sel=113 calls=115 lrc=[56, 56, 1]
+{"rule": 90, "n": 64, "group": "cell", "diamond_cells": 2113, "trimmed_core": 1088, "seconds": 3.08, "odd_binomial_cells": 307}
+  seed=0 mus_cells=307 sel=307 calls=364 lrc=[153, 153, 1]
+  seed=1 mus_cells=307 sel=307 calls=309 lrc=[153, 153, 1]
+  seed=2 mus_cells=307 sel=307 calls=310 lrc=[153, 153, 1]
+{"rule": 90, "n": 128, "group": "cell", "diamond_cells": 8321, "trimmed_core": 4224, "seconds": 110.28, "odd_binomial_cells": 857}
+  seed=0 mus_cells=857 sel=857 calls=937 lrc=[428, 428, 1]
+  seed=1 mus_cells=857 sel=857 calls=859 lrc=[428, 428, 1]
+  seed=2 mus_cells=857 sel=857 calls=859 lrc=[428, 428, 1]

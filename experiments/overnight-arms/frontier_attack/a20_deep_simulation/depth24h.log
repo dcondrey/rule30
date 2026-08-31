@@ -151,3 +151,6 @@ t=  11,669,208  elapsed=  17640.1s  rate=   661.5/s  density=0.500307  row_bits=
 t=  11,725,728  elapsed=  17760.1s  rate=   660.2/s  density=0.500309  row_bits=80,103,902  disk_bytes=1,441,792
 t=  11,786,881  elapsed=  17880.1s  rate=   659.2/s  density=0.500306  row_bits=80,165,055  disk_bytes=1,441,792
 t=  11,844,920  elapsed=  18000.1s  rate=   658.0/s  density=0.500305  row_bits=80,223,094  disk_bytes=1,441,792
+t=  11,901,407  elapsed=  18120.1s  rate=   656.8/s  density=0.500309  row_bits=80,279,581  disk_bytes=1,441,792
+t=  11,958,334  elapsed=  18240.1s  rate=   655.6/s  density=0.500319  row_bits=80,336,508  disk_bytes=1,441,792
+t=  12,014,614  elapsed=  18360.1s  rate=   654.4/s  density=0.500302  row_bits=80,392,788  disk_bytes=1,441,792

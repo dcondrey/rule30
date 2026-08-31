@@ -1,0 +1,12 @@
+m=2: building solve equations |w|<=6 ...
+m=2: solving 126 polynomial equations in 4 unknowns
+m=2: raw solutions: 7
+m=2 sol {'q00': '0', 'verified_to': 'has-free-symbols; verify manually'} -> has-free-symbols; verify manually
+m=2 sol {'q00': '0', 'q01': '2*q10*q11 - 2*q10 - 2*q11 + 2', 'verified_to': 'has-free-symbols; verify manually'} -> has-free-symbols; verify manually
+m=2 sol {'q01': '0', 'q10': '1', 'verified_to': 'has-free-symbols; verify manually'} -> has-free-symbols; verify manually
+m=2 sol {'q01': '0', 'q11': '1', 'verified_to': 'has-free-symbols; verify manually'} -> has-free-symbols; verify manually
+m=2 sol {'q00': '0', 'q01': '0', 'q10': '1', 'verified_to': 'has-free-symbols; verify manually'} -> has-free-symbols; verify manually
+m=2 sol {'q00': '0', 'q01': '0', 'q11': '1', 'verified_to': 'has-free-symbols; verify manually'} -> has-free-symbols; verify manually
+m=2 sol {'q00': '1/2', 'q01': '1/2', 'q10': '1/2', 'q11': '1/2', 'verified_to': 9} -> 9
+m=3: building solve equations |w|<=6 ...
+m=3: solving 126 polynomial equations in 8 unknowns

@@ -1,0 +1,32 @@
+GATE: centre column == experiments/rule30/center_column.py to n=512
+
+rule 30  (every resolution step machine-checked)
+     n    cells   baseline   sliced  backward  bwd+slice  base/n2  slic/n2   bwd/n2  bwd/cells
+     4       13         24       20        12         14   1.5000   1.2500   0.7500     0.9231
+     8       41         96       91        40         58   1.5000   1.4219   0.6250     0.9756
+    16      145        384      285       144        179   1.5000   1.1133   0.5625     0.9931
+    32      545       1536     1342       544        810   1.5000   1.3105   0.5312     0.9982
+    64     2113       6144     5304      2112       3136   1.5000   1.2949   0.5156     0.9995
+   128     8321      24576    19436      8320      11485   1.5000   1.1863   0.5078     0.9999
+  fitted exponent: baseline 2.0000   sliced 1.9844   backward 1.8935
+  k-step composition (block doubling), length / BEST family (backward).  k=1 is the row-simulation baseline at 2.95x.
+    k=2   n=4:1.83x  n=8:2.70x  n=16:3.28x  n=32:3.62x  n=64:3.80x  n=128:3.90x
+    k=4   n=8:2.50x  n=16:4.06x  n=32:4.97x  n=64:5.47x  n=128:5.73x
+    k=8   n=16:3.83x  n=32:6.74x  n=64:8.32x  n=128:9.15x
+    k=16  n=32:6.50x  n=64:12.08x  n=128:14.99x
+
+rule 90  (every resolution step machine-checked)
+     n    cells   baseline   sliced  backward  bwd+slice  base/n2  slic/n2   bwd/n2  bwd/cells
+     4       13         16       12         8          8   1.0000   0.7500   0.5000     0.6154
+     8       41         64       40        24         24   1.0000   0.6250   0.3750     0.5854
+    16      145        256      144        80         80   1.0000   0.5625   0.3125     0.5517
+    32      545       1024      544       288        288   1.0000   0.5312   0.2812     0.5284
+    64     2113       4096     2112      1088       1088   1.0000   0.5156   0.2656     0.5149
+   128     8321      16384     8320      4224       4224   1.0000   0.5078   0.2578     0.5076
+  fitted exponent: baseline 2.0000   sliced 1.8935   backward 1.8165
+  k-step composition (block doubling), length / BEST family (backward).  k=1 is the row-simulation baseline at 3.88x.
+    k=2   n=4:1.75x  n=8:2.83x  n=16:3.70x  n=32:4.28x  n=64:4.62x  n=128:4.80x
+    k=4   n=8:2.50x  n=16:4.30x  n=32:5.50x  n=64:6.21x  n=128:6.59x
+    k=8   n=16:3.90x  n=32:7.06x  n=64:8.91x  n=128:9.92x
+    k=16  n=32:6.61x  n=64:12.44x  n=128:15.62x
+wrote derivations.json

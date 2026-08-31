@@ -1,0 +1,12 @@
+{"rule": 90, "n": 8, "group": "clause", "diamond_cells": 41, "trimmed_core": 24, "seconds": 0.0}
+  seed=0 mus_cells=24 sel=24 calls=24 lrc=[10, 10, 4]
+  seed=1 mus_cells=24 sel=24 calls=24 lrc=[10, 10, 4]
+  seed=2 mus_cells=24 sel=24 calls=24 lrc=[10, 10, 4]
+{"rule": 90, "n": 16, "group": "clause", "diamond_cells": 145, "trimmed_core": 80, "seconds": 0.01}
+  seed=0 mus_cells=80 sel=80 calls=80 lrc=[36, 36, 8]
+  seed=1 mus_cells=80 sel=80 calls=80 lrc=[36, 36, 8]
+  seed=2 mus_cells=80 sel=80 calls=80 lrc=[36, 36, 8]
+{"rule": 90, "n": 32, "group": "clause", "diamond_cells": 545, "trimmed_core": 288, "seconds": 0.1}
+  seed=0 mus_cells=288 sel=288 calls=288 lrc=[136, 136, 16]
+  seed=1 mus_cells=288 sel=288 calls=288 lrc=[136, 136, 16]
+  seed=2 mus_cells=288 sel=288 calls=288 lrc=[136, 136, 16]

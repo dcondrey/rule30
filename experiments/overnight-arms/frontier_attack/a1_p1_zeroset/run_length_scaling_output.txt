@@ -1,0 +1,9 @@
+T=  1024 P= 64  log2(TP)=16.00 | rule30 longest run 15 (p=30, t0=370) | Bernoulli null mean 15.35  [14, 18]
+T=  2048 P=128  log2(TP)=18.00 | rule30 longest run 16 (p=80, t0=992) | Bernoulli null mean 17.15  [15, 21]
+T=  4096 P=256  log2(TP)=20.00 | rule30 longest run 18 (p=148, t0=1855) | Bernoulli null mean 19.35  [17, 23]
+T=  8192 P=256  log2(TP)=21.00 | rule30 longest run 18 (p=148, t0=1855) | Bernoulli null mean 20.65  [18, 25]
+T= 16384 P=512  log2(TP)=23.00 | rule30 longest run 24 (p=110, t0=13219) | Bernoulli null mean 22.50  [20, 28]
+T= 32768 P=512  log2(TP)=24.00 | rule30 longest run 24 (p=110, t0=13219) | Bernoulli null mean 23.05  [21, 28]
+T= 65536 P=512  log2(TP)=25.00 | rule30 longest run 24 (p=110, t0=13219) | Bernoulli null mean 24.25  [22, 28]
+rule 90: longest centre-agreement run = 4094 of 4096 (p=1, t0=1) -- infinite in the limit
+wrote run_length_scaling_output.json

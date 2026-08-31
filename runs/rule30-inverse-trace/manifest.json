@@ -1,0 +1,91 @@
+{
+  "schema": "crosstalk.bundle.v1",
+  "session_id": "20260828T154348Z",
+  "generated_at": 1787932991,
+  "transcript_chain_head": "46d8ce234e9241e4dd40409947abc2d5026b4d4c6a0fa81748e34cbf10da3412",
+  "state_sha256": "dd0affaa5fd30f91dc817b6b3ba0a1dc03c665a8c06a1f298ca5aee8e94a99b7",
+  "investigation_schema": "crosstalk.investigation.v1",
+  "report_schema": "crosstalk.report.v2",
+  "audit": {
+    "passed": true,
+    "claim_count": 72,
+    "evidence_linked_claims": 0,
+    "verified_claims": 0,
+    "verification_coverage": 0.0,
+    "issues": []
+  },
+  "scientific_release": {
+    "eligible": false,
+    "integrity_passed": true,
+    "substantive_claims": 58,
+    "evidence_linked_claims": 0,
+    "objectively_verified_claims": 0,
+    "verification_coverage": 0.0,
+    "blocking_reasons": [
+      "one or more substantive claims lack evidence links",
+      "one or more substantive claims lack accepting objective verification"
+    ]
+  },
+  "files": [
+    {
+      "path": "artifacts/022bb75cb8a9ca3330997250040a9ab4208df8e831d60cafe5c24b3be78dc906-a81ed9e7dc5fb8c8-docs_rule30_RESULTS-periodicity-bridge.md",
+      "media_type": "text/markdown",
+      "content_sha256": "022bb75cb8a9ca3330997250040a9ab4208df8e831d60cafe5c24b3be78dc906",
+      "size_bytes": 7659
+    },
+    {
+      "path": "artifacts/297b5a68aa315e7a63dafb200eb14b85ea74bae5a748fd3c6f67b7d154d9fad1-46fb1b75cbe2c67b-experiments_rule30_inverse_trace_probe.py",
+      "media_type": "text/x-python",
+      "content_sha256": "297b5a68aa315e7a63dafb200eb14b85ea74bae5a748fd3c6f67b7d154d9fad1",
+      "size_bytes": 9172
+    },
+    {
+      "path": "artifacts/312b3e3888e65a8e906b51e18c4ba7e47b535eef935d250fcef3af18bab9bda6-b3ccae856d47bb59-docs_rule30_RESULTS-inverse-trace.md",
+      "media_type": "text/markdown",
+      "content_sha256": "312b3e3888e65a8e906b51e18c4ba7e47b535eef935d250fcef3af18bab9bda6",
+      "size_bytes": 4253
+    },
+    {
+      "path": "artifacts/bc42707baab16f9e775c1eddebdb161d7c51d74fd3be7b76f15195d832010e12-b93b734314abe387-experiments_rule30_periodicity_bridge_probe.py",
+      "media_type": "text/x-python",
+      "content_sha256": "bc42707baab16f9e775c1eddebdb161d7c51d74fd3be7b76f15195d832010e12",
+      "size_bytes": 11839
+    },
+    {
+      "path": "audit.json",
+      "media_type": "application/json",
+      "content_sha256": "5bb3e8f1b2d85e91d40a28e8a6ce017fd076d0acf2295f0f3019ceb556fe29bc",
+      "size_bytes": 144
+    },
+    {
+      "path": "claims.json",
+      "media_type": "application/json",
+      "content_sha256": "77a2e8605e883520d20e449ed372a3138f6033d5d97cad3cffed1ae5a6512656",
+      "size_bytes": 30163
+    },
+    {
+      "path": "investigation.json",
+      "media_type": "application/json",
+      "content_sha256": "f8e3495eddfd87be65082372396578742d5c94c5b64400caf30c02d47601b1a8",
+      "size_bytes": 4709
+    },
+    {
+      "path": "report.md",
+      "media_type": "text/markdown",
+      "content_sha256": "cbcbd314f8639d1556ffc1a944e5d0e607fee9b15b8afa1ce3ca581d73f3dfba",
+      "size_bytes": 21655
+    },
+    {
+      "path": "state.json",
+      "media_type": "application/json",
+      "content_sha256": "dd0affaa5fd30f91dc817b6b3ba0a1dc03c665a8c06a1f298ca5aee8e94a99b7",
+      "size_bytes": 121927
+    },
+    {
+      "path": "transcript.json",
+      "media_type": "application/json",
+      "content_sha256": "f1450d482a66b680a3f785d02d6519ae44f10def0252eb1e244876ff7cbd3927",
+      "size_bytes": 51136
+    }
+  ]
+}

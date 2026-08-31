@@ -1,0 +1,130 @@
+{
+ "rows": [
+  {
+   "R": 1,
+   "saturate": 6,
+   "letters_fed": 14,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 8207,
+   "pin_violations": 0
+  },
+  {
+   "R": 2,
+   "saturate": 7,
+   "letters_fed": 15,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 11790,
+   "pin_violations": 0
+  },
+  {
+   "R": 3,
+   "saturate": 8,
+   "letters_fed": 16,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 9654,
+   "pin_violations": 0
+  },
+  {
+   "R": 4,
+   "saturate": 9,
+   "letters_fed": 17,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 13925,
+   "pin_violations": 0
+  },
+  {
+   "R": 5,
+   "saturate": 10,
+   "letters_fed": 18,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 7103,
+   "pin_violations": 0
+  },
+  {
+   "R": 6,
+   "saturate": 11,
+   "letters_fed": 19,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 12132,
+   "pin_violations": 0
+  },
+  {
+   "R": 7,
+   "saturate": 12,
+   "letters_fed": 20,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 10083,
+   "pin_violations": 0
+  },
+  {
+   "R": 8,
+   "saturate": 13,
+   "letters_fed": 21,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 10735,
+   "pin_violations": 0
+  },
+  {
+   "R": 9,
+   "saturate": 14,
+   "letters_fed": 22,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 10144,
+   "pin_violations": 0
+  },
+  {
+   "R": 10,
+   "saturate": 15,
+   "letters_fed": 23,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 9307,
+   "pin_violations": 0
+  },
+  {
+   "R": 11,
+   "saturate": 16,
+   "letters_fed": 24,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 10919,
+   "pin_violations": 0
+  },
+  {
+   "R": 12,
+   "saturate": 17,
+   "letters_fed": 25,
+   "rejected_at": null,
+   "centre_mismatches": 0,
+   "col_m1_mismatches": 0,
+   "pin_antecedents": 9963,
+   "pin_violations": 0
+  }
+ ],
+ "all_pass": true,
+ "col_m1_min_period_le_512": null,
+ "rule": 30,
+ "k": 2,
+ "w": "01",
+ "T": 20000
+}

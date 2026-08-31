@@ -1,0 +1,406 @@
+{
+ "steps": 4000000,
+ "wmax": 15,
+ "horizons": [
+  1024,
+  2048,
+  4096,
+  8192,
+  16384,
+  32768,
+  65536,
+  131072,
+  262144,
+  524288,
+  1048576,
+  2000000,
+  2097152,
+  4000000
+ ],
+ "families": {
+  "all_zeros": {
+   "max_height_by_W_at_T": {
+    "0": 20,
+    "1": 9,
+    "2": 8,
+    "3": 7,
+    "4": 6,
+    "5": 5,
+    "6": 4,
+    "7": 3,
+    "8": 2,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   },
+   "diagonal_K": {
+    "1024": {
+     "K": 3,
+     "witness_t": 442,
+     "capped_at_wmax": false
+    },
+    "2048": {
+     "K": 3,
+     "witness_t": 442,
+     "capped_at_wmax": false
+    },
+    "4096": {
+     "K": 3,
+     "witness_t": 442,
+     "capped_at_wmax": false
+    },
+    "8192": {
+     "K": 3,
+     "witness_t": 442,
+     "capped_at_wmax": false
+    },
+    "16384": {
+     "K": 3,
+     "witness_t": 442,
+     "capped_at_wmax": false
+    },
+    "32768": {
+     "K": 3,
+     "witness_t": 442,
+     "capped_at_wmax": false
+    },
+    "65536": {
+     "K": 3,
+     "witness_t": 442,
+     "capped_at_wmax": false
+    },
+    "131072": {
+     "K": 4,
+     "witness_t": 101063,
+     "capped_at_wmax": false
+    },
+    "262144": {
+     "K": 4,
+     "witness_t": 101063,
+     "capped_at_wmax": false
+    },
+    "524288": {
+     "K": 4,
+     "witness_t": 101063,
+     "capped_at_wmax": false
+    },
+    "1048576": {
+     "K": 4,
+     "witness_t": 101063,
+     "capped_at_wmax": false
+    },
+    "2000000": {
+     "K": 4,
+     "witness_t": 101063,
+     "capped_at_wmax": false
+    },
+    "2097152": {
+     "K": 5,
+     "witness_t": 2019057,
+     "capped_at_wmax": false
+    },
+    "4000000": {
+     "K": 5,
+     "witness_t": 2019057,
+     "capped_at_wmax": false
+    }
+   },
+   "exact_bernoulli_Hstar_by_W_at_T": {
+    "0": 11,
+    "1": 10,
+    "2": 9,
+    "3": 8,
+    "4": 7,
+    "5": 6,
+    "6": 5,
+    "7": 4,
+    "8": 3,
+    "9": 2,
+    "10": 1,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   },
+   "height_minus_Hstar": {
+    "0": 9,
+    "1": -1,
+    "2": -1,
+    "3": -1,
+    "4": -1,
+    "5": -1,
+    "6": -1,
+    "7": -1,
+    "8": -1,
+    "9": -1,
+    "10": -1,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   }
+  },
+  "checker_A": {
+   "max_height_by_W_at_T": {
+    "0": 23,
+    "1": 17,
+    "2": 16,
+    "3": 13,
+    "4": 12,
+    "5": 9,
+    "6": 8,
+    "7": 5,
+    "8": 4,
+    "9": 2,
+    "10": 1,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   },
+   "diagonal_K": {
+    "1024": {
+     "K": 2,
+     "witness_t": 63,
+     "capped_at_wmax": false
+    },
+    "2048": {
+     "K": 2,
+     "witness_t": 63,
+     "capped_at_wmax": false
+    },
+    "4096": {
+     "K": 2,
+     "witness_t": 63,
+     "capped_at_wmax": false
+    },
+    "8192": {
+     "K": 4,
+     "witness_t": 4241,
+     "capped_at_wmax": false
+    },
+    "16384": {
+     "K": 4,
+     "witness_t": 4241,
+     "capped_at_wmax": false
+    },
+    "32768": {
+     "K": 4,
+     "witness_t": 4241,
+     "capped_at_wmax": false
+    },
+    "65536": {
+     "K": 4,
+     "witness_t": 4241,
+     "capped_at_wmax": false
+    },
+    "131072": {
+     "K": 5,
+     "witness_t": 102927,
+     "capped_at_wmax": false
+    },
+    "262144": {
+     "K": 6,
+     "witness_t": 196745,
+     "capped_at_wmax": false
+    },
+    "524288": {
+     "K": 6,
+     "witness_t": 196745,
+     "capped_at_wmax": false
+    },
+    "1048576": {
+     "K": 6,
+     "witness_t": 196745,
+     "capped_at_wmax": false
+    },
+    "2000000": {
+     "K": 6,
+     "witness_t": 196745,
+     "capped_at_wmax": false
+    },
+    "2097152": {
+     "K": 6,
+     "witness_t": 196745,
+     "capped_at_wmax": false
+    },
+    "4000000": {
+     "K": 6,
+     "witness_t": 196745,
+     "capped_at_wmax": false
+    }
+   },
+   "exact_bernoulli_Hstar_by_W_at_T": {
+    "0": 21,
+    "1": 19,
+    "2": 17,
+    "3": 15,
+    "4": 13,
+    "5": 11,
+    "6": 9,
+    "7": 7,
+    "8": 5,
+    "9": 3,
+    "10": 1,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   },
+   "height_minus_Hstar": {
+    "0": 2,
+    "1": -2,
+    "2": -1,
+    "3": -2,
+    "4": -1,
+    "5": -2,
+    "6": -1,
+    "7": -2,
+    "8": -1,
+    "9": -1,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   }
+  },
+  "checker_B": {
+   "max_height_by_W_at_T": {
+    "0": 20,
+    "1": 17,
+    "2": 14,
+    "3": 13,
+    "4": 11,
+    "5": 10,
+    "6": 7,
+    "7": 6,
+    "8": 2,
+    "9": 1,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   },
+   "diagonal_K": {
+    "1024": {
+     "K": 3,
+     "witness_t": 295,
+     "capped_at_wmax": false
+    },
+    "2048": {
+     "K": 3,
+     "witness_t": 295,
+     "capped_at_wmax": false
+    },
+    "4096": {
+     "K": 3,
+     "witness_t": 295,
+     "capped_at_wmax": false
+    },
+    "8192": {
+     "K": 3,
+     "witness_t": 295,
+     "capped_at_wmax": false
+    },
+    "16384": {
+     "K": 3,
+     "witness_t": 295,
+     "capped_at_wmax": false
+    },
+    "32768": {
+     "K": 5,
+     "witness_t": 26220,
+     "capped_at_wmax": false
+    },
+    "65536": {
+     "K": 5,
+     "witness_t": 26220,
+     "capped_at_wmax": false
+    },
+    "131072": {
+     "K": 5,
+     "witness_t": 26220,
+     "capped_at_wmax": false
+    },
+    "262144": {
+     "K": 5,
+     "witness_t": 26220,
+     "capped_at_wmax": false
+    },
+    "524288": {
+     "K": 5,
+     "witness_t": 26220,
+     "capped_at_wmax": false
+    },
+    "1048576": {
+     "K": 5,
+     "witness_t": 26220,
+     "capped_at_wmax": false
+    },
+    "2000000": {
+     "K": 5,
+     "witness_t": 26220,
+     "capped_at_wmax": false
+    },
+    "2097152": {
+     "K": 5,
+     "witness_t": 26220,
+     "capped_at_wmax": false
+    },
+    "4000000": {
+     "K": 6,
+     "witness_t": 2390359,
+     "capped_at_wmax": false
+    }
+   },
+   "exact_bernoulli_Hstar_by_W_at_T": {
+    "0": 21,
+    "1": 19,
+    "2": 17,
+    "3": 15,
+    "4": 13,
+    "5": 11,
+    "6": 9,
+    "7": 7,
+    "8": 5,
+    "9": 3,
+    "10": 1,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   },
+   "height_minus_Hstar": {
+    "0": -1,
+    "1": -2,
+    "2": -3,
+    "3": -2,
+    "4": -2,
+    "5": -1,
+    "6": -2,
+    "7": -1,
+    "8": -3,
+    "9": -2,
+    "10": -1,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0,
+    "15": 0
+   }
+  }
+ }
+}

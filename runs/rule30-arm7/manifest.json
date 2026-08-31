@@ -1,0 +1,126 @@
+{
+  "schema": "crosstalk.bundle.v1",
+  "session_id": "20260828T034736Z",
+  "generated_at": 1787889197,
+  "transcript_chain_head": "35dbbcc6e60211375ccaca21e7a5c026d40123eea258c9604b88dcc64d6139b6",
+  "state_sha256": "5e801e2f84a8912a3ce5dde280f2508928129f98df0813a88bd0a9c8b6c55870",
+  "investigation_schema": "crosstalk.investigation.v1",
+  "audit": {
+    "passed": true,
+    "claim_count": 4,
+    "evidence_linked_claims": 0,
+    "verified_claims": 0,
+    "verification_coverage": 0.0,
+    "issues": []
+  },
+  "scientific_release": {
+    "eligible": false,
+    "integrity_passed": true,
+    "substantive_claims": 2,
+    "evidence_linked_claims": 0,
+    "objectively_verified_claims": 0,
+    "verification_coverage": 0.0,
+    "blocking_reasons": [
+      "one or more substantive claims lack evidence links",
+      "one or more substantive claims lack accepting objective verification"
+    ]
+  },
+  "files": [
+    {
+      "path": "artifacts/1b0f09f0d7fa8e57c156d9b0abe08d1157a058bc5a7c4b7d6c1ae7c80362392d-47694501f4b09dce-docs_rule30_ARM6-binary-kernel.md",
+      "media_type": "text/markdown",
+      "content_sha256": "1b0f09f0d7fa8e57c156d9b0abe08d1157a058bc5a7c4b7d6c1ae7c80362392d",
+      "size_bytes": 3790
+    },
+    {
+      "path": "artifacts/3d5ed61907371be142854950132180c042c0665c23b6d14e7146dec2dc233da6-d95eb45b9b8621b0-evolution_generation-reports.json",
+      "media_type": "application/json",
+      "content_sha256": "3d5ed61907371be142854950132180c042c0665c23b6d14e7146dec2dc233da6",
+      "size_bytes": 765
+    },
+    {
+      "path": "artifacts/7aa8c01fffc273c5b83cb6388b73746849d9aa2d8914dfa0ce7d6ee4a2acf202-d14e833dc8e5672c-experiments_rule30_compression_ensemble_probe.py",
+      "media_type": "text/x-python",
+      "content_sha256": "7aa8c01fffc273c5b83cb6388b73746849d9aa2d8914dfa0ce7d6ee4a2acf202",
+      "size_bytes": 15306
+    },
+    {
+      "path": "artifacts/91ce1dcfbf6c0a3acbe8704ea2d048b7d7be59951d2e9547e9e6e1ad2ec5f6ce-21bd7db371ae597f-evolution_native-candidates.json",
+      "media_type": "application/json",
+      "content_sha256": "91ce1dcfbf6c0a3acbe8704ea2d048b7d7be59951d2e9547e9e6e1ad2ec5f6ce",
+      "size_bytes": 88
+    },
+    {
+      "path": "artifacts/981291d20ed9da7feaf1a26ef157fc2f321ddcb867a34b1287d616f7d8f641f9-c57da7f7a95bfcad-docs_rule30_RESULTS-crosstalk-elimination-run3.md",
+      "media_type": "text/markdown",
+      "content_sha256": "981291d20ed9da7feaf1a26ef157fc2f321ddcb867a34b1287d616f7d8f641f9",
+      "size_bytes": 3813
+    },
+    {
+      "path": "artifacts/a8b48829eb5662048e050e3b27ed074f2fc4f7c6a5287bb7031a6945634d6006-bf7f496c429ba16b-docs_rule30_ARM7-dyadic-spacetime-grammar.md",
+      "media_type": "text/markdown",
+      "content_sha256": "a8b48829eb5662048e050e3b27ed074f2fc4f7c6a5287bb7031a6945634d6006",
+      "size_bytes": 5720
+    },
+    {
+      "path": "artifacts/aa78a11d48330ffe0677e56b3dd0e5b1c9eecfa09b93060bd55ff7c26d582788-03723c66bf9deef2-docs_rule30_ARM5-superposition.md",
+      "media_type": "text/markdown",
+      "content_sha256": "aa78a11d48330ffe0677e56b3dd0e5b1c9eecfa09b93060bd55ff7c26d582788",
+      "size_bytes": 14381
+    },
+    {
+      "path": "artifacts/b039219f2bdfb9c689fa95edb8ea83c51e9bc4f3625c2128d1a0f6ee1ce7ac19-d2550c46c544d674-experiments_rule30_spacetime_grammar_probe.py",
+      "media_type": "text/x-python",
+      "content_sha256": "b039219f2bdfb9c689fa95edb8ea83c51e9bc4f3625c2128d1a0f6ee1ce7ac19",
+      "size_bytes": 28229
+    },
+    {
+      "path": "artifacts/bb619496094970720174c1be62afcc7e60c41d876e96f885fc28a429b1fea33b-7b112de77493297f-evolution_checkpoint.json",
+      "media_type": "application/json",
+      "content_sha256": "bb619496094970720174c1be62afcc7e60c41d876e96f885fc28a429b1fea33b",
+      "size_bytes": 40134
+    },
+    {
+      "path": "artifacts/cbd36d017d4de3060ad12afe9cf3da357f9a512aafae9b1bc8bd8fa10a20fbc1-70b3f856043ab12a-experiments_rule30_boundary_signature_probe.py",
+      "media_type": "text/x-python",
+      "content_sha256": "cbd36d017d4de3060ad12afe9cf3da357f9a512aafae9b1bc8bd8fa10a20fbc1",
+      "size_bytes": 2689
+    },
+    {
+      "path": "audit.json",
+      "media_type": "application/json",
+      "content_sha256": "11ca9bcf1c35e6dd79added8b36afd063ff005000a27c006d17cc1329b1dc6d7",
+      "size_bytes": 143
+    },
+    {
+      "path": "claims.json",
+      "media_type": "application/json",
+      "content_sha256": "2c3fc6b62004cc448377a219ac7408e10be684c38185baa31c2139347c553203",
+      "size_bytes": 1622
+    },
+    {
+      "path": "investigation.json",
+      "media_type": "application/json",
+      "content_sha256": "50ab7570a9698b41e773bf8094252423a1e1d26f96ee295cbe04e3e0a2ceef70",
+      "size_bytes": 6953
+    },
+    {
+      "path": "report.md",
+      "media_type": "text/markdown",
+      "content_sha256": "ac2ff2b7f9f22eb6c25137e989715ac9f9e27c9ad936f87f4cd104810a01bf81",
+      "size_bytes": 1999
+    },
+    {
+      "path": "state.json",
+      "media_type": "application/json",
+      "content_sha256": "5e801e2f84a8912a3ce5dde280f2508928129f98df0813a88bd0a9c8b6c55870",
+      "size_bytes": 150146
+    },
+    {
+      "path": "transcript.json",
+      "media_type": "application/json",
+      "content_sha256": "c9667e2252caf5437a1bfbc6212627966356591459d41f33c267749e70caffd8",
+      "size_bytes": 10622
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[workspace]
+
+[package]
+name = "rule30-probe"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "probe"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true

@@ -1,0 +1,8 @@
+rule 30 n=2  baseline=6     sliced=5     backward=4      search<=3: EXHAUSTED: none shorter      settled=145      0.0s
+rule 30 n=3  baseline=13    sliced=13    backward=7      search<=6: EXHAUSTED: none shorter      settled=6039     8.5s
+rule 30 n=4  baseline=24    sliced=20    backward=12     search<=11: WALL (cap reached)           settled=32001    1490.8s
+   WALL at n=4 (rule 30): settled 32001 clauses in 1491 s (node cap 32000, time cap 100000 s)
+rule 90 n=2  baseline=4     sliced=4     backward=3      search<=2: EXHAUSTED: none shorter      settled=40       0.0s
+rule 90 n=3  baseline=8     sliced=4     backward=3      search<=2: EXHAUSTED: none shorter      settled=78       0.0s
+rule 90 n=4  baseline=16    sliced=12    backward=8      search<=7: EXHAUSTED: none shorter      settled=17238    26.8s
+wrote minlen.json

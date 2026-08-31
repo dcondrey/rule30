@@ -1,0 +1,12 @@
+rule 90  round  1: |Q| =       1 states  first-new-constraint at length None  L_n = [4, 16, 64, 256, 1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216]
+rule 90  round  2: |Q| =       1 states  first-new-constraint at length None  L_n = [4, 16, 64, 256, 1024, 4096, 16384, 65536, 262144, 1048576, 4194304, 16777216]
+rule 90 VERDICT: FIXED POINT at round 2: Q_2 = Q_1, so the greatest fixed point is Q_1 -> width-2 column subshift is SOFIC with 1 states
+
+rule 30  round  1: |Q| =       3 states  first-new-constraint at length None  L_n = [4, 12, 36, 108, 324, 972, 2916, 8748, 26244, 78732, 236196, 708588]
+rule 30  round  2: |Q| =       8 states  first-new-constraint at length None  L_n = [4, 12, 32, 80, 200, 504, 1272, 3208, 8088, 20392, 51416, 129640]
+rule 30  round  3: |Q| =      14 states  first-new-constraint at length None  L_n = [4, 12, 32, 80, 200, 496, 1224, 3008, 7384, 18112, 44408, 108848]
+rule 30  round  4: |Q| =      42 states  first-new-constraint at length None  L_n = [4, 12, 32, 80, 200, 496, 1208, 2936, 7084, 17060, 40968, 98276]
+rule 30  round  5: |Q| =     185 states  first-new-constraint at length None  L_n = [4, 12, 32, 80, 200, 496, 1208, 2916, 6992, 16636, 39448, 93204]
+rule 30  round  6: |Q| =    1000 states  first-new-constraint at length None  L_n = [4, 12, 32, 80, 200, 496, 1208, 2916, 6964, 16508, 38796, 90820]
+rule 30  round  7: |Q| =    7020 states  first-new-constraint at length None  L_n = [4, 12, 32, 80, 200, 496, 1208, 2916, 6964, 16476, 38644, 89976]
+rule 30  round  8: |Q| =   90318 states  first-new-constraint at length None  L_n = [4, 12, 32, 80, 200, 496, 1208, 2916, 6964, 16476, 38616, 89876]

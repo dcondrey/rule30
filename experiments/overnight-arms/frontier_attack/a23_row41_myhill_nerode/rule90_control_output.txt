@@ -1,0 +1,73 @@
+
+=== rule 90 sweep: pairs=20 W=30 kseeds=[6, 8, 10, 12, 14, 16] ===
+  kseed= 6 (d=12) phase=01  index(19)=      8  n_seeds=     64  n_prefixes=      8  anomalies=    8  [0.0s]
+  kseed= 6 (d=12) phase=10  index(19)=      8  n_seeds=     64  n_prefixes=      8  anomalies=    8  [0.0s]
+  kseed= 8 (d=16) phase=01  index(19)=     16  n_seeds=    256  n_prefixes=     16  anomalies=   16  [0.2s]
+  kseed= 8 (d=16) phase=10  index(19)=     16  n_seeds=    256  n_prefixes=     16  anomalies=   16  [0.2s]
+  kseed=10 (d=20) phase=01  index(19)=     32  n_seeds=   1024  n_prefixes=     32  anomalies=   32  [0.8s]
+  kseed=10 (d=20) phase=10  index(19)=     32  n_seeds=   1024  n_prefixes=     32  anomalies=   32  [0.8s]
+  kseed=12 (d=24) phase=01  index(19)=     64  n_seeds=   4096  n_prefixes=     64  anomalies=   64  [3.2s]
+  kseed=12 (d=24) phase=10  index(19)=     64  n_seeds=   4096  n_prefixes=     64  anomalies=   64  [3.2s]
+  kseed=14 (d=28) phase=01  index(19)=     32  n_seeds=  16384  n_prefixes=    128  anomalies=  128  [13.3s]
+  kseed=14 (d=28) phase=10  index(19)=     32  n_seeds=  16384  n_prefixes=    128  anomalies=  128  [13.3s]
+  kseed=16 (d=32) phase=01  index(19)=     64  n_seeds=  65536  n_prefixes=    256  anomalies=  256  [53.1s]
+  kseed=16 (d=32) phase=10  index(19)=     64  n_seeds=  65536  n_prefixes=    256  anomalies=  256  [53.1s]
+
+  headline table: kseed, d, phase, index_lower_bound(s=pairs-1)
+  kseed   d  phase   index
+      6   12   01        8
+      6   12   10        8
+      8   16   01       16
+      8   16   10       16
+     10   20   01       32
+     10   20   10       32
+     12   24   01       64
+     12   24   10       64
+     14   28   01       32
+     14   28   10       32
+     16   32   01       64
+     16   32   10       64
+
+  full per-s curve at the largest kseed tested:
+  phase 01:
+    s=  0  index=    256  n_prefixes=      2  anomalies=    2
+    s=  1  index=    256  n_prefixes=      4  anomalies=    4
+    s=  2  index=    256  n_prefixes=      8  anomalies=    8
+    s=  3  index=    256  n_prefixes=     16  anomalies=   16
+    s=  4  index=    256  n_prefixes=     32  anomalies=   32
+    s=  5  index=    256  n_prefixes=     64  anomalies=   64
+    s=  6  index=    256  n_prefixes=    128  anomalies=  128
+    s=  7  index=    256  n_prefixes=    256  anomalies=  256
+    s=  8  index=    256  n_prefixes=    256  anomalies=  256
+    s=  9  index=    256  n_prefixes=    256  anomalies=  256
+    s= 10  index=    256  n_prefixes=    256  anomalies=  256
+    s= 11  index=    256  n_prefixes=    256  anomalies=  256
+    s= 12  index=    256  n_prefixes=    256  anomalies=  256
+    s= 13  index=    256  n_prefixes=    256  anomalies=  256
+    s= 14  index=    256  n_prefixes=    256  anomalies=  256
+    s= 15  index=    256  n_prefixes=    256  anomalies=  256
+    s= 16  index=    128  n_prefixes=    256  anomalies=  256
+    s= 17  index=     64  n_prefixes=    256  anomalies=  256
+    s= 18  index=     64  n_prefixes=    256  anomalies=  256
+    s= 19  index=     64  n_prefixes=    256  anomalies=  256
+  phase 10:
+    s=  0  index=    256  n_prefixes=      2  anomalies=    2
+    s=  1  index=    256  n_prefixes=      4  anomalies=    4
+    s=  2  index=    256  n_prefixes=      8  anomalies=    8
+    s=  3  index=    256  n_prefixes=     16  anomalies=   16
+    s=  4  index=    256  n_prefixes=     32  anomalies=   32
+    s=  5  index=    256  n_prefixes=     64  anomalies=   64
+    s=  6  index=    256  n_prefixes=    128  anomalies=  128
+    s=  7  index=    256  n_prefixes=    256  anomalies=  256
+    s=  8  index=    256  n_prefixes=    256  anomalies=  256
+    s=  9  index=    256  n_prefixes=    256  anomalies=  256
+    s= 10  index=    256  n_prefixes=    256  anomalies=  256
+    s= 11  index=    256  n_prefixes=    256  anomalies=  256
+    s= 12  index=    256  n_prefixes=    256  anomalies=  256
+    s= 13  index=    256  n_prefixes=    256  anomalies=  256
+    s= 14  index=    256  n_prefixes=    256  anomalies=  256
+    s= 15  index=    256  n_prefixes=    256  anomalies=  256
+    s= 16  index=    128  n_prefixes=    256  anomalies=  256
+    s= 17  index=     64  n_prefixes=    256  anomalies=  256
+    s= 18  index=     64  n_prefixes=    256  anomalies=  256
+    s= 19  index=     64  n_prefixes=    256  anomalies=  256

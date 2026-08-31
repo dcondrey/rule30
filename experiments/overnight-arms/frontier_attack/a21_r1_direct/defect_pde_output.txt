@@ -1,0 +1,16 @@
+a21 / defect_pde.py -- exact GF(2) defect equation and closing cascade
+substrate cross-check: common.center_column_bits len 32 = 11011100110001011001001110101110
+
+(A) rule 30: defect PDE exact on all 64 local states
+(A) rule 90: defect PDE exact on all 64 local states
+(A) rule 30: defect PDE exact on 914520 stroboscopic cells
+(A) rule 90: defect PDE exact on 921120 stroboscopic cells
+
+(A) zero-set split verified on the lone seed: 1516 zero-phase, 1484 one-phase steps, 0 violations  [KNOWN: PATH.md section 2]
+(A) D(t,-1) = (1 XOR c_t) AND D(t,1): 5736 checks, 0 violations
+
+(B) rule 30: leftmost 1 at L0 - t exactly; 0 deviations
+(B) rule 90: leftmost 1 at L0 - t exactly; 0 deviations
+(B) D(t,x)=D(t,x+1)=0  =>  D(t+1,x)=D(t,x-1): exact, 16 states, both rules
+
+ALL CHECKS PASSED
