@@ -77,7 +77,40 @@ at most `4^H` states.  That graph grows with `H`.  The finite diagonal UNSAT
 results have not yielded a horizon-independent invariant, interpolant, or
 corner grammar.
 
-## 5. Proof obligation
+## 5. Exact corner-peel recurrence
+
+There is a precise reason the most literal induction does not immediately
+close.  Generalize a row transduction by allowing its deep starting carry to
+be a prescribed temporal sequence `beta_t`.  Remove the first deep symbol
+from every row, and let `gamma_t` be the carry immediately after that removed
+symbol.  If its initial symbol is `q`, then, uniformly in the remaining word,
+
+```text
+gamma_0     = tau_q(beta_0),
+gamma_(t+1) = tau_swap(gamma_t)(beta_(t+1)).          (2)
+```
+
+Equation (2) follows directly from one carry-table cell: the removed symbol
+in the next row is the bit-swap of `gamma_t`.  It is an all-length identity.
+
+For the original constant-zero boundary, an active leading symbol gives
+constant `gamma=2` or constant `gamma=3`.  Peeling once more gives, depending
+on the next initial symbol,
+
+```text
+from beta=2:  gamma=1,1,1,...  or  3,1,1,1,...,
+from beta=3:  gamma=0,2,0,2,... or 2,0,2,0,... .      (3)
+```
+
+Further applications of (2) generate additional phases and longer periods;
+the obvious finite family `{constant, alternating}` is not closed.  This does
+not disprove a finite symbolic grammar with richer annotations, but it rules
+out a corner proof that deletes a symbol while retaining only one constant
+carry mode.  A valid induction must carry the full boundary sequence, a
+proved compression of it, or an amortized invariant insensitive to the mode
+proliferation.
+
+## 6. Proof obligation
 
 The clean remaining statement is the following local triangular lemma:
 
@@ -91,7 +124,7 @@ they expose a verified symbolic induction.
 
 The period-two theorem and all three full Prize Problem 1 claims remain open.
 
-## 6. Reproduction
+## 7. Reproduction
 
 From the repository root, using the existing PySAT environment:
 

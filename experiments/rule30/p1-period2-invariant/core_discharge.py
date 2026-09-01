@@ -161,11 +161,32 @@ def alternating_seed_control() -> tuple[int, int, str]:
     return length, seed, continuation
 
 
+def peel_boundary(beta: tuple[int, ...], initial_symbol: int) -> tuple[int, ...]:
+    """Carry sequence exposed after deleting one deep word symbol."""
+    gamma = [FORWARD[initial_symbol][beta[0]]]
+    for following_beta in beta[1:]:
+        gamma.append(FORWARD[SWAP[gamma[-1]]][following_beta])
+    return tuple(gamma)
+
+
+def peel_mode_controls() -> int:
+    horizon = 16
+    zero = (0,) * horizon
+    assert peel_boundary(zero, 1) == (2,) * horizon
+    assert peel_boundary(zero, 2) == (3,) * horizon
+    assert peel_boundary((2,) * horizon, 1) == (1,) * horizon
+    assert peel_boundary((2,) * horizon, 0) == (3,) + (1,) * (horizon - 1)
+    assert peel_boundary((3,) * horizon, 1) == (0, 2) * (horizon // 2)
+    assert peel_boundary((3,) * horizon, 0) == (2, 0) * (horizon // 2)
+    return 6 * horizon
+
+
 def main() -> None:
     reverse = reverse_crosscheck()
     cascade = cascade_crosscheck()
     length, seed = seven_zero_seed_control()
     alt_length, alt_seed, continuation = alternating_seed_control()
+    peel_checks = peel_mode_controls()
     print(f"reverse append: {reverse} arbitrary frontiers PASS")
     print(f"reverse cascades: {cascade} arbitrary instances PASS")
     print(
@@ -178,6 +199,7 @@ def main() -> None:
         f"n={alt_length} seed={alt_seed:#x} forced-rho={continuation} "
         "emitted=00^8 PASS"
     )
+    print(f"corner-peel boundary modes: {peel_checks} symbols PASS")
 
 
 if __name__ == "__main__":
