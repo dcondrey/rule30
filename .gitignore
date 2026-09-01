@@ -25,3 +25,19 @@ __pycache__/
 *.fdb_latexmk
 *.fls
 *.out
+
+# Vendored third-party source (cloned, not ours to version here).
+experiments/openevolve-p3/vendor/
+experiments/openevolve-p3/openevolve_output*/
+
+# Experiment-local build products and restart caches.  Sources, compact JSON
+# results, checksums and human-readable reports remain versioned.
+experiments/overnight-arms/frontier_attack/a25_checkerboard_growth_extended/cache/
+experiments/overnight-arms/frontier_attack/a25_checkerboard_growth_extended/band30
+experiments/overnight-arms/frontier_attack/a25_checkerboard_growth_extended/band30_scalar
+experiments/rule30-subword-extended/analyze
+experiments/rule30-subword-extended/equiv_check
+experiments/rule30-subword-extended/gen30
+experiments/rule30-subword-extended/gen30v2
+experiments/rule30-subword-extended/gen30v3
+experiments/rule30-subword-extended/gen30v4
