@@ -298,8 +298,10 @@ FILES TO READ FIRST — DO NOT LOAD THE WHOLE ARCHIVE
 5. `experiments/rule30/p1-period2-invariant/carry_transducer.py`
 6. `experiments/rule30/p1-period2-invariant/core_discharge.py`
 7. `experiments/rule30/p1-period2-invariant/RESULTS-CORE-MORTALITY-SAT.md`
-8. `experiments/rule30/p1-period2-invariant/core_mortality_sat.py`
-9. `experiments/rule30/p1-period2-invariant/mortality_sat.py`
+8. `experiments/rule30/p1-period2-invariant/RESULTS-CORE-INTERPOLANT.md`
+9. `experiments/rule30/p1-period2-invariant/core_mortality_sat.py`
+10. `experiments/rule30/p1-period2-invariant/core_interpolant_probe.py`
+11. `experiments/rule30/p1-period2-invariant/mortality_sat.py`
 
 The matching preregistrations are the audit trail. Read another historical
 result only if the compact README routes you to it.
@@ -319,9 +321,12 @@ REPRODUCTION COMMANDS
     python3 \
       experiments/rule30/p1-period2-invariant/core_discharge.py
 
+    uv run --project experiments/sygus-p3 python \
+      experiments/rule30/p1-period2-invariant/core_interpolant_probe.py
+
 WORKING METHOD FOR THIS SESSION
 
-1. Inspect current HEAD/status and read the seven routed files above.
+1. Inspect current HEAD/status and read the eleven routed files above.
 2. Reproduce the lightweight controls before relying on them.
 3. Before any substantive new search, write a dated preregistration fixing
    the candidate certificate, success criterion, controls, resource limits,

@@ -42,6 +42,7 @@ Use this routing table:
 | Tail density, deep-zero/core conjugacy | `RESULTS-TAIL-DENSITY.md`; `tail_density.py` |
 | Reverse fixed-horizon cascade and factor obstruction | `PREREGISTRATION-CORE-DISCHARGE.md`; `RESULTS-CORE-DISCHARGE.md`; `core_discharge.py` |
 | Stronger active-core diagonal CNF | `RESULTS-CORE-MORTALITY-SAT.md`; `core_mortality_sat.py` |
+| Projected cut / interpolant probe | `PREREGISTRATION-CORE-INTERPOLANT.md`; `RESULTS-CORE-INTERPOLANT.md`; `core_interpolant_probe.py` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
