@@ -33,6 +33,7 @@ Use this routing table:
 | Signed counts, touching colors, row toggle | `RESULTS-DIVERGENCE.md`; `verify_divergence_negative.py`; `toggle_phase.py` |
 | Actual-right-half no-`11` restriction | `RESULTS-BILATERAL.md`; `bilateral_hardcore.py` |
 | Variable-seed mortality SAT and triangular correlations | `RESULTS-MORTALITY-SAT.md`; `mortality_sat.py`; `verify_drup.py`; `quadratic_probe.py` |
+| Moving-endpoint block and literal peel obstruction | `RESULTS-ENDPOINT-PEEL.md`; `endpoint_peel.py` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
@@ -97,6 +98,7 @@ so rho contains no adjacent ones.
 | Hard-core rho + action | Genuine-right-half no-`11` language | Length-1/3 zero seeds share summary but have different successors |
 | Variable-seed CDCL proofs | Exact mortality CNF with no free post-knee boundary | Checked finite UNSAT; proof additions and width grow sharply |
 | Triangular quadratic algebra | `<Ix,Iy>=x^T K y`, `K_ij=(min(i,j)+1) mod 2` | `rank(K)=width`; 37-bit split-correlation summary has an equal-depth closure collision |
+| Literal endpoint peel | Full aligned Mealy tableau and exact `K_(w+2)` endpoint block | `(n,H)->(n-1,H-2)` is semantically false: length-4 seed `0xa` survives 4, while every length-3 seed survives at most 1 |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
 moment order, lookahead, or endpoint window.  Their standalone certificates
@@ -143,6 +145,8 @@ moment/Hasse standalone checks          589,824 PASS
 variable-seed SAT thresholds n<=16       95/95 PASS vs direct enumeration
 shortest-death DRUP certificates        independently checked through n=17
 triangular-correlation word pairs       87,380 PASS through width 8
+moving-endpoint K block / append words      5,824 PASS through width 10
+aligned endpoint tableau frontiers          34,952 PASS through width 8
 Rule 30 radius-eight rows               131,071 PASS
 Rule 30 adversarial trace               fail exactly at t=15
 Rule 90 {-1,1}                          zero through t=128
@@ -168,6 +172,8 @@ uv run --project experiments/sygus-p3 python \
   --validate --max-validate 16
 uv run --project experiments/sygus-p3 python \
   experiments/rule30/p1-period2-invariant/quadratic_probe.py
+PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
+  experiments/rule30/p1-period2-invariant/endpoint_peel.py
 ```
 
 ## Best next theorem
@@ -193,6 +199,13 @@ What a proof must retain:
 What would kill this exact bound: one length-`n` hard-core seed surviving
 `2n+2` post-seed macros.  That witness would not by itself establish an
 immortal seed or refute period-two mortality.
+
+The exact endpoint formulas do **not** support a literal induction that peels
+one seed macro at the cost of two continuation macros.  The length-4/length-3
+survival spike is a solver-free obstruction to that semantic implication.
+Any renewed endpoint induction must use a proved amortized credit or a
+different induction parameter; increasing the local peel radius cannot fix
+the false implication.
 
 ## Provenance policy
 
