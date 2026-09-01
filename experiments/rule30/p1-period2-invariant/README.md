@@ -33,6 +33,9 @@ Use this routing table:
 | Signed counts, touching colors, row toggle | `RESULTS-DIVERGENCE.md`; `verify_divergence_negative.py`; `toggle_phase.py` |
 | Actual-right-half no-`11` restriction | `RESULTS-BILATERAL.md`; `bilateral_hardcore.py` |
 | Variable-seed mortality SAT and triangular correlations | `RESULTS-MORTALITY-SAT.md`; `mortality_sat.py`; `verify_drup.py`; `quadratic_probe.py` |
+| Time-ordered pivot/emission audit | `RESULTS-PIVOT-EMISSION.md`; `pivot_emission_audit.py` |
+| Dynamic Boolean ideal/variety trace | `RESULTS-DYNAMIC-BOOLEAN-IDEAL.md`; `ideal-variety-n4-n12.json`; `pivot_emission_audit.py` |
+| Exact `n=10` plateau cofactors | `RESULTS-PLATEAU-BEZOUT.md`; `plateau_bezout.py`; `verify_plateau_bezout.py`; `plateau-bezout-n10.json` |
 | Moving-endpoint block and literal peel obstruction | `RESULTS-ENDPOINT-PEEL.md`; `endpoint_peel.py` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
@@ -98,6 +101,9 @@ so rho contains no adjacent ones.
 | Hard-core rho + action | Genuine-right-half no-`11` language | Length-1/3 zero seeds share summary but have different successors |
 | Variable-seed CDCL proofs | Exact mortality CNF with no free post-knee boundary | Checked finite UNSAT; proof additions and width grow sharply |
 | Triangular quadratic algebra | `<Ix,Iy>=x^T K y`, `K_ij=(min(i,j)+1) mod 2` | `rank(K)=width`; 37-bit split-correlation summary has an equal-depth closure collision |
+| Time-ordered kernel pivots | Exact ANF emission recurrence through three post-knee macros | `K=P^T P` is symmetric with raw diagonal `1,0,...`; a length-`n` seed starts its tail constraints at row depth `2n`; the first `n=4` post-knee pin is `1+rho_2 rho_4`, with no linear pivot |
+| Dynamic Boolean ideals | Exact ANF generators and projected SAT counts for every horizon, `n=4..12` | Unit ideal reached at horizons `5,4,3,3,5,4,9,8,7`; long nonzero plateaus occur, so finite generator absorption is not immortality |
+| `n=10` plateau Bezout extraction | Exact dynamic and hard-core lift cofactors in the Boolean quotient | `epsilon_8=1` already on `V_3`, `q_8=1` already on `V_5`; dynamic cofactor degree is at most 5 but support spans almost all seed positions |
 | Literal endpoint peel | Full aligned Mealy tableau and exact `K_(w+2)` endpoint block | `(n,H)->(n-1,H-2)` is semantically false: length-4 seed `0xa` survives 4, while every length-3 seed survives at most 1 |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
