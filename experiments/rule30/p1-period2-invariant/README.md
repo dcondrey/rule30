@@ -38,11 +38,14 @@ Use this routing table:
 | Dynamic Boolean ideal/variety trace | `RESULTS-DYNAMIC-BOOLEAN-IDEAL.md`; `ideal-variety-n4-n12.json`; `pivot_emission_audit.py` |
 | Exact `n=10` plateau cofactors | `RESULTS-PLATEAU-BEZOUT.md`; `plateau_bezout.py`; `verify_plateau_bezout.py`; `plateau-bezout-n10.json` |
 | Cofactor and interval-annihilator shifts | `RESULTS-COFACTOR-AUTOMATON.md`; `RESULTS-INTERVAL-ANNIHILATOR.md`; matching generators/verifiers/JSON |
+| Defect/restart formula cocycle | `RESULTS-DEFECT-RESTART-COCYCLE.md`; `defect_restart_cocycle.py`; `verify_defect_restart_cocycle.py`; `defect-restart-cocycle.json` |
+| Bilateral boundary-collision specification | `RESULTS-DEFECT-RESTART-COCYCLE.md` section 8; `docs/rule30/RESULTS-diagonal-periodicity.md`; `docs/rule30/RESULTS-followup-skew-product-cocycle.md` |
 | Moving-endpoint block and literal peel obstruction | `RESULTS-ENDPOINT-PEEL.md`; `endpoint_peel.py` |
 | Tail density, deep-zero/core conjugacy | `RESULTS-TAIL-DENSITY.md`; `tail_density.py` |
 | Reverse fixed-horizon cascade and factor obstruction | `PREREGISTRATION-CORE-DISCHARGE.md`; `RESULTS-CORE-DISCHARGE.md`; `core_discharge.py` |
 | Stronger active-core diagonal CNF | `RESULTS-CORE-MORTALITY-SAT.md`; `core_mortality_sat.py` |
 | Projected cut / interpolant probe | `PREREGISTRATION-CORE-INTERPOLANT.md`; `RESULTS-CORE-INTERPOLANT.md`; `core_interpolant_probe.py` |
+| Dyadic-period graph audit | `RESULTS-DYADIC-PERIODICITY.md`; `dyadic_periodicity_analyzer.py` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
@@ -127,12 +130,14 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | `n=10` plateau Bezout extraction | Exact dynamic and hard-core lift cofactors in the Boolean quotient | `epsilon_8=1` already on `V_3`, `q_8=1` already on `V_5`; dynamic cofactor degree is at most 5 but support spans almost all seed positions |
 | Shift-normalized cofactor automaton | Exact recurrence `C_(i+1)=C_i(1+g_i)` | Degree five fails at `n=12`; support spans the seed; the highlighted motif has a literal self-loop and is not a closed state |
 | Interval annihilator | Uniform matched-extension identity on complete survivor indicators | Matched appends are exact macro shifts; an unmatched rank-five defect appears, so restart/defect states remain unclassified |
+| Defect/restart cocycle | Exact advance, restart, and extension partitions on full symbolic frontier/indicator states | Uniform partition lemma proved, but strict rank contraction is false; `n=10` has an exact indicator/period-three-phase closure collision |
 | Literal endpoint peel | Full aligned Mealy tableau and exact `K_(w+2)` endpoint block | `(n,H)->(n-1,H-2)` is semantically false: length-4 seed `0xa` survives 4, while every length-3 seed survives at most 1 |
 | Coefficient-seven tail density | Exact minimum-weight falsifier and period-seven sharp control | **Killed:** length-37 rho `0101010101010101010101010101010101000` gives `wt(L)=10`, hence `70 < 72` |
 | Two-factor right-filtered mortality | Uniform right-light-cone prohibition of `00000` | **Killed:** a length-30 seed avoiding `11`/`00000` survives 10; it contains the actual-right forbidden factor `101001` |
 | Exact joint mortality | Direct coupling to a genuine Rule 30 right light cone | **Killed:** right mask `0x13be` gives `J(82,10)` SAT; the resulting finite row alternates through time 184 |
 | Core/factor discharging | Exact reverse `H`-carry cascade over arbitrary frontier width | Width-uniform for fixed `H`, but **killed as a bounded factor proof:** seed-generated radius-seven negative self-/two-cycles exist |
 | Active-core diagonal mortality | Local carry CNF `C(m,m+1)` over every length-`m` word ending in `3` | UNSAT through `m=34`; all thresholds through `m=7` match enumeration, but no induction in `m` |
+| Dyadic periodicity mismatch | Fiber-monoid induction proves every finite zero-ray cascade has eventual period `2^k` | **Killed as an acceptance separator:** endpoint `2^omega` maps to the accepted cut `(12)^omega`; every eventually-`2` hard-core endpoint gives an eventually-period-two accepted cut |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
 moment order, lookahead, or endpoint window.  Their standalone certificates

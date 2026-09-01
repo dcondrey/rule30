@@ -223,7 +223,60 @@ is always finite is already the mortality problem.
 
 The period-two theorem remains open.
 
-## 8. Reproduction
+## 8. Boundary-collision interpretation and next operator
+
+The boundary-value formulation is compatible with the exact cocycle, but
+three evidence levels must remain separate.
+
+1. Rowland's right-diagonal theorem is rigorous: every fixed right-cone
+   diagonal of a finite row is purely periodic with a power-of-two period.
+2. The penetration estimate `~2.4 log2(t)` in
+   `docs/rule30/RESULTS-diagonal-periodicity.md` is an exact computation over
+   the recorded range, not a proved asymptotic law.  In particular, the
+   stronger claim that the right boundary exerts no constraint on the centre
+   for every time does not follow from that estimate alone.
+3. The exact "one new bit" statement is a closure deficit: advancing a
+   fixed finite fibre requires the next outer bit.  It is not a theorem that
+   Rule 30 loses one bit of entropy or predictability at every step.  The
+   entropy census in `docs/rule30/RESULTS-followup-entropy-gardenofeden.md`
+   instead records bounded-prefactor losses in the tested languages.
+
+The left-side obstruction is the exact ladder sandwich
+
+```text
+plain(R+1) subset pin(R) subset plain(R).             (16)
+```
+
+Thus a fixed-depth boundary pin relocates the unresolved phase slip rather
+than closing the dynamics.  A bilateral adaptive state must retain that
+unresolved information.  The minimal honest specification is
+
+```text
+C_T = (L_T, S_T, P_T, R_T),                           (17)
+C_(T+1) = U_(L_T,R_T)(C_T),                           (18)
+```
+
+where `L_T` and `R_T` are exact boundary modes, `S_T` is the symbolic
+active-core frontier, and `P_T` is the survivor indicator.  Every newly
+exposed seam bit remains in `S_T` unless an exact boundary relation eliminates
+it.  Merely attaching two periodic phases to `P_T` would not make (18)
+closed: the collision (14) already shows that the same complete indicator
+and tail phase can have different successors when their symbolic drivers
+differ.
+
+The resulting uniform theorem target is therefore:
+
+> Construct a closed symbolic compression of `(L_T,S_T,P_T,R_T)` and a
+> well-founded measure `mu` such that
+> `mu(U_(l,r)(C)) < mu(C)` for every admissible boundary-mode pair `(l,r)`.
+
+The right-diagonal modes can parameterize inputs to this operator, but they
+cannot by themselves supply the required decrease across the growing
+unresolved interface.  Proving either symbolic elimination of every fresh
+seam bit or strict descent despite retaining those bits is the outstanding
+obligation.
+
+## 9. Reproduction
 
 From the repository root:
 
