@@ -41,6 +41,7 @@ Use this routing table:
 | Moving-endpoint block and literal peel obstruction | `RESULTS-ENDPOINT-PEEL.md`; `endpoint_peel.py` |
 | Tail density, deep-zero/core conjugacy | `RESULTS-TAIL-DENSITY.md`; `tail_density.py` |
 | Reverse fixed-horizon cascade and factor obstruction | `PREREGISTRATION-CORE-DISCHARGE.md`; `RESULTS-CORE-DISCHARGE.md`; `core_discharge.py` |
+| Stronger active-core diagonal CNF | `RESULTS-CORE-MORTALITY-SAT.md`; `core_mortality_sat.py` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
@@ -130,6 +131,7 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Two-factor right-filtered mortality | Uniform right-light-cone prohibition of `00000` | **Killed:** a length-30 seed avoiding `11`/`00000` survives 10; it contains the actual-right forbidden factor `101001` |
 | Exact joint mortality | Direct coupling to a genuine Rule 30 right light cone | **Killed:** right mask `0x13be` gives `J(82,10)` SAT; the resulting finite row alternates through time 184 |
 | Core/factor discharging | Exact reverse `H`-carry cascade over arbitrary frontier width | Width-uniform for fixed `H`, but **killed as a bounded factor proof:** seed-generated radius-seven negative self-/two-cycles exist |
+| Active-core diagonal mortality | Local carry CNF `C(m,m+1)` over every length-`m` word ending in `3` | UNSAT through `m=34`; all thresholds through `m=7` match enumeration, but no induction in `m` |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
 moment order, lookahead, or endpoint window.  Their standalone certificates
@@ -190,6 +192,7 @@ Rule 30 rho five-zero ANF identity      zero polynomial; 512/512 PASS
 Rule 90 five-zero negative control      witness right mask 0x114 PASS
 active-core conjugacy                   511 reachable macros PASS
 reverse append/cascade                  4,370 / 4,247 arbitrary instances PASS
+active-core CNF thresholds              36/36 PASS through core length 7
 tail-density controls                   n<=24 table; fixed n=37 counterexample PASS
 local-ranking negative certificates     PASS without solver
 divergence negative certificate         PASS without solver
@@ -221,12 +224,16 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/tail_density.py
 PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/core_discharge.py
+PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
+  experiments/rule30/p1-period2-invariant/core_mortality_sat.py \
+  --max-length 20 --max-validate 7
 ```
 
 ## Best next theorem
 
-> **Linear hard-core mortality.**  Every no-`11` rho seed of length `n` fails
-> a pin or creates `11` within `2n+2` post-seed macros.
+> **Active-core diagonal mortality.**  Every aligned core word of length `m`
+> ending in terminal symbol `3` fails a pin or creates `11` within `m+1`
+> macros.
 
 The exact joint constant bound is false: right mask `0x13be` yields
 `J(82,10)` SAT and a finite configuration alternating through time 184.  The
@@ -235,9 +242,14 @@ falsify linear mortality.  The coefficient-seven density inequality is also
 false; the two weaker balance inequalities in `RESULTS-TAIL-DENSITY.md` remain
 the main alternate target.
 
+The active-core statement is stronger and cleaner than the seed-only linear
+bound.  A length-`n` seed has active length at most `2n`, so the theorem would
+give failure within `2n+1` macros.  Its local CNF `C(m,m+1)` is UNSAT through
+`m=34`, but those instances do not supply the missing induction.
+
 Why it suffices: an actual right trace has no `11`, while an infinite
-alternating trace would force its finite left seed to survive every number of
-post-seed macros.  Any finite bound depending on the seed length therefore
+alternating trace would force its finite active core to survive every number
+of post-seed macros.  Any finite bound depending on core length therefore
 rules it out.  This route is intentionally stronger on the right boundary
 than necessary, because it uses only the uniform hard-core consequence of
 actual Rule 30 realizability.
@@ -251,9 +263,9 @@ What a proof must retain:
   half-plane;
 - Rule 30's OR, with Rule 90 failing in the intended branch.
 
-What would kill this exact bound: one length-`n` hard-core seed surviving
-`2n+2` post-seed macros.  That witness would not by itself establish an
-immortal seed or refute period-two mortality.
+What would kill this exact bound: one terminal-`3` core of length `m`
+surviving `m+1` macros while its forced rho avoids `11`.  That witness would
+not by itself establish an immortal core or refute period-two mortality.
 
 The exact endpoint formulas do **not** support a literal induction that peels
 one seed macro at the cost of two continuation macros.  The length-4/length-3

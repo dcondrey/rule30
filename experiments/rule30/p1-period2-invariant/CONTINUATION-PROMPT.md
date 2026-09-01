@@ -30,11 +30,11 @@ whole Rule 30 Prize Problem 1.
 
 CURRENT BEST UNIFORM TARGET
 
-Prove the following statement for every n, without a tested-width parameter:
+Prove the following statement for every m, without a tested-width parameter:
 
-    Linear hard-core mortality.
-    Every no-11 rho seed of length n fails a forced left pin or creates 11
-    within 2n+2 post-seed macrosteps.
+    Active-core diagonal mortality.
+    Every aligned core word of length m ending in terminal symbol 3 fails a
+    pin or creates 11 within m+1 macrosteps.
 
 The bilateral reduction is already exact: for an alternating center trace,
 
@@ -43,12 +43,14 @@ The bilateral reduction is already exact: for an alternating center trace,
                             AND (NOT s(2k+1,2)).
 
 Hence every actually realizable rho avoids adjacent ones. Every finite left
-half reaches a finite "knee" represented by a finite rho seed. A UNIFORM
-proof of mortality for every seed length, combined with this reduction, would
-prove the period-two theorem.
+half reaches a finite knee represented by a core of length at most `2n` for a
+seed of length `n`. A UNIFORM proof of active-core diagonal mortality would
+therefore give seed mortality within `2n+1` macros and prove the period-two
+theorem.
 
-A seed surviving 2n+2 macros would kill this particular linear bound, not the
-period-two theorem. The broader alternate route remains:
+A terminal-3 core of length `m` surviving `m+1` macros would kill this
+particular diagonal bound, not the period-two theorem. The weaker seed-only
+`2n+2` bound and the broader alternate route remain:
 
     If rho has no 11 and its exact reconstructed left tail L(rho) is
     eventually zero, prove rho is eventually periodic.
@@ -139,6 +141,13 @@ an exact `H`-carry cascade with at most `4^H` states that recognizes every
 length-`H` emitted-label block over arbitrary frontier width. Read
 `RESULTS-CORE-DISCHARGE.md` and use `core_discharge.py`. This is uniform in
 width for fixed `H`, but its state grows with `H`; it is not mortality.
+
+The local diagonal CNF `C(m,H)` in `core_mortality_sat.py` asserts survival
+of an arbitrary length-`m` aligned word ending in `3`; it is stronger than
+the seed CNF. All 36 thresholds through `m=7` match exhaustive word replay,
+dropping no-`11` makes `C(6,7)` SAT, and `C(m,m+1)` is UNSAT through `m=34`.
+These are exact finite controls only. The missing proof is a symbolic corner
+induction for `C(m,m+1)` or another argument uniform in `m`.
 
 The two weaker global balances
 
@@ -288,7 +297,9 @@ FILES TO READ FIRST — DO NOT LOAD THE WHOLE ARCHIVE
 4. `experiments/rule30/p1-period2-invariant/RESULTS-CORE-DISCHARGE.md`
 5. `experiments/rule30/p1-period2-invariant/carry_transducer.py`
 6. `experiments/rule30/p1-period2-invariant/core_discharge.py`
-7. `experiments/rule30/p1-period2-invariant/mortality_sat.py`
+7. `experiments/rule30/p1-period2-invariant/RESULTS-CORE-MORTALITY-SAT.md`
+8. `experiments/rule30/p1-period2-invariant/core_mortality_sat.py`
+9. `experiments/rule30/p1-period2-invariant/mortality_sat.py`
 
 The matching preregistrations are the audit trail. Read another historical
 result only if the compact README routes you to it.
