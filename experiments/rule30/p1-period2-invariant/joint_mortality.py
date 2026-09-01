@@ -18,7 +18,7 @@ from dataclasses import dataclass
 
 from pysat.solvers import Solver
 
-from carry_transducer import forced_macro, parity_or, seed_state
+from carry_transducer import forced_macro, parity_or, seed_state, wf_step
 from mortality_sat import BitState, Encoder
 from right_trace_forbidden import numeric_rho
 
@@ -139,6 +139,66 @@ def replay(seed_word: str, continuation: str) -> None:
         raise AssertionError("decoded joint model failed its rho replay")
 
 
+def known_counterexample() -> tuple[int, int, int, int]:
+    """Independently replay the exact finite counterexample to constant H=8."""
+    right_seed = 0x13BE
+    n = 82
+    rho = numeric_rho(right_seed, 110)
+
+    state = (0, 0, 0)
+    left_bits: list[int] = []
+    for bit in rho[:n]:
+        old_depth = state[0]
+        state = wf_step(state, 1 - int(bit))
+        left_bits.append((state[1] >> old_depth) & 1)
+        old_depth = state[0]
+        state = wf_step(state, 1)
+        left_bits.append((state[1] >> old_depth) & 1)
+
+    rho_seed = sum(int(bit) << index for index, bit in enumerate(rho[:n]))
+    assert state == seed_state(rho_seed, n)
+
+    for follow in range(10):
+        assert 1 ^ parity_or(state) == int(rho[n + follow])
+        following = forced_macro(state)
+        assert following is not None
+        state = following
+    assert 1 ^ parity_or(state) != int(rho[n + 10])
+    assert forced_macro(state) is None
+
+    left_mask = sum(bit << index for index, bit in enumerate(left_bits))
+    assert left_mask.bit_length() == 164
+    row = {
+        position + 1
+        for position in range(16)
+        if (right_seed >> position) & 1
+    } | {
+        -(position + 1)
+        for position in range(164)
+        if (left_mask >> position) & 1
+    }
+
+    trace: list[int] = []
+    for _ in range(186):
+        trace.append(int(0 in row))
+        if not row:
+            break
+        low = min(row) - 1
+        high = max(row) + 1
+        row = {
+            position
+            for position in range(low, high + 1)
+            if (
+                (position - 1 in row)
+                ^ ((position in row) or (position + 1 in row))
+            )
+        }
+    assert len(trace) == 186
+    assert all(trace[time] == time % 2 for time in range(185))
+    assert trace[185] == 0
+    return right_seed, left_mask, 184, 185
+
+
 def sweep(max_n: int, horizon: int) -> None:
     for n in range(1, max_n + 1):
         instance = build_joint_instance(n, horizon)
@@ -168,6 +228,12 @@ def main() -> None:
     parser.add_argument("--max-n", type=int, default=20)
     parser.add_argument("--horizon", type=int, default=8)
     args = parser.parse_args()
+    right_seed, left_mask, last_good, first_bad = known_counterexample()
+    print(
+        "joint constant-eight counterexample: "
+        f"right=0x{right_seed:x} left=0x{left_mask:x} "
+        f"alternates-through={last_good} first-fails={first_bad} PASS"
+    )
     sweep(args.max_n, args.horizon)
 
 

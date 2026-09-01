@@ -2,10 +2,11 @@
 
 Date: 2026-09-01
 
-Status: **OPEN.  THE EXACT JOINT HORIZON-EIGHT CNF IS UNSAT THROUGH SEED
-LENGTH 31, BUT NO UNIFORM PROOF IS KNOWN.**  Finite forbidden-factor
-approximations produce moving counterexamples, so neither finite UNSAT nor a
-fixed short list of right factors is being promoted to a theorem.
+Status: **THE JOINT CONSTANT-EIGHT CANDIDATE IS FALSE.**  It is UNSAT through
+seed length 40, but a genuine finite right half gives a seed-length-82 witness
+that accepts ten post-knee macros.  The resulting finite Rule 30 configuration
+alternates at the center through time 184 and first fails at time 185.  This is
+a long finite prefix, not an infinite period-two counterexample.
 
 ## 1. Exact coupled statement
 
@@ -30,8 +31,9 @@ right realizability by a finite forbidden-factor approximation.
 
 ## 2. Exact finite result
 
-At `H=8`, every instance `J(n,8)` for `1 <= n <= 31` is UNSAT.  At smaller
-horizons the exact SAT widths through 20 are:
+At `H=8`, every instance `J(n,8)` for `1 <= n <= 31` is UNSAT; a separate
+strategic check also found `J(40,8)` UNSAT.  At smaller horizons the exact SAT
+widths through 20 are:
 
 ```text
 H=1: n=1..20
@@ -45,8 +47,8 @@ H=8: none
 ```
 
 Every decoded SAT trace was replayed through the independent integer frontier
-recurrence.  The width sweep is falsification evidence only.  It supplies no
-induction in `n` and therefore does not prove constant-eight joint mortality.
+recurrence.  The width sweep was falsification evidence only.  It supplied no
+induction in `n`; Section 4 gives the later exact counterexample.
 
 ## 3. Why short forbidden factors do not explain the result
 
@@ -72,7 +74,7 @@ finite-type approximation admits
 Both are killed by the same length-24 minimal forbidden factor
 
 ```text
-010000100100001000010101.
+010000100100001000010101
 ```
 
 Adding every exact minimal forbidden factor through length 24 again moves the
@@ -86,7 +88,21 @@ the suffix
 and contains the length-25 minimal forbidden factor
 
 ```text
-0010001000100010001010001.
+0010001000100010001010001
+```
+
+Adding every exact minimal forbidden factor through length 25 still does not
+close the horizon-eight finite-type approximation.  Its first witness is at
+width 44; one complete seed-plus-continuation word is
+
+```text
+0000100010100001001000010010010000100001001000010010
+```
+
+and its first unrealizable actual-right factor has length 29:
+
+```text
+01001000010010010000100001001
 ```
 
 These are exact counterexamples to the finite-factor approximations, not
@@ -95,30 +111,45 @@ tracking the moving boundary of the actual right trace language.  A proof
 must give a parameterized obstruction or a coupled layer induction; extending
 the forbidden list one length at a time is not uniform.
 
-## 4. Geometric reformulation
+## 4. Exact counterexample to the bounded-gap theorem
 
-Each seed macro reconstructs two initial cells on the left.  Eight accepted
-post-seed macros therefore assert sixteen consecutive zeros immediately past
-the reconstructed left endpoint.  The candidate theorem is equivalently a
-bounded-gap assertion:
+Exhaustive bit-parallel enumeration of every finite right half of width 16 to
+depth 512 found right mask
 
-> Along an actual alternating-center Rule 30 right trace, the uniquely
-> reconstructed initial left tail cannot have sixteen consecutive zero cells
-> after any even endpoint.
+```text
+0x13be
+```
 
-This formulation removes the artificial knee vocabulary and identifies the
-remaining proof object: a fixed-width zero block coupled to an arbitrarily
-large Rule 30 light-cone layer.  No layer-peeling identity has yet been proved.
+whose reconstructed left tail has the zero block `L_165,...,L_184`, bracketed
+by `L_164=L_185=1`.  Aligning the knee at `n=82`, its actual rho trace agrees
+with ten forced continuation macros; macro 11 disagrees and the pin fails.
+Thus `J(82,8)` and `J(82,10)` are SAT.
+
+Truncating at that zero block gives the finite initial row with support
+`[-164,13]`, right mask `0x13be`, and left mask
+
+```text
+0xa96bfe30260597f6e6d977d63403b1304cb232655
+```
+
+An independent direct set-valued Rule 30 evolution verifies
+
+```text
+s(t,0) = t mod 2 for 0 <= t <= 184,
+s(185,0) = 0.
+```
+
+This finite row is now a load-bearing control: any proposed proof that forces
+failure before time 185 is wrong.  It is not an infinite alternating trace.
 
 ## 5. Consequence
 
-If `J(n,8)` were proved UNSAT for every `n`, every left-finite alternating
-fiber would die within sixteen time steps after its initial left endpoint
-enters the reconstruction.  This would exclude the period-two same-orbit
-trace for finite configurations.  It would not prove arbitrary-period P1,
-P2, or P3.
-
-At present the period-two theorem remains open.
+The counterexample kills the fixed sixteen-zero theorem and every smaller
+constant bound.  It does not kill period-two mortality: the witness dies at
+time 185.  Any proof must now control an unbounded quantity, for example a
+linear mortality bound, a global tail-density inequality, or an eventual
+periodicity obstruction.  The period-two theorem remains open, and even a
+proof of it would not settle arbitrary-period P1, P2, or P3.
 
 ## 6. Reproduction
 
@@ -132,9 +163,9 @@ PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
 
 PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/right_filtered_mortality.py \
-  --max-length 24
+  --max-length 25
 ```
 
-The first command rebuilds both Tseitin triangles and reports each exact
-finite status.  The second independently replays the retained two-factor
-counterexample.
+The first command independently replays the finite time-184 counterexample,
+then rebuilds both Tseitin triangles and reports each exact finite status.  The
+second independently replays the retained two-factor counterexample.

@@ -127,7 +127,7 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Literal endpoint peel | Full aligned Mealy tableau and exact `K_(w+2)` endpoint block | `(n,H)->(n-1,H-2)` is semantically false: length-4 seed `0xa` survives 4, while every length-3 seed survives at most 1 |
 | Coefficient-seven tail density | Exact minimum-weight falsifier and period-seven sharp control | Survives through `n=24`; phase/rho/D8 observer has a 14-edge negative cycle of total charge `-28` |
 | Two-factor right-filtered mortality | Uniform right-light-cone prohibition of `00000` | **Killed:** a length-30 seed avoiding `11`/`00000` survives 10; it contains the actual-right forbidden factor `101001` |
-| Exact joint mortality | Direct coupling to a genuine Rule 30 right light cone | `J(n,8)` is UNSAT through `n=31`, but finite-factor witnesses move to lengths 24 and 25; no arbitrary-`n` proof |
+| Exact joint mortality | Direct coupling to a genuine Rule 30 right light cone | **Killed:** right mask `0x13be` gives `J(82,10)` SAT; the resulting finite row alternates through time 184 |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
 moment order, lookahead, or endpoint window.  Their standalone certificates
@@ -155,6 +155,9 @@ well-founded spatial statement about that unbounded sequence.
 - Rule 90 control: finite row `{-1,1}` has zero center forever.
 - Rule 30 shallow-control trap: `{-8,-1,6}` alternates through time 14 and
   fails at 15.
+- Rule 30 long-control trap: right mask `0x13be` and left mask
+  `0xa96bfe30260597f6e6d977d63403b1304cb232655`, supported on `[-164,13]`,
+  alternate through time 184 and fail at 185.
 - Natural signed summaries oscillate on
   `(2,1,1) -> (4,3,2) -> (6,5,5)` and return to their starting summary.
 - Carry action closure: `(2,1,1)` and `(6,21,21)` have the same current D8
@@ -179,6 +182,7 @@ moving-endpoint K block / append words      5,824 PASS through width 10
 aligned endpoint tableau frontiers          34,952 PASS through width 8
 Rule 30 radius-eight rows               131,071 PASS
 Rule 30 adversarial trace               fail exactly at t=15
+Rule 30 finite joint counterexample     alternates through t=184; fails at 185
 Rule 90 {-1,1}                          zero through t=128
 Rule 30 rho five-zero ANF identity      zero polynomial; 512/512 PASS
 Rule 90 five-zero negative control      witness right mask 0x114 PASS
@@ -216,23 +220,21 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
 
 ## Best next theorem
 
-> **Joint sixteen-zero gap theorem.**  Along an actual alternating-center
-> Rule 30 right trace, the uniquely reconstructed initial left tail cannot
-> contain sixteen consecutive zeros immediately after any even endpoint.
+> **Linear hard-core mortality.**  Every no-`11` rho seed of length `n` fails
+> a pin or creates `11` within `2n+2` post-seed macros.
 
-This is `J(n,8)=UNSAT` for every seed length.  The exact coupled formula is
-UNSAT only through `n=31`, which is not a proof.  Approximating the genuine
-right trace by all known forbidden factors does not stabilize: the first
-horizon-eight finite-type witnesses move from width 36 to width 42 when the
-factor cutoff moves from 18 to 24.  A proof therefore needs a coupled
-layer-peeling identity or a parameterized right-language obstruction.
+The exact joint constant bound is false: right mask `0x13be` yields
+`J(82,10)` SAT and a finite configuration alternating through time 184.  The
+same witness is far below the proposed linear allowance, so it does not
+falsify linear mortality.  The coefficient-seven tail-density inequality is
+the main alternate target.
 
-Why it suffices: every finite left half has an even endpoint after at most one
-phase adjustment, while its rho word comes from the actual right light cone.
-Sixteen forced zeros beyond that endpoint are necessary for an infinite
-alternating trace.  The joint gap theorem would forbid them.  The broader
-hard-core density and linear-mortality targets remain valid fallbacks if the
-constant joint bound is falsified.
+Why it suffices: an actual right trace has no `11`, while an infinite
+alternating trace would force its finite left seed to survive every number of
+post-seed macros.  Any finite bound depending on the seed length therefore
+rules it out.  This route is intentionally stronger on the right boundary
+than necessary, because it uses only the uniform hard-core consequence of
+actual Rule 30 realizability.
 
 What a proof must retain:
 
