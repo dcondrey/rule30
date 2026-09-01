@@ -32,6 +32,7 @@ Use this routing table:
 | Run-length/boundary-gap coordinates | `RESULTS-RUNLENGTH.md`; `runlength_search.py` |
 | Signed counts, touching colors, row toggle | `RESULTS-DIVERGENCE.md`; `verify_divergence_negative.py`; `toggle_phase.py` |
 | Actual-right trace restrictions (`11`, `00000`) | `RESULTS-BILATERAL.md`; `RESULTS-RIGHT-FILTERED-MORTALITY.md`; `bilateral_hardcore.py`; `right_trace_forbidden.py` |
+| Joint left-finite/right-realizable mortality | `PREREGISTRATION-JOINT-MORTALITY.md`; `RESULTS-JOINT-MORTALITY.md`; `joint_mortality.py` |
 | Variable-seed mortality SAT and triangular correlations | `RESULTS-MORTALITY-SAT.md`; `mortality_sat.py`; `verify_drup.py`; `quadratic_probe.py` |
 | Time-ordered pivot/emission audit | `RESULTS-PIVOT-EMISSION.md`; `pivot_emission_audit.py` |
 | Dynamic Boolean ideal/variety trace | `RESULTS-DYNAMIC-BOOLEAN-IDEAL.md`; `ideal-variety-n4-n12.json`; `pivot_emission_audit.py` |
@@ -125,12 +126,14 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Interval annihilator | Uniform matched-extension identity on complete survivor indicators | Matched appends are exact macro shifts; an unmatched rank-five defect appears, so restart/defect states remain unclassified |
 | Literal endpoint peel | Full aligned Mealy tableau and exact `K_(w+2)` endpoint block | `(n,H)->(n-1,H-2)` is semantically false: length-4 seed `0xa` survives 4, while every length-3 seed survives at most 1 |
 | Coefficient-seven tail density | Exact minimum-weight falsifier and period-seven sharp control | Survives through `n=24`; phase/rho/D8 observer has a 14-edge negative cycle of total charge `-28` |
-| Right-filtered constant mortality | Uniform right-light-cone prohibition of `00000` | Seed-generated frontiers survive at most 8 through `n=24`, but a legal arbitrary frontier survives 10; seed-language recognition is essential |
+| Two-factor right-filtered mortality | Uniform right-light-cone prohibition of `00000` | **Killed:** a length-30 seed avoiding `11`/`00000` survives 10; it contains the actual-right forbidden factor `101001` |
+| Exact joint mortality | Direct coupling to a genuine Rule 30 right light cone | `J(n,8)` is UNSAT through `n=31`, but finite-factor witnesses move to lengths 24 and 25; no arbitrary-`n` proof |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
 moment order, lookahead, or endpoint window.  Their standalone certificates
 are uniform negatives for the stated classes.  The variable-seed UNSAT data is
-different: it is finite evidence through `n=24`, not a negative or a theorem.
+different: both the hard-core and joint sweeps are finite evidence, not a
+negative or a theorem.
 
 ### Translation of geometric ideas already considered
 
@@ -213,21 +216,23 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
 
 ## Best next theorem
 
-> **Linear hard-core mortality.** Every hard-core rho seed of length `n`
-> fails a forced pin or creates `11` within `2n+2` post-seed macrosteps.
+> **Joint sixteen-zero gap theorem.**  Along an actual alternating-center
+> Rule 30 right trace, the uniquely reconstructed initial left tail cannot
+> contain sixteen consecutive zeros immediately after any even endpoint.
 
-The stronger current candidate is seed-specific constant mortality after
-adding the proved actual-right factor `rho != 00000`: fail a pin or create
-`11`/`00000` within eight post-seed macros.  It survives exact seed
-enumeration only through `n=24` and is not a theorem.  An arbitrary aligned
-frontier disproves the corresponding all-word claim by surviving ten, so a
-proof must retain the seed-generated triangular language.
+This is `J(n,8)=UNSAT` for every seed length.  The exact coupled formula is
+UNSAT only through `n=31`, which is not a proof.  Approximating the genuine
+right trace by all known forbidden factors does not stabilize: the first
+horizon-eight finite-type witnesses move from width 36 to width 42 when the
+factor cutoff moves from 18 to 24.  A proof therefore needs a coupled
+layer-peeling identity or a parameterized right-language obstruction.
 
-Why it suffices: every finite left half reaches a knee represented by one of
-these finite rho seeds, and actual right-side realizability supplies `no 11`.
-Uniform mortality would therefore exclude the remaining alternating center
-trace.  Exact enumeration supports the bound only through `n=24`; the maximum
-observed survival is 12, so this is not yet a theorem.
+Why it suffices: every finite left half has an even endpoint after at most one
+phase adjustment, while its rho word comes from the actual right light cone.
+Sixteen forced zeros beyond that endpoint are necessary for an infinite
+alternating trace.  The joint gap theorem would forbid them.  The broader
+hard-core density and linear-mortality targets remain valid fallbacks if the
+constant joint bound is falsified.
 
 What a proof must retain:
 

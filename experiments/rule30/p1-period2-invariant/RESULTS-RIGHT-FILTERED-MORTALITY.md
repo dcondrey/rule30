@@ -3,10 +3,11 @@
 Date: 2026-09-01
 
 Status: **A NEW UNIFORM LOCAL LEMMA IS PROVED: an actual alternating-center
-Rule 30 right trace `rho` contains neither `11` nor `00000`.**  Adding the
-five-zero prohibition reduces the longest measured post-knee survival to
-eight through seed length 24, but constant-eight mortality remains open.  It
-is seed-specific: a legal arbitrary frontier survives ten macros.
+Rule 30 right trace `rho` contains neither `11` nor `00000`.**  The proposed
+constant-eight mortality consequence is **falsified** at seed length 30.  The
+counterexample itself contains the separately proved impossible actual-right
+factor `101001`, so it kills the two-factor approximation, not the period-two
+theorem.  A legal arbitrary frontier also survives ten macros.
 
 ## 1. Uniform five-zero theorem
 
@@ -97,14 +98,26 @@ maximum accepted continuation lengths
 2,1,1,4,3,2,2,4,3,8,7,6,5,4,5,5,6,6,8,7,7,8,7,7.
 ```
 
-No seed survives nine macros.  Exact CNF queries at horizon nine are also
-UNSAT for `n=10,16,22,24,25`; these are falsification instances, not a proof
-schema.  The candidate uniform statement is therefore:
+No seed through length 24 survives nine macros.  Exact CNF queries at horizon
+nine are also UNSAT for `n=10,16,22,24,25`; these are falsification instances,
+not a proof schema.  At length 30 the exact CNF is SAT.  Its decoded seed is
+
+```text
+010101001010101010101000100010
+```
+
+and independent integer replay accepts ten forced macros before the eleventh
+pin fails.  The seed and continuation avoid both `11` and `00000`, so this is
+a decisive counterexample to the candidate statement:
 
 > Every seed-generated frontier whose complete rho history avoids `11` and
 > `00000` fails within eight post-knee macros.
 
-If proved, (R5) would make it sufficient for the period-two theorem.
+The witness contains `101001` starting at offset three.  Section 2 proves
+uniformly that this factor cannot occur in a genuine Rule 30 right trace.
+Thus the witness does not realize an alternating Rule 30 half-plane.  It shows
+that `(R5)` is insufficient by itself and motivates the separately recorded
+joint left-finite/right-realizable formulation.
 
 ## 4. Why an arbitrary-core automaton is insufficient
 
@@ -128,9 +141,10 @@ automaton alone cannot do it.
 ## 5. Consequence
 
 The five-zero theorem is a genuine strengthening of the bilateral reduction
-and is already uniform.  Constant-eight mortality, reconstructed-tail
-density, and the period-two theorem are **not** proved.  Prize Problem 1 is
-unchanged beyond this local lemma.
+and is already uniform.  Two-factor constant-eight mortality is false;
+joint actual-right mortality, reconstructed-tail density, and the period-two
+theorem are **not** proved.  Prize Problem 1 is unchanged beyond the local
+right-trace lemma.
 
 ## 6. Reproduction
 

@@ -89,6 +89,17 @@ def arbitrary_core_control() -> tuple[State, str, int, str]:
     return state, history, survival, outcome
 
 
+def two_factor_counterexample() -> tuple[str, int, str]:
+    """The first retained counterexample to constant-eight mortality."""
+    word = "010101001010101010101000100010"
+    assert legal(word)
+    survival, outcome = seed_replay(word, 32)
+    assert survival == 10 and outcome == "pin"
+    # It refutes only the {11,00000} filter, not actual right realizability.
+    assert "101001" in word
+    return word, survival, outcome
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--max-length", type=int, default=24)
@@ -105,6 +116,12 @@ def main() -> None:
     print(
         "arbitrary-core control: "
         f"state={state} history={history} survival={survival} death={outcome}"
+    )
+    word, survival, outcome = two_factor_counterexample()
+    print(
+        "two-factor seed counterexample: "
+        f"rho={word} survival={survival} death={outcome}; "
+        "contains actual-right forbidden factor 101001"
     )
 
 
