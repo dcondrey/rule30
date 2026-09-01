@@ -116,6 +116,41 @@ additions and maximum width 130. Treat CDCL as a falsifier/certificate
 generator, not the likely final proof language. Do not enlarge SAT bounds
 just to collect more finite UNSAT.
 
+LATEST FALSIFICATIONS AND UNIFORM LEMMA
+
+Do not resume the former constant or coefficient-seven targets:
+
+- exact joint mortality at horizon eight is false. Right mask `0x13be`
+  yields `J(82,10)` SAT. The corresponding finite row has left mask
+  `0xa96bfe30260597f6e6d977d63403b1304cb232655`, support `[-164,13]`, an
+  alternating center through time 184, and first failure at 185;
+- `7 wt(L) >= 2n-2` is false. The length-37 hard-core word
+  `0101010101010101010101010101010101000` has `wt(L)=10`, so `70<72`;
+- fixed-radius label discharging is already obstructed at radius seven.
+  Seed `(n,seed)=(22,0x24a28)` emits `00` while following seven forced rho
+  zeros. Seed `(26,0x892512)` does the same along forced rho `01010101`.
+  These give a negative self-loop and alternating two-cycle when locally
+  legal factors are spliced.
+
+One new all-width lemma is available. Every input-symbol carry action is a
+permutation, so a seed append can be read shallow-to-deep starting from the
+prescribed carry `(1-rho,rho)`. Composing `H` such reverse transductions gives
+an exact `H`-carry cascade with at most `4^H` states that recognizes every
+length-`H` emitted-label block over arbitrary frontier width. Read
+`RESULTS-CORE-DISCHARGE.md` and use `core_discharge.py`. This is uniform in
+width for fixed `H`, but its state grows with `H`; it is not mortality.
+
+The two weaker global balances
+
+    2 wt(L) >= wt(rho),
+    2 (wt(L)+wt(rho)) >= n
+
+remain conjectural and together would suffice. Their radius-seven factor
+approximations are killed by the preceding cycles, so a proof must retain
+global seed compatibility. A corrected bound such as
+`7 wt(L) >= 2n-O(1)` is also unproved; changing the additive constant after a
+finite sweep is not a theorem.
+
 EXACT TRIANGULAR CORRELATION LEMMA
 
 Let P_w be suffix XOR on width-w vectors:
@@ -190,6 +225,9 @@ OTHER RETIRED CLASSES — DO NOT REPACKAGE THEM
 - odd-row complement/toggle: two phases compose back to exactly F^2;
 - hard-core plus fixed D8 action: closure collision;
 - the 37-bit split triangular-correlation summary described above.
+- the joint constant-eight/sixteen-zero-gap theorem;
+- the exact coefficient-seven bound `7 wt(L)>=2n-2`;
+- radius-seven emitted-label factor discharging for either weaker balance.
 
 Do not "improve" these merely by increasing locality, moment order, endpoint
 window, lookahead, seed bound, or runtime. A genuinely new attempt must
@@ -200,6 +238,10 @@ LOAD-BEARING CONTROLS
 
 - Rule 30 finite row {-8,-1,6} alternates through t=14 and first fails at
   t=15. Never reject it earlier.
+- The finite Rule 30 row with right mask `0x13be` and left mask
+  `0xa96bfe30260597f6e6d977d63403b1304cb232655` alternates through t=184 and
+  first fails at t=185. This supersedes the shallow control as the strongest
+  known prefix trap.
 - Rule 90 finite row {-1,1} has zero center forever. Any generic argument
   that also excludes this is invalid. Rule 30's no-11 lemma uses OR and must
   not be transferred to Rule 90's XOR.
@@ -241,12 +283,12 @@ geometry is not progress.
 FILES TO READ FIRST — DO NOT LOAD THE WHOLE ARCHIVE
 
 1. `experiments/rule30/p1-period2-invariant/README.md`
-2. `experiments/rule30/p1-period2-invariant/RESULTS-MORTALITY-SAT.md`
-3. `experiments/rule30/p1-period2-oboc/RESULTS.md`
-4. `experiments/rule30/p1-period2-invariant/carry_transducer.py`
-5. `experiments/rule30/p1-period2-invariant/bilateral_hardcore.py`
-6. `experiments/rule30/p1-period2-invariant/mortality_sat.py`
-7. `experiments/rule30/p1-period2-invariant/quadratic_probe.py`
+2. `experiments/rule30/p1-period2-invariant/RESULTS-JOINT-MORTALITY.md`
+3. `experiments/rule30/p1-period2-invariant/RESULTS-TAIL-DENSITY.md`
+4. `experiments/rule30/p1-period2-invariant/RESULTS-CORE-DISCHARGE.md`
+5. `experiments/rule30/p1-period2-invariant/carry_transducer.py`
+6. `experiments/rule30/p1-period2-invariant/core_discharge.py`
+7. `experiments/rule30/p1-period2-invariant/mortality_sat.py`
 
 The matching preregistrations are the audit trail. Read another historical
 result only if the compact README routes you to it.
@@ -263,6 +305,9 @@ REPRODUCTION COMMANDS
 
     python3 experiments/rule30/p1-period2-oboc/verify_oboc_negative.py
 
+    python3 \
+      experiments/rule30/p1-period2-invariant/core_discharge.py
+
 WORKING METHOD FOR THIS SESSION
 
 1. Inspect current HEAD/status and read the seven routed files above.
@@ -273,15 +318,14 @@ WORKING METHOD FOR THIS SESSION
 4. Prefer a symbolic derivation. Computation should seek counterexamples,
    exact identities, or a parameterized proof schema—not a larger finite
    horizon.
-5. The recommended first attack is a hybrid of:
-   (a) the block recurrence for K_(w+2) relative to the moving deep endpoint;
-   (b) the two forced new deep zeros per macro;
-   (c) no-11 on rho; and
-   (d) a symbolic n-to-n+1 interpolant or finite grammar extracted from the
-       shortest-death formulas, with an independent schema checker.
-   Try to prove a lemma about the full unbounded triangular object. If it
-   fails, find the smallest exact reachable collision/cycle and record the
-   whole certificate class that it kills.
+5. The recommended first attack is a symbolic induction on the full
+   seed-generated compatibility object. Viable forms are an unbounded
+   interval grammar with a well-founded stack/multiset rank, or an
+   `n`-to-`n+1` interpolant whose closure is checked independently. Use the
+   reverse cascade to make fixed-horizon obligations exact, but do not promote
+   another bounded factor graph: radius seven is already false. If the
+   induction fails, find the smallest exact reachable collision/cycle and
+   record the whole certificate class that it kills.
 6. Do not claim success unless the argument quantifies over all n and the
    reduction to the alternating finite-support fiber is explicit.
 7. Update the compact README and write a result report. Preserve failures as

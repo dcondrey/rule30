@@ -40,6 +40,7 @@ Use this routing table:
 | Cofactor and interval-annihilator shifts | `RESULTS-COFACTOR-AUTOMATON.md`; `RESULTS-INTERVAL-ANNIHILATOR.md`; matching generators/verifiers/JSON |
 | Moving-endpoint block and literal peel obstruction | `RESULTS-ENDPOINT-PEEL.md`; `endpoint_peel.py` |
 | Tail density, deep-zero/core conjugacy | `RESULTS-TAIL-DENSITY.md`; `tail_density.py` |
+| Reverse fixed-horizon cascade and factor obstruction | `PREREGISTRATION-CORE-DISCHARGE.md`; `RESULTS-CORE-DISCHARGE.md`; `core_discharge.py` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
@@ -128,6 +129,7 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Coefficient-seven tail density | Exact minimum-weight falsifier and period-seven sharp control | **Killed:** length-37 rho `0101010101010101010101010101010101000` gives `wt(L)=10`, hence `70 < 72` |
 | Two-factor right-filtered mortality | Uniform right-light-cone prohibition of `00000` | **Killed:** a length-30 seed avoiding `11`/`00000` survives 10; it contains the actual-right forbidden factor `101001` |
 | Exact joint mortality | Direct coupling to a genuine Rule 30 right light cone | **Killed:** right mask `0x13be` gives `J(82,10)` SAT; the resulting finite row alternates through time 184 |
+| Core/factor discharging | Exact reverse `H`-carry cascade over arbitrary frontier width | Width-uniform for fixed `H`, but **killed as a bounded factor proof:** seed-generated radius-seven negative self-/two-cycles exist |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
 moment order, lookahead, or endpoint window.  Their standalone certificates
@@ -187,7 +189,8 @@ Rule 90 {-1,1}                          zero through t=128
 Rule 30 rho five-zero ANF identity      zero polynomial; 512/512 PASS
 Rule 90 five-zero negative control      witness right mask 0x114 PASS
 active-core conjugacy                   511 reachable macros PASS
-tail-density falsifier                  all hard-core seeds through n=24 PASS
+reverse append/cascade                  4,370 / 4,247 arbitrary instances PASS
+tail-density controls                   n<=24 table; fixed n=37 counterexample PASS
 local-ranking negative certificates     PASS without solver
 divergence negative certificate         PASS without solver
 ```
@@ -216,6 +219,8 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/right_trace_forbidden.py
 PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/tail_density.py
+PYTHONDONTWRITEBYTECODE=1 python3 \
+  experiments/rule30/p1-period2-invariant/core_discharge.py
 ```
 
 ## Best next theorem
