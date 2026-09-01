@@ -1,0 +1,172 @@
+{
+  "direct": [
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 2,
+      "n": 1,
+      "witness": 0
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 1,
+      "n": 2,
+      "witness": 2
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 1,
+      "n": 3,
+      "witness": 0
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 4,
+      "n": 4,
+      "witness": 10
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 3,
+      "n": 5,
+      "witness": 10
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 2,
+      "n": 6,
+      "witness": 42
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 2,
+      "n": 7,
+      "witness": 64
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 4,
+      "n": 8,
+      "witness": 80
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 3,
+      "n": 9,
+      "witness": 0
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 8,
+      "n": 10,
+      "witness": 128
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 7,
+      "n": 11,
+      "witness": 1152
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 6,
+      "n": 12,
+      "witness": 1152
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 5,
+      "n": 13,
+      "witness": 1152
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 4,
+      "n": 14,
+      "witness": 4384
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 5,
+      "n": 15,
+      "witness": 8480
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 6,
+      "n": 16,
+      "witness": 4136
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 6,
+      "n": 17,
+      "witness": 18752
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 8,
+      "n": 18,
+      "witness": 9376
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 8,
+      "n": 19,
+      "witness": 305832
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 7,
+      "n": 20,
+      "witness": 133440
+    },
+    {
+      "cap": 512,
+      "death": "hard-core",
+      "maximum": 10,
+      "n": 21,
+      "witness": 267264
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 12,
+      "n": 22,
+      "witness": 688296
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 11,
+      "n": 23,
+      "witness": 688296
+    },
+    {
+      "cap": 512,
+      "death": "pin",
+      "maximum": 10,
+      "n": 24,
+      "witness": 688296
+    }
+  ]
+}

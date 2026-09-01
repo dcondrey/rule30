@@ -41,3 +41,9 @@ experiments/rule30-subword-extended/gen30
 experiments/rule30-subword-extended/gen30v2
 experiments/rule30-subword-extended/gen30v3
 experiments/rule30-subword-extended/gen30v4
+
+# Regenerable SAT instances and DRUP traces for the period-two mortality
+# experiment.  Compact profiles/results and the independent checker are
+# versioned; checked raw certificates remain local because they total ~14 MiB.
+experiments/rule30/p1-period2-invariant/mortality-proofs/
+experiments/rule30/p1-period2-invariant/mortality-threshold-proofs/

@@ -32,6 +32,8 @@ Use this routing table:
 | Run-length/boundary-gap coordinates | `RESULTS-RUNLENGTH.md`; `runlength_search.py` |
 | Signed counts, touching colors, row toggle | `RESULTS-DIVERGENCE.md`; `verify_divergence_negative.py`; `toggle_phase.py` |
 | Actual-right-half no-`11` restriction | `RESULTS-BILATERAL.md`; `bilateral_hardcore.py` |
+| Variable-seed mortality SAT and triangular correlations | `RESULTS-MORTALITY-SAT.md`; `mortality_sat.py`; `verify_drup.py`; `quadratic_probe.py` |
+| Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
 ## Canonical exact map
@@ -93,10 +95,13 @@ so rho contains no adjacent ones.
 | Signed left/right/contact counts | Exact tile/contact features | Two-step six-summary oscillation; 36-transition Farkas multiset |
 | Odd-row toggle | Alternating OR/AND-dual rules | Two phases compose to exactly `F^2`; odd rows become cofinite |
 | Hard-core rho + action | Genuine-right-half no-`11` language | Length-1/3 zero seeds share summary but have different successors |
+| Variable-seed CDCL proofs | Exact mortality CNF with no free post-knee boundary | Checked finite UNSAT; proof additions and width grow sharply |
+| Triangular quadratic algebra | `<Ix,Iy>=x^T K y`, `K_ij=(min(i,j)+1) mod 2` | `rank(K)=width`; 37-bit split-correlation summary has an equal-depth closure collision |
 
-Do not retry these by increasing locality, moment order, lookahead, endpoint
-window, seed bound, or time horizon.  The standalone certificates are uniform
-negatives for their stated classes even though finite searches discovered them.
+Do not retry the killed fixed-summary classes merely by increasing locality,
+moment order, lookahead, or endpoint window.  Their standalone certificates
+are uniform negatives for the stated classes.  The variable-seed UNSAT data is
+different: it is finite evidence through `n=24`, not a negative or a theorem.
 
 ### Translation of geometric ideas already considered
 
@@ -135,6 +140,9 @@ two-orbit defect recurrence             64/64 PASS
 carry local table                       16/16 PASS
 carry/Gray arbitrary frontiers          34,952 PASS
 moment/Hasse standalone checks          589,824 PASS
+variable-seed SAT thresholds n<=16       95/95 PASS vs direct enumeration
+shortest-death DRUP certificates        independently checked through n=17
+triangular-correlation word pairs       87,380 PASS through width 8
 Rule 30 radius-eight rows               131,071 PASS
 Rule 30 adversarial trace               fail exactly at t=15
 Rule 90 {-1,1}                          zero through t=128
@@ -155,29 +163,36 @@ PYTHONDONTWRITEBYTECODE=1 uv run python \
   experiments/rule30/p1-period2-invariant/verify_divergence_negative.py
 PYTHONDONTWRITEBYTECODE=1 uv run python \
   experiments/rule30/p1-period2-invariant/bilateral_hardcore.py
+uv run --project experiments/sygus-p3 python \
+  experiments/rule30/p1-period2-invariant/mortality_sat.py \
+  --validate --max-validate 16
+uv run --project experiments/sygus-p3 python \
+  experiments/rule30/p1-period2-invariant/quadratic_probe.py
 ```
 
 ## Best next theorem
 
-> **Hard-core isolated-pulse theorem.** If rho has no adjacent ones and its
-> full forced-left reconstruction `L(rho)` is eventually zero, then rho is
-> eventually periodic.
+> **Linear hard-core mortality.** Every hard-core rho seed of length `n`
+> fails a forced pin or creates `11` within `2n+2` post-seed macrosteps.
 
-Why it suffices: `col_(-1)(2k)=NOT rho_k` and
-`col_(-1)(2k+1)=1`.  Eventual periodicity of rho makes the adjacent width-two
-trace eventually periodic, contradicting the recorded width-two theorem.
+Why it suffices: every finite left half reaches a knee represented by one of
+these finite rho seeds, and actual right-side realizability supplies `no 11`.
+Uniform mortality would therefore exclude the remaining alternating center
+trace.  Exact enumeration supports the bound only through `n=24`; the maximum
+observed survival is 12, so this is not yet a theorem.
 
 What a proof must retain:
 
-- the full cumulative boundary offsets, not finitely many gap digits;
+- the full cumulative boundary offsets or triangular form, not finitely many
+  gap/parity digits;
 - the finite-left-support hypothesis (`L` eventually zero);
 - actual right-side realizability (`rho` has no `11`), not an arbitrary
   half-plane;
 - Rule 30's OR, with Rule 90 failing in the intended branch.
 
-What would kill this target: one infinite no-`11`, aperiodic rho whose exact
-forced-left reconstruction is eventually zero.  A finite prefix or a growing
-survival record is not such a counterexample.
+What would kill this exact bound: one length-`n` hard-core seed surviving
+`2n+2` post-seed macros.  That witness would not by itself establish an
+immortal seed or refute period-two mortality.
 
 ## Provenance policy
 
