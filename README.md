@@ -72,6 +72,27 @@ This explains exactly why several natural contraction, bounded-summary, and
 local-ranking arguments fail. Those failures are preserved as independently
 checkable negative certificates rather than discarded experiments.
 
+The current strongest finite-rank reduction is a deterministic growing queue.
+For either constant cut tail `c in {2,3}`, reverse the full newest dependency
+diagonal `R` and scan
+
+```text
+S_0=c,  S_i=g_(S_(i-1))(R_i).
+```
+
+The final scan state uniquely emits or rejects the next hard-core endpoint.
+Mortality of every such finite queue would prove the period-two rung.  The
+exact quotient `3 -> 1` reduces its nonleading alphabet to three symbols, and
+every normalized successor avoids `20`, `22`, and `011`; the all-length
+mortality induction remains open.  The exact survival-language morph expands
+minimal DFA rank, so the remaining target is an amortized proof that its
+shortest accepted queue tends to infinity.  This minimum now has an exact
+graph form: at horizon `h`, it is one plus product-graph distance from the
+constant height-`h+1` frontier to the `F_(h+3)` hard-core inverse-cone
+diagonals, with the invariant suffix DFA as the second factor.  The bare
+frontier graph handles arbitrary queues.  Proving either equivalent distance
+divergence would close the period-two rung.
+
 No period-two impossibility theorem has yet been proved.
 
 ### Bounded P2 and P3 evidence is reproducible
@@ -155,6 +176,8 @@ and negative certificates they implement; it does not prove P1.
 | `docs/rule30/paper/` | Zero-tail manuscript and publication audit |
 | `experiments/rule30/p1-period2-invariant/` | Current P1 derivations and exact certificates |
 | `experiments/rule30-subword-extended/` | P2 center-word and factor-complexity measurements |
+| `experiments/openevolve-p1-cocycle/` | P1 adaptive-rank conjecture search and width-18 falsifier |
+| `experiments/openevolve-p1-rank-zero/` | Exact zero-tail OpenEvolve/GA witness search |
 | `experiments/openevolve-p3/` | P3 evaluator and deterministic fuel instrument |
 | `experiments/overnight-arms/` | Preregistered exploratory arms and raw findings |
 | `runs/` | Preserved run manifests and verifier outputs |
@@ -199,16 +222,30 @@ uniform proof and independently checkable artifacts.
 
 ## Current best next theorem
 
-The most focused live target is the following period-two bridge:
+The strongest clean finite-word target is **active-core diagonal mortality**:
+every length-`m` aligned core ending in terminal state `3` fails a pin or
+creates `11` within `m+1` macros. Exact CNFs are unsatisfiable through `m=34`,
+but no induction in `m` is known.
 
-> **Hard-core isolated-pulse theorem.** If a binary sequence `rho` has no
-> adjacent ones and its complete forced-left Rule 30 reconstruction is
-> eventually zero, then `rho` is eventually periodic.
+A new output-only bridge gives a potentially cleaner route. Peeling one core
+symbol is the fixed local map
 
-It retains the three hypotheses lost by earlier finite-state ladders: Rule
-30's nonlinear OR, the relationship between both sides of the same orbit, and
-finite spatial support. A proof would settle the period-two rung only—not all
-of Prize Problem 1.
+```text
+(Peel x)_t = tau_(swap(x_(t-1)))^(-1)(x_t).
+```
+
+Thus a finite core produces an eventually `Peel`-nilpotent cut. Proving that
+the inverse-terminal cut of a hard-core endpoint is never finitely
+`Peel`-nilpotent would settle the period-two rung only—not all of Prize
+Problem 1. See `RESULTS-DYADIC-EXCEPTION-SEPARATOR.md` in the period-two
+directory.
+
+The inverse-terminal and Peel triangles now satisfy the exact rotated law
+`P(I(sigma e))=sigma^2 I(e)`.  Combined with preservation of a finite
+rightmost nonzero cell, it excludes every eventually periodic hard-core
+endpoint from finite Peel rank, including rank zero.  Every remaining
+collision must have an aperiodic endpoint; positive tail ranks grow exactly
+as `m,m+1,...`.  See `RESULTS-ROTATED-PEEL-IDENTITY.md` in the same directory.
 
 ## Authorship and citation
 

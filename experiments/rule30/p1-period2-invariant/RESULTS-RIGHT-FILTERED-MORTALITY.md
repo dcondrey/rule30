@@ -82,7 +82,13 @@ length 6:   101001
 length 7:   0100101
 length 9:   010010001
 length 10:  0101000101, 0101010000.
+length 11:  01010001001, 10010001001.
 ```
+
+The length-11 row comes from all `2^21` minimal right-light-cone assignments:
+91 prefixes are realized, versus 93 words allowed by the preceding finite
+factor list.  As with the shorter rows, two-time-step translation makes the
+two new forbidden prefixes forbidden factors at every macro phase.
 
 Only `11` and `00000` are used in the filtered mortality conjecture.  The
 longer list is finite language data, not a finite presentation of the full

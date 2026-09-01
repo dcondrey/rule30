@@ -1,0 +1,56 @@
+# Minimal end-to-end discovery run.  Passing this run is not a theorem and
+# does not authorize a larger search without inspecting the exact candidates.
+max_iterations: 8
+checkpoint_interval: 2
+random_seed: 42
+
+diff_based_evolution: true
+max_code_length: 5000
+
+llm:
+  models:
+    - name: "deepseek/deepseek-chat-v3.1"
+      weight: 0.7
+    - name: "openai/gpt-4o-mini"
+      weight: 0.3
+  api_base: "https://openrouter.ai/api/v1"
+  api_key: ${OPENROUTER_API_KEY}
+  temperature: 0.8
+  max_tokens: 4096
+  timeout: 90
+  retries: 2
+
+prompt:
+  system_message: >
+    You are searching for a mathematical delay potential for the exact Rule
+    30 period-two cocycle. Principal rank is already proved nonincreasing.
+    Edit delay_potential(state) so its nonnegative integer tuple strictly
+    decreases lexicographically on every transition where rank is unchanged.
+    Do not use time, seed width, lookup tables, conditionals, comparisons,
+    loops, imports, subtraction, or negative numbers. The accepted grammar is
+    a tuple of 1-4 arithmetic expressions over the supplied nonnegative exact
+    algebraic features, using constants 0..64, +, *, //, %, min, max, and abs.
+    Available scalar-polynomial prefixes are indicator, previous_rho, pin,
+    obstruction, and factor, each with suffixes constant, degree1, higher,
+    linear, quadratic, span, support, terms, and weight. Frontier prefixes
+    frontier_a and frontier_b have suffixes components, constant, degree1_max,
+    degree1_sum, nonzero, span_sum, support_sum, terms, and weight. Also
+    available are rank, removed_rank, and frontier_depth. Seek a short
+    structural formula combining different families. A finite score is
+    discovery evidence only; any candidate must later be proved uniformly in
+    the Boolean hard-core ring.
+
+database:
+  population_size: 8
+  archive_size: 8
+  num_islands: 1
+  elite_selection_ratio: 0.25
+  exploitation_ratio: 0.65
+  feature_dimensions: ["train_plateau", "holdout_plateau"]
+  feature_bins: 5
+
+evaluator:
+  timeout: 30
+  cascade_evaluation: false
+  parallel_evaluations: 1
+  use_llm_feedback: false

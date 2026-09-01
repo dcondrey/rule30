@@ -33,6 +33,7 @@ The register is split for historical reasons:
 | Frontier attack rows 73–90 | `experiments/overnight-arms/frontier_attack/FINDINGS.md` sections 1–7 |
 | Later rows 91–93 | `PATH.md` section 7.1 |
 | Period-two same-orbit continuation after row 90 | `experiments/rule30/p1-period2-invariant/README.md` |
+| Cross-technique synthesis and new dyadic separator | `RESULTS-hybrid-review-2026-09-01.md` |
 | External literature/claim audit | `PATH.md` section 8 and the two `REFUTATION-*` files |
 
 There is a historical row-number collision: `PATH.md` row 76 is the S-adic /
@@ -107,6 +108,65 @@ That would make the adjacent width-two trace eventually periodic, contradicting
 the recorded width-two theorem.  The proof must control the full cumulative
 boundary offsets and irregular isolated pulses; fixed summaries and longer
 lookahead are already certified failures.
+
+An alternate exact bridge now removes the sole known overlap in the dyadic
+period-spectrum route.  Every reachable zero-ray cut is ultimately
+dyadic-periodic, but a uniform width descent proves that none is eventually
+`1212...`; therefore no hard-core endpoint eventually equal to `222...` can
+be an immortal finite-core endpoint.  The remaining generic statement is:
+every non-eventually-`2` hard-core endpoint has an inverse-terminal cut that is
+not ultimately dyadic-periodic.  See the period-two
+`RESULTS-DYADIC-EXCEPTION-SEPARATOR.md`.
+
+The two `phi` triangles now have an exact commuting law,
+`P(I(sigma e))=sigma^2 I(e)`.  Together with preservation of the last
+nonzero cell under `P`, it proves that every finite-rank collision must have
+an aperiodic hard-core endpoint; in the positive-rank branch the successive
+tail ranks are exactly `m,m+1,...`.  See
+`RESULTS-ROTATED-PEEL-IDENTITY.md` in the period-two directory.
+
+The finite-rank branch is now reduced further.  Prepending endpoint state `2`
+descends every positive rank to rank zero, and the first infinite shifted cut
+then has constant tail `2` or `3`.  Reversing its complete newest dependency
+diagonal gives the exact growing queue
+
+```text
+S_0=c,  S_i=g_(S_(i-1))(R_i),
+R'=S . B(next endpoint).
+```
+
+The final scan state exactly decides the next hard-core endpoint.  Proving
+mortality for every finite queue beginning in `c` and ending in `{1,2}` would
+therefore prove the period-two rung.  Nonleading input symbols have the exact
+quotient `3 -> 1`; every normalized successor then avoids `20`, `22`, and
+`011`.  The resulting invariant ternary queue is exhaustively mortal through
+length 15, but the all-length induction remains open.  See the period-two
+`RESULTS-CONSTANT-TAIL-QUEUE.md`.
+
+The associated survival formulas obey the exact regular-language cocycle
+`L_(h+1)=L_0 intersect Q_c^(-1)(L_h)`.  Their minimized DFA size expands as
+`4^(h+1)+1` through horizon seven, so strict formula-rank contraction is
+false in this representation.  The live target is to prove that the shortest
+word in `L_h` tends to infinity; its checked values jump through lengths
+`1/2,3,5,10` with plateaus.  See
+`RESULTS-CONSTANT-TAIL-LANGUAGE-COCYCLE.md`.
+
+There is now a uniform graph realization of that shortest-word metric.  A
+height-`h+1` vertical frontier updates under input `a` by
+`w_0=a, w_j=g_(v_j)(w_(j-1))`.  The source is `(c,...,c)` and the terminal set
+is exactly the `F_(h+3)` inverse-cone diagonals of hard-core endpoint words of
+length `h+1`.  Bare distance measures arbitrary normalized queues; product
+with the three-factor suffix DFA measures the invariant language.  Their
+divergence is equivalent and is the remaining constant-tail queue-mortality
+theorem.  Both distances are exact through horizon 12.  See
+`RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md`.
+Deleting the last frontier coordinate commutes with all graph edges and
+terminal sets.  The inverse-limit form is the exact orbit separation
+`{T_u(c^omega):u finite} intersect I(HC_omega)=empty` for `c=2,3`; this
+disjointness, not further horizon enumeration, is the live proof obligation.
+Height extension is a four-sheeted permutation cover whose fiber actions
+generate `D8`; a proof must control accumulated monodromy rather than expect
+the new coordinate to contract.
 
 ## Do-not-repeat obstruction screen
 

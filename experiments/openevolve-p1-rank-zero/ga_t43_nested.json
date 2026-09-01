@@ -1,0 +1,27 @@
+[
+  {
+    "cut_prefix": "2230102000303133123311102132312232230302031",
+    "cutoff": 43,
+    "endpoint_prefix": "1212121212121222121222121221222212221222121",
+    "evaluations": 5962,
+    "failure_symbols": "00",
+    "horizon": 88,
+    "improvements": [
+      [
+        0,
+        47
+      ],
+      [
+        2,
+        50
+      ],
+      [
+        5,
+        51
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 4318,
+    "survival": 51
+  }
+]

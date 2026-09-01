@@ -1,0 +1,120 @@
+[
+  {
+    "cut_prefix": "22121033332310122200002",
+    "cutoff": 23,
+    "endpoint_prefix": "12222121221222221221222",
+    "evaluations": 4078,
+    "failure_symbols": "01",
+    "horizon": 48,
+    "improvements": [
+      [
+        0,
+        29
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 53000,
+    "survival": 29,
+    "tail": 3
+  },
+  {
+    "cut_prefix": "12121212121220200032030003120203",
+    "cutoff": 32,
+    "endpoint_prefix": "22222222222212221221212222121221",
+    "evaluations": 7017,
+    "failure_symbols": "33",
+    "horizon": 66,
+    "improvements": [
+      [
+        0,
+        36
+      ],
+      [
+        19,
+        37
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 53001,
+    "survival": 37,
+    "tail": 3
+  },
+  {
+    "cut_prefix": "121210333323133203100103103210320333223322103131",
+    "cutoff": 48,
+    "endpoint_prefix": "222221212212212212222121212122212222122212212122",
+    "evaluations": 9442,
+    "failure_symbols": "00",
+    "horizon": 98,
+    "improvements": [
+      [
+        0,
+        52
+      ],
+      [
+        2,
+        56
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 53002,
+    "survival": 56,
+    "tail": 3
+  },
+  {
+    "cut_prefix": "2211313330002012220003030010101133030210012222303022113300132013",
+    "cutoff": 64,
+    "endpoint_prefix": "1221212121222222122121212221212122121212212121221212222121221212",
+    "evaluations": 9542,
+    "failure_symbols": "30",
+    "horizon": 130,
+    "improvements": [
+      [
+        0,
+        69
+      ],
+      [
+        16,
+        70
+      ],
+      [
+        31,
+        71
+      ],
+      [
+        60,
+        72
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 53003,
+    "survival": 72,
+    "tail": 3
+  },
+  {
+    "cut_prefix": "121212121212103013020322103022323331131030003232110000210310220022103123023121301012303220201033",
+    "cutoff": 96,
+    "endpoint_prefix": "222222222222212122221222222221221222212121222222222121212122122212212221221212121222212121221212",
+    "evaluations": 9959,
+    "failure_symbols": "32",
+    "horizon": 194,
+    "improvements": [
+      [
+        0,
+        102
+      ],
+      [
+        6,
+        103
+      ],
+      [
+        29,
+        110
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 53004,
+    "survival": 110,
+    "tail": 3
+  }
+]

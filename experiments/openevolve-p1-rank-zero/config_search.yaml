@@ -1,0 +1,47 @@
+max_iterations: 18
+checkpoint_interval: 3
+random_seed: 47
+
+diff_based_evolution: true
+max_code_length: 7000
+
+llm:
+  models:
+    - name: "deepseek/deepseek-chat-v3.1"
+      weight: 0.7
+    - name: "openai/gpt-4o-mini"
+      weight: 0.3
+  api_base: "https://openrouter.ai/api/v1"
+  api_key: ${OPENROUTER_API_KEY}
+  temperature: 0.95
+  max_tokens: 4096
+  timeout: 90
+  retries: 2
+
+prompt:
+  system_message: >
+    Evolve endpoint_prefix(cutoff), a short uniform algorithm returning exactly
+    cutoff symbols in {1,2} with no adjacent 1s.  The independent evaluator
+    reconstructs the unique inverse-terminal cut, appends a genuine zero ray,
+    and rewards a long hard-core terminal endpoint.  Seek recursive phase-slip,
+    morphic, bit-arithmetic, or finite-state constructions that extrapolate to
+    cutoffs 24..96.  Do not call Rule 30 code, enumerate endpoint candidates,
+    encode a table by cutoff, import modules, use I/O, or use a while loop.
+    A candidate that reaches 2*cutoff+2 emits an exact falsifier of the proposed
+    linear bound, but no finite result proves infinite survival.  Prefer a
+    structural generator whose pattern can later be analyzed algebraically.
+
+database:
+  population_size: 18
+  archive_size: 14
+  num_islands: 3
+  elite_selection_ratio: 0.25
+  exploitation_ratio: 0.55
+  feature_dimensions: ["holdout_extremality", "large_cutoff_ratio"]
+  feature_bins: 6
+
+evaluator:
+  timeout: 30
+  cascade_evaluation: false
+  parallel_evaluations: 1
+  use_llm_feedback: false

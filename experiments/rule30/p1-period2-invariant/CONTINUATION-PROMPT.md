@@ -160,6 +160,269 @@ global seed compatibility. A corrected bound such as
 `7 wt(L) >= 2n-O(1)` is also unproved; changing the additive constant after a
 finite sweep is not a theorem.
 
+NEW ROTATED-PEEL IDENTITY
+
+Do not rederive the bridge between the inverse-terminal triangle and Peel.
+For `I(e)` the inverse-terminal cut, `sigma` the one-sided shift, and
+
+    P(x)_t = phi(x_t,x_(t+1)),
+
+the exact all-endpoint identity is
+
+    P(I(sigma e)) = sigma^2 I(e),
+    P^j(I(sigma^j e)) = sigma^(2j) I(e).
+
+If `I(e)` has positive finite eventual Peel rank `m`, the successive endpoint
+tails have exact ranks `m,m+1,...`. A separate support-edge argument handles
+rank zero: `phi(s,0)=3` for every nonzero state `s`, so Peel preserves the
+rightmost nonzero coordinate of an eventually-zero cut. Combining this with
+the displayed identity proves uniformly:
+
+    An eventually periodic hard-core endpoint cannot have a finite-rank
+    inverse-terminal cut.
+
+Thus every hypothetical reachable/accepted collision now has an aperiodic
+hard-core endpoint. In the positive-rank branch its tail ranks grow exactly
+by one; rank zero remains possible only over an aperiodic endpoint. Read
+`RESULTS-ROTATED-PEEL-IDENTITY.md` and run `rotated_peel_identity.py`.
+
+The complete reverse-period trees are also decided for exact cut-period
+constraints `p=1,2,4,8,16`: `p=1` is empty and each tested positive dyadic
+period locks to endpoint `2^omega`. This is parameter-bounded, not an
+all-power induction. Endpoint `(12)^omega` mapping to primitive cut period 28
+is the retained non-dyadic control.
+
+The next clean target is: rule out an aperiodic hard-core endpoint whose
+inverse-terminal cut has finite Peel rank. Use actual-right restrictions as
+constraints on the exact tail/rank cocycle, not as another flat
+forbidden-factor filter.
+
+NEW RANK-ZERO / CONSTANT-TAIL REDUCTION
+
+The preceding target has now been narrowed further. Prepending endpoint state
+2 lowers every positive finite Peel rank by one, so all finite ranks reduce to
+rank zero: exclude a hard-core endpoint whose inverse cut is finite support.
+The exact prefix grammar and halving identity are
+
+    HC = 2 HC union 12 HC,
+    I(qe) = (B(q), phi(q,I(e)_0)) . P(I(e)),
+    P^n I(sigma^n e) = sigma^(2n) I(e).
+
+At the first endpoint shift whose inverse cut becomes infinite, its Peel image
+is finite. Its tail follows g_0=(0,3,2,3), so the cut is eventually constant 2
+or eventually constant 3. Therefore the current proof-bearing target is:
+
+    No cut eventually equal to 2^omega or 3^omega has a hard-core
+    terminal-cone endpoint.
+
+Read `RESULTS-RANK-ZERO-REDUCTION.md` and
+`RESULTS-EVENTUAL-CONSTANT-TAIL.md`. Run `rank_zero_separator.py` and
+`eventual_constant_tail.py`. Also run `constant_tail_shift.py` and
+`constant_tail_doubling.py` and `constant_tail_scale.py`. The zero/2/3 tail
+censuses are exhaustive through cutoff 23. OpenEvolve plus bit-level GA
+controls through cutoff 96 find no
+`2T+2` falsifier, but this is finite evidence only. A next evolutionary search
+must emit a recursive certificate for both branches of the displayed HC
+grammar with the one-symbol boundary mode retained; another numerical horizon
+search cannot prove the separator.
+
+Do not promote the observed six-node period-doubling profile to a proof.
+Exhausting all primitive four-symbol driver cycles of dyadic lengths through
+8 produces four profile collisions at the `8 -> 16` lift.  The exact lifted
+cycle word *is* uniformly unique up to rotation whenever a doubling occurs,
+because each doubling element of the 13-element monoid has a unique two-cycle.
+Thus the viable target is a recursive word-level quotient; the five-component
+count/return-transform profile is now a certified negative.
+The exact cycle word alone is still insufficient: the prefix-independent
+cycle orbit from either constant tail first branches at endpoint shift 26,603
+and period 16, when its return map has two fixed points.  A corrected state
+must retain the finite-prefix entry state (or a sound quotient of it), not
+only the canonical periodic word.
+
+There is now a cleaner scale-invariant finite-word target. The inverse-cut
+dependency interval implies that a hypothetical constant-tail hard-core
+endpoint would have, at every sufficiently large `n`, hard-core blocks
+
+    W=e[n,2n),       R_c(W)=e[2n,4n),       c in {2,3},
+
+where `R_c(W)` is uniquely forced and independent of all endpoint symbols
+before `n`. Exact enumeration separates every `W` through length 22. Prove for
+all lengths that `R_c(W)` is not a hard-core continuation. The newest-cut
+boundary action has the exact affine form
+
+    (h,l) -> (h+alpha, l+beta*h+gamma)
+
+with only eight triples and composition
+`(a,b,g)o(A,B,G)=(a+A,b+B,g+G+b*A)`. Since tails 2 and 3 have high bit one,
+the forced endpoint is state `2-alpha`; hard-core becomes no consecutive
+`alpha=1`. The remaining obstruction is that the next affine triple depends
+on an ordered growing diagonal, so do not collapse it to the current triple
+alone.
+
+Do not attempt to prove the former charge `s_2(W)<=#2(W)`: its first exact
+counterexample is `W=12212121212121212`, with survival 10 and only nine state-2
+symbols. The repaired finite-census targets are
+
+    s_2(W) <= #2(W) + indicator(22 occurs in W),
+    s_3(W) <= #2(W) + 3.
+
+Each would suffice for its tail mode and both are exact through length 22, but
+neither is proved. The incremental newest-dependency diagonal in
+`constant_tail_scale.py` computes each scale block in quadratic time and is
+the current order-sensitive coordinate. Prefix/suffix deletion does not
+preserve either budget, so seek a path/contact invariant inside that diagonal,
+not a flat induction on the word grammar.
+
+The same adaptive formula now has an exact growing-word form.  If `D_m` is
+the newest dependency diagonal and `R` its reversal, a constant tail
+`c in {2,3}` gives the partial queue update
+
+    S_0=c,  S_i=g_(S_(i-1))(R_i),
+    R'=S . B(next endpoint).
+
+The final scan state uniquely decodes the next endpoint and hard-core
+legality.  Hence it is sufficient to prove mortality for every finite word
+beginning in `c` and ending in `{1,2}`; the middle word may be arbitrary.  The
+identity `g_s(1)=g_s(3)` gives an exact `3 -> 1` quotient in every nonleading
+coordinate, so ternary representatives cover the full four-symbol language.
+The complete determinized scan graph also proves that every normalized
+successor avoids exactly the factors `20`, `22`, and `011`; the hard-core
+boundary append preserves them.  Restrict any induction to this invariant
+SFT after the first update.
+The candidate bound `lifetime(R)<=|R|` holds exhaustively through length 15,
+but is not proved.  Read `RESULTS-CONSTANT-TAIL-QUEUE.md` and run
+`constant_tail_queue.py`.  This coordinate retains the full ordered diagonal
+and the prefix-entry information whose loss caused the period-16 branch, so
+it is the preferred form for a genuine morphing-formula induction.
+
+The formula morph itself is now implemented exactly.  For `L_h(c)`, the
+regular language of invariant queues surviving `h` more updates,
+
+    L_(h+1)(c)=L_0(c) intersect Q_c^(-1)(L_h(c)).
+
+The minimized DFA rank expands as `4^(h+1)+1` through horizon seven; accepting
+states have Fibonacci counts.  Therefore strict DFA-rank contraction is a
+certified failure, not the missing invariant.  The shortest accepted length
+does jump `1/2 -> 3 -> 5 -> 10` with plateaus.  Prove that this minimum tends
+to infinity, using an amortized structural argument rather than expecting a
+decrease at every morph.  Read `RESULTS-CONSTANT-TAIL-LANGUAGE-COCYCLE.md` and
+run `constant_tail_language_cocycle.py`.
+
+The shortest-word metric has an exact frontier graph.  At horizon `h`, stack
+the `h+1` queue rows over one input column.  Reading normalized symbol `a`
+updates the vertical frontier by
+
+    w_0=a,  w_j=g_(v_j)(w_(j-1)).
+
+Starting from `(c,...,c)`, a path is accepted exactly when it reaches the
+inverse-cone diagonal of a hard-core endpoint word of length `h+1`.  There are
+provably `F_(h+3)` such targets, and the shortest arbitrary surviving queue is
+one plus the directed distance to this set.  This bare distance allows every
+ternary queue; taking the product with the `20,22,011` suffix DFA gives the
+invariant
+language-cocycle minimum.  The two divergence statements are equivalent,
+because an immortal arbitrary queue has an immortal SFT successor.  Both
+sequences are nondecreasing by nesting but have plateaus.  Exact values
+through `h=12` are
+
+    arbitrary tail 2: 1,3,5,5,5,10,10,10,10,16,16,18
+    arbitrary tail 3: 2,3,5,5,5,10,10,10,12,12,15,16
+    invariant tail 2: 1,3,5,5,5,10,10,10,10,17,18,18
+    invariant tail 3: 2,3,5,5,5,10,10,10,13,14,15,16.
+
+Read `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md` and run
+`constant_tail_frontier_graph.py`.  The graph equivalence and Fibonacci target
+count are uniform; the displayed distances remain only finite evidence.
+Height deletion commutes with every labeled graph edge and terminal set.  In
+the inverse limit, the theorem is exactly
+
+    {T_u(c^omega): finite ternary u} intersect I(HC_omega) = empty
+
+for `c=2,3`.  Also `P(T_a(v))=sigma(v)`, so a collision reached by a word of
+length `d` has `P^d(x)=c^omega` and `P^(d+1)(x)=0^omega`.  This is the same
+finite-Peel-rank aperiodic collision isolated by the rank reductions, now as
+a precise topological orbit-separation problem.
+
+Height extension is an exact four-sheeted permutation cover.  Writing a
+frontier as `(v,z)`, a projected edge ending in symbol `t` sends the fiber to
+`K_t(z)`, where
+
+    K_0=(0,1,3,2), K_1=K_3=(3,2,1,0), K_2=(2,3,1,0).
+
+These permutations generate `D8`.  Thus the extra coordinate is transported
+reversibly rather than contracted.  A useful next proof must control the
+monodromy accumulated by source-to-terminal paths across all cover levels.
+This is exactly the eight-map affine boundary group from the scale route.  Its
+fiber generators have coordinates
+
+    K_0=(0,1,0), K_1=K_3=(1,0,1), K_2=(1,1,0)
+
+under `(h,l)->(h+alpha,l+beta*h+gamma)`, with the established three-bit
+composition law.  For a fixed suffix `u`, the last frontier coordinate at
+height `H` is `M_H(u)(c)`.  The live theorem is that no finite `u` can make
+`M_H(u)(c)=I(e)_(H-1)` for every `H` and one infinite hard-core `e`.
+For fixed `u` of length `d`, the height driver is the exact `4^d`-state map
+
+    s_0=c, s_k=g_(s_(k-1))(r_k), D_c(r)=(s_1,...,s_d).
+
+The rightmost coordinate of `D_c^j(u)` is the infinite frontier output.  Its
+eventual period is dyadic, but the driver dimension grows with `d`; the proof
+must use the stronger finite-Peel ancestry, since dyadic periodicity alone is
+defeated by the accepted `(12)^omega` cut.
+
+The invariant-SFT minimum has now been extended by an exact local PySAT
+encoding.  Every model is decoded and replayed by the literal queue map.  For
+`h=0,...,20` the values are
+
+    tail 2: 1,1,3,5,5,5,10,10,10,10,17,18,18,18,22,23,23,26,26,30,33
+    tail 3: 2,2,3,5,5,5,10,10,10,13,14,15,16,16,24,24,26,26,31,31,32.
+
+Thus `m_h(c)>=h` and the sufficient bound `lifetime(R)<=|R|` survive the
+displayed instances, but neither is proved.  Run
+`constant_tail_queue_sat.py` in the `experiments/sygus-p3` environment.
+Ordinary local additive energies, even with endpoint terms, did not explain
+these minima in small exact probes; seek a noncrossing ancestry, recursive
+grammar, or stack rank.
+
+The Fibonacci numbers here have one exact source: endpoint words over
+`{1,2}` avoiding `11`, hence `|A_h|=F_(h+3)`.  Cardinality alone cannot prove
+orbit separation.  A scalar first-illegal-position induction also fails
+structurally.  For any hard-core endpoint prefix beginning in state 1, put
+`y=I(e)` and choose `v` with `sigma(v)=P(y)`; the unique inverse lift with
+initial symbol `y_0=2` recovers `y`.  Therefore one inverse-Peel lift can
+replace an immediately invalid predecessor endpoint by an arbitrarily long
+hard-core endpoint prefix.  Any Fibonacci/Zeckendorf attempt must retain the
+complete prefix grammar or equivalent ancestry, not just terminal counts or
+the first defect.
+
+For the original period-two application there is a useful weaker target.
+The endpoint before rank descent is the genuine even-time right trace.  Rank
+descent and the first-infinite shift change only a finite prefix, so at every
+sufficiently large scale `W R_c(W)` is a factor of that actual right trace.
+It is enough to prove that no actual-right factor `W` has `R_c(W)` as an
+actual-right continuation.  Exact right-light-cone SAT membership gives
+
+    scale:  10 15 20 24 27
+    tail 2:  4  4  4  4  5
+    tail 3:  5  3  4  5  5.
+
+At scale 27 the current finite-factor relaxation permits 7 and 9, while the
+full right language lowers both to 5.  This is finite evidence, not a
+universal constant-five theorem.  See `constant_tail_right_filter.py` and
+`RESULTS-EVENTUAL-CONSTANT-TAIL.md`.
+
+The exact moving-formula update is also now known. If endpoint coordinate k is
+changed from 1 to 2, the inverse cut changes only on [k,2k+1], and it changes
+at k. Flipping hard-core 1s left-to-right therefore gives a sequence of finite
+cut formulas with compact, position-dependent rewrite zones. An eventually
+zero or constant-3 cut requires these zones to cover the late cut axis; a
+constant-2 cut requires them to cover every late even coordinate. In all three
+cases consecutive defect positions obey k_(i+1)<=2k_i+2, while hard-core gives
+k_(i+1)>=k_i+2. This is not a contradiction: supports can escape while each
+formula remains finite. Read `RESULTS-ENDPOINT-FLIP-COCYCLE.md` and run
+`endpoint_flip_cocycle.py`. The next certificate must control exact overlaps
+of these ordered rewrite intervals, not merely their count or outer support.
+
 EXACT TRIANGULAR CORRELATION LEMMA
 
 Let P_w be suffix XOR on width-w vectors:

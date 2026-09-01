@@ -1,0 +1,585 @@
+[
+  {
+    "cut_prefix": "100220111302301210211113",
+    "cutoff": 24,
+    "endpoint_prefix": "212212212121221222212212",
+    "evaluations": 2375,
+    "failure_symbols": "02",
+    "horizon": 50,
+    "improvements": [
+      [
+        0,
+        29
+      ],
+      [
+        5,
+        30
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41000,
+    "survival": 30
+  },
+  {
+    "cut_prefix": "1001323200031020221133130",
+    "cutoff": 25,
+    "endpoint_prefix": "2121221212221222222122122",
+    "evaluations": 2350,
+    "failure_symbols": "02",
+    "horizon": 52,
+    "improvements": [
+      [
+        0,
+        30
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41001,
+    "survival": 30
+  },
+  {
+    "cut_prefix": "12113232221212111333333333",
+    "cutoff": 26,
+    "endpoint_prefix": "22212212222222212212212221",
+    "evaluations": 2905,
+    "failure_symbols": "01",
+    "horizon": 54,
+    "improvements": [
+      [
+        0,
+        30
+      ],
+      [
+        7,
+        31
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41002,
+    "survival": 31
+  },
+  {
+    "cut_prefix": "100132111300121301332222030",
+    "cutoff": 27,
+    "endpoint_prefix": "212122212122122122221221221",
+    "evaluations": 2600,
+    "failure_symbols": "02",
+    "horizon": 56,
+    "improvements": [
+      [
+        0,
+        30
+      ],
+      [
+        7,
+        31
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41003,
+    "survival": 31
+  },
+  {
+    "cut_prefix": "1001313333022001302210022112",
+    "cutoff": 28,
+    "endpoint_prefix": "2121212122221212121222121212",
+    "evaluations": 2482,
+    "failure_symbols": "01",
+    "horizon": 58,
+    "improvements": [
+      [
+        0,
+        32
+      ],
+      [
+        2,
+        33
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41004,
+    "survival": 33
+  },
+  {
+    "cut_prefix": "22301012100323123310120000233",
+    "cutoff": 29,
+    "endpoint_prefix": "12121222212122121221221222212",
+    "evaluations": 2763,
+    "failure_symbols": "31",
+    "horizon": 60,
+    "improvements": [
+      [
+        0,
+        32
+      ],
+      [
+        3,
+        34
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41005,
+    "survival": 34
+  },
+  {
+    "cut_prefix": "121212111023211212010333312222",
+    "cutoff": 30,
+    "endpoint_prefix": "222222212212122122122122222122",
+    "evaluations": 2910,
+    "failure_symbols": "02",
+    "horizon": 62,
+    "improvements": [
+      [
+        0,
+        34
+      ],
+      [
+        9,
+        37
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41006,
+    "survival": 37
+  },
+  {
+    "cut_prefix": "2212121212121033332303003030120",
+    "cutoff": 31,
+    "endpoint_prefix": "1222222222222122221212222221222",
+    "evaluations": 3016,
+    "failure_symbols": "02",
+    "horizon": 64,
+    "improvements": [
+      [
+        0,
+        36
+      ],
+      [
+        40,
+        37
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41007,
+    "survival": 37
+  },
+  {
+    "cut_prefix": "10013131100131301332133333000022",
+    "cutoff": 32,
+    "endpoint_prefix": "21212122212221212212212221221212",
+    "evaluations": 2952,
+    "failure_symbols": "00",
+    "horizon": 66,
+    "improvements": [
+      [
+        0,
+        37
+      ],
+      [
+        2,
+        39
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41008,
+    "survival": 39
+  },
+  {
+    "cut_prefix": "100132320030313111020333313330220",
+    "cutoff": 33,
+    "endpoint_prefix": "212122121212122121222122212212122",
+    "evaluations": 2966,
+    "failure_symbols": "00",
+    "horizon": 68,
+    "improvements": [
+      [
+        0,
+        38
+      ],
+      [
+        70,
+        39
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41009,
+    "survival": 39
+  },
+  {
+    "cut_prefix": "2211313330023012102310333032020112",
+    "cutoff": 34,
+    "endpoint_prefix": "1221212121212212222212121212122222",
+    "evaluations": 3195,
+    "failure_symbols": "33",
+    "horizon": 70,
+    "improvements": [
+      [
+        0,
+        38
+      ],
+      [
+        2,
+        39
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41010,
+    "survival": 39
+  },
+  {
+    "cut_prefix": "22301020000111222213231202103310133",
+    "cutoff": 35,
+    "endpoint_prefix": "12121212122121222122221212212212222",
+    "evaluations": 3221,
+    "failure_symbols": "32",
+    "horizon": 72,
+    "improvements": [
+      [
+        0,
+        43
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41011,
+    "survival": 43
+  },
+  {
+    "cut_prefix": "121220121230133023321331132130303201",
+    "cutoff": 36,
+    "endpoint_prefix": "222212222212212122122121212121212122",
+    "evaluations": 3190,
+    "failure_symbols": "11",
+    "horizon": 74,
+    "improvements": [
+      [
+        0,
+        40
+      ],
+      [
+        2,
+        45
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41012,
+    "survival": 45
+  },
+  {
+    "cut_prefix": "2230323221010221000203031111303032010",
+    "cutoff": 37,
+    "endpoint_prefix": "1212221221221212221221212121212121221",
+    "evaluations": 3299,
+    "failure_symbols": "11",
+    "horizon": 76,
+    "improvements": [
+      [
+        0,
+        45
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41013,
+    "survival": 45
+  },
+  {
+    "cut_prefix": "22121033330220010030122102130122020111",
+    "cutoff": 38,
+    "endpoint_prefix": "12222121222212122222122221212212222212",
+    "evaluations": 3347,
+    "failure_symbols": "33",
+    "horizon": 78,
+    "improvements": [
+      [
+        0,
+        42
+      ],
+      [
+        3,
+        43
+      ],
+      [
+        40,
+        46
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41014,
+    "survival": 46
+  },
+  {
+    "cut_prefix": "100220121001323202023013223212003213130",
+    "cutoff": 39,
+    "endpoint_prefix": "212212222122221221222212121212121212212",
+    "evaluations": 3286,
+    "failure_symbols": "11",
+    "horizon": 80,
+    "improvements": [
+      [
+        0,
+        45
+      ],
+      [
+        4,
+        46
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41015,
+    "survival": 46
+  },
+  {
+    "cut_prefix": "2211313122030112212321330113233121331302",
+    "cutoff": 40,
+    "endpoint_prefix": "1221212212122122221222122221221222221222",
+    "evaluations": 3540,
+    "failure_symbols": "31",
+    "horizon": 82,
+    "improvements": [
+      [
+        0,
+        44
+      ],
+      [
+        2,
+        46
+      ],
+      [
+        3,
+        47
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41016,
+    "survival": 47
+  },
+  {
+    "cut_prefix": "10013212100131333002132303212002020111310",
+    "cutoff": 41,
+    "endpoint_prefix": "21212222212221222122121221212222121222222",
+    "evaluations": 3511,
+    "failure_symbols": "31",
+    "horizon": 84,
+    "improvements": [
+      [
+        0,
+        44
+      ],
+      [
+        2,
+        46
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41017,
+    "survival": 47
+  },
+  {
+    "cut_prefix": "221131312233112220011320021130210322233310",
+    "cutoff": 42,
+    "endpoint_prefix": "122121221221212222212121212221212221212222",
+    "evaluations": 3509,
+    "failure_symbols": "03",
+    "horizon": 86,
+    "improvements": [
+      [
+        0,
+        46
+      ],
+      [
+        2,
+        48
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41018,
+    "survival": 48
+  },
+  {
+    "cut_prefix": "1001313330023020122131013003221002331203133",
+    "cutoff": 43,
+    "endpoint_prefix": "2121212121212222121212122122212222221212122",
+    "evaluations": 3445,
+    "failure_symbols": "02",
+    "horizon": 88,
+    "improvements": [
+      [
+        0,
+        47
+      ],
+      [
+        2,
+        48
+      ],
+      [
+        40,
+        51
+      ],
+      [
+        51,
+        55
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41019,
+    "survival": 55
+  },
+  {
+    "cut_prefix": "10021232000112003313332203011232002130302121",
+    "cutoff": 44,
+    "endpoint_prefix": "21222212122122121222212121222212222212121222",
+    "evaluations": 3696,
+    "failure_symbols": "02",
+    "horizon": 90,
+    "improvements": [
+      [
+        0,
+        55
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41020,
+    "survival": 55
+  },
+  {
+    "cut_prefix": "223032111002123231320331320311001323102102330",
+    "cutoff": 45,
+    "endpoint_prefix": "121222212222221212121222122222222222121212222",
+    "evaluations": 3583,
+    "failure_symbols": "02",
+    "horizon": 92,
+    "improvements": [
+      [
+        0,
+        48
+      ],
+      [
+        3,
+        49
+      ],
+      [
+        5,
+        52
+      ],
+      [
+        15,
+        55
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41021,
+    "survival": 55
+  },
+  {
+    "cut_prefix": "2230101212301330230030103013133323003021301102",
+    "cutoff": 46,
+    "endpoint_prefix": "1212122222122121222121222121212121222122122212",
+    "evaluations": 3554,
+    "failure_symbols": "01",
+    "horizon": 94,
+    "improvements": [
+      [
+        0,
+        49
+      ],
+      [
+        2,
+        50
+      ],
+      [
+        5,
+        51
+      ],
+      [
+        48,
+        53
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41022,
+    "survival": 53
+  },
+  {
+    "cut_prefix": "10022011102321113302203330322221030102323302131",
+    "cutoff": 47,
+    "endpoint_prefix": "21221221221212222222121212122121212121221222212",
+    "evaluations": 3602,
+    "failure_symbols": "03",
+    "horizon": 96,
+    "improvements": [
+      [
+        0,
+        52
+      ],
+      [
+        5,
+        53
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41023,
+    "survival": 53
+  },
+  {
+    "cut_prefix": "221131311212200102101311302001321331310113023001",
+    "cutoff": 48,
+    "endpoint_prefix": "122121222222121221212122121212221222222222212222",
+    "evaluations": 3583,
+    "failure_symbols": "02",
+    "horizon": 98,
+    "improvements": [
+      [
+        0,
+        53
+      ],
+      [
+        3,
+        54
+      ],
+      [
+        59,
+        56
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41024,
+    "survival": 56
+  },
+  {
+    "cut_prefix": "2230102000033033330133200130023101002200313010201",
+    "cutoff": 49,
+    "endpoint_prefix": "1212121212222122222122212121221212221221221212122",
+    "evaluations": 3657,
+    "failure_symbols": "00",
+    "horizon": 100,
+    "improvements": [
+      [
+        0,
+        56
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41025,
+    "survival": 56
+  },
+  {
+    "cut_prefix": "22303212100323123310112333313330301231313023330022",
+    "cutoff": 50,
+    "endpoint_prefix": "12122222212122121221212121222222212122122212221222",
+    "evaluations": 3717,
+    "failure_symbols": "02",
+    "horizon": 102,
+    "improvements": [
+      [
+        0,
+        57
+      ]
+    ],
+    "linear_bound_falsified": false,
+    "seed": 41026,
+    "survival": 57
+  }
+]

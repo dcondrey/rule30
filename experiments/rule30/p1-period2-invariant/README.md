@@ -39,6 +39,7 @@ Use this routing table:
 | Exact `n=10` plateau cofactors | `RESULTS-PLATEAU-BEZOUT.md`; `plateau_bezout.py`; `verify_plateau_bezout.py`; `plateau-bezout-n10.json` |
 | Cofactor and interval-annihilator shifts | `RESULTS-COFACTOR-AUTOMATON.md`; `RESULTS-INTERVAL-ANNIHILATOR.md`; matching generators/verifiers/JSON |
 | Defect/restart formula cocycle | `RESULTS-DEFECT-RESTART-COCYCLE.md`; `defect_restart_cocycle.py`; `verify_defect_restart_cocycle.py`; `defect-restart-cocycle.json` |
+| OpenEvolve delay-potential search | `docs/rule30/RESULTS-openevolve-p1-cocycle.md`; `experiments/openevolve-p1-cocycle/` |
 | Bilateral boundary-collision specification | `RESULTS-DEFECT-RESTART-COCYCLE.md` section 8; `docs/rule30/RESULTS-diagonal-periodicity.md`; `docs/rule30/RESULTS-followup-skew-product-cocycle.md` |
 | Moving-endpoint block and literal peel obstruction | `RESULTS-ENDPOINT-PEEL.md`; `endpoint_peel.py` |
 | Tail density, deep-zero/core conjugacy | `RESULTS-TAIL-DENSITY.md`; `tail_density.py` |
@@ -46,6 +47,18 @@ Use this routing table:
 | Stronger active-core diagonal CNF | `RESULTS-CORE-MORTALITY-SAT.md`; `core_mortality_sat.py` |
 | Projected cut / interpolant probe | `PREREGISTRATION-CORE-INTERPOLANT.md`; `RESULTS-CORE-INTERPOLANT.md`; `core_interpolant_probe.py` |
 | Dyadic-period graph audit | `RESULTS-DYADIC-PERIODICITY.md`; `dyadic_periodicity_analyzer.py` |
+| Dyadic exceptional-family separator | `RESULTS-DYADIC-EXCEPTION-SEPARATOR.md`; `dyadic_exception_separator.py` |
+| Rotated inverse-cone / Peel identity | `RESULTS-ROTATED-PEEL-IDENTITY.md`; `rotated_peel_identity.py` |
+| Peel inverse-lift monoid | `RESULTS-PEEL-LIFT-MONOID.md`; `peel_lift_monoid.py` |
+| Finite-rank descent to the rank-zero separator | `RESULTS-RANK-ZERO-REDUCTION.md`; `rank_zero_separator.py` |
+| Eventual-constant-tail separator | `RESULTS-EVENTUAL-CONSTANT-TAIL.md`; `eventual_constant_tail.py`; `constant_tail_shift.py`; `constant_tail_doubling.py`; `constant_tail_scale.py` |
+| Reversed-diagonal constant-tail queue | `RESULTS-CONSTANT-TAIL-QUEUE.md`; `constant_tail_queue.py` |
+| Constant-tail queue SAT minima | `RESULTS-CONSTANT-TAIL-LANGUAGE-COCYCLE.md`; `constant_tail_queue_sat.py` |
+| Actual-right constant-tail refinement | `RESULTS-EVENTUAL-CONSTANT-TAIL.md` section 11; `constant_tail_right_filter.py` |
+| Constant-tail regular-language cocycle | `RESULTS-CONSTANT-TAIL-LANGUAGE-COCYCLE.md`; `constant_tail_language_cocycle.py` |
+| Constant-tail frontier-distance theorem | `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md`; `constant_tail_frontier_graph.py` |
+| Moving endpoint-flip cocycle | `RESULTS-ENDPOINT-FLIP-COCYCLE.md`; `endpoint_flip_cocycle.py` |
+| Evolutionary rank-zero witness search | `docs/rule30/RESULTS-openevolve-p1-rank-zero.md`; `experiments/openevolve-p1-rank-zero/` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
@@ -131,6 +144,7 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Shift-normalized cofactor automaton | Exact recurrence `C_(i+1)=C_i(1+g_i)` | Degree five fails at `n=12`; support spans the seed; the highlighted motif has a literal self-loop and is not a closed state |
 | Interval annihilator | Uniform matched-extension identity on complete survivor indicators | Matched appends are exact macro shifts; an unmatched rank-five defect appears, so restart/defect states remain unclassified |
 | Defect/restart cocycle | Exact advance, restart, and extension partitions on full symbolic frontier/indicator states | Uniform partition lemma proved, but strict rank contraction is false; `n=10` has an exact indicator/period-three-phase closure collision |
+| Evolved plateau-delay potential | AST-restricted OpenEvolve search over exact cocycle features, followed by an external-width audit | Best OpenEvolve tuple orders 8/10 plateaus; a finite-perfect modular tuple fails at the new `n=18` plateau, and no one-/two-component separator exists in the 17,147-expression nonmodular census |
 | Literal endpoint peel | Full aligned Mealy tableau and exact `K_(w+2)` endpoint block | `(n,H)->(n-1,H-2)` is semantically false: length-4 seed `0xa` survives 4, while every length-3 seed survives at most 1 |
 | Coefficient-seven tail density | Exact minimum-weight falsifier and period-seven sharp control | **Killed:** length-37 rho `0101010101010101010101010101010101000` gives `wt(L)=10`, hence `70 < 72` |
 | Two-factor right-filtered mortality | Uniform right-light-cone prohibition of `00000` | **Killed:** a length-30 seed avoiding `11`/`00000` survives 10; it contains the actual-right forbidden factor `101001` |
@@ -138,6 +152,17 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Core/factor discharging | Exact reverse `H`-carry cascade over arbitrary frontier width | Width-uniform for fixed `H`, but **killed as a bounded factor proof:** seed-generated radius-seven negative self-/two-cycles exist |
 | Active-core diagonal mortality | Local carry CNF `C(m,m+1)` over every length-`m` word ending in `3` | UNSAT through `m=34`; all thresholds through `m=7` match enumeration, but no induction in `m` |
 | Dyadic periodicity mismatch | Fiber-monoid induction proves every finite zero-ray cascade has eventual period `2^k` | **Killed as an acceptance separator:** endpoint `2^omega` maps to the accepted cut `(12)^omega`; every eventually-`2` hard-core endpoint gives an eventually-period-two accepted cut |
+| Dyadic mismatch plus reachability | Alternating-output descent through cascade width | **Uniform partial repair:** no finite zero-ray generator word reaches an eventually-`(12)` cut, so the entire eventually-`2` accepted counterfamily is excluded; non-eventually-`2` endpoints remain open |
+| Rotated `phi` triangles | `P(I(sigma e))=sigma^2 I(e)`, Peel-rank drift, and last-support preservation | **Uniform reduction:** every finite-rank inverse cut over a hard-core endpoint forces that endpoint to be aperiodic; positive tail ranks grow `m,m+1,...`; aperiodic endpoints remain |
+| Inverse Peel lift monoid | Four right-inverse maps close to a 13-element monoid with only 1-/2-cycles | **Uniform lemma:** dyadic periodicity lifts with at most one period doubling per endpoint shift; the exact scale need not remain fixed |
+| Endpoint prefixing plus rotated Peel | Prepending hard-core state `2` lowers every positive finite Peel rank by exactly one | **Uniform reduction:** all finite ranks reduce to the rank-zero separator: no finite-support cut may have a hard-core terminal endpoint; exhaustive through cutoff 23, proof open |
+| First-infinite endpoint shift | The first infinite tail cut above a finite rank-zero cut must be eventually constant `2` or `3` | **Uniform narrowing:** it suffices to separate these two constant-tail fibers; exact census through cutoff 23 and GA controls through 96, proof open |
+| Constant-tail lasso and scale block | Endpoint shift is an exact partial lasso transducer; newest-cut permutations are the eight affine triples `(alpha,beta,gamma)`; `W=e[n,2n)` forces a padding-independent block `R_c(W)=e[2n,4n)` | **Uniform reduction:** it suffices to prove `R_c(W)` cannot continue a hard-core `W`; exhaustive through `|W|=22`. The original bound `s_2<=#2` first fails at length 17; the repaired targets `s_2<=#2+1_{22}` and `s_3<=#2+3` survive the census but are unproved. The apparent six-state doubling profile is rejected by four universal `8 -> 16` profile collisions. A doubled word is uniformly unique up to rotation, but the prefix-independent exact-cycle orbit itself branches at shift 26,603, so the missing invariant must retain prefix/entry-state data |
+| Reversed constant-tail diagonal | The complete growing inverse-cone formula reverses to `S_0=c, S_i=g_(S_(i-1))(R_i)`; the final scan state exactly decodes the next hard-core endpoint and appends its boundary symbol | **Uniform stronger reduction:** mortality of every finite queue beginning in `c in {2,3}` and ending in `{1,2}` would close the constant-tail separator. The exact quotient `3 -> 1` gives ternary representatives, and every normalized successor avoids `20`, `22`, `011`; `lifetime(R)<=|R|` holds exhaustively through length 15, induction open |
+| Regular survival-language cocycle | `L_(h+1)=L_0 intersect Q_c^(-1)(L_h)` constructs and minimizes the exact next survival formula | **Exact morph, negative rank result:** minimized DFA size grows from `5/6` to `17,65,257,...` rather than contracting; shortest accepted length grows `1/2,1/2,3,5,5,5,10,...`. Proving that minimum tends to infinity is now the precise language-theoretic mortality target |
+| Frontier-distance cocycle | Stack `h+1` queue rows; reading symbol `a` sends `v` to `w_0=a, w_j=g_(v_j)(w_(j-1))`; terminal vertices are exactly the inverse-cone diagonals of hard-core words of length `h+1` | **Uniform graph theorem:** bare distance from `(c,...,c)` to the `F_(h+3)`-vertex terminal set gives the arbitrary-queue minimum; product with the invariant suffix DFA gives the language-cocycle minimum. Their divergence is equivalent. Height extension is a four-sheeted permutation cover whose fiber maps generate `D8`, so no fiber rank contracts. Both distances are exact through `h=12`; proving divergence remains open |
+| Moving endpoint flips | Flipping endpoint coordinate `k` from `1` to `2` preserves hard-core legality and rewrites the inverse cut only on `[k,2k+1]` | **Uniform cocycle:** exact adaptive formula update and interval-cover condition proved; supports may still escape, so no descent yet |
+| OpenEvolve/GA rank-zero witnesses | Independent exact reconstruction of every proposed hard-core prefix over a genuine zero-tail cut | **Finite negative:** GA reproduces the `T=23` optimum and reaches survival 107 at `T=96`, but finds no `2T+2` falsifier; no uniform separator follows |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
 moment order, lookahead, or endpoint window.  Their standalone certificates
