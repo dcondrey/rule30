@@ -2,12 +2,10 @@
 
 Date: 2026-09-01
 
-Status: **OPEN.  The coefficient-seven density bound survives its registered
-finite falsifier, but no uniform density proof was obtained.**  The primary
-phase/`rho`/`D8` potential is killed by an exact negative cycle.  A new exact
-uniform reduction removes the growing deep-zero padding and conjugates the
-full frontier to a length-`+1` active-core transducer; mortality of that core
-remains to be proved.
+Status: **THE COEFFICIENT-SEVEN DENSITY BOUND IS FALSE.**  A length-37
+hard-core word has reconstructed-tail weight 10, so `7 wt(L)=70 < 72=2n-2`.
+The two weaker balance inequalities remain open.  The exact active-core
+conjugacy is unaffected, but mortality of that core remains to be proved.
 
 ## 1. Density candidate and exact finite falsification
 
@@ -19,8 +17,8 @@ The registered candidate is
 7 wt(L_1...L_(2n)) >= 2n-2.                         (D)
 ```
 
-Exhaustive enumeration of all Fibonacci-many hard-core words through
-`n=24` finds no counterexample.  The minimum weights are
+Exhaustive enumeration of all Fibonacci-many hard-core words through `n=24`
+found no counterexample.  The minimum weights are
 
 ```text
 1,1,1,2,2,2,2,2,3,3,4,4,4,4,5,5,5,6,6,6,6,7,7,7.
@@ -30,7 +28,24 @@ The minimum slack `7 wt(L)-2n+2` is zero only at `n=8`, on chronological
 word `01010100`.  This is finite falsification data only.  It is not an
 induction and is not used to claim (D) for arbitrary `n`.
 
-The coefficient seven has an exact sharp control.  On a cyclic row of width
+That finite result did not persist.  The fixed hard-core word
+
+```text
+0101010101010101010101010101010101000
+```
+
+has length 37.  Its reconstructed left tail is
+
+```text
+10000001000000100000010000001000000100000010000001000000100000010000000000
+```
+
+of weight 10, giving density slack `7*10-2*37+2=-2`.  The retained checker
+computes the tail once through `wf_step` and again through an independent
+temporal-column recurrence.  This is a decisive counterexample to (D), not a
+counterexample to period-two mortality.
+
+The coefficient seven nevertheless had an exact sharp control.  On a cyclic row of width
 seven, Rule 30 sends
 
 ```text
@@ -170,12 +185,13 @@ arbitrary-length orbit of (4), ending in `3` at every step, whose final carry
 always has unequal bits and whose forced bits from (5) avoid `11`.  Excluding
 such an orbit is exactly the remaining obligation.
 
-Thus neither (D), the period-two theorem, nor Prize Problem 1 is proved here.
-The next proof attempt should act on the whole word in (4), preferably by a
-well-founded non-additive decomposition of the `2/3`-merging transducer.  It
-must retain the infinite-left period-seven wallpaper as a control: that
-wallpaper has no finite deep-zero prefix and therefore is not represented by
-a finite active core.
+Thus (D) is false, while the period-two theorem and Prize Problem 1 remain
+open.  The next proof attempt should either prove the two weaker balances or
+act on the whole word in (4), preferably by a well-founded non-additive
+decomposition of the `2/3`-merging transducer.  It must retain the
+infinite-left period-seven wallpaper as a control: that wallpaper has no
+finite deep-zero prefix and therefore is not represented by a finite active
+core.
 
 ## 6. Reproduction
 

@@ -91,6 +91,45 @@ def density_enumeration(max_length: int) -> list[dict[str, object]]:
     return rows
 
 
+def direct_tail(bits: tuple[int, ...]) -> tuple[int, ...]:
+    """Reconstruct the initial left tail directly from temporal columns."""
+    width = 2 * len(bits)
+    right = [time & 1 for time in range(width)]
+    current = [
+        1 if time & 1 else 1 - bits[time // 2]
+        for time in range(width)
+    ]
+    tail = []
+    while current:
+        tail.append(current[0])
+        following = [
+            current[time + 1] ^ (current[time] | right[time])
+            for time in range(len(current) - 1)
+        ]
+        right, current = current, following
+    return tuple(tail)
+
+
+def density_counterexample() -> tuple[str, str, int]:
+    """Replay a fixed hard-core counterexample to coefficient-seven density."""
+    word = "0101010101010101010101010101010101000"
+    bits = tuple(map(int, word))
+    assert len(bits) == 37
+    assert all(left + right <= 1 for left, right in zip(bits, bits[1:]))
+
+    state: State = (0, 0, 0)
+    emitted: list[int] = []
+    for rho in bits:
+        state, pair = append_macro(state, rho)
+        emitted.extend(pair)
+    independent = direct_tail(bits)
+    assert tuple(emitted) == independent
+    weight = sum(independent)
+    assert weight == 10
+    assert 7 * weight < 2 * len(bits) - 2
+    return word, "".join(map(str, independent)), weight
+
+
 def cyclic_rule30(word: tuple[int, ...]) -> tuple[int, ...]:
     size = len(word)
     return tuple(
@@ -273,6 +312,13 @@ def main() -> None:
             f"{row['minimum_weight']:2d} {row['minimum_slack']:2d} "
             f"{row['witness_count']:4d} {row['first_witness']:#x}"
         )
+
+    word, tail, weight = density_counterexample()
+    print(
+        "coefficient-seven counterexample: "
+        f"n={len(word)} rho={word} tail={tail} weight={weight} "
+        f"slack={7 * weight - 2 * len(word) + 2} PASS"
+    )
 
     wallpaper_control()
     print("period-7 / time-4 wallpaper and sparse-phase alignment: PASS")

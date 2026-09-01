@@ -125,7 +125,7 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Shift-normalized cofactor automaton | Exact recurrence `C_(i+1)=C_i(1+g_i)` | Degree five fails at `n=12`; support spans the seed; the highlighted motif has a literal self-loop and is not a closed state |
 | Interval annihilator | Uniform matched-extension identity on complete survivor indicators | Matched appends are exact macro shifts; an unmatched rank-five defect appears, so restart/defect states remain unclassified |
 | Literal endpoint peel | Full aligned Mealy tableau and exact `K_(w+2)` endpoint block | `(n,H)->(n-1,H-2)` is semantically false: length-4 seed `0xa` survives 4, while every length-3 seed survives at most 1 |
-| Coefficient-seven tail density | Exact minimum-weight falsifier and period-seven sharp control | Survives through `n=24`; phase/rho/D8 observer has a 14-edge negative cycle of total charge `-28` |
+| Coefficient-seven tail density | Exact minimum-weight falsifier and period-seven sharp control | **Killed:** length-37 rho `0101010101010101010101010101010101000` gives `wt(L)=10`, hence `70 < 72` |
 | Two-factor right-filtered mortality | Uniform right-light-cone prohibition of `00000` | **Killed:** a length-30 seed avoiding `11`/`00000` survives 10; it contains the actual-right forbidden factor `101001` |
 | Exact joint mortality | Direct coupling to a genuine Rule 30 right light cone | **Killed:** right mask `0x13be` gives `J(82,10)` SAT; the resulting finite row alternates through time 184 |
 
@@ -226,7 +226,8 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
 The exact joint constant bound is false: right mask `0x13be` yields
 `J(82,10)` SAT and a finite configuration alternating through time 184.  The
 same witness is far below the proposed linear allowance, so it does not
-falsify linear mortality.  The coefficient-seven tail-density inequality is
+falsify linear mortality.  The coefficient-seven density inequality is also
+false; the two weaker balance inequalities in `RESULTS-TAIL-DENSITY.md` remain
 the main alternate target.
 
 Why it suffices: an actual right trace has no `11`, while an infinite
