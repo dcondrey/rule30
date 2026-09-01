@@ -1,0 +1,8 @@
+checkpoint t=4194304 seconds=402.7
+checkpoint t=8388608 seconds=1500.7
+checkpoint t=12582912 seconds=2664.8
+checkpoint t=16777216 seconds=4571.5
+checkpoint t=20971520 seconds=6601.7
+checkpoint t=25165824 seconds=9720.4
+checkpoint t=29360128 seconds=13824.6
+band30 steps=33554432 wmax=15 seconds=17586.7

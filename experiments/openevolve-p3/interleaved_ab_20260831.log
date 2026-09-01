@@ -1,0 +1,8 @@
+### A (naive baseline) pass 1  Mon Aug 31 11:22:31 PDT 2026
+sanity_candidates/candidate_a_correct.py run 0: {'run': 0, 'combined_score': 0.2667352489722018, 'tail_exponent': 2.1635105337147604, 'global_exponent': 2.0358429096381094, 'r2': 0.9986908697762883, 'tail_consistency': 0.25533524815329534, 'error': None}
+### B (bitpacked) pass 1  Mon Aug 31 11:34:08 PDT 2026
+sanity_candidates/candidate_c_bitpacked.py run 0: {'run': 0, 'combined_score': 0.8622941849903145, 'tail_exponent': 1.5730718110025652, 'global_exponent': 1.6504316931266105, 'r2': 0.9996201161090971, 'tail_consistency': 0.08590882781537545, 'error': None}
+### A (naive baseline) pass 2  Mon Aug 31 11:34:11 PDT 2026
+sanity_candidates/candidate_a_correct.py run 0: {'run': 0, 'combined_score': 0.7896492968190605, 'tail_exponent': 1.806948092035592, 'global_exponent': 1.950383084941356, 'r2': 0.9987868703651923, 'tail_consistency': 0.13102157082104537, 'error': None}
+### B (bitpacked) pass 2  Mon Aug 31 11:44:03 PDT 2026
+sanity_candidates/candidate_c_bitpacked.py run 0: {'run': 0, 'usable_ns': [2000, 4000, 8000, 16000], 'dropped': [], 'combined_score': 0.4304761791527306, 'tail_exponent': 1.7726565228104798, 'global_exponent': 1.6476298993526404, 'r2': 0.9977677156480123, 'tail_consistency': 0.35563011339076733, 'error': None}

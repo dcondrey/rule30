@@ -31,10 +31,14 @@ arrives. Accordingly:
 2. **Extension: `m=27`,** from `m=16`. That is 11 further exact values, and
    `m=27` is a principled stopping point rather than a patience limit
    (section 3).
-3. **A new algorithm** brings the cost from `Theta(2^(2m+1))` to
-   `Theta(m * 2^(m+2))`. Measured on the same values: a21's method needs 582 s
-   for `m=17` and 2375 s for `m=18`, against 0.24 s and 0.46 s here -- 2400x
-   and 5200x, with the gap doubling each `m`.
+3. **A new algorithm** removes the outer loop over the `2^m` boundary windows,
+   bringing the count of elementary operations from `Theta(m * 2^(2m+1))` to
+   `Theta(m * 2^(m+2))`, with memory flat in the trie depth. Measured against
+   a21 on the same values: 582 s for `m=17` and 2375 s for `m=18` against
+   0.24 s and 0.46 s here, i.e. 2425x and 5163x. **The evidence for the
+   `2^m` factor is that the ratio doubles with `m` (2.13x from `m=17` to
+   `m=18`), not its absolute size**, which is an artefact of two different
+   implementations; see section 3.
 4. **The numerator sequence is not in OEIS** (searched whole, by prefix, and by
    interior window; also `"Rule 30" + Bayes/entropy` and the decimal `0.17330`).
    No prior closed form or asymptotic to meet first.
@@ -82,7 +86,8 @@ Arithmetic is exact throughout: integer counts, never `np.bincount(weights=)`
 ## 3. The algorithm, and the cost curve
 
 a21 and a22 both loop over all `2^m` windows and, for each, evaluate over all
-`2^(m+1)` hidden states: `Theta(m^2 * 2^(2m+1))`. But the window is consumed
+`2^(m+1)` hidden states, running `m` bit-packed steps per pair:
+`Theta(m * 2^(2m+1))`. But the window is consumed
 one time step at a time, and after `j` steps the surviving row has only
 `m+1-j` cells. So walk the trie of window *prefixes* breadth-first, carrying a
 count vector at each node. At depth `j` there are `2^j` nodes each holding
@@ -108,6 +113,19 @@ is roughly 30-60 min per rule and **memory-bound** rather than arithmetic-bound
 (`2^29` int32 = 2 GB live, plus buffers); `m=30` would need a depth-first pass
 over subtrees to cap the live array. Reachable, but see below for why it is not
 worth doing.
+
+**What the 2425x / 5163x does and does not show.** The asymptotic prediction
+for the ratio is `Theta(m * 2^(2m+1)) / Theta(m * 2^(m+2)) = 2^(m-1)`, which
+is 65,536 at `m=17`. Measured is 2425, a factor of 27 below. That gap is a
+constant-factor difference between two implementations, not evidence against
+the analysis: a21 vectorises its inner enumeration over hidden states with
+numpy, so it pays far less per elementary operation than the bound assumes.
+A wall-clock ratio between two codebases cannot confirm an asymptotic and is
+not offered as if it could. **What it does confirm is the growth**: the ratio
+went 2425 -> 5163 for one step in `m`, a factor of 2.13, and a ratio that
+doubles per `m` is the signature of removing a `2^m` loop. The absolute
+number is reported because it is what the extension actually cost, not as
+proof of the exponent.
 
 **Why `m=27` is the stopping point and not `m=28`.** At `m=27` the numerator is
 `748914543008093 < 2^53`, so `eps(27)` converts to float64 with **zero** error.
@@ -387,10 +405,12 @@ discrepancy should be read off their difference.)
   answer.** Exactness never arrives at any finite `m`, and Theorem W already
   settles that. This section is repeated from section 0 on purpose.
 
-## 8. Suggested `PATH.md` amendment (NOT applied)
+## 8. `PATH.md` amendment (applied 2026-08-31)
 
-`PATH.md` was deliberately left untouched. If the extension is to be recorded,
-the minimal honest edit is in section 9.4, replacing
+Merged into section 9.4, with one addition not proposed here: a naming caution
+recording that `eps_30` as used in this repo collides with a different `eps(m)`
+defined for Rule 30 in arXiv:2604.00165 (2026), so any write-up must rename
+before publication.  The edit replaced
 
 > Exact values `eps_30(1)=1/4` down to `0.17331` at `m=16`
 
@@ -398,7 +418,8 @@ with something like
 
 > Exact values `eps_30(1)=1/4` down to `0.16629` at `m=27` (arm `a25`, which
 > also reproduced `m=1..16` independently and reduced the cost from
-> `2^(2m+1)` to `m*2^(m+2)`; see `RESULTS-eps30-extended.md`). Symbolic
+> `m*2^(2m+1)` to `m*2^(m+2)` by removing the outer loop over boundary
+> windows; see `RESULTS-eps30-extended.md`). Symbolic
 > regression on the 27 exact values yields `0.14246 + 0.12345/m^(1/2)` as a
 > held-out-validated fit, but a limit-**zero** family `b/(log m)^p` passes the
 > same held-out test, so the limit remains undetermined -- which changes

@@ -1,0 +1,217 @@
+# a25 report   T=16,777,216  J=32 disjoint windows of 524,288  bootstrap B=20000
+
+
+==============================================================================
+## all_zeros
+
+K(T), dyadic horizons 2^10 2^11 2^12 2^13 2^14 2^15 2^16 2^17 2^18 2^19 2^20 2^21 2^22 2^23 2^24
+         3    3    3    3     3     3     3      4      4      4       4       5       5       6        6
+  K(T) = 6;  LATEST occurrence start t = 13,697,639 = 0.816 T
+  per-window K (J=32 draws): [4, 4, 4, 5, 5, 4, 5, 5, 6, 4, 4, 5, 5, 5, 4, 4, 4, 4, 5, 5, 4, 4, 4, 5, 5, 5, 6, 5, 4, 5, 4, 5]
+  BAND on K(T): bootstrap over windows -> mean 5.87, sd 0.33, 95% [5, 6]
+  GROWTH of K per doubling of horizon (block-max over disjoint windows, bootstrap CI):
+    dK/d(doubling) = +0.3094 [+0.1344, +0.4063]   reference law +0.1667   FLAT would be 0.0000
+    per-scale mean block-max K, scales L*2^m: [4.594, 4.875, 5.25, 5.5]
+    dyadic doublings with delta-K = 0: 11/14  -- a single doubling showing 'flat' is the MODAL outcome under growth
+  windows attaining K(T): 2/32; latest such window 26 (t in [13,631,488, 14,155,776))
+
+  W  h_max  boot band       rows/doubling: blockmax[95%CI] (lower bd)   descriptive   h_late  n_runs   Hstar
+   0     22  0.58[20,22]   +0.884 [+0.416,+1.006]        +0.736     17       59    12
+   1     11  0.67[9,11]   +0.472 [+0.156,+0.666]        +0.478      9       23    11
+   2     10  0.67[8,10]   +0.472 [+0.153,+0.669]        +0.478      8       23    10
+   3      9  0.66[7,9]   +0.472 [+0.159,+0.684]        +0.478      7       23     9
+   4      8  0.67[6,8]   +0.472 [+0.159,+0.678]        +0.478      6       23     8
+   5      7  0.66[5,7]   +0.472 [+0.153,+0.694]        +0.478      5       23     7
+   6      6  0.66[4,6]   +0.472 [+0.159,+0.662]        +0.478      4       23     6
+   7      5  0.67[3,5]   +0.472 [+0.162,+0.688]        +0.445      3       23     5
+   8      4  0.66[2,4]   +0.472 [+0.150,+0.688]        +0.335      2       23     4
+   9      3  0.66[1,3]   +0.453 [+0.141,+0.678]        +0.220      1       23     3
+  10      2  0.67[0,2]   +0.287 [+0.000,+0.519]        +0.121      0        0     2
+  11      1  0.33[0,1]   +0.144 [+0.000,+0.263]        +0.060      0        0     1
+
+  rate stability over 53 cells with n_runs>=40 (25 with distinct window-count vectors; the rest are exact diagonal duplicates, W+h const)
+    halves z:   mean -0.202  sd 0.608  range [-1.54,+1.17]   z<-3 (DECLINE): 0   |z|>3: 0 (expected ~0.07 over the distinct cells; the effective number of independent cells is smaller still, since neighbouring W overlap)
+    Spearman z: mean -0.204  sd 0.985  range [-1.57,+1.77]   z<-3: 0
+    dispersion phi: median 1.00 (1.0 = Poisson; the test floors phi at 1, so it is conservative)
+    deepest cells (smallest n_runs):
+      W   h  n_runs  last_win  mean_earlier   ratio      z   last_start/T
+       0  17      59         1          1.87   0.788  -0.91   0.9979
+       1   8      95         4          2.94   0.727  -1.54   0.9984
+       0  16     117         3          3.68   0.950  -0.28   0.9979
+       0  15     236         4          7.48   0.983  -0.13   0.9979
+       1   7     365        19         11.16   1.017   0.16   0.9984
+       0  14     507        12         15.97   1.053   0.53   0.9979
+       0  13    1000        31         31.26   0.969  -0.49   1.0000
+       1   6    1542        60         47.81   0.995  -0.10   0.9993
+
+  log2(rate) vs h  (reference slope -2 for W>=1)
+  The slope IS the growth law: rate(W,h) ~ 2^(slope*h) means the
+  max height at half-width W grows by -1/slope rows per doubling of T.
+  Saturation = downward curvature.  A quadratic saturating term
+  log2 r = slope*h - delta*h^2/2 has 2nd difference -delta, so the
+  curvature column bounds delta; |slope|/delta is how many further
+  rows the linear law would have to hold before the growth rate halves.
+   W  h-range   slope +/- se   rows/doubling   curvature +/- se   z    delta_bound(3se)  rows before rate halves
+  se and curvature-se are ACROSS-WINDOW spreads (J independent refits), not
+  OLS residual errors: the counts are nested in h.
+   0   1..17   -1.0071+/-0.0036   0.9929+/-0.0035   +0.0009+/-0.0042 +0.21   0.0125       80.4
+   1   1.. 8   -2.0048+/-0.0095   0.4988+/-0.0024   +0.0098+/-0.0124 +0.79   0.0372       53.9
+   2   1.. 7   -2.0063+/-0.0124   0.4984+/-0.0031   +0.0111+/-0.0154 +0.72   0.0463       43.3
+   3   1.. 6   -2.0087+/-0.0166   0.4978+/-0.0041   +0.0143+/-0.0202 +0.71   0.0607       33.1
+   4   1.. 5   -2.0120+/-0.0234   0.4970+/-0.0058   +0.0142+/-0.0314 +0.45   0.0941       21.4
+
+==============================================================================
+## checker_A
+
+K(T), dyadic horizons 2^10 2^11 2^12 2^13 2^14 2^15 2^16 2^17 2^18 2^19 2^20 2^21 2^22 2^23 2^24
+         2    2    2    4     4     4     4      5      6      6       6       6       6       6        7
+  K(T) = 7;  LATEST occurrence start t = 10,432,914 = 0.622 T
+  per-window K (J=32 draws): [6, 5, 5, 5, 6, 6, 6, 6, 6, 6, 5, 6, 5, 6, 6, 6, 6, 5, 5, 7, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6]
+  BAND on K(T): bootstrap over windows -> mean 6.64, sd 0.48, 95% [6, 7]
+  GROWTH of K per doubling of horizon (block-max over disjoint windows, bootstrap CI):
+    dK/d(doubling) = +0.1531 [+0.0469, +0.2907]   reference law +0.3333   FLAT would be 0.0000
+    per-scale mean block-max K, scales L*2^m: [5.781, 6.0, 6.125, 6.25]
+    dyadic doublings with delta-K = 0: 10/14  -- a single doubling showing 'flat' is the MODAL outcome under growth
+  windows attaining K(T): 1/32; latest such window 19 (t in [9,961,472, 10,485,760))
+
+  W  h_max  boot band       rows/doubling: blockmax[95%CI] (lower bd)   descriptive   h_late  n_runs   Hstar
+   0     23  0.53[22,23]   +0.878 [+0.616,+1.256]        +1.082     19       26    24
+   1     18  0.36[17,18]   +0.763 [+0.403,+0.937]        +0.736     14       69    22
+   2     17  0.35[16,17]   +0.763 [+0.391,+0.931]        +0.736     13       69    20
+   3     14  0.48[13,14]   +0.697 [+0.428,+0.822]        +0.841     11       38    18
+   4     13  0.48[12,13]   +0.697 [+0.438,+0.828]        +0.841     10       38    16
+   5     11  0.71[9,11]   +0.797 [+0.406,+0.963]        +0.863      8       19    14
+   6     10  0.71[8,10]   +0.797 [+0.403,+0.962]        +0.830      7       19    12
+   7      8  0.99[6,8]   +0.937 [+0.569,+1.256]        +0.698      2       65    10
+   8      7  0.99[5,7]   +0.937 [+0.600,+1.269]        +0.588      1       65     8
+   9      5  1.05[2,5]   +0.778 [+0.312,+1.047]        +0.324      0        0     6
+  10      4  1.05[1,4]   +0.569 [+0.125,+0.878]        +0.209      0        0     4
+  11      1  0.20[0,1]   +0.141 [+0.000,+0.284]        +0.060      0        0     2
+
+  rate stability over 78 cells with n_runs>=40 (50 with distinct window-count vectors; the rest are exact diagonal duplicates, W+h const)
+    halves z:   mean +0.075  sd 0.692  range [-1.57,+1.44]   z<-3 (DECLINE): 0   |z|>3: 0 (expected ~0.14 over the distinct cells; the effective number of independent cells is smaller still, since neighbouring W overlap)
+    Spearman z: mean -0.016  sd 0.770  range [-2.44,+2.12]   z<-3: 0
+    dispersion phi: median 1.00 (1.0 = Poisson; the test floors phi at 1, so it is conservative)
+    deepest cells (smallest n_runs):
+      W   h  n_runs  last_win  mean_earlier   ratio      z   last_start/T
+       0  18      41         2          1.26   0.640  -1.41   0.9987
+       7   2      65         1          2.06   0.757  -1.12   0.9983
+       5   6      67         6          1.97   0.971  -0.12   0.9987
+       1  14      69         3          2.13   0.683  -1.57   0.9971
+       3  10      74         6          2.19   0.947  -0.21   0.9987
+       0  17      84         5          2.55   0.826  -0.87   0.9987
+       5   5     128         8          3.87   0.939  -0.33   0.9987
+       0  16     139         7          4.26   0.829  -1.10   0.9987
+
+  log2(rate) vs h  (reference slope -1 for W>=1)
+  The slope IS the growth law: rate(W,h) ~ 2^(slope*h) means the
+  max height at half-width W grows by -1/slope rows per doubling of T.
+  Saturation = downward curvature.  A quadratic saturating term
+  log2 r = slope*h - delta*h^2/2 has 2nd difference -delta, so the
+  curvature column bounds delta; |slope|/delta is how many further
+  rows the linear law would have to hold before the growth rate halves.
+   W  h-range   slope +/- se   rows/doubling   curvature +/- se   z    delta_bound(3se)  rows before rate halves
+  se and curvature-se are ACROSS-WINDOW spreads (J independent refits), not
+  OLS residual errors: the counts are nested in h.
+   0   1..18   -0.9837+/-0.0028   1.0165+/-0.0029   -0.0023+/-0.0046 -0.49   0.0161       61.0
+   1   1..14   -1.0331+/-0.0059   0.9680+/-0.0055   +0.1213+/-0.0052 +23.20   0.0157       65.8
+   2   1..13   -0.9863+/-0.0068   1.0139+/-0.0070   -0.0118+/-0.0059 -2.01   0.0295       33.4
+   3   1..10   -1.0597+/-0.0099   0.9437+/-0.0088   +0.1968+/-0.0082 +23.97   0.0246       43.0
+   4   1.. 9   -0.9712+/-0.0117   1.0297+/-0.0124   -0.0016+/-0.0110 -0.14   0.0345       28.1
+   5   1.. 6   -1.2243+/-nan   0.8168+/-nan   +0.4183+/-nan  +nan   nan        inf
+   6   1.. 5   -0.9904+/-nan   1.0097+/-nan   +0.0337+/-nan  +nan   nan        inf
+
+==============================================================================
+## checker_B
+
+K(T), dyadic horizons 2^10 2^11 2^12 2^13 2^14 2^15 2^16 2^17 2^18 2^19 2^20 2^21 2^22 2^23 2^24
+         3    3    3    3     3     5     5      5      5      5       5       5       6       7        7
+  K(T) = 7;  LATEST occurrence start t = 15,378,214 = 0.917 T
+  per-window K (J=32 draws): [5, 5, 5, 5, 6, 5, 5, 6, 6, 5, 5, 6, 5, 7, 5, 5, 7, 6, 6, 5, 5, 5, 5, 7, 5, 6, 5, 6, 5, 7, 5, 5]
+  BAND on K(T): bootstrap over windows -> mean 6.99, sd 0.12, 95% [7, 7]
+  GROWTH of K per doubling of horizon (block-max over disjoint windows, bootstrap CI):
+    dK/d(doubling) = +0.4187 [+0.2405, +0.5094]   reference law +0.3333   FLAT would be 0.0000
+    per-scale mean block-max K, scales L*2^m: [5.5, 5.938, 6.375, 6.75]
+    dyadic doublings with delta-K = 0: 11/14  -- a single doubling showing 'flat' is the MODAL outcome under growth
+  windows attaining K(T): 4/32; latest such window 29 (t in [15,204,352, 15,728,640))
+
+  W  h_max  boot band       rows/doubling: blockmax[95%CI] (lower bd)   descriptive   h_late  n_runs   Hstar
+   0     22  0.59[20,22]   +0.884 [+0.419,+1.012]        +0.736     17       59    24
+   1     20  0.75[18,20]   +0.747 [+0.372,+1.000]        +0.780     16       38    22
+   2     17  0.49[16,17]   +0.734 [+0.475,+1.006]        +0.819     14       19    20
+   3     16  0.49[15,16]   +0.734 [+0.456,+1.003]        +0.819     13       19    18
+   4     13  0.71[11,13]   +0.903 [+0.559,+1.103]        +0.786      6      241    16
+   5     12  0.71[10,12]   +0.903 [+0.550,+1.084]        +0.786      5      241    14
+   6      9  0.51[8,9]   +0.928 [+0.591,+1.084]        +0.687      2      239    12
+   7      8  0.51[7,8]   +0.928 [+0.584,+1.094]        +0.604      1      239    10
+   8      5  0.71[3,5]   +0.541 [+0.372,+0.872]        +0.346      0        0     8
+   9      4  0.71[2,4]   +0.512 [+0.359,+0.856]        +0.264      0        0     6
+  10      1  0.20[0,1]   +0.141 [+0.000,+0.284]        +0.060      0        0     4
+
+  rate stability over 78 cells with n_runs>=40 (57 with distinct window-count vectors; the rest are exact diagonal duplicates, W+h const)
+    halves z:   mean -0.554  sd 0.711  range [-2.03,+1.03]   z<-3 (DECLINE): 0   |z|>3: 0 (expected ~0.15 over the distinct cells; the effective number of independent cells is smaller still, since neighbouring W overlap)
+    Spearman z: mean -0.956  sd 0.780  range [-2.68,+1.34]   z<-3: 0
+    dispersion phi: median 1.00 (1.0 = Poisson; the test floors phi at 1, so it is conservative)
+    deepest cells (smallest n_runs):
+      W   h  n_runs  last_win  mean_earlier   ratio      z   last_start/T
+       0  17      59         1          1.87   0.788  -0.91   0.9979
+       2  12      59         1          1.87   0.903  -0.39   0.9773
+       4   8      64         0          2.06   0.561  -2.03   0.9336
+       1  15      65         2          2.03   0.970  -0.12   0.9979
+       6   4      66         0          2.13   0.650  -1.72   0.9336
+       8   1      97         0          3.13   0.764  -1.32   0.9564
+       2  11     115         3          3.61   0.949  -0.28   0.9979
+       0  16     117         3          3.68   0.950  -0.28   0.9979
+
+  log2(rate) vs h  (reference slope -1 for W>=1)
+  The slope IS the growth law: rate(W,h) ~ 2^(slope*h) means the
+  max height at half-width W grows by -1/slope rows per doubling of T.
+  Saturation = downward curvature.  A quadratic saturating term
+  log2 r = slope*h - delta*h^2/2 has 2nd difference -delta, so the
+  curvature column bounds delta; |slope|/delta is how many further
+  rows the linear law would have to hold before the growth rate halves.
+   W  h-range   slope +/- se   rows/doubling   curvature +/- se   z    delta_bound(3se)  rows before rate halves
+  se and curvature-se are ACROSS-WINDOW spreads (J independent refits), not
+  OLS residual errors: the counts are nested in h.
+   0   1..17   -1.0071+/-0.0036   0.9929+/-0.0035   +0.0009+/-0.0042 +0.21   0.0125       80.4
+   1   1..15   -0.9998+/-0.0046   1.0002+/-0.0046   +0.0026+/-0.0044 +0.58   0.0133       74.9
+   2   1..12   -1.0740+/-0.0060   0.9311+/-0.0052   +0.1620+/-0.0072 +22.53   0.0216       49.8
+   3   1..11   -1.0147+/-0.0070   0.9855+/-0.0068   +0.0038+/-0.0080 +0.47   0.0239       42.4
+   4   1.. 8   -1.1323+/-0.0160   0.8832+/-0.0125   +0.2604+/-0.0185 +14.08   0.0555       20.4
+   5   1.. 7   -0.9960+/-0.0216   1.0041+/-0.0218   -0.0083+/-0.0277 -0.30   0.0913       10.9
+
+==============================================================================
+## Q4 how much further would K alone need to go
+
+  Reference law: a checkerboard (2k+1) x k patch costs 2^-(2k+1) for its
+  first row and 2^-(k-1) per further row, so K advances by 1 per 8x in T
+  (3k <= log2 T).  a3 states the same thing as 'K=20 needs T ~ 2^60'.
+  dK/d(doubling of T) = 1/3 for the checkerboards, 1/6 for all-zeros
+  (per-row factor 4 -> 2k+1+2(k-1) <= log2 T).
+
+  K is integer-valued and moves in steps of 1.  Under the growth
+  hypothesis its increments over D doublings are ~Poisson with mean
+  s*D.  To make 'K did not move at all' improbable (P < 0.05) needs
+  s*D > 3, i.e. D > 3/s doublings.  Generation is Theta(T^2) with the
+  constant fitted from this arm's own C-kernel checkpoints, 2.29e-11 s per step^2.
+
+  family       s=dK/doubling   D needed   T needed      single-core kernel time
+  all_zeros          0.167         18   4.398e+12        1.4e+07 core-years
+  checker_A          0.333          9   8.590e+09           53.5 core-years
+  checker_B          0.333          9   8.590e+09           53.5 core-years
+
+  So the diagonal K cannot be made decisive by any horizon: the cost
+  of one more unit of K is 8x the horizon and therefore 64x the
+  compute, and several units are needed before 'flat' is excluded.
+  Cost of the next few units of K from this arm's horizon:
+    +dK   T needed      kernel time
+    +1    1.342e+08          4.773 days
+    +2    1.074e+09          305.5 days
+    +3    8.590e+09      1.955e+04 days
+
+  The rate statistic is what makes the question answerable at a
+  horizon that fits in hours: it uses up to 1e6 occurrences per cell
+  instead of one maximum, so its precision improves as sqrt(T) rather
+  than log(T).
+
+wrote report_T16777216.json

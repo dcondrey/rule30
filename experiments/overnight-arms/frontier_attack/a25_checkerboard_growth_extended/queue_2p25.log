@@ -1,0 +1,5 @@
+all_zeros: K(T)={'K': 6, 'latest_start': 24210899, 'capped': False}  K per window=[4, 5, 5, 5, 6, 5, 5, 4, 4, 5, 4, 5, 5, 6, 5, 5, 4, 5, 4, 5, 5, 5, 4, 6, 5, 5, 5, 5, 5, 5, 5, 4]
+checker_A: K(T)={'K': 7, 'latest_start': 22282411, 'capped': False}  K per window=[6, 5, 6, 6, 6, 6, 6, 6, 6, 7, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 6, 7, 5, 6, 6, 6, 6, 5, 6, 6, 6, 6]
+checker_B: K(T)={'K': 7, 'latest_start': 31506363, 'capped': False}  K per window=[5, 5, 6, 6, 6, 6, 7, 5, 7, 6, 5, 7, 6, 6, 7, 5, 5, 5, 6, 6, 6, 5, 6, 7, 6, 5, 5, 6, 5, 7, 7, 5]
+wrote analysis_T33554432.json 98567 bytes
+wrote report_T33554432.txt

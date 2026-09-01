@@ -236,13 +236,19 @@ the first is a claim about this run:
   an observation about instrument choice, **not** authority to redesign
   this evaluator, which is pre-registered as it stands.
 
-## 7. Proposed register row (not merged — `PATH.md` untouched)
+## 7. Register row (merged into `PATH.md` section 7.1 on 2026-08-31)
 
-Next free number is 77.
+Next free number is **91**, not 77.  Corrected 2026-08-31 on merge: the
+register is split across two files and 77 was already taken.  `PATH.md` section
+7.1 holds rows 1-72 plus an out-of-band row 76; rows 73-90 live unmerged in
+`experiments/overnight-arms/frontier_attack/FINDINGS.md` section 3 ("numbering
+continuing from 72"), and `PATH.md` section 9.5 already cites that stream by
+number ("row 79", "row 82"), so it is the canonical one.  FINDINGS row 77 is
+"Ladder realizability / half-plane slip".
 
 | # | Approach | Prize | Status | Why it stopped | Where |
 |---|---|---|---|---|---|
-| 77 | OpenEvolve LLM-driven evolutionary code search for a sub-quadratic `c(n)` | 3 | **NOT RUN (blocked)** | Harness built, pre-registered and previously verified, but the required sanity gate failed on re-verification: the constant-factor bit-packed control scored 0.9335 against its documented 0.210. Diagnosed by interleaved A/B/A/B re-measurement rather than assumed: the tail-exponent instrument does not resolve the difference it exists to detect at the smoke profile's `n <= 16000` on this machine. The measured gap between the naive `O(n^2)` control and the provably `O(n^2/64)` bit-packed one is 0.590 in one pair and 0.034 in the next (both full-window, `r2 > 0.997`), and the naive control — algorithmically identical to the stored baseline — scored 0.2667, 0.2957 and **0.7896** across three runs, i.e. the evaluator credited the baseline with beating itself by 0.41 exponent-units. Candidate ranges overlap outright (naive 1.807-2.164, bit-packed 1.573-1.833 over six runs). The pre-registered `+/-0.2-0.3` band is smaller than the instrument's scatter, and the ">= 3 independent runs" rule would not have caught this because it re-measures the candidate, not the baseline comparison. Machine load (77-105 on 10 cores from concurrent sessions) additionally pushed the naive control past the 180s per-point timeout at `n=16000`, truncating its window to the transient 4000->8000 segment. Extending the scaling range is a pre-registration amendment, not a mid-run fix. Search not launched, no LLM calls made, nothing tuned to force a pass. | `RESULTS-openevolve-p3.md`; `experiments/openevolve-p3/` |
+| 91 | OpenEvolve LLM-driven evolutionary code search for a sub-quadratic `c(n)` | 3 | **NOT RUN (blocked)** | Harness built, pre-registered and previously verified, but the required sanity gate failed on re-verification: the constant-factor bit-packed control scored 0.9335 against its documented 0.210. Diagnosed by interleaved A/B/A/B re-measurement rather than assumed: the tail-exponent instrument does not resolve the difference it exists to detect at the smoke profile's `n <= 16000` on this machine. The measured gap between the naive `O(n^2)` control and the provably `O(n^2/64)` bit-packed one is 0.590 in one pair and 0.034 in the next (both full-window, `r2 > 0.997`), and the naive control — algorithmically identical to the stored baseline — scored 0.2667, 0.2957 and **0.7896** across three runs, i.e. the evaluator credited the baseline with beating itself by 0.41 exponent-units. Candidate ranges overlap outright (naive 1.807-2.164, bit-packed 1.573-1.833 over six runs). The pre-registered `+/-0.2-0.3` band is smaller than the instrument's scatter, and the ">= 3 independent runs" rule would not have caught this because it re-measures the candidate, not the baseline comparison. Machine load (77-105 on 10 cores from concurrent sessions) additionally pushed the naive control past the 180s per-point timeout at `n=16000`, truncating its window to the transient 4000->8000 segment. Extending the scaling range is a pre-registration amendment, not a mid-run fix. Search not launched, no LLM calls made, nothing tuned to force a pass. | `RESULTS-openevolve-p3.md`; `experiments/openevolve-p3/` |
 
 ## 8. What to do next
 
@@ -271,3 +277,32 @@ measurement), reuse the Arm 3 fuel-counting instrument, or defer the arm.
 The reversible default taken here is **defer** — the harness is untouched
 and resumable, and no compute or LLM budget was spent on a measurement
 that could not have been trusted.
+
+## 9. Follow-up, same day: the clock was replaced with a fuel counter
+
+See **`RESULTS-openevolve-p3-fuel.md`** (companion doc; this file is
+unchanged above this line, and `evaluator.py`, `PREREGISTRATION.md` and
+`baseline_exponent.json` are untouched — the new instrument is a *parallel*
+evaluator that imports the pre-registered scoring and gates rather than
+restating them).
+
+Arm 3's wasmtime meter was read and **not** reused: WASM has only
+fixed-width ops, so one instruction is genuinely `O(1)` and no proportional
+cost model is needed; OpenEvolve mutates Python, where `row << 1` on a
+`(2n+3)`-bit integer is one opcode doing `n` bits of work. A new
+AST-rewriting word-RAM counter (`experiments/openevolve-p3/fuel.py`) charges
+every variable-width operation proportionally and denies by default.
+
+All four sanity candidates now pass, against two failures under the wall
+clock: (a) **0.200000**, tail equal to the stored baseline *in every printed
+digit*, improvement exactly 0.0 — the wall clock had credited this same
+program with beating itself by 0.41 exponent-units; (b) 0.0; (c) bit-packed
+**0.214234** against a documented 0.210, its 84x constant-factor win
+invisible to `combined_score` — the wall clock read 0.9335; (d) 0.0. Counts
+are bit-identical across separate processes under load. The baseline
+exponent measures **1.99946** with `r^2 = 0.9999999`, against 2.2147 /
+1.9289 / 2.1635 / 1.8069 from the clock.
+
+Still not run: the search itself. One gap remains open before it should be —
+the fuel ladder tops to `n = 4000`, which shortens the reach of gate 4 (the
+only anti-lookup-table check above `n = 3000`); see that doc's section 8.

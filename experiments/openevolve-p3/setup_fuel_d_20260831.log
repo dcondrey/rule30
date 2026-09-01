@@ -1,0 +1,29 @@
+candidate_d_lookup_table.py, WORD_BITS=30
+{
+  "250": {
+    "call_fuel": 2,
+    "value": 0,
+    "setup_fuel": 31999
+  },
+  "500": {
+    "call_fuel": 2,
+    "value": 0,
+    "setup_fuel": 31999
+  },
+  "1000": {
+    "call_fuel": 2,
+    "value": 0,
+    "setup_fuel": 31999
+  },
+  "2000": {
+    "call_fuel": 2,
+    "value": 0,
+    "setup_fuel": 31999
+  },
+  "4000": {
+    "call_fuel": 1,
+    "value": 0,
+    "setup_fuel": 31999
+  }
+}
+max_setup_fuel = 31999

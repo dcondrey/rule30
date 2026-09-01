@@ -584,7 +584,7 @@ check of it themselves.
 | 5 | R5, anything using only left permutivity or expansivity | 1 | **KILLED** | Closed by Rule 90, which is left permutive and whose lone-seed centre column *is* eventually periodic (Kopra names the obstruction himself). | `PATH.md` R5, 0 |
 | 6 | R6, complexity/entropy boundary framings (Kolmogorov boundary, entropy gradient, "incompressible zone") | 1,2,3 | **KILLED** | Literal version false in two lines (`K(window) <= log t + log x + O(1)`); the statistical rescue fails three ways, and obstruction (i) — 2D entropy density is insensitive to any single column — kills it rule-independently.  "Do not retry." | `PATH.md` R6 |
 | 7 | R7, omega-automaton periodicity ladder: one exclusion theorem per period `p` | 1 | STALLED | Calibration passed and `Thm(1)` mechanised, but all open cases `p=2..8` NONEMPTY with verified witnesses at every decided depth; verdict uniform in `R`, `k` and `Q`, so depth, the pin and `Q` are all retired as levers.  Rung 1: "Neither branch closed."  Blocker is a state-count wall plus the free-boundary escape, not compute. | `PATH.md` R7; `RESULTS-ladder-rung0.md`; `RESULTS-ladder-rung1.md` |
-| 8 | R8, invariant-measure classification of the vertical orbit closure | 2 | **OPEN** | Cheap disconfirming diagnostic ran; none of the three pre-registered criteria fired, Rule 90 control passed at every cell.  Verdict as pre-registered: "CONSISTENT WITH unique ergodicity, which proves nothing.  The route is not killed and not advanced." | `PATH.md` R8; `RESULTS-orbit-closure-diagnostic.md` |
+| 8 | R8, invariant-measure classification of the vertical orbit closure | 2 | **OPEN** | Cheap disconfirming diagnostic ran; none of the three pre-registered criteria fired, Rule 90 control passed at every cell.  Verdict as pre-registered: "CONSISTENT WITH unique ergodicity, which proves nothing.  The route is not killed and not advanced." | `PATH.md` R8; `RESULTS-orbit-closure-diagnostic.md`; status now conditional, see 9.3 and `RESULTS-checkerboard-growth-extended.md` |
 | 9 | R9, proof-complexity irreducibility: superlinear derivation-length lower bound for `c_n` | 3 | **OPEN** | Precondition probe ran: Rule 30 GMUS is a near-constant 76-82% of the backward diamond, exponent 1.932, against Rule 90's exact odd-binomial set.  "The inverted outcome did NOT fire," and the result "is NOT evidence of a derivation-length lower bound".  The lower bound itself is unattempted. | `PATH.md` R9; `RESULTS-proof-complexity-probe.md` |
 | 10 | Arm 1: Lean 4 / evolutionary search aimed at a P1 proof | 1 | NOT RUN | Deliberately declined: "'Find a lemma' is not a pre-registerable target, so this arm gets no compute."  Formalizing Jen's theorem is permitted only as pipeline validation. | `PREREGISTRATION.md` Arm 1 |
 | 11 | Arm 2: search for the invariant measure giving density 1/2 | 2 | NOT RUN | Declined as discovery: the pathway is complete and lands one measure-zero step short — surjectivity gives uniform Bernoulli invariance and a.e. density 1/2, "an ergodic theorem says nothing about a measure-zero orbit". | `PREREGISTRATION.md` Arm 2 |
@@ -650,8 +650,24 @@ check of it themselves.
 | 71 | Settled-knowledge digest for downstream sessions | none/infra | INFRA | Read-only survey listing what is proved, what is dead, what is off-limits, and the pinned notation.  "Cite the source doc, not this file." | `overnight/CONTEXT-DIGEST.md` |
 | 72 | Zero-tail note: manuscript, figures, Lean and SMT certificates, venue path | none/infra | INFRA | Packaging for row 25, plus an independent hostile proof audit that found no critical or major issue.  **Rests on an unverified external premise:** Jen 1986 (*J. Stat. Phys.* 43, 219-242) is unread, and its abstract clause (ii) is load-bearing in both directions — if the characterization includes Rule 30 it contradicts the theorem, if it excludes Rule 30 the theorem is not novel.  "REQUIRED before circulation: read the original." | `paper/PUBLICATION-NOTES.md`; `paper/README.md`; `Rule30ZeroTail.lean`; `zero_tail_smt_certificate.py` |
 | 76 | S-adic decomposition + Morse-Hedlund factor complexity `p(n) > n` | 1 | **KILLED** | Still killed by obstruction H (any finite prefix leaves all sufficiently large `r+q` open), but the strength was **misstated on first merge and is corrected here**: Morse-Hedlund's *quantitative* form gives `p(n) <= r+q` for **every** `n`, so a single measured `p(n_0) = V` forces `r+q >= V`.  The exclusion is therefore `max_n p_hat(n) = N - L` (`L` = longest repeated factor, empirically `~2 log_2 N`) — **linear in prefix length, not bounded by `n_max`**.  The original 200,000-bit run had thus already excluded `r+q <= 199,966`, not `r+q <= 64` as first recorded (understated ~3,100x).  The `N - L` identity was proved and independently re-verified.  Relatedly, the followup's claim that this route is *strictly weaker* than direct inspection is also wrong: a repeated factor of length `L` at offset `q` **is** a period-`q` agreement running `L` positions, so the subword route executed optimally is the direct periodicity scan in different notation, not a weaker cousin.  Extended measurement: `p(n) > n` for all `n <= 64` on an 8,388,608-bit prefix (42x the prior), excluding `r+q <= 8,388,564`; generator bit-exact against OEIS A051023 (`10^5` bits) and Wolfram's own published million-bit center column (`10^6` bits).  Still ~119x below the prize announcement's `~10^9` exclusion, and pushing there is not worth it: the bound is linear in `N`, so no crossover exists (`10^9` = ~145 days locally, ~$150-500 cloud).  Originally proposed in `novel_frameworks/TRIAGE-novel-frameworks.md` (A4); `p(8)=256`, `p(16)=62377` reproduced across three independent implementations. | `novel_frameworks/TRIAGE-novel-frameworks.md` A4; `RESULTS-followup3-subword-complexity.md` (contains the same two errors in §2-§3); `RESULTS-subword-complexity-extended.md`; `experiments/rule30-subword-extended/` |
+| 91 | OpenEvolve LLM-driven evolutionary code search for a sub-quadratic `c(n)` | 3 | **NOT RUN (blocked)** | Harness built, pre-registered and previously verified, but the required sanity gate failed on re-verification: the constant-factor bit-packed control scored 0.9335 against its documented 0.210.  Diagnosed by interleaved A/B/A/B re-measurement rather than assumed: the wall-clock tail-exponent instrument does not resolve the difference it exists to detect at the smoke profile's `n <= 16000` on this machine.  The naive `O(n^2)` control -- algorithmically identical to the stored baseline -- scored 0.2667, 0.2957 and **0.7896** across three runs, i.e. the evaluator credited the baseline with beating itself by 0.41 exponent-units.  Candidate ranges overlap outright (naive 1.807-2.164, bit-packed 1.573-1.833 over six runs), and the pre-registered `+/-0.2-0.3` band is smaller than the instrument's scatter.  The ">= 3 independent runs" rule would not have caught this: it re-measures the candidate, not the baseline comparison.  Search not launched, no LLM call made, nothing tuned to force a pass.  Superseded as an instrument by row 92. | `RESULTS-openevolve-p3.md`; `experiments/openevolve-p3/` |
+| 92 | Deterministic fuel counter replacing the wall clock in the OpenEvolve P3 evaluator (the instrument row 91 was blocked on) | 3 | **INSTRUMENT VALIDATED, search not run** | Arm 3's wasmtime fuel meter (row 12) was read and rejected for reuse: WASM has only fixed-width ops so one instruction is genuinely `O(1)`, whereas OpenEvolve mutates Python where `row << 1` on a `(2n+3)`-bit int is one opcode doing `n` bits of work.  Built a new AST-rewriting word-RAM counter (`fuel.py`, `WORD_BITS = 30` = CPython's bignum digit) charging every variable-width operation proportionally and **denying by default** -- an unmodelled AST node, callable or import is a hard failure, not a silent charge of 1.  Charging raw bits instead of words was measured to inflate the naive control to 2.12-2.15 via a spurious `log n` on loop indices; the word model recovers **1.99946** at `r^2 = 0.9999999`.  All four pre-registered sanity candidates pass, against two failures under the wall clock: (a) **0.200000**, tail equal to the stored baseline in every printed digit, improvement exactly 0.0 (the clock had scored this same program 0.7896); (c) bit-packed **0.214234**, an 84x constant-factor win correctly rendered invisible to `combined_score`, against 0.9335 under the clock; (b), (d) 0.0.  Counts bit-identical across three separate processes for each of three candidates under load average 20.3-34.8 on 10 cores.  Validated against a **second** known exponent on 2026-08-31 (`PREREG-flat-opcode-ablation.md`, pre-registered strong outcome): a deliberately `Theta(n^3)` wide-operand candidate reads 2.97449 with slopes rising toward 3, so the instrument is not merely biased toward the 2 that every earlier test used.  In the same run a flat per-operation counter -- what `sys.settrace`, `cProfile` and a WASM meter each give free -- is wrong by a full exponent-unit on both discriminating candidates (0.99938 against 2, 1.99690 against 3), so proportional charging is load-bearing rather than decorative.  `evaluator.py`, `PREREGISTRATION.md` and `baseline_exponent.json` untouched -- a parallel evaluator importing the pre-registered scoring and gates rather than restating them.  **Not a claim about Rule 30**; no search launched, no LLM call.  Open before a search: the 4000-point ladder shortens the pre-registration's only above-`n=3000` anti-lookup-table check by 4x.  **Not publishable, checked 2026-08-31 and dropped:** a deterministic counter replacing wall-clock fitness in program search is prior art (Bouras, Hanna & Petke, SSBSE 2025; Cachegrind; EIP-2565 for proportional-width bignum charging), and the one slice with no prior art found -- that cost-model *granularity* changes the fitted exponent -- is a sentence, not a paper.  The instrument stands and its validation claims hold; only the publication claim is withdrawn.  Any future arm proposing to publish an instrument of this shape must first clear `LITCHECK-fuel-instrument.md`. | `RESULTS-openevolve-p3-fuel.md`; `LITCHECK-fuel-instrument.md`; `experiments/openevolve-p3/fuel.py`, `evaluator_fuel.py`, `test_fuel.py` |
+| 93 | Bounded exact circuit synthesis for the uniform succinct index `n -> c(n)` | 3 | **PROBED, bounded result, still OPEN** | First computation on the object `a22_p3_succinct_index` flagged GENUINELY OPEN and left unprobed.  Complete-within-bound SAT synthesis over the full `B2` two-input chain model, so an UNSAT at `k` is a theorem, not a failed search.  Obtained: `k_min(m=4) = 5` **unconditionally** (UNSAT at `k=4` confirmed by two independent solvers and reproduced with all optional symmetry breaks off; a five-gate chain produced and verified), `k_min(m=3) = 2`, and `k_min(m=5) >= 7` **conditional** on the distinct-fanin-pair symmetry break, validated exhaustively at `m=3` and directly at `m=4` but not at `m=5`.  The `m=5` upper bound `<= 12` is inherited from Knuth's `u(5)`, quoted and not verified locally, so the honest `m=5` statement is the bracket `7 <= k_min <= 12` with only the lower end earned here.  The pre-registered strong outcome (Rule 30 at or below the structured controls, or in the null's bottom decile, at both `m=4` and `m=5`) **did not fire**; the null occurred, and at `m <= 5` that is close to uninformative and must not be reported as "Rule 30 is incompressible".  **P3 is untouched** -- every number is one finite width, the same structural gap as obstruction H, and nothing here bears on computational irreducibility either way.  Stopped at the measured feasibility wall: `m=5, k=6` resolves in 357 s, `m=5, k=7` runs past 86 min unresolved in either direction, `m=6` is out of reach by orders of magnitude.  A future arm wanting `m=6` needs a different encoding (topology families, DAG-canonical symmetry breaking, distributed portfolio), not more patience.  Distinct from the rows obstruction I kills (9, 81, 85, 87), which refute the light-cone CNF with `n` pinned; here `n` is a free input and the informative answers are the UNSAT ones. | `RESULTS-bounded-circuit-synthesis.md`; `experiments/sygus-p3/` |
 
-73 rows (row 76 merged 2026-08-30 from `novel_frameworks/TRIAGE-novel-frameworks.md`; rows 73-75 of that proposal remain unmerged and out of scope here).
+76 rows.  Row 76 merged 2026-08-30 from `novel_frameworks/TRIAGE-novel-frameworks.md`; rows 73-75 of that proposal remain unmerged and out of scope here.  Rows 91-93 merged 2026-08-31.
+
+**Numbering, stated because the register is split across two files.**  Rows
+73-90 do **not** appear above: they live unmerged in
+`experiments/overnight-arms/frontier_attack/FINDINGS.md` section 3 ("New rows,
+numbering continuing from 72").  Section 9.5 below already cites that stream by
+number ("row 79", "row 82"), so it is the canonical one, and new rows are
+numbered after its ceiling of 90 -- hence 91-93 rather than the 77 and 78 the
+source documents originally proposed.  **There is one live collision**: this
+table's row 76 (S-adic / Morse-Hedlund subword complexity, from the TRIAGE
+stream's own numbering) and FINDINGS row 76 (row 41 `d`-uniform survivor
+invariant) are different attempts sharing a number.  Reconciling the two
+streams -- transplanting 18 rows and every cross-reference to them -- is a
+separate task and was deliberately not done here.
 
 ### 7.2 Code with no write-up
 
@@ -865,6 +881,8 @@ with real empirical output** that explicitly disclaims proving anything, and
 | Nersissian 2026 (Wolfram Community 3647733) | "Exact binomial-Lucas lifting" to integer coefficients, Stirling transfer, support-set algebra; claims `O(log n)` cell query via compressed support sets | **CLAIMED reformulation**, not a prize claim by its own text; unrefereed, not on arXiv.  Publicly states he submitted to the prize ~2026-01-17 and received no confirmation |
 | Brunnbauer 2019 (brunni.de/findings30) | Empirical diagonal-period search; claims necessary/sufficient condition for period doubling | **MEASURED**; self-describes as amateur, and diagonal periodicity was already proved by Rowland 2006 |
 | Ikram 2026 (OSF eph94/kybmz/z7wnp/k8t2e) | Finite-cone / trace-language compatibility reduction for P1, depth-tail reduction for P2, query-model reduction for P3 | **Reformulations, not resolutions**, self-described.  "bloxberg research certificates" timestamp a file hash; they are **not** peer review |
+| Fradkin, "Rule 30 Resolved: Synchronization, Uniform Cylinder Frequencies, and Unconditional Convergence from First Principles" (Zenodo concept DOI 10.5281/zenodo.17377539, **seven** versions; v1 = .17377540, 2025-10-17, 126pp) | Claims all three problems, seed-specifically, from left-permutivity plus `F_2` triangular backsolve of boundary bits along the light cone | **REFUTED 2026-08-31** against v1, read in full.  One error, three instances: the transfer is not ensemble-to-orbit but **nearby-configuration-to-seed**.  P1 constructs `y(0)(M)` agreeing with the seed on `[-M,M]` that violates period `p`, then asserts "locality implies the genuine seed center also violates period p" -- but the paper sets `M << n` and `t ~ n`, placing the violation outside the cone locality controls; continuity gives `c_y[t] -> c_seed[t]` for each **fixed** `t`, the opposite of what is claimed.  P2 Cesaro-glues balanced *boundary realizations*, again different configurations.  P3 proves worst-case-**over-inputs** bounds where P3 asks about one fixed input.  **Rule 90 substitution kills it**: the argument invokes only left-permutivity and `F_2` triangularity, both of which Rule 90 satisfies (more easily, being linear), so it would prove Rule 90's lone-seed column non-periodic with density 1/2 -- verified here to be `1,0,0,0,...`, eventually constant, density 0.  "Rule 90", "additive", "bipermutive", "XOR" appear nowhere in 126pp.  Internal contradiction: Part 9's **Conjecture 4.1** is Part 10's **Theorem 2.1**, and Part 9 says "This note does not claim a proof of seed half-frequency" against the deposit's "all claims are proved within the paper".  Three references (Hedlund, Lind-Marcus, Pivato); **no Wolfram**.  Its one falsifiable number is wrong-ish: `f_n` evasiveness at `2n+1` is unrefuted, but the ANF degree is exactly `2n-1` for `n=1..9`, matching `ARM4-frequency-domain.md`, so the degree argument does not supply it.  **Scope: the five 2026 bodies exceeded extraction limits and are assessed only via descriptions**, which weaken across versions and end in a self-disclaimer | `REFUTATION-fradkin-rule30-resolved.md` |
+| Topal 2026, "Transcendence of the Center Column Generating Function of Rule 30 and the Resolution of the Prize Problems" (Zenodo, DOI 10.5281/zenodo.21780750) | P1 via transcendence over `F_2(y)`: not 2-automatic => not algebraic (Christol) => not rational => not eventually periodic | **REFUTED 2026-08-31**, read in full.  Strategy is valid and the field is unambiguous; the load-bearing Theorem 2 opens by identifying `C(y^{2^k})` with the generating function of the decimation `(c_{2^k t})`.  That is the **dilation**, not the decimation -- Christol's 2-kernel needs the Cartier/section operator, and the Frobenius identity `C(y)^2 = C(y^2)` used instead holds for **every** series over `F_2`.  So the theorem actually proved is "`C^{2^k}` are pairwise distinct for `C` not in `{0,1}`", which is empty, and the argument equally "proves" the algebraic series `sum_j y^(2^j - 1)` transcendental.  Verified locally: decimation `1010100010011111` vs dilation `1010001010100000`.  **Neither empirical number reproduces** -- claimed 25,001 ones in 50,000 terms measures 25,095, claimed BM linear complexity 25,001 measures 24,999, and 25,001 is exactly `N/2+1` reported for both quantities.  P2 not attempted (paper concedes it); P3 circular (assumes an `Omega(n)`-secure PRG to conclude an `Omega(n)` bound).  **The `F_2(y)` route itself is NOT discredited -- only this execution of it** | `REFUTATION-topal-transcendence.md` |
 
 ### 8.2 P2 — equidistribution
 
@@ -919,6 +937,7 @@ published center-column dataset is `10^9`.
 | Silvasi & Tomasek 2020, *SCP* 195:102471 | Lean formalization of bounded grids and computable CA | Infrastructure only, **no theorem about any specific rule** |
 | — | Jen 1990 Prop. 3 or Kopra Thm 3.5 in Lean/Coq/Isabelle/Mizar | **NONE.**  AFP topic index, Mathlib, Coq and Mizar all checked 2026-08-30.  The width-2 aperiodicity theorem has never been mechanized |
 | Zenil 2010/2018; Zenil et al. 2015 | Compression-based and BDM classification of CA | Aggregate complexity per rule, summed over blocks.  **No spatially resolved `C(x,t)` map of Rule 30 exists.**  Matches R6 |
+| FunSearch (Romera-Paredes et al., *Nature* 2024); AlphaEvolve (arXiv:2506.13131, and Georgiev, Gomez-Serrano, Tao & Wagner, arXiv:2511.02864); OpenEvolve; ShinkaEvolve (arXiv:2509.19349); AlgoTune (arXiv:2507.15887) | LLM-driven evolutionary code search that has produced genuine new mathematical constructions and faster kernels | **Never pointed at Rule 30, at any elementary CA, or at any integer-sequence problem.**  FunSearch's five problems (cap set, admissible sets, online bin packing, the corners problem, Shannon capacity of cycle graphs) and AlphaEvolve's 13 detailed problems plus 4 infrastructure targets (Borg scheduling, Gemini matmul kernels, TPU arithmetic circuits, FlashAttention in XLA) are all extremal combinatorics, geometry, analysis or systems.  See 8.6 for the exact strength of this negative |
 
 ### 8.5 Code, data and community
 
@@ -1100,6 +1119,33 @@ viXra, figshare and non-English forums were not searched.  Three abstracts
 (Maiti et al. 2017, Sur & RoyChowdhury 2023, Bao 2003) and several full texts
 were unobtainable.
 
+**Strength of the LLM-code-evolution negative in 8.4 (checked 2026-08-31).**
+Item-level verified for FunSearch's five problems and AlphaEvolve's 13 detailed
+problems plus 4 infrastructure targets.  **Category-level only** for
+AlphaEvolve's remaining ~54: arXiv:2511.02864 gives the four subject categories
+(analysis, combinatorics, geometry, number theory) but all 67 titles were not
+read.  Two independent bibliographic indexes return literal zero for the
+conjunction (arXiv API `all:"rule 30" AND all:"large language model"`;
+OpenAlex `title_and_abstract.search`), and OpenEvolve's 21 shipped examples
+contain no CA.  **Two blind spots:** arXiv's `all:` field is metadata-only, so a
+system applied to Rule 30 in a paper's body but not its title or abstract is
+invisible; and GitHub's code-search API returns 401 unauthenticated, so no
+code-search absence claim is available at all.  The defensible phrasing is
+therefore *"no published LLM-driven code-evolution system reports being applied
+to Rule 30 or to elementary cellular automata"*, not *"none has been"*.
+
+**One adjacent result worth knowing.**  O'Malley et al. (Los Alamos),
+arXiv:2411.04372, has 21 LLMs write Python computing the first `N` terms of
+1000 OEIS sequences, lookup tables prohibited and detected at 95% accuracy.  It
+is one-shot rather than evolutionary, pass/fail under a `0.5 s` or `4 s`
+timeout rather than a speed objective, and has **no asymptotics** -- no scaling
+sweep, no fitted exponent -- and its sequence set contains no CA.  Its own
+finding that changing the timeout threshold changes the model ranking is an
+independent data point for row 92's instrument argument.  **The combination row
+91 attempts -- an LLM evolutionary harness searching for an asymptotically
+faster program for one fixed integer sequence, scored on a fitted complexity
+exponent -- was not found in this search.**
+
 ### 8.7 Why external attempts stopped: four transfer barriers
 
 These recur across the entire external corpus and should be checked against
@@ -1129,6 +1175,25 @@ measure-zero single-orbit gap in 7.3.**
 circuit lower bounds are structurally dead because a fixed sequence has `O(1)`
 circuit complexity per bit by hardwiring.  Kills: Sur-RoyChowdhury, Vuckovac,
 and every circuit-complexity route.
+
+*Uniform vs non-uniform, made explicit (added 2026-08-31).*  T4's hardwiring
+argument is about the **non-uniform** object: the circuit that outputs `c_n` for
+one fixed `n`, which is `O(1)` by construction and therefore carries no
+information.  It does **not** cover the **uniform succinct index** `f_m: n -> c(n)`
+for all `n < 2^m`, where `n` is a free binary input and hardwiring is
+unavailable.  `a22_p3_succinct_index` observed that the register "does not
+currently draw anywhere" between the two; row 93 is the first computation on the
+uniform side.  That side is not killed by T4 -- but it is not a route to P3
+either, for the separate reason that every result on it is a statement about one
+finite width (obstruction H in form).
+
+*Feasibility fact for future arms (added 2026-08-31, from row 93).*  Complete
+exact `B2` chain synthesis with a per-gate CNF encoding resolves everything up
+to `m = 5, k = 6` (357 s) and nothing beyond: `m = 5, k = 7` runs past 86
+minutes unresolved in either direction, and `m = 6` is unreachable by orders of
+magnitude.  An arm wanting `m = 6` needs a different encoding (topology
+families, DAG-canonical symmetry breaking, distributed portfolio), not more
+patience.
 
 **Consequence for P3.**  What stopped people was not inattention but a
 technique gap: P3 asks for an unconditional superlinear *work* lower bound on a
@@ -1207,7 +1272,7 @@ statement about the method (arm a7), not about P1.
 |---|---|---|---|
 | 1 | OPEN | OPEN, sharpened | No proof of R1 can be rule-generic: Rule 90's zero-set kill condition fires verbatim (`r_t=1` iff `t=2^j-1`, unbounded gaps). Three independent encodings (a1 Lemma Z, a2's missing lemma, a7's `Diff_q` gap) converge on the same missing statement about `s(t,1)` on the zero set. |
 | 7 | STALLED | mode (i) closed | The phase slip extends to a full half-plane: `plain_{R,k}(w)` nonempty for every `R,k,w`. Mode (i) can never return EMPTY at any depth. Mode (ii) untouched. |
-| 8 | OPEN | conditional | Checkerboard is a proved Rule 30 temporal fixed point; if in `Y`, R8's target fails. Proved for Rule 90 (Kummer, exact). For Rule 30, conditional on unbounded patch growth, measured only to `K=6` at `T=2e6`. |
+| 8 | OPEN | conditional | Checkerboard is a proved Rule 30 temporal fixed point; if in `Y`, R8's target fails. Proved for Rule 90 (Kummer, exact). For Rule 30, conditional on unbounded patch growth. Measured to `T = 2^24` (`a25`), 8.4x row 79's horizon, with the diagonal `K` replaced by an occurrence-rate statistic: `log2` rate is linear in patch height with slope matching the reference per-row cost to sub-percent precision, no rate decline in any cell across 32 disjoint time windows, and the deepest measured patches still occurring in the final window. The condition is **not discharged** -- unbounded growth is asymptotic and no finite horizon proves it (obstruction H in form) -- but the finite-horizon evidence for it is now quantitative rather than a plateau reading. Cross-implementation gate: the C kernel is bit-exact against a3's independent numpy kernel over all 8,000,000 rows, i.e. to 2x row 79's horizon; above `T = 8e6` the only check is internal (NEON vs scalar build). |
 | 9 | OPEN | KILLED | Resolution length capped at `Theta(n^2)` (exhaustive construction); PC degree is `O(1)`; see obstruction I. |
 | 46 | OPEN | OPEN, ladder question closed | The generic induction-on-rungs route is closed (Theorem N: the ladder is strict at every level, witness `G_n` for every `n` -- which is Bridy's own Example 2.15, arXiv:1604.08241v2, published 2016, not novel). No polynomial-in-state-count Ore-height bound exists (Bridy's `k*2^(k+1)`, exact worked example `y=x^n` gives height `n` -- exponential in state count, unconditionally). Quantified wall: excludes only `k<=7`-state 2-automatic sequences at this tree's own `N=32000`, `k<=20` at Wolfram's `10^9`-bit check. A specific-sequence uniformity argument for A051023 is still open; that question is separate from the ladder question and is not closed. |
 
@@ -1220,7 +1285,17 @@ left-supported rows (which include the lone seed) it proved: bounded-window
 Bayes error for predicting `r_t` from a width-`m` window of `c`-history
 stabilizes exactly at `t=2m+1` (Theorem S) and is strictly positive at every
 finite `m` (Theorem W) -- bounded-window closure fails unconditionally.
-Exact values `eps_30(1)=1/4` down to `0.17331` at `m=16`, against
+Exact values `eps_30(1)=1/4` down to `0.16629` at `m=27` (arm `a25`, which also
+reproduced `m=1..16` independently and cut the cost from `m*2^(2m+1)` to
+`m*2^(m+2)` by removing the outer loop over boundary windows; see
+`RESULTS-eps30-extended.md`).  Symbolic regression on the 27 exact values
+yields `0.14246 + 0.12345/m^(1/2)` as a held-out-validated fit, but a
+limit-**zero** family `b/(log m)^p` passes the same held-out test, so the limit
+remains **undetermined** -- which changes nothing, since the question is not a
+route to P1 either way (see the flag at the end of this section).  *Naming
+caution:* `eps_30` as used here is this repo's notation and **collides with a
+different `eps(m)` defined for Rule 30 in arXiv:2604.00165 (2026)**; any
+write-up must rename before publication.  Against
 `eps_90(m)=1/2` exactly at every `m` (Rule 90's recent window carries zero
 information about `r_t`; Rule 30's carries up to 83%, never all of it).
 The named missing piece: proving `eps(m)>0`, established on the ENSEMBLE of
@@ -1253,11 +1328,20 @@ the ensemble value; the large-`m` divergence that remains (m=14, m=16) is a
 reproducible estimator artifact (present identically in the ensemble control
 with no orbit involved), not orbit atypicality.  Obstruction E stays open —
 this is a null result on the first direct probe of it, not a resolution.  `a22_p2_checkerboard_growth` extended
-row 79's horizon 2x and found no rescue (one family's diagonal `K` flat,
-two still growing, within the same fluctuation band as before) plus a
-structural defect-propagation probe ruling out the simplest bounded-soliton
-rescue mechanism without proving unbounded growth in the actual diagram; net
-INCONCLUSIVE, consistent with row 79's conditional verdict.  The remaining
+row 79's horizon 2x and reported one family's diagonal `K` flat and two
+growing, net INCONCLUSIVE.  **Superseded 2026-08-31 by `a25`**, which
+reproduced that measurement bit-exactly and then showed the INCONCLUSIVE was an
+artefact of the statistic: `K` advances by one unit per 8x in `T` (a3's own
+reference law -- a3's "`K=20` needs `T ~ 2^60`" is the same statement), so `K`
+is flat across 10 of every 13 dyadic doublings *while growing*, and a single
+doubling carries almost no information.  Replacing the extreme-value statistic
+with an occurrence-rate statistic on the same band and extending to `T = 2^24`
+resolves the direction for all three families.  `K` itself is shown to be
+undecidable in practice: separating it from flat needs `T ~ 9e9`, about 50
+core-years.  a22's structural defect-propagation probe, which ruled out the
+simplest bounded-soliton rescue mechanism without proving unbounded growth in
+the actual diagram, stands unchanged.  Row 79's verdict stays conditional; see
+row 8 in 9.3 and `RESULTS-checkerboard-growth-extended.md`.  The remaining
 five arms (row 46 specific-sequence route, row 41 alternative strategy, row
 82 soficness push, R7 mode (ii), and a Tier-3 literature check on succinct
 circuit complexity of `n -> c_n`) each returned a clean negative, a stated

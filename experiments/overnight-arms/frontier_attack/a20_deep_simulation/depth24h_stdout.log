@@ -1,0 +1,14 @@
+{
+  "t_reached": 33464991,
+  "ones": 16739387,
+  "zeros": 16725604,
+  "ratio": 1.0008240659051835,
+  "density": 0.5002059316256801,
+  "elapsed_s": 86400.00120973587,
+  "rate_steps_per_s": 387.3262792990452,
+  "row_bit_length": 101843165,
+  "bits_flushed_to_disk": 33464991,
+  "bytes_written": 4183124,
+  "sha256_of_flushed_prefix": "a10072bb2972d4b0fbc58c7eba9ab317b6a489910ce9e0ea6d07a37b19d34849",
+  "gate_ok": true
+}

@@ -1,0 +1,56 @@
+{
+  "fuel_wide": {
+    "source": "initial_program.py",
+    "instrument": "fuel.py word-RAM counter",
+    "word_bits": 30,
+    "scaling_ns_config": [
+      250,
+      500,
+      1000,
+      2000,
+      4000
+    ],
+    "usable_ns": [
+      250,
+      500,
+      1000,
+      2000,
+      4000
+    ],
+    "fuels": [
+      1760513,
+      7021013,
+      28042013,
+      112084013,
+      448168013
+    ],
+    "tail_exponent": 1.999459168018799,
+    "exponent": 1.9980557491284225,
+    "r2": 0.9999998600615513,
+    "tail_consistency": 0.0005404749331154868,
+    "window_exponents": [
+      {
+        "from": 250,
+        "to": 500,
+        "slope": 1.9956833188767718
+      },
+      {
+        "from": 500,
+        "to": 1000,
+        "slope": 1.997838812745355
+      },
+      {
+        "from": 1000,
+        "to": 2000,
+        "slope": 1.9989186930856835
+      },
+      {
+        "from": 2000,
+        "to": 4000,
+        "slope": 1.999459168018799
+      }
+    ],
+    "dropped": [],
+    "repeats": 1
+  }
+}

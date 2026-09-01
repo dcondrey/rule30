@@ -1,0 +1,92 @@
+# Full-search config for the Rule 30 P3 OpenEvolve attack.
+# Companion to config_smoke.yaml; see PREREGISTRATION.md, which is
+# authoritative. Nothing here changes the evaluator or the scoring.
+#
+# NOT YET EXECUTED. Written 2026-08-31; the run was blocked because
+# run_sanity_tests.py failed re-verification under machine load (the
+# constant-factor bit-packed control scored 0.93 against its documented
+# 0.21). See docs/rule30/RESULTS-openevolve-p3.md. Launch this unchanged
+# once the sanity gate passes on a quiet machine.
+#
+# PROFILE: launch with RULE30_P3_PROFILE=smoke (run_full.sh exports it so
+# the evaluation worker processes inherit it). NOT "tiny" -- its exponents
+# are explicitly untrustworthy and it has no entry in
+# baseline_exponent.json, so _load_baseline_exponent() silently falls back
+# to 2.0 (that is why the smoke run's 0.3499 "best" is an artifact of the
+# unmutated seed, not a result). NOT "full" either -- n up to 64000 with
+# repeats=5 would need a fresh multi-hour baseline measurement of the pure
+# Python O(n^2) simulator first, and one slow candidate would eat the
+# entire wall-clock ceiling. "smoke" is the only profile that is both
+# validated against the sanity candidates and has a measured baseline
+# (tail_exponent 2.2147).
+
+# Iteration cap, derived rather than guessed. Measured on this machine:
+# one evaluation of the naive O(n^2) seed under the smoke profile is
+# ~8 min (33 correctness calls at n<=3000, plus 4 scaling points x 3 calls
+# at n up to 16000); a bit-packed-class candidate is ~1.5 min. A mixed
+# population averages roughly 4-5 min/eval, so a 6h ceiling buys ~75-90
+# evaluations. The cap is set just above that so the WALL CLOCK, not this
+# number, is the binding constraint -- but it is a real cap, not a
+# placeholder. Re-derive it if the machine changes.
+max_iterations: 100
+
+# Frequent enough that the watchdog's kill always leaves a usable state.
+checkpoint_interval: 5
+random_seed: 42
+
+diff_based_evolution: true
+max_code_length: 8000
+
+llm:
+  models:
+    - name: "deepseek/deepseek-chat-v3.1"
+      weight: 0.7
+    - name: "openai/gpt-4o-mini"
+      weight: 0.3
+  api_base: "https://openrouter.ai/api/v1"
+  api_key: ${OPENROUTER_API_KEY}
+  temperature: 0.8
+  max_tokens: 4096
+  timeout: 90
+  retries: 2
+
+prompt:
+  system_message: >
+    You are helping test whether Rule 30's center-column value c(n) can be
+    computed asymptotically faster than direct O(n^2) cellular-automaton
+    simulation (Wolfram's open P3 problem). You are editing
+    center_cell(n) -> int. It MUST remain exactly correct -- any wrong
+    answer for any n scores zero, full stop, no partial credit. Do not use
+    lookup tables, hardcoded answers, or precomputed literals of any kind;
+    they are detected and disqualified. Try genuine algorithmic
+    restructurings: bit-level parallelism, algebraic/number-theoretic
+    structure in the update rule, memoized substructure, matrix/transducer
+    formulations, or anything else that could reduce the asymptotic number
+    of operations needed, not just make the same O(n^2) computation faster
+    in wall-clock terms.
+
+database:
+  # Modest population: with ~80 evaluations available, a large archive
+  # never gets sampled and islands never get the generations they need to
+  # pay off, so num_islands stays at 1.
+  population_size: 24
+  archive_size: 12
+  num_islands: 1
+  elite_selection_ratio: 0.2
+  exploitation_ratio: 0.7
+  feature_dimensions: ["complexity", "diversity"]
+  feature_bins: 6
+
+evaluator:
+  # Worst case a candidate can legitimately consume under the smoke
+  # profile is ~47 min (4 scaling points x 3 calls x 180s per_call_timeout,
+  # plus 33 correctness calls x 20s CORRECTNESS_TIMEOUT). 30 min is ~4x
+  # headroom over the measured ~8 min seed while capping a pathological
+  # candidate at a bounded slice of the 6h ceiling.
+  timeout: 1800
+  cascade_evaluation: false
+  # MUST stay 1. The fitness signal IS a timing measurement; concurrent
+  # evaluations contend for CPU and inflate exponent variance, which is
+  # the one thing this experiment cannot tolerate.
+  parallel_evaluations: 1
+  use_llm_feedback: false

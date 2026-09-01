@@ -28,7 +28,23 @@ import sys
 import time
 
 sys.path.insert(0, __file__.rsplit("/", 2)[0] + "/rule30")
-from center_column import center_column  # noqa: E402  (read-only import)
+from center_column import center_column as center_column_slow  # noqa: E402
+
+A3 = __file__.rsplit("/", 3)[0] + "/experiments/overnight-arms/frontier_attack/a3_p2_orbit_closure"
+sys.path.insert(0, A3)
+from band_census import _band_series  # noqa: E402  (read-only import, bit-packed O(n^2/64) kernel)
+
+
+def center_column(steps: int) -> bytes:
+    """Fast center column via a3's bit-packed uint64 kernel (same Theta(n^2)
+    shape as the pinned ground truth -- no known sub-quadratic algorithm
+    exists, that is literally Prize Problem 3 -- but ~64x better constant
+    from word-parallel shifts instead of a single growing Python bignum).
+    Cross-checked against the pinned `center_column_slow` in `validate()`
+    before ever being trusted for a large run.
+    """
+    band = _band_series("30", steps, wmax=1)
+    return bytes(int(code >> 1) & 1 for code in band)
 
 
 def thue_morse(length: int) -> bytes:
@@ -75,7 +91,12 @@ def rolling_pk_curve(seq: bytes, ks: list[int], checkpoints: list[int]) -> dict[
 
 def validate(max_check: int = 5000) -> bool:
     ok = True
-    for name, seq in (("rule30", center_column(max_check)), ("thue_morse", thue_morse(max_check))):
+    fast = center_column(max_check)
+    slow = center_column_slow(max_check)
+    mism = sum(1 for a, b in zip(fast, slow) if a != b)
+    print(f"validate[fast-vs-pinned-ground-truth]: n={max_check}, mismatches={mism}")
+    ok = ok and mism == 0
+    for name, seq in (("rule30", fast), ("thue_morse", thue_morse(max_check))):
         for k in (5, 9, 13):
             brute = brute_force_complexity(seq, k)
             curve = rolling_pk_curve(seq, [k], [max_check])[k][0]

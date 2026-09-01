@@ -357,13 +357,18 @@ harness are reusable for any other sequence someone wants to put the same
 question to; and the object `a22_p3_succinct_index` flagged as open has now had
 its first computation, with a result rather than a plan.
 
-## 8. Suggested register additions (not applied -- PATH.md untouched)
-
-For the user to accept or reject:
+## 8. Register additions (merged 2026-08-31)
 
 1. A row recording the uniform succinct-index question as *probed, bounded
    result obtained, still open* -- distinct from the rows obstruction I kills
-   (9, 81, 85, 87) and from T4's non-uniform territory.
+   (9, 81, 85, 87) and from T4's non-uniform territory.  Merged as **row 93**
+   (the register ran to 90; 91 and 92 went to the two OpenEvolve rows merged the
+   same day.  See the numbering note in `RESULTS-openevolve-p3.md` section 7):
+
+| # | Approach | Prize | Status | Why it stopped | Where |
+|---|---|---|---|---|---|
+| 93 | Bounded exact circuit synthesis for the uniform succinct index `n -> c(n)` | 3 | **PROBED, bounded result, still OPEN** | First computation on the object `a22_p3_succinct_index` flagged GENUINELY OPEN and left unprobed. Complete-within-bound SAT synthesis over the full `B2` two-input chain model, so an UNSAT at `k` is a theorem, not a failed search. Obtained: `k_min(m=4) = 5` **unconditionally** (UNSAT at `k=4` confirmed by two independent solvers and reproduced with all optional symmetry breaks off; five-gate chain produced and verified), `k_min(m=3) = 2`, and `k_min(m=5) >= 7` **conditional** on the distinct-fanin-pair symmetry break, which is validated exhaustively at `m=3` and directly at `m=4` but not at `m=5`. The `m=5` upper bound `<= 12` is inherited from Knuth's `u(5)`, quoted and not verified locally, so the honest `m=5` statement is the bracket `7 <= k_min <= 12` with only the lower end earned here. The pre-registered strong outcome (Rule 30 at or below the structured controls, or in the null's bottom decile, at both `m=4` and `m=5`) **did not fire**; the null occurred, and at `m <= 5` that is close to uninformative and must not be reported as "Rule 30 is incompressible". **P3 is untouched**: every number is one finite width, the same structural gap as obstruction H, and nothing here bears on computational irreducibility either way. Stopped at the measured feasibility wall, not by choice: `m=5, k=6` resolves in 357 s, `m=5, k=7` runs past 86 min unresolved in either direction, and `m=6` is out of reach by orders of magnitude. A future arm wanting `m=6` needs a different encoding (topology families, DAG-canonical symmetry breaking, distributed portfolio), not more patience. | `RESULTS-bounded-circuit-synthesis.md`; `experiments/sygus-p3/` |
+
 2. A note under 8.7 making explicit the uniform vs non-uniform distinction that
    `a22_p3_succinct_index` observed "the register does not currently draw
    anywhere."

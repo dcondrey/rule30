@@ -1,0 +1,47 @@
+{
+  "machine": "Apple M4, 10 cores, 32 GiB unified memory, macOS (Darwin 25.5.0)",
+  "compiler": "Apple clang, -O3 (-march=native where accepted)",
+  "note": "All generators produce bit-identical output; see verify.py and the cmp checks in the write-up. Times are single-threaded wall clock. Generation is Theta(N^2) in cell updates, /64 by bit packing.",
+  "variants": {
+    "gen30.c": "scalar, in-place, descending word walk (one row buffer)",
+    "gen30v2.c": "scalar, double-buffered, ascending, __restrict (autovectorization attempt)",
+    "gen30v3.c": "NEON 128-bit, in-place, descending, no unroll",
+    "gen30v4.c": "NEON 128-bit, in-place, descending, 4x unrolled -- FASTEST, used for the long run"
+  },
+  "wall_clock_seconds": [
+    {"N": 100001, "gen30": 0.076, "gen30v2": 0.060, "gen30v3": 0.078, "gen30v4": 0.070},
+    {"N": 200000, "gen30": 0.281},
+    {"N": 1000000, "gen30": 7.103, "gen30v2": 16.055, "gen30v3": 7.326},
+    {"N": 3000000, "gen30": 75.390, "gen30v2": 88.016, "gen30v3": 77.292, "gen30v4": 64.197}
+  ],
+  "findings": [
+    "Double-buffering (v2) is 2.3x SLOWER at N=1e6 than in-place: the extra write stream costs more than the removed loop-carried dependence buys.",
+    "Plain NEON (v3) is a wash vs scalar (77.3s vs 75.4s at N=3e6); the scalar loop was already issue-bound, not width-bound.",
+    "NEON + 4x unroll (v4) gives 1.17x over scalar (64.2s vs 75.4s at N=3e6). That is the whole vectorization payoff; the kernel is load/store-port bound.",
+    "Measured steady-state throughput ~1.9e9 64-bit word updates/sec/core, i.e. ~1.2e11 cell updates/sec/core."
+  ],
+  "cost_model": {
+    "form": "T(N) = N^2 / (2K) seconds, K = (instantaneous steps/sec) * t",
+    "K_measured_by_t": {"2e6": 6.8e10, "3e6": 7.3e10, "4e6": 5.3e10, "5e6": 4.8e10, "6e6": 4.3e10, "8e6": 3.4e10},
+    "K_note": "K is NOT constant: it falls steadily as the row outgrows cache. The pure N^2 model with a fixed K underestimates cost.",
+    "measured_wall_clock_in_run": {"1e6": 9.4, "2e6": 38.7, "3e6": 79.6, "4e6": 155.3, "5e6": 259.2, "6e6": 398.8, "8e6": 794.6},
+    "measured_local_exponent": 2.4,
+    "measured_local_exponent_note": "T ~ N^2.4 over 3e6..8e6 (cache transition), vs the asymptotic N^2.0 of the work itself. Expect relaxation toward 2.0 once fully bandwidth-bound.",
+    "projected_wall_clock_single_core": {
+      "1e7": "~16-20 min",
+      "1.7e7": "~80 min",
+      "2.5e7": "~3.5 h",
+      "1e8": "1.5 to 4 days (range spans exponent 2.0 to 2.4)",
+      "1e9": "~145 days at exponent 2.0 from the 8e6 anchor"
+    },
+    "memory_bandwidth_floor": {
+      "total_bytes_touched": "N^2/4 (in-place: read+write the whole row every step)",
+      "N_1e9_bytes": 2.5e17,
+      "M4_bandwidth_GBps": 120,
+      "floor_seconds": 2.08e6,
+      "floor_days": 24,
+      "single_core_bandwidth_note": "A single core cannot saturate 120 GB/s; at a realistic 40 GB/s the single-core bandwidth floor alone is ~72 days for N=1e9, consistent with the ~145-day compute projection.",
+      "meaning": "Even with perfect use of all 10 cores, this machine cannot reach 1e9 in under ~24 days. Multicore does not rescue 1e9 locally."
+    }
+  }
+}

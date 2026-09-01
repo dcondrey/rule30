@@ -1,0 +1,17 @@
+
+=== a_correct (expect: correct, flat ~0.2 credit) ===
+metrics: {'combined_score': 0.2956566188638435, 'correctness': 1.0, 'measured_tail_exponent': 1.928859695723107, 'measured_global_exponent': 2.1473801627449722, 'fit_r2': 0.9965600779841739, 'tail_consistency': 0.43704093404373556, 'baseline_tail_exponent': 2.2147204506430564}
+artifacts: {'profile': 'smoke', 'scaling_usable_ns': [2000, 4000, 8000], 'scaling_dropped': [(16000, 'timing call failed: ')], 'literal_findings': [], 'speedup_note': 'largest usable n = 8000; see const_log for the fitted constant term', 'note': 'combined_score rewards EXPONENT improvement over baseline_exponent only; a same-exponent constant-factor speedup scores ~0.2 regardless of how much faster it is.'}
+
+=== b_wrong (expect: 0.0) ===
+metrics: {'combined_score': 0.0, 'error': 'failed evolve-set correctness: n=15: got 0, expected 1'}
+artifacts: {'error_type': 'CorrectnessFailure', 'gate': 'evolve', 'detail': 'n=15: got 0, expected 1'}
+
+=== c_bitpacked (expect: correct, flat ~0.2 credit, NOT exponent-band) ===
+metrics: {'combined_score': 0.9334919264985382, 'correctness': 1.0, 'measured_tail_exponent': 1.6923292663499487, 'measured_global_exponent': 1.6718395963495485, 'fit_r2': 0.9995753685238774, 'tail_consistency': 0.041372798392805166, 'baseline_tail_exponent': 2.2147204506430564}
+artifacts: {'profile': 'smoke', 'scaling_usable_ns': [2000, 4000, 8000, 16000], 'scaling_dropped': [], 'literal_findings': [], 'speedup_note': 'largest usable n = 16000; see const_log for the fitted constant term', 'note': 'combined_score rewards EXPONENT improvement over baseline_exponent only; a same-exponent constant-factor speedup scores ~0.2 regardless of how much faster it is.'}
+
+=== d_lookup_table [bonus] (expect: 0.0) ===
+metrics: {'combined_score': 0.0, 'error': 'failed evolve-set correctness: n=157: got 1, expected 0'}
+artifacts: {'error_type': 'CorrectnessFailure', 'gate': 'evolve', 'detail': 'n=157: got 1, expected 0'}
+RULE30_P3_PROFILE=smoke ./vendor/openevolve/.venv/bin/python   206.60s user 2.61s system 34% cpu 10:08.74 total

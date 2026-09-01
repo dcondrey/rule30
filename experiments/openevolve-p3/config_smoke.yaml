@@ -1,0 +1,60 @@
+# Smoke-test config: a handful of generations to prove the OpenEvolve loop
+# runs end to end against our evaluator, NOT a real search. See
+# PREREGISTRATION.md for the real-run plan (config_full.yaml, not yet
+# written -- do not build it until this smoke test is reviewed).
+#
+# Run with RULE30_P3_PROFILE=tiny so each candidate evaluation is seconds,
+# not minutes -- "tiny" only proves the mechanism works end to end (LLM
+# proposes a diff, evaluator scores it, feedback loops, checkpoints save).
+# Its exponent numbers are NOT meaningful (see evaluator.py PROFILES
+# comment); exponent-measurement correctness was already validated
+# separately via run_sanity_tests.py using the "smoke" profile.
+max_iterations: 4
+checkpoint_interval: 2
+random_seed: 42
+
+diff_based_evolution: true
+max_code_length: 8000
+
+llm:
+  models:
+    - name: "deepseek/deepseek-chat-v3.1"
+      weight: 0.7
+    - name: "openai/gpt-4o-mini"
+      weight: 0.3
+  api_base: "https://openrouter.ai/api/v1"
+  api_key: ${OPENROUTER_API_KEY}
+  temperature: 0.8
+  max_tokens: 4096
+  timeout: 90
+  retries: 2
+
+prompt:
+  system_message: >
+    You are helping test whether Rule 30's center-column value c(n) can be
+    computed asymptotically faster than direct O(n^2) cellular-automaton
+    simulation (Wolfram's open P3 problem). You are editing
+    center_cell(n) -> int. It MUST remain exactly correct -- any wrong
+    answer for any n scores zero, full stop, no partial credit. Do not use
+    lookup tables, hardcoded answers, or precomputed literals of any kind;
+    they are detected and disqualified. Try genuine algorithmic
+    restructurings: bit-level parallelism, algebraic/number-theoretic
+    structure in the update rule, memoized substructure, matrix/transducer
+    formulations, or anything else that could reduce the asymptotic number
+    of operations needed, not just make the same O(n^2) computation faster
+    in wall-clock terms.
+
+database:
+  population_size: 6
+  archive_size: 4
+  num_islands: 1
+  elite_selection_ratio: 0.2
+  exploitation_ratio: 0.7
+  feature_dimensions: ["complexity", "diversity"]
+  feature_bins: 4
+
+evaluator:
+  timeout: 120
+  cascade_evaluation: false
+  parallel_evaluations: 1
+  use_llm_feedback: false

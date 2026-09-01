@@ -1,0 +1,25 @@
+=== load before ===
+13:07  up 15 days, 15:28, 6 users, load averages: 21.24 20.31 26.56
+a_correct: 3 separate processes, bit-identical = True
+    n=  250  fuel=     1,760,513  c(n)=0  distinct values across runs = 1
+    n=  500  fuel=     7,021,013  c(n)=0  distinct values across runs = 1
+    n= 1000  fuel=    28,042,013  c(n)=0  distinct values across runs = 1
+    n= 2000  fuel=   112,084,013  c(n)=1  distinct values across runs = 1
+    n= 4000  fuel=   448,168,013  c(n)=1  distinct values across runs = 1
+c_bitpacked: 3 separate processes, bit-identical = True
+    n=  250  fuel=        21,874  c(n)=0  distinct values across runs = 1
+    n=  500  fuel=        85,745  c(n)=0  distinct values across runs = 1
+    n= 1000  fuel=       337,474  c(n)=0  distinct values across runs = 1
+    n= 2000  fuel=     1,342,945  c(n)=1  distinct values across runs = 1
+    n= 4000  fuel=     5,349,874  c(n)=1  distinct values across runs = 1
+seed_initial_program: 3 separate processes, bit-identical = True
+    n=  250  fuel=     1,760,513  c(n)=0  distinct values across runs = 1
+    n=  500  fuel=     7,021,013  c(n)=0  distinct values across runs = 1
+    n= 1000  fuel=    28,042,013  c(n)=0  distinct values across runs = 1
+    n= 2000  fuel=   112,084,013  c(n)=1  distinct values across runs = 1
+    n= 4000  fuel=   448,168,013  c(n)=1  distinct values across runs = 1
+
+ALL BIT-IDENTICAL
+exit=0
+=== load after ===
+13:38  up 15 days, 15:59, 7 users, load averages: 23.92 34.63 34.77

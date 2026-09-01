@@ -77,12 +77,15 @@ Semantics are unchanged from a3 — same internal frame `b_t(i) = s(t, i-t)`,
 same update `b <- (b<<2) ^ ((b<<1) | b)`; the only difference is one fused pass
 over the live prefix instead of numpy's six separate array passes.
 
-**Scope of that gate, stated plainly:** the cross-implementation check sits at
-`T = 4e6`, i.e. at a22's horizon, while every number in sections 5 and 6 comes
-from C-kernel output *above* it.  In that regime the only validation is
-internal (NEON build vs scalar build, bit-identical).  The independent numpy
-regeneration at `T = 8e6` that would have closed this did not finish — see
-section 9.
+**Scope of that gate:** the first cross-implementation check sits at `T = 4e6`,
+i.e. at a22's horizon, while every number in sections 5 and 6 comes from
+C-kernel output *above* it.  That gap is now closed: an independent numpy
+regeneration to `T = 8,000,000` (`gen_band.py`, a3's kernel, 9,225 s) is
+**bit-exact against the C kernel's `2^23` checkpoint over all 8,000,000 rows**
+(`crosscheck_numpy_8e6.txt`: `PASS n=8000000 c=8388608 npy=8000000`).  So the
+cross-implementation gate now sits at 2x a22's horizon, and a kernel defect
+biting anywhere in `(4e6, 8e6]` would have fired it.  Above `8e6` the only
+validation remains internal (NEON build vs scalar build, bit-identical).
 
 ## 2. Cost curve and horizon reached
 
@@ -362,7 +365,13 @@ statement about Rule 30's local behaviour near checkerboard backgrounds, not
 about the lone-seed orbit, so it cannot bear on `Y`-membership no matter how far
 it is pushed.
 
-## 8. Proposed register changes (PATH.md NOT edited — user decides)
+## 8. Register changes (applied to `PATH.md` on 2026-08-31)
+
+Both were merged as written below: row 8's evidence clause in section 9.3, and
+the `a22_p2_checkerboard_growth` sentence in section 9.5, superseded rather than
+appended to.  Row 8's merged text also carries the `T = 8e6` cross-implementation
+gate from section 1, which landed after this section was first written.
+
 
 **Row 8** — currently: *"conditional — checkerboard is a proved Rule 30 temporal
 fixed point; if in `Y`, R8's target fails. Proved for Rule 90 (Kummer, exact).
@@ -412,13 +421,18 @@ verdict already holds at `T = 4e6` (a22's own horizon), `2^22`, `2^23` and
 is the interesting outcome and should be reported as a contradiction of this
 document, not as an amendment to it.
 
-One cross-check was also outstanding: the independent numpy regeneration at
-`T = 8,000,000` (`gen_band.py`, a3's kernel) against the C kernel's `2^23`
-checkpoint, which would be the first independent-implementation validation
-*above* a22's horizon.  The bit-exact check in section 1 is at `T = 4e6`, i.e.
-at a22's horizon, so a kernel defect that only bites past `4e6` would not have
-shown there.  Result, when it lands, goes in `crosscheck_numpy_8e6.txt`; if that
-file is absent the check did not complete.
+One cross-check was outstanding when this document was first written and has
+since **landed, PASS**: the independent numpy regeneration at `T = 8,000,000`
+(`gen_band.py`, a3's kernel) against the C kernel's `2^23` checkpoint, the first
+independent-implementation validation *above* a22's horizon.  The earlier
+bit-exact check in section 1 is at `T = 4e6`, i.e. at a22's horizon, so a kernel
+defect that only bites past `4e6` would not have shown there.  The numpy run
+finished in 9,225 s (`gen_8e6.log`) and `verify_kernel.py` compared the two
+implementations over the 8,000,000 rows they share:
+`PASS n=8000000 c=8388608 npy=8000000` in `crosscheck_numpy_8e6.txt`.  A `FAIL`
+would have invalidated sections 5 and 6; it did not fire.  The C-kernel numbers
+in sections 5 and 6 that lie above `T = 8e6` are still backed only by the
+internal NEON-vs-scalar check.
 
 ## 10. Files
 
