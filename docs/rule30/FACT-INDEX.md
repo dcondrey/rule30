@@ -5,6 +5,10 @@ Updated: 2026-09-01
 This is a compact lookup table.  Cite the linked result document—not this
 index—when publishing.
 
+For experiment-to-experiment comparison, including evidence levels, shared
+state transitions, compatible hybrids, and the current synthesis queue, see
+`EXPERIMENT-ATLAS.md`.
+
 ## Notation and standing controls
 
 ```text

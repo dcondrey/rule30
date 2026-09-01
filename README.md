@@ -117,9 +117,12 @@ require loading the full research history.
 
 1. Read [`START-HERE.md`](docs/rule30/START-HERE.md) for current status, live
    theorem targets, and the compact attempt router.
-2. Consult [`FACT-INDEX.md`](docs/rule30/FACT-INDEX.md) for exact identities,
+2. Use [`EXPERIMENT-ATLAS.md`](docs/rule30/EXPERIMENT-ATLAS.md) to compare
+   experiment assumptions, state representations, evidence levels, failure
+   modes, and compatible synthesis opportunities.
+3. Consult [`FACT-INDEX.md`](docs/rule30/FACT-INDEX.md) for exact identities,
    proved facts, controls, and reusable obstructions.
-3. Open [`PATH.md`](docs/rule30/PATH.md) only when auditing the complete attempt
+4. Open [`PATH.md`](docs/rule30/PATH.md) only when auditing the complete attempt
    register or checking whether an idea has already been tried.
 
 For the active period-two P1 effort, go directly to the
@@ -171,8 +174,10 @@ and negative certificates they implement; it does not prove P1.
 | Path | Purpose |
 |---|---|
 | `docs/rule30/START-HERE.md` | Compact status and attempt router |
+| `docs/rule30/EXPERIMENT-ATLAS.md` | Cross-examination matrix, correlations, and synthesis queue |
 | `docs/rule30/FACT-INDEX.md` | Theorem, identity, control, and obstruction index |
 | `docs/rule30/PATH.md` | Exhaustive internal and external attempt register |
+| `experiments/README.md` | Executable-artifact directory router |
 | `docs/rule30/paper/` | Zero-tail manuscript and publication audit |
 | `experiments/rule30/p1-period2-invariant/` | Current P1 derivations and exact certificates |
 | `experiments/rule30-subword-extended/` | P2 center-word and factor-complexity measurements |

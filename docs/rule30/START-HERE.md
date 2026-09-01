@@ -25,6 +25,11 @@ lone seed, or a computational lower bound.
 
 ## Where every attempt is indexed
 
+For cross-examination by proof obligation, state representation, information
+retained, evidence level, and failure mechanism, start with
+`EXPERIMENT-ATLAS.md`.  It overlays the historical registers without moving
+or renumbering their sources.
+
 The register is split for historical reasons:
 
 | Coverage | Canonical source |
@@ -202,10 +207,13 @@ Full hypotheses and affected rows are in `PATH.md` section 7.3 and
 
 1. Inspect process and Git state.
 2. Choose one live theorem, not a topic survey.
-3. Read only the sources routed above plus the exact predecessor result.
-4. State how the proposal uses Rule 30's OR, the single orbit, and finite
+3. Cross-examine the proposal in `EXPERIMENT-ATLAS.md` before treating it as
+   new; identify its complete state, seam law, discarded information, and
+   exact prior obstruction escaped.
+4. Read only the sources routed above plus the exact predecessor result.
+5. State how the proposal uses Rule 30's OR, the single orbit, and finite
    support.
-5. Preregister the certificate class, controls, bounds, and kill conditions.
-6. Prefer a finite human-checkable certificate; treat enumerations only as
+6. Preregister the certificate class, controls, bounds, and kill conditions.
+7. Prefer a finite human-checkable certificate; treat enumerations only as
    falsifiers.
-7. Update this index only after exact controls and an independent verifier pass.
+8. Update this index only after exact controls and an independent verifier pass.
