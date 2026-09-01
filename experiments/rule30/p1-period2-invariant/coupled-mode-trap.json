@@ -1,0 +1,434 @@
+{
+  "axes": {
+    "boundary_mode": "spatial peel depth",
+    "matched_defect": "seed length and interval origin",
+    "right_filter": "emitted rho time"
+  },
+  "boundary": {
+    "closed": false,
+    "first_escape": {
+      "destination": "empty|(23)*",
+      "path": [
+        "empty|(0)*",
+        "empty|(2)*",
+        "3|(1)*",
+        "empty|(23)*"
+      ],
+      "word": "100"
+    },
+    "growth": [
+      {
+        "max_preperiod_mode": "empty|(3)*",
+        "max_preperiod_witness_word": "2",
+        "maximum_period": 1,
+        "maximum_preperiod": 0,
+        "new_modes": 2,
+        "peel_depth": 1,
+        "reachable_cut_count": 3,
+        "reachable_cut_horizon": 3,
+        "total_modes": 3
+      },
+      {
+        "max_preperiod_mode": "3|(1)*",
+        "max_preperiod_witness_word": "10",
+        "maximum_period": 2,
+        "maximum_preperiod": 1,
+        "new_modes": 4,
+        "peel_depth": 2,
+        "reachable_cut_count": 7,
+        "reachable_cut_horizon": 4,
+        "total_modes": 7
+      },
+      {
+        "max_preperiod_mode": "03|(31)*",
+        "max_preperiod_witness_word": "210",
+        "maximum_period": 2,
+        "maximum_preperiod": 2,
+        "new_modes": 9,
+        "peel_depth": 3,
+        "reachable_cut_count": 16,
+        "reachable_cut_horizon": 5,
+        "total_modes": 16
+      },
+      {
+        "max_preperiod_mode": "3023|(01)*",
+        "max_preperiod_witness_word": "2102",
+        "maximum_period": 2,
+        "maximum_preperiod": 4,
+        "new_modes": 20,
+        "peel_depth": 4,
+        "reachable_cut_count": 36,
+        "reachable_cut_horizon": 6,
+        "total_modes": 36
+      },
+      {
+        "max_preperiod_mode": "003001|(3223)*",
+        "max_preperiod_witness_word": "21021",
+        "maximum_period": 4,
+        "maximum_preperiod": 6,
+        "new_modes": 38,
+        "peel_depth": 5,
+        "reachable_cut_count": 74,
+        "reachable_cut_horizon": 7,
+        "total_modes": 74
+      },
+      {
+        "max_preperiod_mode": "33000103|(1021)*",
+        "max_preperiod_witness_word": "210212",
+        "maximum_period": 4,
+        "maximum_preperiod": 8,
+        "new_modes": 75,
+        "peel_depth": 6,
+        "reachable_cut_count": 149,
+        "reachable_cut_horizon": 8,
+        "total_modes": 149
+      },
+      {
+        "max_preperiod_mode": "022223301|(3123)*",
+        "max_preperiod_witness_word": "2102121",
+        "maximum_period": 4,
+        "maximum_preperiod": 9,
+        "new_modes": 143,
+        "peel_depth": 7,
+        "reachable_cut_count": 292,
+        "reachable_cut_horizon": 9,
+        "total_modes": 292
+      },
+      {
+        "max_preperiod_mode": "31111022301|(1023)*",
+        "max_preperiod_witness_word": "21021212",
+        "maximum_period": 4,
+        "maximum_preperiod": 11,
+        "new_modes": 285,
+        "peel_depth": 8,
+        "reachable_cut_count": 577,
+        "reachable_cut_horizon": 10,
+        "total_modes": 577
+      },
+      {
+        "max_preperiod_mode": "10202013300201|(3023)*",
+        "max_preperiod_witness_word": "101112121",
+        "maximum_period": 4,
+        "maximum_preperiod": 14,
+        "new_modes": 562,
+        "peel_depth": 9,
+        "reachable_cut_count": 1139,
+        "reachable_cut_horizon": 11,
+        "total_modes": 1139
+      },
+      {
+        "max_preperiod_mode": "22131320222132003|(0221)*",
+        "max_preperiod_witness_word": "1011121212",
+        "maximum_period": 4,
+        "maximum_preperiod": 17,
+        "new_modes": 1095,
+        "peel_depth": 10,
+        "reachable_cut_count": 2234,
+        "reachable_cut_horizon": 12,
+        "total_modes": 2234
+      }
+    ],
+    "named_modes": {
+      "ALT_02": "empty|(02)*",
+      "ALT_20": "empty|(20)*",
+      "ONE": "empty|(1)*",
+      "THREE": "empty|(3)*",
+      "THREE_THEN_ONE": "3|(1)*",
+      "TWO": "empty|(2)*",
+      "ZERO": "empty|(0)*"
+    },
+    "transitions": [
+      {
+        "destination": "ZERO",
+        "inside_named_vocabulary": true,
+        "source": "ZERO",
+        "symbol": 0
+      },
+      {
+        "destination": "TWO",
+        "inside_named_vocabulary": true,
+        "source": "ZERO",
+        "symbol": 1
+      },
+      {
+        "destination": "THREE",
+        "inside_named_vocabulary": true,
+        "source": "ZERO",
+        "symbol": 2
+      },
+      {
+        "destination": "THREE",
+        "inside_named_vocabulary": true,
+        "source": "ZERO",
+        "symbol": 3
+      },
+      {
+        "destination": "1|(23)*",
+        "inside_named_vocabulary": false,
+        "source": "ONE",
+        "symbol": 0
+      },
+      {
+        "destination": "empty|(32)*",
+        "inside_named_vocabulary": false,
+        "source": "ONE",
+        "symbol": 1
+      },
+      {
+        "destination": "empty|(23)*",
+        "inside_named_vocabulary": false,
+        "source": "ONE",
+        "symbol": 2
+      },
+      {
+        "destination": "empty|(23)*",
+        "inside_named_vocabulary": false,
+        "source": "ONE",
+        "symbol": 3
+      },
+      {
+        "destination": "THREE_THEN_ONE",
+        "inside_named_vocabulary": true,
+        "source": "TWO",
+        "symbol": 0
+      },
+      {
+        "destination": "ONE",
+        "inside_named_vocabulary": true,
+        "source": "TWO",
+        "symbol": 1
+      },
+      {
+        "destination": "ONE",
+        "inside_named_vocabulary": true,
+        "source": "TWO",
+        "symbol": 2
+      },
+      {
+        "destination": "ONE",
+        "inside_named_vocabulary": true,
+        "source": "TWO",
+        "symbol": 3
+      },
+      {
+        "destination": "ALT_20",
+        "inside_named_vocabulary": true,
+        "source": "THREE",
+        "symbol": 0
+      },
+      {
+        "destination": "ALT_02",
+        "inside_named_vocabulary": true,
+        "source": "THREE",
+        "symbol": 1
+      },
+      {
+        "destination": "ALT_02",
+        "inside_named_vocabulary": true,
+        "source": "THREE",
+        "symbol": 2
+      },
+      {
+        "destination": "ALT_02",
+        "inside_named_vocabulary": true,
+        "source": "THREE",
+        "symbol": 3
+      },
+      {
+        "destination": "empty|(23)*",
+        "inside_named_vocabulary": false,
+        "source": "THREE_THEN_ONE",
+        "symbol": 0
+      },
+      {
+        "destination": "01|(23)*",
+        "inside_named_vocabulary": false,
+        "source": "THREE_THEN_ONE",
+        "symbol": 1
+      },
+      {
+        "destination": "01|(23)*",
+        "inside_named_vocabulary": false,
+        "source": "THREE_THEN_ONE",
+        "symbol": 2
+      },
+      {
+        "destination": "01|(23)*",
+        "inside_named_vocabulary": false,
+        "source": "THREE_THEN_ONE",
+        "symbol": 3
+      },
+      {
+        "destination": "03|(31)*",
+        "inside_named_vocabulary": false,
+        "source": "ALT_02",
+        "symbol": 0
+      },
+      {
+        "destination": "2|(13)*",
+        "inside_named_vocabulary": false,
+        "source": "ALT_02",
+        "symbol": 1
+      },
+      {
+        "destination": "empty|(31)*",
+        "inside_named_vocabulary": false,
+        "source": "ALT_02",
+        "symbol": 2
+      },
+      {
+        "destination": "empty|(31)*",
+        "inside_named_vocabulary": false,
+        "source": "ALT_02",
+        "symbol": 3
+      },
+      {
+        "destination": "3|(31)*",
+        "inside_named_vocabulary": false,
+        "source": "ALT_20",
+        "symbol": 0
+      },
+      {
+        "destination": "empty|(13)*",
+        "inside_named_vocabulary": false,
+        "source": "ALT_20",
+        "symbol": 1
+      },
+      {
+        "destination": "empty|(13)*",
+        "inside_named_vocabulary": false,
+        "source": "ALT_20",
+        "symbol": 2
+      },
+      {
+        "destination": "empty|(13)*",
+        "inside_named_vocabulary": false,
+        "source": "ALT_20",
+        "symbol": 3
+      }
+    ]
+  },
+  "conclusion": "The proposed finite three-part trap is not closed; no mortality or period-two theorem follows.",
+  "matched_defect": {
+    "finite_type_graph_closed": false,
+    "full_driver_cocycle": {
+      "closed": true,
+      "compressed_indicator_phase_closed": false,
+      "compressed_summary_collision": {
+        "left_offset": 5,
+        "phase_mod_3": 2,
+        "right_offset": 8,
+        "shared_indicator_rank": 6,
+        "summary": "(exact survivor indicator, offset mod 3)"
+      },
+      "finite_dimensional": false,
+      "frontier_growth": "two symbolic coordinates per macro",
+      "state": "F_m=(S_m, previous forced rho, P_m)"
+    },
+    "reason": "A generic exact successor exists only after restoring the full width-growing frontier driver; the finite A/B type dictionary and its indicator/phase compression do not close.",
+    "recorded_type_dictionary": {
+      "closed": false,
+      "edges": [
+        {
+          "destination": "A_11",
+          "kind": "matched",
+          "source": "A_10"
+        },
+        {
+          "destination": "A_12",
+          "kind": "matched",
+          "source": "A_11"
+        },
+        {
+          "destination": "A_13",
+          "kind": "matched",
+          "source": "A_12"
+        },
+        {
+          "destination": "B_13",
+          "kind": "defect",
+          "source": "A_12"
+        },
+        {
+          "destination": "A_14",
+          "kind": "matched",
+          "source": "A_13"
+        },
+        {
+          "destination": "B_14",
+          "kind": "matched",
+          "source": "B_13"
+        }
+      ],
+      "nodes": [
+        "A_10",
+        "A_11",
+        "A_12",
+        "A_13",
+        "A_14",
+        "B_13",
+        "B_14"
+      ],
+      "terminally_unclassified_nodes": [
+        "A_14",
+        "B_14"
+      ]
+    },
+    "uniform_matched_extension_lemma_verified": true
+  },
+  "product": {
+    "closed": false,
+    "infinite_valid_paths_decided": false,
+    "reasons": [
+      "the seven named boundary modes are not closed",
+      "the finite A/B dictionary is partial and the closed replacement is width-growing",
+      "the {11,00000} DFA is not the complete actual-right language",
+      "the three coordinates advance on different axes without a proved scheduler"
+    ]
+  },
+  "right_filter": {
+    "closed": true,
+    "complete_for_actual_right_language": false,
+    "insufficiency_control": {
+      "accepted_macros": 10,
+      "contains_longer_actual_right_forbidden_factor": "101001",
+      "death": "pin",
+      "rho_history": "01010100101010101010100010001000010010010"
+    },
+    "patterns": [
+      "11",
+      "00000"
+    ],
+    "transition_table": {
+      "0": {
+        "0": "00",
+        "1": "1"
+      },
+      "00": {
+        "0": "000",
+        "1": "1"
+      },
+      "000": {
+        "0": "0000",
+        "1": "1"
+      },
+      "0000": {
+        "0": "REJECT",
+        "1": "1"
+      },
+      "1": {
+        "0": "0",
+        "1": "REJECT"
+      },
+      "REJECT": {
+        "0": "REJECT",
+        "1": "REJECT"
+      },
+      "START": {
+        "0": "0",
+        "1": "1"
+      }
+    }
+  },
+  "schema": "rule30.coupled-mode-closure-audit.v1"
+}

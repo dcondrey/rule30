@@ -1,0 +1,58 @@
+{
+  "accepting_count": 13,
+  "clauses": [
+    {
+      "accepting_points_excluded": 3,
+      "dimacs": [
+        -2,
+        6
+      ],
+      "formula": "(not l_0 or l_2)"
+    },
+    {
+      "accepting_points_excluded": 7,
+      "dimacs": [
+        4,
+        7,
+        -10
+      ],
+      "formula": "(l_1 or h_3 or not l_4)"
+    },
+    {
+      "accepting_points_excluded": 4,
+      "dimacs": [
+        5,
+        -6,
+        8
+      ],
+      "formula": "(h_2 or not l_2 or l_3)"
+    }
+  ],
+  "horizon": 5,
+  "length": 4,
+  "minimum_clause_count": 3,
+  "minimum_total_width_at_that_count": 8,
+  "partition": {
+    "A": "cuts reachable from zero by at most H-2 prefix symbols",
+    "B": "inverse-terminal-cone hard-core accepting cuts",
+    "shared_variables": [
+      "h_0",
+      "l_0",
+      "h_1",
+      "l_1",
+      "h_2",
+      "l_2",
+      "h_3",
+      "l_3",
+      "h_4",
+      "l_4"
+    ]
+  },
+  "prime_candidate_count": 81,
+  "reachable_count": 16,
+  "verified": {
+    "A_implies_I": true,
+    "B_implies_not_I": true,
+    "fewer_candidate_clauses_unsat": true
+  }
+}
