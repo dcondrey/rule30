@@ -31,12 +31,14 @@ Use this routing table:
 | Four-state operator/carry form | `RESULTS-CARRY.md`; `carry_transducer.py` |
 | Run-length/boundary-gap coordinates | `RESULTS-RUNLENGTH.md`; `runlength_search.py` |
 | Signed counts, touching colors, row toggle | `RESULTS-DIVERGENCE.md`; `verify_divergence_negative.py`; `toggle_phase.py` |
-| Actual-right-half no-`11` restriction | `RESULTS-BILATERAL.md`; `bilateral_hardcore.py` |
+| Actual-right trace restrictions (`11`, `00000`) | `RESULTS-BILATERAL.md`; `RESULTS-RIGHT-FILTERED-MORTALITY.md`; `bilateral_hardcore.py`; `right_trace_forbidden.py` |
 | Variable-seed mortality SAT and triangular correlations | `RESULTS-MORTALITY-SAT.md`; `mortality_sat.py`; `verify_drup.py`; `quadratic_probe.py` |
 | Time-ordered pivot/emission audit | `RESULTS-PIVOT-EMISSION.md`; `pivot_emission_audit.py` |
 | Dynamic Boolean ideal/variety trace | `RESULTS-DYNAMIC-BOOLEAN-IDEAL.md`; `ideal-variety-n4-n12.json`; `pivot_emission_audit.py` |
 | Exact `n=10` plateau cofactors | `RESULTS-PLATEAU-BEZOUT.md`; `plateau_bezout.py`; `verify_plateau_bezout.py`; `plateau-bezout-n10.json` |
+| Cofactor and interval-annihilator shifts | `RESULTS-COFACTOR-AUTOMATON.md`; `RESULTS-INTERVAL-ANNIHILATOR.md`; matching generators/verifiers/JSON |
 | Moving-endpoint block and literal peel obstruction | `RESULTS-ENDPOINT-PEEL.md`; `endpoint_peel.py` |
+| Tail density, deep-zero/core conjugacy | `RESULTS-TAIL-DENSITY.md`; `tail_density.py` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
@@ -85,6 +87,21 @@ rho_(k+1)=(NOT rho_k) AND (NOT s(2k,2)) AND (NOT s(2k+1,2)),
 
 so rho contains no adjacent ones.
 
+Actual right realizability is strictly stronger.  The exact nine-cell
+light-cone identity in `right_trace_forbidden.py` proves uniformly that rho
+also contains no `00000`.  The realized-prefix counts are already below the
+hard-core Fibonacci counts at length five.
+
+After reversing the complete aligned word and deleting its inert leading
+deep zeroes, one forced macro is exactly the active-core map
+
+```text
+v -> Transduce(v) . 3.
+```
+
+This is an all-width conjugacy, not a bounded summary.  Pin passage is final
+carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
+
 ## What was tried and why it stopped
 
 | Attempt | Positive normalization | Exact kill |
@@ -104,7 +121,11 @@ so rho contains no adjacent ones.
 | Time-ordered kernel pivots | Exact ANF emission recurrence through three post-knee macros | `K=P^T P` is symmetric with raw diagonal `1,0,...`; a length-`n` seed starts its tail constraints at row depth `2n`; the first `n=4` post-knee pin is `1+rho_2 rho_4`, with no linear pivot |
 | Dynamic Boolean ideals | Exact ANF generators and projected SAT counts for every horizon, `n=4..12` | Unit ideal reached at horizons `5,4,3,3,5,4,9,8,7`; long nonzero plateaus occur, so finite generator absorption is not immortality |
 | `n=10` plateau Bezout extraction | Exact dynamic and hard-core lift cofactors in the Boolean quotient | `epsilon_8=1` already on `V_3`, `q_8=1` already on `V_5`; dynamic cofactor degree is at most 5 but support spans almost all seed positions |
+| Shift-normalized cofactor automaton | Exact recurrence `C_(i+1)=C_i(1+g_i)` | Degree five fails at `n=12`; support spans the seed; the highlighted motif has a literal self-loop and is not a closed state |
+| Interval annihilator | Uniform matched-extension identity on complete survivor indicators | Matched appends are exact macro shifts; an unmatched rank-five defect appears, so restart/defect states remain unclassified |
 | Literal endpoint peel | Full aligned Mealy tableau and exact `K_(w+2)` endpoint block | `(n,H)->(n-1,H-2)` is semantically false: length-4 seed `0xa` survives 4, while every length-3 seed survives at most 1 |
+| Coefficient-seven tail density | Exact minimum-weight falsifier and period-seven sharp control | Survives through `n=24`; phase/rho/D8 observer has a 14-edge negative cycle of total charge `-28` |
+| Right-filtered constant mortality | Uniform right-light-cone prohibition of `00000` | Seed-generated frontiers survive at most 8 through `n=24`, but a legal arbitrary frontier survives 10; seed-language recognition is essential |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,
 moment order, lookahead, or endpoint window.  Their standalone certificates
@@ -156,6 +177,10 @@ aligned endpoint tableau frontiers          34,952 PASS through width 8
 Rule 30 radius-eight rows               131,071 PASS
 Rule 30 adversarial trace               fail exactly at t=15
 Rule 90 {-1,1}                          zero through t=128
+Rule 30 rho five-zero ANF identity      zero polynomial; 512/512 PASS
+Rule 90 five-zero negative control      witness right mask 0x114 PASS
+active-core conjugacy                   511 reachable macros PASS
+tail-density falsifier                  all hard-core seeds through n=24 PASS
 local-ranking negative certificates     PASS without solver
 divergence negative certificate         PASS without solver
 ```
@@ -180,12 +205,23 @@ uv run --project experiments/sygus-p3 python \
   experiments/rule30/p1-period2-invariant/quadratic_probe.py
 PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
   experiments/rule30/p1-period2-invariant/endpoint_peel.py
+PYTHONDONTWRITEBYTECODE=1 python3 \
+  experiments/rule30/p1-period2-invariant/right_trace_forbidden.py
+PYTHONDONTWRITEBYTECODE=1 python3 \
+  experiments/rule30/p1-period2-invariant/tail_density.py
 ```
 
 ## Best next theorem
 
 > **Linear hard-core mortality.** Every hard-core rho seed of length `n`
 > fails a forced pin or creates `11` within `2n+2` post-seed macrosteps.
+
+The stronger current candidate is seed-specific constant mortality after
+adding the proved actual-right factor `rho != 00000`: fail a pin or create
+`11`/`00000` within eight post-seed macros.  It survives exact seed
+enumeration only through `n=24` and is not a theorem.  An arbitrary aligned
+frontier disproves the corresponding all-word claim by surviving ten, so a
+proof must retain the seed-generated triangular language.
 
 Why it suffices: every finite left half reaches a knee represented by one of
 these finite rho seeds, and actual right-side realizability supplies `no 11`.
