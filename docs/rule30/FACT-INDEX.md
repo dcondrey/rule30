@@ -356,6 +356,38 @@ the recorded long controls; its six exact CNF families are UNSAT through
 `n=20`, but no all-length proof is known.  Source: period-two
 `RESULTS-LATE-PULL-DIAGONAL.md`.
 
+The rotated-wedge form exposes a cleaner, stronger target.  If `M_c(n)` is
+the longest initially binary forced endpoint continuation over any source
+`W in {1,2}^n` with constant inverse cut `c in {2,3}`, then
+
+```text
+M_c(n) <= n+1
+```
+
+would exclude DLP without using continuation hard-core or a terminal pull.
+Equivalently, no binary `f` of length `2n+2` has
+`P^n(I(f))=c^(n+2)`.  The preregistered stronger estimate `M_c(n)<=n` is
+false at `M_3(15)=16`; the proof-sufficient estimate has zero exact failures
+through `n=20`.  A related core audit finds 88/90 DLP formulas through
+`n=15` base-UNSAT without any no-`11` clauses, with only two small singleton
+exceptions.  Source: period-two `RESULTS-BINARY-WEDGE-HORIZON.md` and
+`RESULTS-DLP-HARD-CORE-CORE.md`.
+
+For this binary wedge, one coordinate can be eliminated at every length.
+After the first `n` source symbols are fixed, the affine `D8` newest-cell map
+has output high bit `h+alpha`; hence demanding high bit one uniquely forces
+each of the next `n+2` binary endpoint symbols.  Writing the remaining output
+coordinate as `E=1+H+L` gives a deterministic map
+
+```text
+Psi_n : {1,2}^n -> {0,1}^(n+2).
+```
+
+The binary-wedge theorem is exactly the assertion that `Psi_n(W)` is never
+constant.  The `n=15` sharp falsifier maps to `1^16 0`, explaining both its
+sixteen-cell plateau and immediate failure.  Source: period-two
+`RESULTS-BINARY-WEDGE-HIGH-ELIMINATION.md`.
+
 The same diagonal audit supplies exact phase/equality coordinates.  For a
 four-state symbol `q=(h,l)`, define `H=h` and `E=1+h+l`, so `E=0` exactly on
 states `{1,2}`.  The inverse-cone local rule obeys
@@ -414,8 +446,9 @@ finite-state or nonlinear invariant exists.
 
 ## Current open theorem targets
 
-1. **P1, period two:** prove the three-row late-pull diagonal from
-   `RESULTS-LATE-PULL-DIAGONAL.md`; prove the stronger projected
+1. **P1, period two:** prove the binary-wedge horizon from
+   `RESULTS-BINARY-WEDGE-HORIZON.md`, or the logically weaker three-row
+   late-pull diagonal from `RESULTS-LATE-PULL-DIAGONAL.md`; prove the stronger projected
    diagonal-support lemma from `RESULTS-PROJECTED-DIAGONAL-HALVING.md`, hence
    `s_2(W)<=|W|` and `s_3(W)<=|W|+1`; prove its one-credit halving
    alternative; or prove the

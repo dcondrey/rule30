@@ -68,6 +68,8 @@ Use this routing table:
 | Pull-row alpha support | `PREREGISTRATION-PULL-ROW-PROJECTED-SUPPORT.md`; `PREREGISTRATION-PULL-ROW-ALPHA-SUPPORT.md`; `RESULTS-PULL-ROW-ALPHA-SUPPORT.md`; `constant_tail_pull_row_projected_support.py` |
 | Nonfinal alpha-support disposition | `PREREGISTRATION-NONFINAL-ALPHA-SUPPORT.md`; `RESULTS-NONFINAL-ALPHA-SUPPORT.md`; `constant_tail_nonfinal_alpha_support.py` |
 | Three-row late-pull diagonal | `PREREGISTRATION-LATE-PULL-HORIZON.md`; `PREREGISTRATION-LATE-PULL-DIAGONAL-CNF.md`; `PREREGISTRATION-DLP-SOURCE-DEFECT.md`; `RESULTS-LATE-PULL-DIAGONAL.md`; `constant_tail_late_pull_horizon.py`; `late_pull_diagonal_sat.py` |
+| Rotated DLP, hard-core relaxation, and binary-wedge target | `RESULTS-DLP-ROTATED-WEDGE.md`; `PREREGISTRATION-DLP-HARD-CORE-CORE.md`; `RESULTS-DLP-HARD-CORE-CORE.md`; `PREREGISTRATION-BINARY-WEDGE-HORIZON.md`; `RESULTS-BINARY-WEDGE-HORIZON.md`; `RESULTS-BINARY-WEDGE-HIGH-ELIMINATION.md`; `dlp_rotated_wedge.py`; `late_pull_hardcore_core.py`; `binary_wedge_horizon.py`; `binary_wedge_adversary.py`; `binary_wedge_high_elimination.py` |
+| Forum/informal-source audit | `RESULTS-FORUM-AUDIT-2026-09-02.md` |
 | Actual-right terminal frontier audit and scope correction | `PREREGISTRATION-ACTUAL-RIGHT-FRONTIER.md`; `RESULTS-ACTUAL-RIGHT-FRONTIER.md`; `constant_tail_actual_frontier.py` |
 | Scale telescoping, derivative failures, and zero-prefix greedy target | `RESULTS-SCALE-TELESCOPING.md`; `constant_tail_zero_prefix_matching.py`; `constant_tail_zero_prefix_bitsliced.py` |
 | Projected diagonal support and one-credit halving targets | `RESULTS-PROJECTED-DIAGONAL-HALVING.md`; `constant_tail_right_zero_prefix_selector.py`; `constant_tail_halving_recurrence.py` |
@@ -184,6 +186,7 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Pull-row alpha support | Restrict zero-prefix diagonal support to nonfinal `C` rows and the single high-translation coordinate `alpha`; on hard-core rows `alpha` is exactly the parity of active raw queue cells after the leading tail | **Sufficient conjecture, now weakened further below:** a non-eventually-`2` immortal endpoint has infinitely many pull rows, while PAS requires a token `j<=k<n` at each. Zero failures in 392,830 word/tail cases and 31,595 pull rows through length 23; proof open. `k=j` fails at length six and alpha-witness displacement reaches at least twelve |
 | Nonfinal alpha support | Ask for an alpha witness at every nonfinal row rather than only at pulls | **Retired as a proof reduction:** the frozen exact holdout has zero failures in 390,944 completed word/tail cases and 107,735 nonfinal rows, but at `j=n` the empty witness interval says exactly `s_c(W)<=n+1`. It restates the required scale bound rather than explaining it; the preregistered length-128 random row was stopped after this disposition |
 | Three-row late-pull diagonal | For a length-`n` scale word, exclude nonfinal pulls only at rows `n,n+1,n+2`; an absolute pull `m=3n+r` lands in exactly this window for `n=floor(m/3)` | **Smallest sufficient conjecture:** no alpha variables or early-row support are needed. No late pull occurs in the full length-23 hard-core corpus, eight aligned GA adversaries, 240,000 long random word/tail cases, or all binary source words through length 20. Exact CNFs for all six tail/residue cases are UNSAT through `n=20`, but generic conflicts and proof width grow and no induction is known |
+| Rotated binary-wedge horizon | Force a constant inverse cut over an arbitrary binary source and bound the initial binary endpoint continuation by `n+1` | **Cleaner but stronger sufficient conjecture:** the preregistered bound `M_c(n)<=n` is exactly falsified by `M_3(15)=16`; the repaired sufficient bound `M_c(n)<=n+1` has zero exact failures through `n=20`. It discards hard-core and terminal-pull conditions entirely. In the related DLP CNFs, 88/90 formulas through `n=15` are already UNSAT without hard-core clauses. Proof open |
 | Reverse-order and center-controlled folds | Reversing the mirrored right row is the exact right-characteristic shear; choosing the order from the center alternates the new edge between word ends and fixes adaptive XOR to zero at both endpoints | **Exact structural negative/partial:** every symmetric one-/two-step quotient is nonclosed. The `1 -> 0` phase has an all-word lex descent, but the other phase resets it; every fixed order and all 64 boundary-compatible two-half lexicographic products fail by length four. No conjugacy to the inverse-terminal queue is presently known |
 | Regular survival-language cocycle | `L_(h+1)=L_0 intersect Q_c^(-1)(L_h)` constructs and minimizes the exact next survival formula | **Exact morph, negative rank result:** minimized DFA size grows from `5/6` to `17,65,257,...` rather than contracting; shortest accepted length grows `1/2,1/2,3,5,5,5,10,...`. Proving that minimum tends to infinity is now the precise language-theoretic mortality target |
 | Frontier-distance cocycle | Stack `h+1` queue rows; reading symbol `a` sends `v` to `w_0=a, w_j=g_(v_j)(w_(j-1))`; terminal vertices are exactly the inverse-cone diagonals of hard-core words of length `h+1` | **Uniform graph theorem:** bare distance from `(c,...,c)` to the `F_(h+3)`-vertex terminal set gives the arbitrary-queue minimum; product with the invariant suffix DFA gives the language-cocycle minimum. Their divergence is equivalent. Height extension is a four-sheeted permutation cover whose fiber maps generate `D8`, so no fiber rank contracts. Both distances are exact through `h=12`; proving divergence remains open |
@@ -261,6 +264,9 @@ actual-right D8 path action              exact augmented search through horizon 
 zero-prefix slow/bit-sliced graph         exact equality through length 7 PASS
 zero-prefix ordinary/ordered/greedy       242,783 cases through length 22 PASS
 zero-prefix tail-3 nonfinal-miss check     zero failures through length 22 PASS
+binary-wedge literal/bit-sliced replay     6,152 generated cells PASS
+binary-wedge exact census                  all 2^n sources through n=20 PASS for M<=n+1
+DLP hard-core relaxation                   88/90 base-UNSAT through n=15; two checked singleton exceptions
 ```
 
 Core commands:
@@ -296,6 +302,29 @@ PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
 
 ## Best next theorem
 
+The cleanest current target is:
+
+> **Binary-wedge horizon `(BWH+)`.**  For every `n>=7`, binary source
+> `W in {1,2}^n`, and constant cut `c in {2,3}`, the uniquely forced
+> endpoint continuation leaves `{1,2}` within its first `n+2` symbols;
+> equivalently `M_c(n)<=n+1`.
+
+This is stronger than DLP but removes both the hard-core language and the
+terminal-pull predicate.  By the rotated-Peel identity it is exactly the
+exclusion of a binary word `f` of length `2n+2` satisfying
+`P^n(I(f))=c^(n+2)`.  The preregistered sharper bound `M_c(n)<=n` is false:
+`M_3(15)=16`.  The sufficient bound has no exact failure through `n=20`.
+Read `RESULTS-BINARY-WEDGE-HORIZON.md` first.
+
+The high-bit half of this target is already eliminated uniformly.  Once the
+first `n` binary source symbols are fixed, requiring high bit one on all
+`n+2` wedge outputs uniquely determines the remaining `n+2` binary endpoint
+symbols.  The open statement is exactly that the resulting deterministic
+defect word is neither `0^(n+2)` nor `1^(n+2)`.  See
+`RESULTS-BINARY-WEDGE-HIGH-ELIMINATION.md`.
+
+The logically weaker fallback is:
+
 > **Three-row late-pull diagonal.**  A length-`n` constant-tail scale word
 > has no nonfinal endpoint pull `1 -> 2` at rows `n,n+1,n+2`.
 
@@ -306,9 +335,12 @@ no zero-prefix scenarios and makes no claim about early rows.  It has no
 failure in the complete hard-core corpus through length 23, all binary words
 through length 20, or the recorded long controls.  Its exact diagonal CNFs
 are UNSAT through `n=20`, but generic resolution grows and no all-length
-triangular proof is known.  A hard-core length-12 counterexample to a
-six-symbol tail-only proof shows that the earlier triangle must still be
-summarized.  Read `RESULTS-LATE-PULL-DIAGONAL.md` first.
+triangular proof is known.  Moreover, 88 of the 90 tail/residue CNFs through
+`n=15` are already UNSAT after all continuation no-`11` clauses are removed;
+only two small instances need a singleton hard-core clause.  A hard-core
+length-12 counterexample to a six-symbol tail-only proof shows that the
+earlier triangle must still be summarized.  Read
+`RESULTS-LATE-PULL-DIAGONAL.md` and `RESULTS-DLP-HARD-CORE-CORE.md`.
 
 The stronger fallback is:
 

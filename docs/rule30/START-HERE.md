@@ -135,7 +135,28 @@ pin = D & 1,
 where `I` is inverse Gray code.  For a genuinely realizable right half,
 `rho_k=s(2k,1)` has no adjacent ones.  Neither fact has yet yielded mortality.
 
-Best next theorem:
+Best clean theorem target:
+
+> **Binary-wedge horizon.**  A length-`n` binary source forcing a constant
+> inverse cut `c in {2,3}` leaves the binary endpoint alphabet within its
+> first `n+2` appended symbols; equivalently `M_c(n)<=n+1`.
+
+By the rotated-Peel identity, this excludes every binary word `f` of length
+`2n+2` satisfying `P^n(I(f))=c^(n+2)`, hence implies the three-row late-pull
+diagonal and closes the nonconstant period-two rung.  It is stronger than
+DLP but discards the hard-core and terminal-pull predicates.  The exact
+bound has zero failures through `n=20`.  The preregistered sharper version
+`M_c(n)<=n` is false at `M_3(15)=16`; that falsifier saturates the sufficient
+bound and dies on the next symbol.  See the period-two
+`RESULTS-BINARY-WEDGE-HORIZON.md`.
+
+The high-bit constraint is no longer part of the open search.  Affine `D8`
+triangularity uniquely forces the binary continuation once the source is
+fixed.  The remaining theorem is the one-bit statement that the resulting
+defect word is not constant; see
+`RESULTS-BINARY-WEDGE-HIGH-ELIMINATION.md`.
+
+The smallest sufficient fallback remains:
 
 > **Three-row late-pull diagonal.**  A length-`n` constant-tail scale block
 > has no nonfinal endpoint pull `1 -> 2` at rows `n,n+1,n+2`.
@@ -150,6 +171,13 @@ through `n=20`, but generic proof width/conflicts grow and no induction is
 known.  A hard-core `n=12` certificate realizes the pull with a six-symbol
 constant cut suffix, so the three candidate rows do not reduce to a literal
 `3 x 3` local check.  See `RESULTS-LATE-PULL-DIAGONAL.md`.
+
+In a separate assumption-core audit, 88/90 DLP formulas through `n=15` are
+already UNSAT after every continuation no-`11` clause is removed.  The only
+exceptions are `(n,c,r)=(5,3,1),(6,2,1)`, each killed by a singleton clause.
+This is finite evidence that the contradiction lies at the binary source
+boundary, not in actual-right forbidden factors.  See
+`RESULTS-DLP-HARD-CORE-CORE.md`.
 
 The stronger alpha route is:
 
