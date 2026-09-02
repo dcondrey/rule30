@@ -100,7 +100,11 @@ coordinates are strictly smaller in colex order for both `0<2<1` and
 `0` or `2`.  Finite synchronous products prove this for words of every
 length.  It is not yet mortality: an appended boundary `1` can replace the
 consumed pivot at a newer coordinate, so the remaining task is an ancestry
-bound on those replacements.
+bound on those replacements.  The first raw budget, “retreat events at most
+initial `#1+1`,” is false at length 34.  The surviving weaker target is to
+prove that the minimum initial width supporting `r` retreat events tends to
+infinity; finitely many retreats reduce to the already-excluded
+eventually-`2` endpoint family.
 
 Conditioning the terminal set on the complete actual Rule 30 right cone
 raises the tail-2 minimum from `18` to `23` at horizon 12 and changes exact

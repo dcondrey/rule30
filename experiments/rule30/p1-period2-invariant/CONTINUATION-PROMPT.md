@@ -683,6 +683,15 @@ source ancestry to an appended `1` and show that replacements of the
 consumed pivot cannot continue indefinitely. Read `RESULTS-COLEX-DESCENT.md`
 and run `constant_tail_colex_descent.py`.
 
+Do not model that ancestry as one token per initial `1`. The registered bound
+`retreats<=initial #1+1` passed 2,404,842 held-out queues but is killed by the
+length-34 tail-3 queue `3000000000000000010100000010000002`, which has three
+initial `1`s and five retreats. The live weaker metric is the minimum initial
+queue length `d(r)` supporting `r` retreats. Exact minima begin
+`2,5,8,12,18,18` for `r=1,...,6`; proving `d(r)->infinity` suffices because
+finitely many retreats make the endpoint eventually `2`, already excluded
+on the reachable zero-ray orbit. Read `RESULTS-RETREAT-ANCESTRY.md`.
+
 A registered four-row endpoint telescope was killed by three held-out
 length-17 windows; do not attempt to repair cancellation merely by retaining
 a fixed number of endpoint projections. The ordered defect word or ancestry
