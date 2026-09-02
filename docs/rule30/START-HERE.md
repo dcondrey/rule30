@@ -62,6 +62,13 @@ Read:
 4. `experiments/rule30/p1-period2-invariant/README.md` for the current exact
    period-two map, certificates, and next theorem.
 
+For an ordinary continuation that does not need the full historical route
+table, start instead with
+`experiments/rule30/p1-period2-invariant/PROOF-STATE-CAPSULE.md`.  It records
+the exact implication DAG, distinguishes equivalent targets from stronger
+sufficient ones, and routes to only the five result reports needed at the
+current frontier.
+
 Do not rerun: larger finite-period SAT grids, fixed-depth ladders, generic
 left-permutive arguments, bounded adjacent-column prediction, support-width
 descent, periodic-mask contraction, or local additive rankings.

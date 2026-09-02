@@ -84,6 +84,7 @@ remain the exhaustive item-by-item list.
 | Dyadic/automatic/spectral coordinates | `PATH:14--24,34,43,45--46,74,88`; dyadic Peel reports | Several exact identities; most shortcut claims killed | Dyadic cascade spectrum and exact lift monoid | A basis change is not a composition law; periods alone overlap |
 | Symbolic formulas, ideals, and proof systems | dynamic ideal, mortality SAT, interpolant, Bezout, cofactor, `PATH:9,81,85,87` | Exact finite certificates and some uniform branch identities | Survivor indicators, restart cocycle, Craig cuts | Translation changes the boundary state; satisfiable fixed-input proofs remain small |
 | Peel/cut/queue/frontier geometry | rotated Peel through frontier-graph reports | Full period-two finite-rank branch reduced to orbit separation (`R`) | Shared `phi` triangle, rank descent, inverse system | Aperiodic endpoint/source-orbit disjointness remains |
+| Primitive period-three active core | `RESULTS-period3-fiber.md`; `RESULTS-period3-active-core.md` | Exact ternary quotient, finite carry signature, and all-length nonincrease of an 11-factor lexicographic vector (`U/R`) | Zero-tail dual and equality-subgraph weighted-graph proof | Equality transitions remain; a strict final rank component is open |
 | P2 measures and orbit closure | `PATH:8,11,44--47,61,78--80`; checkerboard reports | Ensemble facts and bounded patch growth | Markov classifications, checkerboard fixed point | Almost-everywhere statements miss the lone seed |
 | P2 finite trace statistics | `PATH:76,89`; subword and dyadic-shell reports | Large finite periodicity exclusion and no detected bias (`C/M`) | Bit-exact long prefixes, factor counts, shell discrepancy | Any finite prefix leaves the asymptotic limit open |
 | P2 seed-specific dyadic analysis | `RESULTS-p2-p3-cross-review-2026-09-03.md`; `RESULTS-p2-time-index-walsh.md` | P2 iff dyadic-shell maximal discrepancy is sublinear; sufficient Walsh and averaged xor-correlation bounds (`U/R`) | Canonical all-scale target and exact Fourier identities | Quantitative correlation decay for this fixed orbit remains unproved |
@@ -94,6 +95,13 @@ remain the exhaustive item-by-item list.
 | Adaptive/ML search | `PATH:19,21--24,30,40,90--92`; OpenEvolve reports | Exact falsifiers and evaluator lessons | Width-18 plateau edge; adversarial cut corpus | Finite fitness rewards phase residues and overfitting |
 
 ## 5. Active period-two dependency graph
+
+The token-compressed and more current form of this graph is
+`experiments/rule30/p1-period2-invariant/PROOF-STATE-CAPSULE.md`.  It also
+records the binary-wedge high-bit elimination.  The essential scope
+distinction is that endpoint-derived orbit separation is exact, whereas
+arbitrary-queue mortality and the binary-wedge horizon are stronger
+sufficient statements.
 
 The live P1 work is one chain of reductions, not thirty independent bets:
 
@@ -338,6 +346,23 @@ of every scenario queue passes held-out lengths 11--12 and fails at length
 with proved closure.  This kills a direct Higman/ordinal rank on bounded
 defect annotations but leaves projected diagonal support itself intact.  See
 `RESULTS-HOLONOMY-DEFECT-CLOSURE.md`.
+
+### 7.9 Equality-subgraph synthesis is now proof-bearing in period three
+
+The primitive `011` zero-tail dual supplies the archive's first successful
+all-length use of the adaptive-ranking workflow.  An exact weighted graph
+proves that the number of `010` factors never increases across two
+consecutive zero-tail steps; restricting to its equality edges and repeating
+the argument yields an eleven-component lexicographically nonincreasing
+factor vector.  Equality remains possible in every component, so period
+three is still open.
+
+The method can be mutated into the period-two attack only after a fixed exact
+path graph or composition law for `(Q_n,Psi_n)` is derived.  The period-two
+frontier currently carries a growing dependency diagonal, and the existing
+closure collisions prove that projecting it prematurely to local factors
+would be unsound.  The valid transfer is the equality-subgraph workflow, not
+the period-three trigram invariant itself.
 
 ## 8. Overlooked opportunities, ranked
 

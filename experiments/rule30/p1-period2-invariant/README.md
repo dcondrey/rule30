@@ -26,6 +26,7 @@ Use this routing table:
 
 | Need | Read/run |
 |---|---|
+| Lowest-token current proof state and exact dependency DAG | `PROOF-STATE-CAPSULE.md` |
 | Exact target, `F^2`, defect, primary certificates | `RESULTS.md`; `derive_and_controls.py`; `verify_negative_certificate.py` |
 | Six-route exhaustion ledger | `P1-SIX-ROUTE-PROGRAM.md`; `RESULTS-SIX-ROUTE-EXHAUSTION.md` |
 | Inverse-Gray and moment hierarchy | `RESULTS-PARITY.md`; `verify_moment_negative.py` |
@@ -301,6 +302,11 @@ PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
 ```
 
 ## Best next theorem
+
+For a token-compressed logical audit, read `PROOF-STATE-CAPSULE.md` before
+this section.  In particular, `(SEP)` is the exact remaining endpoint-orbit
+separator, DLP/RW is the weakest current explicit finite-word sufficient
+target, and `(BWH+)` is a cleaner but stronger sufficient target.
 
 The cleanest current target is:
 

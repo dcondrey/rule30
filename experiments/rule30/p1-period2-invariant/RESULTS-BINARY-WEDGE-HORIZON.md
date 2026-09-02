@@ -148,6 +148,28 @@ The source-assumption cores are not generally singleton and their positions
 are irregular.  A proof should expect a branched ancestry or a nonlinear
 clause, not one propagating defect and not a fixed linear parity separator.
 
+The exact inclusion-minimal cores found by one deterministic solver run are:
+
+| `n` | tail 2 source positions | tail 3 source positions |
+|---:|:---|:---|
+| 7 | `(3)` | `(2,3,4)` |
+| 8 | `(2,4,5)` | `(1,2,3,5,7)` |
+| 9 | `(1,2,3,4)` | `(1,2,3,4,5)` |
+| 10 | `(6,8)` | `(3,4,5)` |
+| 11 | `(4,5,8)` | `(5,6,7,9)` |
+| 12 | `(5,6,7,8,11)` | `(3,4,6,7)` |
+| 13 | `(2,3,4,5,7,8,9)` | `(4,5,6,7,8,9)` |
+
+Every formula is SAT when all source positions are four-state, and every
+one-assumption deletion from a displayed core is SAT.  The cores are not
+canonical; their growth and movement are the relevant negative result.
+
+Direct ANF expansion gives the same warning.  By source lengths 8--12 each
+binary-legality residual depends on every source variable, has hundreds to
+thousands of monomials, and usually has degree `n` or `n-1`.  The apparent
+counting surplus of `n+2` equations over `n` bits is therefore not a
+triangular linear-rank proof in the raw source coordinates.
+
 ## 6. Reproduction
 
 ```bash
@@ -158,4 +180,11 @@ PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
 PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
   experiments/rule30/p1-period2-invariant/binary_wedge_adversary.py \
   --lengths 15 24 32 --population 128 --generations 80
+
+PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
+  experiments/rule30/p1-period2-invariant/binary_wedge_sat.py \
+  --first-n 7 --last-n 30
+
+PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
+  experiments/rule30/p1-period2-invariant/binary_wedge_source_core.py
 ```

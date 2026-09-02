@@ -51,10 +51,11 @@ evolution using symmetric difference and OR-convolution:
 - <https://mathematica.stackexchange.com/questions/318912/rule-30-finding-a-closed-formula-for-the-s-m-subset-recurrence/319098>
 
 This may be a useful exact representation after independent verification,
-but the advertised conclusions about density/randomness rely on empirical
-growth and probabilistic heuristics.  They cannot be imported as proofs of
-P1, P2, or P3.  ANF degree growth also does not give a lower bound for the
-fixed single-seed bit problem.
+but the author explicitly reports that evaluation of the support set remains
+recursive and asks whether unresolved increment/carry collisions could imply
+irreducibility.  That is an open step, not a proof of P1, P2, or P3.  ANF
+degree growth also does not give a lower bound for the fixed single-seed bit
+problem.
 
 ### Other searches
 
