@@ -8,6 +8,7 @@ from p2_time_index_walsh_probe import (
     maximum_aligned_restriction,
     record,
     walsh_transform,
+    xor_autocorrelations,
 )
 
 
@@ -28,6 +29,14 @@ class TimeIndexWalshTest(unittest.TestCase):
     def test_bit_derivatives(self) -> None:
         parity = [1, -1, -1, 1]
         self.assertEqual(bit_derivative_correlations(parity), [-4, -4])
+
+    def test_xor_autocorrelations_against_direct_sum(self) -> None:
+        values = [1, -1, -1, -1, 1, 1, -1, 1]
+        direct = [
+            sum(values[index] * values[index ^ shift] for index in range(8))
+            for shift in range(8)
+        ]
+        self.assertEqual(xor_autocorrelations(values), direct)
 
     def test_small_rule30_shell(self) -> None:
         row = record(center_column(32), 4)

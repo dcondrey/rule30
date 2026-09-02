@@ -37,6 +37,8 @@ class WalshRecord:
     max_shell_prefix: int
     max_aligned_restriction: int
     max_abs_bit_derivative_correlation: int
+    max_abs_xor_autocorrelation_nonzero: int
+    l1_xor_autocorrelation: int
 
     @property
     def random_scale_ratio(self) -> float:
@@ -90,6 +92,17 @@ def bit_derivative_correlations(values: Sequence[int]) -> list[int]:
     ]
 
 
+def xor_autocorrelations(values: Sequence[int]) -> list[int]:
+    """Return every XOR autocorrelation using Walsh convolution exactly."""
+
+    spectrum = walsh_transform(values)
+    length = len(spectrum)
+    numerators = walsh_transform([value * value for value in spectrum])
+    if any(value % length for value in numerators):
+        raise AssertionError("Walsh autocorrelation numerator is not divisible")
+    return [value // length for value in numerators]
+
+
 def record(bits: Sequence[int], k: int) -> WalshRecord:
     length = 1 << k
     if len(bits) < 2 * length:
@@ -104,6 +117,9 @@ def record(bits: Sequence[int], k: int) -> WalshRecord:
         running += value
         prefix_maximum = max(prefix_maximum, abs(running))
     correlations = bit_derivative_correlations(shell)
+    all_correlations = xor_autocorrelations(shell)
+    if all_correlations[0] != length:
+        raise AssertionError("zero-shift autocorrelation mismatch")
     return WalshRecord(
         k=k,
         length=length,
@@ -113,6 +129,8 @@ def record(bits: Sequence[int], k: int) -> WalshRecord:
         max_shell_prefix=prefix_maximum,
         max_aligned_restriction=maximum_aligned_restriction(shell),
         max_abs_bit_derivative_correlation=max(map(abs, correlations)),
+        max_abs_xor_autocorrelation_nonzero=max(map(abs, all_correlations[1:])),
+        l1_xor_autocorrelation=sum(map(abs, all_correlations)),
     )
 
 
@@ -145,7 +163,7 @@ def main() -> None:
 
     print(
         "k length dc max_walsh walsh_index prefix_max aligned_max "
-        "bit_derivative_max max/sqrt(kN)"
+        "bit_derivative_max xor_corr_max xor_corr_l1 max/sqrt(kN)"
     )
     for row in found:
         print(
@@ -153,6 +171,8 @@ def main() -> None:
             f"{row.max_walsh_index:11d} {row.max_shell_prefix:10d} "
             f"{row.max_aligned_restriction:11d} "
             f"{row.max_abs_bit_derivative_correlation:18d} "
+            f"{row.max_abs_xor_autocorrelation_nonzero:12d} "
+            f"{row.l1_xor_autocorrelation:11d} "
             f"{row.random_scale_ratio:.6f}"
         )
 

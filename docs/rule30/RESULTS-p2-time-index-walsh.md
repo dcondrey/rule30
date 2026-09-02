@@ -89,6 +89,15 @@ Thus
 W_k^2 <= sum_h |C_k(h)|.
 ```
 
+Consequently the averaged condition
+
+```text
+sum_h |C_k(h)| = o(2^(2k) / k^2)
+```
+
+already implies `k W_k/2^k -> 0` and proves P2.  This is weaker than
+controlling every nonzero shift separately.
+
 For example, a uniform bound
 
 ```text
@@ -145,6 +154,23 @@ random-function scale `sqrt(k 2^k)`.  At `k=18` the largest absolute
 correlation for a single-bit XOR derivative is `1,184`, or about `0.00452` of
 the shell.  Neither observation proves decay.
 
+The complete autocorrelation transform gives a second, unusually stable
+finite diagnostic:
+
+| `k` | max nonzero `|C_k(h)|` | `sum_h |C_k(h)|` | `log_N` of the sum |
+|---:|---:|---:|---:|
+| 8 | 60 | 4,596 | 1.521 |
+| 10 | 144 | 35,360 | 1.511 |
+| 12 | 368 | 300,416 | 1.516 |
+| 14 | 720 | 2,367,136 | 1.512 |
+| 16 | 1,568 | 19,151,408 | 1.512 |
+| 18 | 3,176 | 152,232,080 | 1.510 |
+| 20 | 6,792 | 1,213,086,912 | 1.509 |
+
+Thus the measured `l1` norm is consistent with `N^(3/2)` rather than the
+worst-case `N^2`.  Proving any fixed power saving from `N^2` would be more
+than enough for the theorem.  This finite exponent is still not a proof.
+
 The transform is exact integer arithmetic.  Tests pin two known transforms,
 Parseval's identity, aligned-block sums, XOR derivatives, and a direct Rule 30
 shell.
@@ -161,10 +187,10 @@ all-scale.  The following do not suffice:
 - a fit of the displayed finite values; or
 - qualitative nonidentity of two shifted traces.
 
-A useful next lemma would bound the *sum* of absolute XOR autocorrelations
-subquadratically in `2^k`, or give a recursive spectral norm for the complete
-same-orbit defect state.  Any recursion must retain the actual dyadic seam and
-absolute phase identified by the period-two negative results.
+A useful next lemma would bound the *sum* of absolute XOR autocorrelations by
+`O(2^((2-delta)k))` for some `delta>0`, or give a recursive spectral norm for
+the complete same-orbit defect state.  Any recursion must retain the actual
+dyadic seam and absolute phase identified by the period-two negative results.
 
 ## Reproduction
 
