@@ -135,6 +135,43 @@ This is again finite evidence, not induction.  It improves the proof target:
 instead of constructing a global matching, prove preservation of one marked
 raw-state exclusion under the exact scan and boundary append.
 
+### The exact inductive reduction
+
+Most of that preservation is already uniform.  Initially every positive
+root has depth zero and the normalized row has no raw state `3`.  An `A` or
+`B` update gives its new boundary child the parent's unchanged depth and raw
+boundary state `1` or `2`.  At a time-zero `C` update, the pivot is an
+initial symbol `1`, hence its root prefix already contains a feature.  Every
+later `C` is the proved post-retreat pull and its pivot has raw state `3`.
+Thus (5) gives one unit of reserve, precisely the unit consumed by the new
+`C` edge.  New children therefore preserve (5).
+
+Inherited coordinates keep the same root and depth.  Consequently the sole
+remaining inductive clause is
+
+> **Inherited zero-reserve lemma.** If a legal marked row satisfies (5) and
+> its queue update succeeds, no inherited coordinate of reserve zero scans
+> to raw state `3`.
+
+The four-state table reduces a first failure to exactly three local cases:
+
+```text
+(incoming scan state, normalized input) = (0,1), (1,2), or (2,0).       (5a)
+```
+
+It also locates the failure strictly left of the rightmost colex pivot.  At
+the pivot the raw output is `0` or `2`; to its right, the all-length accepted
+equality suffix is empty or `0*2` after raw output `0`, and its raw outputs
+are only `0` and `2`.  The constant-table part of this reduction is checked
+by `inherited_raw_three_reduction_control()`.
+
+This is a genuine reduction, not the missing proof.  To the left of the
+pivot, positive-reserve blocks transport the incoming state by the full
+`D8` action.  Contracting those blocks to arbitrary phases is too coarse;
+their reserve hierarchy must be retained recursively.  The remaining lemma
+is therefore a finite-phase, unbounded-depth block induction, rather than a
+fixed-window statement.
+
 ## 4. Why this target is strictly weaker
 
 Origin-prefix Hall sorts all pull origins and demands enough initial

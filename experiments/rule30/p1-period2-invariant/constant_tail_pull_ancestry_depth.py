@@ -10,6 +10,8 @@ from dataclasses import dataclass
 from constant_tail_mixed_run_budget import weighted_invariant_queue
 from constant_tail_origin_prefix_hall import feature_starts
 from constant_tail_queue import (
+    LIFT_GENERATORS,
+    SYMBOL_QUOTIENT,
     Vector,
     diagonal_from_endpoint,
     normalize_queue,
@@ -94,6 +96,40 @@ def temporal_recurrence(pulls: tuple[Pull, ...]) -> bool:
         if current.depth < (index + 2) // 2:
             return False
     return True
+
+
+def inherited_raw_three_reduction_control() -> tuple[tuple[int, int], ...]:
+    """Prove the constant-table part of the remaining induction.
+
+    A zero-reserve inherited coordinate can first violate the strengthened
+    invariant only by scanning to raw state 3.  The three displayed
+    incoming-state/input pairs are its complete local inverse image.
+
+    At and to the right of the rightmost colex pivot, the accepted suffix
+    classification rules out raw state 3: the pivot output is 0 or 2, and
+    the sole nonempty equality suffix is ``0*2`` after output 0.  Hence a
+    first bad inherited coordinate must lie strictly left of that pivot.
+    """
+
+    preimages = tuple(
+        (incoming, symbol)
+        for incoming in range(4)
+        for symbol in range(3)
+        if LIFT_GENERATORS[incoming][symbol] == 3
+    )
+    assert preimages == ((0, 1), (1, 2), (2, 0))
+
+    # A changed pivot reads normalized 1 and emits raw 0 or raw 2.
+    assert tuple(
+        (incoming, LIFT_GENERATORS[incoming][1])
+        for incoming in range(4)
+        if SYMBOL_QUOTIENT[LIFT_GENERATORS[incoming][1]] != 1
+    ) == ((1, 2), (3, 0))
+
+    # The only nonempty accepted equality suffix is 0*2 after raw 0.
+    assert LIFT_GENERATORS[0][0] == 0
+    assert LIFT_GENERATORS[0][2] == 2
+    return preimages
 
 
 def audit(queue: Vector, tail: int, cap: int, census: Census) -> None:
@@ -234,10 +270,17 @@ def main() -> None:
         parser.error("invalid audit bound")
 
     actual_updates, actual_pulls, actual_depth = actual_right_depth_control()
+    bad_cases = inherited_raw_three_reduction_control()
     print(
         "actual-right depth control: endpoint-length=64 "
         f"updates={actual_updates} pulls={actual_pulls} "
         f"maximum-depth={actual_depth} PASS",
+        flush=True,
+    )
+    print(
+        "inherited raw-3 reduction: "
+        f"preimages={bad_cases} and accepted-pivot suffixes exclude raw 3 "
+        "at/right-of-pivot PASS",
         flush=True,
     )
 

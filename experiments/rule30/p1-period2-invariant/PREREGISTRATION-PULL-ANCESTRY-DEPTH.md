@@ -93,3 +93,10 @@ The strengthened held-out gate is every invariant queue of length 17,
 followed by 100,000 newly seeded random and 100,000 newly seeded sparse
 queues per tail across lengths through 128.  Passing remains finite evidence;
 the proof target is preservation of `(AD3)` by the exact marked raw scan.
+
+After that gate passed, the induction was reduced algebraically: base rows
+and appended children preserve `(AD3)`, so only inherited zero-reserve
+coordinates remain.  The raw table gives the three possible bad local cases
+`(0,1),(1,2),(2,0)`, all strictly left of the rightmost pivot.  This later
+deduction is recorded as a proof reduction, not as part of the frozen
+empirical claim.
