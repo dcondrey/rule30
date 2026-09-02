@@ -27,6 +27,7 @@ from period3_fiber_probe import (
 )
 
 Core = tuple[int, ...]
+QuotientCore = tuple[int, ...]
 
 
 def normalize(core: Iterable[int]) -> Core:
@@ -76,6 +77,47 @@ def core_step(core: Core, center: int) -> Core:
     return normalize(output)
 
 
+def raw_symbol_quotient(symbol: int) -> int:
+    """Map ``00,01,10,11`` to the exact quotient ``0,1,2,2``."""
+
+    if not 0 <= symbol < 4:
+        raise ValueError("pair symbols must lie in [0,3]")
+    return 2 if symbol & 2 else symbol & 1
+
+
+def deep_quotient(core: Core) -> QuotientCore:
+    """Return the normalized core in deep-to-shallow quotient orientation."""
+
+    return tuple(raw_symbol_quotient(symbol) for symbol in reversed(normalize(core)))
+
+
+def normalize_deep(core: Iterable[int]) -> QuotientCore:
+    """Strip the inert leading zeros in deep-to-shallow orientation."""
+
+    result = tuple(core)
+    if any(not 0 <= symbol < 3 for symbol in result):
+        raise ValueError("quotient symbols must lie in [0,2]")
+    first = next((index for index, symbol in enumerate(result) if symbol), len(result))
+    return result[first:]
+
+
+def quotient_step(core: QuotientCore, center: int) -> QuotientCore:
+    """Advance the exact three-symbol core quotient by one free step."""
+
+    core = normalize_deep(core)
+    carry = 0
+    output = []
+    for symbol in core:
+        output.append(2 if carry else int(symbol == 2))
+        if symbol:
+            carry ^= 1
+    parity = pair_parity(core)
+    if carry != parity:
+        raise AssertionError("quotient scan parity mismatch")
+    output.append(2 if parity else (center & 1))
+    return normalize_deep(output)
+
+
 def driven_step(core: Core, period: tuple[int, ...], phase: int) -> Core | None:
     """Apply one period-driven step, returning ``None`` on a failed pin."""
 
@@ -85,6 +127,19 @@ def driven_step(core: Core, period: tuple[int, ...], phase: int) -> Core | None:
     if center == 1 and parity != (1 ^ following):
         return None
     return core_step(core, center)
+
+
+def quotient_driven_step(
+    core: QuotientCore, period: tuple[int, ...], phase: int
+) -> QuotientCore | None:
+    """Apply a checked period-driven step to the three-symbol quotient."""
+
+    center = period[phase % len(period)]
+    following = period[(phase + 1) % len(period)]
+    parity = pair_parity(core)
+    if center == 1 and parity != (1 ^ following):
+        return None
+    return quotient_step(core, center)
 
 
 @dataclass(frozen=True)
@@ -190,4 +245,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

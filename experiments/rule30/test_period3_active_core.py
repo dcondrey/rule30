@@ -5,10 +5,14 @@ import unittest
 from period3_active_core import (
     check_frontier_conjugacy,
     core_step,
+    deep_quotient,
     driven_step,
     lifetime,
     normalize,
     pair_parity,
+    quotient_driven_step,
+    quotient_step,
+    raw_symbol_quotient,
 )
 
 
@@ -30,6 +34,21 @@ class PeriodThreeActiveCoreTest(unittest.TestCase):
         self.assertIsNotNone(driven_step((1,), (0, 1, 1), 2))
         self.assertIsNone(driven_step((1, 1), (0, 1, 1), 2))
 
+    def test_three_symbol_quotient_is_exact(self) -> None:
+        self.assertEqual([raw_symbol_quotient(symbol) for symbol in range(4)], [0, 1, 2, 2])
+        cores = ((), (1,), (2,), (3,), (0, 1, 2), (3, 0, 1, 2))
+        for core in cores:
+            for center in (0, 1):
+                self.assertEqual(
+                    deep_quotient(core_step(core, center)),
+                    quotient_step(deep_quotient(core), center),
+                )
+            for period in ((0, 1, 1), (0, 0, 1)):
+                for phase in range(3):
+                    raw = driven_step(core, period, phase)
+                    quotient = quotient_driven_step(deep_quotient(core), period, phase)
+                    self.assertEqual(None if raw is None else deep_quotient(raw), quotient)
+
     def test_frontier_conjugacy(self) -> None:
         check_frontier_conjugacy(7)
 
@@ -42,4 +61,3 @@ class PeriodThreeActiveCoreTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

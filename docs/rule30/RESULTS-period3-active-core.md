@@ -42,6 +42,28 @@ deep `00` suffix can consequently be stripped exactly.  This gives a
 deterministic partial map on arbitrary finite words over four symbols, driven
 only by temporal phase.
 
+There is also an exact three-symbol quotient.  Reverse the word so it is read
+deep-to-shallow.  Raw symbols `10` and `11` are indistinguishable: both have
+first bit one, OR-value one, and therefore the same carry transition and
+output.  Write
+
+```text
+00 -> 0,   01 -> 1,   {10,11} -> 2.
+```
+
+Starting with carry zero, a quotient input symbol `s` emits
+
+```text
+carry=0:  emit 1 iff s=2, otherwise 0,
+carry=1:  emit 2,
+toggle carry iff s!=0.
+```
+
+After the last input, append `2` when the final parity is one, and otherwise
+append the center bit `c_t`.  Leading zeros are inert in this orientation and
+are stripped.  This quotient is exact after every step, not an empirical
+merger, and is cross-checked against the four-symbol map.
+
 The implementation cross-checks this word map against the independent packed
 integer frontier for every binary shallow-input history through length nine
 in both primitive necklaces.
@@ -97,4 +119,3 @@ reachability constraints at the knee.  Its survival through length ten makes
 it a legitimate first proof target; a counterexample at larger length would
 redirect the proof to the exact reachable language without affecting the
 conjugacy.
-
