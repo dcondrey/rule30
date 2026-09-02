@@ -268,7 +268,7 @@ def synthesize(width: int) -> tuple[z3.CheckSatResult, int, int, int]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--first-width", type=int, default=1)
-    parser.add_argument("--last-width", type=int, default=8)
+    parser.add_argument("--last-width", type=int, default=5)
     args = parser.parse_args()
     if not 1 <= args.first_width <= args.last_width:
         parser.error("invalid width interval")
