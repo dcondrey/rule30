@@ -1,6 +1,6 @@
 # Rule 30 experiment atlas and cross-examination ledger
 
-Updated: 2026-09-02
+Updated: 2026-09-03
 
 Status: **ORGANIZATIONAL SYNTHESIS; NO PRIZE PROBLEM SOLVED.**
 
@@ -85,8 +85,11 @@ remain the exhaustive item-by-item list.
 | Symbolic formulas, ideals, and proof systems | dynamic ideal, mortality SAT, interpolant, Bezout, cofactor, `PATH:9,81,85,87` | Exact finite certificates and some uniform branch identities | Survivor indicators, restart cocycle, Craig cuts | Translation changes the boundary state; satisfiable fixed-input proofs remain small |
 | Peel/cut/queue/frontier geometry | rotated Peel through frontier-graph reports | Full period-two finite-rank branch reduced to orbit separation (`R`) | Shared `phi` triangle, rank descent, inverse system | Aperiodic endpoint/source-orbit disjointness remains |
 | P2 measures and orbit closure | `PATH:8,11,44--47,61,78--80`; checkerboard reports | Ensemble facts and bounded patch growth | Markov classifications, checkerboard fixed point | Almost-everywhere statements miss the lone seed |
-| P2 finite trace statistics | `PATH:76,89`; subword reports | Large finite periodicity exclusion and no detected bias (`C/M`) | Bit-exact long prefixes and factor counts | Any finite prefix leaves larger eventual periods open |
+| P2 finite trace statistics | `PATH:76,89`; subword and dyadic-shell reports | Large finite periodicity exclusion and no detected bias (`C/M`) | Bit-exact long prefixes, factor counts, shell discrepancy | Any finite prefix leaves the asymptotic limit open |
+| P2 seed-specific dyadic analysis | `RESULTS-p2-p3-cross-review-2026-09-03.md`; `RESULTS-p2-time-index-walsh.md` | P2 iff dyadic-shell maximal discrepancy is sublinear; sufficient Walsh and averaged xor-correlation bounds (`U/R`) | Canonical all-scale target and exact Fourier identities | Quantitative correlation decay for this fixed orbit remains unproved |
+| P2 local conservation laws | `RESULTS-additive-conservation-probe.md` | Only trivial rational additive densities through width 12 (`C/K`) | Exact rank certificate and Rule 184 positive control | Finite width does not exclude nonlocal or unbounded-width laws |
 | P3 algebraic/circuit/proof complexity | `PATH:9,12--24,43,48,63--66,81,85,87,91--93` | ANF theorem, exact small circuits, validated fuel (`U/C/I`) | Honest cost instrument and bounded controls | Arbitrary-input complexity is not fixed `n -> c_n` work |
+| P3 exact dyadic query algorithms | `RESULTS-hashlife-center.md` | Exact 1D Hashlife query; Rule 90 control polylogarithmic, measured Rule 30 calls superlinear (`U/M/K`) | A concrete shortcut architecture and exact cost counter | One failed architecture cannot prove a lower bound |
 | Geometric, physical, and information analogies | `PATH:6,55--62,73,83,86` | Proposed routes killed or shown column-blind (`K`) | Sensitivity screens for future proposals | Single-column blindness, wrong category, or Rule 90 control |
 | Adaptive/ML search | `PATH:19,21--24,30,40,90--92`; OpenEvolve reports | Exact falsifiers and evaluator lessons | Width-18 plateau edge; adversarial cut corpus | Finite fitness rewards phase residues and overfitting |
 
@@ -407,9 +410,10 @@ quantifiers by itself.
   adjacent periodic column, and finite-delay reconstruction is falsified.
 - Sheared-column dyadic periodicity does not constrain the moving physical
   center diagonal without a proved bridge.
-- Walsh/Fourier spectra of a Boolean gate do not imply center density `1/2`;
-  P2 asks only single-symbol frequency and does not assert normality or de
-  Bruijn frequencies.
+- Walsh/Fourier spectra of the arbitrary-input Rule 30 gate or finite-time
+  center map do not imply P2.  This is distinct from the time-index function
+  `r -> c_(2^k+r)`: a uniform maximal-Walsh bound for that seed-specific
+  function does imply P2 by the proved dyadic-block decomposition.
 - Computational irreducibility does not imply Martin-Lof randomness or a
   relation to Chaitin's `Omega`.
 - A nonlinear “harmonic cascade” has no energy or bandwidth contradiction in
@@ -424,6 +428,17 @@ quantifiers by itself.
   P2 for the lone seed.
 
 ## 10. Recommended next sequence
+
+For P2, the prize-aligned next theorem is a uniform power saving for the
+time-index xor correlations on every dyadic shell.  Equivalently, prove enough
+Walsh decay to make `k W_k / 2^k -> 0`.  Use the exact two-orbit defect
+recurrence to retain source ancestry; do not return to ensemble ergodicity,
+generic Boolean-gate spectra, or larger finite bias tables.  For P3, only a
+new exact center-observational quotient is presently credible; ordinary
+Hashlife and arbitrary-input complexity have already failed to bridge to the
+fixed sequence.
+
+For the active P1 period-two effort:
 
 1. Prove or falsify pull-row alpha support using the exact activity-parity
    formula.  This one-coordinate pull-only statement is sufficient and is

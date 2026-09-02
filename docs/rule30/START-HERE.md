@@ -1,6 +1,6 @@
 # Rule 30: compact research index
 
-Updated: 2026-09-02
+Updated: 2026-09-03
 
 Purpose: resume this project with the fewest tokens consistent with not
 repeating work.  This file routes to authoritative sources; it is not itself a
@@ -11,8 +11,8 @@ source for publication claims.
 | Problem | Status | Best live edge |
 |---|---|---|
 | P1: center-column nonperiodicity | **OPEN** | R1's OR-specific zero-set obligation; within it, the period-two same-orbit rung |
-| P2: limiting density `1/2` | **OPEN** | R8/orbit-closure route remains conditional; ensemble ergodicity does not reach the lone seed |
-| P3: computational effort | **OPEN** | A genuine fixed-sequence work lower bound remains unproved; proof-complexity and finite circuit probes are bounded only |
+| P2: limiting density `1/2` | **OPEN** | Exact dyadic-shell/Walsh reductions now isolate a seed-specific quantitative target; the needed all-scale correlation bound is unproved |
+| P3: computational effort | **OPEN** | A genuine fixed-sequence work lower bound remains unproved; exact Hashlife works polylogarithmically for Rule 90 but grows superlinearly on measured Rule 30 inputs |
 
 Proved prize-adjacent results exclude eventually constant centers only:
 
@@ -40,6 +40,7 @@ The register is split for historical reasons:
 | Period-two same-orbit continuation after row 90 | `experiments/rule30/p1-period2-invariant/README.md` |
 | Cross-technique synthesis and new dyadic separator | `RESULTS-hybrid-review-2026-09-01.md` |
 | Corrected all-route synthesis after ancestry counterexamples | `RESULTS-cross-route-synthesis-2026-09-02.md` |
+| P2/P3 archive review and prize-aligned reductions | `RESULTS-p2-p3-cross-review-2026-09-03.md` |
 | External literature/claim audit | `PATH.md` section 8 and the two `REFUTATION-*` files |
 
 There is a historical row-number collision: `PATH.md` row 76 is the S-adic /
@@ -67,20 +68,37 @@ descent, periodic-mask contraction, or local additive rankings.
 
 ### P2
 
-Read `PATH.md` R8 and section 9.3, then
-`RESULTS-orbit-closure-diagnostic.md` and
-`RESULTS-checkerboard-growth-extended.md`.  Uniform Bernoulli invariance and
-almost-everywhere density `1/2` are known but miss the lone seed by obstruction
-E.  Checkerboard-patch growth is quantitative finite evidence, not a proof of
-orbit-closure membership.
+Read `RESULTS-p2-p3-cross-review-2026-09-03.md` and
+`RESULTS-p2-time-index-walsh.md` first.  For the signed center trace, P2 is
+exactly equivalent to sublinear maximal discrepancy on every dyadic shell.
+For the time-index Boolean function on one shell, maximal Walsh coefficient
+`W_k` satisfying `k W_k / 2^k -> 0` is sufficient; the weaker exact condition
+`sum_h |C_k(h)| = o(2^(2k)/k^2)` on xor autocorrelations is sufficient as well.
+These statements concern the lone seed directly.  Their finite measurements
+are strongly consistent with square-root cancellation, but no uniform bound
+is proved.
+
+Then read `PATH.md` R8 and section 9.3,
+`RESULTS-orbit-closure-diagnostic.md`, and
+`RESULTS-checkerboard-growth-extended.md` for the older measure route.  Uniform
+Bernoulli invariance and almost-everywhere density `1/2` miss the lone seed by
+obstruction E.  The orbit-closure target is likely stronger than P2, and
+checkerboard-patch growth is finite evidence only.  The literal local additive
+conservation-law route has also been eliminated over the rationals through
+width 12; see `RESULTS-additive-conservation-probe.md`.
 
 ### P3
 
-Read `PATH.md` R9, obstructions D/G/I, and rows 91–93.  The deterministic fuel
-instrument is validated but no evolutionary search ran.  Exact succinct-index
-circuit synthesis gives bounded results only.  Do not infer a work lower bound
-from arbitrary-input ANF degree, one derivation system, proof size, or a fitted
-runtime exponent at small `n`.
+Read `RESULTS-p2-p3-cross-review-2026-09-03.md`,
+`RESULTS-hashlife-center.md`, `PATH.md` R9, obstructions D/G/I, and rows 91–93.
+The deterministic fuel instrument is validated but no evolutionary search ran.
+Exact one-dimensional Hashlife computes the center without materializing the
+full spacetime cone, but its memoized Rule 30 advance-call count is already
+superlinear in the measured range; the Rule 90 control is polylogarithmic.
+This kills the literal Hashlife shortcut, not every possible observational
+quotient.  Exact succinct-index circuit synthesis gives bounded results only.
+Do not infer a fixed-sequence work lower bound from arbitrary-input ANF degree,
+one derivation system, proof size, or a fitted finite-range runtime exponent.
 
 ## Current P1 period-two frontier
 

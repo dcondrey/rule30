@@ -31,8 +31,8 @@ one for each question.
 | Problem | Official question | Status here | Strongest live edge |
 |---|---|---|---|
 | **P1** | Does the center column always remain non-periodic? | **Open** | Exclude a nonconstant period-two center trace for every nonzero finite row |
-| **P2** | Does each color occur equally often on average in the center column? | **Open** | Bridge ensemble results to the single-seed orbit |
-| **P3** | Does the `n`th center cell require at least `O(n)` computational effort? | **Open** | Prove a fixed-sequence work lower bound in an explicit computation model |
+| **P2** | Does each color occur equally often on average in the center column? | **Open** | Prove seed-specific dyadic-shell Walsh/correlation decay |
+| **P3** | Does the `n`th center cell require at least `O(n)` computational effort? | **Open** | Prove a fixed-sequence work lower bound or find an exact sublinear query algorithm |
 
 The exact problem statements and submission rules are maintained at
 [rule30prize.org](https://rule30prize.org/).
@@ -128,7 +128,13 @@ The repository also contains:
 
 - exact center-column and subword-complexity measurements through recorded
   finite horizons;
+- an exact equivalence between P2 and sublinear maximal discrepancy on dyadic
+  shells, plus sufficient time-index Walsh and xor-autocorrelation bounds;
 - checkerboard-patch growth measurements with bit-exact kernel cross-checks;
+- an exact Hashlife-style center-query implementation with a polylogarithmic
+  Rule 90 control and a negative finite result for the literal Rule 30 route;
+- exact finite certificates excluding nontrivial rational additive local
+  densities through width 12;
 - bounded circuit-synthesis and proof-complexity probes;
 - a deterministic word-RAM fuel instrument for evaluating proposed P3
   algorithms; and
