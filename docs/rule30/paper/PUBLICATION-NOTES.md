@@ -1,11 +1,26 @@
 # Publication notes: Rule 30 zero-tail theorem
 
+## Submission audit, 2026-09-02
+
+The submission draft now distinguishes a horizon (the last matching time,
+starting at time zero) from a prefix length (the number of matching symbols).
+Thus the combined maximum horizon is `w+1` and the corresponding maximum
+constant-prefix length is `w+2`. The extremizer counts remain `2^w` for even
+`w` and `2^w-1` for odd `w`.
+
+The Voorhees DOI has been corrected from the unrelated `10.1007/BF01223376`
+to `10.1007/BF01223374`. The retained novelty wording no longer claims that
+the bare all-one exclusion is new: Jen 1986, Theorem 7a is too close to support
+that claim. The paper claims the exact two fiber classifications and sharp
+horizon/count laws, none of which occurs in the four audited prior sources.
+See `CITATION-AUDIT.md`.
+
 ## Defensible claim
 
-> We prove a Rule-30-specific zero-trace fiber theorem for finite
-> configurations, settling the eventually-constant case of Kopra's width-one
-> finite-configuration eventual-periodicity problem, and obtain a sharp
-> finite-radius escape-time law.
+> We classify both constant trace fibers of Rule 30, prove that no column in
+> the orbit of a nonzero finite configuration is eventually constant, and give
+> the sharp finite-radius horizon and exact extremizer counts. This settles the
+> period-one case of Kopra's broader width-one finite-configuration question.
 
 **Scope widened 2026-08-30 from constant-zero to eventually-constant.**
 `zero-tail-note.tex` now carries Corollary 5: no column of the orbit of a
@@ -15,7 +30,8 @@ identity at the origin, and needs nothing outside the manuscript.  The
 constant-one side is now stated in full rather than gestured at: Theorem 3 gives
 the all-one fiber, a single checkerboard left half independent of the right
 half, Theorem 7 its sharp horizon `q-1` for `q` the least even integer past `w`
-with `2^w` extremizers, and Corollary 8 the combined law, longest constant central prefix `w+1` with `2^w` extremizers for even `w`
+with `2^w` extremizers, and Corollary 8 the combined law, maximum last constant
+time `w+1` (prefix length `w+2`) with `2^w` extremizers for even `w`
 and `2^w-1` for odd `w`.  All of this was already proved in
 `../RESULTS-eventual-period.md`; the note had been carrying only the zero half,
 so it under-claimed against the repo's own settled results.  Independently
@@ -435,12 +451,10 @@ from a zero trace; describe it as a partial formalization only.
 
 ## Before external circulation
 
-- **AI-disclosure statement is still missing from the manuscript.**  The arXiv
-  policy quoted above requires significant use of text-to-text generative AI to
-  be reported in methodology or acknowledgments.  `zero-tail-note.tex` has no
-  such statement.  Left unwritten deliberately: the wording asserts what the
-  named author's own contribution was, which is his to state, not to be drafted
-  for him.
+- ~~**AI-disclosure statement is still missing from the manuscript.**~~
+  **DONE 2026-09-02.** Appendix A identifies OpenAI Codex's editorial,
+  computation-orchestration, and citation-checking assistance and assigns
+  responsibility for the mathematics, proofs, and final text to the author.
 - ~~Replace “Anonymous working draft” with the actual author list and
   affiliations.~~  **DONE 2026-08-28.**  `zero-tail-note.tex:26-28` and the
   `pdfauthor` field carry David Lee Condrey, WritersLogic, Inc.,
