@@ -1,12 +1,14 @@
-# Rule 30 Prize Research
+<!-- repo-header:start -->
+<img src="https://github.com/dcondrey.png?size=160" alt="Rule 30 Prize Research logo" width="120" align="left">
 
-[![Research status](https://img.shields.io/badge/status-active%20research-blue)](https://github.com/dcondrey/rule30)
-[![Prize problems solved](https://img.shields.io/badge/prize%20problems%20solved-0%20of%203-red)](https://rule30prize.org/)
-[![Reproducibility](https://img.shields.io/badge/reproducibility-exact%20checks%20%2B%20audit%20logs-green)](docs/rule30/START-HERE.md)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0003--1849--2963-green.svg)](https://orcid.org/0009-0003-1849-2963)
+<h1>Rule 30 Prize Research</h1>
 
-**A proof-oriented, adversarially checked investigation of the three Wolfram
-Rule 30 Prize Problems.**
+<p><strong>Proof-oriented, reproducible research on the Wolfram Rule 30 Prize Problems: partial theorems, exact certificates, and audited experiments.</strong></p>
+
+<br clear="left">
+
+[![Best Practices Evidence](https://img.shields.io/badge/best%20practices-evidence%20reviewed-6a4c93?style=flat-square&labelColor=20232a)](.bestpractices.json) [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?style=flat-square&labelColor=20232a)](https://github.com/sponsors/dcondrey) [![Research status](https://img.shields.io/badge/status-active%20research-blue?style=flat-square&labelColor=20232a&color=brightgreen)](https://github.com/dcondrey/rule30) [![Prize problems solved](https://img.shields.io/badge/prize%20problems%20solved-0%20of%203-red?style=flat-square&labelColor=20232a)](https://rule30prize.org/) [![Reproducibility](https://img.shields.io/badge/reproducibility-exact%20checks%20%2B%20audit%20logs-green?style=flat-square&labelColor=20232a)](docs/rule30/START-HERE.md) [![ORCID](https://img.shields.io/badge/ORCID-0009--0003--1849--2963-green.svg?style=flat-square&labelColor=20232a&color=A6CE39)](https://orcid.org/0009-0003-1849-2963)
+<!-- repo-header:end -->
 
 Rule 30 is a one-dimensional cellular automaton whose local update is
 

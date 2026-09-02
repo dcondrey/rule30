@@ -1,4 +1,14 @@
-# Rule 30 zero-tail note
+<!-- repo-header:start -->
+<img src="https://github.com/dcondrey.png?size=160" alt="Rule 30 zero-tail note logo" width="120" align="left">
+
+<h1>Rule 30 zero-tail note</h1>
+
+<p><strong>Documentation for Rule 30 zero-tail note in Rule30.</strong></p>
+
+<br clear="left">
+
+[![Best Practices Evidence](https://img.shields.io/badge/best%20practices-evidence%20reviewed-6a4c93?style=flat-square&labelColor=20232a)](../../../.bestpractices.json) [![GitHub Sponsors](https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?style=flat-square&labelColor=20232a)](https://github.com/sponsors/dcondrey)
+<!-- repo-header:end -->
 
 This directory contains a six-page theorem note for the proved
 finite-support constant-trace results, in five sections with two figures.  It
