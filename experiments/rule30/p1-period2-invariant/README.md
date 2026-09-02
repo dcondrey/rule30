@@ -47,6 +47,7 @@ Use this routing table:
 | Stronger active-core diagonal CNF | `RESULTS-CORE-MORTALITY-SAT.md`; `core_mortality_sat.py` |
 | Projected cut / interpolant probe | `PREREGISTRATION-CORE-INTERPOLANT.md`; `RESULTS-CORE-INTERPOLANT.md`; `core_interpolant_probe.py` |
 | Peel/Craig endpoint morph | `RESULTS-CORE-CRAIG-MORPH.md`; `core_craig_morph.py` |
+| Cartier/rationality route disposition | `RESULTS-CARTIER-ROUTE-DISPOSITION.md` |
 | Dyadic-period graph audit | `RESULTS-DYADIC-PERIODICITY.md`; `dyadic_periodicity_analyzer.py` |
 | Dyadic exceptional-family separator | `RESULTS-DYADIC-EXCEPTION-SEPARATOR.md`; `dyadic_exception_separator.py` |
 | Dyadic route scope disposition | `RESULTS-DYADIC-ROUTE-DISPOSITION.md` |
