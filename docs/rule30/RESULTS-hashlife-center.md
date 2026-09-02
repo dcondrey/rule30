@@ -72,11 +72,15 @@ query rather than reuse from a previous value of `n`.
 | 30 | 1024 | 1 | 24,377 | 24,519 |
 | 30 | 2048 | 0 | 73,942 | 74,159 |
 | 30 | 4096 | 1 | 174,347 | 174,676 |
+| 30 | 8192 | 1 | 501,531 | 502,181 |
 
-The log-log fit for cache misses over these five sizes is `n^0.142` for the
-Rule 90 positive control and `n^1.617` for Rule 30.  The Rule 90 count is in
-fact four additional cache entries per doubling after this transient.  Rule
-30 uses more memoized subqueries than `n` at every displayed size.
+The log-log fit for cache misses over the first five sizes is `n^0.142` for
+the Rule 90 positive control.  Extending Rule 30 to the sixth size changes its
+fit from `n^1.617` to `n^1.573`; the last doubling alone grows by a factor
+`2.876` (exponent `1.524`).  The Rule 90 count is in fact four additional
+cache entries per doubling after this transient.  Rule 30 uses more memoized
+subqueries than `n` at every displayed size, reaching about `61.2 n` at
+`n=8192`.
 
 The statistic is representation-level work.  Hash lookup and node construction
 have nonzero Turing-machine cost, so a sublinear cache-miss theorem would only

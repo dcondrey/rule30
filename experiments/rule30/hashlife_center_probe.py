@@ -210,7 +210,7 @@ def main() -> None:
         found = [query_power_of_two(rule, 1 << k) for k in range(args.min_k, args.max_k + 1)]
         report[str(rule)] = {
             "records": [asdict(row) for row in found],
-            "fitted_cache_miss_exponent": fitted_exponent(found),
+            "fitted_cache_miss_exponent": fitted_exponent(found) if len(found) >= 2 else None,
         }
 
     if args.json:
@@ -226,7 +226,8 @@ def main() -> None:
                 f"{row['advance_cache_misses']:20d} "
                 f"{row['interned_nonleaf_nodes']:22d}"
             )
-        print(f"fitted exponent: {item['fitted_cache_miss_exponent']:.6f}")
+        exponent = item["fitted_cache_miss_exponent"]
+        print("fitted exponent: n/a" if exponent is None else f"fitted exponent: {exponent:.6f}")
 
 
 if __name__ == "__main__":

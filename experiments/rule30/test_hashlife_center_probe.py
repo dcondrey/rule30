@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import subprocess
+import sys
 import unittest
+from pathlib import Path
 
 from hashlife_center_probe import Hashlife1D, query_power_of_two
 from right_cone_probe import center_trace
@@ -54,6 +57,24 @@ class HashlifeCenterTest(unittest.TestCase):
     def test_rejects_non_power_of_two(self) -> None:
         with self.assertRaises(ValueError):
             query_power_of_two(30, 12)
+
+    def test_single_scale_cli_does_not_require_a_fit(self) -> None:
+        completed = subprocess.run(
+            [
+                sys.executable,
+                str(Path(__file__).with_name("hashlife_center_probe.py")),
+                "--rules",
+                "90",
+                "--min-k",
+                "4",
+                "--max-k",
+                "4",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        self.assertIn("fitted exponent: n/a", completed.stdout)
 
 
 if __name__ == "__main__":
