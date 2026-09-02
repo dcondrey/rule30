@@ -46,6 +46,7 @@ Use this routing table:
 | Reverse fixed-horizon cascade and factor obstruction | `PREREGISTRATION-CORE-DISCHARGE.md`; `RESULTS-CORE-DISCHARGE.md`; `core_discharge.py` |
 | Stronger active-core diagonal CNF | `RESULTS-CORE-MORTALITY-SAT.md`; `core_mortality_sat.py` |
 | Projected cut / interpolant probe | `PREREGISTRATION-CORE-INTERPOLANT.md`; `RESULTS-CORE-INTERPOLANT.md`; `core_interpolant_probe.py` |
+| Peel/Craig endpoint morph | `RESULTS-CORE-CRAIG-MORPH.md`; `core_craig_morph.py` |
 | Dyadic-period graph audit | `RESULTS-DYADIC-PERIODICITY.md`; `dyadic_periodicity_analyzer.py` |
 | Dyadic exceptional-family separator | `RESULTS-DYADIC-EXCEPTION-SEPARATOR.md`; `dyadic_exception_separator.py` |
 | Rotated inverse-cone / Peel identity | `RESULTS-ROTATED-PEEL-IDENTITY.md`; `rotated_peel_identity.py` |
