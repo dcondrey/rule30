@@ -152,6 +152,19 @@ normalized `1` cells without visiting raw state `3`.  Hence the failed raw
 `#1` retreat budget cannot be repaired by merely adding a count of quotient
 disagreements.
 
+Here the family is legal only in the stronger arbitrary-queue boundary/SFT
+language; it is not endpoint-derived.  Exact triangular inversion gives
+
+```text
+m=1: endpoint 2131,
+m=2: endpoint 21213,
+m>=3: endpoint prefix 2120.
+```
+
+Thus no member is the diagonal of a hard-core endpoint.  The family is a
+valid obstruction to an arbitrary-queue proof, but it does not exhibit
+unbounded fan-out inside the actual endpoint-derived subsystem.
+
 The surviving target remains an ancestry theorem: repeated boundary resets
 must be charged to the *ordered extent* of state-1 propagation through the
 full word, not to a bounded overlay count.  The lossless boundary-gap list or
@@ -167,4 +180,3 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
 PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/constant_tail_dual_colex.py
 ```
-

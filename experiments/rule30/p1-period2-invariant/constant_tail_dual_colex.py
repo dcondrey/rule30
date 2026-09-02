@@ -13,12 +13,31 @@ from collections import deque
 
 from constant_tail_colex_descent import legal_decoder, latest_comparison
 from constant_tail_language_cocycle import SFT_TRANSITIONS
-from constant_tail_queue import normalize_queue, queue_step
+from constant_tail_queue import (
+    diagonal_from_endpoint,
+    normalize_queue,
+    queue_step,
+)
 from peel_lift_monoid import LIFT_GENERATORS
 
 
 BACKWARD_QUOTIENT = (0, 1, 2, 1)
 FORWARD_QUOTIENT = (0, 1, 2, 2)
+
+
+def endpoint_from_diagonal(diagonal: tuple[int, ...]) -> tuple[int, ...]:
+    """Invert the triangular endpoint-to-diagonal bijection."""
+
+    endpoint: tuple[int, ...] = ()
+    for target in diagonal:
+        candidates = tuple(
+            endpoint + (state,)
+            for state in range(4)
+            if diagonal_from_endpoint(endpoint + (state,))[-1] == target
+        )
+        assert len(candidates) == 1
+        endpoint = candidates[0]
+    return endpoint
 
 
 def product_control(
@@ -143,6 +162,26 @@ def main() -> None:
         assert normalized[1:-1] == tuple(scan)
         assert normalized[-1] == 1
     print("state-1 zero-block fanout family: lengths 1..64 PASS (uniform table proof)")
+
+    # The family is admissible for the stronger arbitrary-queue mortality
+    # language, but it is not itself the reversed diagonal of a hard-core
+    # endpoint.  The three cases below prove this uniformly: for m>=3 the
+    # desired diagonal always begins 1000 and hence its endpoint begins 2120.
+    assert endpoint_from_diagonal((1, 0, 1, 2)) == (2, 1, 3, 1)
+    assert endpoint_from_diagonal((1, 0, 0, 1, 2)) == (2, 1, 2, 1, 3)
+    assert endpoint_from_diagonal((1, 0, 0, 0)) == (2, 1, 2, 0)
+    for zeros in range(1, 65):
+        queue = (2, 1) + (0,) * zeros + (1,)
+        endpoint = endpoint_from_diagonal(tuple(reversed(queue)))
+        assert not all(
+            state in (1, 2)
+            and not (index and endpoint[index - 1] == state == 1)
+            for index, state in enumerate(endpoint)
+        )
+    print(
+        "fanout family is abstract-queue only: m=1 -> 2131, "
+        "m=2 -> 21213, m>=3 starts 2120 PASS"
+    )
 
 
 if __name__ == "__main__":
