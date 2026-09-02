@@ -142,6 +142,47 @@ certificate kills every proof using at most the final six cut symbols and no
 summary of the earlier triangle.  It does not rule out a larger or
 history-carrying finite state.
 
+The source-alphabet control does not reduce to one backward defect path.
+Relaxing exactly one source coordinate from `{1,2}` to all four states was
+tested through `n=12`.  Apart from the length-two tail-3 controls (where the
+last coordinate can become state `3`), every one-coordinate relaxation
+remained UNSAT.  Fully arbitrary four-state sources were themselves often
+UNSAT and produced only sporadic SAT instances through the completed range
+`n<=19`.  Thus the useful distinction between binary and four-state sources
+is global: a hypothetical backwards certificate branches or needs several
+source defects.  The preregistered single-path route is rejected; this does
+not weaken DLP on its binary domain.
+
+There is nevertheless a useful all-length coordinate identity behind this
+control.  For state `q=(h,l)`, put
+
+```text
+H(q)=h,       E(q)=1 XOR h XOR l.
+```
+
+Then `E=0` exactly on binary source states `{1,2}`, while `E=1` exactly on
+equality states `{0,3}`.  If `phi` is the inverse-cone local rule and the
+left/right inputs have coordinates `(H_L,E_L)` and `(H_R,E_R)`, direct
+Boolean reduction gives
+
+```text
+H(phi) = H_R XOR 1 XOR E_L XOR E_L*H_L,
+E(phi) = E_R XOR H_R*(H_L XOR E_L).                 (2)
+```
+
+The boundary permutation acts by
+
+```text
+(H,E) -> (1 XOR H,E).                               (3)
+```
+
+Equations (2)--(3) are checked on the complete 16-cell local table and all
+four boundary states.  They are a precise blend of the affine high-bit
+coordinate with the source defect detected by the CNF controls: the source
+hypothesis is simply `E=0`, a pull is an `H:0->1` transition along an `E=0`
+endpoint, and tails `2/3` are `(H,E)=(1,0)/(1,1)`.  This is a uniform lemma,
+but no invariant of (2) has yet proved DLP.
+
 ## 5. Relation to the other live routes
 
 DLP is the exact intersection of three earlier ideas:
@@ -169,7 +210,13 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
 PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
   experiments/rule30/p1-period2-invariant/late_pull_diagonal_sat.py \
   --max-n 20 --proof-through 10
+
+# Slower negative audit for a single backwards source-defect path:
+PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
+  experiments/rule30/p1-period2-invariant/late_pull_diagonal_sat.py \
+  --max-n 1 --window-audit-n 0 --source-defect-through 12
 ```
 
 The preregistrations are `PREREGISTRATION-LATE-PULL-HORIZON.md` and
-`PREREGISTRATION-LATE-PULL-DIAGONAL-CNF.md`.
+`PREREGISTRATION-LATE-PULL-DIAGONAL-CNF.md`; the rejected single-source-path
+variant is in `PREREGISTRATION-DLP-SOURCE-DEFECT.md`.

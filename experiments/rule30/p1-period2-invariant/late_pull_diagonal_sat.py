@@ -18,10 +18,45 @@ from typing import Iterable
 from pysat.solvers import Solver
 
 from constant_tail_scale import Vector, append_dependency_edge
+from dyadic_periodicity_analyzer import BOUNDARY, cone_local
 from mortality_sat import Encoder
 
 
 BitPair = tuple[int, int]
+
+
+def phase_defect(state: int) -> tuple[int, int]:
+    """Return (high,equality), with equality zero exactly on states 1/2."""
+
+    high, low = state >> 1, state & 1
+    return high, 1 ^ high ^ low
+
+
+def phase_defect_controls() -> int:
+    checked = 0
+    for left in range(4):
+        for right in range(4):
+            left_high, left_defect = phase_defect(left)
+            right_high, right_defect = phase_defect(right)
+            expected = (
+                right_high
+                ^ 1
+                ^ left_defect
+                ^ (left_defect & left_high),
+                right_defect
+                ^ (right_high & (left_high ^ left_defect)),
+            )
+            assert phase_defect(cone_local(left, right)) == expected
+            checked += 1
+    for state in range(4):
+        high, defect = phase_defect(state)
+        assert phase_defect(BOUNDARY[state]) == (1 ^ high, defect)
+        checked += 1
+    assert {state for state in range(4) if phase_defect(state)[1] == 0} == {
+        1,
+        2,
+    }
+    return checked
 
 
 @dataclass(slots=True)
@@ -420,7 +455,12 @@ def main() -> None:
         parser.error("invalid bounds")
 
     checked = validation(args.max_validate)
-    print(f"CNF/literal validation: {checked} formulas PASS", flush=True)
+    coordinates = phase_defect_controls()
+    print(
+        f"phase/equality local identities: {coordinates} cases PASS; "
+        f"CNF/literal validation: {checked} formulas PASS",
+        flush=True,
+    )
     arbitrary, no_hard_core = controls()
     print(
         "controls SAT: arbitrary-source W="

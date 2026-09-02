@@ -190,10 +190,24 @@ Three independent episodes have the same shape:
 | All accepted cuts have an odd period factor | Reachability from the zero ray | The eventually alternating exception is unreachable. |
 | Pull depth is bounded by an abstract coordinate budget | Hard-core endpoint forces diagonal prefix `203` | Every pull root is localized to the final three source coordinates. |
 | A finite list of right factors describes the terminal cone | Full actual-right inverse subsystem | Frontier distance increases, with exact inverse compatibility. |
+| Three-row late-pull exclusion holds for four-state sources | Source alphabet is `{1,2}` | No binary-source counterexample through length 20; four-state controls are SAT. |
 
 Therefore future conjectures should construct states from the genuine
 endpoint/source map at the outset.  Filtering arbitrary words afterward is
 too weak and repeatedly produces false theorems.
+
+For the last row, the source restriction has an exact algebraic coordinate.
+Writing `H=h` and `E=1+h+l`, binary states are exactly `E=0`, the boundary
+map preserves `E`, and the cone rule is
+
+```text
+H'=H_R+1+E_L+E_L H_L,
+E'=E_R+H_R(H_L+E_L).
+```
+
+This turns the source distinction into a zero-defect boundary condition.
+The one-source-defect relaxation is generally still UNSAT, so the backwards
+obstruction branches; it is not a single characteristic path.
 
 ### 3.3 All viable period-two targets are the same separation
 

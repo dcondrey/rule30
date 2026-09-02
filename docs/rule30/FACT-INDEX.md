@@ -356,6 +356,21 @@ the recorded long controls; its six exact CNF families are UNSAT through
 `n=20`, but no all-length proof is known.  Source: period-two
 `RESULTS-LATE-PULL-DIAGONAL.md`.
 
+The same diagonal audit supplies exact phase/equality coordinates.  For a
+four-state symbol `q=(h,l)`, define `H=h` and `E=1+h+l`, so `E=0` exactly on
+states `{1,2}`.  The inverse-cone local rule obeys
+
+```text
+H(phi)=H_R+1+E_L+E_L H_L,
+E(phi)=E_R+H_R(H_L+E_L),
+B(H,E)=(1+H,E)
+```
+
+over `GF(2)`.  This isolates the binary-source condition as a zero-defect
+boundary.  A single relaxed source coordinate generally does not realize a
+late pull, so a backwards proof must allow branching rather than one defect
+path.  Source: period-two `RESULTS-LATE-PULL-DIAGONAL.md`.
+
 ## Proved exclusions and reductions
 
 | Fact | Scope | Source |
