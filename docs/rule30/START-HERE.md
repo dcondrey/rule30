@@ -11,7 +11,7 @@ source for publication claims.
 | Problem | Status | Best live edge |
 |---|---|---|
 | P1: center-column nonperiodicity | **OPEN** | R1's OR-specific zero-set obligation; within it, the period-two same-orbit rung |
-| P2: limiting density `1/2` | **OPEN** | Exact dyadic-shell/Walsh reductions now isolate a seed-specific quantitative target; the needed all-scale correlation bound is unproved |
+| P2: limiting density `1/2` | **OPEN** | P2 is exactly subcubic integrated discrepancy energy on dyadic shells; the needed all-scale seed-specific bound is unproved |
 | P3: computational effort | **OPEN** | A genuine fixed-sequence work lower bound remains unproved; exact Hashlife works polylogarithmically for Rule 90 but grows superlinearly on measured Rule 30 inputs |
 
 Proved prize-adjacent results exclude eventually constant centers only:
@@ -41,7 +41,7 @@ The register is split for historical reasons:
 | Cross-technique synthesis and new dyadic separator | `RESULTS-hybrid-review-2026-09-01.md` |
 | Corrected all-route synthesis after ancestry counterexamples | `RESULTS-cross-route-synthesis-2026-09-02.md` |
 | P2/P3 archive review and prize-aligned reductions | `RESULTS-p2-p3-cross-review-2026-09-03.md` |
-| External literature/claim audit | `PATH.md` section 8 and the two `REFUTATION-*` files |
+| External literature/claim audit | `PATH.md` section 8, `REFUTATION-*`, and `CLAIM-AUDIT-*` |
 
 There is a historical row-number collision: `PATH.md` row 76 is the S-adic /
 Morse–Hedlund subword attempt, while `FINDINGS.md` row 76 is the alternating
@@ -70,13 +70,19 @@ descent, periodic-mask contraction, or local additive rankings.
 
 Read `RESULTS-p2-p3-cross-review-2026-09-03.md` and
 `RESULTS-p2-time-index-walsh.md` first.  For the signed center trace, P2 is
-exactly equivalent to sublinear maximal discrepancy on every dyadic shell.
-For the time-index Boolean function on one shell, maximal Walsh coefficient
-`W_k` satisfying `k W_k / 2^k -> 0` is sufficient; the weaker exact condition
-`sum_h |C_k(h)| = o(2^(2k)/k^2)` on xor autocorrelations is sufficient as well.
-These statements concern the lone seed directly.  Their finite measurements
-are strongly consistent with square-root cancellation, but no uniform bound
-is proved.
+exactly equivalent both to sublinear maximal discrepancy on every dyadic shell
+and to the subcubic integrated prefix energy `I_k=o(2^(3k))`.  The latter has
+an exact associative composition using only length, total discrepancy, prefix
+area, and energy.  A van der Corput theorem also proves P2 if every fixed
+ordinary time-shift defect has density `1/2`, giving the precise quantitative
+upgrade required from the temporal-period work.
+
+Stronger sufficient routes remain available.  Subquadratic dyadic-tree energy
+(with its exact signed XOR-correlation form), time-index Walsh decay, or an
+`l1` XOR-autocorrelation power saving each proves P2.  All statements concern
+the lone seed directly.  Measurements through the exact `2^25`-row cache are
+strongly consistent with square-root cancellation, but no uniform bound is
+proved.
 
 Then read `PATH.md` R8 and section 9.3,
 `RESULTS-orbit-closure-diagnostic.md`, and
@@ -89,16 +95,22 @@ width 12; see `RESULTS-additive-conservation-probe.md`.
 
 ### P3
 
-Read `RESULTS-p2-p3-cross-review-2026-09-03.md`,
-`RESULTS-hashlife-center.md`, `PATH.md` R9, obstructions D/G/I, and rows 91–93.
+Read `RESULTS-p2-p3-cross-review-2026-09-03.md`, `P3-SCOPE-AUDIT.md`,
+`RESULTS-hashlife-center.md`, `REFUTATION-nersissian-log-query.md`,
+`CLAIM-AUDIT-deva-dual-flow.md`, `PATH.md` R9, obstructions D/G/I, and rows
+91–93.
 The deterministic fuel instrument is validated but no evolutionary search ran.
 Exact one-dimensional Hashlife computes the center without materializing the
-full spacetime cone, but its memoized Rule 30 advance-call count is already
-superlinear in the measured range; the Rule 90 control is polylogarithmic.
+full spacetime cone, but its memoized Rule 30 advance-call count reaches
+501,531 at `n=8192` and remains superlinear in the measured range; the Rule 90
+control is polylogarithmic.
 This kills the literal Hashlife shortcut, not every possible observational
 quotient.  Exact succinct-index circuit synthesis gives bounded results only.
 Do not infer a fixed-sequence work lower bound from arbitrary-input ANF degree,
 one derivation system, proof size, or a fitted finite-range runtime exponent.
+The announcement's prose and displayed asymptotic predicate are inequivalent;
+the scope audit records the repository convention and the clarification needed
+before any positive lower-bound submission.
 
 ## Current P1 period-two frontier
 
