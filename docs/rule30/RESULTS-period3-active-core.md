@@ -182,3 +182,48 @@ grow—but it isolates the remaining theorem to finite-support carry rays.
 `period3_signature.py` checks the two-step erasure inequality and both the
 free and phase-driven semiconjugacies on every quotient word through length
 eight.  `test_period3_signature.py` supplies smaller regression controls.
+
+## 6. The `011` zero-tail dual and an all-length monotonicity theorem
+
+For `011`, group the dynamics into macros starting at phase zero.  The free
+macro parity is a branch bit `d`.  Inverting a macro prefixes the signature
+by the binary block `000` for `d=0` or `111` for `d=1`; above that block its
+section is respectively the inverse-generator word
+
+```text
+200 or 202.
+```
+
+After any finite branch prefix, the remaining coding map is a word `u` over
+the three inverse carry generators.  The next base-eight signature digit is
+the action of `u` on `000` or `111`, and the next coding section is `200`
+or `202` followed by the corresponding section of `u`.  Because each action
+is a permutation of the eight three-bit blocks, at most one branch emits
+digit zero.  This is the exact partial zero-tail dual in
+`period3_zero_tail_dual.py`.
+
+A finite signature has an eventually-zero base-eight expansion.  Therefore
+an immortal finite core would give an infinite orbit of this partial dual.
+That implication is exact; termination of every such orbit remains open.
+
+One uniform restriction is now proved.  Let `N_v(u)` count occurrences of
+the length-three factor `v` in the dual word and order the vector by
+
+```text
+010, 011, 012, 001, 201, 101,
+111, 211, 110, 112, 220.
+```
+
+Whenever `u` emits a zero digit and its successor can emit another zero
+digit, the displayed count vector is lexicographically nonincreasing.  This
+is an all-word theorem, not a length census.  For each pair of consecutive
+branch choices, a 580-state graph simultaneously tracks the two three-bit
+actions and the input/output trigram contexts.  Longest-path closure proves
+the first count cannot rise; retaining exactly its tight edges and repeating
+proves the assertion for every later coordinate.  Each weighted graph has no
+positive cycle, so the check covers words of arbitrary length.
+
+The lexicographic vector is not yet a ranking: equality transitions exist
+for all eleven coordinates, and local nonnegative trigram searches find no
+strict final component.  The live target has nevertheless narrowed to the
+equality subsystem, whose words cannot create any earlier listed defect.
