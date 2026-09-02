@@ -762,8 +762,9 @@ LATEST PULL-ROW ALPHA REDUCTION
 The endpoint/event bridge and zero-prefix scale scenarios combine to remove
 the pull-depth bound entirely. It is enough to prove: at every nonfinal pull
 row `j`, some token `k` with `j<=k<n` changes the single affine coordinate
-`alpha`. A non-eventually-2 immortal endpoint has infinitely many pulls, so
-for fixed `n` one eventually has `j>=n`, where that token interval is empty.
+`alpha`. A non-eventually-2 immortal endpoint has infinitely many pulls. For
+an absolute pull `m=3n+r`, with `n=floor(m/3)`, the scale block `e[n:2n]`
+sees row `j=n+r>=n`, where that token interval is empty.
 
 For raw reversed dependency queue `R` and previous endpoint `p`, the exact
 identity is
@@ -774,10 +775,28 @@ On hard-core rows this is just queue activity parity, and a pull is temporal
 transition `alpha:1 -> 0`. The frozen claim has zero failures in 392,830
 word/tail cases and 31,595 nonfinal pull rows through length 23, including
 357,414 held-out cases at lengths 19--23. This is finite evidence only.
-Token `k=j` already fails at length 6 and first-witness displacement reaches
-9, so do not seek a fixed-radius rule. The remaining task is an ordered
+Token `k=j` already fails at length 6. Alpha first-witness displacement
+reaches at least 12: `W=12122212212122222`, tail 2, row 1 has support
+`{13,16}`. The earlier reported value 9 tracked the two-coordinate projected
+witness, not alpha, so do not seek a fixed-radius rule. The remaining task is an ordered
 triangular parity-flux/noncrossing proof. Read
 `RESULTS-PULL-ROW-ALPHA-SUPPORT.md` before continuing.
+
+LATEST THREE-ROW LATE-PULL REDUCTION
+
+PAS is still stronger than necessary. Every sufficiently late absolute pull
+is `m=3n+r`, `0<=r<=2`, and the length-n scale block sees it at row `n+r`.
+Therefore it is enough to exclude nonfinal pulls only at rows `n,n+1,n+2`.
+This target has no alpha variables and no obligations on early rows.
+
+There are zero late pulls in all 392,830 hard-core word/tail cases through
+length 23, eight aligned GA adversaries, 240,000 long random word/tail cases,
+and all 4,194,300 binary word/tail cases through length 20. The six exact
+tail/residue CNF families are UNSAT through n=20. Generic proof width reaches
+81 by n=10 and solver conflicts reach about 10^5 by n=20, with no stable
+induction; these are finite results only. The next proof attempt should seek
+a three-row triangular boundary identity or diagonal-specific interpolant.
+Read `RESULTS-LATE-PULL-DIAGONAL.md` before continuing.
 
 REPRODUCTION COMMANDS
 

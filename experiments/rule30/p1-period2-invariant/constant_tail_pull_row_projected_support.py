@@ -32,7 +32,9 @@ class Census:
     projected_failures: int = 0
     alpha_failures: int = 0
     diagonal_failures: int = 0
-    maximum_first_displacement: int = 0
+    maximum_first_projected_displacement: int = 0
+    maximum_first_alpha_displacement: int = 0
+    maximum_alpha_displacement_witness: str | None = None
     first_projected_failure: str | None = None
     first_alpha_failure: str | None = None
     first_diagonal_failure: str | None = None
@@ -115,13 +117,19 @@ def audit_word(word: Vector, tail: int, census: Census) -> None:
                 if census.first_projected_failure is None:
                     census.first_projected_failure = description
             else:
-                census.maximum_first_displacement = max(
-                    census.maximum_first_displacement, witnesses[0] - row
+                census.maximum_first_projected_displacement = max(
+                    census.maximum_first_projected_displacement,
+                    witnesses[0] - row,
                 )
             if not alpha_witnesses:
                 census.alpha_failures += 1
                 if census.first_alpha_failure is None:
                     census.first_alpha_failure = description
+            else:
+                displacement = alpha_witnesses[0] - row
+                if displacement > census.maximum_first_alpha_displacement:
+                    census.maximum_first_alpha_displacement = displacement
+                    census.maximum_alpha_displacement_witness = description
             if row >= len(word) or row not in projected_edges:
                 census.diagonal_failures += 1
                 if census.first_diagonal_failure is None:
@@ -169,7 +177,10 @@ def main() -> None:
         f"projected-failures={census.projected_failures} "
         f"alpha-failures={census.alpha_failures} "
         f"diagonal-failures={census.diagonal_failures} "
-        f"maximum-first-displacement={census.maximum_first_displacement}"
+        "maximum-first-projected-displacement="
+        f"{census.maximum_first_projected_displacement} "
+        "maximum-first-alpha-displacement="
+        f"{census.maximum_first_alpha_displacement}"
     )
     print(
         "first alpha failure: "
@@ -178,6 +189,10 @@ def main() -> None:
     print(
         "first projected failure: "
         f"{census.first_projected_failure or 'none'}"
+    )
+    print(
+        "maximum alpha displacement witness: "
+        f"{census.maximum_alpha_displacement_witness or 'none'}"
     )
     print(
         "first diagonal failure: "

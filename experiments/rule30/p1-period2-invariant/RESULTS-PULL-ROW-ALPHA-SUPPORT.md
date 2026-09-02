@@ -40,11 +40,13 @@ immortal relevant queue
      OR infinitely many pull rows.                    (1)
 ```
 
-Fix any scale block `W` of length `n` in the remaining infinite endpoint.
-In the second branch, choose a nonfinal pull row `j>=n`.  PAS demands
-`j<=k<n`, an empty interval.  This contradiction proves the rank-zero
-separator.  The existing Peel-rank reduction then proves the nonconstant
-period-two exclusion.
+Let an absolute pull occur at endpoint position `m=3n+r`, where
+`n=floor(m/3)` and `0<=r<=2`, sufficiently far beyond the onset of the
+constant cut tail.  The scale block `W=e[n:2n]` sees this pull at forced row
+`j=m-2n=n+r>=n`.  PAS demands `j<=k<n`, an empty interval.  Infinitely many
+absolute pulls therefore contradict PAS; the eventually pull-free branch is
+already excluded.  This proves the rank-zero separator, after which the
+existing Peel-rank reduction proves the nonconstant period-two exclusion.
 
 No pull ancestry injection and no quantitative estimate such as
 `h<=floor((r+1)/2)` is needed.  PAS does not address periods above two.
@@ -119,8 +121,11 @@ Several tempting strengthenings are already false:
 - The diagonal token `k=j` need not work.  The smallest retained case is
   tail `3`, `W=122221`, survival two, pull row zero; its projected support is
   `{2,4,5}` and its alpha support is `{2,4}`.
-- In the held-out corpus, the first alpha witness can lie nine positions to
-  the right of `j`.  A fixed-radius local proof is unsupported.
+- The first alpha witness can lie at least twelve positions to the right of
+  `j`: at length 17, tail `2`, `W=12122212212122222`, row `1`, the alpha
+  support is `{13,16}`.  The previous reported value nine accidentally
+  tracked the two-coordinate projected witness rather than alpha.  A
+  fixed-radius local proof is unsupported.
 - Alpha support need not have odd cardinality, need not contain both source
   symbols, and may be a singleton.  A source-symbol or parity selector is
   false.

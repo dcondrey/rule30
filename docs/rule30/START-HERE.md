@@ -125,14 +125,31 @@ where `I` is inverse Gray code.  For a genuinely realizable right half,
 
 Best next theorem:
 
+> **Three-row late-pull diagonal.**  A length-`n` constant-tail scale block
+> has no nonfinal endpoint pull `1 -> 2` at rows `n,n+1,n+2`.
+
+This is strictly weaker than every support or survival conjecture below.  If
+an absolute pull is at `m=3n+r`, `n=floor(m/3)`, the block `e[n:2n]` sees it
+at relative row `n+r`; hence these three rows suffice.  The claim uses no
+alpha variables.  It has no failure in the full hard-core corpus through
+length 23, eight aligned GA adversaries, 240,000 long random word/tail cases,
+or all binary words through length 20.  Its exact diagonal CNFs are UNSAT
+through `n=20`, but generic proof width/conflicts grow and no induction is
+known.  A hard-core `n=12` certificate realizes the pull with a six-symbol
+constant cut suffix, so the three candidate rows do not reduce to a literal
+`3 x 3` local check.  See `RESULTS-LATE-PULL-DIAGONAL.md`.
+
+The stronger alpha route is:
+
 > **Pull-row alpha support.**  At every nonfinal forced endpoint transition
 > `1 -> 2`, some zero-prefix token `k` at or to the right of row `j` changes
 > the single affine coordinate `alpha`.
 
 An immortal relevant endpoint either becomes eventually `2` (already
-excluded) or has infinitely many such pull rows.  For a fixed word length
-`n`, a pull row `j>=n` makes the required token interval empty, so this lemma
-closes the period-two rung.  On hard-core rows `alpha` is exactly the parity
+excluded) or has infinitely many such pull rows.  For an absolute pull
+`m=3n+r`, the scale block `e[n:2n]` sees row `j=n+r>=n`, making the required
+token interval empty; thus this lemma closes the period-two rung.  On
+hard-core rows `alpha` is exactly the parity
 of nonzero cells in the raw reversed dependency queue after its leading
 tail.  The claim has zero failures in 392,830 word/tail cases and 31,595 pull
 rows through length 23, but is unproved.  The diagonal-token strengthening

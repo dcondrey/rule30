@@ -115,9 +115,9 @@ scenarios removes most of the remaining certificate.  It is enough to prove:
 > changes the single affine coordinate `alpha`.
 
 If a relevant endpoint is not eventually `2`, it has infinitely many pull
-rows.  For a fixed block length `n`, a pull row `j>=n` makes the displayed
-token interval empty, giving the contradiction.  No matching, pull-depth
-bound, or second affine coordinate is required.
+rows.  For an absolute pull `m=3n+r`, where `n=floor(m/3)`, the scale block
+`e[n:2n]` sees it at row `j=n+r>=n`; the displayed token interval is empty.
+No matching, pull-depth bound, or second affine coordinate is required.
 
 This coordinate has an exact interpretation.  For raw reversed dependency
 queue `R` and previous endpoint `p`,
@@ -134,8 +134,29 @@ statement across the ordered scenario strip.
 PAS has zero failures on 392,830 word/tail cases through length 23, including
 31,595 nonfinal pull rows.  The frozen held-out lengths 19--23 contribute
 357,414 cases and 28,954 pull rows.  These counts are finite evidence only.
-The diagonal token `k=j` already fails at length six, and first-witness
-displacement reaches nine, so a bounded-radius proof is not supported.
+The diagonal token `k=j` already fails at length six.  Alpha first-witness
+displacement reaches at least twelve: `W=12122212212122222`, tail `2`, row
+`1` has alpha support `{13,16}`.  The earlier value nine measured the
+two-coordinate projected witness, not alpha, so a bounded-radius proof is
+not supported.
+
+### 2.3 Three-row late-pull diagonal
+
+The scale arithmetic weakens PAS once more.  It is sufficient to prove that
+a length-`n` scale block has no nonfinal pull at rows `n,n+1,n+2`.  Every
+sufficiently late absolute pull is `m=3n+r` and lands in exactly this window.
+This removes all alpha variables and all early-row support obligations.
+
+No late pull occurs in the complete hard-core corpus through length 23,
+eight aligned GA adversaries, 240,000 long random word/tail cases, or all
+binary source words through length 20.  The six exact tail/residue CNF
+families are UNSAT through `n=20`, but generic conflicts and proof width grow
+and reveal no induction.  Moreover, a hard-core length-12 certificate
+supports the target pull while its final six cut symbols are already
+constant; the full earlier cut history is load-bearing.  The three rows are
+candidate event positions, not a literal `3 x 3` patch theorem.  This is now
+the smallest sufficient conjecture, not a period-two proof.  See
+`RESULTS-LATE-PULL-DIAGONAL.md`.
 
 ## 3. Correlations that recur across nominally different routes
 

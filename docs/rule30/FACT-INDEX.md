@@ -340,11 +340,21 @@ alpha = 1 XOR [p!=0] XOR parity{i>=1:R_i!=0}.
 Thus on a hard-core row alpha is exactly queue activity parity, the forced
 endpoint high bit is `1 XOR alpha`, and a pull is temporal transition
 `alpha:1 -> 0`.  If every such pull row `j` has an adjacent alpha change at
-some zero-prefix token `j<=k<n`, infinitely many pulls contradict any fixed
-block length `n`; finitely many pulls reduce to the excluded eventually-`2`
-family.  This pull-row alpha support statement has zero failures through all
-hard-core words of length 23 but remains unproved.  Source: period-two
-`RESULTS-PULL-ROW-ALPHA-SUPPORT.md`.
+some zero-prefix token `j<=k<n`, choose `n=floor(m/3)` for an absolute pull
+position `m`; the scale block `e[n:2n]` sees row `j=n+(m mod 3)>=n`, making
+the token interval empty.  Finitely many pulls reduce to the excluded
+eventually-`2` family.  This pull-row alpha support statement has zero
+failures through all hard-core words of length 23 but remains unproved.
+Source: period-two `RESULTS-PULL-ROW-ALPHA-SUPPORT.md`.
+
+Only the three empty-interval rows are actually needed.  The current
+smallest sufficient conjecture is that a length-`n` constant-tail scale word
+has no nonfinal pull at rows `n,n+1,n+2`.  This “late-pull diagonal” uses no
+alpha variables.  It has no finite counterexample in the full hard-core
+corpus through length 23, in all binary source words through length 20, or in
+the recorded long controls; its six exact CNF families are UNSAT through
+`n=20`, but no all-length proof is known.  Source: period-two
+`RESULTS-LATE-PULL-DIAGONAL.md`.
 
 ## Proved exclusions and reductions
 
@@ -389,9 +399,11 @@ finite-state or nonlinear invariant exists.
 
 ## Current open theorem targets
 
-1. **P1, period two:** prove the projected diagonal-support lemma from
-   `RESULTS-PROJECTED-DIAGONAL-HALVING.md`, hence `s_2(W)<=|W|` and
-   `s_3(W)<=|W|+1`; prove its one-credit halving alternative; or prove the
+1. **P1, period two:** prove the three-row late-pull diagonal from
+   `RESULTS-LATE-PULL-DIAGONAL.md`; prove the stronger projected
+   diagonal-support lemma from `RESULTS-PROJECTED-DIAGONAL-HALVING.md`, hence
+   `s_2(W)<=|W|` and `s_3(W)<=|W|+1`; prove its one-credit halving
+   alternative; or prove the
    stronger reversed constant-tail queue mortality.  In that queue route,
    both the feature-prefix charge and its coordinate replacement are false:
    `3001 0^382 2` reaches depth 3 from root 3, and `3001 0^390 2` reaches

@@ -177,6 +177,7 @@ local clause by itself.
 | `RESULTS-HARD-CORE-PULL-DEPTH.md` | `U/R/C` | Every endpoint-derived pull root lies in the last three initial coordinates | Bound the depth of those localized roots |
 | `RESULTS-ENDPOINT-EVENT-BRIDGE.md` | `U/K/R` | `A/B/C` are endpoint transitions `21/22/12` off the singleton boundary case; an all-`2` initial endpoint still produces a pull | Charge pull chains to internal ordered zero-prefix tokens, not literal initial endpoint pairs |
 | `RESULTS-PULL-ROW-ALPHA-SUPPORT.md` | `U/R/C/K` | On a hard-core row, `alpha` is raw queue activity parity; it is enough to support only nonfinal pull rows in this one coordinate | Prove the ordered parity-flux contrapositive; `k=j`, fixed-radius, and arbitrary four-state source versions are false |
+| `RESULTS-LATE-PULL-DIAGONAL.md` | `R/C/K` | Only rows `n,n+1,n+2` must exclude nonfinal pulls; all binary sources pass through length 20 | Exact diagonal CNFs have growing generic proofs; an all-length three-row triangular identity is missing |
 
 The constant-tail queue is stronger than the seed-derived statement because
 its middle word is arbitrary.  The actual-right scale separator is weaker and
