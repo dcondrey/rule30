@@ -197,6 +197,13 @@ frontier lift all curry or rotate the same local four-state table `phi`.
 The carry input actions, frontier fiber actions, and affine boundary actions
 all recover the same eight-element `D8` group.
 
+The complementary curry is now exact as well.  Fixing a Peel-output symbol
+gives a 13-element transformation monoid with only one- and two-cycles;
+fixing the queue-input symbol gives the inverse local permutations and closes
+to `D8`.  The former proves the exact parity-pure period-doubling language
+and forbids consecutive strict doublings, while the latter transports the
+ordered affine phase without contraction.
+
 This is explanatory and restrictive:
 
 - vertical extension transports one new coordinate reversibly;
@@ -313,6 +320,16 @@ matches every nonfinal survival row.  The resulting coarse bounds
 `s_2(W)<=|W|` and `s_3(W)<=|W|+1` already prove the scale separator if the
 greedy statement is established uniformly.  See
 `RESULTS-SCALE-TELESCOPING.md` and its preregistrations.
+
+Writing adjacent affine changes as `D8` holonomy defects does not close the
+row update.  Equal defect words with the same absolute phase already have
+different successors at length eight; all previous endpoints still collide
+at length nine.  A preregistered repair retaining the first and last symbol
+of every scenario queue passes held-out lengths 11--12 and fails at length
+13.  Complete interior dependency queues are the smallest state class here
+with proved closure.  This kills a direct Higman/ordinal rank on bounded
+defect annotations but leaves projected diagonal support itself intact.  See
+`RESULTS-HOLONOMY-DEFECT-CLOSURE.md`.
 
 ## 8. Overlooked opportunities, ranked
 

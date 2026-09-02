@@ -85,6 +85,9 @@ class Census:
     first_greedy: str | None = None
     nonfinal_miss_failures: int = 0
     first_nonfinal_miss: str | None = None
+    singleton_suffixes: int = 0
+    early_singleton_failures: int = 0
+    first_early_singleton: str | None = None
 
 
 def audit_word(
@@ -125,6 +128,25 @@ def audit_word(
             census.first_nonfinal_miss = (
                 f"{description} nonfinal-misses={nonfinal_misses}"
             )
+    last = -1
+    for step in range(survival):
+        candidates = sorted(token for token in graph[step] if token > last)
+        if not candidates:
+            continue
+        if len(candidates) == 1:
+            census.singleton_suffixes += 1
+            # The diagnostic strengthening is that a one-defect suffix can
+            # occur only in tail 3 and only in one of the last two survival
+            # rows.  It is stronger than the greedy lemma and is not used as
+            # an assertion.
+            if tail != 3 or step + 2 < survival:
+                census.early_singleton_failures += 1
+                if census.first_early_singleton is None:
+                    census.first_early_singleton = (
+                        f"{description} singleton-step={step} last={last} "
+                        f"token={candidates[0]}"
+                    )
+        last = candidates[0]
     return survival, ordinary, ordered, greedy
 
 
@@ -146,6 +168,8 @@ def main() -> None:
         before_ordered = census.ordered_failures
         before_greedy = census.greedy_failures
         before_nonfinal = census.nonfinal_miss_failures
+        before_singletons = census.singleton_suffixes
+        before_early_singletons = census.early_singleton_failures
         for word in hard_core_prefixes(length):
             for tail in (2, 3):
                 audit_word(word, tail, census)
@@ -156,7 +180,11 @@ def main() -> None:
             f"ordered-failures={census.ordered_failures-before_ordered:4d} "
             f"greedy-failures={census.greedy_failures-before_greedy:4d} "
             f"nonfinal-miss-failures="
-            f"{census.nonfinal_miss_failures-before_nonfinal:4d}"
+            f"{census.nonfinal_miss_failures-before_nonfinal:4d} "
+            f"singleton-suffixes="
+            f"{census.singleton_suffixes-before_singletons:4d} "
+            f"early-singleton-failures="
+            f"{census.early_singleton_failures-before_early_singletons:4d}"
         )
 
     specials = (
@@ -179,13 +207,19 @@ def main() -> None:
         f"ordinary-failures={census.ordinary_failures} "
         f"ordered-failures={census.ordered_failures} "
         f"greedy-failures={census.greedy_failures} "
-        f"nonfinal-miss-failures={census.nonfinal_miss_failures}"
+        f"nonfinal-miss-failures={census.nonfinal_miss_failures} "
+        f"singleton-suffixes={census.singleton_suffixes} "
+        f"early-singleton-failures={census.early_singleton_failures}"
     )
     print(f"first ordinary: {census.first_ordinary or 'none'}")
     print(f"first ordered: {census.first_ordered or 'none'}")
     print(f"first greedy: {census.first_greedy or 'none'}")
     print(
         f"first nonfinal miss: {census.first_nonfinal_miss or 'none'}"
+    )
+    print(
+        "first early singleton: "
+        f"{census.first_early_singleton or 'none'}"
     )
 
 

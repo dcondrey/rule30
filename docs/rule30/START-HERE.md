@@ -121,6 +121,15 @@ target is the one-credit half-word recurrence in
 edge rules, endpoint-only telescopes, and literal half-block embeddings are
 already falsified.
 
+The adjacent affine differences can be written as ordered `D8` holonomy
+defects, but this does not make them a closed state.  Defects plus an
+absolute anchor reconstruct every current affine phase and still have
+different next-row defect words; previous endpoints also fail, and a
+preregistered annotation retaining both queue ends fails at length 13.
+Only the complete reversed dependency queues currently close.  Any ordinal
+version of diagonal support must therefore rank interior queue ancestry, not
+the bare defect word.  See `RESULTS-HOLONOMY-DEFECT-CLOSURE.md`.
+
 An alternate exact bridge now removes the sole known overlap in the dyadic
 period-spectrum route.  Every reachable zero-ray cut is ultimately
 dyadic-periodic, but a uniform width descent proves that none is eventually
@@ -136,6 +145,16 @@ nonzero cell under `P`, it proves that every finite-rank collision must have
 an aperiodic hard-core endpoint; in the positive-rank branch the successive
 tail ranks are exactly `m,m+1,...`.  See
 `RESULTS-ROTATED-PEEL-IDENTITY.md` in the period-two directory.
+
+The inverse Peel lifts also form an exact 13-element transformation monoid.
+All cycles have length one or two, and a block can cause the doubling only
+when it uses `{0,1}` with odd `1` parity or `{0,3}` with odd `3` parity.
+The doubled child necessarily contains state `2`, so strict doublings cannot
+occur in consecutive endpoint shifts.  Currying the other input of the same
+table recovers the queue/affine `D8` action.  These all-word theorems sharply
+identify the exceptional events and the noncancelling phase data, but do not
+by themselves exclude aperiodic hard-core endpoints.  See
+`RESULTS-PEEL-LIFT-MONOID.md`.
 
 The finite-rank branch is now reduced further.  Prepending endpoint state `2`
 descends every positive rank to rank zero, and the first infinite shifted cut

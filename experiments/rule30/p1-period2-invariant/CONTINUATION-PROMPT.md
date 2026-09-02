@@ -697,6 +697,24 @@ length-17 windows; do not attempt to repair cancellation merely by retaining
 a fixed number of endpoint projections. The ordered defect word or ancestry
 state is essential.
 
+LATEST HOLONOMY-DEFECT CLOSURE RESULT
+
+The ordered defect word itself is now also known not to be a dynamical state.
+With `delta_(j,k)=A_(j,k)^(-1)A_(j,k+1)`, the defects plus the rightmost
+absolute phase reconstruct every current affine map, but identical anchored
+profiles have different next defect words at length 8. Adding every previous
+endpoint still collides at length 9. A separately preregistered repair that
+retains both end symbols of every scenario queue passed held-out lengths
+11--12 and failed at length 13 on the tail-3 pair
+`1212221222122`, `1221221222122` at row 0. The hidden difference lies at
+interior cut-side queue depths 1--4. Complete reversed dependency queues are
+closed by the exact recurrence. Therefore do not put a Higman/ordinal rank on
+the bare or bounded two-ended defect word; first derive a sufficient interior
+queue-ancestry state. This negative result does not falsify projected
+diagonal support, whose literal projection still has no audited failure. Read
+`RESULTS-HOLONOMY-DEFECT-CLOSURE.md` and run
+`constant_tail_holonomy_defect_closure.py`.
+
 REPRODUCTION COMMANDS
 
     uv run --project experiments/sygus-p3 python \

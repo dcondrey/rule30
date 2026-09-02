@@ -178,6 +178,30 @@ nonzero cell.  Together these facts prove that a hard-core endpoint with a
 finite-rank inverse cut cannot be eventually periodic.  Aperiodic endpoints
 remain open.  Source: period-two `RESULTS-ROTATED-PEEL-IDENTITY.md`.
 
+### Peel inverse-lift monoid and exact doubling language
+
+The four right-inverse maps through the local Peel operator generate exactly
+13 transformations, and every transformation cycle has length one or two.
+Thus a period-`p` Peel-output block lifts with period dividing `2p`.  The
+period-doubling blocks have the exact regular-language description
+
+```text
+{w in {0,1}*: #1(w) is odd}
+union
+{w in {0,3}*: #3(w) is odd}.
+```
+
+Any occurrence of `2`, or any mixture of `1` and `3`, forbids doubling.  A
+complete synchronous-product equivalence between this parity automaton and
+the 13-state transformation automaton proves the statement for words of all
+lengths.  A strict doubled lift uses either both `2,3` or both `0,2`, so it
+contains `2` and cannot double again on the immediately following lift.
+
+Currying the same local table as `h_r(q)=g_q(r)` instead gives precisely the
+inverse local permutations `u -> phi(r,u)` and generates `D8`.  This is the
+exact bridge from the lift monoid to the queue scan and affine-boundary
+holonomy.  Source: period-two `RESULTS-PEEL-LIFT-MONOID.md`.
+
 ### Rank-zero and reversed-diagonal queue reductions
 
 Prepending hard-core endpoint state `2` lowers every positive finite Peel
@@ -282,6 +306,17 @@ word with `22222`.  A separate one-credit half-word recurrence also passes
 through length 23 and implies `s_c(W)<2|W|` by induction, but neither target is
 proved.  Source: period-two
 `RESULTS-PROJECTED-DIAGONAL-HALVING.md`.
+
+The ordered `D8` differences between adjacent zero-prefix affine maps are
+not themselves a closed transducer state.  Adding the rightmost absolute
+phase reconstructs every current affine map, yet equal anchored profiles
+have different next defect words at length eight.  Adding every previous
+endpoint still collides at length nine.  A separately preregistered state
+retaining both end symbols of every scenario queue passes lengths 11--12 and
+fails at length 13.  Complete reversed dependency queues do close under the
+exact growing recurrence.  Thus an ordinal defect descent must retain
+interior queue ancestry; the collision does not falsify projected diagonal
+support.  Source: period-two `RESULTS-HOLONOMY-DEFECT-CLOSURE.md`.
 
 ## Proved exclusions and reductions
 
