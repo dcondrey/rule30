@@ -100,15 +100,24 @@ These counts are finite evidence only.
 
 ## 4. Exact remaining bridge
 
-The next useful lemma should attach each pull edge on one ancestry chain to
-a distinct `1,2` hard-core pair in an ordered terminal-cone strip.  Because
-hard-core words contain no adjacent `1`s, `h` such disjoint witnesses in an
-interval of length `r+1` would give `2h<=r+1`, exactly `(HCD)`.
+The original proposal was to attach each pull edge on one ancestry chain to
+a distinct `1,2` hard-core pair in an ordered terminal-cone strip.  This aims
+at `2h<=r+1`, exactly `(HCD)`, but is stronger than mortality needs.  It also
+cannot be interpreted as literal pairs in the initial endpoint:
+`e=22222222` has no `12`, while its endpoint-derived queue has event word
+`AC` and therefore one pull.  See `RESULTS-ENDPOINT-EVENT-BRIDGE.md`.
+
+The weaker sufficient target is an injection into the `N` ordered
+zero-prefix tokens of the initial inverse-cone strip.  It would give `h<=N`;
+decorating tokens by the absolute eight-state `D8` phase would give the still
+sufficient `h<=8N`.  Neither target needs disjoint endpoint pairs or a
+half-density bound.
 
 The proved root localization supplies the missing boundary alignment: the
 strip begins within the last three initial diagonal cells.  What remains is
-to show, with the inverse-cone `3 x 3` relation, that a later pull cannot
-reuse the same endpoint `1,2` witness.  This is a noncrossing spacetime-path
+to define the common coordinate map from a pull edge to a projected
+zero-prefix change and prove that a token, or token/phase pair, cannot be
+reused on one ancestry chain.  This is a noncrossing spacetime-path
 statement, not a scalar count.
 
 Alternatively, it is enough to prove the actual syndetic-chain exclusion or

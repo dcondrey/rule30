@@ -210,6 +210,16 @@ must therefore be applied beyond that prefix, as in the scale block above, or
 coupled to a proved source-ancestry prefix bound.  See the period-two
 `RESULTS-ACTUAL-RIGHT-FRONTIER.md`.
 
+The pull alphabet now has a direct endpoint meaning: away from the singleton
+boundary credit, `A/B/C` are exactly future hard-core transitions
+`21/22/12`.  This kills a literal initial-`12` witness—`22222222` has no such
+pair but its queue performs `AC`—and clarifies the next hybrid.  The sharp
+coordinate-depth estimate is unnecessary; any finite depth bound in the
+initial length closes mortality.  The current ancestry target is therefore
+to inject one pull chain into the ordered zero-prefix tokens, possibly with
+an eight-state `D8` phase decoration.  See the period-two
+`RESULTS-ENDPOINT-EVENT-BRIDGE.md`.
+
 ## Do-not-repeat obstruction screen
 
 Reject a proposal immediately unless it explains why these do not apply:

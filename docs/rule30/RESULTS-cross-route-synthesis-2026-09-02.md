@@ -8,8 +8,8 @@ ITS FINAL UNBOUNDED SEPARATION LEMMA REMAINS OPEN.**
 ## 1. Scope and accounting
 
 This review covers the ranked routes in `PATH.md`, frontier rows 73--90, the
-later route rows, and all 56 result reports in the period-two directory.  The
-archive also contains 59 preregistration-named artifacts.  These numbers must
+later route rows, and all 57 result reports in the period-two directory.  The
+archive also contains 49 preregistration reports.  These numbers must
 not be added and called a number of independent approaches: many entries are
 controls, equivalent formulations, refinements, or falsifications of one
 proof family.
@@ -73,6 +73,36 @@ theorem survives:
 The restricted estimate `r >= 2h-1` has no finite counterexample in the
 recorded exhaustive and random corpora, but it is not proved.  Root
 localization alone does not imply it.
+
+### 2.1 Endpoint events and the needed strength of a depth bound
+
+For every nonsingleton endpoint-derived queue, the event letters are exactly
+the three hard-core endpoint transitions
+
+```text
+A <=> 2 -> 1,    B <=> 2 -> 2,    C <=> 1 -> 2.
+```
+
+The singleton `(2,)` is the isolated boundary-credit exception.  In
+particular, a pull `C` creates a *future* `12`; it need not consume one in the
+initial endpoint.  The exact endpoint `22222222` has no `12`, yet its queue
+has event word `AC` and therefore a pull.  Literal initial-endpoint pair
+charging is false.
+
+More importantly, `(HCD)` is unnecessarily sharp.  For a fixed initial
+length `N`, any proved finite bound `h<=f(N)` on one pull ancestry chain is
+enough: the parent-forest theorem turns infinitely many pulls into unbounded
+depth.  This opens a weaker cross-route target—inject chain pulls into the
+`N` ordered zero-prefix tokens, possibly decorated by one of the eight `D8`
+phases.  Either `h<=N` or `h<=8N` suffices.  The injection is not proved.
+
+There is also an exact dichotomy behind this weakening.  If an immortal
+relevant queue has only finitely many `C` events, it eventually has no `A`
+events (every surviving `A` is immediately followed by `C`) and therefore
+has event tail `B^omega`; its endpoint is eventually `2^omega`, already
+excluded by the reachable dyadic exceptional-family theorem.  Otherwise it
+has infinitely many pulls, and the parent forest forces unbounded depth on
+one chain.  Thus a finite chain bound closes the entire remaining branch.
 
 ## 3. Correlations that recur across nominally different routes
 
@@ -163,20 +193,26 @@ bridge.
 
 ## 4. Ranked mashups
 
-### A. Binary gap filtration + endpoint root localization
+### A. Ordered scale tokens + endpoint pull ancestry
 
-This is the strongest new ancestry route.  Attach to each pull on one
-ancestry chain the zero gap and its `2`-adic residue immediately before the
-pull.  Use root localization to keep every relevant gap inside the final
-three endpoint rays.  Prove either:
+This is the strongest new ancestry route.  The previous proposal asked for a
+fresh hard-core `12` pair and thereby aimed at `2h<=r+1`.  That quantitative
+target is stronger than mortality needs, and literal endpoint pairs are
+already false witnesses.  Instead, attach each pull on one ancestry chain to
+an ordered zero-prefix token in the initial inverse-cone strip.  Prove either:
 
-1. successive pull depths impose properly nested residue cylinders of
-   strictly increasing modulus; or
-2. each pull crosses a fresh, nonreusable hard-core `12` pair.
+1. tokens are never reused, giving `h<=N`;
+2. a token can be reused only at a new absolute `D8` phase, giving `h<=8N`;
+   or
+3. successive uses impose properly nested dyadic residue cylinders whose
+   modulus strictly increases but whose support remains in the finite source
+   strip.
 
-The second version directly yields `2h <= r+1`.  Its missing step is a local
-`3 x 3` inverse-cone noncrossing lemma.  A reused pair or a nonnested exact
-endpoint-derived residue is a kill certificate.
+The missing step is the common coordinate map from a `C` edge on the
+ballistic pull ray to an adjacent projected zero-prefix change.  The complete
+dependency diagonal must remain available when defining the map; bounded
+defect states are already killed.  A repeated token/phase pair or a
+nonnested exact endpoint-derived residue is a kill certificate.
 
 ### B. Projected diagonal support + the same scale filtration
 
@@ -237,4 +273,3 @@ P1 arbitrary periods      [##------------------------]  8%
 P2                         [##------------------------]  8%
 P3                         [##------------------------]  6%
 ```
-

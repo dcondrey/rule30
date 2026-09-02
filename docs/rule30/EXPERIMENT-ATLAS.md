@@ -1,6 +1,6 @@
 # Rule 30 experiment atlas and cross-examination ledger
 
-Updated: 2026-09-01
+Updated: 2026-09-02
 
 Status: **ORGANIZATIONAL SYNTHESIS; NO PRIZE PROBLEM SOLVED.**
 
@@ -172,6 +172,7 @@ local clause by itself.
 | `RESULTS-RIGHT-FILTERED-MORTALITY.md` | `U/K/C` | Actual right trace avoids `11` and `00000` | Finite-factor relaxation is incomplete |
 | `RESULTS-PULL-COORDINATE-DEPTH.md` | `U/K` | Temporal ancestry is exact; unrestricted root-coordinate charge is false at `3001 0^382 2` | Long zero runs store dyadic phase |
 | `RESULTS-HARD-CORE-PULL-DEPTH.md` | `U/R/C` | Every endpoint-derived pull root lies in the last three initial coordinates | Bound the depth of those localized roots |
+| `RESULTS-ENDPOINT-EVENT-BRIDGE.md` | `U/K/R` | `A/B/C` are endpoint transitions `21/22/12` off the singleton boundary case; an all-`2` initial endpoint still produces a pull | Charge pull chains to internal ordered zero-prefix tokens, not literal initial endpoint pairs |
 
 The constant-tail queue is stronger than the seed-derived statement because
 its middle word is arbitrary.  The actual-right scale separator is weaker and
@@ -433,8 +434,11 @@ quantifiers by itself.
    `3001 0^m 2` violates `r>=2h-1` at `m=382` and shows that right-hand zero
    gaps carry dyadic phase.  Either retain a scale/gap vector in the ancestry
    charge, or prove the bound only for queues that are reversed inverse
-   diagonals of hard-core endpoints.  A source-ancestry bound is still needed
-   to couple frontier path length to the artificial endpoint-prefix length.
+   diagonals of hard-core endpoints.  The sharp half-density inequality is
+   unnecessary: injection of one chain into `N` ordered zero-prefix tokens,
+   or `8N` token/`D8`-phase pairs, already gives the finite depth bound needed
+   for mortality.  A source-ancestry bound is still needed to couple frontier
+   path length to the artificial endpoint-prefix length.
 3. In parallel conceptually, test Peel-recursive interpolants against the
    existing checked cores, with the restart state explicit.
 4. Use all stored SAT, GA, OpenEvolve, and actual-right frontier witnesses as

@@ -743,10 +743,18 @@ is excluded by this literal three-cell check.
 
 The restricted depth claim has zero failures on all 317,811 hard-core
 endpoints of length 26, all 514,229 of length 27, and 14,000 new random
-endpoints through length 512. This is evidence only. The live ancestry target
-is to map each pull edge to a distinct ordered hard-core `12` witness in the
-terminal-cone strip, or otherwise bound the depth of the three localized
-roots. Read `RESULTS-PULL-COORDINATE-DEPTH.md` and
+endpoints through length 512. This is evidence only. A nonsingleton queue
+event has the exact endpoint dictionary `A=21`, `B=22`, `C=12`, but the `12`
+is created in the future: the initial endpoint `22222222` contains no `12`
+and still has queue event word `AC`. Do not charge pulls to literal initial
+endpoint pairs.
+
+The sharp estimate `r>=2h-1` is stronger than mortality needs. Any finite
+bound `h<=f(N)` suffices. The live ancestry target is to map each pull edge
+on one chain injectively to one of the `N` ordered zero-prefix tokens in the
+initial inverse-cone strip, or to a token decorated by one of the eight `D8`
+phases. Read `RESULTS-ENDPOINT-EVENT-BRIDGE.md`,
+`RESULTS-PULL-COORDINATE-DEPTH.md`, and
 `RESULTS-HARD-CORE-PULL-DEPTH.md` before continuing.
 
 REPRODUCTION COMMANDS

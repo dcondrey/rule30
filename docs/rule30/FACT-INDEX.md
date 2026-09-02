@@ -1,6 +1,6 @@
 # Rule 30 fact and obstruction index
 
-Updated: 2026-09-01
+Updated: 2026-09-02
 
 This is a compact lookup table.  Cite the linked result document—not this
 index—when publishing.
@@ -317,6 +317,17 @@ fails at length 13.  Complete reversed dependency queues do close under the
 exact growing recurrence.  Thus an ordinal defect descent must retain
 interior queue ancestry; the collision does not falsify projected diagonal
 support.  Source: period-two `RESULTS-HOLONOMY-DEFECT-CLOSURE.md`.
+
+For a nonsingleton endpoint-derived queue, the event letters are exactly the
+future hard-core endpoint transitions `A=21`, `B=22`, and `C=12`; `(2,)` is
+the isolated boundary-credit exception.  Hence pulls create future `12`
+pairs but need not consume pairs in the initial endpoint.  Indeed
+`e=22222222` has no `12`, while its exact queue has event word `AC`.  Any
+pull-depth proof must charge an internal inverse-cone/zero-prefix object.
+Moreover, mortality needs only some finite chain bound `h<=f(N)`, not the
+stronger conjecture `h<=floor((r+1)/2)`.  An injection into `N` ordered
+zero-prefix tokens—or their eight `D8` phases—would suffice.  Source:
+period-two `RESULTS-ENDPOINT-EVENT-BRIDGE.md`.
 
 ## Proved exclusions and reductions
 
