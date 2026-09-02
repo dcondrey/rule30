@@ -150,7 +150,57 @@ horizontal density for fixed `m` would not control the moving diagonal
 `m=n+1`; the paper acknowledges that second gap as a missing asymptotic
 uncorrelation lemma.
 
-## 5. Reusable insight
+## 5. Exact zeta conjugacy: why the basis change does not compress time
+
+There is a sharper structural explanation for the missing shortcut.  Let
+`s_m(r)` be the indicator of `S_m` and apply the Boolean subset-zeta transform
+
+```text
+(Zs_m)(n) = XOR_(r subseteq n) s_m(r).
+```
+
+This is exactly the Lucas evaluation `b(m,n)`.  On a finite power-of-two
+index table, two elementary identities hold:
+
+```text
+Z(f * g) = (Zf)(Zg),
+Z(Inc f)(n) = XOR_(0 <= y < n) (Zf)(y).
+```
+
+The first identity diagonalizes parity OR-convolution.  The second says that
+ordinary integer increment becomes **exclusive prefix XOR**, including all
+carry structure.  Applying both to the support recurrence gives the exact
+transformed recurrence
+
+```text
+b(m,n) = XOR_(0 <= y < n) [
+    b(m-1,y)b(m-2,y) XOR b(m-1,y) XOR b(m-2,y)
+].
+```
+
+Taking the finite difference in `n` recovers
+
+```text
+b(m,n+1) = b(m,n)
+             XOR b(m-1,n)b(m-2,n)
+             XOR b(m-1,n) XOR b(m-2,n),
+```
+
+which is the original rotated Rule 30 triangle.  Thus the zeta transform is an
+exact conjugacy between two descriptions of the same computation: in the
+support basis the nonlinear product is OR-convolution and translation is
+cheap; in the Lucas basis the product is pointwise and translation becomes a
+prefix scan.  The apparent simplification merely moves the sequential
+dependence from one operator to the other.
+
+This is not a lower bound against every possible algorithm.  It does rule out
+the basis change itself as the omitted fast-doubling argument: evaluating
+`b(n+1,n)` still requires a uniform way to jump across the growing `m`
+dimension or summarize those prefix scans.  Exhaustive finite-vector tests
+pin the increment identity, and an independent test pins diagonalization of
+OR-convolution.
+
+## 6. Reusable insight
 
 The support recurrence is another exact realization of the archive's central
 lesson:

@@ -24,6 +24,56 @@ from center_column import center_column
 Block = tuple[int, int]
 
 
+def subset_zeta(values: Sequence[int]) -> list[int]:
+    """Boolean subset-zeta transform on a power-of-two truth table."""
+
+    if not values or len(values) & (len(values) - 1):
+        raise ValueError("zeta input length must be a positive power of two")
+    transformed = [int(value) & 1 for value in values]
+    for bit in range(len(transformed).bit_length() - 1):
+        flag = 1 << bit
+        for index in range(len(transformed)):
+            if index & flag:
+                transformed[index] ^= transformed[index ^ flag]
+    return transformed
+
+
+def increment_truth_table(values: Sequence[int]) -> list[int]:
+    """Shift a finite support indicator from ``r`` to ``r+1``."""
+
+    if not values:
+        raise ValueError("increment input must be nonempty")
+    return [0, *[int(value) & 1 for value in values[:-1]]]
+
+
+def exclusive_prefix_xor(values: Sequence[int]) -> list[int]:
+    """Return ``p[n] = XOR_(0 <= y < n) values[y]``."""
+
+    result: list[int] = []
+    running = 0
+    for value in values:
+        result.append(running)
+        running ^= int(value) & 1
+    return result
+
+
+def or_convolution_truth_tables(
+    left: Sequence[int], right: Sequence[int]
+) -> list[int]:
+    """Literal parity convolution under bitwise OR for small audit tables."""
+
+    if len(left) != len(right) or not left or len(left) & (len(left) - 1):
+        raise ValueError("OR-convolution inputs must have equal power-of-two length")
+    result = [0] * len(left)
+    for a, left_value in enumerate(left):
+        if not (int(left_value) & 1):
+            continue
+        for b, right_value in enumerate(right):
+            if int(right_value) & 1:
+                result[a | b] ^= 1
+    return result
+
+
 def submasks(mask: int) -> Iterator[int]:
     """Yield every bitwise submask, including zero."""
 
