@@ -307,6 +307,15 @@ index-to-bit function in that model.  Formula expansion, nonperiodicity,
 nonautomaticity, and arbitrary-input dependence are not substitutes for that
 bridge.  No such bridge is present in the archive.
 
+There is also a statement-level issue that must be resolved before any
+positive lower-bound submission.  The announcement's prose points to a linear
+lower bound/no-sublinear-algorithm question, while its displayed predicate
+negates the existence of even an `O(n)` machine.  These are inequivalent.
+`P3-SCOPE-AUDIT.md` records the quantifiers and the repository's conservative
+operational convention: seek an exhibited uniform `o(n)` algorithm, and do not
+claim a positive solution until the organizers clarify the lower-bound
+predicate.
+
 ## 6. Ranked work order and kill conditions
 
 1. **P2 shell seam.**  Express `X_(k+1)` through actual scale-`k` spacetime
