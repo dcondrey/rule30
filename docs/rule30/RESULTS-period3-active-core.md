@@ -6,7 +6,9 @@ Status: **EXACT REDUCTION; ALL-LENGTH MORTALITY OPEN.**  A period-three
 exclusion is not proved by the finite census below.
 
 Code: `experiments/rule30/period3_active_core.py` and
-`test_period3_active_core.py`.
+`test_period3_active_core.py`.  The exact horizon-language implementation is
+`period3_survival_automaton.py` with
+`test_period3_survival_automaton.py`.
 
 ## 1. Exact finite-word state after the left-support knee
 
@@ -119,3 +121,26 @@ reachability constraints at the knee.  Its survival through length ten makes
 it a legitimate first proof target; a counterexample at larger length would
 redirect the proof to the exact reachable language without affecting the
 conjugacy.
+
+## 4. Exact horizon automaton
+
+Cascading the three-symbol transducer for `H` future steps requires one carry
+bit per layer.  Reading one initial-core symbol updates this `H`-bit vector
+deterministically.  When the input word ends, flushing the phase-dependent
+boundary symbol at layer `j` through layers `j+1,...,H-1` both completes the
+word maps and checks the required pin parity.  The resulting DFA, with at most
+`2^H` states, recognizes **exactly** the cores surviving `H` steps.
+
+Breadth-first search in this DFA returns a shortest surviving core.  Let its
+length be `m_H`.  Then
+
+```text
+all finite cores are mortal  iff  m_H -> infinity.
+```
+
+The forward implication follows because a fixed word of length `L` cannot
+survive a horizon whose minimum exceeds `L`; the reverse follows because an
+immortal finite word bounds every `m_H`.  This is an equivalence, but not yet a
+growth proof.  The automaton is exhaustively cross-checked against direct word
+iteration for both necklaces, all starting phases, words through length five,
+and horizons through eight.
