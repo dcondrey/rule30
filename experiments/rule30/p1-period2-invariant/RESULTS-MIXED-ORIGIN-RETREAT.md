@@ -4,9 +4,9 @@ Date: 2026-09-01
 
 Status: **THE REGISTERED MIXED BUDGET AND THE STRONGER ORIGIN-PREFIX HALL
 CLAIM PASS THEIR HELD-OUT CORPORA.  THE RIGHTMOST-PIVOT DYNAMICS IS PROVED TO
-HAVE ONLY THREE SUFFIX REWRITES, AND RETREATS ARE REDUCED EXACTLY TO
-PRODUCTIVE PULL EVENTS.  THE PULL-ORIGIN HALL INEQUALITY IS NOT PROVED, SO
-PERIOD TWO REMAINS OPEN.**
+HAVE ONLY THREE SUFFIX REWRITES, RETREATS REDUCE TO PRODUCTIVE PULLS, AND ALL
+POST-RETREAT PULLS LIE ON ONE BALLISTIC RAY.  THE BOTTOM-FEATURE CROSSING
+INEQUALITY IS NOT PROVED, SO PERIOD TWO REMAINS OPEN.**
 
 ## 1. Registered finite evidence
 
@@ -83,7 +83,7 @@ Thus every retreat is either the first retreat funded by an initial terminal
 `1`, or is paired with the unique preceding productive pull.  This removes
 all irrelevant zero-block births from the ancestry problem.
 
-## 3. Exact remaining lemma
+## 3. Pull-origin lemma and weaker ray target
 
 It now suffices to prove the pull version of Hall:
 
@@ -97,10 +97,20 @@ strictly increased in all 16,544 pull events in that regression, but neither
 finite fact is promoted to a theorem.
 
 The pull Hall lemma plus the possible initial terminal credit proves `(OH)`,
-hence `ret(R)<=C(R)`.  Since `C(R)<=|R|`, it gives `d(r)>=r`.  A finite queue
-then has finitely many retreats; the proved eventually-`2` exceptional
-separator closes the constant-tail and rank-zero separators and excludes a
-nonconstant period-two center trace.
+hence `ret(R)<=C(R)`.  Since `C(R)<=|R|`, it gives `d(r)>=r`.
+
+There is now a weaker sufficient target.  The unique raw predecessor of a
+retreat proves that its successor ends `102`; hence its pull is third from
+last.  Every post-retreat pull therefore lies on `p-t=N-3`.  It suffices to
+bound crossings of this one ray by the initial features at or left of
+`N-3`.  That claim passed a separately frozen 4,115,170-queue corpus with
+zero failures and sharp slack zero.  Ray stabilization is an all-length
+theorem; the crossing count is not.  See `RESULTS-PULL-RAY.md`.
+
+Once the crossing count is proved, a finite queue has finitely many retreats;
+the proved eventually-`2` exceptional separator then closes the
+constant-tail and rank-zero separators and excludes a nonconstant period-two
+center trace.
 
 ## 4. Bounded-rank obstruction
 

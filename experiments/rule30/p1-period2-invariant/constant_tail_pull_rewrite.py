@@ -109,6 +109,37 @@ def suffix_language_control() -> tuple[int, int]:
     return len(reachable), len(accepted)
 
 
+def pull_ray_stabilization_control() -> int:
+    """Prove that every pull following a retreat pivots third from last.
+
+    A retreat has last input 1 and final raw scan state 0.  The table has a
+    unique predecessor for that transition: raw state 3.  Hence the final
+    two inherited normalized outputs are 1,0, and appending the retreat
+    boundary 2 produces suffix 102.  Its next surviving update is therefore
+    the pull rewrite with m=1 and pivot third from last.
+    """
+
+    predecessors = tuple(
+        scan for scan in range(4) if LIFT_GENERATORS[scan][1] == 0
+    )
+    assert predecessors == (3,)
+    assert SYMBOL_QUOTIENT[3] == 1
+    assert SYMBOL_QUOTIENT[LIFT_GENERATORS[3][1]] == 0
+    assert legal_boundary(1, 0) == 2
+
+    # The following pull scans 1,0,2 from raw state 3 immediately before
+    # the pivot.  It changes only the pivot within this suffix and appends 1.
+    scan = 3
+    inherited = []
+    for symbol in (1, 0, 2):
+        scan = LIFT_GENERATORS[scan][symbol]
+        inherited.append(SYMBOL_QUOTIENT[scan])
+    assert tuple(inherited) == (0, 0, 2)
+    assert legal_boundary(2, scan) == 1
+    assert tuple(inherited) + (1,) == (0, 0, 2, 1)
+    return len(predecessors)
+
+
 @dataclass(slots=True)
 class OrbitCensus:
     queues: int = 0
@@ -232,6 +263,11 @@ def main() -> None:
     print(
         f"equality-suffix product states={states} legal-finals={finals}: "
         "A:1->02, B:1->21, C:10^m2->0^(m+1)21 PROVED"
+    )
+    retreat_predecessors = pull_ray_stabilization_control()
+    print(
+        f"retreat raw predecessors={retreat_predecessors}: successor suffix "
+        "102 and post-retreat pull ray p-t=N-3 PROVED"
     )
     census = OrbitCensus()
     for length in range(1, args.max_length + 1):

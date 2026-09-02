@@ -28,7 +28,7 @@ Every terminal result must be one of:
 |---|---|---|---|
 | Projected diagonal support | Prove the tail-2 `(alpha,beta)` and tail-3 `(alpha,gamma)` change at some `k>=j` on every required row | **IRREDUCIBLE FULL-QUEUE CONTRAPOSITIVE**; endpoint telescopes, bounded defect states, and local edge monotonicity are killed | Prove the contrapositive from the complete ordered scenario queues or an equivalent unbounded leading-term/ancestry quotient; no further width sweep is admissible |
 | Deterministic halving | Prove `s_c(W)<=ceil(n/2)+1+s_2(L)` for `n>=4` | **IRREDUCIBLE PREFIX-IMPLICATION FORM**; scalar gaps, raw embedding, and parent-continuation-only morphs are killed | Prove uniformly that parent legality through `h+r` implies left-half/tail-2 legality through `r`, by triangular elimination retaining the free left half |
-| Queue ancestry / distance | Prove `d(r)->infinity`, equivalently constant-frontier orbit disjointness from infinite hard-core terminals | **PULL REDUCTION PROVED; ORIGIN HALL LIVE**. Every update has one of three exact suffix rewrites; every nonfirst retreat pairs with one productive pull. The mixed budget and stronger colex-origin prefix Hall claim pass 4,115,170 frozen held-out queues | Prove the pull-origin Hall inequality. It gives `ret(R)<=#1+#zero-runs`, hence `d(r)>=r`. Additive factor ranks through width four are exactly killed; the proof must retain ordered ancestry |
+| Queue ancestry / distance | Prove `d(r)->infinity`, equivalently constant-frontier orbit disjointness from infinite hard-core terminals | **PULL REDUCTION AND RAY STABILIZATION PROVED; CROSSING LIVE**. Every nonfirst retreat pairs with one productive pull, and every pull after a retreat is `102->0021` on the single ray `p-t=N-3`. The mixed budget, origin Hall, and weaker ray-crossing claim pass 4,115,170 frozen held-out queues | Prove that pulls on `p-t=N-3` have noncrossing backward paths to distinct initial `1`/zero-run features at or left of `N-3`. This gives `ret(R)<=#1+#zero-runs`, hence `d(r)>=r`. Additive factor ranks through width four are killed |
 | Dyadic hard-core lock | Prove every ultimately dyadic cut with an infinite hard-core endpoint is the exceptional eventually-`2` family, then apply reachability separation | **SUBSUMED AS A STANDALONE ROUTE**; finite core reachability has finite Peel rank, which descends exactly to rank zero | Prove the rank-zero finite-support separator through one of the first three routes. Classifying infinite-rank dyadic cuts is unnecessary; separated-doubling control is retained only as a diagnostic |
 | Peel-recursive Craig induction | Express the next separator as a Peel pullback of its predecessor plus an exact restart/boundary state | **LITERAL PULLBACK EXHAUSTED**; `P(S_H)` re-enters `S_(H-1)` only at the all-`2` endpoint | The exact section `F(2e)=g(e_0)F(e)` forces an unbounded defect position. Prove an indexed restart separator, equivalently the stronger shell lemma `C(m,m)` apart from its two explicit exceptions |
 | Cartier `S(0)` rationality | Prove the center generating series is nonrational, equivalently the center is not eventually periodic | **GENERIC ROUTE EXHAUSTED**; `S(0)` is exactly P1, infinite Cartier kernel is stronger, finite-prefix and generic Ore induction bridges are killed | Only a Rule-30-specific all-size nonsingular Hankel-minor family (exact P1) or infinite residual family (stronger) remains; no such family is known |
@@ -49,9 +49,11 @@ retreat ancestry in the stronger mortality route.
 The mixed resource `#1+#zero-runs` repairs that specific fan-out defect on
 all registered evidence.  More importantly, colex origins expose a stronger
 prefix-Hall conjecture, while the exact rightmost-pivot suffix language
-reduces every nonfirst retreat to one productive `1 0^m 2` pull.  The only
-remaining queue lemma is now pull-origin Hall; see
-`RESULTS-MIXED-ORIGIN-RETREAT.md`.
+reduces every nonfirst retreat to one productive `1 0^m 2` pull.  A retreat
+always creates suffix `102`, so every later pull is the literal rewrite
+`102->0021` on the ballistic ray `p-t=N-3`.  The weakest remaining queue
+lemma is the bottom-feature crossing bound on that one ray; see
+`RESULTS-MIXED-ORIGIN-RETREAT.md` and `RESULTS-PULL-RAY.md`.
 
 Center-controlled reversal of the physical right half alternates the new
 edge between word ends and gives a uniform descent on the `1 -> 0` phase.
