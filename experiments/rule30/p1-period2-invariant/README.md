@@ -64,6 +64,7 @@ Use this routing table:
 | Actual-right terminal frontier audit and scope correction | `PREREGISTRATION-ACTUAL-RIGHT-FRONTIER.md`; `RESULTS-ACTUAL-RIGHT-FRONTIER.md`; `constant_tail_actual_frontier.py` |
 | Scale telescoping, derivative failures, and zero-prefix greedy target | `RESULTS-SCALE-TELESCOPING.md`; `constant_tail_zero_prefix_matching.py`; `constant_tail_zero_prefix_bitsliced.py` |
 | Projected diagonal support and one-credit halving targets | `RESULTS-PROJECTED-DIAGONAL-HALVING.md`; `constant_tail_right_zero_prefix_selector.py`; `constant_tail_halving_recurrence.py` |
+| Projected-support algebra and route disposition | `RESULTS-PROJECTED-SUPPORT-DISPOSITION.md`; `constant_tail_projected_support_algebra.py` |
 | Deterministic-halving morph obstruction | `RESULTS-HALVING-ROUTE-DISPOSITION.md`; `constant_tail_halving_morph_audit.py` |
 | Moving endpoint-flip cocycle | `RESULTS-ENDPOINT-FLIP-COCYCLE.md`; `endpoint_flip_cocycle.py` |
 | Evolutionary rank-zero witness search | `docs/rule30/RESULTS-openevolve-p1-rank-zero.md`; `experiments/openevolve-p1-rank-zero/` |
