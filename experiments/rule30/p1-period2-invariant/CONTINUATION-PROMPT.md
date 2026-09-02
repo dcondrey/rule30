@@ -652,6 +652,20 @@ halving identity, but literal embedding of the surviving endpoint suffix into
 a half-word extension is false. A proof must carry the residual boundary mode
 and compare a frontier potential or conjugated state.
 
+The held-out refinement is deterministic for every `n>=4` tested:
+
+    s_c(W) <= ceil(n/2)+1+s_2(L),
+
+where `L` is the left prefix of length `floor(n/2)` and the child tail is
+always 2. It passes 365,414 held-out cases at exact lengths 19--23 and random
+lengths through 64; the only smaller exceptions are tail-3 words `121` and
+`221` at length 3. Whenever a word reaches the charged midpoint through
+length 23, its entire right half is unique for that `(n,c)` cylinder. This
+suggests triangularly eliminating the forced right half and proving that the
+remaining left-half constraints imply tail-2 survival. Read
+`PREREGISTRATION-DETERMINISTIC-HALVING.md` and use
+`constant_tail_midpoint_cylinders.py` for the finite diagnostic.
+
 Do not retry local `2x2` edge monotonicity (all 16 patterns occur), bounded
 pivot jumps (they grow), endpoint-only telescoping (internal changes return),
 one-symbol deletion, or literal half-block embedding. Read

@@ -46,6 +46,18 @@ proved Peel/halving geometry.
 
 Neither statement is yet a theorem.
 
+A held-out refinement makes (2) deterministic.  For `n>=4`, every audited
+case satisfies
+
+```text
+s_c(W) <= ceil(n/2)+1+s_2(L),                        (2a)
+```
+
+where `L` is always the left prefix of length `floor(n/2)`, and the smaller
+tail is always 2, independently of the parent tail `c`.  The only exploratory
+failures before the registered range are the exact tail-3 length-three bases
+`121` and `221`, both with survival four against bound three.
+
 ## 2. Why diagonal support is sufficient
 
 There are `n` zero-prefix tokens, indexed `0,...,n-1`.
@@ -157,6 +169,12 @@ case occurred in that held-out row.
 
 All of these are bounded results.
 
+The stronger deterministic recurrence (2a) was frozen after the exploratory
+audit through length 18.  Its held-out run contains 365,414 word/tail cases:
+every hard-core word at lengths 19 through 23 and 1,000 random words per tail
+at lengths 24, 32, 48, and 64.  It has zero failures and maximum excess zero,
+so the inequality is sharp on the held-out corpus.
+
 ## 5. Why the halving recurrence is sufficient
 
 Let
@@ -183,6 +201,46 @@ For even `n`, the right side is `3n/2<2n`.  For odd `n>=7`, it is
 `3(n+1)/2<2n`.  The exact values at `n<=6` supply the finite bases.  Therefore
 (2), despite being much weaker than (3), also proves `T(n)<2n` at every
 length and closes the scale separator.
+
+The deterministic version (2a) gives an even cleaner induction.  For
+`n=2m` it yields at most `m+1+T(m)`, and for `n=2m+1` at most
+`m+2+T(m)`.  Using the integral induction hypothesis `T(m)<=2m-1`, both are
+strictly below `2n`; the exact values through `n=3` supply the bases.
+
+## 5a. Midpoint survivor cylinders
+
+The deterministic mode is not an arbitrary maximum chosen after the fact.
+An exploratory exact audit asks which words survive the charged prefix
+
+```text
+h=ceil(n/2)+1.
+```
+
+Through length 23, every nonempty `(n,c)` survivor set has one unique right
+half and one unique forced continuation through `h`.  The complete nonempty
+table is:
+
+```text
+n= 3, c=3: R=21           Q=212           ( 2 survivors)
+n= 9, c=3: R=22122        Q=122122        ( 5 survivors)
+n=10, c=3: R=12212        Q=212221        ( 4 survivors)
+n=16, c=2: R=22122122     Q=222121222     ( 2 survivors)
+n=17, c=2: R=212121212    Q=2122122121    ( 2 survivors)
+n=21, c=2: R=22221212122  Q=221221222222  (52 survivors)
+n=23, c=2: R=222212222212 Q=1221222221222 ( 5 survivors)
+n=23, c=3: R=222221221212 Q=2222222122121 ( 4 survivors)
+```
+
+Here `R` is the right half and `Q` the forced endpoint continuation.  The
+lengths 9, 10, 16, and 17 source cylinders have common suffixes of lengths 6,
+6, 15, and 16 respectively; at lengths 16 and 17 only the first source symbol
+remains free.
+
+This finite structure suggests a triangular-elimination proof of (2a):
+midpoint legality first pins the right half and its continuation, after which
+the remaining constraints on the free left half should imply the smaller
+tail-2 survival constraints.  It is not yet an all-length grammar.  Raw queue
+substrings and raw endpoint continuations do not embed uniformly.
 
 ## 6. Killed simplifications
 
@@ -223,16 +281,24 @@ For tail 2 this should exploit the additive quotient (5).  For tail 3 it
 should use the terminal state (6).  The proof must be scale-free: bounded
 edge patterns and bounded pivot jumps are already false.
 
-The fallback target is (2).  The proved identity
+The fallback target is the stronger deterministic form (2a), with (2) as a
+safe relaxation.  The proved identity
 
 ```text
 P^m I(sigma^m e)=sigma^(2m)I(e)
 ```
 
 shows why a half-scale residual exists, but the earlier halving audit also
-showed that one boundary symbol survives.  A proof of (2) must retain that
-boundary annotation and show that its survival potential is dominated by
-one of the four half-word/tail modes.  Literal symbol embedding is false.
+showed that one boundary symbol survives.  A proof of (2a) must retain that
+boundary annotation and prove the fixed mode transition
+
+```text
+(parent word W, parent tail c) -> (left half L, child tail 2).
+```
+
+The midpoint cylinders suggest eliminating the uniquely forced right half
+before comparing the remaining constraints.  Literal symbol embedding is
+false.
 
 Either proof would exclude the two eventually constant cut tails, close the
 rank-zero separator, and prove the nonconstant period-two center trace
@@ -253,7 +319,11 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
 
 PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/constant_tail_halving_recurrence.py \
-  --first-length 23 --last-length 23 --random-per-length 1000
+  --first-length 19 --last-length 23 --random-per-length 1000
+
+PYTHONDONTWRITEBYTECODE=1 python3 \
+  experiments/rule30/p1-period2-invariant/constant_tail_midpoint_cylinders.py \
+  --first-length 1 --last-length 23
 ```
 
 The selector implementation inherits the exact slow/bit-sliced controls from

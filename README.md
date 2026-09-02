@@ -252,7 +252,9 @@ through the final nonfinal row).  No matching or greedy history is required.
 The claim has zero failures on the complete hard-core corpus through length
 23; its held-out unrestricted tail-2 supplement alone contains 111,899 cases.
 This is a uniform conjecture, not a proof.  An independent one-credit halving
-recurrence also passes through length 23 and would suffice if proved.  See
+recurrence also passes through length 23 and would suffice if proved.  Its
+held-out refinement uses the fixed child `(left half, tail 2)` for both parent
+tails and passes 365,414 cases.  See
 `RESULTS-PROJECTED-DIAGONAL-HALVING.md`.  Pointwise derivative, affine-rank,
 reverse-order, local edge-monotonicity, and literal half-block embeddings have
 exact counterexamples.
