@@ -94,6 +94,23 @@ the nonconstant period-two exclusion.
 
 No such all-length crossing proof is asserted here.
 
+## 3a. A macro-potential attempt and its exact obstruction
+
+Because every surviving retreat is immediately followed by its pull, a
+potential only needs to be nonincreasing on `B` updates and strictly decrease
+across the two-update `AC` macro.  A width-two edge potential satisfying
+those constraints through discovery length 12 was frozen before further
+testing.
+
+It fails all three universal obligations at lengths 13--14.  In particular,
+the invariant families `211(01)^k` and `30(10)^k1` make the proposed rank
+unbounded below.  Separate all-word weighted-product syntheses for each tail
+are already unsatisfiable at factor widths one through five.  See
+`RESULTS-MACRO-EDGE-RANK.md` for the literal solver-free counterexamples.
+
+This does not weaken the pull-ray or retreat--pull pairing theorems.  It
+rules out one more bounded scalar replacement for the ordered crossing map.
+
 ## 4. Reproduction
 
 ```bash
