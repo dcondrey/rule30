@@ -1,0 +1,44 @@
+from __future__ import annotations
+
+import unittest
+
+from center_column import center_column
+from p2_time_index_walsh_probe import (
+    bit_derivative_correlations,
+    maximum_aligned_restriction,
+    record,
+    walsh_transform,
+)
+
+
+class TimeIndexWalshTest(unittest.TestCase):
+    def test_known_transforms(self) -> None:
+        self.assertEqual(walsh_transform([1, 1, 1, 1]), [4, 0, 0, 0])
+        self.assertEqual(walsh_transform([1, -1, 1, -1]), [0, 4, 0, 0])
+
+    def test_parseval(self) -> None:
+        values = [1, -1, -1, 1, -1, -1, 1, 1]
+        spectrum = walsh_transform(values)
+        self.assertEqual(sum(value * value for value in spectrum), len(values) ** 2)
+
+    def test_aligned_restriction(self) -> None:
+        values = [1, 1, -1, -1, 1, -1, 1, -1]
+        self.assertEqual(maximum_aligned_restriction(values), 2)
+
+    def test_bit_derivatives(self) -> None:
+        parity = [1, -1, -1, 1]
+        self.assertEqual(bit_derivative_correlations(parity), [-4, -4])
+
+    def test_small_rule30_shell(self) -> None:
+        row = record(center_column(32), 4)
+        self.assertEqual(row.dc, -2)
+        self.assertEqual(row.max_shell_prefix, 3)
+        self.assertEqual(row.max_abs_walsh, 6)
+
+    def test_rejects_non_power_of_two(self) -> None:
+        with self.assertRaises(ValueError):
+            walsh_transform([1, -1, 1])
+
+
+if __name__ == "__main__":
+    unittest.main()
