@@ -27,6 +27,7 @@ Use this routing table:
 | Need | Read/run |
 |---|---|
 | Exact target, `F^2`, defect, primary certificates | `RESULTS.md`; `derive_and_controls.py`; `verify_negative_certificate.py` |
+| Six-route exhaustion ledger | `P1-SIX-ROUTE-PROGRAM.md`; `RESULTS-SIX-ROUTE-EXHAUSTION.md` |
 | Inverse-Gray and moment hierarchy | `RESULTS-PARITY.md`; `verify_moment_negative.py` |
 | Four-state operator/carry form | `RESULTS-CARRY.md`; `carry_transducer.py` |
 | Run-length/boundary-gap coordinates | `RESULTS-RUNLENGTH.md`; `runlength_search.py` |

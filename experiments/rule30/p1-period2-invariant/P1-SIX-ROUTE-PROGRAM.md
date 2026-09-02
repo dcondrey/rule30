@@ -2,6 +2,10 @@
 
 Date started: 2026-09-01
 
+Status: **EXHAUSTION GATE COMPLETE 2026-09-01.**  Each route now has an
+all-length proof component, an exact structural kill/subsumption, or one
+unbounded irreducible lemma.  This status does not claim P1 or period two.
+
 Objective: pursue each currently credible P1 program to one of three terminal
 outcomes: a uniform proof consumed by P1, an exact structural kill of the
 stated mechanism, or a rigorously isolated irreducible lemma with all tested
@@ -47,3 +51,6 @@ edge between word ends and gives a uniform descent on the `1 -> 0` phase.
 The complementary phase resets it; all symmetric two-step factors and all
 64 simple two-half lexicographic repairs fail by length four.  See
 `RESULTS-ADAPTIVE-REVERSE-FOLD.md`.
+
+The final route-by-route disposition and recommended continuation order are
+in `RESULTS-SIX-ROUTE-EXHAUSTION.md`.
