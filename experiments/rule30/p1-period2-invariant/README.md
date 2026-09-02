@@ -49,6 +49,7 @@ Use this routing table:
 | Peel/Craig endpoint morph | `RESULTS-CORE-CRAIG-MORPH.md`; `core_craig_morph.py` |
 | Dyadic-period graph audit | `RESULTS-DYADIC-PERIODICITY.md`; `dyadic_periodicity_analyzer.py` |
 | Dyadic exceptional-family separator | `RESULTS-DYADIC-EXCEPTION-SEPARATOR.md`; `dyadic_exception_separator.py` |
+| Dyadic route scope disposition | `RESULTS-DYADIC-ROUTE-DISPOSITION.md` |
 | Rotated inverse-cone / Peel identity | `RESULTS-ROTATED-PEEL-IDENTITY.md`; `rotated_peel_identity.py` |
 | Peel inverse-lift monoid | `RESULTS-PEEL-LIFT-MONOID.md`; `peel_lift_monoid.py` |
 | Finite-rank descent to the rank-zero separator | `RESULTS-RANK-ZERO-REDUCTION.md`; `rank_zero_separator.py` |
