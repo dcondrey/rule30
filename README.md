@@ -100,14 +100,17 @@ coordinates are strictly smaller in colex order for both `0<2<1` and
 `0` or `2`.  Finite synchronous products prove this for words of every
 length.  It is not yet mortality: an appended boundary `1` can replace the
 consumed pivot at a newer coordinate, so the remaining task is an ancestry
-bound on those replacements.  Symbol-count and feature-start budgets are
-both false; the latter is killed by a sparse length-77 queue whose pull depth
-is 3 from feature budget 2.  The current geometric replacement is
-`r>=2h-1` for a depth-`h` pull rooted at initial coordinate `r`.  It passed
-5,272,917 targeted queues and aligns with the independent zero-prefix token
-budget, but is not proved.  Proving it, or merely proving that the minimum
-initial width supporting `r` retreats tends to infinity, would reduce the
-remainder to the already-excluded eventually-`2` endpoint family.
+bound on those replacements.  Symbol-count, feature-start, and root-coordinate
+budgets are all false.  The last is killed by the targeted family
+`3001 0^m 2`: at `m=382`, root 3 reaches pull depth 3 despite capacity 2;
+at `m=390` it reaches depth 4.  Long zero runs therefore store dyadic phase
+to the right of the root.  The live ancestry options are to retain those
+gap scales, or to prove a bound only for reversed diagonals derived from a
+hard-core endpoint—the abstract counterfamily is not endpoint-derived.  In
+that restricted setting an all-length table argument now localizes every
+pull root to the last three initial queue coordinates: a possible time-zero
+pull forces current raw diagonal prefix `203`, and every later pull lies on
+the proved third-last ray.
 
 Conditioning the terminal set on the complete actual Rule 30 right cone
 raises the tail-2 minimum from `18` to `23` at horizon 12 and changes exact

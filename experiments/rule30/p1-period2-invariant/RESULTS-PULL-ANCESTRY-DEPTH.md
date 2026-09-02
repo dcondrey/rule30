@@ -3,14 +3,15 @@
 Date: 2026-09-01
 
 Status: **THE TEMPORAL DEPTH RECURRENCE IS PROVED FOR QUEUES OF EVERY
-LENGTH.  THE ONE-CHAIN FEATURE BOUND AND ITS RAW-RESERVE STRENGTHENING ARE
-NOW FALSIFIED.  THE REPLACEMENT COORDINATE-DEPTH BOUND IS OPEN.  PERIOD TWO
+LENGTH.  THE ONE-CHAIN FEATURE BOUND, ITS RAW-RESERVE STRENGTHENING, AND THE
+UNRESTRICTED COORDINATE-DEPTH REPLACEMENT ARE NOW FALSIFIED.  PERIOD TWO
 REMAINS OPEN.**
 
 > **Supersession notice (2026-09-02).** Sections 3 and 3a preserve the
 > original frozen claims and their held-out results, but those claims are
-> false.  The exact length-77 counterexample and the replacement target are
-> recorded in `RESULTS-PULL-COORDINATE-DEPTH.md`.
+> false.  The exact length-77 feature counterexample and length-387
+> coordinate counterexample are recorded in
+> `RESULTS-PULL-COORDINATE-DEPTH.md`.
 
 ## 1. The parent forest
 
@@ -225,19 +226,17 @@ period-two counterexample.
 
 ## 5. Replacement remaining lemma
 
-The feature alternatives below are retired.  The live replacement is the
-coordinate-depth interval lemma in `RESULTS-PULL-COORDINATE-DEPTH.md`:
+The unrestricted feature and coordinate alternatives are retired.  The
+family `3001 0^m 2` proves that a long zero run to the right can return
+dyadic phase repeatedly to root 3; `m=382` reaches depth 3 and `m=390`
+reaches depth 4.  The live replacements are:
 
-```text
-pull depth h at initial root r  =>  r >= 2h-1.
-```
-
-It still suffices alternatively to prove the actual syndetic-chain
-exclusion.  For historical clarity, the two former targets were:
-
-1. **single-chain feature descent:** each nested pull edge must cross a new
-   initial feature start before returning to the same root; or
-2. **actual syndetic-chain exclusion:** no finite-root ancestry chain can
+1. **scale-aware gap descent:** retain the dyadic phase/capacity of every
+   finite zero run instead of charging only the root prefix;
+2. **endpoint-derived ancestry:** prove a depth bound only when the initial
+   queue is the reversed inverse diagonal of a hard-core endpoint—the
+   displayed counterfamily is not; or
+3. **actual syndetic-chain exclusion:** no finite-root ancestry chain can
    have unbounded depth when the ambient pull gaps are eventually in
    `{2,3,4,5}`.
 
@@ -245,9 +244,10 @@ The local scalar searches do not address these statements.  They collapse
 the parent forest, and their exact all-word systems are already
 unsatisfiable through factor width five.
 
-The raw-reserve formulation does not supply item 1: the length-77
-counterexample reaches exactly the forbidden exhausted state `3`.  Its long
-zero run explains why filtering to feature starts lost essential scale.
+The two sparse counterexamples explain both failed charges.  The length-77
+word shows that feature starts discard essential zero-run scale.  The
+length-387 word shows that even coordinates only to the left of the root are
+insufficient: scale stored to its right can feed the same ancestry chain.
 
 ## 6. Reproduction
 

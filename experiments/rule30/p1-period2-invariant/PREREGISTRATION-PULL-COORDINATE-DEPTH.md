@@ -2,6 +2,12 @@
 
 Date: 2026-09-02
 
+> **Post-registration outcome:** false.  The invariant tail-3 queue
+> `3001 0^382 2` has event word `CBACACBACA`; its pull at time 8 has root
+> `r=3`, depth `h=3`, and capacity `ceil(3/2)=2`.  The exact replay is in
+> `RESULTS-PULL-COORDINATE-DEPTH.md`.  The registration below is retained
+> unchanged as the audit record.
+
 ## Discovery boundary
 
 The previously registered feature-prefix bound is false.  The invariant

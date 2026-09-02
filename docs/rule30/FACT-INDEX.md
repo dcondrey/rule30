@@ -365,10 +365,14 @@ finite-state or nonlinear invariant exists.
    `RESULTS-PROJECTED-DIAGONAL-HALVING.md`, hence `s_2(W)<=|W|` and
    `s_3(W)<=|W|+1`; prove its one-credit halving alternative; or prove the
    stronger reversed constant-tail queue mortality.  In that queue route,
-   the feature-prefix ancestry charge is now falsified at length 77; the
-   replacement coordinate interval target is `r>=2h-1` for a depth-`h` pull
-   rooted at `r`, with zero failures in 5,272,917 targeted queues.  Either
-   surviving route would close the rank-zero separator, all finite
+   both the feature-prefix charge and its coordinate replacement are false:
+   `3001 0^382 2` reaches depth 3 from root 3, and `3001 0^390 2` reaches
+   depth 4.  These abstract words are not hard-core endpoint-derived, so a
+   restricted ancestry theorem or a dyadic gap-scale charge remains viable.
+   Uniformly, every pull root of an endpoint-derived queue is one of its last
+   three initial coordinates: a possible time-zero pull forces raw diagonal
+   prefix `203`, and all later pulls use the established third-last ray.
+   Either surviving route would close the rank-zero separator, all finite
    Peel ranks, and the nonconstant period-two rung.  Diagonal support has zero
    failures through length 23; pointwise derivative, rank, bounded-jump, and
    local monotonicity certificates are killed.  Actual-right conditioning

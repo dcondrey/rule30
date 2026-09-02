@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Falsifiers for the pull-root coordinate-depth bound.
+"""Falsifiers and a stored counterexample for pull-root coordinate depth.
 
-The proposed all-length theorem is that a successful pull node of depth h
-and positive initial root r satisfies r >= 2*h-1.  Passing this program is
-finite evidence only.
+The proposed all-length theorem was that a successful pull node of depth h
+and positive initial root r satisfies r >= 2*h-1.  It is false.  The stored
+tail-3 queue ``3001 0^382 2`` reaches depth three from root three.
 """
 
 from __future__ import annotations
@@ -27,6 +27,7 @@ FEATURE_COUNTEREXAMPLE = tuple(
         "000000000000000000000000000000000000000000002",
     )
 )
+COORDINATE_COUNTEREXAMPLE = (3, 0, 0, 1) + (0,) * 382 + (2,)
 
 
 @dataclass(slots=True)
@@ -164,6 +165,78 @@ def feature_counterexample_control() -> tuple[int, int, int, int]:
     )
 
 
+def coordinate_counterexample_control() -> tuple[int, int, int, int]:
+    census = Census()
+    events = audit(COORDINATE_COUNTEREXAMPLE, 3, 1_000, census)
+    assert len(COORDINATE_COUNTEREXAMPLE) == 387
+    assert events == "CBACACBACA"
+    assert (census.updates, census.pulls, census.maximum_depth) == (10, 4, 3)
+    assert census.coordinate_failures == 1
+    assert census.minimum_coordinate_slack == -1
+    assert census.first_coordinate_failure is not None
+    assert "time=8" in census.first_coordinate_failure
+    assert "root=3 depth=3 capacity=2" in census.first_coordinate_failure
+    return (
+        census.updates,
+        census.pulls,
+        census.maximum_depth,
+        census.minimum_coordinate_slack,
+    )
+
+
+def zero_run_root_depth(run: int) -> tuple[int, str]:
+    queue: Vector = (3, 0, 0, 1) + (0,) * run + (2,)
+    roots = list(range(len(queue)))
+    depths = [0] * len(queue)
+    maximum = 0
+    events = []
+    for _time in range(100):
+        following = queue_step(queue, 3)
+        if following is None:
+            return maximum, "".join(events)
+        successor = normalize_queue(following.queue, 3)
+        differences = [
+            index
+            for index in range(1, len(queue))
+            if successor[index] != queue[index]
+        ]
+        pivot = differences[-1] if differences else 0
+        kind = update_type(queue, successor)
+        root = roots[pivot]
+        depth = depths[pivot] + int(kind == "C")
+        roots.append(root)
+        depths.append(depth)
+        events.append(kind)
+        if kind == "C" and root == 3:
+            maximum = max(maximum, depth)
+        queue = successor
+    raise AssertionError("zero-run resonance control reached its cap")
+
+
+def zero_run_resonance_control(limit: int = 4_096) -> tuple[int, int, int]:
+    """Verify the recorded dyadic threshold classes on one finite interval."""
+
+    at_least_two = set()
+    at_least_three = set()
+    at_least_four = set()
+    for run in range(limit):
+        depth, _events = zero_run_root_depth(run)
+        if depth >= 2:
+            at_least_two.add(run)
+        if depth >= 3:
+            at_least_three.add(run)
+        if depth >= 4:
+            at_least_four.add(run)
+    assert at_least_two == {run for run in range(limit) if run % 8 == 6}
+    assert at_least_three == {
+        run for run in range(limit) if run % 512 in (382, 390)
+    }
+    assert at_least_four == {
+        run for run in range(limit) if run % 2_048 == 390
+    }
+    return len(at_least_two), len(at_least_three), len(at_least_four)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--exact-length", type=int, default=19)
@@ -187,6 +260,20 @@ def main() -> None:
         "feature counterexample: length=77 events=CBACACBACBA "
         f"updates={updates} pulls={pulls} depth={depth} "
         f"coordinate-slack={slack} PASS",
+        flush=True,
+    )
+    updates, pulls, depth, slack = coordinate_counterexample_control()
+    print(
+        "coordinate counterexample: length=387 R=3001(0^382)2 "
+        "events=CBACACBACA "
+        f"updates={updates} pulls={pulls} depth={depth} "
+        f"coordinate-slack={slack} CLAIM FALSE",
+        flush=True,
+    )
+    resonance = zero_run_resonance_control()
+    print(
+        "zero-run resonance 0<=m<4096: "
+        f"depth>=2/3/4 counts={resonance} dyadic classes PASS",
         flush=True,
     )
 

@@ -2,9 +2,14 @@
 
 Date: 2026-09-02
 
-Status: **THE FEATURE-PREFIX DEPTH CLAIMS `(AD2)` AND `(AD3)` ARE FALSE.
-A COARSER COORDINATE-DEPTH CLAIM SURVIVED 5,272,917 NEWLY AUDITED QUEUES BUT
-IS NOT PROVED.  PERIOD TWO REMAINS OPEN.**
+Status: **THE FEATURE-PREFIX CLAIMS `(AD2)` AND `(AD3)`, THE COARSER
+COORDINATE-DEPTH CLAIM `(CD)`, AND ITS FIRST-EXHAUSTION STRENGTHENING ARE
+ALL FALSE FOR ABSTRACT INVARIANT QUEUES.  PERIOD TWO REMAINS OPEN.**
+
+> **Supersession notice (2026-09-02).** The held-out result in Section 3 is
+> preserved as an audit record, but a targeted zero-run family subsequently
+> falsified `(CD)`.  The counterexample and the surviving endpoint-restricted
+> route are recorded in Sections 4--5.
 
 ## 1. Exact counterexample to the feature budget
 
@@ -99,7 +104,80 @@ held-out corpus.
 
 This is finite evidence only.
 
-## 4. Exact remaining lemma
+## 4. Targeted falsification of coordinate depth
+
+The one-parameter invariant family
+
+```text
+R_m = 3001 0^m 2
+```
+
+avoids `20`, `22`, and `011` for every `m`.  It targets the fan-out that the
+earlier random and bounded-feature corpora almost never hit.  Exact replay at
+`m=382` gives
+
+```text
+length:             387
+successful events:  CBACACBACA
+failure:             next update
+```
+
+At time 8 the successful `C` update has pivot 392.  Its parent has initial
+root `r=3` and pull depth two; the child has depth three.  Therefore
+
+```text
+depth 3 > ceil(3/2)=2,                               (3)
+```
+
+and `(CD)` is false.  The stronger nearby member `m=390` has event word
+`CBACBBBACBAC` and reaches depth four from the same root, with slack `-2`.
+
+The registered pull-exhaustion strengthening fails earlier.  At `m=62`,
+the event word is `CBACACBBA`: the pull at time 3 first exhausts root 3,
+but another successful pull occurs at time 5.  At `m=382`, later pulls make
+the reserve negative, so the failure is not merely a harmless second branch.
+
+The resonance is dyadic.  On the complete interval `0<=m<4096`, the same
+family has
+
+```text
+root-3 maximum depth >=2  exactly when m = 6        (mod 8),
+root-3 maximum depth >=3  exactly when m = 382,390  (mod 512),
+root-3 maximum depth >=4  exactly when m = 390      (mod 2048).
+```
+
+These congruences are exact finite data, not an all-length recurrence.  They
+explain the missed counterexample and point back to the dyadic/fan-out
+mechanism: long zero runs act as phase storage and can replenish a shallow
+root many times.
+
+The putative current right-edge diagonal of each displayed abstract queue
+begins raw `200`.  A hard-core endpoint ending in the `21` needed for a
+time-zero pull forces that diagonal to begin `203`.  Thus these words kill
+unrestricted queue `(CD)` but do not kill a theorem restricted to queues
+obtained from a hard-core endpoint.
+
+## 5. Revised remaining target
+
+The proposed nested interval ending at the root does not exist: coordinates
+far to the right of the root can store dyadic phase and later feed the same
+ancestry chain.  Two routes remain coherent:
+
+1. retain the full zero-run/gap scale and prove that each additional depth
+   imposes a stricter dyadic congruence on a finite gap vector, whose infinite
+   limit is not an ordinary finite vector; or
+2. impose the structure actually present in the Rule 30 reduction: the
+   initial queue is the reversed inverse diagonal of a hard-core endpoint.
+   The counterfamily above is excluded immediately by that condition, and
+   the coordinate/feature bounds have not failed on the endpoint-derived
+   corpus so far.
+
+The second statement is strictly sufficient for the period-two application;
+arbitrary invariant-queue mortality was only a stronger convenience.  It
+still needs a uniform proof, and the restriction must be carried through the
+rank descent rather than added to an arbitrary later queue row.
+
+## 6. Historical proof target, now false
 
 The proof target is now an interval statement rather than a state count:
 
@@ -112,13 +190,13 @@ is that the two intervening triangular dependencies correspond to two new
 ordered source tokens.  This is precisely the information retained by the
 zero-prefix greedy sweep and lost by the feature projection.
 
-A second, narrower route remains available: prove the feature or coordinate
+A narrower route remains available: prove the feature or coordinate
 bound only for queues obtained by reversing the inverse diagonal of a
 hard-core endpoint.  Exact endpoint-derived prefixes through length 25 had
 no feature-depth failure, but this is discovery data, not a theorem; rank
 descent must be checked carefully before using the restriction.
 
-## 5. Reproduction
+## 7. Reproduction
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 \
@@ -126,3 +204,6 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
 ```
 
 The preregistration is `PREREGISTRATION-PULL-COORDINATE-DEPTH.md`.
+
+The exhaustion counterexample is independently replayed by
+`constant_tail_pull_exhaustion_trap.py`.

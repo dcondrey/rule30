@@ -715,6 +715,40 @@ diagonal support, whose literal projection still has no audited failure. Read
 `RESULTS-HOLONOMY-DEFECT-CLOSURE.md` and run
 `constant_tail_holonomy_defect_closure.py`.
 
+LATEST PULL-ANCESTRY CORRECTION
+
+The feature-prefix, raw-reserve, and unrestricted coordinate-depth charges
+are all false. The targeted invariant family
+
+    R_m = 3001 0^m 2
+
+finds the missed scale resonance. At `m=62`, a pull first exhausts root 3 at
+time 3 and another pull succeeds at time 5, killing the exhaustion trap. At
+`m=382`, the exact event word `CBACACBACA` takes root 3 to depth 3 although
+its coordinate capacity is 2. At `m=390`, `CBACBBBACBAC` reaches depth 4.
+For `0<=m<4096`, depth thresholds occur in dyadic congruence classes:
+`m=6 mod 8` for depth at least 2; `m=382 or 390 mod 512` for depth at least
+3; and `m=390 mod 2048` for depth at least 4. These are finite exact data,
+not a recurrence theorem. Do not revive `r>=2h-1` for arbitrary invariant
+queues.
+
+The actual endpoint-derived subcase remains viable and now has one uniform
+lemma. If a hard-core endpoint-derived queue has length `N`, every appended
+node—and hence every pull—has root in `{N-3,N-2,N-1}`. A possible time-zero
+pull forces the endpoint to end `21`, and the current raw right-edge diagonal
+then begins exactly `203`, so the normalized reversed queue ends `102` and
+the pivot is `N-3`. All later pulls use the proved third-last ray, giving the
+root band by induction. The abstract counterfamily begins raw `200`, so it
+is excluded by this literal three-cell check.
+
+The restricted depth claim has zero failures on all 317,811 hard-core
+endpoints of length 26, all 514,229 of length 27, and 14,000 new random
+endpoints through length 512. This is evidence only. The live ancestry target
+is to map each pull edge to a distinct ordered hard-core `12` witness in the
+terminal-cone strip, or otherwise bound the depth of the three localized
+roots. Read `RESULTS-PULL-COORDINATE-DEPTH.md` and
+`RESULTS-HARD-CORE-PULL-DEPTH.md` before continuing.
+
 REPRODUCTION COMMANDS
 
     uv run --project experiments/sygus-p3 python \

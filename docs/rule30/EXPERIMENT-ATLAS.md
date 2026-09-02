@@ -170,6 +170,8 @@ local clause by itself.
 | `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md` | `U/R/C` | Uniform inverse graph system, Fibonacci terminal set, `D8` cover | Source-orbit/terminal-set disjointness |
 | `RESULTS-ACTUAL-RIGHT-FRONTIER.md` | `U/C/K` | Fully actual-right terminal sets form an inverse subsystem and raise finite distances | Rank descent permits an artificial finite endpoint prefix, so raw conditioning is too strong |
 | `RESULTS-RIGHT-FILTERED-MORTALITY.md` | `U/K/C` | Actual right trace avoids `11` and `00000` | Finite-factor relaxation is incomplete |
+| `RESULTS-PULL-COORDINATE-DEPTH.md` | `U/K` | Temporal ancestry is exact; unrestricted root-coordinate charge is false at `3001 0^382 2` | Long zero runs store dyadic phase |
+| `RESULTS-HARD-CORE-PULL-DEPTH.md` | `U/R/C` | Every endpoint-derived pull root lies in the last three initial coordinates | Bound the depth of those localized roots |
 
 The constant-tail queue is stronger than the seed-derived statement because
 its middle word is arbitrary.  The actual-right scale separator is weaker and
@@ -427,12 +429,12 @@ quantifiers by itself.
    second route is the one-credit half-word recurrence.  Do not return to
    pointwise derivative rank, fixed-radius edge rules, endpoint-only
    telescopes, or literal half-block embedding; all are exactly falsified.
-2. Prove or falsify the coordinate-interval ancestry bound `r>=2h-1` for a
-   depth-`h` pull rooted at `r`, and identify its ordered tokens with the
-   zero-prefix sweep if possible.  The earlier feature-prefix version is
-   false at length 77.  A source-ancestry bound is also needed to couple
-   frontier path length to the artificial endpoint-prefix length; without
-   it, raw actual-right terminal conditioning is not proof-relevant.
+2. Replace the falsified unrestricted coordinate-interval bound.  The family
+   `3001 0^m 2` violates `r>=2h-1` at `m=382` and shows that right-hand zero
+   gaps carry dyadic phase.  Either retain a scale/gap vector in the ancestry
+   charge, or prove the bound only for queues that are reversed inverse
+   diagonals of hard-core endpoints.  A source-ancestry bound is still needed
+   to couple frontier path length to the artificial endpoint-prefix length.
 3. In parallel conceptually, test Peel-recursive interpolants against the
    existing checked cores, with the restart state explicit.
 4. Use all stored SAT, GA, OpenEvolve, and actual-right frontier witnesses as
