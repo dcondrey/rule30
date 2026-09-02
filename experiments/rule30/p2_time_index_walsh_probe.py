@@ -39,6 +39,8 @@ class WalshRecord:
     max_abs_bit_derivative_correlation: int
     max_abs_xor_autocorrelation_nonzero: int
     l1_xor_autocorrelation: int
+    dyadic_tree_energy: int
+    max_level_dyadic_energy: int
     anf_degree: int
     anf_terms: int
 
@@ -80,6 +82,23 @@ def maximum_aligned_restriction(values: Sequence[int]) -> int:
         current = [current[index] + current[index + 1] for index in range(0, len(current), 2)]
         maximum = max(maximum, *(abs(value) for value in current))
     return maximum
+
+
+def dyadic_block_energies(values: Sequence[int]) -> list[int]:
+    """Return squared-sum energy at every aligned dyadic tree level."""
+
+    if not values or len(values) & (len(values) - 1):
+        raise ValueError("dyadic energy input length must be a positive power of two")
+    current = list(values)
+    energies: list[int] = []
+    while True:
+        energies.append(sum(value * value for value in current))
+        if len(current) == 1:
+            return energies
+        current = [
+            current[index] + current[index + 1]
+            for index in range(0, len(current), 2)
+        ]
 
 
 def bit_derivative_correlations(values: Sequence[int]) -> list[int]:
@@ -136,6 +155,7 @@ def record(bits: Sequence[int], k: int) -> WalshRecord:
         prefix_maximum = max(prefix_maximum, abs(running))
     correlations = bit_derivative_correlations(shell)
     all_correlations = xor_autocorrelations(shell)
+    dyadic_energies = dyadic_block_energies(shell)
     degree, terms = anf_profile(bits[length : 2 * length])
     if all_correlations[0] != length:
         raise AssertionError("zero-shift autocorrelation mismatch")
@@ -150,6 +170,8 @@ def record(bits: Sequence[int], k: int) -> WalshRecord:
         max_abs_bit_derivative_correlation=max(map(abs, correlations)),
         max_abs_xor_autocorrelation_nonzero=max(map(abs, all_correlations[1:])),
         l1_xor_autocorrelation=sum(map(abs, all_correlations)),
+        dyadic_tree_energy=sum(dyadic_energies),
+        max_level_dyadic_energy=max(dyadic_energies),
         anf_degree=degree,
         anf_terms=terms,
     )
@@ -184,7 +206,8 @@ def main() -> None:
 
     print(
         "k length dc max_walsh walsh_index prefix_max aligned_max "
-        "bit_derivative_max xor_corr_max xor_corr_l1 anf_degree anf_terms "
+        "bit_derivative_max xor_corr_max xor_corr_l1 dyadic_energy "
+        "dyadic_level_max anf_degree anf_terms "
         "max/sqrt(kN)"
     )
     for row in found:
@@ -195,6 +218,8 @@ def main() -> None:
             f"{row.max_abs_bit_derivative_correlation:18d} "
             f"{row.max_abs_xor_autocorrelation_nonzero:12d} "
             f"{row.l1_xor_autocorrelation:11d} "
+            f"{row.dyadic_tree_energy:14d} "
+            f"{row.max_level_dyadic_energy:17d} "
             f"{row.anf_degree:10d} {row.anf_terms:9d} "
             f"{row.random_scale_ratio:.6f}"
         )

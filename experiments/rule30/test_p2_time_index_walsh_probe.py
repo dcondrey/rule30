@@ -6,6 +6,7 @@ from center_column import center_column
 from p2_time_index_walsh_probe import (
     anf_profile,
     bit_derivative_correlations,
+    dyadic_block_energies,
     maximum_aligned_restriction,
     record,
     walsh_transform,
@@ -26,6 +27,20 @@ class TimeIndexWalshTest(unittest.TestCase):
     def test_aligned_restriction(self) -> None:
         values = [1, 1, -1, -1, 1, -1, 1, -1]
         self.assertEqual(maximum_aligned_restriction(values), 2)
+
+    def test_dyadic_block_energies(self) -> None:
+        values = [1, 1, -1, -1, 1, -1, 1, -1]
+        # Leaves, pairs, blocks of four, and the root.
+        self.assertEqual(dyadic_block_energies(values), [8, 8, 0, 0])
+
+    def test_tree_energy_bounds_every_prefix(self) -> None:
+        values = [1, 1, -1, 1, -1, -1, 1, -1]
+        energy = sum(dyadic_block_energies(values))
+        bound_squared = len(values).bit_length() * energy
+        running = 0
+        for value in values:
+            running += value
+            self.assertLessEqual(running * running, bound_squared)
 
     def test_bit_derivatives(self) -> None:
         parity = [1, -1, -1, 1]
@@ -48,6 +63,7 @@ class TimeIndexWalshTest(unittest.TestCase):
         self.assertEqual(row.dc, -2)
         self.assertEqual(row.max_shell_prefix, 3)
         self.assertEqual(row.max_abs_walsh, 6)
+        self.assertEqual(row.dyadic_tree_energy, 40)
         self.assertEqual((row.anf_degree, row.anf_terms), (4, 8))
 
     def test_rejects_non_power_of_two(self) -> None:
