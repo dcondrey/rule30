@@ -65,3 +65,31 @@ Passing is finite evidence only.  `(AD1)` should then be proved directly
 from the three suffix rewrites and coordinate arithmetic.  The sole live
 proof obligation would be `(AD2)`, a one-chain feature-depth inequality
 rather than a Hall matching across all pull branches.
+
+## Strengthened invariant registration
+
+After the preceding held-out run passed, the exact raw-state annotation
+suggested the following stronger inductive form.  It was checked on every
+invariant queue through length 16, but has not been checked at length 17 or
+above, nor on a new random corpus:
+
+> For every current coordinate whose ancestry root is a positive initial
+> coordinate `r`, if its pull depth is `h` and its current unnormalized raw
+> state is `s`, then
+>
+> ```text
+> h + [s=3] <= number of initial feature starts at coordinates <= r.       (AD3)
+> ```
+
+The leading one-symbol tail-2 orbit is excluded by `r>0`; it has no bottom
+feature and creates a harmless nonproductive state-1 child.
+
+Claim `(AD3)` directly implies `(AD2)`.  An initial time-zero pull pivots at
+an initial symbol `1`, which is itself a feature.  Every later pull pivots at
+raw state `3` by the proved retreat/pull suffix theorem, so `(AD3)` supplies
+the strict unit of slack consumed by the new `C` edge.
+
+The strengthened held-out gate is every invariant queue of length 17,
+followed by 100,000 newly seeded random and 100,000 newly seeded sparse
+queues per tail across lengths through 128.  Passing remains finite evidence;
+the proof target is preservation of `(AD3)` by the exact marked raw scan.

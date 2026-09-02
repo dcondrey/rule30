@@ -92,6 +92,49 @@ minimum feature slack:                             0.
 The zero slack makes the one-chain bound sharp on the held-out corpus.  This
 is finite evidence only.
 
+## 3a. Strengthened raw-reserve invariant
+
+Write the remaining reserve of a current coordinate as
+
+```text
+k = F_R(root) - pull-depth.
+```
+
+After the first held-out result, a raw-state annotation suggested the
+strictly stronger invariant
+
+```text
+root>0  =>  k >= [raw state = 3].                     (5)
+```
+
+Equivalently, an exhausted positive-root coordinate never has raw state `3`.
+This is exactly the strict slack needed at a stabilized pull: its pivot has
+raw state `3`, so (5) permits the new `C` edge to consume one reserve unit.
+An initial off-ray pull pivots at an initial normalized `1`, which is itself
+a feature.
+
+The strengthened claim was frozen after discovery through length 16.  Its
+new held-out run contains
+
+```text
+all invariant queues of length 17:          597,191
+new random queues at lengths 24--96:        500,000
+new sparse queues at lengths 24--128:       600,000
+TOTAL queues:                             1,697,191
+successful updates:                       1,079,301
+pull events:                                311,450
+maximum observed pull-depth:                      4
+raw-reserve failures:                             0
+feature-depth failures:                           0
+temporal-recurrence failures:                     0
+orbit-cap hits:                                   0
+minimum reserve slack:                            0.
+```
+
+This is again finite evidence, not induction.  It improves the proof target:
+instead of constructing a global matching, prove preservation of one marked
+raw-state exclusion under the exact scan and boundary append.
+
 ## 4. Why this target is strictly weaker
 
 Origin-prefix Hall sorts all pull origins and demands enough initial
@@ -104,7 +147,7 @@ than it contains features.
 Nevertheless (4) turns the one-chain claim into
 
 ```text
-#pulls <= 2 max_r F_R(r) <= 2|R|.                      (5)
+#pulls <= 2 max_r F_R(r) <= 2|R|.                      (6)
 ```
 
 That constant-two bound is fully sufficient for `d(r)->infinity`; the
@@ -117,6 +160,25 @@ For the actual Rule 30 application there is another weakening: the proved
 right trace forbids `00000`, so a counterexample would have eventually
 syndetic pull gaps in `{2,3,4,5}`.  A proof may exploit that restriction
 without establishing (5) for every abstract invariant queue.
+
+Actual-right realizability does not impose a fixed depth cap.  The literal
+hard-core endpoint of length 64
+
+```text
+2222121212122121221221221212212221212121221222121222122221212122
+```
+
+contains neither `11` nor `22222`.  Its exact reversed inverse diagonal has
+tail `3`, survives 13 queue updates, and makes six pulls at times
+
+```text
+1,3,5,8,10,12
+```
+
+with maximum ancestry depth four.  Thus the exact-length-26 observation that
+actual endpoints had depth at most two is a finite artifact.  The witness is
+still consistent with the syndetic-chain target and then dies; it is not a
+period-two counterexample.
 
 ## 5. Exact remaining lemma
 
@@ -132,10 +194,16 @@ The local scalar searches do not address these statements.  They collapse
 the parent forest, and their exact all-word systems are already
 unsatisfiable through factor width five.
 
+The raw-reserve formulation supplies a concrete inductive version of item 1:
+show that every exhausted positive-root coordinate avoids raw state `3`.
+On the discovery rows, filtering out every positive-reserve coordinate left
+only `empty`, `0`, `2`, `02`, or an alternating `{1,2}` word ending in `1`.
+That tiny projection suggests a recursive block-action proof, but the grammar
+has not yet been established for all rows.
+
 ## 6. Reproduction
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/constant_tail_pull_ancestry_depth.py
 ```
-

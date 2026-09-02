@@ -136,6 +136,11 @@ unsatisfiable through width five, and bounded actual-right gaps still allow
 the dense alternating retreat/pull transients that defeat local scalar
 summaries.
 
+They also allow nontrivial ancestry depth: an actual length-64 endpoint with
+neither `11` nor `22222` has pull times `1,3,5,8,10,12` and reaches depth
+four before death.  Hence a proof must show eventual termination, not assert
+a fixed small depth for actual endpoints.
+
 ## 3b. A macro-potential attempt and its exact obstruction
 
 Because every surviving retreat is immediately followed by its pull, a

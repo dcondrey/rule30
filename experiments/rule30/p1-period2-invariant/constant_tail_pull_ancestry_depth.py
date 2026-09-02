@@ -9,7 +9,12 @@ from dataclasses import dataclass
 
 from constant_tail_mixed_run_budget import weighted_invariant_queue
 from constant_tail_origin_prefix_hall import feature_starts
-from constant_tail_queue import Vector, normalize_queue, queue_step
+from constant_tail_queue import (
+    Vector,
+    diagonal_from_endpoint,
+    normalize_queue,
+    queue_step,
+)
 from constant_tail_retreat_budget import invariant_queues, random_invariant_queue
 
 
@@ -37,6 +42,7 @@ class Census:
     pulls: int = 0
     maximum_depth: int = 0
     feature_failures: int = 0
+    raw_reserve_failures: int = 0
     temporal_failures: int = 0
     capped: int = 0
     minimum_slack: int = 10**9
@@ -96,8 +102,29 @@ def audit(queue: Vector, tail: int, cap: int, census: Census) -> None:
     nodes = [Node(None, index, 0, -1, "I") for index in range(len(queue))]
     coordinates = list(range(len(queue)))
     pulls = []
+    raw_queue = queue
 
     for time in range(cap):
+        for coordinate, (raw, node_index) in enumerate(
+            zip(raw_queue, coordinates)
+        ):
+            current = nodes[node_index]
+            if current.root == 0:
+                continue
+            available = prefix_counts[current.root]
+            slack = available - current.pull_depth - int(raw == 3)
+            census.minimum_slack = min(census.minimum_slack, slack)
+            if slack < 0:
+                census.raw_reserve_failures += 1
+                census.first_failure = census.first_failure or (
+                    f"raw-reserve tail={tail} "
+                    f"R={''.join(map(str, initial))} time={time} "
+                    f"coordinate={coordinate} raw={raw} "
+                    f"root={current.root} depth={current.pull_depth} "
+                    f"available={available} "
+                    f"chain={chain(nodes, node_index)}"
+                )
+
         following = queue_step(queue, tail)
         if following is None:
             break
@@ -145,6 +172,7 @@ def audit(queue: Vector, tail: int, cap: int, census: Census) -> None:
                 )
 
         queue = successor
+        raw_queue = following.queue
         census.updates += 1
     else:
         census.capped += 1
@@ -162,12 +190,40 @@ def audit(queue: Vector, tail: int, cap: int, census: Census) -> None:
     census.pulls += len(profile)
 
 
+def actual_right_depth_control() -> tuple[int, int, int]:
+    """Replay an actual hard-core/no-00000 depth-four chain exactly."""
+
+    text = (
+        "22221212121221212212212212122122"
+        "21212121221222121222122221212122"
+    )
+    endpoint = tuple(map(int, text))
+    assert len(endpoint) == 64
+    assert "11" not in text and "22222" not in text
+    diagonal = diagonal_from_endpoint(endpoint)
+    tail = diagonal[-1]
+    assert tail == 3
+    queue = normalize_queue(tuple(reversed(diagonal)), tail)
+    census = Census()
+    audit(queue, tail, 1_000, census)
+    assert (
+        census.feature_failures
+        == census.raw_reserve_failures
+        == census.temporal_failures
+        == census.capped
+        == 0
+    )
+    assert (census.updates, census.pulls, census.maximum_depth) == (13, 6, 4)
+    return census.updates, census.pulls, census.maximum_depth
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--exact-length", type=int, default=19)
+    parser.add_argument("--exact-length", type=int, default=17)
     parser.add_argument("--random-per-tail", type=int, default=50_000)
     parser.add_argument("--sparse-per-tail", type=int, default=50_000)
     parser.add_argument("--orbit-cap", type=int, default=1_000)
+    parser.add_argument("--seed", type=int, default=30134)
     args = parser.parse_args()
     if (
         args.exact_length < 1
@@ -177,6 +233,14 @@ def main() -> None:
     ):
         parser.error("invalid audit bound")
 
+    actual_updates, actual_pulls, actual_depth = actual_right_depth_control()
+    print(
+        "actual-right depth control: endpoint-length=64 "
+        f"updates={actual_updates} pulls={actual_pulls} "
+        f"maximum-depth={actual_depth} PASS",
+        flush=True,
+    )
+
     census = Census()
     before = census.queues
     for tail in (2, 3):
@@ -185,12 +249,13 @@ def main() -> None:
     print(
         f"exact length={args.exact_length} queues={census.queues-before} "
         f"feature-failures={census.feature_failures} "
+        f"raw-reserve-failures={census.raw_reserve_failures} "
         f"temporal-failures={census.temporal_failures} "
         f"minimum-slack={census.minimum_slack}",
         flush=True,
     )
 
-    generator = random.Random(30133)
+    generator = random.Random(args.seed)
     for length in (24, 32, 48, 64, 96):
         before = census.queues
         for tail in (2, 3):
@@ -204,6 +269,7 @@ def main() -> None:
         print(
             f"random length={length} queues={census.queues-before} "
             f"feature-failures={census.feature_failures} "
+            f"raw-reserve-failures={census.raw_reserve_failures} "
             f"temporal-failures={census.temporal_failures}",
             flush=True,
         )
@@ -221,6 +287,7 @@ def main() -> None:
         print(
             f"sparse length={length} queues={census.queues-before} "
             f"feature-failures={census.feature_failures} "
+            f"raw-reserve-failures={census.raw_reserve_failures} "
             f"temporal-failures={census.temporal_failures}",
             flush=True,
         )
@@ -229,6 +296,7 @@ def main() -> None:
         f"TOTAL queues={census.queues} updates={census.updates} "
         f"pulls={census.pulls} maximum-depth={census.maximum_depth} "
         f"feature-failures={census.feature_failures} "
+        f"raw-reserve-failures={census.raw_reserve_failures} "
         f"temporal-failures={census.temporal_failures} "
         f"capped={census.capped} minimum-slack={census.minimum_slack}"
     )
