@@ -80,6 +80,45 @@ The missing Rule 30 ingredient is a uniform bound on the parent block sums,
 not a missing algebraic identity.  For example, any
 `H_k=O(2^((2-delta)k))` with fixed `delta>0` proves P2.
 
+### Exact signed-correlation form of the energy
+
+The tree energy is itself an exact XOR-correlation statistic, but one with no
+absolute values.  Write
+
+```text
+C_k(h) = sum_r z_k(r) z_k(r XOR h).
+```
+
+At level `j`, the ordered pair `(r,s)` lies in one aligned block of length
+`2^j` exactly when `r XOR s < 2^j`.  Expanding all block squares therefore
+gives
+
+```text
+E_(k,j) = sum_(0 <= h < 2^j) C_k(h),
+H_k     = sum_(j=0)^k sum_(0 <= h < 2^j) C_k(h).
+```
+
+Equivalently, since `C_k(0)=N`,
+
+```text
+H_k = (k+1)N
+      + sum_(h=1)^(N-1) (k-floor(log2 h)) C_k(h).
+```
+
+This identity is stronger guidance than the earlier `l1` sufficient
+condition: P2 does **not** require small individual XOR correlations or small
+`sum_h |C_k(h)|`.  It is enough to prove the signed, bit-scale cumulative
+energy bound
+
+```text
+(k+1) sum_(j=0)^k sum_(h<2^j) C_k(h) = o(N^2).
+```
+
+Every inner prefix is nonnegative because it equals a sum of squared block
+sums.  The remaining problem is thus to keep their total subquadratic, while
+allowing cancellation among the individual nonzero-shift correlations.  This
+is currently the weakest exact correlation target found for P2.
+
 ## 3. Walsh-to-P2 theorem
 
 **Theorem.**  If
@@ -164,7 +203,8 @@ the two same-orbit configurations
 F^t(delta_0) and F^(t+2^j)(delta_0).
 ```
 
-The exact two-orbit Rule 30 defect recurrence already in the period-two work
+The exact two-orbit Rule 30 defect recurrence already in the temporal
+period-two work
 applies without assuming equality:
 
 ```text
@@ -263,11 +303,12 @@ seed-specific and all-scale.  The following do not suffice:
 - a fit of the displayed finite values; or
 - qualitative nonidentity of two shifted traces.
 
-A useful next lemma would bound `H_k` by `O(2^((2-delta)k))`, bound the *sum*
-of absolute XOR autocorrelations at that rate, or give a recursive spectral
-norm for the complete same-orbit defect state.  Any recursion must retain the
-actual dyadic seam and absolute phase identified by the period-two negative
-results.
+A useful next lemma would bound `H_k` by `O(2^((2-delta)k))`, equivalently
+bound the sum of the nonnegative cumulative correlations above, or give a
+recursive spectral norm for the complete same-orbit defect state.  The
+absolute-correlation route is sufficient but needlessly strong.  Any recursion
+must retain the actual dyadic seam and absolute phase identified by the
+temporal-period-two negative results.
 
 ## Reproduction
 

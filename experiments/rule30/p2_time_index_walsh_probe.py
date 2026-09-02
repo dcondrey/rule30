@@ -124,6 +124,30 @@ def xor_autocorrelations(values: Sequence[int]) -> list[int]:
     return [value // length for value in numerators]
 
 
+def dyadic_energies_from_xor_autocorrelations(
+    correlations: Sequence[int],
+) -> list[int]:
+    """Recover every aligned dyadic energy from XOR autocorrelations.
+
+    At level ``j``, two indices lie in the same aligned block of length
+    ``2**j`` exactly when their XOR is less than ``2**j``.  Therefore
+
+        E_j = sum_{0 <= h < 2**j} C(h).
+    """
+
+    if not correlations or len(correlations) & (len(correlations) - 1):
+        raise ValueError("correlation input length must be a positive power of two")
+    energies: list[int] = []
+    running = 0
+    next_boundary = 1
+    for index, value in enumerate(correlations):
+        running += value
+        if index + 1 == next_boundary:
+            energies.append(running)
+            next_boundary *= 2
+    return energies
+
+
 def anf_profile(values: Sequence[int]) -> tuple[int, int]:
     """Return ``(degree, term count)`` of a Boolean truth table."""
 
@@ -156,9 +180,12 @@ def record(bits: Sequence[int], k: int) -> WalshRecord:
     correlations = bit_derivative_correlations(shell)
     all_correlations = xor_autocorrelations(shell)
     dyadic_energies = dyadic_block_energies(shell)
+    correlation_energies = dyadic_energies_from_xor_autocorrelations(all_correlations)
     degree, terms = anf_profile(bits[length : 2 * length])
     if all_correlations[0] != length:
         raise AssertionError("zero-shift autocorrelation mismatch")
+    if correlation_energies != dyadic_energies:
+        raise AssertionError("dyadic energy/autocorrelation identity failed")
     return WalshRecord(
         k=k,
         length=length,

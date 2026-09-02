@@ -7,6 +7,7 @@ from p2_time_index_walsh_probe import (
     anf_profile,
     bit_derivative_correlations,
     dyadic_block_energies,
+    dyadic_energies_from_xor_autocorrelations,
     maximum_aligned_restriction,
     record,
     walsh_transform,
@@ -53,6 +54,18 @@ class TimeIndexWalshTest(unittest.TestCase):
             for shift in range(8)
         ]
         self.assertEqual(xor_autocorrelations(values), direct)
+
+    def test_dyadic_energy_xor_autocorrelation_identity(self) -> None:
+        values = [1, 1, -1, -1, 1, -1, 1, -1]
+        correlations = xor_autocorrelations(values)
+        self.assertEqual(
+            dyadic_energies_from_xor_autocorrelations(correlations),
+            dyadic_block_energies(values),
+        )
+        self.assertEqual(
+            dyadic_energies_from_xor_autocorrelations(correlations),
+            [8, 8, 0, 0],
+        )
 
     def test_anf_profile(self) -> None:
         # x0 XOR x1 on inputs 00,01,10,11.
