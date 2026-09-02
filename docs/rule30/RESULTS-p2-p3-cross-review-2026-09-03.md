@@ -121,6 +121,32 @@ where changing from `x` to `z=-x` does not change the energy.  This points to
 a possible boundary-flux proof: cancellation is needed only after averaging
 over all prefix endpoints, not uniformly at every endpoint.
 
+The required scalar summary also composes exactly under concatenation.  For a
+signed word `w` define
+
+```text
+D(w) = its total signed sum,
+A(w) = sum_u S_w(u),
+I(w) = sum_u S_w(u)^2.
+```
+
+If `u` and `v` have summary `(n_u,D_u,A_u,I_u)` and
+`(n_v,D_v,A_v,I_v)`, then
+
+```text
+n(uv) = n_u+n_v,
+D(uv) = D_u+D_v,
+A(uv) = A_u+n_v D_u+A_v,
+I(uv) = I_u+n_v D_u^2+2 D_u A_v+I_v.
+```
+
+This associative four-coordinate law is exact and regression-tested.  It
+means that a future dyadic spacetime grammar need not retain every center
+prefix merely to evaluate the P2 observable: it need only attach these three
+integer moments to each temporal piece.  The unresolved difficulty remains
+constructing the actual seed-specific pieces across the nonlinear spacetime
+seam; the moment law does not supply that grammar.
+
 On the exact `2^25`-row band cache, `I_k/N^2` remains random-walk scale rather
 than approaching the cubic worst case:
 

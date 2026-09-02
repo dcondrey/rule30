@@ -58,6 +58,38 @@ def integrated_prefix_energy(values: Sequence[int]) -> int:
     return energy
 
 
+def prefix_moments(values: Sequence[int]) -> tuple[int, int, int, int]:
+    """Return ``(length, total, prefix area, prefix-square energy)``."""
+
+    running = 0
+    area = 0
+    energy = 0
+    for value in values:
+        running += int(value)
+        area += running
+        energy += running * running
+    return len(values), running, area, energy
+
+
+def concatenate_prefix_moments(
+    left: tuple[int, int, int, int],
+    right: tuple[int, int, int, int],
+) -> tuple[int, int, int, int]:
+    """Compose prefix moments exactly under word concatenation."""
+
+    left_length, left_total, left_area, left_energy = left
+    right_length, right_total, right_area, right_energy = right
+    return (
+        left_length + right_length,
+        left_total + right_total,
+        left_area + right_length * left_total + right_area,
+        left_energy
+        + right_length * left_total * left_total
+        + 2 * left_total * right_area
+        + right_energy,
+    )
+
+
 def shell_record(bits: Sequence[int], k: int) -> ShellRecord:
     """Return the exact record for shell ``[2**k, 2**(k+1))``.
 

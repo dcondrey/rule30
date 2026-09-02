@@ -6,7 +6,9 @@ from pathlib import Path
 
 from center_column import center_column
 from p2_dyadic_shell_probe import (
+    concatenate_prefix_moments,
     integrated_prefix_energy,
+    prefix_moments,
     read_band_cache,
     records,
     shell_record,
@@ -49,6 +51,22 @@ class DyadicShellTest(unittest.TestCase):
             energy = integrated_prefix_energy(values)
             self.assertLessEqual(energy, len(values) * maximum * maximum)
             self.assertGreaterEqual(8 * energy, maximum**3)
+
+    def test_prefix_moment_concatenation_is_exact_and_associative(self) -> None:
+        left = [1, -1, 1]
+        middle = [-1, -1]
+        right = [1, 1, -1, 1]
+        composed = concatenate_prefix_moments(
+            concatenate_prefix_moments(prefix_moments(left), prefix_moments(middle)),
+            prefix_moments(right),
+        )
+        other_order = concatenate_prefix_moments(
+            prefix_moments(left),
+            concatenate_prefix_moments(prefix_moments(middle), prefix_moments(right)),
+        )
+        expected = prefix_moments([*left, *middle, *right])
+        self.assertEqual(composed, expected)
+        self.assertEqual(other_order, expected)
 
     def test_cache_format_is_little_endian_uint32(self) -> None:
         words = [0, 1 << 15, (1 << 15) | 7, 9]
