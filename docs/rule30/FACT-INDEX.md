@@ -364,8 +364,11 @@ finite-state or nonlinear invariant exists.
 1. **P1, period two:** prove the projected diagonal-support lemma from
    `RESULTS-PROJECTED-DIAGONAL-HALVING.md`, hence `s_2(W)<=|W|` and
    `s_3(W)<=|W|+1`; prove its one-credit halving alternative; or prove the
-   stronger reversed constant-tail queue
-   mortality.  Either route would close the rank-zero separator, all finite
+   stronger reversed constant-tail queue mortality.  In that queue route,
+   the feature-prefix ancestry charge is now falsified at length 77; the
+   replacement coordinate interval target is `r>=2h-1` for a depth-`h` pull
+   rooted at `r`, with zero failures in 5,272,917 targeted queues.  Either
+   surviving route would close the rank-zero separator, all finite
    Peel ranks, and the nonconstant period-two rung.  Diagonal support has zero
    failures through length 23; pointwise derivative, rank, bounded-jump, and
    local monotonicity certificates are killed.  Actual-right conditioning

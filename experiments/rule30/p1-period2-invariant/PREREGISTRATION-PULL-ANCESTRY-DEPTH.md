@@ -2,6 +2,11 @@
 
 Date: 2026-09-01
 
+> **Outcome update (2026-09-02).** Claims `(AD2)` and `(AD3)` are false.
+> The exact length-77 counterexample is recorded in
+> `RESULTS-PULL-COORDINATE-DEPTH.md`.  This file is retained as the frozen
+> preregistration, not as a statement of current status.
+
 ## Discovery boundary
 
 The all-length suffix theorem and pull-ray stabilization imply a natural

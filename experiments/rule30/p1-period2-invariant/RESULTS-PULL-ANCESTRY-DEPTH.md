@@ -3,8 +3,14 @@
 Date: 2026-09-01
 
 Status: **THE TEMPORAL DEPTH RECURRENCE IS PROVED FOR QUEUES OF EVERY
-LENGTH.  THE WEAKER ONE-CHAIN FEATURE BOUND PASSES ITS FROZEN HELD-OUT
-CORPUS BUT IS NOT PROVED.  PERIOD TWO REMAINS OPEN.**
+LENGTH.  THE ONE-CHAIN FEATURE BOUND AND ITS RAW-RESERVE STRENGTHENING ARE
+NOW FALSIFIED.  THE REPLACEMENT COORDINATE-DEPTH BOUND IS OPEN.  PERIOD TWO
+REMAINS OPEN.**
+
+> **Supersession notice (2026-09-02).** Sections 3 and 3a preserve the
+> original frozen claims and their held-out results, but those claims are
+> false.  The exact length-77 counterexample and the replacement target are
+> recorded in `RESULTS-PULL-COORDINATE-DEPTH.md`.
 
 ## 1. The parent forest
 
@@ -60,7 +66,7 @@ The conceptual consequence is important: infinitely many pulls cannot hide
 in infinitely many shallow branches.  They force one ancestry chain of
 unbounded pull-depth.
 
-## 3. Frozen held-out result for the remaining chain lemma
+## 3. Historical held-out result for the now-falsified chain lemma
 
 For initial queue `R`, put
 
@@ -89,10 +95,11 @@ orbit-cap hits:                                    0
 minimum feature slack:                             0.
 ```
 
-The zero slack makes the one-chain bound sharp on the held-out corpus.  This
-is finite evidence only.
+The zero slack made the one-chain bound look sharp on the held-out corpus.
+This was finite evidence only, and the later targeted sparse word in
+`RESULTS-PULL-COORDINATE-DEPTH.md` falsifies it.
 
-## 3a. Strengthened raw-reserve invariant
+## 3a. Historical raw-reserve strengthening, now falsified
 
 Write the remaining reserve of a current coordinate as
 
@@ -131,11 +138,12 @@ orbit-cap hits:                                   0
 minimum reserve slack:                            0.
 ```
 
-This is again finite evidence, not induction.  It improves the proof target:
-instead of constructing a global matching, prove preservation of one marked
-raw-state exclusion under the exact scan and boundary append.
+This was again finite evidence, not induction.  The later tail-3 word of
+length 77 reaches an exhausted raw state `3` and then performs a successful
+depth-three pull from a root with feature budget two.  Thus both (5) and the
+weaker feature-depth statement are false.
 
-### The exact inductive reduction
+### The conditional inductive reduction that the counterexample breaks
 
 Most of that preservation is already uniform.  Initially every positive
 root has depth zero and the normalized row has no raw state `3`.  An `A` or
@@ -165,14 +173,15 @@ equality suffix is empty or `0*2` after raw output `0`, and its raw outputs
 are only `0` and `2`.  The constant-table part of this reduction is checked
 by `inherited_raw_three_reduction_control()`.
 
-This is a genuine reduction, not the missing proof.  To the left of the
+This remains a correct conditional reduction, but its premise is not
+invariant.  To the left of the
 pivot, positive-reserve blocks transport the incoming state by the full
 `D8` action.  Contracting those blocks to arbitrary phases is too coarse;
 their reserve hierarchy must be retained recursively.  The remaining lemma
 is therefore a finite-phase, unbounded-depth block induction, rather than a
 fixed-window statement.
 
-## 4. Why this target is strictly weaker
+## 4. Why the failed target was strictly weaker
 
 Origin-prefix Hall sorts all pull origins and demands enough initial
 features for every prefix of that global multiset.  Bottom-feature crossing
@@ -181,17 +190,14 @@ does neither: two different branches may reuse the same feature prefix.  It
 only prevents one nested parent chain from consuming that prefix more times
 than it contains features.
 
-Nevertheless (4) turns the one-chain claim into
+Had it been true, (4) would have turned the one-chain claim into
 
 ```text
 #pulls <= 2 max_r F_R(r) <= 2|R|.                      (6)
 ```
 
-That constant-two bound is fully sufficient for `d(r)->infinity`; the
-previous sharp mixed budget is not needed.  The proved retreat--pull pairing
-then makes retreats finite.  The existing eventual-`2` separator excludes
-an immortal remainder, closing constant-tail mortality, rank zero, and the
-nonconstant period-two case.
+That constant-two bound would have been fully sufficient for
+`d(r)->infinity`, but its premise is false.
 
 For the actual Rule 30 application there is another weakening: the proved
 right trace forbids `00000`, so a counterexample would have eventually
@@ -217,9 +223,17 @@ actual endpoints had depth at most two is a finite artifact.  The witness is
 still consistent with the syndetic-chain target and then dies; it is not a
 period-two counterexample.
 
-## 5. Exact remaining lemma
+## 5. Replacement remaining lemma
 
-It now suffices to prove either:
+The feature alternatives below are retired.  The live replacement is the
+coordinate-depth interval lemma in `RESULTS-PULL-COORDINATE-DEPTH.md`:
+
+```text
+pull depth h at initial root r  =>  r >= 2h-1.
+```
+
+It still suffices alternatively to prove the actual syndetic-chain
+exclusion.  For historical clarity, the two former targets were:
 
 1. **single-chain feature descent:** each nested pull edge must cross a new
    initial feature start before returning to the same root; or
@@ -231,12 +245,9 @@ The local scalar searches do not address these statements.  They collapse
 the parent forest, and their exact all-word systems are already
 unsatisfiable through factor width five.
 
-The raw-reserve formulation supplies a concrete inductive version of item 1:
-show that every exhausted positive-root coordinate avoids raw state `3`.
-On the discovery rows, filtering out every positive-reserve coordinate left
-only `empty`, `0`, `2`, `02`, or an alternating `{1,2}` word ending in `1`.
-That tiny projection suggests a recursive block-action proof, but the grammar
-has not yet been established for all rows.
+The raw-reserve formulation does not supply item 1: the length-77
+counterexample reaches exactly the forbidden exhausted state `3`.  Its long
+zero run explains why filtering to feature starts lost essential scale.
 
 ## 6. Reproduction
 

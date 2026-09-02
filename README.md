@@ -100,11 +100,14 @@ coordinates are strictly smaller in colex order for both `0<2<1` and
 `0` or `2`.  Finite synchronous products prove this for words of every
 length.  It is not yet mortality: an appended boundary `1` can replace the
 consumed pivot at a newer coordinate, so the remaining task is an ancestry
-bound on those replacements.  The first raw budget, “retreat events at most
-initial `#1+1`,” is false at length 34.  The surviving weaker target is to
-prove that the minimum initial width supporting `r` retreat events tends to
-infinity; finitely many retreats reduce to the already-excluded
-eventually-`2` endpoint family.
+bound on those replacements.  Symbol-count and feature-start budgets are
+both false; the latter is killed by a sparse length-77 queue whose pull depth
+is 3 from feature budget 2.  The current geometric replacement is
+`r>=2h-1` for a depth-`h` pull rooted at initial coordinate `r`.  It passed
+5,272,917 targeted queues and aligns with the independent zero-prefix token
+budget, but is not proved.  Proving it, or merely proving that the minimum
+initial width supporting `r` retreats tends to infinity, would reduce the
+remainder to the already-excluded eventually-`2` endpoint family.
 
 Conditioning the terminal set on the complete actual Rule 30 right cone
 raises the tail-2 minimum from `18` to `23` at horizon 12 and changes exact

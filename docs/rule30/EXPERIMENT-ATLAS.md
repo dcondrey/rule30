@@ -427,9 +427,12 @@ quantifiers by itself.
    second route is the one-credit half-word recurrence.  Do not return to
    pointwise derivative rank, fixed-radius edge rules, endpoint-only
    telescopes, or literal half-block embedding; all are exactly falsified.
-2. Derive or falsify a source-ancestry bound that couples frontier path length
-   to the artificial endpoint-prefix length; without it, raw actual-right
-   terminal conditioning is not proof-relevant.
+2. Prove or falsify the coordinate-interval ancestry bound `r>=2h-1` for a
+   depth-`h` pull rooted at `r`, and identify its ordered tokens with the
+   zero-prefix sweep if possible.  The earlier feature-prefix version is
+   false at length 77.  A source-ancestry bound is also needed to couple
+   frontier path length to the artificial endpoint-prefix length; without
+   it, raw actual-right terminal conditioning is not proof-relevant.
 3. In parallel conceptually, test Peel-recursive interpolants against the
    existing checked cores, with the restart state explicit.
 4. Use all stored SAT, GA, OpenEvolve, and actual-right frontier witnesses as
