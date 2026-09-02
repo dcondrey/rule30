@@ -1,0 +1,203 @@
+#!/usr/bin/env python3
+"""Falsifiers for the colex-origin prefix Hall inequality."""
+
+from __future__ import annotations
+
+import argparse
+import random
+from dataclasses import dataclass
+
+from constant_tail_mixed_run_budget import weighted_invariant_queue
+from constant_tail_queue import Vector, normalize_queue, queue_step
+from constant_tail_retreat_budget import invariant_queues, random_invariant_queue
+
+
+def feature_starts(queue: Vector) -> tuple[int, ...]:
+    """Return the initial `1` cells and maximal-zero-run starts."""
+
+    answer = []
+    index = 1
+    while index < len(queue):
+        if queue[index] == 0:
+            answer.append(index)
+            index += 1
+            while index < len(queue) and queue[index] == 0:
+                index += 1
+        elif queue[index] == 1:
+            answer.append(index)
+            index += 1
+        else:
+            index += 1
+    return tuple(answer)
+
+
+@dataclass(frozen=True, slots=True)
+class Profile:
+    retreat_origins: tuple[int, ...]
+    feature_starts: tuple[int, ...]
+    updates: int
+
+
+def origin_profile(queue: Vector, tail: int, cap: int) -> Profile:
+    """Propagate fixed coordinate origins through appended colex pivots."""
+
+    initial = queue
+    origins = list(range(len(queue)))
+    retreat_origins = []
+    for update in range(cap):
+        following = queue_step(queue, tail)
+        if following is None:
+            return Profile(
+                tuple(retreat_origins), feature_starts(initial), update
+            )
+
+        inherited = normalize_queue(following.queue[:-1], tail)
+        differences = tuple(
+            index
+            for index in range(1, len(queue))
+            if inherited[index] != queue[index]
+        )
+        if differences:
+            pivot = differences[-1]
+            # This is also independently proved by the all-word colex
+            # product; retain the literal assertion as a regression control.
+            assert queue[pivot] == 1
+            origin = origins[pivot]
+        else:
+            # The only successful empty-suffix case is the one-symbol tail-2
+            # queue, whose appended boundary is nonretreating.
+            assert queue == (2,)
+            origin = 0
+
+        queue = normalize_queue(following.queue, tail)
+        origins.append(origin)
+        if queue[-1] == 2:
+            retreat_origins.append(origin)
+    raise AssertionError("orbit reached the audit cap")
+
+
+@dataclass(slots=True)
+class Census:
+    queues: int = 0
+    updates: int = 0
+    failures: int = 0
+    capped: int = 0
+    minimum_slack: int = 10**9
+    first_failure: str | None = None
+
+
+def audit(queue: Vector, tail: int, cap: int, census: Census) -> None:
+    try:
+        profile = origin_profile(queue, tail, cap)
+    except AssertionError as error:
+        if "audit cap" not in str(error):
+            raise
+        census.queues += 1
+        census.capped += 1
+        return
+
+    starts = profile.feature_starts
+    for rank, origin in enumerate(sorted(profile.retreat_origins), start=1):
+        available = sum(start <= origin for start in starts)
+        slack = available - rank
+        census.minimum_slack = min(census.minimum_slack, slack)
+        if slack < 0:
+            census.failures += 1
+            if census.first_failure is None:
+                census.first_failure = (
+                    f"tail={tail} R={''.join(map(str, queue))} "
+                    f"origins={profile.retreat_origins} starts={starts} "
+                    f"rank={rank} origin={origin} available={available}"
+                )
+            break
+    census.queues += 1
+    census.updates += profile.updates
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--exact-length", type=int, default=19)
+    parser.add_argument("--random-per-tail", type=int, default=50_000)
+    parser.add_argument("--sparse-per-tail", type=int, default=50_000)
+    parser.add_argument("--orbit-cap", type=int, default=1_000)
+    args = parser.parse_args()
+    if (
+        args.exact_length < 1
+        or args.random_per_tail < 0
+        or args.sparse_per_tail < 0
+        or args.orbit_cap < 1
+    ):
+        parser.error("invalid audit bound")
+
+    census = Census()
+    controls = (
+        (3, tuple(map(int, "3000000000000000010100000010000002"))),
+        (2, tuple(map(int, "211012110000000001"))),
+    )
+    for tail, queue in controls:
+        before = census.failures
+        audit(queue, tail, args.orbit_cap, census)
+        assert census.failures == before and not census.capped
+        print(
+            f"control tail={tail} n={len(queue)} "
+            "origin-prefix-Hall PASS",
+            flush=True,
+        )
+
+    before = (census.queues, census.failures)
+    for tail in (2, 3):
+        for queue in invariant_queues(args.exact_length, tail):
+            audit(queue, tail, args.orbit_cap, census)
+    print(
+        f"exact length={args.exact_length} "
+        f"queues={census.queues-before[0]} "
+        f"failures={census.failures-before[1]} "
+        f"minimum-slack={census.minimum_slack}",
+        flush=True,
+    )
+
+    generator = random.Random(30131)
+    for length in (24, 32, 48, 64, 96):
+        before = (census.queues, census.failures)
+        for tail in (2, 3):
+            for _ in range(args.random_per_tail):
+                audit(
+                    random_invariant_queue(length, tail, generator),
+                    tail,
+                    args.orbit_cap,
+                    census,
+                )
+        print(
+            f"random length={length} queues={census.queues-before[0]} "
+            f"failures={census.failures-before[1]} "
+            f"minimum-slack={census.minimum_slack}",
+            flush=True,
+        )
+
+    for length in (24, 32, 48, 64, 96, 128):
+        before = (census.queues, census.failures)
+        for tail in (2, 3):
+            for _ in range(args.sparse_per_tail):
+                audit(
+                    weighted_invariant_queue(length, tail, generator),
+                    tail,
+                    args.orbit_cap,
+                    census,
+                )
+        print(
+            f"sparse length={length} queues={census.queues-before[0]} "
+            f"failures={census.failures-before[1]} "
+            f"minimum-slack={census.minimum_slack}",
+            flush=True,
+        )
+
+    print(
+        f"TOTAL queues={census.queues} updates={census.updates} "
+        f"failures={census.failures} capped={census.capped} "
+        f"minimum-slack={census.minimum_slack}"
+    )
+    print(f"first failure: {census.first_failure or 'none'}")
+
+
+if __name__ == "__main__":
+    main()
