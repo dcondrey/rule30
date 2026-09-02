@@ -29,6 +29,7 @@ class ShellRecord:
     length: int
     shell_sum: int
     shell_max_abs: int
+    integrated_prefix_energy: int
     prefix_at_start: int
     prefix_at_end: int
     high_bit_correlation: int
@@ -37,9 +38,24 @@ class ShellRecord:
     def normalized_max(self) -> float:
         return self.shell_max_abs / self.length
 
+    @property
+    def normalized_integrated_energy(self) -> float:
+        return self.integrated_prefix_energy / self.length**3
+
 
 def signed(bits: Sequence[int]) -> list[int]:
     return [2 * int(bit) - 1 for bit in bits]
+
+
+def integrated_prefix_energy(values: Sequence[int]) -> int:
+    """Return the sum of squared signed prefix sums, including the endpoint."""
+
+    running = 0
+    energy = 0
+    for value in values:
+        running += int(value)
+        energy += running * running
+    return energy
 
 
 def shell_record(bits: Sequence[int], k: int) -> ShellRecord:
@@ -58,11 +74,13 @@ def shell_record(bits: Sequence[int], k: int) -> ShellRecord:
     prefix_at_start = sum(values[:length])
     running = 0
     maximum = 0
+    prefix_energy = 0
     correlation = 0
     for offset in range(length):
         value = values[length + offset]
         running += value
         maximum = max(maximum, abs(running))
+        prefix_energy += running * running
         correlation += values[offset] * value
 
     return ShellRecord(
@@ -70,6 +88,7 @@ def shell_record(bits: Sequence[int], k: int) -> ShellRecord:
         length=length,
         shell_sum=running,
         shell_max_abs=maximum,
+        integrated_prefix_energy=prefix_energy,
         prefix_at_start=prefix_at_start,
         prefix_at_end=prefix_at_start + running,
         high_bit_correlation=correlation,
@@ -100,15 +119,17 @@ def read_band_cache(path: Path, count: int, center_bit: int = 15) -> bytes:
 
 def print_table(found: Sequence[ShellRecord]) -> None:
     print(
-        "k length shell_sum shell_max_abs prefix_start prefix_end "
-        "high_bit_corr max/length corr/length"
+        "k length shell_sum shell_max_abs prefix_energy prefix_start prefix_end "
+        "high_bit_corr max/length energy/length^3 corr/length"
     )
     for row in found:
         print(
             f"{row.k:2d} {row.length:8d} {row.shell_sum:9d} "
-            f"{row.shell_max_abs:13d} {row.prefix_at_start:12d} "
+            f"{row.shell_max_abs:13d} {row.integrated_prefix_energy:13d} "
+            f"{row.prefix_at_start:12d} "
             f"{row.prefix_at_end:10d} {row.high_bit_correlation:13d} "
             f"{row.normalized_max:.9g} "
+            f"{row.normalized_integrated_energy:.9g} "
             f"{row.high_bit_correlation / row.length:+.9g}"
         )
 
@@ -134,7 +155,14 @@ def main() -> None:
     if args.json:
         print(
             json.dumps(
-                [asdict(row) | {"normalized_max": row.normalized_max} for row in found],
+                [
+                    asdict(row)
+                    | {
+                        "normalized_max": row.normalized_max,
+                        "normalized_integrated_energy": row.normalized_integrated_energy,
+                    }
+                    for row in found
+                ],
                 indent=2,
             )
         )

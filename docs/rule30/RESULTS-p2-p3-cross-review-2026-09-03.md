@@ -74,7 +74,71 @@ endpoint convergence alone does not control excursions inside a shell.  It
 also avoids the overstrong orbit-closure target: no statement about every
 invariant measure or every shifted time block is needed.
 
-### 2.1 Probabilistic restatement without random initial conditions
+### 2.1 Equivalent integrated-energy criterion
+
+There is an exact average-square version that removes the maximum.  Write the
+signed running discrepancy inside shell `k` as
+
+```text
+S_k(u) = sum_(0 <= r < u) x_(2^k+r),
+I_k    = sum_(u=1)^(2^k) S_k(u)^2.
+```
+
+**Integrated-energy lemma.**  P2 is equivalent to
+
+```text
+I_k / 2^(3k) -> 0.
+```
+
+Proof.  Put `N=2^k` and `M=M_k`.  The easy direction is
+
+```text
+I_k <= N M^2.
+```
+
+For the other direction, choose the first prefix at which `|S_k|=M`.
+Because every increment is `+1` or `-1`, the preceding
+`floor(M/2)+1` prefixes all have absolute value at least `M/2`.  Hence, for
+integer `M>=1`,
+
+```text
+I_k >= M^3/8.
+```
+
+Thus `I_k=o(N^3)` if and only if `M_k=o(N)`, and the dyadic-shell lemma
+finishes both directions.  QED.
+
+This is the weakest exact scalar target found in the review.  It permits rare
+large excursions and arbitrary individual correlations; any fixed power
+bound `I_k=O(N^(3-delta))`, however small `delta>0`, proves P2.  Expanding
+the squares also gives a boundary-weighted ordinary-correlation form:
+
+```text
+I_k = sum_(r,s=0)^(N-1) (N-max(r,s)) z_k(r)z_k(s),
+```
+
+where changing from `x` to `z=-x` does not change the energy.  This points to
+a possible boundary-flux proof: cancellation is needed only after averaging
+over all prefix endpoints, not uniformly at every endpoint.
+
+On the exact `2^25`-row band cache, `I_k/N^2` remains random-walk scale rather
+than approaching the cubic worst case:
+
+| `k` | `I_k` | `I_k/N^2` | `I_k/N^3` |
+|---:|---:|---:|---:|
+| 12 | 1,679,956 | 0.1001 | 2.445e-5 |
+| 14 | 334,979,508 | 1.2479 | 7.617e-5 |
+| 16 | 1,877,755,364 | 0.4372 | 6.671e-6 |
+| 18 | 5,794,553,236 | 0.0843 | 3.217e-7 |
+| 20 | 356,961,632,476 | 0.3247 | 3.096e-7 |
+| 22 | 12,573,129,265,932 | 0.7147 | 1.704e-7 |
+| 24 | 156,527,072,865,292 | 0.5561 | 3.315e-8 |
+
+These measurements are finite evidence only.  The probe records the integer
+energy directly and regression tests exhaust all signed words of length eight
+against both deterministic inequalities.
+
+### 2.2 Probabilistic restatement without random initial conditions
 
 One may choose the *time index* `N` uniformly in
 `[2^k,2^(k+1))`; this is a genuine finite probability space on the fixed
@@ -84,7 +148,7 @@ must bound the effects of those reveals using an exact Rule 30 coupling or
 seam map.  Importing Bernoulli initial-condition independence would reintroduce
 the known ensemble-to-seed gap.
 
-### 2.2 Finite diagnostic
+### 2.3 Finite maximum diagnostic
 
 The existing bit-exact cache through `2^25` times gives the following shell
 maxima (the center is cache bit 15):
@@ -117,12 +181,13 @@ A useful scale state `Q_k` must satisfy all of:
 5. Its seam contains scale and absolute phase unless an identity proves they
    cancel.
 
-The immediate mathematical target is therefore a contraction or cancellation
-law for shell-prefix sums, not another measurement of total prefix bias.  A
-candidate law must be tested on Rule 90, on the all-zero and checkerboard Rule
-30 fixed points, and on the cached single-seed shells.  The fixed points are
-not counterexamples to a seed-specific law, but they refute any proof whose
-only hypothesis is Rule 30 invariance.
+The weakest immediate mathematical target is a subcubic bound for the
+integrated shell energy `I_k`; a contraction or cancellation law for the
+stronger maximum remains sufficient.  A candidate law must be tested on Rule
+90, on the all-zero and checkerboard Rule 30 fixed points, and on the cached
+single-seed shells.  The fixed points are not counterexamples to a
+seed-specific law, but they refute any proof whose only hypothesis is Rule 30
+invariance.
 
 ## 4. Why the previous P2 orbit-closure target is probably too strong
 
@@ -190,7 +255,8 @@ probability, infers an infinite statement from a fitted exponent, discards the
 nonlinear seam, silently switches to arbitrary-input complexity, or treats a
 compressed file as a sublinear construction.
 
-The strongest new conclusion is the exact shell equivalence in section 2.
-It converts P2 into a scale-local maximum-discrepancy theorem on the lone seed
-and identifies the only seam whose renormalization would be decisive.  The
+The strongest new conclusion is the pair of exact shell equivalences in
+section 2.  They convert P2 into either a scale-local maximum-discrepancy
+theorem or the weaker subcubic integrated-energy theorem on the lone seed and
+identify the only seam whose renormalization would be decisive.  The
 renormalization itself remains open.

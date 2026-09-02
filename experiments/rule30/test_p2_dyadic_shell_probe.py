@@ -5,7 +5,12 @@ import unittest
 from pathlib import Path
 
 from center_column import center_column
-from p2_dyadic_shell_probe import read_band_cache, records, shell_record
+from p2_dyadic_shell_probe import (
+    integrated_prefix_energy,
+    read_band_cache,
+    records,
+    shell_record,
+)
 
 
 class DyadicShellTest(unittest.TestCase):
@@ -29,6 +34,21 @@ class DyadicShellTest(unittest.TestCase):
         self.assertEqual(row.shell_sum, 0)
         self.assertEqual(row.prefix_at_end, 0)
         self.assertEqual(row.shell_max_abs, 2)
+        self.assertEqual(row.integrated_prefix_energy, 6)
+
+    def test_integrated_energy_and_peak_inequalities(self) -> None:
+        # Exhaust every signed word of length eight.  These are the two
+        # deterministic inequalities behind the energy equivalence.
+        for encoded in range(1 << 8):
+            values = [1 if encoded & (1 << index) else -1 for index in range(8)]
+            running = 0
+            maximum = 0
+            for value in values:
+                running += value
+                maximum = max(maximum, abs(running))
+            energy = integrated_prefix_energy(values)
+            self.assertLessEqual(energy, len(values) * maximum * maximum)
+            self.assertGreaterEqual(8 * energy, maximum**3)
 
     def test_cache_format_is_little_endian_uint32(self) -> None:
         words = [0, 1 << 15, (1 << 15) | 7, 9]
