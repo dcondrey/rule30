@@ -39,6 +39,8 @@ class WalshRecord:
     max_abs_bit_derivative_correlation: int
     max_abs_xor_autocorrelation_nonzero: int
     l1_xor_autocorrelation: int
+    anf_degree: int
+    anf_terms: int
 
     @property
     def random_scale_ratio(self) -> float:
@@ -103,6 +105,22 @@ def xor_autocorrelations(values: Sequence[int]) -> list[int]:
     return [value // length for value in numerators]
 
 
+def anf_profile(values: Sequence[int]) -> tuple[int, int]:
+    """Return ``(degree, term count)`` of a Boolean truth table."""
+
+    if not values or len(values) & (len(values) - 1):
+        raise ValueError("ANF input length must be a positive power of two")
+    coefficients = [int(value) & 1 for value in values]
+    variables = len(coefficients).bit_length() - 1
+    for bit in range(variables):
+        mask = 1 << bit
+        for index in range(len(coefficients)):
+            if index & mask:
+                coefficients[index] ^= coefficients[index ^ mask]
+    support = [index for index, value in enumerate(coefficients) if value]
+    return max((index.bit_count() for index in support), default=-1), len(support)
+
+
 def record(bits: Sequence[int], k: int) -> WalshRecord:
     length = 1 << k
     if len(bits) < 2 * length:
@@ -118,6 +136,7 @@ def record(bits: Sequence[int], k: int) -> WalshRecord:
         prefix_maximum = max(prefix_maximum, abs(running))
     correlations = bit_derivative_correlations(shell)
     all_correlations = xor_autocorrelations(shell)
+    degree, terms = anf_profile(bits[length : 2 * length])
     if all_correlations[0] != length:
         raise AssertionError("zero-shift autocorrelation mismatch")
     return WalshRecord(
@@ -131,6 +150,8 @@ def record(bits: Sequence[int], k: int) -> WalshRecord:
         max_abs_bit_derivative_correlation=max(map(abs, correlations)),
         max_abs_xor_autocorrelation_nonzero=max(map(abs, all_correlations[1:])),
         l1_xor_autocorrelation=sum(map(abs, all_correlations)),
+        anf_degree=degree,
+        anf_terms=terms,
     )
 
 
@@ -163,7 +184,8 @@ def main() -> None:
 
     print(
         "k length dc max_walsh walsh_index prefix_max aligned_max "
-        "bit_derivative_max xor_corr_max xor_corr_l1 max/sqrt(kN)"
+        "bit_derivative_max xor_corr_max xor_corr_l1 anf_degree anf_terms "
+        "max/sqrt(kN)"
     )
     for row in found:
         print(
@@ -173,6 +195,7 @@ def main() -> None:
             f"{row.max_abs_bit_derivative_correlation:18d} "
             f"{row.max_abs_xor_autocorrelation_nonzero:12d} "
             f"{row.l1_xor_autocorrelation:11d} "
+            f"{row.anf_degree:10d} {row.anf_terms:9d} "
             f"{row.random_scale_ratio:.6f}"
         )
 

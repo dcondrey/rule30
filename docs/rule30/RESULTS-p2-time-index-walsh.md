@@ -171,6 +171,15 @@ Thus the measured `l1` norm is consistent with `N^(3/2)` rather than the
 worst-case `N^2`.  Proving any fixed power saving from `N^2` would be more
 than enough for the theorem.  This finite exponent is still not a proof.
 
+The time-index ANFs close a cheaper algebraic shortcut.  From `k=4` through
+`20`, their degree is always `k` or `k-1`; their term density approaches
+one half (for example `32,893/65,536` at `k=16` and
+`523,423/1,048,576` at `k=20`).  The full-degree cases through this range are
+`k=4,5,8,13,19`; elsewhere the degree is `k-1`.  Thus these functions are not
+bounded-degree quadratic phases to which a standard quadratic exponential-sum
+formula applies.  High degree or dense ANF is not itself evidence of Walsh
+decay, so this is a route disposition rather than positive evidence.
+
 The transform is exact integer arithmetic.  Tests pin two known transforms,
 Parseval's identity, aligned-block sums, XOR derivatives, and a direct Rule 30
 shell.

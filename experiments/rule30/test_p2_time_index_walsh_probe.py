@@ -4,6 +4,7 @@ import unittest
 
 from center_column import center_column
 from p2_time_index_walsh_probe import (
+    anf_profile,
     bit_derivative_correlations,
     maximum_aligned_restriction,
     record,
@@ -38,11 +39,16 @@ class TimeIndexWalshTest(unittest.TestCase):
         ]
         self.assertEqual(xor_autocorrelations(values), direct)
 
+    def test_anf_profile(self) -> None:
+        # x0 XOR x1 on inputs 00,01,10,11.
+        self.assertEqual(anf_profile([0, 1, 1, 0]), (1, 2))
+
     def test_small_rule30_shell(self) -> None:
         row = record(center_column(32), 4)
         self.assertEqual(row.dc, -2)
         self.assertEqual(row.max_shell_prefix, 3)
         self.assertEqual(row.max_abs_walsh, 6)
+        self.assertEqual((row.anf_degree, row.anf_terms), (4, 8))
 
     def test_rejects_non_power_of_two(self) -> None:
         with self.assertRaises(ValueError):
