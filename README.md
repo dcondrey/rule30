@@ -202,6 +202,7 @@ and negative certificates they implement; it does not prove P1.
 |---|---|
 | `docs/rule30/START-HERE.md` | Compact status and attempt router |
 | `docs/rule30/EXPERIMENT-ATLAS.md` | Cross-examination matrix, correlations, and synthesis queue |
+| `docs/rule30/RESULTS-cross-route-synthesis-2026-09-02.md` | Corrected cross-route correlations, mashups, and ranked next lemmas |
 | `docs/rule30/FACT-INDEX.md` | Theorem, identity, control, and obstruction index |
 | `docs/rule30/PATH.md` | Exhaustive internal and external attempt register |
 | `experiments/README.md` | Executable-artifact directory router |

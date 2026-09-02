@@ -1,6 +1,6 @@
 # Rule 30: compact research index
 
-Updated: 2026-09-01
+Updated: 2026-09-02
 
 Purpose: resume this project with the fewest tokens consistent with not
 repeating work.  This file routes to authoritative sources; it is not itself a
@@ -39,6 +39,7 @@ The register is split for historical reasons:
 | Later rows 91–93 | `PATH.md` section 7.1 |
 | Period-two same-orbit continuation after row 90 | `experiments/rule30/p1-period2-invariant/README.md` |
 | Cross-technique synthesis and new dyadic separator | `RESULTS-hybrid-review-2026-09-01.md` |
+| Corrected all-route synthesis after ancestry counterexamples | `RESULTS-cross-route-synthesis-2026-09-02.md` |
 | External literature/claim audit | `PATH.md` section 8 and the two `REFUTATION-*` files |
 
 There is a historical row-number collision: `PATH.md` row 76 is the S-adic /
