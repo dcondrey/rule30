@@ -173,6 +173,7 @@ local clause by itself.
 | `RESULTS-PULL-COORDINATE-DEPTH.md` | `U/K` | Temporal ancestry is exact; unrestricted root-coordinate charge is false at `3001 0^382 2` | Long zero runs store dyadic phase |
 | `RESULTS-HARD-CORE-PULL-DEPTH.md` | `U/R/C` | Every endpoint-derived pull root lies in the last three initial coordinates | Bound the depth of those localized roots |
 | `RESULTS-ENDPOINT-EVENT-BRIDGE.md` | `U/K/R` | `A/B/C` are endpoint transitions `21/22/12` off the singleton boundary case; an all-`2` initial endpoint still produces a pull | Charge pull chains to internal ordered zero-prefix tokens, not literal initial endpoint pairs |
+| `RESULTS-PULL-ROW-ALPHA-SUPPORT.md` | `U/R/C/K` | On a hard-core row, `alpha` is raw queue activity parity; it is enough to support only nonfinal pull rows in this one coordinate | Prove the ordered parity-flux contrapositive; `k=j`, fixed-radius, and arbitrary four-state source versions are false |
 
 The constant-tail queue is stronger than the seed-derived statement because
 its middle word is arbitrary.  The actual-right scale separator is weaker and
@@ -424,13 +425,17 @@ quantifiers by itself.
 
 ## 10. Recommended next sequence
 
-1. Prove or falsify projected diagonal support using the ordered
+1. Prove or falsify pull-row alpha support using the exact activity-parity
+   formula.  This one-coordinate pull-only statement is sufficient and is
+   strictly weaker than projected diagonal support.  Do not extend its
+   complete length-23 census; derive the ordered parity-flux contrapositive.
+2. Prove or falsify projected diagonal support using the ordered
    zero-prefix/Peel filtration.  Tail 2 needs only the additive quotient
    `(alpha,beta)`; tail 3 needs the terminal state `(alpha,gamma)=A(0)`.  A
    second route is the one-credit half-word recurrence.  Do not return to
    pointwise derivative rank, fixed-radius edge rules, endpoint-only
    telescopes, or literal half-block embedding; all are exactly falsified.
-2. Replace the falsified unrestricted coordinate-interval bound.  The family
+3. Replace the falsified unrestricted coordinate-interval bound.  The family
    `3001 0^m 2` violates `r>=2h-1` at `m=382` and shows that right-hand zero
    gaps carry dyadic phase.  Either retain a scale/gap vector in the ancestry
    charge, or prove the bound only for queues that are reversed inverse
@@ -439,11 +444,11 @@ quantifiers by itself.
    or `8N` token/`D8`-phase pairs, already gives the finite depth bound needed
    for mortality.  A source-ancestry bound is still needed to couple frontier
    path length to the artificial endpoint-prefix length.
-3. In parallel conceptually, test Peel-recursive interpolants against the
+4. In parallel conceptually, test Peel-recursive interpolants against the
    existing checked cores, with the restart state explicit.
-4. Use all stored SAT, GA, OpenEvolve, and actual-right frontier witnesses as
+5. Use all stored SAT, GA, OpenEvolve, and actual-right frontier witnesses as
    an external corpus for any proposed uniform rule.
-5. Do not extend the conditioned distance or phase tables without a new
+6. Do not extend the conditioned distance or phase tables without a new
    uniform recurrence candidate.
 
 Success means a uniform lemma with an independently checkable proof.  A new

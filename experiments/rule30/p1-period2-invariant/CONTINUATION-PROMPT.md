@@ -757,6 +757,28 @@ phases. Read `RESULTS-ENDPOINT-EVENT-BRIDGE.md`,
 `RESULTS-PULL-COORDINATE-DEPTH.md`, and
 `RESULTS-HARD-CORE-PULL-DEPTH.md` before continuing.
 
+LATEST PULL-ROW ALPHA REDUCTION
+
+The endpoint/event bridge and zero-prefix scale scenarios combine to remove
+the pull-depth bound entirely. It is enough to prove: at every nonfinal pull
+row `j`, some token `k` with `j<=k<n` changes the single affine coordinate
+`alpha`. A non-eventually-2 immortal endpoint has infinitely many pulls, so
+for fixed `n` one eventually has `j>=n`, where that token interval is empty.
+
+For raw reversed dependency queue `R` and previous endpoint `p`, the exact
+identity is
+
+    alpha = 1 XOR [p!=0] XOR parity{i>=1:R_i!=0}.
+
+On hard-core rows this is just queue activity parity, and a pull is temporal
+transition `alpha:1 -> 0`. The frozen claim has zero failures in 392,830
+word/tail cases and 31,595 nonfinal pull rows through length 23, including
+357,414 held-out cases at lengths 19--23. This is finite evidence only.
+Token `k=j` already fails at length 6 and first-witness displacement reaches
+9, so do not seek a fixed-radius rule. The remaining task is an ordered
+triangular parity-flux/noncrossing proof. Read
+`RESULTS-PULL-ROW-ALPHA-SUPPORT.md` before continuing.
+
 REPRODUCTION COMMANDS
 
     uv run --project experiments/sygus-p3 python \

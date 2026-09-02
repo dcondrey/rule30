@@ -8,8 +8,8 @@ ITS FINAL UNBOUNDED SEPARATION LEMMA REMAINS OPEN.**
 ## 1. Scope and accounting
 
 This review covers the ranked routes in `PATH.md`, frontier rows 73--90, the
-later route rows, and all 57 result reports in the period-two directory.  The
-archive also contains 49 preregistration reports.  These numbers must
+later route rows, and all 58 result reports in the period-two directory.  The
+archive also contains 51 preregistration reports.  These numbers must
 not be added and called a number of independent approaches: many entries are
 controls, equivalent formulations, refinements, or falsifications of one
 proof family.
@@ -95,6 +95,8 @@ enough: the parent-forest theorem turns infinitely many pulls into unbounded
 depth.  This opens a weaker cross-route target—inject chain pulls into the
 `N` ordered zero-prefix tokens, possibly decorated by one of the eight `D8`
 phases.  Either `h<=N` or `h<=8N` suffices.  The injection is not proved.
+The later pull-row alpha reduction below is weaker still and supersedes this
+injection as the first proof target.
 
 There is also an exact dichotomy behind this weakening.  If an immortal
 relevant queue has only finitely many `C` events, it eventually has no `A`
@@ -103,6 +105,37 @@ has event tail `B^omega`; its endpoint is eventually `2^omega`, already
 excluded by the reachable dyadic exceptional-family theorem.  Otherwise it
 has infinitely many pulls, and the parent forest forces unbounded depth on
 one chain.  Thus a finite chain bound closes the entire remaining branch.
+
+### 2.2 Pull-row alpha support
+
+Combining the endpoint/event dictionary with the projected zero-prefix
+scenarios removes most of the remaining certificate.  It is enough to prove:
+
+> At every nonfinal pull row `j`, some zero-prefix token `k` with `j<=k<n`
+> changes the single affine coordinate `alpha`.
+
+If a relevant endpoint is not eventually `2`, it has infinitely many pull
+rows.  For a fixed block length `n`, a pull row `j>=n` makes the displayed
+token interval empty, giving the contradiction.  No matching, pull-depth
+bound, or second affine coordinate is required.
+
+This coordinate has an exact interpretation.  For raw reversed dependency
+queue `R` and previous endpoint `p`,
+
+```text
+alpha = 1 XOR [p != 0] XOR parity{i>=1:R_i != 0}.
+```
+
+On a hard-core row this is just the activity parity of `R[1:]`, and the
+forced endpoint high bit is `1 XOR alpha`.  Hence a pull is a temporal
+`alpha:1 -> 0` transition.  The remaining theorem is a discrete parity-flux
+statement across the ordered scenario strip.
+
+PAS has zero failures on 392,830 word/tail cases through length 23, including
+31,595 nonfinal pull rows.  The frozen held-out lengths 19--23 contribute
+357,414 cases and 28,954 pull rows.  These counts are finite evidence only.
+The diagonal token `k=j` already fails at length six, and first-witness
+displacement reaches nine, so a bounded-radius proof is not supported.
 
 ## 3. Correlations that recur across nominally different routes
 
@@ -193,7 +226,21 @@ bridge.
 
 ## 4. Ranked mashups
 
-### A. Ordered scale tokens + endpoint pull ancestry
+### A. Pull-row alpha parity flux
+
+This is now the smallest sufficient target.  Assume the ordered alpha
+finite-difference row vanishes for every token `k>=j`.  Using the complete
+scenario queues and the activity-parity formula, prove that the original
+endpoint cannot make a nonfinal `1 -> 2` transition.  Equivalently, derive a
+discrete triangular Stokes/noncrossing law transporting the temporal alpha
+loss to spatial alpha support.
+
+The active source alphabet `{1,2}` is essential: arbitrary four-state source
+word `01`, tail `2`, is already a counterexample.  Endpoint telescoping and a
+fixed diagonal radius are also false.  A valid proof must keep ordered
+interior ancestry until the final parity projection.
+
+### B. Ordered scale tokens + endpoint pull ancestry
 
 This is the strongest new ancestry route.  The previous proposal asked for a
 fresh hard-core `12` pair and thereby aimed at `2h<=r+1`.  That quantitative
@@ -214,7 +261,7 @@ dependency diagonal must remain available when defining the map; bounded
 defect states are already killed.  A repeated token/phase pair or a
 nonnested exact endpoint-derived residue is a kill certificate.
 
-### B. Projected diagonal support + the same scale filtration
+### C. Projected diagonal support + the same scale filtration
 
 The projected diagonal-support lemma has broader finite coverage and gives
 the desired tail bounds directly.  Its adjacent affine differences must be
@@ -223,7 +270,7 @@ binary gap filtration may supply the well-founded order that scalar support
 counts lacked.  This is the primary proof route; ancestry depth is an
 independent sufficient route and a source of counterexamples.
 
-### C. Peel-recursive separators + moving restart state
+### D. Peel-recursive separators + moving restart state
 
 Pull the small exact Craig interpolants back through
 
@@ -235,7 +282,7 @@ while carrying the restart phase explicitly.  Seek a recurrence for minimum
 source length rather than bounded formula size.  This combines exact algebra
 with the dynamic-cocycle idea without assuming a static local invariant.
 
-### D. Artificial-prefix bound + actual-right frontier distance
+### E. Artificial-prefix bound + actual-right frontier distance
 
 The actual-right terminal subsystem raises finite distances, but rank descent
 may prepend an artificial block of `2`s.  Prove that a generator word of
@@ -246,13 +293,16 @@ would then close the orbit intersection.
 
 ## 5. Work order and kill discipline
 
-1. Prove or falsify the endpoint-derived noncrossing/residue-nesting lemma;
-   do not test arbitrary normalized queues again.
-2. In parallel at the level of mathematics, strengthen projected diagonal
+1. Prove or falsify pull-row alpha support from the exact activity-parity
+   formula and complete ordered scenario queues; do not extend the finite
+   horizon.
+2. If PAS fails, return to the endpoint-derived token/phase or
+   noncrossing/residue-nesting lemma; do not test arbitrary normalized queues.
+3. In parallel at the level of mathematics, strengthen projected diagonal
    support using a gap/scale filtration with the absolute `D8` phase.
-3. If both fail, synthesize Peel-recursive separators whose objective is
+4. If both fail, synthesize Peel-recursive separators whose objective is
    minimum source length.
-4. Apply actual-right constraints only after bounding the artificial prefix.
+5. Apply actual-right constraints only after bounding the artificial prefix.
 
 The period-two proof is complete only when one of these yields an all-length
 theorem and an independently checkable derivation.  A larger census, another

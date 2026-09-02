@@ -107,6 +107,22 @@ where `I` is inverse Gray code.  For a genuinely realizable right half,
 
 Best next theorem:
 
+> **Pull-row alpha support.**  At every nonfinal forced endpoint transition
+> `1 -> 2`, some zero-prefix token `k` at or to the right of row `j` changes
+> the single affine coordinate `alpha`.
+
+An immortal relevant endpoint either becomes eventually `2` (already
+excluded) or has infinitely many such pull rows.  For a fixed word length
+`n`, a pull row `j>=n` makes the required token interval empty, so this lemma
+closes the period-two rung.  On hard-core rows `alpha` is exactly the parity
+of nonzero cells in the raw reversed dependency queue after its leading
+tail.  The claim has zero failures in 392,830 word/tail cases and 31,595 pull
+rows through length 23, but is unproved.  The diagonal-token strengthening
+fails at length six, so a bounded-radius proof is unavailable.  See
+`RESULTS-PULL-ROW-ALPHA-SUPPORT.md`.
+
+The stronger fallback theorem is:
+
 > **Projected diagonal-support lemma.**  For
 > `W^(k)=0^k W[k:]`, let `A_(j,k)` be the exact newest affine boundary map at
 > forced scale step `j`.  Every tail-2 survival row has some `k>=j` where the

@@ -329,6 +329,23 @@ stronger conjecture `h<=floor((r+1)/2)`.  An injection into `N` ordered
 zero-prefix tokens—or their eight `D8` phases—would suffice.  Source:
 period-two `RESULTS-ENDPOINT-EVENT-BRIDGE.md`.
 
+The endpoint/event bridge and zero-prefix scale family admit a still weaker
+sufficient statement: only nonfinal pull rows and only `alpha` need support.
+For raw reversed dependency queue `R` and previous endpoint `p`,
+
+```text
+alpha = 1 XOR [p!=0] XOR parity{i>=1:R_i!=0}.
+```
+
+Thus on a hard-core row alpha is exactly queue activity parity, the forced
+endpoint high bit is `1 XOR alpha`, and a pull is temporal transition
+`alpha:1 -> 0`.  If every such pull row `j` has an adjacent alpha change at
+some zero-prefix token `j<=k<n`, infinitely many pulls contradict any fixed
+block length `n`; finitely many pulls reduce to the excluded eventually-`2`
+family.  This pull-row alpha support statement has zero failures through all
+hard-core words of length 23 but remains unproved.  Source: period-two
+`RESULTS-PULL-ROW-ALPHA-SUPPORT.md`.
+
 ## Proved exclusions and reductions
 
 | Fact | Scope | Source |
