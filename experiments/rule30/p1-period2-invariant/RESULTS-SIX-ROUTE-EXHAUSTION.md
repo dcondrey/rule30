@@ -18,7 +18,7 @@ has been proved or refuted.
 |---|---|---|
 | Projected diagonal support | **Irreducible full-queue contrapositive.** Local affine legality is explicit; endpoint telescopes, bounded defect states, and local monotonicity are killed | If every active adjacent projected phase is equal, derive failure of the required tail-2 row or tail-3 row pair from the complete ordered scenario queues |
 | Deterministic halving | **Irreducible prefix implication.** Scalar/log gap ranks, raw embeddings, and parent-continuation-only morphs are killed | Prove parent legality through `h+r` implies left-half/tail-2 legality through `r`, retaining the free left half during triangular elimination |
-| Queue ancestry / distance | **One all-length component proved.** Every retreat except the first injects into a distinct zero block at time `t-1` or `t` | Prove that producing arbitrarily many matched phase gaps requires unbounded ancestry in the initial queue, hence `d(r)->infinity` |
+| Queue ancestry / distance | **Two all-length components proved.** The phase-gap cover holds, and every legal rightmost pivot has one of three suffix rewrites, pairing each nonfirst retreat with a productive pull. A mixed origin-Hall claim passes 4,115,170 held-out queues | Prove pull-origin Hall, hence `ret(R)<=#1+#zero-runs` and `d(r)>=r` |
 | Dyadic hard-core lock | **Subsumed as a standalone route.** Finite cores have finite Peel rank, strictly stronger than dyadic eventual period, and exact rank descent reaches rank zero | Prove rank-zero separation through one of the first three routes; classifying all infinite-rank dyadic accepted cuts is unnecessary |
 | Peel-recursive Craig induction | **Literal pullback killed exactly.** `P(S_H)` re-enters `S_(H-1)` only at the all-`2` endpoint; the first endpoint `1` creates an unbounded defect position | Build an indexed restart separator, equivalently prove the stronger shell exclusion `C(m,m)` apart from its explicit `m=2,6` exceptions |
 | Cartier `S(0)` / rationality | **Generic route exhausted.** `S(0)` is exactly P1, infinite Cartier kernel is stronger, Frobenius is not Cartier, finite prefixes cannot bridge the claim, and generic Ore induction is false | Construct a Rule-30-specific all-size nonsingular Hankel-minor family (exact P1) or infinitely many distinct Cartier residuals (stronger than P1) |
@@ -129,11 +129,11 @@ full P1 directly and currently has no bridge to the rank-zero structure.
 
 ## 5. Recommended next research order
 
-1. **Queue ancestry span.**  The phase-gap cover is now a theorem, so every
-   nonfirst retreat has a canonical two-row event window.  Attach the
-   rightmost dual-colex pivot and a source interval to each matched gap, then
-   prove that interval reuse has bounded multiplicity.  This is the most
-   newly constrained route.
+1. **Pull-origin Hall.**  The exact suffix language pairs every nonfirst
+   retreat with one productive `1 0^m 2` pull.  Prove that the sorted pull
+   origins admit the greedy matching to initial `1` cells and zero-run
+   starts.  This is the most newly constrained route; bounded additive ranks
+   through width four are already killed.
 2. **Projected-support contrapositive.**  Work from the complete scenario
    queues and equations (4); do not search another bounded defect summary.
 3. **Triangular halving elimination.**  Retain `L` symbolically and eliminate
