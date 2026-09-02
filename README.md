@@ -93,6 +93,14 @@ diagonals, with the invariant suffix DFA as the second factor.  The bare
 frontier graph handles arbitrary queues.  Proving either equivalent distance
 divergence would close the period-two rung.
 
+Conditioning the terminal set on the complete actual Rule 30 right cone
+raises the tail-2 minimum from `18` to `23` at horizon 12 and changes exact
+`D8` phase costs.  The conditioned sets form a uniform inverse subsystem, but
+rank descent may prepend a finite artificial endpoint prefix.  Whole-prefix
+conditioning is therefore too strong for the application; actual-right
+information must be imposed beyond that prefix, as in the scale-block
+reduction.
+
 No period-two impossibility theorem has yet been proved.
 
 ### Bounded P2 and P3 evidence is reproducible
@@ -227,10 +235,20 @@ uniform proof and independently checkable artifacts.
 
 ## Current best next theorem
 
-The strongest clean finite-word target is **active-core diagonal mortality**:
-every length-`m` aligned core ending in terminal state `3` fails a pin or
-creates `11` within `m+1` macros. Exact CNFs are unsatisfiable through `m=34`,
-but no induction in `m` is known.
+The most tailored finite-word target is the **ordered scale charge**.  If
+`s_c(W)` is the legal continuation length inside the exact forced block
+`R_c(W)`, prove for every nonempty hard-core word `W` that
+
+```text
+s_2(W) <= #2(W) + indicator(22 occurs in W),
+s_3(W) <= #2(W) + 3.
+```
+
+Both inequalities hold exhaustively through `|W|=22`; either one closes its
+constant-tail mode, but neither is proved.  The proof must use the ordered
+dependency diagonal and carry the affine `D8` boundary phase.  The stronger
+active-core diagonal mortality target remains exact and is UNSAT through
+`m=34`, with no induction in `m` known.
 
 A new output-only bridge gives a potentially cleaner route. Peeling one core
 symbol is the fixed local map

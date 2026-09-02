@@ -57,6 +57,7 @@ Use this routing table:
 | Actual-right constant-tail refinement | `RESULTS-EVENTUAL-CONSTANT-TAIL.md` section 11; `constant_tail_right_filter.py` |
 | Constant-tail regular-language cocycle | `RESULTS-CONSTANT-TAIL-LANGUAGE-COCYCLE.md`; `constant_tail_language_cocycle.py` |
 | Constant-tail frontier-distance theorem | `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md`; `constant_tail_frontier_graph.py` |
+| Actual-right terminal frontier audit and scope correction | `PREREGISTRATION-ACTUAL-RIGHT-FRONTIER.md`; `RESULTS-ACTUAL-RIGHT-FRONTIER.md`; `constant_tail_actual_frontier.py` |
 | Moving endpoint-flip cocycle | `RESULTS-ENDPOINT-FLIP-COCYCLE.md`; `endpoint_flip_cocycle.py` |
 | Evolutionary rank-zero witness search | `docs/rule30/RESULTS-openevolve-p1-rank-zero.md`; `experiments/openevolve-p1-rank-zero/` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
@@ -161,6 +162,7 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Reversed constant-tail diagonal | The complete growing inverse-cone formula reverses to `S_0=c, S_i=g_(S_(i-1))(R_i)`; the final scan state exactly decodes the next hard-core endpoint and appends its boundary symbol | **Uniform stronger reduction:** mortality of every finite queue beginning in `c in {2,3}` and ending in `{1,2}` would close the constant-tail separator. The exact quotient `3 -> 1` gives ternary representatives, and every normalized successor avoids `20`, `22`, `011`; `lifetime(R)<=|R|` holds exhaustively through length 15, induction open |
 | Regular survival-language cocycle | `L_(h+1)=L_0 intersect Q_c^(-1)(L_h)` constructs and minimizes the exact next survival formula | **Exact morph, negative rank result:** minimized DFA size grows from `5/6` to `17,65,257,...` rather than contracting; shortest accepted length grows `1/2,1/2,3,5,5,5,10,...`. Proving that minimum tends to infinity is now the precise language-theoretic mortality target |
 | Frontier-distance cocycle | Stack `h+1` queue rows; reading symbol `a` sends `v` to `w_0=a, w_j=g_(v_j)(w_(j-1))`; terminal vertices are exactly the inverse-cone diagonals of hard-core words of length `h+1` | **Uniform graph theorem:** bare distance from `(c,...,c)` to the `F_(h+3)`-vertex terminal set gives the arbitrary-queue minimum; product with the invariant suffix DFA gives the language-cocycle minimum. Their divergence is equivalent. Height extension is a four-sheeted permutation cover whose fiber maps generate `D8`, so no fiber rank contracts. Both distances are exact through `h=12`; proving divergence remains open |
+| Actual-right frontier product | Complete finite Rule 30 right-cone membership on each terminal endpoint, with exact height projection and augmented `D8` path action | **Uniform subsystem plus scope correction:** actual targets shrink from `610` to `156` at `h=12`, raising the tail-2 minimum `18 -> 23`; all eight phases remain by `h=7`. Rank descent can prepend artificial state `2`s, so whole-prefix actual-right conditioning is too strong. Apply it only beyond a proved source-ancestry prefix or in the scale block beyond both prefixes |
 | Moving endpoint flips | Flipping endpoint coordinate `k` from `1` to `2` preserves hard-core legality and rewrites the inverse cut only on `[k,2k+1]` | **Uniform cocycle:** exact adaptive formula update and interval-cover condition proved; supports may still escape, so no descent yet |
 | OpenEvolve/GA rank-zero witnesses | Independent exact reconstruction of every proposed hard-core prefix over a genuine zero-tail cut | **Finite negative:** GA reproduces the `T=23` optimum and reaches survival 107 at `T=96`, but finds no `2T+2` falsifier; no uniform separator follows |
 
@@ -227,6 +229,10 @@ active-core CNF thresholds              36/36 PASS through core length 7
 tail-density controls                   n<=24 table; fixed n=37 counterexample PASS
 local-ranking negative certificates     PASS without solver
 divergence negative certificate         PASS without solver
+actual-right SAT/direct language        126/126 words PASS through length 6
+actual-right terminal projections       equality through horizon 12 PASS
+actual-right queue/right-seed replay     every reported minimum through horizon 12 PASS
+actual-right D8 path action              exact augmented search through horizon 10 PASS
 ```
 
 Core commands:
@@ -262,9 +268,19 @@ PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
 
 ## Best next theorem
 
-> **Active-core diagonal mortality.**  Every aligned core word of length `m`
-> ending in terminal symbol `3` fails a pin or creates `11` within `m+1`
-> macros.
+> **Ordered scale charge.**  For every nonempty hard-core endpoint block
+> `W`, prove `s_2(W)<=#2(W)+indicator(22 in W)` and
+> `s_3(W)<=#2(W)+3`.
+
+Either inequality closes its constant-tail mode; together they prove the
+rank-zero separator and the nonconstant period-two exclusion.  They hold
+exhaustively through `|W|=22`, but no induction is known.  The exact
+dependency interval `[k,2k+1]` and affine `D8` boundary phase are the current
+ingredients for an ordered matching proof.
+
+The stronger alternate target remains **active-core diagonal mortality**:
+every aligned core word of length `m` ending in terminal symbol `3` fails a
+pin or creates `11` within `m+1` macros.
 
 The exact joint constant bound is false: right mask `0x13be` yields
 `J(82,10)` SAT and a finite configuration alternating through time 184.  The

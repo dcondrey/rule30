@@ -106,13 +106,16 @@ where `I` is inverse Gray code.  For a genuinely realizable right half,
 
 Best next theorem:
 
-> If a no-`11` word `rho` has eventually-zero full forced-left reconstruction
-> `L(rho)`, then `rho` is eventually periodic.
+> For every nonempty hard-core endpoint block `W`, prove
+> `s_2(W)<=#2(W)+indicator(22 in W)` and `s_3(W)<=#2(W)+3`, where
+> `s_c(W)` is the hard-core survival length in the forced scale block
+> `R_c(W)`.
 
-That would make the adjacent width-two trace eventually periodic, contradicting
-the recorded width-two theorem.  The proof must control the full cumulative
-boundary offsets and irregular isolated pulses; fixed summaries and longer
-lookahead are already certified failures.
+Either inequality proves its constant-tail scale separator.  Together they
+close the rank-zero reduction and the nonconstant period-two rung.  Both are
+exact through `|W|=22` but unproved.  The proof must retain the ordered newest
+dependency diagonal; deletion induction and fixed local potentials are
+already certified failures.
 
 An alternate exact bridge now removes the sole known overlap in the dyadic
 period-spectrum route.  Every reachable zero-ray cut is ultimately
@@ -172,6 +175,16 @@ disjointness, not further horizon enumeration, is the live proof obligation.
 Height extension is a four-sheeted permutation cover whose fiber actions
 generate `D8`; a proof must control accumulated monodromy rather than expect
 the new coordinate to contract.
+
+Fully actual-right terminal frontiers form a proved inverse subsystem of this
+graph and materially increase finite distances: at horizon 12, the tail-2
+minimum rises from `18` to `23`.  All eight `D8` phases still occur, although
+their costs separate.  This does not directly strengthen the rank-zero
+theorem because rank descent can prepend a finite artificial block of state
+`2`; its endpoint is only eventually actual-right.  Actual-right information
+must therefore be applied beyond that prefix, as in the scale block above, or
+coupled to a proved source-ancestry prefix bound.  See the period-two
+`RESULTS-ACTUAL-RIGHT-FRONTIER.md`.
 
 ## Do-not-repeat obstruction screen
 

@@ -168,6 +168,7 @@ local clause by itself.
 | `RESULTS-CONSTANT-TAIL-QUEUE.md` | `U/R/C` | Exact queue update, ternary quotient, invariant SFT | Mortality for every finite queue |
 | `RESULTS-CONSTANT-TAIL-LANGUAGE-COCYCLE.md` | `U/K/R` | Exact regular inverse-image update | DFA rank expands; shortest accepted length divergence open |
 | `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md` | `U/R/C` | Uniform inverse graph system, Fibonacci terminal set, `D8` cover | Source-orbit/terminal-set disjointness |
+| `RESULTS-ACTUAL-RIGHT-FRONTIER.md` | `U/C/K` | Fully actual-right terminal sets form an inverse subsystem and raise finite distances | Rank descent permits an artificial finite endpoint prefix, so raw conditioning is too strong |
 | `RESULTS-RIGHT-FILTERED-MORTALITY.md` | `U/K/C` | Actual right trace avoids `11` and `00000` | Finite-factor relaxation is incomplete |
 
 The constant-tail queue is stronger than the seed-derived statement because
@@ -259,12 +260,18 @@ lengths 7 and 9, while exact right-light-cone membership lowers the observed
 maxima to 5 in both tail modes.  This is the largest measured gain from adding
 a hypothesis that the abstract queue discarded.
 
-The consequence is methodological: extend the frontier terminal set by the
-genuine right-cone constraint, rather than accumulating more guessed
-forbidden words.  Finite right-cone languages should restrict under height
-projection, but that projection law must be implemented and checked before
-they are attached to the existing inverse system; no fixed sofic
-presentation is being assumed.
+The exact frontier product has now been run.  Fully actual-right terminal
+sets form a proved inverse subsystem.  By horizon 12 their count is `156`
+instead of the hard-core `610`; the tail-2 arbitrary-queue minimum rises from
+`18` to `23`.  Exact `D8` phase minima also separate.
+
+Cross-examination exposes a load-bearing qualification.  Rank descent can
+prepend finitely many artificial state-2 endpoint symbols, so its endpoint is
+only eventually actual-right.  Filtering the whole terminal prefix is too
+strong and cannot by itself prove period two.  Actual-right information must
+be applied beyond the artificial prefix, as in the scale-block reduction, or
+coupled to a proved prefix bound carried by the source ancestry.  See
+`RESULTS-ACTUAL-RIGHT-FRONTIER.md`.
 
 ### 7.6 Local algebraic separators need the moving boundary clock
 
@@ -293,34 +300,33 @@ an immediate exact falsifier in `constant_tail_scale.py`.
 
 ## 8. Overlooked opportunities, ranked
 
-### A. Actual-right frontier product
+### A. Actual-right frontier product — completed and scope-corrected
 
-Define `A_h^right` to be terminal frontiers whose endpoint word is realizable
-by the complete height-appropriate alternating-center right cone, not merely
-hard-core.  Compute and prove the projection law for this nested terminal
-family, then compare its distances with the existing `A_h` distances.
+The product, projection proof, distances through horizon 12, and monodromy
+audit through horizon 10 are complete.  It gives a real finite separation,
+but the direct period-two inference fails because rank descent may leave an
+artificial finite endpoint prefix.
 
-Why it is new: the right filter has been applied to scale blocks, while the
-frontier inverse system currently targets every hard-core endpoint.
+Retained output: the exact conditioned inverse subsystem, independently
+replayed right-cone witnesses, and phase-cost table.
 
-Acceptance gate: an exact finite-cone construction, projection compatibility,
-and either a uniform separator or a structural pattern with an external
-falsifier.  A longer list of forbidden factors does not qualify.
+Correct successor: condition only after a prefix bound proved from the source
+word/Peel ancestry, or use the scale formulation beyond both finite prefixes.
 
-### B. Monodromy-stratified distance
+### B. Monodromy-stratified distance — finite phase exclusion killed
 
-For each shortest frontier path, retain its exact `D8` product and partition
-the terminal set by compatible affine fiber phase.  Test whether bounded
-distance would force one fixed group element or one abelianized parity class
-at infinitely many heights, then ask whether inverse-cone endpoints can obey
-that class recursively.
+The exact augmented BFS finds all eight phases reaching both hard-core and
+actual-right targets by horizon seven.  Therefore no persistent missing
+phase exists in this representation.  Actual-right conditioning does raise
+individual phase costs—by as much as eight symbols at horizon ten—but that is
+finite evidence, not a phase invariant.
 
 Why it is new: earlier ranks discarded the phase; the graph theorem now gives
 the exact three-bit multiplication law and source ancestry needed to retain
 it.
 
-Kill condition: all eight phases recur on source-to-terminal paths with no
-height-dependent restriction after exact target conditioning.
+Retained possibility: carry `D8` as boundary state inside an ordered
+scale/ancestry proof.  Do not launch a standalone phase-exclusion search.
 
 ### C. Peel-recursive Craig separators
 
@@ -382,16 +388,18 @@ quantifiers by itself.
 
 ## 10. Recommended next sequence
 
-1. Build the actual-right terminal family `A_h^right` in the frontier graph
-   and verify its projection law.
-2. On the same paths, record exact `D8` monodromy classes; determine whether
-   actual-right conditioning removes phases or only endpoints.
-3. If no phase restriction appears, switch to the ordered scale-matching
-   target rather than extending the horizon.
-4. In parallel conceptually, test Peel-recursive interpolants against the
+1. Pursue the ordered scale-matching target, retaining `D8` only as explicit
+   boundary state and applying actual-right membership beyond the finite
+   rank-descent prefix.
+2. Derive or falsify a source-ancestry bound that couples frontier path length
+   to the artificial endpoint-prefix length; without it, raw actual-right
+   terminal conditioning is not proof-relevant.
+3. In parallel conceptually, test Peel-recursive interpolants against the
    existing checked cores, with the restart state explicit.
-5. Use all stored SAT, GA, and OpenEvolve witnesses as an external corpus for
-   any proposed uniform rule.
+4. Use all stored SAT, GA, OpenEvolve, and actual-right frontier witnesses as
+   an external corpus for any proposed uniform rule.
+5. Do not extend the conditioned distance or phase tables without a new
+   uniform recurrence candidate.
 
 Success means a uniform lemma with an independently checkable proof.  A new
 distance table, larger cutoff, fitted recurrence, or perfect finite fitness

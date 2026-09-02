@@ -411,6 +411,35 @@ full right language lowers both to 5.  This is finite evidence, not a
 universal constant-five theorem.  See `constant_tail_right_filter.py` and
 `RESULTS-EVENTUAL-CONSTANT-TAIL.md`.
 
+The complete actual-right terminal frontier product has also been audited.
+For
+
+    A_h^right={I(e): bits(e) is a complete length-(h+1) actual-right trace},
+
+height deletion satisfies the uniform equality
+
+    pi_h(A_h^right)=A_(h-1)^right.
+
+Counts through h=12 are
+
+    3,5,8,12,17,25,36,50,68,91,119,156
+
+instead of the hard-core Fibonacci counts ending at 610. The tail-2 arbitrary
+minimum at h=12 rises from 18 to 23. Augmenting paths by the exact D8 action
+shows all eight phases by h=7, but phase-conditioned costs separate strongly
+by h=10. Read `RESULTS-ACTUAL-RIGHT-FRONTIER.md` and run
+`constant_tail_actual_frontier.py` in the `experiments/sygus-p3` environment.
+
+Do not use whole-prefix actual-right conditioning as a period-two proof.
+Rank descent replaces an actual endpoint e by `2^m e`, and the first-infinite
+shift may retain part of that artificial state-2 prefix. The relevant endpoint
+is only eventually actual-right. Since arbitrary finite hard-core prefixes
+can precede an actual-right tail, the raw finite terminal language then
+collapses back to the hard-core one. Actual-right information is valid only
+beyond a prefix bound carried by the source/Peel ancestry, or in the scale
+block chosen beyond both finite prefixes. This scope correction is
+load-bearing.
+
 The exact moving-formula update is also now known. If endpoint coordinate k is
 changed from 1 to 2, the inverse cut changes only on [k,2k+1], and it changes
 at k. Flipping hard-core 1s left-to-right therefore gives a sequence of finite

@@ -241,6 +241,26 @@ eight-element affine boundary group used by the scale-block route, giving a
 three-bit path-monodromy cocycle.  Source: period-two
 `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md`.
 
+If the terminal endpoint is required to be a complete alternating-center
+Rule 30 right trace from coordinate zero, the terminal subsets
+`A_h^right` also satisfy exact height projection
+
+```text
+pi_h(A_h^right)=A_(h-1)^right.
+```
+
+Their counts through horizon 12 are
+`3,5,8,12,17,25,36,50,68,91,119,156`, versus the hard-core Fibonacci
+counts ending at `610`.  The tail-2 arbitrary minimum at horizon 12 rises
+from `18` to `23`, and exact `D8` phase costs separate by horizon seven.
+However, finite-rank descent may prepend artificial state-2 endpoint symbols,
+so the endpoint used by the constant-tail reduction is only eventually
+actual-right.  Whole-prefix conditioning is therefore too strong for the
+period-two application unless a source-ancestry bound controls that prefix.
+The valid actual-right route remains the scale block chosen beyond both
+finite prefixes.  Source: period-two
+`RESULTS-ACTUAL-RIGHT-FRONTIER.md`.
+
 ## Proved exclusions and reductions
 
 | Fact | Scope | Source |
@@ -284,10 +304,12 @@ finite-state or nonlinear invariant exists.
 
 ## Current open theorem targets
 
-1. **P1, period two:** prove mortality of the reversed constant-tail queue
-   above.  This would close the rank-zero separator, all finite Peel ranks,
-   and the nonconstant period-two rung.  Equivalent retained targets are the
-   all-length constant-tail scale block and active-core diagonal mortality.
+1. **P1, period two:** prove the ordered scale charges
+   `s_2(W)<=#2(W)+indicator(22 in W)` and `s_3(W)<=#2(W)+3`, or prove the
+   stronger reversed constant-tail queue mortality.  Either route would
+   close the rank-zero separator, all finite Peel ranks, and the nonconstant
+   period-two rung.  Actual-right conditioning is available beyond the
+   finite rank-descent prefix, but not on the whole descended endpoint.
 2. **P1, general R1:** eventual periodicity of `c` forces eventual periodicity
    of `r` on the zero set, using Rule 30's OR in a way Rule 90 lacks.
 3. **P2:** a seed-specific orbit-closure/generic-point theorem, not another
