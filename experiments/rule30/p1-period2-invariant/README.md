@@ -60,10 +60,11 @@ Use this routing table:
 | Actual-right constant-tail refinement | `RESULTS-EVENTUAL-CONSTANT-TAIL.md` section 11; `constant_tail_right_filter.py` |
 | Constant-tail regular-language cocycle | `RESULTS-CONSTANT-TAIL-LANGUAGE-COCYCLE.md`; `constant_tail_language_cocycle.py` |
 | Constant-tail frontier-distance theorem | `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md`; `constant_tail_frontier_graph.py` |
-| Phase-gap Hall reduction | `RESULTS-PHASE-GAP-HALL.md`; `constant_tail_phase_gap_hall.py` |
+| All-length phase-gap retreat cover | `PREREGISTRATION-PHASE-GAP-COVER-PROOF.md`; `RESULTS-PHASE-GAP-HALL.md`; `constant_tail_phase_gap_hall.py`; `constant_tail_phase_gap_proof.py` |
 | Actual-right terminal frontier audit and scope correction | `PREREGISTRATION-ACTUAL-RIGHT-FRONTIER.md`; `RESULTS-ACTUAL-RIGHT-FRONTIER.md`; `constant_tail_actual_frontier.py` |
 | Scale telescoping, derivative failures, and zero-prefix greedy target | `RESULTS-SCALE-TELESCOPING.md`; `constant_tail_zero_prefix_matching.py`; `constant_tail_zero_prefix_bitsliced.py` |
 | Projected diagonal support and one-credit halving targets | `RESULTS-PROJECTED-DIAGONAL-HALVING.md`; `constant_tail_right_zero_prefix_selector.py`; `constant_tail_halving_recurrence.py` |
+| Deterministic-halving morph obstruction | `RESULTS-HALVING-ROUTE-DISPOSITION.md`; `constant_tail_halving_morph_audit.py` |
 | Moving endpoint-flip cocycle | `RESULTS-ENDPOINT-FLIP-COCYCLE.md`; `endpoint_flip_cocycle.py` |
 | Evolutionary rank-zero witness search | `docs/rule30/RESULTS-openevolve-p1-rank-zero.md`; `experiments/openevolve-p1-rank-zero/` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |

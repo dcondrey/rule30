@@ -2,10 +2,10 @@
 
 Date: 2026-09-01
 
-Status: **THE REGISTERED TEMPORAL MATCHING REDUCES EXACTLY TO ONE GLOBAL
-ZERO-FREE-EPOCH LEMMA.  A FINITE PRODUCT CLASSIFIES EVERY ZERO-FREE
-TWO-ROW TRANSITION, BUT IT DOES NOT YET PROVE THAT SUCH AN EPOCH OCCURS AT
-MOST ONCE.  `d(r)->infinity` AND PERIOD TWO REMAIN OPEN.**
+Status: **THE REGISTERED PHASE-GAP COVER IS PROVED FOR QUEUES OF EVERY
+LENGTH.  A FINITE PRODUCT CLASSIFIES ZERO-FREE EPOCHS AND AN EXACT REGULAR
+PREIMAGE CALCULATION PROVES THAT AN EVENTLESS RETREAT MUST BE THE FIRST
+RETREAT.  `d(r)->infinity` AND PERIOD TWO REMAIN OPEN.**
 
 ## 1. Retreat windows are disjoint
 
@@ -70,36 +70,53 @@ not a bounded word census.
 Consequently every eventless retreat is the last update of a maximal
 zero-free epoch, and it creates a new zero event for the following row.
 
-## 3. Exact remaining global lemma
+## 3. The zero-free-epoch lemma is proved
 
-The local product does not prevent the newly created zeros from disappearing
-later.  A later maximal zero-free epoch could in principle form.  The exact
-remaining statement behind the registered held-out match is therefore:
+The local product identifies the dangerous predecessor language exactly.  If
+`p -> q` are both zero-free and `q` retreats on its next update, then the tail
+is `2` and
 
-> Along every finite invariant queue orbit, at most one maximal zero-free
-> epoch has the two successful rows needed to end in a retreat.
+```text
+p belongs to P = 211([12]1[12]1)*,
+q belongs to (2121)+.                                  (3)
+```
 
-Equivalently, (2) holds.  The original held-out corpus through initial length
-16 and the independent checker through length 12 have maximum one eventless
-retreat, but this is finite evidence only.
+A literal DFA for `P`, followed by the exact sequential queue-preimage
+operator intersected with the invariant queue language, has minimized
+state/accepting counts
 
-This is substantially smaller than interval Hall inequalities: those
-inequalities are automatic once (1)-(2) hold.
+```text
+P:          6 / 1,
+Q^-1(P):   20 / 2,
+Q^-2(P):    1 / 0.                                    (4)
+```
+
+Thus a dangerous predecessor has at most one earlier queue ancestor.  Its
+immediate incoming update is nonretreating because every word of `P` ends in
+boundary `1`.  Therefore the associated eventless retreat is the first
+retreat of the orbit.  In particular (2) holds.
+
+An independently constructed, unminimized nested synchronous product has 72
+reachable states and two finals at depth one, then 169 reachable states and
+no final at depth two.  It verifies the empty second preimage without relying
+on the generic DFA minimizer.
+
+Together with the disjoint windows in Section 1, this proves the registered
+all-length phase-gap cover.  The original held-out corpus is now only a
+regression control.
 
 ## 4. Why this still does not prove event-distance divergence
 
-Even a proof of (2) would only inject retreats into phase-labelled zero
-blocks, with one credit.  Zero blocks can be destroyed and recreated.  To
-deduce `d(r)->infinity`, one must additionally prove that creating `r`
+The proved cover injects retreats into phase-labelled zero blocks, with one
+credit.  Zero blocks can be destroyed and recreated.  To deduce
+`d(r)->infinity`, one must additionally prove that creating `r`
 distinct matched zero-block events requires unbounded ancestry in the
 initial queue.  The failed scalar/log-gap ranks show that current gap sizes
 alone do not supply that ancestry.
 
-Thus the queue route now has two explicit, ordered obligations:
-
-1. prove the one-zero-free-epoch lemma above; and
-2. attach a nonreusable source interval/tree to matched phase gaps and prove
-   its depth or span diverges with the number of retreats.
+Thus the queue route now has one explicit obligation: attach a nonreusable
+source interval/tree to matched phase gaps and prove its depth or span
+diverges with the number of retreats.
 
 No bounded matching or scalar gap statistic can replace the second step.
 
@@ -109,7 +126,10 @@ No bounded matching or scalar gap statistic can replace the second step.
 PYTHONDONTWRITEBYTECODE=1 python3 \
   experiments/rule30/p1-period2-invariant/constant_tail_phase_gap_hall.py \
   --max-length 12 --orbit-cap 128
+
+PYTHONDONTWRITEBYTECODE=1 python3 \
+  experiments/rule30/p1-period2-invariant/constant_tail_phase_gap_proof.py
 ```
 
-The finite product is the proof control.  The orbit enumeration is only a
-regression check of the remaining global lemma.
+The second command is the all-length proof control.  The first command's
+orbit enumeration is only a regression check.
