@@ -257,6 +257,35 @@ def verify_lex_theorem() -> list[tuple[tuple[int, int, int], int, int]]:
     return report
 
 
+def verify_equality_is_zero_language() -> tuple[int, ...]:
+    """Prove that full lexicographic equality has no counted factor.
+
+    After all eleven equality restrictions, every remaining accepting path
+    is a word whose factor vector is zero.  It is enough to inspect useful
+    edges: the graph state retains the preceding two input symbols, so every
+    internal trigram is exposed on exactly one edge.
+    """
+
+    counts = []
+    for first_branch in range(2):
+        for second_branch in range(2):
+            graph = build_graph(first_branch, second_branch)
+            for coordinate in range(len(LEX_FACTORS)):
+                graph, maximum = restrict_equality(graph, coordinate)
+                if maximum > 0:
+                    raise AssertionError("lexicographic restriction failed")
+            for source, outgoing in graph.edges.items():
+                input_prefix = source[2:4]
+                for target, _vector in outgoing:
+                    input_triple = input_prefix + (target[3],)
+                    if input_triple in LEX_FACTORS:
+                        raise AssertionError(
+                            "a full-equality path contains a counted factor"
+                        )
+            counts.append(len(graph.states))
+    return tuple(counts)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--control-length", type=int, default=10)
@@ -269,6 +298,11 @@ def main() -> None:
     for factor, maximum, states in verify_lex_theorem():
         print(f"{''.join(map(str, factor))} {maximum:22d} {states:15d}")
     print("all-length lexicographic nonincrease: PASS")
+    equality_states = verify_equality_is_zero_language()
+    print(
+        "full equality implies zero factor vector: "
+        f"PASS states={equality_states}"
+    )
 
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@ from period3_zero_tail_dual import (
     LEX_FACTORS,
     factor_vector,
     finite_lex_control,
+    verify_equality_is_zero_language,
     verify_lex_theorem,
     word_action,
     zero_transition,
@@ -35,6 +36,12 @@ class PeriodThreeZeroTailDualTest(unittest.TestCase):
         report = verify_lex_theorem()
         self.assertEqual(tuple(row[0] for row in report), LEX_FACTORS)
         self.assertTrue(all(row[1] <= 0 for row in report))
+
+    def test_full_equality_is_zero_language(self) -> None:
+        self.assertEqual(
+            verify_equality_is_zero_language(),
+            (452, 452, 452, 452),
+        )
 
 
 if __name__ == "__main__":

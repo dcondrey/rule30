@@ -223,7 +223,23 @@ the first count cannot rise; retaining exactly its tight edges and repeating
 proves the assertion for every later coordinate.  Each weighted graph has no
 positive cycle, so the check covers words of arbitrary length.
 
-The lexicographic vector is not yet a ranking: equality transitions exist
-for all eleven coordinates, and local nonnegative trigram searches find no
-strict final component.  The live target has nevertheless narrowed to the
-equality subsystem, whose words cannot create any earlier listed defect.
+Full equality has an additional exact classification.  After restricting all
+eleven coordinates to equality, each of the four branch-pair graphs has 452
+useful states, and none of their useful edges consumes any of the eleven
+listed input factors.  Hence every full-equality word has count vector zero.
+Equivalently, apart from boundary words of length below three, it avoids
+
+```text
+01, 11, and 220.
+```
+
+Indeed the first two forbidden bigrams are represented by the nine listed
+trigrams containing `01` or `11`, while `220` is listed directly.  Conversely
+avoiding those factors makes the vector zero.  Thus coordinate stabilization
+in a hypothetical infinite orbit does not leave a positive conserved defect:
+the orbit must eventually enter this explicit regular zero language.
+
+The lexicographic vector is still not a complete ranking.  Zero-vector
+transitions exist, and local factor-count searches find no strict final
+component.  The live target is now termination of the partial dual on words
+avoiding `01`, `11`, and `220`.
