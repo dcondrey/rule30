@@ -261,6 +261,17 @@ The valid actual-right route remains the scale block chosen beyond both
 finite prefixes.  Source: period-two
 `RESULTS-ACTUAL-RIGHT-FRONTIER.md`.
 
+At scale, independent state-2 interventions and every tested affine
+derivative-rank compression fail at length 21.  The successful replacement is
+the ordered zero-prefix chain `W^(k)=0^kW[k:]`.  If `A_(j,k)` is the newest
+affine boundary permutation, the deterministic rule taking the first later
+`k` with `A_(j,k)!=A_(j,k+1)` matches every tail-2 survival row and every
+nonfinal tail-3 survival row in all 242,783 audited cases through length 22.
+A uniform proof would give `s_2(W)<=|W|` and `s_3(W)<=|W|+1`, which are already
+sufficient for both constant-tail separators.  This remains a conjectural
+uniform lemma, not a proved exclusion.  Source: period-two
+`RESULTS-SCALE-TELESCOPING.md`.
+
 ## Proved exclusions and reductions
 
 | Fact | Scope | Source |
@@ -304,12 +315,14 @@ finite-state or nonlinear invariant exists.
 
 ## Current open theorem targets
 
-1. **P1, period two:** prove the ordered scale charges
-   `s_2(W)<=#2(W)+indicator(22 in W)` and `s_3(W)<=#2(W)+3`, or prove the
-   stronger reversed constant-tail queue mortality.  Either route would
-   close the rank-zero separator, all finite Peel ranks, and the nonconstant
-   period-two rung.  Actual-right conditioning is available beyond the
-   finite rank-descent prefix, but not on the whole descended endpoint.
+1. **P1, period two:** prove the zero-prefix greedy lemma from
+   `RESULTS-SCALE-TELESCOPING.md`, hence `s_2(W)<=|W|` and
+   `s_3(W)<=|W|+1`, or prove the stronger reversed constant-tail queue
+   mortality.  Either route would close the rank-zero separator, all finite
+   Peel ranks, and the nonconstant period-two rung.  The greedy lemma has zero
+   failures through length 22; pointwise derivative and rank certificates are
+   killed at length 21.  Actual-right conditioning remains available only
+   beyond the finite rank-descent prefix.
 2. **P1, general R1:** eventual periodicity of `c` forces eventual periodicity
    of `r` on the zero set, using Rule 30's OR in a way Rule 90 lacks.
 3. **P2:** a seed-specific orbit-closure/generic-point theorem, not another

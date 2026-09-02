@@ -235,20 +235,25 @@ uniform proof and independently checkable artifacts.
 
 ## Current best next theorem
 
-The most tailored finite-word target is the **ordered scale charge**.  If
+The cleanest finite-word target is now the **zero-prefix greedy lemma**.  If
 `s_c(W)` is the legal continuation length inside the exact forced block
-`R_c(W)`, prove for every nonempty hard-core word `W` that
+`R_c(W)`, it is enough to prove for every nonempty hard-core word `W` that
 
 ```text
-s_2(W) <= #2(W) + indicator(22 occurs in W),
-s_3(W) <= #2(W) + 3.
+s_2(W) <= |W|,
+s_3(W) <= |W| + 1.
 ```
 
-Both inequalities hold exhaustively through `|W|=22`; either one closes its
-constant-tail mode, but neither is proved.  The proof must use the ordered
-dependency diagonal and carry the affine `D8` boundary phase.  The stronger
-active-core diagonal mortality target remains exact and is UNSAT through
-`m=34`, with no induction in `m` known.
+Zero the source coordinates successively from left to right and compare the
+exact affine boundary permutation after each zeroing.  The deterministic
+earliest-change greedy rule proves these inequalities in every audited case
+through `|W|=22` (242,783 word/tail/special cases), with no tail-2 miss and
+only a possible final-row tail-3 miss.  This is a uniform conjecture, not a
+proof.  Pointwise derivative, affine-rank, reverse-order, and simpler greedy
+certificates now have exact counterexamples; see
+`RESULTS-SCALE-TELESCOPING.md`.  The stronger active-core diagonal mortality
+target remains exact and is UNSAT through `m=34`, with no induction in `m`
+known.
 
 A new output-only bridge gives a potentially cleaner route. Peeling one core
 symbol is the fixed local map

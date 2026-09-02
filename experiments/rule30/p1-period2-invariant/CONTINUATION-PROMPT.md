@@ -598,6 +598,25 @@ FILES TO READ FIRST — DO NOT LOAD THE WHOLE ARCHIVE
 The matching preregistrations are the audit trail. Read another historical
 result only if the compact README routes you to it.
 
+LATEST SCALE-TELESCOPING RESULT
+
+The old pointwise source-2 intervention program is killed at length 21.
+`W=122212222222221212122`, tail 2, has survival 12 but the full affine
+intervention graph plus its contact credit matches only 11 rows; the full
+derivative rank is 10 against target 11. Do not revive pointwise sensitivity,
+scalar selectors, or affine-rank certificates.
+
+The live target is the zero-prefix chain `W^(k)=0^k W[k:]`. Let `A_(j,k)` be
+the newest affine boundary permutation at forced scale row `j`. Starting after
+the previous token, greedily choose the least `k` with
+`A_(j,k)!=A_(j,k+1)`. Exact bit-sliced/slow audits through length 22 give zero
+failures in 242,783 cases: tail 2 matches every survival row; tail 3 matches
+every nonfinal survival row and may miss only the final row. Hence the uniform
+lemma would prove `s_2(W)<=|W|`, `s_3(W)<=|W|+1`, both constant-tail
+separators, and the alternating-center exclusion. This is not proved. The
+next task is a leading-term/Peel induction on the ordered zero-prefix finite
+differences. Read `RESULTS-SCALE-TELESCOPING.md` first.
+
 REPRODUCTION COMMANDS
 
     uv run --project experiments/sygus-p3 python \

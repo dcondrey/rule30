@@ -106,16 +106,19 @@ where `I` is inverse Gray code.  For a genuinely realizable right half,
 
 Best next theorem:
 
-> For every nonempty hard-core endpoint block `W`, prove
-> `s_2(W)<=#2(W)+indicator(22 in W)` and `s_3(W)<=#2(W)+3`, where
-> `s_c(W)` is the hard-core survival length in the forced scale block
-> `R_c(W)`.
+> **Zero-prefix greedy lemma.**  For `W^(k)=0^k W[k:]`, let `A_(j,k)` be the
+> exact newest affine boundary permutation at forced scale step `j`.  Starting
+> after the previous token, greedily take the first `k` with
+> `A_(j,k)!=A_(j,k+1)`.  Every tail-2 survival row is matched; every nonfinal
+> tail-3 survival row is matched.
 
-Either inequality proves its constant-tail scale separator.  Together they
-close the rank-zero reduction and the nonconstant period-two rung.  Both are
-exact through `|W|=22` but unproved.  The proof must retain the ordered newest
-dependency diagonal; deletion induction and fixed local potentials are
-already certified failures.
+There are `|W|` tokens, so the lemma gives `s_2(W)<=|W|` and
+`s_3(W)<=|W|+1`, proving both constant-tail separators and closing the
+nonconstant period-two rung.  It has zero failures in 242,783 audited cases
+through `|W|=22` but is unproved.  Independent pointwise-intervention matching
+and every derivative-rank variant fail at length 21; retaining the ordered
+zero-prefix finite differences is load-bearing.  See
+`RESULTS-SCALE-TELESCOPING.md`.
 
 An alternate exact bridge now removes the sole known overlap in the dyadic
 period-spectrum route.  Every reachable zero-ray cut is ultimately

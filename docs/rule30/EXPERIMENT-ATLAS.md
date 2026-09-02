@@ -291,12 +291,28 @@ s_3(W) <= #2(W) + 3.
 ```
 
 Endpoint coordinate `k` rewrites only cut interval `[k,2k+1]`.  These facts
-suggest an ordered matching proof: charge each surviving output position to
-a distinct state-2 endpoint ancestor, with the boundary/contact term paying
-for the one unmatched overlap mode.  This is not proved, but it combines a
-uniform dependency theorem with the strongest surviving finite inequality.
-It is more specific than a generic density or local-potential search and has
-an immediate exact falsifier in `constant_tail_scale.py`.
+originally suggested a pointwise ordered matching proof.  That certificate is
+now killed at length 21: six source positions can be simultaneously invisible
+to every survival row.  The numerical inequalities remain valid through
+length 22, but any proof must use cumulative order (as in section 7.8), not
+independent endpoint sensitivity.
+
+### 7.8 Zero-prefix telescoping supersedes pointwise scale matching
+
+The proposed independent endpoint-intervention matching and all of its
+derivative-rank compressions fail at length 21.  Cumulative left-to-right
+interventions remove the cancellation, and the still simpler chain
+
+```text
+W, 0W[1:], 00W[2:], ..., 0^|W|
+```
+
+supports a deterministic earliest-change greedy matching.  It has no failure
+through length 22 in 242,783 cases.  Tail 2 matches every survival row; tail 3
+matches every nonfinal survival row.  The resulting coarse bounds
+`s_2(W)<=|W|` and `s_3(W)<=|W|+1` already prove the scale separator if the
+greedy statement is established uniformly.  See
+`RESULTS-SCALE-TELESCOPING.md` and its preregistrations.
 
 ## 8. Overlooked opportunities, ranked
 
@@ -388,9 +404,10 @@ quantifiers by itself.
 
 ## 10. Recommended next sequence
 
-1. Pursue the ordered scale-matching target, retaining `D8` only as explicit
-   boundary state and applying actual-right membership beyond the finite
-   rank-descent prefix.
+1. Prove or falsify the zero-prefix greedy lemma using the ordered
+   finite-difference/Peel filtration.  Do not return to pointwise derivative
+   rank or fixed-radius edge rules; both are now exactly falsified or shown to
+   discard required order.
 2. Derive or falsify a source-ancestry bound that couples frontier path length
    to the artificial endpoint-prefix length; without it, raw actual-right
    terminal conditioning is not proof-relevant.
