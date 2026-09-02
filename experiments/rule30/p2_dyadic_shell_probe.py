@@ -90,6 +90,45 @@ def concatenate_prefix_moments(
     )
 
 
+def ordinary_shift_correlations(values: Sequence[int], max_shift: int) -> list[int]:
+    """Return ordinary (non-XOR) correlations for shifts zero through a cap."""
+
+    if max_shift < 0:
+        raise ValueError("max_shift must be nonnegative")
+    length = len(values)
+    return [
+        sum(
+            int(values[index]) * int(values[index + shift])
+            for index in range(length - shift)
+        )
+        if shift < length
+        else 0
+        for shift in range(max_shift + 1)
+    ]
+
+
+def van_der_corput_certificate(values: Sequence[int], horizon: int) -> tuple[int, int]:
+    """Return the numerator and denominator of the exact finite vdC bound.
+
+    The returned pair ``(p,q)`` certifies
+
+        (sum values)**2 <= p / q.
+
+    Correlations retain their signs; replacing them by absolute values gives
+    the familiar looser asymptotic criterion used in the results note.
+    """
+
+    if horizon < 1:
+        raise ValueError("horizon must be positive")
+    length = len(values)
+    correlations = ordinary_shift_correlations(values, horizon - 1)
+    square_sum = horizon * length + 2 * sum(
+        (horizon - shift) * correlations[shift]
+        for shift in range(1, horizon)
+    )
+    return (length + horizon - 1) * square_sum, horizon * horizon
+
+
 def shell_record(bits: Sequence[int], k: int) -> ShellRecord:
     """Return the exact record for shell ``[2**k, 2**(k+1))``.
 

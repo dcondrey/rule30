@@ -188,6 +188,53 @@ consistent with square-root fluctuations and is not an asymptotic result.
 Its purpose is to reject proposed bounds that already fail on the recorded
 orbit and to identify the exact observable a proof must control.
 
+### 2.4 Quantitative same-orbit defects imply P2
+
+The temporal-period investigation supplies an exact two-orbit defect system,
+and van der Corput gives a rigorous way to reuse it.  Put
+
+```text
+z_t = (-1)^c_t,
+C_N(h) = sum_(t=0)^(N-1-h) z_t z_(t+h).
+```
+
+For integers `N,H>=1`, zero-extend the length-`N` word and sum its `H`
+translations.  Cauchy--Schwarz gives the exact finite inequality
+
+```text
+H^2 |sum_(t<N) z_t|^2
+ <= (N+H-1) [HN + 2 sum_(h=1)^(H-1) (H-h) C_N(h)].
+```
+
+The bracket is a sum of squares and is nonnegative.  Replacing each
+correlation by its absolute value gives the following sufficient theorem.
+
+**Same-orbit defect theorem.**  If, for every fixed `h>=1`,
+
+```text
+C_N(h)/N -> 0,
+```
+
+then P2 holds.
+
+Indeed, first let `N` tend to infinity with `H` fixed.  The normalized
+inequality has limsup at most `1/H`; then let `H` tend to infinity.  Finally,
+
+```text
+z_t z_(t+h) = (-1)^(c_t XOR c_(t+h)),
+```
+
+so the hypothesis says exactly that the center defect between the two
+same-orbit configurations `F^t(delta_0)` and `F^(t+h)(delta_0)` has limiting
+density `1/2`.
+
+This precisely calibrates what transfers from temporal period exclusion.  To
+exclude eventual period `h`, it is enough to show that this defect is nonzero
+infinitely often.  For P2, the reusable defect recurrence must be strengthened
+to asymptotic half-density, for every fixed shift (or to the standard weaker
+Cesaro-in-`h` correlation condition).  The finite inequality and all signed
+words of length eight are regression-tested in the shell probe.
+
 ## 3. The live P2 composition target
 
 Write the signed word in shell `k` as

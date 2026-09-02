@@ -8,10 +8,12 @@ from center_column import center_column
 from p2_dyadic_shell_probe import (
     concatenate_prefix_moments,
     integrated_prefix_energy,
+    ordinary_shift_correlations,
     prefix_moments,
     read_band_cache,
     records,
     shell_record,
+    van_der_corput_certificate,
 )
 
 
@@ -67,6 +69,18 @@ class DyadicShellTest(unittest.TestCase):
         expected = prefix_moments([*left, *middle, *right])
         self.assertEqual(composed, expected)
         self.assertEqual(other_order, expected)
+
+    def test_van_der_corput_certificate_exhaustively(self) -> None:
+        for encoded in range(1 << 8):
+            values = [1 if encoded & (1 << index) else -1 for index in range(8)]
+            direct = [
+                sum(values[index] * values[index + shift] for index in range(8 - shift))
+                for shift in range(8)
+            ]
+            self.assertEqual(ordinary_shift_correlations(values, 7), direct)
+            for horizon in range(1, 9):
+                numerator, denominator = van_der_corput_certificate(values, horizon)
+                self.assertLessEqual(sum(values) ** 2 * denominator, numerator)
 
     def test_cache_format_is_little_endian_uint32(self) -> None:
         words = [0, 1 << 15, (1 << 15) | 7, 9]
