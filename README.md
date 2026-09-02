@@ -235,7 +235,8 @@ uniform proof and independently checkable artifacts.
 
 ## Current best next theorem
 
-The cleanest finite-word target is now the **zero-prefix greedy lemma**.  If
+The cleanest finite-word target is now the **projected diagonal-support
+lemma**.  If
 `s_c(W)` is the legal continuation length inside the exact forced block
 `R_c(W)`, it is enough to prove for every nonempty hard-core word `W` that
 
@@ -244,16 +245,17 @@ s_2(W) <= |W|,
 s_3(W) <= |W| + 1.
 ```
 
-Zero the source coordinates successively from left to right and compare the
-exact affine boundary permutation after each zeroing.  The deterministic
-earliest-change greedy rule proves these inequalities in every audited case
-through `|W|=22` (242,783 word/tail/special cases), with no tail-2 miss and
-only a possible final-row tail-3 miss.  This is a uniform conjecture, not a
-proof.  Pointwise derivative, affine-rank, reverse-order, and simpler greedy
-certificates now have exact counterexamples; see
-`RESULTS-SCALE-TELESCOPING.md`.  The stronger active-core diagonal mortality
-target remains exact and is UNSAT through `m=34`, with no induction in `m`
-known.
+Zero the source coordinates successively from left to right.  At survival row
+`j`, it is enough to prove one adjacent change at some token `k>=j`, using
+only `(alpha,beta)` for tail 2 and `(alpha,gamma)` for tail 3 (the latter only
+through the final nonfinal row).  No matching or greedy history is required.
+The claim has zero failures on the complete hard-core corpus through length
+23; its held-out unrestricted tail-2 supplement alone contains 111,899 cases.
+This is a uniform conjecture, not a proof.  An independent one-credit halving
+recurrence also passes through length 23 and would suffice if proved.  See
+`RESULTS-PROJECTED-DIAGONAL-HALVING.md`.  Pointwise derivative, affine-rank,
+reverse-order, local edge-monotonicity, and literal half-block embeddings have
+exact counterexamples.
 
 A new output-only bridge gives a potentially cleaner route. Peeling one core
 symbol is the fixed local map

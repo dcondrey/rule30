@@ -106,19 +106,20 @@ where `I` is inverse Gray code.  For a genuinely realizable right half,
 
 Best next theorem:
 
-> **Zero-prefix greedy lemma.**  For `W^(k)=0^k W[k:]`, let `A_(j,k)` be the
-> exact newest affine boundary permutation at forced scale step `j`.  Starting
-> after the previous token, greedily take the first `k` with
-> `A_(j,k)!=A_(j,k+1)`.  Every tail-2 survival row is matched; every nonfinal
-> tail-3 survival row is matched.
+> **Projected diagonal-support lemma.**  For
+> `W^(k)=0^k W[k:]`, let `A_(j,k)` be the exact newest affine boundary map at
+> forced scale step `j`.  Every tail-2 survival row has some `k>=j` where the
+> adjacent `(alpha,beta)` projections differ.  Every nonfinal tail-3 survival
+> row has some `k>=j` where the adjacent `(alpha,gamma)` projections differ.
 
-There are `|W|` tokens, so the lemma gives `s_2(W)<=|W|` and
-`s_3(W)<=|W|+1`, proving both constant-tail separators and closing the
-nonconstant period-two rung.  It has zero failures in 242,783 audited cases
-through `|W|=22` but is unproved.  Independent pointwise-intervention matching
-and every derivative-rank variant fail at length 21; retaining the ordered
-zero-prefix finite differences is load-bearing.  See
-`RESULTS-SCALE-TELESCOPING.md`.
+At the last required row, `j<=k<=|W|-1`, so the lemma gives
+`s_2(W)<=|W|` and `s_3(W)<=|W|+1`, proving both constant-tail separators and
+closing the nonconstant period-two rung.  It has zero failures on the full
+hard-core corpus through `|W|=23` but is unproved.  An independent sufficient
+target is the one-credit half-word recurrence in
+`RESULTS-PROJECTED-DIAGONAL-HALVING.md`.  Pointwise derivatives, fixed-radius
+edge rules, endpoint-only telescopes, and literal half-block embeddings are
+already falsified.
 
 An alternate exact bridge now removes the sole known overlap in the dyadic
 period-spectrum route.  Every reachable zero-ray cut is ultimately

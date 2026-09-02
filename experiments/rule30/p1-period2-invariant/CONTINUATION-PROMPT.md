@@ -614,8 +614,49 @@ failures in 242,783 cases: tail 2 matches every survival row; tail 3 matches
 every nonfinal survival row and may miss only the final row. Hence the uniform
 lemma would prove `s_2(W)<=|W|`, `s_3(W)<=|W|+1`, both constant-tail
 separators, and the alternating-center exclusion. This is not proved. The
-next task is a leading-term/Peel induction on the ordered zero-prefix finite
-differences. Read `RESULTS-SCALE-TELESCOPING.md` first.
+greedy target has now been weakened further; read the newer section below.
+
+LATEST PROJECTED-DIAGONAL / HALVING RESULT
+
+Matching and greedy history are unnecessary for the sufficient scale bound.
+At required row `j`, it is enough to prove one adjacent zero-prefix change at
+some token `k>=j`, using only `(alpha,beta)` for tail 2 and `(alpha,gamma)` for
+tail 3. The last required row then gives `s_2(W)<=|W|` and
+`s_3(W)<=|W|+1` directly. The claim has zero failures on the complete
+hard-core corpus through length 23. A registered held-out supplement covers
+all 111,899 tail-2 words at lengths 19--23 that contain `22222`; therefore the
+temporary actual-right five-zero restriction is not part of the live lemma.
+
+The algebraic interpretations are exact:
+
+    pi_2=(alpha,beta)
+
+is a closed additive quotient of the D8 affine cocycle, while
+
+    pi_3=(alpha,gamma)=A(0)
+
+is the literal newest cut state obtained by appending endpoint state 0. The
+proof target is the contrapositive: constancy of all adjacent projected labels
+for `k>=j` makes row `j` illegal in tail 2, or makes row `j` and its successor
+not both legal in tail 3.
+
+An independent sufficient conjecture also passes exact lengths 21--23 and
+8,000 long random tail cases:
+
+    s_c(W) <= ceil(n/2)+1+
+              max(s_2(L),s_3(L),s_2(R),s_3(R)).
+
+Here `L,R` are the two halves. This recurrence implies `s_c(W)<2n` by a
+short induction with small exact bases. It aligns with the rotated Peel
+halving identity, but literal embedding of the surviving endpoint suffix into
+a half-word extension is false. A proof must carry the residual boundary mode
+and compare a frontier potential or conjugated state.
+
+Do not retry local `2x2` edge monotonicity (all 16 patterns occur), bounded
+pivot jumps (they grow), endpoint-only telescoping (internal changes return),
+one-symbol deletion, or literal half-block embedding. Read
+`RESULTS-PROJECTED-DIAGONAL-HALVING.md` first, then
+`RESULTS-SCALE-TELESCOPING.md` for the killed stronger certificates.
 
 REPRODUCTION COMMANDS
 

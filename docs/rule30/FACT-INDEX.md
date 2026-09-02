@@ -272,6 +272,17 @@ sufficient for both constant-tail separators.  This remains a conjectural
 uniform lemma, not a proved exclusion.  Source: period-two
 `RESULTS-SCALE-TELESCOPING.md`.
 
+The greedy history is now known to be unnecessary for the sufficient bound.
+Project the affine maps to `(alpha,beta)` for tail 2 and `(alpha,gamma)` for
+tail 3.  It is enough that required row `j` has one adjacent zero-prefix
+change at some token `k>=j`.  This projected diagonal-support claim has zero
+failures on the complete hard-core corpus through length 23, including a
+111,899-case held-out supplement containing every previously omitted tail-2
+word with `22222`.  A separate one-credit half-word recurrence also passes
+through length 23 and implies `s_c(W)<2|W|` by induction, but neither target is
+proved.  Source: period-two
+`RESULTS-PROJECTED-DIAGONAL-HALVING.md`.
+
 ## Proved exclusions and reductions
 
 | Fact | Scope | Source |
@@ -315,14 +326,15 @@ finite-state or nonlinear invariant exists.
 
 ## Current open theorem targets
 
-1. **P1, period two:** prove the zero-prefix greedy lemma from
-   `RESULTS-SCALE-TELESCOPING.md`, hence `s_2(W)<=|W|` and
-   `s_3(W)<=|W|+1`, or prove the stronger reversed constant-tail queue
+1. **P1, period two:** prove the projected diagonal-support lemma from
+   `RESULTS-PROJECTED-DIAGONAL-HALVING.md`, hence `s_2(W)<=|W|` and
+   `s_3(W)<=|W|+1`; prove its one-credit halving alternative; or prove the
+   stronger reversed constant-tail queue
    mortality.  Either route would close the rank-zero separator, all finite
-   Peel ranks, and the nonconstant period-two rung.  The greedy lemma has zero
-   failures through length 22; pointwise derivative and rank certificates are
-   killed at length 21.  Actual-right conditioning remains available only
-   beyond the finite rank-descent prefix.
+   Peel ranks, and the nonconstant period-two rung.  Diagonal support has zero
+   failures through length 23; pointwise derivative, rank, bounded-jump, and
+   local monotonicity certificates are killed.  Actual-right conditioning
+   remains available only beyond the finite rank-descent prefix.
 2. **P1, general R1:** eventual periodicity of `c` forces eventual periodicity
    of `r` on the zero set, using Rule 30's OR in a way Rule 90 lacks.
 3. **P2:** a seed-specific orbit-closure/generic-point theorem, not another

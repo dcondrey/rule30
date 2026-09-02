@@ -59,6 +59,7 @@ Use this routing table:
 | Constant-tail frontier-distance theorem | `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md`; `constant_tail_frontier_graph.py` |
 | Actual-right terminal frontier audit and scope correction | `PREREGISTRATION-ACTUAL-RIGHT-FRONTIER.md`; `RESULTS-ACTUAL-RIGHT-FRONTIER.md`; `constant_tail_actual_frontier.py` |
 | Scale telescoping, derivative failures, and zero-prefix greedy target | `RESULTS-SCALE-TELESCOPING.md`; `constant_tail_zero_prefix_matching.py`; `constant_tail_zero_prefix_bitsliced.py` |
+| Projected diagonal support and one-credit halving targets | `RESULTS-PROJECTED-DIAGONAL-HALVING.md`; `constant_tail_right_zero_prefix_selector.py`; `constant_tail_halving_recurrence.py` |
 | Moving endpoint-flip cocycle | `RESULTS-ENDPOINT-FLIP-COCYCLE.md`; `endpoint_flip_cocycle.py` |
 | Evolutionary rank-zero witness search | `docs/rule30/RESULTS-openevolve-p1-rank-zero.md`; `experiments/openevolve-p1-rank-zero/` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
@@ -161,6 +162,8 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | First-infinite endpoint shift | The first infinite tail cut above a finite rank-zero cut must be eventually constant `2` or `3` | **Uniform narrowing:** it suffices to separate these two constant-tail fibers; exact census through cutoff 23 and GA controls through 96, proof open |
 | Constant-tail lasso and scale block | Endpoint shift is an exact partial lasso transducer; newest-cut permutations are the eight affine triples `(alpha,beta,gamma)`; `W=e[n,2n)` forces a padding-independent block `R_c(W)=e[2n,4n)` | **Uniform reduction:** it suffices to prove `R_c(W)` cannot continue a hard-core `W`; exhaustive through `|W|=22`. The original bound `s_2<=#2` first fails at length 17; the repaired targets `s_2<=#2+1_{22}` and `s_3<=#2+3` survive the census but are unproved. The apparent six-state doubling profile is rejected by four universal `8 -> 16` profile collisions. A doubled word is uniformly unique up to rotation, but the prefix-independent exact-cycle orbit itself branches at shift 26,603, so the missing invariant must retain prefix/entry-state data |
 | Zero-prefix scale telescoping | Sweep `W^(k)=0^kW[k:]`; greedily match each survival row to the first later `k` whose newest affine boundary permutation changes | **Live uniform conjecture:** zero failures through length 22 in 242,783 cases. Tail 2 matches every row; tail 3 matches every nonfinal row, giving the sufficient bounds `s_2<=|W|`, `s_3<=|W|+1`. Pointwise intervention matching and all derivative-rank variants are killed at length 21; proof of the ordered zero-prefix finite-difference lemma remains open |
+| Projected diagonal support | At row `j`, retain only `(alpha,beta)` for tail 2 or `(alpha,gamma)` for tail 3 and ask for one adjacent zero-prefix change at `k>=j` | **Smaller live conjecture:** no matching is needed; the last required row gives `s_2<=|W|`, `s_3<=|W|+1`. Zero failures on the complete hard-core corpus through length 23. The temporary actual-right `22222` restriction is unnecessary; its 111,899-case held-out complement also passes. Proof open |
+| One-credit half-word recurrence | Split `W` into halves and bound `s_c(W)` by `ceil(n/2)+1` plus the largest half-word survival over both tail modes | **Independent sufficient conjecture:** exact lengths 21–23 and 8,000 long random tail cases pass. The recurrence implies `s_c(W)<2n` by induction. Literal suffix embedding is false, so a proof must retain a conjugated frontier/boundary potential |
 | Reversed constant-tail diagonal | The complete growing inverse-cone formula reverses to `S_0=c, S_i=g_(S_(i-1))(R_i)`; the final scan state exactly decodes the next hard-core endpoint and appends its boundary symbol | **Uniform stronger reduction:** mortality of every finite queue beginning in `c in {2,3}` and ending in `{1,2}` would close the constant-tail separator. The exact quotient `3 -> 1` gives ternary representatives, and every normalized successor avoids `20`, `22`, `011`; `lifetime(R)<=|R|` holds exhaustively through length 15, induction open |
 | Regular survival-language cocycle | `L_(h+1)=L_0 intersect Q_c^(-1)(L_h)` constructs and minimizes the exact next survival formula | **Exact morph, negative rank result:** minimized DFA size grows from `5/6` to `17,65,257,...` rather than contracting; shortest accepted length grows `1/2,1/2,3,5,5,5,10,...`. Proving that minimum tends to infinity is now the precise language-theoretic mortality target |
 | Frontier-distance cocycle | Stack `h+1` queue rows; reading symbol `a` sends `v` to `w_0=a, w_j=g_(v_j)(w_(j-1))`; terminal vertices are exactly the inverse-cone diagonals of hard-core words of length `h+1` | **Uniform graph theorem:** bare distance from `(c,...,c)` to the `F_(h+3)`-vertex terminal set gives the arbitrary-queue minimum; product with the invariant suffix DFA gives the language-cocycle minimum. Their divergence is equivalent. Height extension is a four-sheeted permutation cover whose fiber maps generate `D8`, so no fiber rank contracts. Both distances are exact through `h=12`; proving divergence remains open |
@@ -273,18 +276,16 @@ PYTHONDONTWRITEBYTECODE=1 uv run --project experiments/sygus-p3 python \
 
 ## Best next theorem
 
-> **Zero-prefix greedy lemma.**  Sweep
-> `W^(k)=0^k W[k:]` from left to right.  At each forced scale row, greedily
-> choose the first later `k` whose newest affine boundary permutation changes
-> between scenarios `k` and `k+1`.  Every tail-2 survival row and every
-> nonfinal tail-3 survival row must receive a token.
+> **Projected diagonal-support lemma.**  At forced row `j`, some adjacent
+> zero-prefix scenarios at token `k>=j` differ in `(alpha,beta)` for tail 2;
+> for tail 3 the same holds in `(alpha,gamma)` through every nonfinal row.
 
 This gives `s_2(W)<=|W|` and `s_3(W)<=|W|+1`, hence both constant-tail
 separators, the rank-zero separator, and the nonconstant period-two
-exclusion.  It has zero failures through `|W|=22` in 242,783 cases but no
-all-length proof.  Independent derivative matching, all affine-rank variants,
-and the reverse cumulative order have exact counterexamples; read
-`RESULTS-SCALE-TELESCOPING.md` before modifying the target.
+exclusion.  It has zero failures on the complete hard-core corpus through
+`|W|=23` but no all-length proof.  The one-credit half-word recurrence is a
+second sufficient target.  Read `RESULTS-PROJECTED-DIAGONAL-HALVING.md` and
+`RESULTS-SCALE-TELESCOPING.md` before modifying either target.
 
 The stronger alternate target remains **active-core diagonal mortality**:
 every aligned core word of length `m` ending in terminal symbol `3` fails a

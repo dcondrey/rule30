@@ -404,10 +404,12 @@ quantifiers by itself.
 
 ## 10. Recommended next sequence
 
-1. Prove or falsify the zero-prefix greedy lemma using the ordered
-   finite-difference/Peel filtration.  Do not return to pointwise derivative
-   rank or fixed-radius edge rules; both are now exactly falsified or shown to
-   discard required order.
+1. Prove or falsify projected diagonal support using the ordered
+   zero-prefix/Peel filtration.  Tail 2 needs only the additive quotient
+   `(alpha,beta)`; tail 3 needs the terminal state `(alpha,gamma)=A(0)`.  A
+   second route is the one-credit half-word recurrence.  Do not return to
+   pointwise derivative rank, fixed-radius edge rules, endpoint-only
+   telescopes, or literal half-block embedding; all are exactly falsified.
 2. Derive or falsify a source-ancestry bound that couples frontier path length
    to the artificial endpoint-prefix length; without it, raw actual-right
    terminal conditioning is not proof-relevant.
