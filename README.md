@@ -93,6 +93,15 @@ diagonals, with the invariant suffix DFA as the second factor.  The bare
 frontier graph handles arbitrary queues.  Proving either equivalent distance
 divergence would close the period-two rung.
 
+There is now a uniform ordered descent inside each successful queue update.
+After removing the newly appended boundary symbol, the transformed old
+coordinates are strictly smaller in colex order for both `0<2<1` and
+`2<0<1`.  Hence the rightmost decisive input is always a `1`, replaced by
+`0` or `2`.  Finite synchronous products prove this for words of every
+length.  It is not yet mortality: an appended boundary `1` can replace the
+consumed pivot at a newer coordinate, so the remaining task is an ancestry
+bound on those replacements.
+
 Conditioning the terminal set on the complete actual Rule 30 right cone
 raises the tail-2 minimum from `18` to `23` at horizon 12 and changes exact
 `D8` phase costs.  The conditioned sets form a uniform inverse subsystem, but

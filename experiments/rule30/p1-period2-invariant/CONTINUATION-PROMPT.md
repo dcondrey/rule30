@@ -672,6 +672,22 @@ one-symbol deletion, or literal half-block embedding. Read
 `RESULTS-PROJECTED-DIAGONAL-HALVING.md` first, then
 `RESULTS-SCALE-TELESCOPING.md` for the killed stronger certificates.
 
+The normalized constant-tail queue now has a proved all-word ordered lemma.
+On every legal update, the old-coordinate scan is strictly smaller in colex
+order under both `0<2<1` and `2<0<1`. Therefore its rightmost decisive input
+is exactly `1`, changed to `0` or `2`. The finite proof products have
+`31/30` states for the first order and `35/34` for the second (tails 2/3).
+This does not prove mortality because the update appends a fresh boundary
+symbol at the colex-most-significant end. The next proof target is to attach
+source ancestry to an appended `1` and show that replacements of the
+consumed pivot cannot continue indefinitely. Read `RESULTS-COLEX-DESCENT.md`
+and run `constant_tail_colex_descent.py`.
+
+A registered four-row endpoint telescope was killed by three held-out
+length-17 windows; do not attempt to repair cancellation merely by retaining
+a fixed number of endpoint projections. The ordered defect word or ancestry
+state is essential.
+
 REPRODUCTION COMMANDS
 
     uv run --project experiments/sygus-p3 python \
