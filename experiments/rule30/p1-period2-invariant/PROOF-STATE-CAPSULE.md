@@ -179,6 +179,7 @@ defect with its `D8` phase, not another scalar count.
 | Fixed finite quotient of the frontier | Same summary with different legal successors; carry actions are permutations |
 | Raw dyadic period mismatch | `2^omega` maps to accepted `(12)^omega`; reachability is essential |
 | Bare holonomy-defect word | Anchored identical profiles have different next rows at length 8; two-ended repair fails at 13 |
+| Fixed queue end windows plus total phase | For every radius, the neutral interior blocks `00` and `11` give equal length, end windows, endpoint/event data, and total `D8` action but unequal successor actions |
 | Static formula/DFA rank contraction | Survivor DFA size expands as `4^(h+1)+1` through the checked range |
 | Literal final local patch | A hard-core length-12 DLP control survives with six constant final cut cells |
 | One backward source defect | Single-coordinate four-state relaxations usually remain UNSAT; the obstruction is branched/global |

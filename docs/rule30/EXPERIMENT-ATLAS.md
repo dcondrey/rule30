@@ -177,6 +177,7 @@ local clause by itself.
 | `RESULTS-ENDPOINT-FLIP-COCYCLE.md` | `U/R` | Flip `k` can affect only `[k,2k+1]` and affects coordinate `k` nontrivially | Ordered overlaps can move outward |
 | `RESULTS-EVENTUAL-CONSTANT-TAIL.md` | `U/R/C` | First infinite cut tail is `2^omega` or `3^omega`; scale and affine reductions | All-length separator |
 | `RESULTS-CONSTANT-TAIL-QUEUE.md` | `U/R/C` | Exact queue update, ternary quotient, invariant SFT | Mortality for every finite queue |
+| `RESULTS-QUEUE-WINDOW-PHASE-NO-GO.md` | `U/K` | Every fixed pair of queue end windows plus length, endpoint/event data, and total `D8` action is nonclosed, by uniform neutral-block families for both tails | A lossless ancestry quotient or the complete ordered queue |
 | `RESULTS-CONSTANT-TAIL-LANGUAGE-COCYCLE.md` | `U/K/R` | Exact regular inverse-image update | DFA rank expands; shortest accepted length divergence open |
 | `RESULTS-CONSTANT-TAIL-FRONTIER-GRAPH.md` | `U/R/C` | Uniform inverse graph system, Fibonacci terminal set, `D8` cover | Source-orbit/terminal-set disjointness |
 | `RESULTS-ACTUAL-RIGHT-FRONTIER.md` | `U/C/K` | Fully actual-right terminal sets form an inverse subsystem and raise finite distances | Rank descent permits an artificial finite endpoint prefix, so raw conditioning is too strong |
