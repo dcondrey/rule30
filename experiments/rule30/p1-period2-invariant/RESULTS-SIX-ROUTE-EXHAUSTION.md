@@ -18,7 +18,7 @@ has been proved or refuted.
 |---|---|---|
 | Projected diagonal support | **Irreducible full-queue contrapositive.** Local affine legality is explicit; endpoint telescopes, bounded defect states, and local monotonicity are killed | If every active adjacent projected phase is equal, derive failure of the required tail-2 row or tail-3 row pair from the complete ordered scenario queues |
 | Deterministic halving | **Irreducible prefix implication.** Scalar/log gap ranks, raw embeddings, and parent-continuation-only morphs are killed | Prove parent legality through `h+r` implies left-half/tail-2 legality through `r`, retaining the free left half during triangular elimination |
-| Queue ancestry / distance | **Three all-length components proved.** The phase-gap cover holds; every nonfirst retreat pairs with a productive pull; every post-retreat pull is `102->0021` on `p-t=N-3`. Mixed origin-Hall and the weaker ray-crossing claim pass 4,115,170 held-out queues | Prove bottom-feature crossing on the stabilized ray, hence `ret(R)<=#1+#zero-runs` and `d(r)>=r` |
+| Queue ancestry / distance | **Four all-length components proved.** The phase-gap cover holds; every nonfirst retreat pairs with a productive pull; every post-retreat pull is `102->0021` on `p-t=N-3`; and the parent-forest recurrence gives `#pulls<=2 max pull-depth`. The one-chain feature bound passes 4,115,168 held-out queues | Prove that pull-depth through a root is bounded by its initial feature prefix, or exclude unbounded depth under eventual pull gaps `{2,3,4,5}` for the actual period-two application |
 | Dyadic hard-core lock | **Subsumed as a standalone route.** Finite cores have finite Peel rank, strictly stronger than dyadic eventual period, and exact rank descent reaches rank zero | Prove rank-zero separation through one of the first three routes; classifying all infinite-rank dyadic accepted cuts is unnecessary |
 | Peel-recursive Craig induction | **Literal pullback killed exactly.** `P(S_H)` re-enters `S_(H-1)` only at the all-`2` endpoint; the first endpoint `1` creates an unbounded defect position | Build an indexed restart separator, equivalently prove the stronger shell exclusion `C(m,m)` apart from its explicit `m=2,6` exceptions |
 | Cartier `S(0)` / rationality | **Generic route exhausted.** `S(0)` is exactly P1, infinite Cartier kernel is stronger, Frobenius is not Cartier, finite prefixes cannot bridge the claim, and generic Ore induction is false | Construct a Rule-30-specific all-size nonsingular Hankel-minor family (exact P1) or infinitely many distinct Cartier residuals (stronger than P1) |
@@ -129,12 +129,14 @@ full P1 directly and currently has no bridge to the rank-zero structure.
 
 ## 5. Recommended next research order
 
-1. **Bottom-feature pull-ray crossing.**  The exact suffix language pairs
+1. **Pull-chain descent / syndetic pull-ray exclusion.**  The exact suffix language pairs
    every nonfirst retreat with a productive pull, and the raw predecessor
-   table proves that all post-retreat pulls lie on `p-t=N-3`.  Match those
-   ray crossings noncrossingly to initial `1` cells and zero-run starts at or
-   left of `N-3`.  This weaker statement already proves the mixed budget;
-   bounded additive ranks through width four are killed.
+   table puts all post-retreat pulls on `p-t=N-3`.  The parent forest proves
+   that infinitely many pulls force one chain of unbounded pull-depth.  Show
+   that each nested pull crosses a new initial `1`/zero-run feature.  For the
+   original application it is alternatively enough to exclude unbounded
+   depth under eventual pull gaps `{2,3,4,5}`, because the actual right trace
+   has no `00000`.  Fixed-factor ranks through width five are killed.
 2. **Projected-support contrapositive.**  Work from the complete scenario
    queues and equations (4); do not search another bounded defect summary.
 3. **Triangular halving elimination.**  Retain `L` symbolically and eliminate

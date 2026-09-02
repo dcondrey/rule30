@@ -46,6 +46,13 @@ the ray (3), and it must be the first pull.  This proves registered claim
 `(PR1)` for arbitrary queue length.  The proof uses four literal table
 entries and no orbit bound; `pull_ray_stabilization_control()` checks them.
 
+The pull pivots are also strictly increasing.  Pulls on (3) inherit this
+from their strictly increasing times.  If the exceptional first pull is off
+the ray, it occurs at time zero and has pivot at most `N-2`; a second pull
+requires an intervening retreat and therefore has time at least two and
+pivot at least `N-1`.  This is an all-length consequence of the same suffix
+classification, not the finite minimum-delta regression.
+
 ## 2. Frozen held-out crossing result
 
 For a pull at `(t,p)`, write `d=p-t`.  The preregistered crossing claim uses
@@ -94,7 +101,42 @@ the nonconstant period-two exclusion.
 
 No such all-length crossing proof is asserted here.
 
-## 3a. A macro-potential attempt and its exact obstruction
+## 3a. Weaker sufficient target for the actual period-two problem
+
+The full bottom-feature lemma is stronger than the original Rule 30
+application.  Under an alternating center trace, the actual even-time
+right-neighbor trace `rho` contains neither `11` nor `00000`; the second
+prohibition is the uniform ANF identity proved in
+`RESULTS-RIGHT-FILTERED-MORTALITY.md`.  Endpoint state `1` encodes `rho=1`
+and endpoint state `2` encodes `rho=0`.
+
+Rank descent may prepend finitely many artificial endpoint `2`s, but after
+that prefix the constant-tail queue endpoint is a tail of the actual `rho`.
+Consequently any genuine period-two counterexample would yield an immortal
+queue whose consecutive retreats, and hence consecutive following pulls,
+eventually have gaps
+
+```text
+2 <= t_(i+1)-t_i <= 5.                                  (4)
+```
+
+The lower bound is hard-core `11` avoidance; the upper bound is `00000`
+avoidance.  Combining (3) and (4) gives the strictly weaker sufficient
+lemma:
+
+> **Syndetic pull-ray lemma.** No finite constant-tail queue has infinitely
+> many pulls on one ray with all sufficiently late pull gaps in
+> `{2,3,4,5}`.
+
+This lemma alone would exclude a nonconstant period-two center trace, even
+without proving that every abstract hard-core queue has finitely many pulls.
+It remains unproved.  Fixed-factor amortized potentials do not immediately
+settle it: the complete all-word pull-potential systems are already
+unsatisfiable through width five, and bounded actual-right gaps still allow
+the dense alternating retreat/pull transients that defeat local scalar
+summaries.
+
+## 3b. A macro-potential attempt and its exact obstruction
 
 Because every surviving retreat is immediately followed by its pull, a
 potential only needs to be nonincreasing on `B` updates and strictly decrease
@@ -111,6 +153,22 @@ are already unsatisfiable at factor widths one through five.  See
 This does not weaken the pull-ray or retreat--pull pairing theorems.  It
 rules out one more bounded scalar replacement for the ordered crossing map.
 
+## 3c. Pull ancestry reduces global crossing to one chain
+
+Attach every appended coordinate to its colex pivot and count pull edges on
+each root path.  The third-last pivot theorem gives an exact temporal
+recurrence for those depths and proves
+
+```text
+#pulls <= 2 max pull-depth.
+```
+
+Thus full noncrossing Hall is stronger than necessary.  It is enough to show
+that a single root path cannot contain more pulls than the initial feature
+prefix through that root.  This one-chain claim passes 4,115,168 newly
+seeded held-out queues with sharp slack zero, but remains unproved.  See
+`RESULTS-PULL-ANCESTRY-DEPTH.md`.
+
 ## 4. Reproduction
 
 ```bash
@@ -120,4 +178,7 @@ uv run python \
 
 uv run python \
   experiments/rule30/p1-period2-invariant/constant_tail_pull_ray.py
+
+uv run python \
+  experiments/rule30/p1-period2-invariant/constant_tail_pull_ancestry_depth.py
 ```
