@@ -144,3 +144,41 @@ immortal finite word bounds every `m_H`.  This is an equivalence, but not yet a
 growth proof.  The automaton is exhaustively cross-checked against direct word
 iteration for both necklaces, all starting phases, words through length five,
 and horizons through eight.
+
+## 5. Finite carry signature
+
+Remove the final boundary append from the quotient map and retain its
+length-preserving interior scan `E`.  If a word starts with `k` deep zeros,
+then `E^2` starts with at least `k+1` deep zeros: at the first nonzero
+coordinate the first scan emits only `0` or `1`, and either input emits `0`
+on the next scan while all earlier zero coordinates remain zero.  Thus
+
+```text
+E^(2L)(w) = 0^L
+```
+
+for every word of length `L`.
+
+Pack the finite parity sequence into the ordinary integer
+
+```text
+S(w) = sum_(j>=0) parity(E^j(w)) 2^j.
+```
+
+The horizon automaton says exactly that feeding a quotient symbol acts on
+this integer's bit ray by `propagate_symbol`.  Since
+`T_c(w)=E(w) b`, where `b=2` for odd parity and `b=c` for even parity,
+
+```text
+S(T_c(w)) = g_b(floor(S(w)/2)).
+```
+
+At a center-one phase the same low bit supplies the pin check.  Consequently
+period-three core mortality is semiconjugate to an explicit partial dynamical
+system on nonnegative integers; no unbounded word needs to be stored.  This
+does not yet prove termination—the surviving integer's binary length can
+grow—but it isolates the remaining theorem to finite-support carry rays.
+
+`period3_signature.py` checks the two-step erasure inequality and both the
+free and phase-driven semiconjugacies on every quotient word through length
+eight.  `test_period3_signature.py` supplies smaller regression controls.
