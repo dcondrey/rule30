@@ -121,7 +121,9 @@ depth `u` is exactly the information carried by a single column at depth
 `2u-1`, so `beta_col = sqrt(beta_state)`, which is what the two measured bases
 say (`1.328^2 = 1.764`).  **There is one growth constant here, not two.**
 
-## 5. The memory law
+## 5. The memory law, with proof
+
+### 5a. Census
 
 `column_memory.py`, complete enumeration of `{1,2}^L` for `L = 1..18`, `k(L)`
 the least `k` such that `column(w)` is a well defined function of `w[-k:]`:
@@ -130,11 +132,63 @@ the least `k` such that `column(w)` is a well defined function of `w[-k:]`:
 k(L) = ceil((L+1)/2)   for every L = 1..18, no exceptions
 ```
 
-`k` is exact, not an upper bound: the script reports the least `k`, and it
-matches the prediction at every length.  **The endpoint column forgets the
-first half of its input exactly.**
+`k` is exact, not an upper bound: the script reports the least `k`.  The
+per-entry profile (`--profile 14`) is sharper and is what the proof runs on.
+Writing `d = L - i` for the distance of entry `i` from the end of the column,
 
-This is the first exact forgetting law recorded for this kernel.  It does not
+```text
+k(L, i) = ceil((d + 1) / 2),    d = L - i
+```
+
+on every `L = 1..14` and every entry, so the memory of an entry depends only
+on its distance from the end of the column and not otherwise on `L`.
+
+### 5b. Proof of the upper bound (all lengths)
+
+Let `w` have length `L`, let `C` be its column (`L+1` entries, indices `0..L`)
+and let `N` be the column of `w s` (`L+2` entries).  From `psi_kernel.peek`:
+
+```text
+N[L+1] = s
+N[L]   = BOUNDARY[s]
+N[i]   = CONE[C[i+1]][N[i+1]]        i = L-1, ..., 0
+```
+
+Index by distance from the end.  Entry `N[i]` sits at `d = (L+1) - i`.  It
+reads `C[i+1]`, at distance `L - (i+1) = d - 2` in `C`, and `N[i+1]`, at
+distance `d - 1` in `N`.
+
+Claim: an entry at distance `d` depends only on the last `ceil((d+1)/2)`
+symbols of its own word.  Induction on the word length.
+
+*Base.*  `d = 0` is `s` and `d = 1` is `BOUNDARY[s]`; both depend on the last
+symbol alone, and `ceil(1/2) = ceil(2/2) = 1`.
+
+*Step.*  By hypothesis `C[i+1]` depends on the last `ceil((d-1)/2)` symbols of
+`w`, hence on the last `ceil((d-1)/2) + 1` symbols of `w s`, and `N[i+1]`
+depends on the last `ceil(d/2)` symbols of `w s`.  So `N[i]` depends on the
+last
+
+```text
+max( ceil((d-1)/2) + 1, ceil(d/2) )  =  max( ceil((d+1)/2), ceil(d/2) )
+                                     =  ceil((d+1)/2)
+```
+
+symbols, which is the claim at `d`.  QED.
+
+Taking `i = 0`, so `d = L`, the whole column of a length-`L` word depends only
+on its last `ceil((L+1)/2)` symbols.  **The endpoint column forgets the first
+half of its input, at every length.**  Hence, unconditionally,
+
+```text
+|Col_L| <= 2^ceil((L+1)/2),     growth base sqrt(2) < 2.
+```
+
+The census of 5a supplies the converse, that no smaller `k` works, for
+`L <= 18`; sharpness is not proved at all lengths and is not needed for the
+bound.
+
+This is the first all-length quantifier this kernel has produced.  It does not
 contradict `RESULTS-RW-LINEAR-SLACK.md` 9.2 ("no effective forgetting"), which
 measured survival across prefix bits of the full state, a different object;
 nor `RESULTS-CLUSTER-ANATOMY.md`, which measured fibres of the source-to-state
@@ -145,9 +199,10 @@ map.  The state does not forget: by section 4 the state at `u` is a column at
 
 Delivered:
 
-- `|Col_L| <= 2^ceil((L+1)/2)`, a **proved** growth base of `sqrt(2)` for the
-  column language, from the memory law.  Measured base `1.328`, so the bound
-  is true with slack and is not tight.
+- `|Col_L| <= 2^ceil((L+1)/2)` for every `L`, **proved** in section 5b by
+  induction on the append recursion, giving a growth base of `sqrt(2)` for the
+  column language.  Measured base `1.328`, so the bound holds with slack and
+  is not tight.
 - One object instead of two.  Any argument about the state may be run on the
   column language at double the length, and the diagonal need not be carried.
 - Two mechanism classes removed from the search: the exact symbol congruence
@@ -199,9 +254,21 @@ uv run python column_memory.py --lmax 18               # 60 s
 
 ## 9. Next
 
-The one open lead with a proof shape is section 5 as a theorem rather than a
-census: prove `k(L) = ceil((L+1)/2)` by induction on the triangular array `B`
-of `psi_kernel`, where column `i` depends only on `endpoint[:i+1]`.  A proof
-would make the `sqrt(2)` column bound unconditional at all lengths and would
-be the first all-length quantifier this kernel has produced.  It does not
-close `(SEP)`, and the write-up must not imply that it does.
+Section 5b closed the target this document originally named, so the open leads
+are downstream of it.
+
+1. **Sharpness at all lengths.**  Prove the converse of 5b, that no `k` below
+   `ceil((L+1)/2)` suffices.  Census gives it to `L = 18`.  This is cosmetic
+   for the bound and needed only if the exact constant is claimed.
+2. **Close the gap `1.328` against `sqrt(2) = 1.414`.**  The memory law counts
+   suffixes; the true column count is smaller because distinct suffixes
+   collide.  A bound on that collision rate would lower the base.  This is the
+   route to a base for the state language, which section 6 records as still
+   unproved, since `2^u` is trivial there.
+3. **Does the memory law reach the RW observable?**  The survival test reads
+   the diagonal, not the column, and the state does not forget.  Whether any
+   half-length statement survives the passage to the diagonal is open and
+   should be measured before it is assumed.
+
+None of these closes `(SEP)`, DLP or `(PT2)`, and the write-up must not imply
+that any of them does.
