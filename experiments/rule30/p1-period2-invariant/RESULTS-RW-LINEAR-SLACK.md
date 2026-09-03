@@ -168,3 +168,44 @@ What would settle it is a proof that the `E` constraint per column is not
 merely one bit on average but one bit unconditionally, given the state.  That
 is a statement about the ancestry law in `RESULTS-PSI-ANCESTRY-LAW.md` section
 3, and it is the sharpest concrete target this session leaves.
+
+## 9. Three exact facts added while the multi-agent run was in flight
+
+**9.1 The hard-core ablation, which doubles as a gate.**  Dropping the
+hard-core condition from RW leaves exactly `(BWH+)` (full Moore state pinned
+at depth `n`, arbitrary binary continuation).  `rw_ablation_hardcore.py`
+confirms this: without hard-core the search reproduces `(BWH+)`'s known
+exceptions, a constant at `n = 6` (`deepest = 9 > need = 8`) and the `n + 1`
+near-miss at `n = 15, c = 3` (`deepest = 16`).  With hard-core those become 3
+and 8.  The `n = 15` family's forced continuation begins `12211...` and hits
+`11` at step 3 while its `E`-constraint survives sixteen steps; hard-core is
+what removes that family, and it is the reason RW's slack at `n = 15` is 8
+where `(BWH+)`'s is 1.  Neither condition alone is the mechanism: the
+`E`-pin alone has fluctuating slack (1 at `n = 15`, 4 at `n = 16`), hard-core
+alone is `log2(4/3)` bits per column, and the combination is what has robust
+linear slack.  Log: `rw_ablation_hardcore_20260902.log`.
+
+**9.2 No effective forgetting.**  The light cone gives `T[u][n]` as a function
+of `e[(u-n-1)/2 .. u]`, so late constraints do not read early source bits
+directly.  They read them through the forced symbols, and the dependence is
+total: for the deepest witnesses at `n = 12, 14, 16`, varying the first `j`
+source bits over all `2^j` values keeps depth `>= D - 1` for a fraction that
+halves with each additional bit, `1.00, 0.50, 0.25, 0.12, ...`, at every `n`
+and both `c`.  Every early bit is a one-in-two constraint on survival.  No
+bounded-window transfer matrix describes the survivors; this is the measured
+form of the full-degree result in `RESULTS-PSI-ANCESTRY-LAW.md` section 10.
+
+**9.3 Set form of both constraints** (131,580 checks).  For column `u-1`'s
+window `d in [-u, n-1]` of length `m = n + u`, with `Z` the zero cells, `W2`
+the cells equal to `2` and `N` the nonzero cells:
+
+```text
+    H(e_u) = 1 + (n + u + 1) + |Z|                                          (mod 2)
+    E(T[u][n]) = (|Z| + |W2|) (1 + m + |Z|) + #{(x, y) : x < y, x in N, y in Z or W2}   (mod 2)
+```
+
+The forced symbol is the parity of the zero count; the defect is a count of
+ordered pairs (nonzero below, even above) plus a parity correction.  The
+correction to `uc/BRIEF.md` recorded there (the `Phi` indicator is
+`[T != 0]`, not `[T == 0]`; the Moore step uses `[T == 0]`) was found by this
+check failing on the first form and passing on the second.
