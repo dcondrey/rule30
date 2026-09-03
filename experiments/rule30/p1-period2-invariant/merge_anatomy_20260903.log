@@ -1,0 +1,19 @@
+# u -> u+1 append.  merges = 2|C_u| - |C_{u+1}|.
+# dist = Hamming distance between two parents of one child (column, diagonal).
+u=  1 |C_u|=       2 |C_u+1|=       4 merges=      0 pairs=      0 coldist1=      0 share= 0.000 coldist={} diadist1=      0 fanout={1: 4} onepos={}
+u=  2 |C_u|=       4 |C_u+1|=       8 merges=      0 pairs=      0 coldist1=      0 share= 0.000 coldist={} diadist1=      0 fanout={1: 8} onepos={}
+u=  3 |C_u|=       8 |C_u+1|=      13 merges=      3 pairs=      3 coldist1=      0 share= 0.000 coldist={0: 3} diadist1=      3 fanout={1: 10, 2: 3} onepos={}
+u=  4 |C_u|=      13 |C_u+1|=      23 merges=      3 pairs=      3 coldist1=      0 share= 0.000 coldist={0: 3} diadist1=      3 fanout={1: 20, 2: 3} onepos={}
+u=  5 |C_u|=      23 |C_u+1|=      39 merges=      7 pairs=      7 coldist1=      2 share= 0.286 coldist={0: 5, 1: 2} diadist1=      7 fanout={1: 32, 2: 7} onepos={(1, 3): 2}
+u=  6 |C_u|=      39 |C_u+1|=      73 merges=      5 pairs=      5 coldist1=      2 share= 0.400 coldist={0: 3, 1: 2} diadist1=      3 fanout={1: 68, 2: 5} onepos={(1, 3): 2}
+u=  7 |C_u|=      73 |C_u+1|=     129 merges=     17 pairs=     18 coldist1=      0 share= 0.000 coldist={0: 18} diadist1=     17 fanout={1: 113, 2: 15, 3: 1} onepos={}
+u=  8 |C_u|=     129 |C_u+1|=     232 merges=     26 pairs=     29 coldist1=      0 share= 0.000 coldist={0: 29} diadist1=     25 fanout={1: 209, 2: 20, 3: 3} onepos={}
+u=  9 |C_u|=     232 |C_u+1|=     410 merges=     54 pairs=     57 coldist1=      0 share= 0.000 coldist={0: 57} diadist1=     52 fanout={1: 359, 2: 48, 3: 3} onepos={}
+u= 10 |C_u|=     410 |C_u+1|=     742 merges=     78 pairs=     89 coldist1=      0 share= 0.000 coldist={0: 89} diadist1=     72 fanout={1: 673, 2: 62, 3: 5, 4: 2} onepos={}
+u= 11 |C_u|=     742 |C_u+1|=    1329 merges=    155 pairs=    176 coldist1=      0 share= 0.000 coldist={0: 176} diadist1=    145 fanout={1: 1191, 2: 125, 3: 9, 4: 4} onepos={}
+u= 12 |C_u|=    1329 |C_u+1|=    2376 merges=    282 pairs=    339 coldist1=      0 share= 0.000 coldist={0: 339} diadist1=    266 fanout={1: 2136, 2: 208, 3: 26, 4: 3, 5: 2, 6: 1} onepos={}
+u= 13 |C_u|=    2376 |C_u+1|=    4265 merges=    487 pairs=    565 coldist1=     13 share= 0.023 coldist={0: 552, 1: 13} diadist1=    435 fanout={1: 3840, 2: 374, 3: 44, 4: 4, 5: 2, 6: 1} onepos={(1, 2): 5, (1, 3): 8}
+u= 14 |C_u|=    4265 |C_u+1|=    7560 merges=    970 pairs=   1146 coldist1=     34 share= 0.030 coldist={0: 1112, 1: 34} diadist1=    894 fanout={1: 6719, 2: 743, 3: 77, 4: 14, 5: 6, 8: 1} onepos={(1, 2): 24, (1, 3): 10}
+u= 15 |C_u|=    7560 |C_u+1|=   13382 merges=   1738 pairs=   2031 coldist1=     28 share= 0.014 coldist={0: 2003, 1: 28} diadist1=   1587 fanout={1: 11870, 2: 1338, 3: 135, 4: 28, 5: 9, 6: 2} onepos={(1, 2): 21, (1, 3): 7}
+u= 16 |C_u|=   13382 |C_u+1|=   23803 merges=   2961 pairs=   3459 coldist1=     34 share= 0.010 coldist={0: 3424, 1: 34, 2: 1} diadist1=   2719 fanout={1: 21221, 2: 2291, 3: 226, 4: 48, 5: 13, 6: 2, 7: 2} onepos={(1, 2): 26, (1, 3): 8}
+u= 17 |C_u|=   23803 |C_u+1|=   42199 merges=   5407 pairs=   6251 coldist1=     43 share= 0.007 coldist={0: 6202, 1: 43, 2: 6} diadist1=   4942 fanout={1: 37472, 2: 4184, 3: 428, 4: 97, 5: 15, 6: 2, 7: 1} onepos={(1, 2): 32, (1, 3): 11}

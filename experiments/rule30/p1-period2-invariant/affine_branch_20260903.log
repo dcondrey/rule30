@@ -1,0 +1,149 @@
+# n=9: forced orbits for 512 sources in 0.0s
+# n=9 c=2
+  j= 0 N_j=    162 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=100
+  j= 1 N_j=     57 branches=     3 testable=    3 affine=    0 not-affine=    3 {'not closed': 1, 'size not a power of 2': 2} maxclass=31
+  j= 2 N_j=     17 branches=     4 testable=    2 affine=    1 not-affine=    1 {'size not a power of 2': 1} maxclass=9
+  j= 3 N_j=      4 branches=     2 testable=    0 affine=    0 not-affine=    0 {} maxclass=0
+# n=9 c=3
+  j= 0 N_j=    214 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=135
+  j= 1 N_j=    112 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=47
+  j= 2 N_j=     53 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=14
+  j= 3 N_j=     23 branches=     5 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=10
+  j= 4 N_j=      6 branches=     1 testable=    1 affine=    0 not-affine=    1 {'size not a power of 2': 1} maxclass=6
+  j= 5 N_j=      6 branches=     1 testable=    1 affine=    0 not-affine=    1 {'size not a power of 2': 1} maxclass=6
+  j= 6 N_j=      6 branches=     1 testable=    1 affine=    0 not-affine=    1 {'size not a power of 2': 1} maxclass=6
+  j= 7 N_j=      6 branches=     1 testable=    1 affine=    0 not-affine=    1 {'size not a power of 2': 1} maxclass=6
+# n=10: forced orbits for 1024 sources in 0.1s
+# n=10 c=2
+  j= 0 N_j=    396 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=276
+  j= 1 N_j=    177 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=77
+  j= 2 N_j=     62 branches=     5 testable=    5 affine=    1 not-affine=    4 {'size not a power of 2': 4} maxclass=23
+  j= 3 N_j=     26 branches=     5 testable=    3 affine=    1 not-affine=    2 {'not closed': 1, 'size not a power of 2': 1} maxclass=9
+  j= 4 N_j=      6 branches=     2 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+# n=10 c=3
+  j= 0 N_j=    385 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 1, 'not closed': 1} maxclass=257
+  j= 1 N_j=    159 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=80
+  j= 2 N_j=     62 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=24
+  j= 3 N_j=     22 branches=     6 testable=    4 affine=    2 not-affine=    2 {'size not a power of 2': 1, 'not closed': 1} maxclass=6
+  j= 4 N_j=     14 branches=     4 testable=    3 affine=    2 not-affine=    1 {'not closed': 1} maxclass=4
+  j= 5 N_j=     12 branches=     4 testable=    2 affine=    1 not-affine=    1 {'not closed': 1} maxclass=4
+  j= 6 N_j=      4 branches=     1 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+# n=11: forced orbits for 2048 sources in 0.3s
+# n=11 c=2
+  j= 0 N_j=    728 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=519
+  j= 1 N_j=    285 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=131
+  j= 2 N_j=     93 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=40
+  j= 3 N_j=     36 branches=     5 testable=    3 affine=    1 not-affine=    2 {'size not a power of 2': 2} maxclass=17
+  j= 4 N_j=      9 branches=     3 testable=    2 affine=    2 not-affine=    0 {} maxclass=4
+  j= 5 N_j=      4 branches=     1 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+# n=11 c=3
+  j= 0 N_j=    805 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=517
+  j= 1 N_j=    325 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=121
+  j= 2 N_j=    157 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 4, 'not closed': 1} maxclass=47
+  j= 3 N_j=     79 branches=     8 testable=    6 affine=    0 not-affine=    6 {'size not a power of 2': 6} maxclass=20
+  j= 4 N_j=     32 branches=     8 testable=    4 affine=    2 not-affine=    2 {'size not a power of 2': 2} maxclass=11
+  j= 5 N_j=     14 branches=     5 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+  j= 6 N_j=     12 branches=     4 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+# n=12: forced orbits for 4096 sources in 0.7s
+# n=12 c=2
+  j= 0 N_j=   1607 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=1075
+  j= 1 N_j=    752 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=330
+  j= 2 N_j=    278 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=72
+  j= 3 N_j=    119 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 7, 'not closed': 1} maxclass=25
+  j= 4 N_j=     33 branches=     9 testable=    5 affine=    3 not-affine=    2 {'size not a power of 2': 2} maxclass=7
+  j= 5 N_j=     14 branches=     5 testable=    2 affine=    2 not-affine=    0 {} maxclass=4
+  j= 6 N_j=      6 branches=     2 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+  j= 7 N_j=      2 branches=     1 testable=    0 affine=    0 not-affine=    0 {} maxclass=0
+  j= 8 N_j=      2 branches=     1 testable=    0 affine=    0 not-affine=    0 {} maxclass=0
+# n=12 c=3
+  j= 0 N_j=   1487 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=1055
+  j= 1 N_j=    721 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=309
+  j= 2 N_j=    226 branches=     5 testable=    5 affine=    0 not-affine=    5 {'not closed': 1, 'size not a power of 2': 4} maxclass=69
+  j= 3 N_j=     87 branches=     8 testable=    8 affine=    1 not-affine=    7 {'size not a power of 2': 7} maxclass=21
+  j= 4 N_j=     44 branches=     7 testable=    7 affine=    4 not-affine=    3 {'size not a power of 2': 3} maxclass=12
+  j= 5 N_j=      5 branches=     2 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+  j= 6 N_j=      1 branches=     1 testable=    0 affine=    0 not-affine=    0 {} maxclass=0
+  j= 7 N_j=      1 branches=     1 testable=    0 affine=    0 not-affine=    0 {} maxclass=0
+# n=13: forced orbits for 8192 sources in 1.6s
+# n=13 c=2
+  j= 0 N_j=   3068 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=2043
+  j= 1 N_j=   1146 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=460
+  j= 2 N_j=    489 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=138
+  j= 3 N_j=    171 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 8} maxclass=35
+  j= 4 N_j=     81 branches=    11 testable=    8 affine=    3 not-affine=    5 {'size not a power of 2': 5} maxclass=14
+  j= 5 N_j=     27 branches=     8 testable=    3 affine=    2 not-affine=    1 {'size not a power of 2': 1} maxclass=10
+  j= 6 N_j=     12 branches=     2 testable=    1 affine=    0 not-affine=    1 {'size not a power of 2': 1} maxclass=10
+# n=13 c=3
+  j= 0 N_j=   3094 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=2047
+  j= 1 N_j=   1266 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=549
+  j= 2 N_j=    503 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=142
+  j= 3 N_j=    176 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 8} maxclass=39
+  j= 4 N_j=     70 branches=     9 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 6, 'not closed': 2} maxclass=12
+  j= 5 N_j=     20 branches=     6 testable=    2 affine=    1 not-affine=    1 {'not closed': 1} maxclass=8
+  j= 6 N_j=      9 branches=     3 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+  j= 7 N_j=      3 branches=     1 testable=    0 affine=    0 not-affine=    0 {} maxclass=0
+  j= 8 N_j=      3 branches=     1 testable=    0 affine=    0 not-affine=    0 {} maxclass=0
+# n=14: forced orbits for 16384 sources in 3.4s
+# n=14 c=2
+  j= 0 N_j=   6145 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=4197
+  j= 1 N_j=   2685 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=1114
+  j= 2 N_j=   1099 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=299
+  j= 3 N_j=    386 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 8} maxclass=78
+  j= 4 N_j=    134 branches=    10 testable=    8 affine=    1 not-affine=    7 {'size not a power of 2': 6, 'not closed': 1} maxclass=30
+  j= 5 N_j=     57 branches=     9 testable=    8 affine=    3 not-affine=    5 {'size not a power of 2': 5} maxclass=14
+  j= 6 N_j=     21 branches=     3 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=12
+  j= 7 N_j=      6 branches=     2 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+  j= 8 N_j=      4 branches=     1 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+  j= 9 N_j=      4 branches=     1 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+# n=14 c=3
+  j= 0 N_j=   6145 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=4010
+  j= 1 N_j=   2684 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=1091
+  j= 2 N_j=   1072 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=288
+  j= 3 N_j=    407 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 8} maxclass=105
+  j= 4 N_j=    145 branches=    13 testable=   10 affine=    2 not-affine=    8 {'size not a power of 2': 7, 'not closed': 1} maxclass=34
+  j= 5 N_j=     42 branches=     8 testable=    5 affine=    2 not-affine=    3 {'size not a power of 2': 3} maxclass=11
+  j= 6 N_j=     25 branches=     7 testable=    4 affine=    3 not-affine=    1 {'size not a power of 2': 1} maxclass=6
+  j= 7 N_j=      8 branches=     3 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+# n=15: forced orbits for 32768 sources in 7.6s
+# n=15 c=2
+  j= 0 N_j=  12134 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=8200
+  j= 1 N_j=   4829 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=2014
+  j= 2 N_j=   1680 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=448
+  j= 3 N_j=    727 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 8} maxclass=136
+  j= 4 N_j=    272 branches=    11 testable=   10 affine=    1 not-affine=    9 {'size not a power of 2': 9} maxclass=51
+  j= 5 N_j=     92 branches=    10 testable=    7 affine=    2 not-affine=    5 {'size not a power of 2': 3, 'not closed': 2} maxclass=25
+  j= 6 N_j=     43 branches=    10 testable=    5 affine=    3 not-affine=    2 {'size not a power of 2': 2} maxclass=13
+  j= 7 N_j=     18 branches=     4 testable=    3 affine=    2 not-affine=    1 {'not closed': 1} maxclass=8
+  j= 8 N_j=     10 branches=     3 testable=    2 affine=    2 not-affine=    0 {} maxclass=4
+# n=15 c=3
+  j= 0 N_j=  12533 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=8364
+  j= 1 N_j=   5054 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=2053
+  j= 2 N_j=   2065 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=551
+  j= 3 N_j=    818 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 8} maxclass=176
+  j= 4 N_j=    333 branches=    13 testable=   13 affine=    1 not-affine=   12 {'size not a power of 2': 11, 'not closed': 1} maxclass=81
+  j= 5 N_j=    142 branches=    17 testable=   14 affine=    4 not-affine=   10 {'size not a power of 2': 6, 'not closed': 4} maxclass=20
+  j= 6 N_j=     30 branches=     8 testable=    5 affine=    4 not-affine=    1 {'not closed': 1} maxclass=8
+  j= 7 N_j=      9 branches=     3 testable=    1 affine=    1 not-affine=    0 {} maxclass=4
+# n=16: forced orbits for 65536 sources in 27.8s
+# n=16 c=2
+  j= 0 N_j=  24540 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=16546
+  j= 1 N_j=  10598 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=4434
+  j= 2 N_j=   4332 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=1189
+  j= 3 N_j=   2017 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 8} maxclass=376
+  j= 4 N_j=    765 branches=    13 testable=   13 affine=    0 not-affine=   13 {'size not a power of 2': 13} maxclass=100
+  j= 5 N_j=    255 branches=    20 testable=   19 affine=    3 not-affine=   16 {'size not a power of 2': 14, 'not closed': 2} maxclass=45
+  j= 6 N_j=    124 branches=    19 testable=   14 affine=    5 not-affine=    9 {'size not a power of 2': 8, 'not closed': 1} maxclass=16
+  j= 7 N_j=     35 branches=     6 testable=    4 affine=    2 not-affine=    2 {'not closed': 1, 'size not a power of 2': 1} maxclass=16
+  j= 8 N_j=     11 branches=     3 testable=    2 affine=    2 not-affine=    0 {} maxclass=4
+  j= 9 N_j=      3 branches=     1 testable=    0 affine=    0 not-affine=    0 {} maxclass=0
+# n=16 c=3
+  j= 0 N_j=  24909 branches=     2 testable=    2 affine=    0 not-affine=    2 {'size not a power of 2': 2} maxclass=16534
+  j= 1 N_j=  10412 branches=     3 testable=    3 affine=    0 not-affine=    3 {'size not a power of 2': 3} maxclass=4360
+  j= 2 N_j=   3977 branches=     5 testable=    5 affine=    0 not-affine=    5 {'size not a power of 2': 5} maxclass=1068
+  j= 3 N_j=   1698 branches=     8 testable=    8 affine=    0 not-affine=    8 {'size not a power of 2': 8} maxclass=338
+  j= 4 N_j=    625 branches=    13 testable=   13 affine=    0 not-affine=   13 {'size not a power of 2': 13} maxclass=105
+  j= 5 N_j=    234 branches=    18 testable=   16 affine=    2 not-affine=   14 {'size not a power of 2': 11, 'not closed': 3} maxclass=38
+  j= 6 N_j=     99 branches=    14 testable=    8 affine=    3 not-affine=    5 {'size not a power of 2': 4, 'not closed': 1} maxclass=22
+  j= 7 N_j=     54 branches=     7 testable=    6 affine=    3 not-affine=    3 {'size not a power of 2': 2, 'not closed': 1} maxclass=16
+  j= 8 N_j=     28 branches=     5 testable=    4 affine=    3 not-affine=    1 {'size not a power of 2': 1} maxclass=10
+  j= 9 N_j=     18 branches=     2 testable=    2 affine=    1 not-affine=    1 {'size not a power of 2': 1} maxclass=10
