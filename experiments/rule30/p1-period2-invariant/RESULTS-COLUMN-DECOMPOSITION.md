@@ -292,3 +292,56 @@ are downstream of it.
 
 None of these closes `(SEP)`, DLP or `(PT2)`, and the write-up must not imply
 that any of them does.
+
+## 10. Relevance audit: the memory law is descriptive, not rate-bearing
+
+Pre-registered in `memory_relevance.py` before running, as gate G3 of the
+program in the session prompt: an exact invariant of the column map is not
+automatically a statement about survival, and the gate it must pass first is
+whether it distinguishes future behaviour at all.
+
+Test A.  Partition `{1,2}^n` by the column alone and compare the RW death
+level (least `j` with the forced symbol non-hard-core or the forced cell
+`T[n+j][n] != c`) inside each class.  Bounded augmentation: the least `t` such
+that partitioning by `(column, diagonal[:t])`, and separately by
+`(column, diagonal[-t:])`, makes the death level constant on every class.
+Control: partitioning by the full state must give zero divergent classes,
+since the forced orbit is a function of the state.
+
+`memory_relevance_20260903.log`, `n = 8..16`, both `c`, complete census:
+
+| `n` | column classes | divergent | max death spread | control | least `t` prefix | least `t` suffix |
+|---|---|---|---|---|---|---|
+| 8 | 17 | 15, 16 | 3, 6 | 0 | 8 | 6 |
+| 10 | 29 | 29, 29 | 5, 7 | 0 | 10 | 8 |
+| 12 | 54 | 53, 54 | 9, 8 | 0 | 12 | 11 |
+| 14 | 99 | 99, 99 | 10, 8 | 0 | 14 | 13 |
+| 16 | 173 | 173, 173 | 10, 10 | 0 | 16 | 15, 14 |
+
+- **From `n = 10` onward every column class is divergent, at both `c`.**  The
+  spread reaches 10 forced levels: a witness at `n = 9, c = 3` has two sources
+  with the identical column `(2,1,1,2,3,2,1,2,1,2)` whose death levels are 0
+  and 8, and whose diagonals differ from the second entry on.
+- **No bounded augmentation restores uniformity.**  The least `t` is exactly
+  `n` for the diagonal prefix and `n-1` or `n-2` for the diagonal suffix, at
+  every `n` tested.  Recovering sufficiency costs the whole diagonal.
+- The control is 0 at every row, so the census and the death-level extraction
+  agree with the state semantics.
+
+**Verdict.**  The column memory is not a sufficient statistic for RW survival,
+and the stop condition stated with the gate fires: the memory-based rate route
+is abandoned.  Gates G4 (conditional loss) and G5 (concatenation) must not be
+attempted over the column-memory state, and no feature grammar for invariant
+synthesis should be built on it.
+
+This does not retract section 5.  `k(L) = ceil((L+1)/2)` and
+`|Col_L| <= 2^ceil((L+1)/2)` remain proved.  What the audit establishes is
+their scope: they describe the column map exactly and say nothing about the
+survivor language.  Section 4 already predicted this and the audit confirms it
+quantitatively.  The state at depth `u` is a column at depth `2u-1`, whose
+memory is `u` symbols, which is all of them, so the object that governs
+survival is precisely the object that does not forget.
+
+The one sufficient statistic measured here is the full endpoint state, at the
+cost of no forgetting at all.  Any rate argument must be built on it or on a
+compression of it that is verified against this same test before use.

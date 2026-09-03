@@ -1,0 +1,27 @@
+# n=8: forced orbits for 256 sources in 0.0s
+n= 8 c=2 | column classes=    17 divergent=    15 (88.2%) max death spread=  3 | full-state control divergent=0 | least t: prefix=8 suffix=6 (diagonal has 8 entries)
+n= 8 c=3 | column classes=    17 divergent=    16 (94.1%) max death spread=  6 | full-state control divergent=0 | least t: prefix=8 suffix=6 (diagonal has 8 entries)
+# n=9: forced orbits for 512 sources in 0.0s
+n= 9 c=2 | column classes=    23 divergent=    21 (91.3%) max death spread=  4 | full-state control divergent=0 | least t: prefix=9 suffix=6 (diagonal has 9 entries)
+n= 9 c=3 | column classes=    23 divergent=    22 (95.7%) max death spread=  8 | full-state control divergent=0 | least t: prefix=9 suffix=6 (diagonal has 9 entries)
+# n=10: forced orbits for 1024 sources in 0.1s
+n=10 c=2 | column classes=    29 divergent=    29 (100.0%) max death spread=  5 | full-state control divergent=0 | least t: prefix=10 suffix=8 (diagonal has 10 entries)
+n=10 c=3 | column classes=    29 divergent=    29 (100.0%) max death spread=  7 | full-state control divergent=0 | least t: prefix=10 suffix=8 (diagonal has 10 entries)
+# n=11: forced orbits for 2048 sources in 0.2s
+n=11 c=2 | column classes=    39 divergent=    39 (100.0%) max death spread=  6 | full-state control divergent=0 | least t: prefix=11 suffix=9 (diagonal has 11 entries)
+n=11 c=3 | column classes=    39 divergent=    39 (100.0%) max death spread=  7 | full-state control divergent=0 | least t: prefix=11 suffix=9 (diagonal has 11 entries)
+# n=12: forced orbits for 4096 sources in 0.4s
+n=12 c=2 | column classes=    54 divergent=    53 (98.1%) max death spread=  9 | full-state control divergent=0 | least t: prefix=12 suffix=11 (diagonal has 12 entries)
+n=12 c=3 | column classes=    54 divergent=    54 (100.0%) max death spread=  8 | full-state control divergent=0 | least t: prefix=12 suffix=11 (diagonal has 12 entries)
+# n=13: forced orbits for 8192 sources in 0.7s
+n=13 c=2 | column classes=    73 divergent=    73 (100.0%) max death spread=  7 | full-state control divergent=0 | least t: prefix=13 suffix=12 (diagonal has 13 entries)
+n=13 c=3 | column classes=    73 divergent=    73 (100.0%) max death spread=  9 | full-state control divergent=0 | least t: prefix=13 suffix=12 (diagonal has 13 entries)
+# n=14: forced orbits for 16384 sources in 1.5s
+n=14 c=2 | column classes=    99 divergent=    99 (100.0%) max death spread= 10 | full-state control divergent=0 | least t: prefix=14 suffix=13 (diagonal has 14 entries)
+n=14 c=3 | column classes=    99 divergent=    99 (100.0%) max death spread=  8 | full-state control divergent=0 | least t: prefix=14 suffix=13 (diagonal has 14 entries)
+# n=15: forced orbits for 32768 sources in 3.4s
+n=15 c=2 | column classes=   129 divergent=   129 (100.0%) max death spread=  9 | full-state control divergent=0 | least t: prefix=15 suffix=14 (diagonal has 15 entries)
+n=15 c=3 | column classes=   129 divergent=   129 (100.0%) max death spread=  8 | full-state control divergent=0 | least t: prefix=15 suffix=14 (diagonal has 15 entries)
+# n=16: forced orbits for 65536 sources in 8.2s
+n=16 c=2 | column classes=   173 divergent=   173 (100.0%) max death spread= 10 | full-state control divergent=0 | least t: prefix=16 suffix=15 (diagonal has 16 entries)
+n=16 c=3 | column classes=   173 divergent=   173 (100.0%) max death spread= 10 | full-state control divergent=0 | least t: prefix=16 suffix=14 (diagonal has 16 entries)
