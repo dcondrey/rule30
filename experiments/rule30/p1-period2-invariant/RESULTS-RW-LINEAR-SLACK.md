@@ -223,3 +223,24 @@ complete search, `r = 0`):
 `n = 15`.  The `n = 20` search visits `2^20` prefixes in about a minute, so
 the census is not compute-bound; it is stopped here because obstruction H
 says more of it proves nothing.
+
+**9.5 The pin is affine once the forced symbol is known, and the one-step
+transition law is the null** (`mechanism_crosstab.py`, log dated 2026-09-02).
+From `H(e_u) = m + |Z|` and the set form of `Phi`, the quadratic term
+`(|Z| + |W2|)(1 + m + |Z|)` equals `beta = |Z| + |W2|` when `e_u = 1` and
+vanishes when `e_u = 2`, so on every column
+
+```text
+    Phi = W + [e_u = 1] * beta        (verified on 140,288 columns, 0 failures)
+```
+
+with `W` the ordered-pair count.  The proposal that this case split yields a
+local anti-correlation between consecutive hits at `e_u = 1` positions was
+tested directly on the unstopped forced orbit at `n = 6, 10, 12`: every
+conditional (`P(hit | e_u)`, `P(hit_{u+1} | e_u, hit_u)`, `P(e_{u+1} | e_u, hit_u)`)
+is `0.50 +/- 0.02` at `n = 10, 12`, and the hit-only survivor ratios of the
+ablation are `0.50` at every depth to the tail.  There is no local transition
+law in these coordinates; the joint constraint acts only in the tail, where
+survivors cluster rather than thin.  A proof cannot come from a bounded-lag
+conditional argument.  The Rule 90 control was not run (no Rule 90 carry
+kernel in this arm).

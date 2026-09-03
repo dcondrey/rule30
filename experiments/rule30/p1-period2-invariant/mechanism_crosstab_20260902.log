@@ -1,0 +1,48 @@
+n=6 c=2: columns=512, Phi = W + [e=1]*beta failures=0
+   e_u=1: 265 columns (0.518), P(hit | e_u=1) = 0.521
+   e_u=2: 247 columns (0.482), P(hit | e_u=2) = 0.563
+   given (e_u=1, hit=0): P(hit_{u+1}) = 0.633   P(e_{u+1}=1) = 0.532   [109]
+   given (e_u=1, hit=1): P(hit_{u+1}) = 0.552   P(e_{u+1}=1) = 0.592   [125]
+   given (e_u=2, hit=0): P(hit_{u+1}) = 0.505   P(e_{u+1}=1) = 0.433   [97]
+   given (e_u=2, hit=1): P(hit_{u+1}) = 0.496   P(e_{u+1}=1) = 0.513   [117]
+   hard-core violations (11) at e_u=1: 146 of 265 = 0.551
+n=6 c=3: columns=512, Phi = W + [e=1]*beta failures=0
+   e_u=1: 265 columns (0.518), P(hit | e_u=1) = 0.479
+   e_u=2: 247 columns (0.482), P(hit | e_u=2) = 0.437
+   given (e_u=1, hit=0): P(hit_{u+1}) = 0.448   P(e_{u+1}=1) = 0.592   [125]
+   given (e_u=1, hit=1): P(hit_{u+1}) = 0.367   P(e_{u+1}=1) = 0.532   [109]
+   given (e_u=2, hit=0): P(hit_{u+1}) = 0.504   P(e_{u+1}=1) = 0.513   [117]
+   given (e_u=2, hit=1): P(hit_{u+1}) = 0.495   P(e_{u+1}=1) = 0.433   [97]
+   hard-core violations (11) at e_u=1: 146 of 265 = 0.551
+n=10 c=2: columns=12288, Phi = W + [e=1]*beta failures=0
+   e_u=1: 6237 columns (0.508), P(hit | e_u=1) = 0.498
+   e_u=2: 6051 columns (0.492), P(hit | e_u=2) = 0.487
+   given (e_u=1, hit=0): P(hit_{u+1}) = 0.474   P(e_{u+1}=1) = 0.529   [2850]
+   given (e_u=1, hit=1): P(hit_{u+1}) = 0.495   P(e_{u+1}=1) = 0.515   [2856]
+   given (e_u=2, hit=0): P(hit_{u+1}) = 0.502   P(e_{u+1}=1) = 0.499   [2823]
+   given (e_u=2, hit=1): P(hit_{u+1}) = 0.498   P(e_{u+1}=1) = 0.496   [2735]
+   hard-core violations (11) at e_u=1: 3222 of 6237 = 0.517
+n=10 c=3: columns=12288, Phi = W + [e=1]*beta failures=0
+   e_u=1: 6237 columns (0.508), P(hit | e_u=1) = 0.502
+   e_u=2: 6051 columns (0.492), P(hit | e_u=2) = 0.513
+   given (e_u=1, hit=0): P(hit_{u+1}) = 0.505   P(e_{u+1}=1) = 0.515   [2856]
+   given (e_u=1, hit=1): P(hit_{u+1}) = 0.526   P(e_{u+1}=1) = 0.529   [2850]
+   given (e_u=2, hit=0): P(hit_{u+1}) = 0.502   P(e_{u+1}=1) = 0.496   [2735]
+   given (e_u=2, hit=1): P(hit_{u+1}) = 0.498   P(e_{u+1}=1) = 0.499   [2823]
+   hard-core violations (11) at e_u=1: 3222 of 6237 = 0.517
+n=12 c=2: columns=57344, Phi = W + [e=1]*beta failures=0
+   e_u=1: 28437 columns (0.496), P(hit | e_u=1) = 0.495
+   e_u=2: 28907 columns (0.504), P(hit | e_u=2) = 0.498
+   given (e_u=1, hit=0): P(hit_{u+1}) = 0.484   P(e_{u+1}=1) = 0.495   [13234]
+   given (e_u=1, hit=1): P(hit_{u+1}) = 0.486   P(e_{u+1}=1) = 0.493   [13154]
+   given (e_u=2, hit=0): P(hit_{u+1}) = 0.504   P(e_{u+1}=1) = 0.505   [13439]
+   given (e_u=2, hit=1): P(hit_{u+1}) = 0.508   P(e_{u+1}=1) = 0.496   [13421]
+   hard-core violations (11) at e_u=1: 14041 of 28437 = 0.494
+n=12 c=3: columns=57344, Phi = W + [e=1]*beta failures=0
+   e_u=1: 28437 columns (0.496), P(hit | e_u=1) = 0.505
+   e_u=2: 28907 columns (0.504), P(hit | e_u=2) = 0.502
+   given (e_u=1, hit=0): P(hit_{u+1}) = 0.514   P(e_{u+1}=1) = 0.493   [13154]
+   given (e_u=1, hit=1): P(hit_{u+1}) = 0.516   P(e_{u+1}=1) = 0.495   [13234]
+   given (e_u=2, hit=0): P(hit_{u+1}) = 0.492   P(e_{u+1}=1) = 0.496   [13421]
+   given (e_u=2, hit=1): P(hit_{u+1}) = 0.496   P(e_{u+1}=1) = 0.505   [13439]
+   hard-core violations (11) at e_u=1: 14041 of 28437 = 0.494
