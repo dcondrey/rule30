@@ -132,3 +132,37 @@ Two honesty notes, both load bearing:
 cd /Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant
 uv run python diagonal_memory.py --lmax 13     # about 3 minutes
 ```
+
+## 8. The fibre admits no closed quotient
+
+`diagonal_quotient.py`, log `diagonal_quotient_20260903.log`.  All 15 set
+partitions of the four-state alphabet, enumerated exhaustively.
+
+`RESULTS-PROJECTED-DIAGONAL-HALVING.md` section 3 found a closed additive
+quotient of the D8 cocycle, `pi_2(a,b,g) = (a,b)`, whose update never refers to
+the discarded coordinate.  That is the precedent, and it has never been applied
+to the anti-diagonal.  For the update `nd[k+1] = CONE[dia[k]][nd[k]]` a
+partition `q` is a full congruence when `q(CONE[d][e])` depends only on
+`(q(d), q(e))`, which is what would give a smaller autonomous fibre.
+
+```text
+nontrivial full congruences: 0
+```
+
+Two one-sided closures do exist and neither compresses the system:
+
+- **left-closed**, `q(CONE[d][e])` determined by `(q(d), e)`: only
+  `{0} {1,3} {2}`, which is `CONE[1] == CONE[3]`, already recorded in
+  `RESULTS-COLUMN-DECOMPOSITION.md` 1a as a 5.7 percent constant-factor
+  collapse.  It quotients the driving word, not the state.
+- **right-closed**, determined by `(d, q(e))`: only `{0,1} {2,3}`, which is the
+  high bit `H(t) = t >> 1`.  So the `H`-track of the trajectory evolves
+  autonomously given the driving word in full.  This is suggestive because the
+  forced-symbol test reads exactly `H(diagonal[n])`, but it buys no
+  compression: the driving word is the previous diagonal, the same object at
+  full resolution.  `E(t) = 1 + (t>>1) + (t&1)` needs both bits regardless.
+
+**The fibre cannot be compressed as a symbol quotient.**  This explains rather
+than merely records the capsule's "fixed finite quotient of the frontier" and
+"bare holonomy-defect word" failures: there is no quotient to find at the
+alphabet level, so every bounded summary must lose information by construction.
