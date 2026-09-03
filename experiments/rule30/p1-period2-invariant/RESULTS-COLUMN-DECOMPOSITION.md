@@ -159,7 +159,9 @@ reads `C[i+1]`, at distance `L - (i+1) = d - 2` in `C`, and `N[i+1]`, at
 distance `d - 1` in `N`.
 
 Claim: an entry at distance `d` depends only on the last `ceil((d+1)/2)`
-symbols of its own word.  Induction on the word length.
+symbols of its own word.  Double induction: outer on the word length, for the
+appeal to `C`; inner on `d` within the fixed column `N`, for the appeal to
+`N[i+1]`.  Both are well founded, `d` increasing as `i` decreases.
 
 *Base.*  `d = 0` is `s` and `d = 1` is `BOUNDARY[s]`; both depend on the last
 symbol alone, and `ceil(1/2) = ceil(2/2) = 1`.
@@ -174,7 +176,8 @@ max( ceil((d-1)/2) + 1, ceil(d/2) )  =  max( ceil((d+1)/2), ceil(d/2) )
                                      =  ceil((d+1)/2)
 ```
 
-symbols, which is the claim at `d`.  QED.
+symbols, which is the claim at `d`.  Both appeals are to strictly smaller
+instances, `C` at a shorter word and `N[i+1]` at a smaller `d`.  QED.
 
 Taking `i = 0`, so `d = L`, the whole column of a length-`L` word depends only
 on its last `ceil((L+1)/2)` symbols.  **The endpoint column forgets the first
