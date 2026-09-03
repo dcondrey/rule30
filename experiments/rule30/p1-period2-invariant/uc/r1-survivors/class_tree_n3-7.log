@@ -1,0 +1,50 @@
+
+===== n=3: sources 8, initial classes 7 (log2 2.807)
+  c=2 bwh : k1:2/2 k2:0/0
+           deepest surviving level 1 (need 5); last surviving classes 2; per-column class loss 1.807 bits
+  c=2 rw  : k1:1/1 k2:0/0
+           deepest surviving level 1 (need 5); last surviving classes 1; per-column class loss 2.807 bits
+  c=3 bwh : k1:6/4 k2:2/1 k3:2/1 k4:2/1 k5:0/0
+           deepest surviving level 4 (need 5); last surviving classes 1; per-column class loss 0.702 bits
+  c=3 rw  : k1:6/4 k2:2/1 k3:2/1 k4:2/1 k5:0/0
+           deepest surviving level 4 (need 5); last surviving classes 1; per-column class loss 0.702 bits
+
+===== n=4: sources 16, initial classes 12 (log2 3.585)
+  c=2 bwh : k1:12/6 k2:11/5 k3:0/0
+           deepest surviving level 2 (need 6); last surviving classes 5; per-column class loss 0.632 bits
+  c=2 rw  : k1:8/4 k2:7/3 k3:0/0
+           deepest surviving level 2 (need 6); last surviving classes 3; per-column class loss 1.000 bits
+  c=3 bwh : k1:4/4 k2:4/4 k3:1/1 k4:0/0
+           deepest surviving level 3 (need 6); last surviving classes 1; per-column class loss 1.195 bits
+  c=3 rw  : k1:3/3 k2:2/2 k3:0/0
+           deepest surviving level 2 (need 6); last surviving classes 2; per-column class loss 1.292 bits
+
+===== n=5: sources 32, initial classes 20 (log2 4.322)
+  c=2 bwh : k1:14/7 k2:1/1 k3:0/0
+           deepest surviving level 2 (need 7); last surviving classes 1; per-column class loss 2.161 bits
+  c=2 rw  : k1:9/5 k2:1/1 k3:0/0
+           deepest surviving level 2 (need 7); last surviving classes 1; per-column class loss 2.161 bits
+  c=3 bwh : k1:18/11 k2:13/6 k3:7/3 k4:4/2 k5:4/2 k6:2/1 k7:2/1
+           deepest surviving level 7 (need 7); last surviving classes 1; per-column class loss 0.617 bits
+  c=3 rw  : k1:12/7 k2:6/3 k3:2/1 k4:2/1 k5:0/0
+           deepest surviving level 4 (need 7); last surviving classes 1; per-column class loss 1.080 bits
+
+===== n=6: sources 64, initial classes 37 (log2 5.209)
+  c=2 bwh : k1:32/17 k2:15/9 k3:9/4 k4:8/3 k5:3/1 k6:3/1 k7:3/1 k8:3/1
+           deepest surviving level 8 (need 8); last surviving classes 1; per-column class loss 0.651 bits
+  c=2 rw  : k1:22/12 k2:6/4 k3:3/1 k4:0/0
+           deepest surviving level 3 (need 8); last surviving classes 1; per-column class loss 1.736 bits
+  c=3 bwh : k1:32/19 k2:17/12 k3:10/8 k4:2/2 k5:1/1 k6:1/1 k7:0/0
+           deepest surviving level 6 (need 8); last surviving classes 1; per-column class loss 0.868 bits
+  c=3 rw  : k1:28/15 k2:12/7 k3:4/3 k4:0/0
+           deepest surviving level 3 (need 8); last surviving classes 3; per-column class loss 1.208 bits
+
+===== n=7: sources 128, initial classes 69 (log2 6.109)
+  c=2 bwh : k1:54/27 k2:26/12 k3:18/8 k4:11/5 k5:8/3 k6:6/2 k7:3/1 k8:0/0
+           deepest surviving level 7 (need 9); last surviving classes 1; per-column class loss 0.873 bits
+  c=2 rw  : k1:41/20 k2:17/8 k3:9/4 k4:5/2 k5:0/0
+           deepest surviving level 4 (need 9); last surviving classes 2; per-column class loss 1.277 bits
+  c=3 bwh : k1:74/32 k2:26/11 k3:18/7 k4:12/4 k5:2/1 k6:2/1 k7:0/0
+           deepest surviving level 6 (need 9); last surviving classes 1; per-column class loss 1.018 bits
+  c=3 rw  : k1:58/24 k2:20/8 k3:14/5 k4:10/3 k5:0/0
+           deepest surviving level 4 (need 9); last surviving classes 3; per-column class loss 1.131 bits

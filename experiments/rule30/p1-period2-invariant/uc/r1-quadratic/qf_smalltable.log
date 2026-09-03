@@ -1,0 +1,93 @@
+n=3 c=2  (hit bit = E(T[n+j][n]) XOR E(c); 0 means hit)
+  W        col n-1 cells [-n..n-1]  letters      forced     hits(xor eps)  survive
+  111      121212                    x2x2x2       12112      01110          0
+  112      212031                    2x20xx       21111      10001          0
+  121      120311                    x20xxx       21221      11110          0
+  122      212123                    2x2x2x       12221      10001          0
+  211      121230                    x2x2x0       21211      10011          0
+  212      212003                    2x200x       11122      01111          1
+  221      120312                    x20xx2       21221      11110          0
+  222      212121                    2x2x2x       12221      10001          0
+  N_1 = 1   (2^(n-k) = 4)
+  N_2 = 0   (2^(n-k) = 2)
+  N_3 = 0   (2^(n-k) = 1)
+  N_4 = 0   (2^(n-k) = 0.5)
+  N_5 = 0   (2^(n-k) = 0.25)
+n=3 c=3  (hit bit = E(T[n+j][n]) XOR E(c); 0 means hit)
+  W        col n-1 cells [-n..n-1]  letters      forced     hits(xor eps)  survive
+  111      121212                    x2x2x2       12112      10001          0
+  112      212031                    2x20xx       21111      01110          1
+  121      120311                    x20xxx       21221      00001          4
+  122      212123                    2x2x2x       12221      01110          1
+  211      121230                    x2x2x0       21211      01100          1
+  212      212003                    2x200x       11122      10000          0
+  221      120312                    x20xx2       21221      00001          4
+  222      212121                    2x2x2x       12221      01110          1
+  N_1 = 6   (2^(n-k) = 4)
+  N_2 = 2   (2^(n-k) = 2)
+  N_3 = 2   (2^(n-k) = 1)
+  N_4 = 2   (2^(n-k) = 0.5)
+  N_5 = 0   (2^(n-k) = 0.25)
+n=4 c=2  (hit bit = E(T[n+j][n]) XOR E(c); 0 means hit)
+  W        col n-1 cells [-n..n-1]  letters      forced     hits(xor eps)  survive
+  1111     12121212                  x2x2x2x2     121212     001001         0
+  1112     21203120                  2x20xx20     112121     110011         0
+  1121     12031121                  x20xxx2x     211211     011111         1
+  1122     21212303                  2x2x2x0x     221122     001110         2
+  1211     12123030                  x2x2x0x0     122112     111000         0
+  1212     21200303                  2x200x0x     221122     001110         2
+  1221     12031203                  x20xx20x     111112     001100         0
+  1222     21212121                  2x2x2x2x     122111     001100         2
+  2111     12121211                  x2x2x2xx     121212     001001         0
+  2112     21203123                  2x20xx2x     211221     001011         2
+  2121     12031112                  x20xxxx2     221211     110101         0
+  2122     21212321                  2x2x2x2x     122111     001100         2
+  2211     12123031                  x2x2x0xx     222222     110110         0
+  2212     21200303                  2x200x0x     221122     001110         2
+  2221     12031203                  x20xx20x     111112     001100         0
+  2222     21212121                  2x2x2x2x     122111     001100         2
+  N_1 = 8   (2^(n-k) = 8)
+  N_2 = 7   (2^(n-k) = 4)
+  N_3 = 0   (2^(n-k) = 2)
+  N_4 = 0   (2^(n-k) = 1)
+  N_5 = 0   (2^(n-k) = 0.5)
+  N_6 = 0   (2^(n-k) = 0.25)
+n=4 c=3  (hit bit = E(T[n+j][n]) XOR E(c); 0 means hit)
+  W        col n-1 cells [-n..n-1]  letters      forced     hits(xor eps)  survive
+  1111     12121212                  x2x2x2x2     121212     110110         0
+  1112     21203120                  2x20xx20     112121     001100         1
+  1121     12031121                  x20xxx2x     211211     100000         0
+  1122     21212303                  2x2x2x0x     221122     110001         0
+  1211     12123030                  x2x2x0x0     122112     000111         0
+  1212     21200303                  2x200x0x     221122     110001         0
+  1221     12031203                  x20xx20x     111112     110011         0
+  1222     21212121                  2x2x2x2x     122111     110011         0
+  2111     12121211                  x2x2x2xx     121212     110110         0
+  2112     21203123                  2x20xx2x     211221     110100         0
+  2121     12031112                  x20xxxx2     221211     001010         2
+  2122     21212321                  2x2x2x2x     122111     110011         0
+  2211     12123031                  x2x2x0xx     222222     001001         2
+  2212     21200303                  2x200x0x     221122     110001         0
+  2221     12031203                  x20xx20x     111112     110011         0
+  2222     21212121                  2x2x2x2x     122111     110011         0
+  N_1 = 3   (2^(n-k) = 8)
+  N_2 = 2   (2^(n-k) = 4)
+  N_3 = 0   (2^(n-k) = 2)
+  N_4 = 0   (2^(n-k) = 1)
+  N_5 = 0   (2^(n-k) = 0.5)
+  N_6 = 0   (2^(n-k) = 0.25)
+injectivity of W -> column n-1 (full cells / quotient letters), window [-n, n-1]
+  n=1   sources=2       distinct full=2       distinct letters=2
+  n=2   sources=4       distinct full=4       distinct letters=4
+  n=3   sources=8       distinct full=8       distinct letters=7
+  n=4   sources=16      distinct full=13      distinct letters=12
+  n=5   sources=32      distinct full=23      distinct letters=20
+  n=6   sources=64      distinct full=39      distinct letters=37
+  n=7   sources=128     distinct full=73      distinct letters=69
+  n=8   sources=256     distinct full=129     distinct letters=123
+  n=9   sources=512     distinct full=232     distinct letters=219
+  n=10  sources=1024    distinct full=410     distinct letters=391
+  n=11  sources=2048    distinct full=742     distinct letters=701
+  n=12  sources=4096    distinct full=1329    distinct letters=1257
+  n=13  sources=8192    distinct full=2376    distinct letters=2255
+  n=14  sources=16384   distinct full=4265    distinct letters=4009

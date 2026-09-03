@@ -1,0 +1,30 @@
+BWH+ n=15: 18 prefixes with constant Psi_0..Psi_15: 111122 111212 112212 112222 121122 121212 121222 122212 122222 211122 211212 212212 212222 221122 221212 221222 222212 222222
+           largest q-fiber over the 64 prefixes has 18 members; identical sets: True
+n=10  c=2 Q_n=391    D_k=[391, 142, 61, 21, 7, 2]  N_k=[1024, 396, 177, 62, 26, 6]
+           mean log2 fiber of survivors by k: [1.2, 1.3, 1.36, 1.4, 1.71, 1.5]   distinct-state kill rate k=1..deepest: 1.537 bits/col
+n=10  c=3 Q_n=391    D_k=[391, 156, 67, 26, 10, 7, 6, 2]  N_k=[1024, 385, 159, 62, 22, 14, 12, 4]
+           mean log2 fiber of survivors by k: [1.2, 1.11, 1.03, 1.05, 1.02, 0.88, 0.86, 0.79]   distinct-state kill rate k=1..deepest: 1.048 bits/col
+n=11  c=2 Q_n=701    D_k=[701, 244, 91, 33, 11, 4, 1]  N_k=[2048, 728, 285, 93, 36, 9, 4]
+           mean log2 fiber of survivors by k: [1.34, 1.39, 1.45, 1.33, 1.41, 1.0, 2.0]   distinct-state kill rate k=1..deepest: 1.586 bits/col
+n=11  c=3 Q_n=701    D_k=[701, 274, 112, 54, 27, 11, 5, 4]  N_k=[2048, 805, 325, 157, 79, 32, 14, 12]
+           mean log2 fiber of survivors by k: [1.34, 1.34, 1.35, 1.35, 1.36, 1.3, 1.43, 1.54]   distinct-state kill rate k=1..deepest: 1.016 bits/col
+n=12  c=2 Q_n=1257   D_k=[1257, 484, 203, 80, 33, 12, 5, 2, 1, 1]  N_k=[4096, 1607, 752, 278, 119, 33, 14, 6, 2, 2]
+           mean log2 fiber of survivors by k: [1.47, 1.51, 1.66, 1.56, 1.56, 1.28, 1.4, 1.5, 1.0, 1.0]   distinct-state kill rate k=1..deepest: 1.115 bits/col
+n=12  c=3 Q_n=1257   D_k=[1257, 471, 223, 79, 32, 15, 2, 1, 1]  N_k=[4096, 1487, 721, 226, 87, 44, 5, 1, 1]
+           mean log2 fiber of survivors by k: [1.47, 1.43, 1.47, 1.31, 1.31, 1.41, 1.0, 0.0, 0.0]   distinct-state kill rate k=1..deepest: 1.269 bits/col
+n=13  c=2 Q_n=2255   D_k=[2255, 851, 343, 148, 53, 25, 8, 2]  N_k=[8192, 3068, 1146, 489, 171, 81, 27, 12]
+           mean log2 fiber of survivors by k: [1.6, 1.6, 1.48, 1.44, 1.44, 1.42, 1.42, 2.16]   distinct-state kill rate k=1..deepest: 1.456 bits/col
+n=13  c=3 Q_n=2255   D_k=[2255, 848, 358, 136, 56, 23, 7, 3, 1, 1]  N_k=[8192, 3094, 1266, 503, 176, 70, 20, 9, 3, 3]
+           mean log2 fiber of survivors by k: [1.6, 1.6, 1.57, 1.64, 1.43, 1.44, 1.31, 1.53, 1.58, 1.58]   distinct-state kill rate k=1..deepest: 1.216 bits/col
+n=14  c=2 Q_n=4009   D_k=[4009, 1501, 649, 264, 96, 35, 17, 5, 2, 1, 1]  N_k=[16384, 6145, 2685, 1099, 386, 134, 57, 21, 6, 4, 4]
+           mean log2 fiber of survivors by k: [1.75, 1.75, 1.76, 1.76, 1.69, 1.67, 1.56, 1.96, 1.5, 2.0, 2.0]   distinct-state kill rate k=1..deepest: 1.172 bits/col
+n=14  c=3 Q_n=4009   D_k=[4009, 1505, 649, 263, 98, 33, 11, 7, 3]  N_k=[16384, 6145, 2684, 1072, 407, 145, 42, 25, 8]
+           mean log2 fiber of survivors by k: [1.75, 1.75, 1.78, 1.74, 1.81, 1.91, 1.81, 1.74, 1.33]   distinct-state kill rate k=1..deepest: 1.282 bits/col
+n=15  c=2 Q_n=7115   D_k=[7115, 2650, 1064, 370, 154, 51, 22, 13, 4, 3]  N_k=[32768, 12134, 4829, 1680, 727, 272, 92, 43, 18, 10]
+           mean log2 fiber of survivors by k: [1.89, 1.89, 1.86, 1.86, 1.9, 2.01, 1.67, 1.47, 2.0, 1.67]   distinct-state kill rate k=1..deepest: 1.223 bits/col
+n=15  c=3 Q_n=7115   D_k=[7115, 2697, 1122, 445, 181, 78, 34, 10, 3]  N_k=[32768, 12533, 5054, 2065, 818, 333, 142, 30, 9]
+           mean log2 fiber of survivors by k: [1.89, 1.9, 1.88, 1.91, 1.88, 1.77, 1.64, 1.34, 1.53]   distinct-state kill rate k=1..deepest: 1.402 bits/col
+n=16  c=2 Q_n=12647  D_k=[12647, 4744, 1999, 794, 359, 154, 51, 24, 6, 3, 1]  N_k=[65536, 24540, 10598, 4332, 2017, 765, 255, 124, 35, 11, 3]
+           mean log2 fiber of survivors by k: [2.04, 2.05, 2.07, 2.1, 2.12, 1.98, 2.1, 2.15, 2.19, 1.86, 1.58]   distinct-state kill rate k=1..deepest: 1.357 bits/col
+n=16  c=3 Q_n=12647  D_k=[12647, 4779, 2016, 779, 327, 129, 51, 19, 8, 5, 2]  N_k=[65536, 24909, 10412, 3977, 1698, 625, 234, 99, 54, 28, 18]
+           mean log2 fiber of survivors by k: [2.04, 2.04, 2.02, 2.01, 2.05, 1.93, 1.8, 1.97, 2.49, 2.26, 3.16]   distinct-state kill rate k=1..deepest: 1.247 bits/col

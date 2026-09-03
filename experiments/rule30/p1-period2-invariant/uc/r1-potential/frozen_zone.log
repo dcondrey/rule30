@@ -1,0 +1,668 @@
+c=2: rows above the hit row, number of distinct eventual words over all boundary chains
+  row n- 1: distinct words=   4 all-agree-from-offset=2 period=1 distinct-tails=1
+  row n- 2: distinct words=   8 all-agree-from-offset=96 period=2 distinct-tails=2
+  row n- 3: distinct words=  16 all-agree-from-offset=96 period=2 distinct-tails=2
+  row n- 4: distinct words=  36 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 5: distinct words=  72 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 6: distinct words= 144 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 7: distinct words= 268 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 8: distinct words= 516 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 9: distinct words=1020 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n-10: distinct words=1976 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n-11: distinct words=3800 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n-12: distinct words=7068 all-agree-from-offset=96 period=4 distinct-tails=4
+  (stopping, too many words)
+c=3: rows above the hit row, number of distinct eventual words over all boundary chains
+  row n- 1: distinct words=   4 all-agree-from-offset=96 period=2 distinct-tails=2
+  row n- 2: distinct words=   8 all-agree-from-offset=96 period=2 distinct-tails=2
+  row n- 3: distinct words=  20 all-agree-from-offset=96 period=2 distinct-tails=2
+  row n- 4: distinct words=  44 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 5: distinct words=  80 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 6: distinct words= 156 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 7: distinct words= 304 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 8: distinct words= 624 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n- 9: distinct words=1228 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n-10: distinct words=2404 all-agree-from-offset=96 period=4 distinct-tails=4
+  row n-11: distinct words=4556 all-agree-from-offset=96 period=4 distinct-tails=4
+  (stopping, too many words)
+n=8 c=2 deepest=3
+  k= 1 u= 8 N=   87 frozen-suffix-from-depth-n= 1 of 17 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22343344444444421
+  k= 2 u= 9 N=   44 frozen-suffix-from-depth-n= 2 of 18 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333333334333311
+  k= 3 u=10 N=    9 frozen-suffix-from-depth-n= 4 of 19 cells, frozen-total=17, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 1111111111111221111
+  region of longest orbit W=11222222: columns u=n..10, rows printed top depth -(n+best) .. n
+    d= -11:   1
+    d= -10:  22
+    d=  -9: 110
+    d=  -8: 223
+    d=  -7: 001
+    d=  -6: 301
+    d=  -5: 131
+    d=  -4: 202
+    d=  -3: 033
+    d=  -2: 320
+    d=  -1: 113
+    d=   0: 220
+    d=   1: 003
+    d=   2: 302
+    d=   3: 133
+    d=   4: 200
+    d=   5: 030
+    d=   6: 323
+    d=   7: 111
+    d=   8: 222
+n=8 c=3 deepest=6
+  k= 1 u= 8 N=   97 frozen-suffix-from-depth-n= 1 of 17 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22343344444444421
+  k= 2 u= 9 N=   49 frozen-suffix-from-depth-n= 1 of 18 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444443221
+  k= 3 u=10 N=   17 frozen-suffix-from-depth-n= 1 of 19 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333333343232221
+  k= 4 u=11 N=    7 frozen-suffix-from-depth-n= 4 of 20 cells, frozen-total=4, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22222333344223221111
+  k= 5 u=12 N=    4 frozen-suffix-from-depth-n= 6 of 21 cells, frozen-total=8, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 112222222222222111111
+  k= 6 u=13 N=    3 frozen-suffix-from-depth-n=22 of 22 cells, frozen-total=22, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 1111111111111111111111
+  region of longest orbit W=12222111: columns u=n..13, rows printed top depth -(n+best) .. n
+    d= -14:      1
+    d= -13:     22
+    d= -12:    110
+    d= -11:   2223
+    d= -10:  11001
+    d=  -9: 222301
+    d=  -8: 100131
+    d=  -7: 230102
+    d=  -6: 013133
+    d=  -5: 310200
+    d=  -4: 123330
+    d=  -3: 211003
+    d=  -2: 022302
+    d=  -1: 330133
+    d=   0: 003100
+    d=   1: 302230
+    d=   2: 033013
+    d=   3: 320310
+    d=   4: 213223
+    d=   5: 120101
+    d=   6: 213131
+    d=   7: 020202
+    d=   8: 333333
+n=9 c=2 deepest=4
+  k= 1 u= 9 N=  162 frozen-suffix-from-depth-n= 1 of 19 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2234334444444444421
+  k= 2 u=10 N=   57 frozen-suffix-from-depth-n= 2 of 20 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444443311
+  k= 3 u=11 N=   17 frozen-suffix-from-depth-n= 2 of 21 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344433444443211
+  k= 4 u=12 N=    4 frozen-suffix-from-depth-n= 2 of 22 cells, frozen-total=9, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 1111222222221222112211
+  region of longest orbit W=112112122: columns u=n..12, rows printed top depth -(n+best) .. n
+    d= -13:    1
+    d= -12:   22
+    d= -11:  110
+    d= -10: 2223
+    d=  -9: 1001
+    d=  -8: 2301
+    d=  -7: 1131
+    d=  -6: 2202
+    d=  -5: 1033
+    d=  -4: 2320
+    d=  -3: 1113
+    d=  -2: 2220
+    d=  -1: 1003
+    d=   0: 2302
+    d=   1: 0133
+    d=   2: 3100
+    d=   3: 1230
+    d=   4: 2113
+    d=   5: 3220
+    d=   6: 2103
+    d=   7: 1232
+    d=   8: 1111
+    d=   9: 2222
+n=9 c=3 deepest=8
+  k= 1 u= 9 N=  214 frozen-suffix-from-depth-n= 1 of 19 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2234334444444444421
+  k= 2 u=10 N=  112 frozen-suffix-from-depth-n= 1 of 20 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444221
+  k= 3 u=11 N=   53 frozen-suffix-from-depth-n= 1 of 21 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444221
+  k= 4 u=12 N=   23 frozen-suffix-from-depth-n= 1 of 22 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2222333334334323332221
+  k= 5 u=13 N=    6 frozen-suffix-from-depth-n=23 of 23 cells, frozen-total=23, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 11111111111111111111111
+  k= 6 u=14 N=    6 frozen-suffix-from-depth-n=24 of 24 cells, frozen-total=24, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 111111111111111111111111
+  k= 7 u=15 N=    6 frozen-suffix-from-depth-n=25 of 25 cells, frozen-total=25, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 1111111111111111111111111
+  k= 8 u=16 N=    6 frozen-suffix-from-depth-n=26 of 26 cells, frozen-total=26, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 11111111111111111111111111
+  region of longest orbit W=112222122: columns u=n..16, rows printed top depth -(n+best) .. n
+    d= -17:        1
+    d= -16:       22
+    d= -15:      210
+    d= -14:     2123
+    d= -13:    11211
+    d= -12:   222122
+    d= -11:  2100210
+    d= -10: 11230323
+    d=  -9: 22113211
+    d=  -8: 00220122
+    d=  -7: 30303110
+    d=  -6: 13232223
+    d=  -5: 20111001
+    d=  -4: 03122301
+    d=  -3: 32210131
+    d=  -2: 11023102
+    d=  -1: 22331233
+    d=   0: 10102110
+    d=   1: 23133223
+    d=   2: 31200101
+    d=   3: 02130131
+    d=   4: 33203102
+    d=   5: 00132233
+    d=   6: 30101010
+    d=   7: 13131313
+    d=   8: 20202020
+    d=   9: 33333333
+n=10 c=2 deepest=5
+  k= 1 u=10 N=  396 frozen-suffix-from-depth-n= 1 of 21 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223433444444444444421
+  k= 2 u=11 N=  177 frozen-suffix-from-depth-n= 2 of 22 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444311
+  k= 3 u=12 N=   62 frozen-suffix-from-depth-n= 2 of 23 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444433211
+  k= 4 u=13 N=   26 frozen-suffix-from-depth-n= 2 of 24 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344343343444432211
+  k= 5 u=14 N=    6 frozen-suffix-from-depth-n= 5 of 25 cells, frozen-total=8, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2222122222212222212211111
+  region of longest orbit W=1121111112: columns u=n..14, rows printed top depth -(n+best) .. n
+    d= -15:     1
+    d= -14:    22
+    d= -13:   110
+    d= -12:  2223
+    d= -11: 11001
+    d= -10: 22301
+    d=  -9: 00131
+    d=  -8: 30102
+    d=  -7: 13133
+    d=  -6: 10200
+    d=  -5: 23330
+    d=  -4: 11003
+    d=  -3: 22302
+    d=  -2: 30133
+    d=  -1: 03100
+    d=   0: 32230
+    d=   1: 11013
+    d=   2: 12310
+    d=   3: 21123
+    d=   4: 12211
+    d=   5: 21022
+    d=   6: 32330
+    d=   7: 01103
+    d=   8: 01232
+    d=   9: 31111
+    d=  10: 22222
+n=10 c=3 deepest=7
+  k= 1 u=10 N=  385 frozen-suffix-from-depth-n= 1 of 21 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223433444444444444421
+  k= 2 u=11 N=  159 frozen-suffix-from-depth-n= 1 of 22 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444221
+  k= 3 u=12 N=   62 frozen-suffix-from-depth-n= 1 of 23 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444444221
+  k= 4 u=13 N=   22 frozen-suffix-from-depth-n= 1 of 24 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223332233344233444332221
+  k= 5 u=14 N=   14 frozen-suffix-from-depth-n= 1 of 25 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233322222233333332332221
+  k= 6 u=15 N=   12 frozen-suffix-from-depth-n= 1 of 26 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333222233333333332212221
+  k= 7 u=16 N=    4 frozen-suffix-from-depth-n=27 of 27 cells, frozen-total=27, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 111111111111111111111111111
+  region of longest orbit W=1122111222: columns u=n..16, rows printed top depth -(n+best) .. n
+    d= -17:       1
+    d= -16:      22
+    d= -15:     110
+    d= -14:    2223
+    d= -13:   21001
+    d= -12:  212301
+    d= -11: 1121131
+    d= -10: 2212202
+    d=  -9: 0021033
+    d=  -8: 3032320
+    d=  -7: 1321113
+    d=  -6: 2012220
+    d=  -5: 0311003
+    d=  -4: 3222302
+    d=  -3: 1100133
+    d=  -2: 2230100
+    d=  -1: 1013130
+    d=   0: 2310203
+    d=   1: 1123332
+    d=   2: 2211001
+    d=   3: 3022301
+    d=   4: 0330131
+    d=   5: 3203102
+    d=   6: 0132233
+    d=   7: 0101010
+    d=   8: 3131313
+    d=   9: 0202020
+    d=  10: 3333333
+n=11 c=2 deepest=6
+  k= 1 u=11 N=  728 frozen-suffix-from-depth-n= 1 of 23 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22343344444444444444421
+  k= 2 u=12 N=  285 frozen-suffix-from-depth-n= 2 of 24 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444311
+  k= 3 u=13 N=   93 frozen-suffix-from-depth-n= 2 of 25 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333334444444444443211
+  k= 4 u=14 N=   36 frozen-suffix-from-depth-n= 2 of 26 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333333344444444434332211
+  k= 5 u=15 N=    9 frozen-suffix-from-depth-n= 2 of 27 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223323333322322323223222211
+  k= 6 u=16 N=    4 frozen-suffix-from-depth-n=28 of 28 cells, frozen-total=28, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 1111111111111111111111111111
+  region of longest orbit W=11121111211: columns u=n..16, rows printed top depth -(n+best) .. n
+    d= -17:      1
+    d= -16:     22
+    d= -15:    110
+    d= -14:   2223
+    d= -13:  11001
+    d= -12: 222301
+    d= -11: 100131
+    d= -10: 230102
+    d=  -9: 013133
+    d=  -8: 310200
+    d=  -7: 123330
+    d=  -6: 211003
+    d=  -5: 322302
+    d=  -4: 010133
+    d=  -3: 013100
+    d=  -2: 310230
+    d=  -1: 223313
+    d=   0: 101020
+    d=   1: 131333
+    d=   2: 102000
+    d=   3: 233300
+    d=   4: 310030
+    d=   5: 023023
+    d=   6: 031331
+    d=   7: 322002
+    d=   8: 210303
+    d=   9: 123232
+    d=  10: 111111
+    d=  11: 222222
+n=11 c=3 deepest=7
+  k= 1 u=11 N=  805 frozen-suffix-from-depth-n= 1 of 23 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22343344444444444444421
+  k= 2 u=12 N=  325 frozen-suffix-from-depth-n= 1 of 24 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444221
+  k= 3 u=13 N=  157 frozen-suffix-from-depth-n= 1 of 25 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444443221
+  k= 4 u=14 N=   79 frozen-suffix-from-depth-n= 1 of 26 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444444443221
+  k= 5 u=15 N=   32 frozen-suffix-from-depth-n= 1 of 27 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444344444443432221
+  k= 6 u=16 N=   14 frozen-suffix-from-depth-n= 1 of 28 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2222333334443223333333332221
+  k= 7 u=17 N=   12 frozen-suffix-from-depth-n= 1 of 29 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333223322323233223323322221
+  region of longest orbit W=11221112211: columns u=n..17, rows printed top depth -(n+best) .. n
+    d= -18:       1
+    d= -17:      22
+    d= -16:     210
+    d= -15:    2123
+    d= -14:   21211
+    d= -13:  112122
+    d= -12: 2221210
+    d= -11: 1002123
+    d= -10: 2303211
+    d=  -9: 0132122
+    d=  -8: 3101210
+    d=  -7: 1231123
+    d=  -6: 2112211
+    d=  -5: 3221022
+    d=  -4: 0102330
+    d=  -3: 3133103
+    d=  -2: 0200232
+    d=  -1: 3330311
+    d=   0: 2003222
+    d=   1: 1302100
+    d=   2: 2033230
+    d=   3: 0320113
+    d=   4: 0213120
+    d=   5: 3320213
+    d=   6: 2013320
+    d=   7: 1310013
+    d=   8: 2023010
+    d=   9: 0331313
+    d=  10: 0202020
+    d=  11: 3333333
+n=12 c=2 deepest=9
+  k= 1 u=12 N= 1607 frozen-suffix-from-depth-n= 1 of 25 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2234334444444444444444421
+  k= 2 u=13 N=  752 frozen-suffix-from-depth-n= 2 of 26 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444444444311
+  k= 3 u=14 N=  278 frozen-suffix-from-depth-n= 2 of 27 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444443211
+  k= 4 u=15 N=  119 frozen-suffix-from-depth-n= 2 of 28 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444444332211
+  k= 5 u=16 N=   33 frozen-suffix-from-depth-n= 2 of 29 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334433344444433334222211
+  k= 6 u=17 N=   14 frozen-suffix-from-depth-n= 2 of 30 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344233332332233333222211
+  k= 7 u=18 N=    6 frozen-suffix-from-depth-n= 2 of 31 cells, frozen-total=6, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2222222222222221122222222112211
+  k= 8 u=19 N=    2 frozen-suffix-from-depth-n=32 of 32 cells, frozen-total=32, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 11111111111111111111111111111111
+  k= 9 u=20 N=    2 frozen-suffix-from-depth-n=33 of 33 cells, frozen-total=33, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 111111111111111111111111111111111
+  region of longest orbit W=111122211121: columns u=n..20, rows printed top depth -(n+best) .. n
+    d= -21:         2
+    d= -20:        21
+    d= -19:       212
+    d= -18:      2121
+    d= -17:     21212
+    d= -16:    212121
+    d= -15:   2121212
+    d= -14:  11212121
+    d= -13: 222121212
+    d= -12: 100212121
+    d= -11: 230321212
+    d= -10: 013212121
+    d=  -9: 010121212
+    d=  -8: 313112121
+    d=  -7: 020221212
+    d=  -6: 333302121
+    d=  -5: 100033212
+    d=  -4: 230020121
+    d=  -3: 013033112
+    d=  -2: 310320221
+    d=  -1: 223213302
+    d=   0: 301120033
+    d=   1: 031213020
+    d=   2: 322120333
+    d=   3: 010213200
+    d=   4: 313320130
+    d=   5: 020013103
+    d=   6: 333010232
+    d=   7: 000313311
+    d=   8: 300220022
+    d=   9: 030303030
+    d=  10: 323232323
+    d=  11: 111111111
+    d=  12: 222222222
+n=12 c=3 deepest=8
+  k= 1 u=12 N= 1487 frozen-suffix-from-depth-n= 1 of 25 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2234334444444444444444421
+  k= 2 u=13 N=  721 frozen-suffix-from-depth-n= 1 of 26 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444444444221
+  k= 3 u=14 N=  226 frozen-suffix-from-depth-n= 1 of 27 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444444221
+  k= 4 u=15 N=   87 frozen-suffix-from-depth-n= 1 of 28 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444444443221
+  k= 5 u=16 N=   44 frozen-suffix-from-depth-n= 1 of 29 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334423444444344444432221
+  k= 6 u=17 N=    5 frozen-suffix-from-depth-n= 1 of 30 cells, frozen-total=10, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 112222211122222222211222112221
+  k= 7 u=18 N=    1 frozen-suffix-from-depth-n=31 of 31 cells, frozen-total=31, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 1111111111111111111111111111111
+  k= 8 u=19 N=    1 frozen-suffix-from-depth-n=32 of 32 cells, frozen-total=32, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 11111111111111111111111111111111
+  region of longest orbit W=112211212122: columns u=n..19, rows printed top depth -(n+best) .. n
+    d= -20:        2
+    d= -19:       21
+    d= -18:      212
+    d= -17:     1121
+    d= -16:    22212
+    d= -15:   210021
+    d= -14:  2123032
+    d= -13: 21211321
+    d= -12: 12122012
+    d= -11: 21210311
+    d= -10: 12123222
+    d=  -9: 21211100
+    d=  -8: 12122230
+    d=  -7: 21210013
+    d=  -6: 12123010
+    d=  -5: 21211313
+    d=  -4: 12122020
+    d=  -3: 21210333
+    d=  -2: 02123200
+    d=  -1: 33211130
+    d=   0: 20122203
+    d=   1: 33110032
+    d=   2: 20223021
+    d=   3: 13301332
+    d=   4: 20031001
+    d=   5: 13022301
+    d=   6: 20330131
+    d=   7: 33203102
+    d=   8: 00132233
+    d=   9: 30101010
+    d=  10: 13131313
+    d=  11: 20202020
+    d=  12: 33333333
+n=13 c=2 deepest=7
+  k= 1 u=13 N= 3068 frozen-suffix-from-depth-n= 1 of 27 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223433444444444444444444421
+  k= 2 u=14 N= 1146 frozen-suffix-from-depth-n= 2 of 28 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444444444311
+  k= 3 u=15 N=  489 frozen-suffix-from-depth-n= 2 of 29 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444444444443211
+  k= 4 u=16 N=  171 frozen-suffix-from-depth-n= 2 of 30 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444444432211
+  k= 5 u=17 N=   81 frozen-suffix-from-depth-n= 2 of 31 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444444444422211
+  k= 6 u=18 N=   27 frozen-suffix-from-depth-n= 2 of 32 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333333344444433233334323322211
+  k= 7 u=19 N=   12 frozen-suffix-from-depth-n= 4 of 33 cells, frozen-total=17, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 111111111122222222222222111221111
+  region of longest orbit W=1111221112121: columns u=n..19, rows printed top depth -(n+best) .. n
+    d= -20:       2
+    d= -19:      21
+    d= -18:     212
+    d= -17:    2121
+    d= -16:   21212
+    d= -15:  212121
+    d= -14: 2121212
+    d= -13: 1212121
+    d= -12: 2121212
+    d= -11: 0212121
+    d= -10: 0321212
+    d=  -9: 3212121
+    d=  -8: 0121212
+    d=  -7: 3112121
+    d=  -6: 0221212
+    d=  -5: 3302121
+    d=  -4: 0033212
+    d=  -3: 0020121
+    d=  -2: 3033112
+    d=  -1: 0320221
+    d=   0: 3213302
+    d=   1: 1120033
+    d=   2: 1213020
+    d=   3: 2120333
+    d=   4: 0213200
+    d=   5: 3320130
+    d=   6: 0013103
+    d=   7: 3010232
+    d=   8: 0313311
+    d=   9: 0220022
+    d=  10: 0303030
+    d=  11: 3232323
+    d=  12: 1111111
+    d=  13: 2222222
+n=13 c=3 deepest=9
+  k= 1 u=13 N= 3094 frozen-suffix-from-depth-n= 1 of 27 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223433444444444444444444421
+  k= 2 u=14 N= 1266 frozen-suffix-from-depth-n= 1 of 28 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444444444221
+  k= 3 u=15 N=  503 frozen-suffix-from-depth-n= 1 of 29 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444444444444221
+  k= 4 u=16 N=  176 frozen-suffix-from-depth-n= 1 of 30 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444444443221
+  k= 5 u=17 N=   70 frozen-suffix-from-depth-n= 1 of 31 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333443444444444444444342221
+  k= 6 u=18 N=   20 frozen-suffix-from-depth-n= 1 of 32 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22223333333434433343333423322221
+  k= 7 u=19 N=    9 frozen-suffix-from-depth-n= 4 of 33 cells, frozen-total=5, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223332233332333312323322222221111
+  k= 8 u=20 N=    3 frozen-suffix-from-depth-n=34 of 34 cells, frozen-total=34, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 1111111111111111111111111111111111
+  k= 9 u=21 N=    3 frozen-suffix-from-depth-n=35 of 35 cells, frozen-total=35, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 11111111111111111111111111111111111
+  region of longest orbit W=1222221122112: columns u=n..21, rows printed top depth -(n+best) .. n
+    d= -22:         1
+    d= -21:        22
+    d= -20:       110
+    d= -19:      2223
+    d= -18:     21001
+    d= -17:    112301
+    d= -16:   2221131
+    d= -15:  21002202
+    d= -14: 212303033
+    d= -13: 121132320
+    d= -12: 212201113
+    d= -11: 121031220
+    d= -10: 212322103
+    d=  -9: 321110232
+    d=  -8: 012223311
+    d=  -7: 311001022
+    d=  -6: 122301330
+    d=  -5: 210131003
+    d=  -4: 323102302
+    d=  -3: 011233133
+    d=  -2: 012110200
+    d=  -1: 311223330
+    d=   0: 122101003
+    d=   1: 210231302
+    d=   2: 023312033
+    d=   3: 331021320
+    d=   4: 102332013
+    d=   5: 233101310
+    d=   6: 310231023
+    d=   7: 023312331
+    d=   8: 031021102
+    d=   9: 322332233
+    d=  10: 010101010
+    d=  11: 313131313
+    d=  12: 020202020
+    d=  13: 333333333
+n=14 c=2 deepest=10
+  k= 1 u=14 N= 6145 frozen-suffix-from-depth-n= 1 of 29 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22343344444444444444444444421
+  k= 2 u=15 N= 2685 frozen-suffix-from-depth-n= 2 of 30 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444444444311
+  k= 3 u=16 N= 1099 frozen-suffix-from-depth-n= 2 of 31 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444444444443211
+  k= 4 u=17 N=  386 frozen-suffix-from-depth-n= 2 of 32 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444444444444432211
+  k= 5 u=18 N=  134 frozen-suffix-from-depth-n= 2 of 33 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444444444422211
+  k= 6 u=19 N=   57 frozen-suffix-from-depth-n= 2 of 34 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333333444444444444444334222211
+  k= 7 u=20 N=   21 frozen-suffix-from-depth-n= 2 of 35 cells, frozen-total=2, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22222222222222222333333323322222211
+  k= 8 u=21 N=    6 frozen-suffix-from-depth-n= 2 of 36 cells, frozen-total=18, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 112222211122222111222121111122112211
+  k= 9 u=22 N=    4 frozen-suffix-from-depth-n=37 of 37 cells, frozen-total=37, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 1111111111111111111111111111111111111
+  k=10 u=23 N=    4 frozen-suffix-from-depth-n=38 of 38 cells, frozen-total=38, e_u-distinct=1
+        distinct-per-depth (top=-u .. bottom=n): 11111111111111111111111111111111111111
+  region of longest orbit W=11121222211121: columns u=n..23, rows printed top depth -(n+best) .. n
+    d= -24:          1
+    d= -23:         22
+    d= -22:        210
+    d= -21:       1123
+    d= -20:      22211
+    d= -19:     210022
+    d= -18:    2123030
+    d= -17:   21211323
+    d= -16:  112122011
+    d= -15: 2221210312
+    d= -14: 1002123221
+    d= -13: 2303211102
+    d= -12: 0132122233
+    d= -11: 0101210010
+    d= -10: 3131123013
+    d=  -9: 0202211310
+    d=  -8: 3333022023
+    d=  -7: 1000330331
+    d=  -6: 2300203202
+    d=  -5: 0130332133
+    d=  -4: 3103201200
+    d=  -3: 2232131130
+    d=  -2: 3011202203
+    d=  -1: 0312133032
+    d=   0: 3221200321
+    d=   1: 0102130212
+    d=   2: 3133203321
+    d=   3: 0200132012
+    d=   4: 3330101311
+    d=   5: 0003131022
+    d=   6: 0002202330
+    d=   7: 3003033103
+    d=   8: 2302320232
+    d=   9: 1133113311
+    d=  10: 2200220022
+    d=  11: 1030303030
+    d=  12: 2323232323
+    d=  13: 1111111111
+    d=  14: 2222222222
+n=14 c=3 deepest=8
+  k= 1 u=14 N= 6145 frozen-suffix-from-depth-n= 1 of 29 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22343344444444444444444444421
+  k= 2 u=15 N= 2684 frozen-suffix-from-depth-n= 1 of 30 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444444444221
+  k= 3 u=16 N= 1072 frozen-suffix-from-depth-n= 1 of 31 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333444444444444444444444221
+  k= 4 u=17 N=  407 frozen-suffix-from-depth-n= 1 of 32 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334444444444444444444443221
+  k= 5 u=18 N=  145 frozen-suffix-from-depth-n= 1 of 33 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223333344444444444444444444442221
+  k= 6 u=19 N=   42 frozen-suffix-from-depth-n= 1 of 34 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 2233333333344343443444444443322221
+  k= 7 u=20 N=   25 frozen-suffix-from-depth-n= 1 of 35 cells, frozen-total=1, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 22333334433334344444444433434322221
+  k= 8 u=21 N=    8 frozen-suffix-from-depth-n= 6 of 36 cells, frozen-total=7, e_u-distinct=2
+        distinct-per-depth (top=-u .. bottom=n): 223322222322322123223323322222111111
+  region of longest orbit W=11112111222222: columns u=n..21, rows printed top depth -(n+best) .. n
+    d= -22:        1
+    d= -21:       22
+    d= -20:      210
+    d= -19:     2123
+    d= -18:    21211
+    d= -17:   112122
+    d= -16:  2221210
+    d= -15: 11002123
+    d= -14: 22303211
+    d= -13: 00132122
+    d= -12: 30101210
+    d= -11: 13131123
+    d= -10: 20202211
+    d=  -9: 03333022
+    d=  -8: 32000330
+    d=  -7: 11300203
+    d=  -6: 22030332
+    d=  -5: 00323201
+    d=  -4: 30211131
+    d=  -3: 13322202
+    d=  -2: 20010033
+    d=  -1: 03013020
+    d=   0: 32310333
+    d=   1: 11123200
+    d=   2: 22211130
+    d=   3: 10022203
+    d=   4: 23030032
+    d=   5: 11323021
+    d=   6: 12011332
+    d=   7: 21312001
+    d=   8: 32021301
+    d=   9: 01332031
+    d=  10: 31001322
+    d=  11: 02301010
+    d=  12: 33131313
+    d=  13: 20202020
+    d=  14: 33333333

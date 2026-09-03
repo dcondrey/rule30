@@ -1,0 +1,4 @@
+nerode K=8: classes(cell out)=65536 4^K=65536 rounds=13  [7s]
+nerode K=8: classes(quotient out)=65536 4^K=65536 rounds=13  [8s]
+nerode K=9: classes(cell out)=262144 4^K=262144 rounds=14  [41s]
+nerode K=9: classes(quotient out)=262144 4^K=262144 rounds=15  [60s]

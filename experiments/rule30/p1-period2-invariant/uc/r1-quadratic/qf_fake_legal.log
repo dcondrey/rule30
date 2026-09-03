@@ -1,0 +1,12 @@
+n=5 c=2: legal-bottom words with all 7 hits + hard-core: 112; + 12a: 0   [1s]
+
+n=5 c=3: legal-bottom words with all 7 hits + hard-core: 172; + 12a: 0   [1s]
+
+n=6 c=2: legal-bottom words with all 8 hits + hard-core: 248; + 12a: 176   [9s]
+    col n-1 (d=-n..n-1) = 101111021201   forced = 21212122
+    col n-1 (d=-n..n-1) = 201111021201   forced = 21212122
+
+n=6 c=3: legal-bottom words with all 8 hits + hard-core: 440; + 12a: 416   [9s]
+    col n-1 (d=-n..n-1) = 102102012111   forced = 22122122
+    col n-1 (d=-n..n-1) = 202102012111   forced = 22122122
+

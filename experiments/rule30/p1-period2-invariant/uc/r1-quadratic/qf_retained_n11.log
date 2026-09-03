@@ -1,0 +1,2 @@
+retained-parity gate: 98300 column steps PASS (R1..R4), n <= 11, c in {2,3}
+distinct reduced states (a, beta) seen: 29050; distinct columns: 29050

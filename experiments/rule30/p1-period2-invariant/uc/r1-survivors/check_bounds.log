@@ -1,0 +1,2 @@
+rw: max S_k/(S_0 2^-k) = 2.286 at (n,c,k,S_k,S_0)=(3, 3, 4, 1, 7); bound constant 8: OK
+bwh: max S_k/(S_0 2^-k) = 9.211 at (n,c,k,S_k,S_0)=(15, 3, 16, 1, 7115); bound constant 16: OK

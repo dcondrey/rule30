@@ -1,0 +1,8 @@
+n=5 c=2 steps=1200 sources=32 need=7: sources with a LATE E-run >= need: 32; with a LATE joint (HC) run >= need: 22; longest E-run 13 at column 593 (W=12111); longest joint run 11 at column 1164 (W=11122)
+n=5 c=3 steps=1200 sources=32 need=7: sources with a LATE E-run >= need: 32; with a LATE joint (HC) run >= need: 25; longest E-run 14 at column 771 (W=11211); longest joint run 10 at column 773 (W=11211)
+n=6 c=2 steps=1200 sources=64 need=8: sources with a LATE E-run >= need: 61; with a LATE joint (HC) run >= need: 31; longest E-run 17 at column 505 (W=122221); longest joint run 12 at column 840 (W=212122)
+n=6 c=3 steps=1200 sources=64 need=8: sources with a LATE E-run >= need: 57; with a LATE joint (HC) run >= need: 20; longest E-run 14 at column 770 (W=121121); longest joint run 10 at column 1002 (W=111111)
+n=7 c=2 steps=1200 sources=64 need=9: sources with a LATE E-run >= need: 45; with a LATE joint (HC) run >= need: 12; longest E-run 17 at column 504 (W=1222121); longest joint run 12 at column 839 (W=1122221)
+n=7 c=3 steps=1200 sources=64 need=9: sources with a LATE E-run >= need: 44; with a LATE joint (HC) run >= need: 13; longest E-run 14 at column 769 (W=1112121); longest joint run 11 at column 1088 (W=1112212)
+n=8 c=2 steps=1200 sources=64 need=10: sources with a LATE E-run >= need: 29; with a LATE joint (HC) run >= need: 8; longest E-run 17 at column 503 (W=11212122); longest joint run 12 at column 838 (W=11112222)
+n=8 c=3 steps=1200 sources=64 need=10: sources with a LATE E-run >= need: 30; with a LATE joint (HC) run >= need: 9; longest E-run 15 at column 88 (W=11111221); longest joint run 11 at column 1087 (W=11122222)

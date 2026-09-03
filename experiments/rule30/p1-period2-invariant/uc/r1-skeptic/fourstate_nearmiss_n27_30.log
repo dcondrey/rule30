@@ -1,0 +1,5 @@
+ n  c   #prefixes with exactly v violations over n+2 columns, v=0,1,2,3   | same with the 12a ending   [s]
+27 2   [0, 0, 0, 30]   | [0, 0, 0, 24]   [85.6s]
+27 3   [0, 0, 0, 0]   | [0, 0, 0, 0]   [162.4s]
+28 2   [0, 0, 0, 0]   | [0, 0, 0, 0]   [218.2s]
+28 3   [0, 0, 0, 0]   | [0, 0, 0, 0]   [72.9s]

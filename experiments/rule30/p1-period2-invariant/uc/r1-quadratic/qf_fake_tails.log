@@ -1,0 +1,32 @@
+n=3 c=2: region-only survivors (hits+hard-core) = 0   [0s]
+   last-three tails: {}
+   number of 1s among forced symbols: {}
+   distinct forced strings: 0; most common: []
+n=3 c=3: region-only survivors (hits+hard-core) = 0   [0s]
+   last-three tails: {}
+   number of 1s among forced symbols: {}
+   distinct forced strings: 0; most common: []
+n=4 c=2: region-only survivors (hits+hard-core) = 0   [0s]
+   last-three tails: {}
+   number of 1s among forced symbols: {}
+   distinct forced strings: 0; most common: []
+n=4 c=3: region-only survivors (hits+hard-core) = 0   [0s]
+   last-three tails: {}
+   number of 1s among forced symbols: {}
+   distinct forced strings: 0; most common: []
+n=5 c=2: region-only survivors (hits+hard-core) = 112   [1s]
+   last-three tails: {'221': 48, '222': 64}
+   number of 1s among forced symbols: {2: 112}
+   distinct forced strings: 2; most common: [('2121222', 64), ('2122221', 48)]
+n=5 c=3: region-only survivors (hits+hard-core) = 216   [1s]
+   last-three tails: {'212': 32, '222': 184}
+   number of 1s among forced symbols: {1: 156, 2: 52, 3: 8}
+   distinct forced strings: 4; most common: [('2221222', 156), ('1221222', 28), ('2122212', 24), ('1221212', 8)]
+n=6 c=2: region-only survivors (hits+hard-core) = 320   [10s]
+   last-three tails: {'121': 144, '122': 32, '212': 144}
+   number of 1s among forced symbols: {2: 72, 3: 104, 4: 144}
+   distinct forced strings: 4; most common: [('21212121', 144), ('22212212', 72), ('12212212', 72), ('21212122', 32)]
+n=6 c=3: region-only survivors (hits+hard-core) = 936   [7s]
+   last-three tails: {'122': 576, '212': 256, '221': 104}
+   number of 1s among forced symbols: {2: 648, 3: 280, 4: 8}
+   distinct forced strings: 7; most common: [('22122122', 536), ('21212212', 256), ('22212221', 72), ('12222122', 24), ('12212221', 24), ('21222122', 16)]

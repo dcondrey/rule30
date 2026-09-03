@@ -1,0 +1,46 @@
+
+c = 2: J = 9 rows, K = 160 columns, tail window 64, tails taken from tau = 40
+  j   P_j(tau=40)   period of row n-j (seed 0)   periods over all seeds
+  1            1          1                [1]
+  2            2          2                [2]
+  3            2          2                [2]
+  4            4          4                [4]
+  5            4          4                [4]
+  6            4          4                [4]
+  7            4          4                [4]
+  8            4          4                [4]
+  9            4          4                [4]
+  joint block rows n-j0..n-J:
+  j0   distinct joint tails (tau=40)   joint period (seed 0)
+   1                4                     4
+   2                4                     4
+   3                4                     4
+   4                4                     4
+   5                4                     4
+   6                4                     4
+   7                4                     4
+   8                4                     4
+   9                4                     4
+
+c = 3: J = 9 rows, K = 160 columns, tail window 64, tails taken from tau = 40
+  j   P_j(tau=40)   period of row n-j (seed 0)   periods over all seeds
+  1            2          2                [2]
+  2            2          2                [2]
+  3            2          2                [2]
+  4            4          4                [4]
+  5            4          4                [4]
+  6            4          4                [4]
+  7            4          4                [4]
+  8            4          4                [4]
+  9            4          4                [4]
+  joint block rows n-j0..n-J:
+  j0   distinct joint tails (tau=40)   joint period (seed 0)
+   1                4                     4
+   2                4                     4
+   3                4                     4
+   4                4                     4
+   5                4                     4
+   6                4                     4
+   7                4                     4
+   8                4                     4
+   9                4                     4

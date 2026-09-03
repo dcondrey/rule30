@@ -1,0 +1,9 @@
+tower c=2 J=10 row j=1: classes=1 joint=1 transient=1 period=1
+tower c=2 J=10 row j=2: classes=2 joint=2 transient=2 period=2
+tower c=2 J=10 row j=3: classes=2 joint=2 transient=3 period=2
+tower c=2 J=10 row j=4: classes=4 joint=4 transient=4 period=4
+tower c=2 J=10 row j=5: classes=4 joint=4 transient=7 period=4
+tower c=2 J=10 row j=6: classes=4 joint=4 transient=8 period=4
+tower c=2 J=10 row j=7: classes=4 joint=4 transient=10 period=4
+tower c=2 J=10 row j=8: classes=4 joint=4 transient=14 period=4
+tower c=2 J=10 row j=9: classes=4 joint=4 transient=17 period=4

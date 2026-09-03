@@ -1,0 +1,121 @@
+
+u=2 (n=3): 8 sources, 7 classes, 1 classes of size >1
+  class: 122 222
+    122 vs 222: flips e_[0]; col1[d1:0>1(F)]; col2[d2:3>1(H)]
+
+u=3 (n=4): 16 sources, 12 classes, 3 classes of size >1
+  class: 1212 2212
+    1212 vs 2212: flips e_[0]; col2[d2:1>2(HF)]; col3[]
+  class: 1221 2221
+    1221 vs 2221: flips e_[0]; col2[d2:3>1(H)]; col3[]
+  class: 1222 2122 2222
+    1222 vs 2122: flips e_[0, 1]; col2[d0:1>0(F) d1:2>0(H)]; col3[d1:1>3(H)]
+    1222 vs 2222: flips e_[0]; col2[d2:3>1(H)]; col3[]
+    2122 vs 2222: flips e_[1]; col2[d0:0>1(F) d1:0>2(H) d2:3>1(H)]; col3[d1:3>1(H)]
+
+u=4 (n=5): 32 sources, 20 classes, 9 classes of size >1
+  class: 11111 21111
+    11111 vs 21111: flips e_[0]; col3[d3:2>1(HF)]; col4[]
+  class: 11121 21121
+    11121 vs 21121: flips e_[0]; col3[d3:0>3(HF)]; col4[d4:3>1(H)]
+  class: 11222 12122 22122
+    11222 vs 12122: flips e_[1, 2]; col3[d-1:1>0(F) d0:2>0(H)]; col4[d0:1>3(H)]
+    11222 vs 22122: flips e_[0, 1, 2]; col3[d-1:1>0(F) d0:2>0(H)]; col4[d0:1>3(H)]
+    12122 vs 22122: flips e_[0]; col3[]; col4[]
+  class: 12111 22111
+    12111 vs 22111: flips e_[0]; col3[d3:0>1(F)]; col4[d4:3>1(H)]
+  class: 12121 22121
+    12121 vs 22121: flips e_[0]; col3[]; col4[]
+  class: 12211 22211
+    12211 vs 22211: flips e_[0]; col3[]; col4[]
+  class: 12212 22212
+    12212 vs 22212: flips e_[0]; col3[]; col4[]
+  class: 12221 21221 22221
+    12221 vs 21221: flips e_[0, 1]; col3[d1:1>3(H)]; col4[]
+    12221 vs 22221: flips e_[0]; col3[]; col4[]
+    21221 vs 22221: flips e_[1]; col3[d1:3>1(H)]; col4[]
+  class: 12222 21222 22222
+    12222 vs 21222: flips e_[0, 1]; col3[d1:1>3(H)]; col4[]
+    12222 vs 22222: flips e_[0]; col3[]; col4[]
+    21222 vs 22222: flips e_[1]; col3[d1:3>1(H)]; col4[]
+
+u=5 (n=6): 64 sources, 37 classes, 20 classes of size >1
+  class: 111111 211111
+    111111 vs 211111: flips e_[0]; col4[]; col5[]
+  class: 111112 211112
+    111112 vs 211112: flips e_[0]; col4[]; col5[]
+  class: 111122 211122
+    111122 vs 211122: flips e_[0]; col4[d4:1>0(F)]; col5[d5:1>3(H)]
+  class: 111211 211211
+    111211 vs 211211: flips e_[0]; col4[d4:3>1(H)]; col5[]
+  class: 111212 211212
+    111212 vs 211212: flips e_[0]; col4[d4:3>1(H)]; col5[]
+  class: 111222 112122 211222
+    111222 vs 112122: flips e_[2, 3]; col4[d-2:1>0(F) d-1:2>0(H) d4:1>2(HF)]; col5[d-1:1>3(H)]
+    111222 vs 211222: flips e_[0]; col4[d4:1>2(HF)]; col5[]
+    112122 vs 211222: flips e_[0, 2, 3]; col4[d-2:0>1(F) d-1:0>2(H)]; col5[d-1:3>1(H)]
+  class: 112221 121221 221221
+    112221 vs 121221: flips e_[1, 2]; col4[d0:1>3(H)]; col5[]
+    112221 vs 221221: flips e_[0, 1, 2]; col4[d0:1>3(H)]; col5[]
+    121221 vs 221221: flips e_[0]; col4[]; col5[]
+  class: 112222 121222 221222
+    112222 vs 121222: flips e_[1, 2]; col4[d0:1>3(H)]; col5[]
+    112222 vs 221222: flips e_[0, 1, 2]; col4[d0:1>3(H)]; col5[]
+    121222 vs 221222: flips e_[0]; col4[]; col5[]
+  class: 121111 221111
+    121111 vs 221111: flips e_[0]; col4[d4:3>1(H)]; col5[]
+  class: 121112 221112
+    121112 vs 221112: flips e_[0]; col4[d4:3>1(H)]; col5[]
+  class: 121211 221211
+    121211 vs 221211: flips e_[0]; col4[]; col5[]
+  class: 121212 221212
+    121212 vs 221212: flips e_[0]; col4[]; col5[]
+  class: 122111 222111
+    122111 vs 222111: flips e_[0]; col4[]; col5[]
+  class: 122112 222112
+    122112 vs 222112: flips e_[0]; col4[]; col5[]
+  class: 122121 222121
+    122121 vs 222121: flips e_[0]; col4[]; col5[]
+  class: 122122 222122
+    122122 vs 222122: flips e_[0]; col4[]; col5[]
+  class: 122211 212211 222211
+    122211 vs 212211: flips e_[0, 1]; col4[]; col5[]
+    122211 vs 222211: flips e_[0]; col4[]; col5[]
+    212211 vs 222211: flips e_[1]; col4[]; col5[]
+  class: 122212 212212 222212
+    122212 vs 212212: flips e_[0, 1]; col4[]; col5[]
+    122212 vs 222212: flips e_[0]; col4[]; col5[]
+    212212 vs 222212: flips e_[1]; col4[]; col5[]
+  class: 122221 212221 222221
+    122221 vs 212221: flips e_[0, 1]; col4[]; col5[]
+    122221 vs 222221: flips e_[0]; col4[]; col5[]
+    212221 vs 222221: flips e_[1]; col4[]; col5[]
+  class: 122222 212222 222222
+    122222 vs 212222: flips e_[0, 1]; col4[]; col5[]
+    122222 vs 222222: flips e_[0]; col4[]; col5[]
+    212222 vs 222222: flips e_[1]; col4[]; col5[]
+
+n=15 survivor cylinder: 18 sources
+column u : number of distinct quotient words (depths -u-1..min(u,n-1)) among the 18, and distinct full columns
+  u=10:  3 quotient classes,  3 distinct columns
+  u=11:  2 quotient classes,  3 distinct columns
+  u=12:  1 quotient classes,  1 distinct columns
+  u=13:  1 quotient classes,  1 distinct columns
+  u=14:  1 quotient classes,  1 distinct columns
+  u=15:  1 quotient classes,  1 distinct columns
+  u=16:  1 quotient classes,  1 distinct columns
+  u=17:  1 quotient classes,  1 distinct columns
+  u=18:  1 quotient classes,  1 distinct columns
+  u=19:  1 quotient classes,  1 distinct columns
+  u=20:  1 quotient classes,  1 distinct columns
+  u=21:  1 quotient classes,  1 distinct columns
+  u=22:  1 quotient classes,  1 distinct columns
+  u=23:  1 quotient classes,  1 distinct columns
+  u=24:  1 quotient classes,  1 distinct columns
+  u=25:  1 quotient classes,  1 distinct columns
+  u=26:  1 quotient classes,  1 distinct columns
+  u=27:  1 quotient classes,  1 distinct columns
+  u=28:  1 quotient classes,  1 distinct columns
+  u=29:  1 quotient classes,  1 distinct columns
+  u=30:  1 quotient classes,  1 distinct columns
+  u=31:  1 quotient classes,  1 distinct columns

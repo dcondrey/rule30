@@ -1,0 +1,4 @@
+decoupling of phi and psi: 16 argument pairs PASS
+Phi (even/zero form) equals E(T[u][n]) on forced orbits: 4606 checks PASS
+diagonal form: 2728 words, 334344 cells agree with forward kernel; 4^n distinct PASS
+diagonal form vs forced orbit on survivors: 1020 sources PASS

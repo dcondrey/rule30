@@ -1,0 +1,5 @@
+D8: composition and inverse consistent, closed, order 8
+claim (i): phi(l,r) = lam(l).r on all 16 pairs
+claim (iii): Stab(x_2) = Stab(x_3) = {id, sigma}, sigma = T01 s
+claim (iv): A_2 = {id,t,ts,sigma}, A_3 = {T01,T11,s,T11s}; both Stab-right-coset unions
+claim (ii): forced 4-state symbol = t.G_u^-1.x_c on 20476 column steps, 2044 runs
