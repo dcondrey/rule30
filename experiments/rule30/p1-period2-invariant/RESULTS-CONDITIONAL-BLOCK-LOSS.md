@@ -6,11 +6,13 @@ Date: 2026-09-03.  Scripts `prefix_cylinder_loss.py`, `mass_decomposition.py`,
 nothing sampled.  All three were pre-registered in their docstrings before
 running.
 
-Status: **the conditional block lemma is not falsified, and it is not
-sufficient.**  A uniform per-state contraction does exist for blocks of length
-`b >= 6`, but the rate it delivers is `0.17` to `0.65` bits per level against
-the `1.0` that `(RW-alpha)` requires.  Proving the lemma exactly as measured
-would not give the target.  That gate is section 4 and it is the result.
+Status: **KILLED.**  A uniform per-state contraction exists at each fixed `n`,
+but the rate it delivers is far below the `1.0` bits per level that
+`(RW-alpha)` requires, and the shortfall GROWS with `n`.  Extending the census
+to `n = 17, 18, 19` drops the worst-case rate at every block length: `b = 7`
+falls from `0.494` to `0.143` bits per level, and `b = 6` stops contracting
+altogether.  The route moves away from the requirement, not toward it.  That
+gate is section 4 and it is the result.
 
 ## 1. Why this state and not another
 
@@ -109,12 +111,33 @@ so the conclusion is not softened by either:
   `uc/BRIEF.md` section 4.  The uniform per-state bound is far weaker than the
   average, which is precisely the gap a proof has to pay for.
 
+## 4b. The larger census settles it
+
+`block_lemma_n17-19_20260903.log`, `n = 17, 18, 19`, `p = floor(n/2)`, both
+`c`, blocks to 14.  Worst-case `lambda` and implied rate, against the same
+figures for `n = 10..16`:
+
+| `b` | `lambda`, `n<=16` | rate | `lambda`, `n=17..19` | rate |
+|---|---|---|---|---|
+| 6 | 0.500 | 0.167 | 1.000 | fails outright |
+| 7 | 0.091 | 0.494 | 0.500 | 0.143 |
+| 8 | 0.056 | 0.520 | 0.167 | 0.323 |
+| 9 | 0.026 | 0.585 | 0.045 | 0.497 |
+| 10 | 0.008 | 0.697 | 0.015 | 0.606 |
+
+**The rate falls at every block length.**  The smallest block with any
+contraction at all, `b*`, is `2,5,4,4,3,4,3,4,5,4,5,3,4,6` for `n = 10..16` and
+`5,4,7,4,5,5` for `n = 17..19`: it reaches 7 at `n = 18, c = 2`.  Both the
+worst-case ratio and the block length required are moving the wrong way.
+
 ## 5. Verdict
 
-The conditional block lemma over the exact half-depth prefix state is the
-strongest surviving candidate of its kind, and it is not falsified: from
-`b = 6` no state has ratio 1 at any tested `n`.  But it is insufficient by a
-factor of about two in rate, so proving it would not yield `(RW-alpha)`.
+**Killed.**  The conditional block lemma over the exact half-depth prefix state
+was the strongest surviving candidate of its kind.  At each fixed `n` a uniform
+contraction exists, so the lemma is not false, but the rate it yields is at
+best `0.70` bits per level against a requirement of `1.0`, and across
+`n = 10..19` the rate degrades rather than improves.  Proving it would not
+yield `(RW-alpha)`, and there is no sign the constant improves with `n`.
 
 This is a negative result about the shape of the argument, not about the data.
 Anyone proposing a conditional-loss lemma for this problem must first state
@@ -129,9 +152,8 @@ What would change the verdict:
    The gap is the price of the worst state; a proof that the worst state is
    rare or structured would recover part of it, but that is the reservoir
    classification, not a block lemma.
-2. Larger `n`.  The rate at `b = 6` moved `0.143 -> 0.500 -> 0.200` across
-   `n = 13, 16, 17` with no trend toward the requirement.  `n = 18, 19` are
-   running and are recorded in `block_lemma_n17-19_20260903.log`.
+2. Larger `n` was the obvious hope and section 4b closed it: `n = 17, 18, 19`
+   make every rate worse.
 
 ## 6. Reproduction
 
@@ -140,4 +162,5 @@ cd /Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant
 uv run python prefix_cylinder_loss.py --min-n 10 --max-n 16 --blocks 2,4,6,8,10
 uv run python mass_decomposition.py --min-n 11 --max-n 16 --blocks 4,6,8 --deltas 0.001,0.01
 uv run python block_lemma.py --min-n 10 --max-n 16 --bmax 10
+uv run python block_lemma.py --min-n 17 --max-n 19 --bmax 14   # about 40 min
 ```
