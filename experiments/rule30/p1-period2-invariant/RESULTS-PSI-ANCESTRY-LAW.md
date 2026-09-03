@@ -234,3 +234,44 @@ The one encouraging detail, and the concrete next target: the survivors die
 `k = 16`.  A shared cause kills a whole suffix cylinder at once.  Identifying
 that cause is a sharper question than `(PSI)` and it is the thing the ancestry
 law of sections 3 and 4 is built to express.
+
+## 10. The fan-out test: `Delta` has full algebraic degree
+
+`PROOF-STATE-CAPSULE.md` section 7 names the switch criterion exactly: "if the
+complete-state recursion necessarily fans out, weaken immediately to RW/DLP."
+Section 3's closed form makes that testable.  Encode the source
+`W in {1,2}^n` as `n` bits and take the algebraic normal form of each
+coordinate.
+
+| n | `deg(Psi_j)` range over `j` | `max_j deg(Delta_j)` |
+|---|---|---|
+| 4 | 3..4 | 4 |
+| 6 | 5..6 | 6 |
+| 8 | 7..8 | 8 |
+| 10 | 9..10 | 10 |
+| 12 | 11..12 | 12 |
+| 14 | 13..14 | 14 |
+| 15 | 14..15 | 15 |
+
+`max_j deg(Delta_j) = n` **exactly, at every `n` from 4 to 15**, and
+`deg(Psi_j)` is `n` or `n-1` for essentially every coordinate.  `Delta` is a
+maximum-degree Boolean function of the source.
+
+**Consequence.**  There is no bounded-degree seam law and no local composition
+identity of bounded arity for `Delta_j`.  Any recursion that computes it must
+carry state of unbounded size, which is the fan-out the capsule anticipates.
+The pre-authorised fallback therefore fires on its own stated criterion:
+**weaken to DLP/RW**, retaining the two facts `(BWH+)` discards — the
+hard-core suffix and the terminal `12a` pull — and target the forced adjacent
+`E` change at rows `n, n+1, n+2` rather than for every arbitrary binary
+source.
+
+This is a limitation theorem about the `(BWH+)` formulation, not about
+`(PT2)`.  `BWH+ => DLP => SEP` runs one way only, so nothing here bears on
+whether period-two exclusion is true.
+
+**Scope, stated exactly.**  Full degree rules out a *bounded-arity polynomial*
+seam law.  It does not rule out a proof by other means: an ordered-ancestry or
+injection argument of the kind capsule section 6.4 describes is not a
+bounded-degree object and is untouched by this measurement.  The closed form
+in section 3 remains the right vehicle for one.

@@ -123,42 +123,64 @@ cylinders identified in `RESULTS-PSI-ANCESTRY-LAW.md` section 6 — at `n = 15`
 all 18 share the suffix `211212112`.  Long near-constant runs are *commoner*
 than random, not rarer.
 
-### Consequence, stated as the pre-registration requires
+### Consequence, stated as the pre-registration attached to CLUSTERING
 
-The kill condition as literally written ("`R_k` consistent with 1 across the
-range") is not what happened; clustering is worse.  The consequence attached
-to the kill therefore applies with more force, not less:
+**Correction, made before this file was handed on.**  The first draft of this
+section imported the KILL outcome's consequence ("abandon `(BWH+)`") into the
+CLUSTERING outcome, after seeing the data.  The pre-registration attaches a
+different reading to CLUSTERING, and the imported one is withdrawn.  This is
+the same verdict-rule bug caught in `PREREG-flat-opcode-ablation.md`, running
+in the pessimistic direction rather than the optimistic one; it is recorded
+rather than quietly fixed.
 
-- **The naive divergent-sum argument against `(BWH+)` is not refuted by this
-  data.**  Expected survivors per `n` under independence is `1/2`, constant in
-  `n`, and the measured counts do not decay with `n` — the `k = n+1` column is
-  empty everywhere past 6, but the column one or two steps to its left is
-  populated at every single `n` tested, and its population does not shrink.
-  `(BWH+)` holding through `n = 20` is consistent with luck.
+**A factual error is withdrawn with it.**  The first draft asserted that "the
+column one or two steps to the left of `k = n+1` is populated at every single
+`n` tested, and its population does not shrink."  That is false.  From the
+log:
 
-- **The slack is 1 at `n = 15` and 2 at `n = 18`.**  The recorded census
-  through `n = 20` is not a comfortable margin; it is a margin of one
-  constraint at its tightest point, with no visible mechanism enforcing it.
+| n | `N_{n-1}` | `N_n` | `N_{n+1}` |
+|---|---|---|---|
+| 7 | 3 | 0 | 0 |
+| 8..14 | 0 | 0 | 0 |
+| 15 | 18 | 18 | 0 |
+| 16, 17 | 0 | 0 | 0 |
+| 18 | 3 | 0 | 0 |
 
-- **`(BWH+)` should be abandoned as the proof target.**  This is what the
-  proof-state capsule's section 7 already pre-authorises as the fallback
-  ("weaken immediately to RW/DLP and retain its two facts discarded by
-  `BWH+`: the hard-core suffix and the terminal `12a` pull").  The reason to
-  act on it now is evidential rather than aesthetic: `(BWH+)` quantifies over
-  *arbitrary* binary sources, and over that domain the statistics say constant
-  `Psi` is a coin flip with clustering.  DLP/RW is a strictly smaller solution
-  set that this count does not cover, so nothing here argues against DLP.
+`N_{n-1}` is zero at nine of the twelve values of `n`, and `N_n` is nonzero
+only at `n = 15`.  The "consistent with luck" inference rested on that
+sentence and falls with it.
 
-- **`(PT2)` and P1 are untouched.**  The capsule records explicitly that a
-  counterexample to `(BWH+)` need not refute period-two exclusion, because
-  `BWH+ => DLP => SEP` runs one way only.  This result is about the choice of
-  target, not about the truth of period-two exclusion.
+**What the measurement actually establishes.**  It refutes the null that
+motivated it.  `R_k` deviates systematically from 1 at large `k`, reaching 18
+at `n = 15`, so the coordinates of `Psi` are **not independent**.  The
+divergent-sum heuristic against `(BWH+)` was computed under independence, so
+it is void — it was never evidence against `(BWH+)` in the first place.
 
-### What would change this reading
+Equally, the count is not evidence *for* `(BWH+)`.  `N_{n+1} = 0` at all
+twelve values against a null expectation of `1/2` each, total 6 against 0
+observed, but that null is the one just refuted, so the comparison carries no
+weight.  **Nothing about `(BWH+)`'s truth can be read off this count in either
+direction.**  That is the honest headline and it is narrower than either the
+prediction or the first draft claimed.
 
-A mechanism argument showing the clustering is itself the enforcement — that
-the surviving cylinder is *forced* to die at its observed `k` — would turn
-this from evidence against `(BWH+)` into the proof of it.  The simultaneous
-death of all 18 survivors at `n = 15` is the place to look: one shared cause
-kills the whole family at once.  That is a specific, checkable next target and
-it is not what was measured here.
+**The observation worth promoting.**  The survivors die *simultaneously*.  All
+18 sources at `n = 15` clear `k = 15` and all 18 fail at `k = 16`; 20 clear
+`k = 13` at `n = 16` and all fail at 14; 3 clear `k = 17` at `n = 18` and all
+fail at 18.  A single shared cause kills an entire suffix cylinder at once.
+That shape — long prefixes permitted at roughly the random rate, full
+constancy forbidden by one mechanism at the end — is what a real theorem would
+look like from the outside.  **Identifying that shared cause is the named next
+target**, and it is not what was measured here.
+
+### Where the decision to leave `(BWH+)` actually comes from
+
+Not from this count.  It comes from the fan-out test the capsule's section 7
+names as the switch criterion, run separately and reported in
+`RESULTS-PSI-ANCESTRY-LAW.md` section 10: `Delta_j` has **full algebraic
+degree `n`** in the source bits at every `n` from 4 to 15.  That is the
+pre-authorised trigger ("if the complete-state recursion necessarily fans out,
+weaken immediately to RW/DLP"), and it is independent of everything in this
+file.
+
+**`(PT2)` and P1 are untouched either way.**  `BWH+ => DLP => SEP` runs one
+way only.
