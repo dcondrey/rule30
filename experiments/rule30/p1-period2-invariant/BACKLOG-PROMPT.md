@@ -166,6 +166,32 @@ bounded-arity seam law for `Delta` (full algebraic degree); the target BWH+
 itself (slack 1, survivor counts at the independence null then clustering to
 18x; retired for RW).
 
+**Five defects that killed 41 of 77 entries in earlier rounds before any
+computation.  An entry with any of them is discarded unread.**
+
+1. In the diagonal form every one of the `4^n` diagonals already satisfies
+   `T[u][n] = c` for all `u >= n`.  That is the constraint, not a function
+   of the diagonal.  Any statement about `E(T[u][n])(x)`, its degree, rank,
+   Hamming distance or Jacobian over diagonal vectors `x` is about a
+   constant.  The free quantity in diagonal coordinates is the edge defect
+   `E(e_u)`; in source coordinates it is the unstopped defect word
+   `Psi_n(W)`.
+2. `(H, E)` are coordinates on the four-state inverse-cone carry cells.
+   Rule 30's forward diagram has binary cells; `H` or `E` of a forward cell,
+   or of "the centre column", is undefined.  `T[t][0]` from a seed in the
+   triangle is not the centre column.
+3. A statement about the ANF, Walsh spectrum, or degree of the indicator of
+   the RW counterexample set is a statement about the zero function wherever
+   RW holds, and is false exactly when the target is true.
+4. An admissible run stops at its first miss, so a hit vector is `1^j 0^*`.
+   Word counts, entropies, palindromes and pairwise distances of hit vectors
+   are trivial.  Use `Psi_n(W)` (forcing continued past misses) if a
+   nontrivial word is wanted, and say so.
+5. For `u >= n` the next symbol is forced by the `H` constraint.  "At most
+   one of the two symbols continues" is vacuous, and "each hit halves the
+   survivors" is false (`n = 9, c = 3`: six survivors persist through four
+   consecutive levels).
+
 **Standing obstructions, each must be addressed by name in every entry.**
 A: the `O(log t)` wall. B: the Rule 90 filter. C: single-column blindness.
 D: naming the missing composition law instead of deriving it. E: the
