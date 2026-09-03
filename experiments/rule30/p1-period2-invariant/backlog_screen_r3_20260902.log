@@ -1,0 +1,55 @@
+== P  tri-inj-forced-suffix: W -> Q_n(W) injective?
+   n=4: all W: 16 sources -> 10 distinct Q, collisions=6;  hard-core W: 8 sources -> 4 distinct, collisions=4
+   n=5: all W: 32 sources -> 16 distinct Q, collisions=16;  hard-core W: 13 sources -> 6 distinct, collisions=7
+   n=6: all W: 64 sources -> 31 distinct Q, collisions=33;  hard-core W: 21 sources -> 9 distinct, collisions=12
+   n=7: all W: 128 sources -> 51 distinct Q, collisions=77;  hard-core W: 34 sources -> 13 distinct, collisions=21
+   n=8: all W: 256 sources -> 87 distinct Q, collisions=169;  hard-core W: 55 sources -> 19 distinct, collisions=36
+   n=9: all W: 512 sources -> 160 distinct Q, collisions=352;  hard-core W: 89 sources -> 30 distinct, collisions=59
+   n=10: all W: 1024 sources -> 288 distinct Q, collisions=736;  hard-core W: 144 sources -> 47 distinct, collisions=97
+   n=11: all W: 2048 sources -> 492 distinct Q, collisions=1556;  hard-core W: 233 sources -> 64 distinct, collisions=169
+   n=12: all W: 4096 sources -> 889 distinct Q, collisions=3207;  hard-core W: 377 sources -> 95 distinct, collisions=282
+   n=13: all W: 8192 sources -> 1562 distinct Q, collisions=6630;  hard-core W: 610 sources -> 145 distinct, collisions=465
+   n=14: all W: 16384 sources -> 2736 distinct Q, collisions=13648;  hard-core W: 987 sources -> 216 distinct, collisions=771
+   n=15: all W: 32768 sources -> 4869 distinct Q, collisions=27899;  hard-core W: 1597 sources -> 320 distinct, collisions=1277
+   n=16: all W: 65536 sources -> 8641 distinct Q, collisions=56895;  hard-core W: 2584 sources -> 477 distinct, collisions=2107
+
+== T  unstopped hit language: distinct length-k prefixes of Psi_n(W), all W
+   n=8: distinct Psi words 94 of 256;  k=4:16/16  k=6:50/64  k=8:79/256  k=10:94/1024
+   n=9: distinct Psi words 175 of 512;  k=4:16/16  k=6:59/64  k=8:120/256  k=10:165/1024
+   n=10: distinct Psi words 329 of 1024;  k=4:16/16  k=6:64/64  k=8:195/256  k=10:292/1024  k=12:329/4096
+   n=11: distinct Psi words 571 of 2048;  k=4:16/16  k=6:64/64  k=8:235/256  k=10:452/1024  k=12:550/4096
+   n=12: distinct Psi words 1047 of 4096;  k=4:16/16  k=6:64/64  k=8:250/256  k=10:666/1024  k=12:944/4096
+   n=13: distinct Psi words 1879 of 8192;  k=4:16/16  k=6:64/64  k=8:256/256  k=10:867/1024  k=12:1527/4096
+   n=14: distinct Psi words 3315 of 16384;  k=4:16/16  k=6:64/64  k=8:256/256  k=10:983/1024  k=12:2295/4096
+   n=15: distinct Psi words 5868 of 32768;  k=4:16/16  k=6:64/64  k=8:256/256  k=10:1019/1024  k=12:3130/4096
+
+== U  column cocycle on (h,F): order and translation of each forced column's affine map, survivors n=8..12
+   order tally over forced columns of survivors: {1: 1326, 2: 6400, 4: 2546}
+   translation zero: 2594, nonzero: 7678
+   group-cocycle-4-cycle: KILLED
+   affine-translation-nonzero: KILLED
+
+== Q  N_k <= 2^(n-k+2) and R  N_k <= 2^n (3/4)^k, n=4..20
+   n=4 done
+   n=5 done
+   n=6 done
+   n=7 done
+   n=8 done
+   n=9 done
+   n=10 done
+   n=11 done
+   n=12 done
+   n=13 done
+   n=14 done
+   n=15 done
+   n=16 done
+   n=17 done
+   n=18 done
+   n=19 done
+   n=20 done
+   Q: max N_k / 2^(n-k+2) = 0.750 at (n,c,k,N_k)=(9, 3, 8, 6)  -> HOLDS to n=20
+   R: violations []  -> HOLDS to n=20
+
+== S  no-small-period-source: fully periodic f, p<=9, n multiple of p, n<=100, r=0, both c
+   196 hard-core periodic patterns; max (run - 0.6n) = 0.0 at (pattern,n,c,run)=None
+

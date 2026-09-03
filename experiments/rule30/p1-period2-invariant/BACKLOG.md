@@ -169,3 +169,97 @@ all occur by `n = 17`; that absence was sampling.
 length `>= 7` at `n = 18, 19` (`fib_absent_check_20260902.log`).  Its absence
 through `n = 17` was sampling.  Through length 7, the RW forced-symbol
 language is exactly the hard-core language at block level.
+
+## 11. Third external batch (30 entries, 2026-09-02): triage
+
+Three recurring defects, on top of the two from earlier batches:
+
+- **Self-defeating.** `hit-bit-polynomial-degree-n`, `fourier-uniform-bound`
+  are statements about the indicator of the RW counterexample set.  Where RW
+  holds that set is empty, the indicator is identically zero, and both
+  statements are false exactly when the target is true.
+- **Monotone hit vectors.**  An admissible run stops at its first miss, so the
+  hit indicator is `1^j 0^*`.  `hit-language-window-bound` (at most `k+1`
+  words), `hit-language-entropy-bound` (trivially sub-exponential),
+  `hit-window-pairwise-distance` (`1^j 0` and `1^(j+1)` are at distance 1),
+  `hard-core-forced-symbol-support-two` (the next symbol is forced; "at most
+  one" is vacuous): trivial or dead on arrival.
+- **Diagonal form, again.** `diag-determinant-full-rank`,
+  `polar-form-nondegenerate`, `diag-hit-code-distance`: constant functions.
+- **Wrong object.** `no-zero-period-match`, `zero-set-injective-reconstruction`,
+  `zero-density-half` define the centre column as `T[t][0]` from a seed in the
+  inverse-cone triangle, which is not Rule 30's centre column.  For the real
+  one the first is the prize's own data check (obstruction H) and the third is
+  Problem 2.
+
+| id | status | evidence |
+|---|---|---|
+| half-survivor-step | killed: `backlog_screen_r2_20260902.log` K | `n = 9, c = 3`: survivors 6, 6, 6, 6 at `k = 5..8` (ratio 1.0); `n = 12, c = 2`: 2, 2.  The clusters survive several levels together |
+| zero-distance-affine-space | killed: `psi_structure` census | unstopped defect word is `Psi`; at `n = 15` it is `1^16 0`, distance 1 from the constant line; constants at `n = 5, 6` give distance 0 |
+| hit-language-all-ones-rare | killed: `rw_margin_20260902.log` | every `n >= 9` has a run `>= 8`, so `R(N)` is linear |
+| finite-exhaustion-depth | killed literally at `n = 3` (`E = 5 > 4.4`); held for `n = 4..28` | this is (RW-alpha) with `alpha = 0.8, C = 2`, restated as extinction depth; not a lemma with a proof route |
+| second-half-naive-bound | vacuous | extinction precedes `k = n` at every tested `n`, so the second-half bound is `0 <= 2^(n-k)` |
+| complement-pin-no-run | duplicate of RW | RW already quantifies over both `c` |
+| sat-diagonal-nosolution, finite-exhaustion-r0-residual | duplicate of the census | see the SAT extension below |
+| transfer-op-spectral-gap | ill-posed | prefixes of length `n` map to length `n+1`; not a square matrix.  The decay it wants is the measured 1.35 bits per column |
+| same-forward-orbit-collision | duplicate of register row 31 | its kill test compares infinite traces |
+| period-trace-q-finite | untestable | finite simulation cannot certify eventual periodicity |
+| tri-inj-forced-suffix, forced-column-prefix-uniformity, survivor-3over4-bound, no-small-period-source, unstopped-language entropy, group-cocycle-4-cycle, affine-translation-nonzero | screening: `backlog_screen_r3.py` | results in section 12 |
+
+## 12. RW by complete SAT to n = 28 (from the dead workflow's skeptic lens)
+
+`uc/r1-skeptic/rw_sat.py`, logs `rw_sat_check.log` and `rw_sat_scan.log`.
+The SAT encoding of RW (`r = 0`, both `c`) is gated against the census at
+`n = 9..16`: satisfiable at exactly the census's deepest run and unsatisfiable
+one deeper, at every `n` and both `c`.  Then `n = 21..28`, both `c`: **UNSAT**,
+solve times 14 s to 27 min.  The RW census therefore stands at `n = 28` for
+`r = 0`; `r = 1, 2` only add constraints.  Obstruction H applies as always.
+
+## 13. Round-3 screening results (`backlog_screen_r3_20260902.log`)
+
+| id | verdict | evidence |
+|---|---|---|
+| tri-inj-forced-suffix | killed | `W -> Q_n(W)` is 7.6-to-1 at `n = 16` (65536 sources, 8641 distinct continuations); restricted to hard-core `W` it is 5.4-to-1.  The forced continuation forgets most of the source |
+| forced-column-prefix-uniformity | **held to n = 20** | `max N_k / 2^(n-k+2) = 0.75` at `(9,3,8)`; for `n >= 4` the constant 3 suffices, `n = 3` needs 4 |
+| survivor-3over4-bound | held to `n = 20`, very slack | measured decay is `2^-1.35` per column against the claimed `3/4` |
+| no-small-period-source | **held to n = 100** | 196 hard-core periodic patterns, `p <= 9`, fully periodic `f`: no run ever exceeds `0.6n` |
+| hit-language entropy (unstopped reading) | killed | for fixed `k`, the set of length-`k` `Psi` prefixes fills `{0,1}^k` as `n` grows (all 256 length-8 words by `n = 13`, 1019 of 1024 length-10 by `n = 15`).  Side fact: only about `2^(0.82 n)` distinct `Psi` words arise from the `2^n` sources |
+| group-cocycle-4-cycle | killed | column affine maps have orders 1, 2, 4 in proportion 13:62:25 |
+| affine-translation-nonzero | killed | translation is zero on 25 percent of forced columns |
+
+## 14. Fourth external batch (10 entries) and round-4 screening (`backlog_screen_r4_20260902.log`)
+
+Every entry but two is stated on `I_u(x) = E(T[u][n])(x)` over diagonal
+vectors, which is the constant `E(c)`.  Screened in the source reading (`W`,
+unstopped defect word `Psi_n(W)`), the only reading with content.
+
+| id | verdict | evidence |
+|---|---|---|
+| no-three-term-affine-relation, palindrome-free-hit-blocks, diagonal-fold-palindrome-defect | killed on arrival | `Psi_15 = 1^16 0`: window `1111` occurs, palindrome of length 16, fold weight 1.  In the stopped reading a run of `j` hits is `1^j` |
+| tribonacci-survivor-recurrence | killed on arrival | `n = 9, c = 3`: `S_8 = 6 > (6+6+6)/4` |
+| source-bit-toggle-sensitivity | killed | min Hamming distance between `Psi(W)` and `Psi(W with one bit flipped)` is 0 at every `n = 6..15` |
+| reverse-source-hit-distance | killed | min distance under source reversal is 0 to 2 against a required `L/5` |
+| complement-toggle-hit-distance | killed | min distance under `1 <-> 2` complement is 1 or 2 against `L/6` |
+| reverse-affine-cancellation | killed | `A(q) o A(q^R)` is the identity on 4910 of 10272 forced columns |
+| spiral-diagonal-parity-ladder | killed | longest constant run of the spiral parity is 7 to 10 against `n/4` |
+| fibword-source-family-eliminated | see `fib_source_check_20260902.log` | the entry's claim that the Fibonacci word has no `11` is false (`12112...`); `backlog_screen_r4.py` section Y omitted the hard-core check and printed the known BWH+ constant at `n = 5` as a counterexample; it is not one.  Rerun with the check below |
+
+**fibword-source-family-eliminated, corrected run** (`fib_source_check.py`):
+zero hard-core factors of length `2n + 2` exist for `n = 4..100`; the Fibonacci
+word contains `11` with bounded gaps, so no factor is an admissible source.
+Vacuous, not a family.
+
+## 15. Round log, cumulative
+
+Four external batches, 77 stated entries.  Closed on arrival 41 (killed by
+logs 17, ill-posed 24), duplicates 9, untestable 3, screened 24: killed 20,
+held 4 (`L7-PERIODIC-SOURCE-CAP` to `n = 40`, `no-small-period-source` to
+`n = 100`, `forced-column-prefix-uniformity` to `n = 20` with constant 4,
+`survivor-3over4-bound` to `n = 20`).  The four that held are all
+consequences of the census, not routes to a proof.  RW itself stands at
+`n = 28` by SAT.  The recurring generator defects, in order of frequency:
+treating `T[u][n] = c` as a function of the diagonal; `(H, E)` on
+forward-diagram bits; statements about the indicator of an empty set;
+forgetting that the hit vector is monotone; forgetting that the next symbol
+is forced.  Add all five to `BACKLOG-PROMPT.md` section 4 before the next
+generation round.
