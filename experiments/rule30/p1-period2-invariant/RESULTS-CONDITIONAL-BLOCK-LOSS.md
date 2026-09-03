@@ -130,14 +130,50 @@ contraction at all, `b*`, is `2,5,4,4,3,4,3,4,5,4,5,3,4,6` for `n = 10..16` and
 `5,4,7,4,5,5` for `n = 17..19`: it reaches 7 at `n = 18, c = 2`.  Both the
 worst-case ratio and the block length required are moving the wrong way.
 
+## 4c. Conditioning strictly degrades the provable rate
+
+`block_lemma_allp_n17-19_20260903.log` sweeps every conditioning depth
+`p = 2..n-1` at `n = 17, 18, 19`, both `c`, blocks to 14 (96 rows).  For each
+`p`, the best rate attainable over all block lengths, worst case over `c` and
+over the three `n`:
+
+| `p` | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 |
+|---|---|---|---|---|---|---|---|---|
+| `b*` (least block with any contraction) | 3 | 3 | 5 | 6 | 8 | 10 | 11 | 12 |
+| best rate, bits per level | 1.121 | 0.997 | 0.906 | 0.830 | 0.690 | 0.536 | 0.386 | 0.231 |
+
+**The rate is monotonically decreasing in the conditioning depth.**  This is the
+general form of the result and it inverts the premise of the whole approach.
+Conditioning on more of the exact state was supposed to be what made a proof
+possible; instead each extra symbol of conditioning makes the uniform bound
+strictly worse, because deeper conditioning exposes individual plateau states
+that the aggregate averages away.
+
+The only depths that clear `1.0` are `p = 2` and `p = 3`, where there are just
+4 and 8 states.  At that depth the per-state bound is the aggregate bound in
+disguise, and the aggregate rate `1.35` bits per level is already known
+(`uc/BRIEF.md` section 4) and already unprovable by the mechanisms in
+`PROOF-STATE-CAPSULE.md` section 5.  It offers no new proof handle.
+
+The least block length with any contraction grows steadily with `p`, from 3 to
+12, so no fixed block length works at all conditioning depths either.
+
 ## 5. Verdict
 
-**Killed.**  The conditional block lemma over the exact half-depth prefix state
-was the strongest surviving candidate of its kind.  At each fixed `n` a uniform
-contraction exists, so the lemma is not false, but the rate it yields is at
-best `0.70` bits per level against a requirement of `1.0`, and across
-`n = 10..19` the rate degrades rather than improves.  Proving it would not
-yield `(RW-alpha)`, and there is no sign the constant improves with `n`.
+**Killed, and killed generally.**  At each fixed `n` and `p` a uniform
+contraction exists, so no individual statement here is false.  But the rate it
+yields is below the `1.0` bits per level `(RW-alpha)` requires at every
+conditioning depth that carries real state information, it degrades as `n`
+grows (section 4b), and it degrades monotonically as conditioning deepens
+(section 4c).  The two depths that do clear `1.0` have 4 and 8 states and are
+the aggregate in disguise.
+
+The structural reading: conditioning cannot buy a rate here.  The aggregate
+already decays at `1.35` bits per level; every attempt to convert that average
+into a per-state statement that could be induced on pays for the worst state,
+and the worst state gets worse the more finely you condition.  That is the same
+obstruction the capsule records as "a growing ordered dependency diagonal
+stores phase in long gaps", now measured as a rate rather than as a collision.
 
 This is a negative result about the shape of the argument, not about the data.
 Anyone proposing a conditional-loss lemma for this problem must first state
@@ -162,5 +198,6 @@ cd /Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant
 uv run python prefix_cylinder_loss.py --min-n 10 --max-n 16 --blocks 2,4,6,8,10
 uv run python mass_decomposition.py --min-n 11 --max-n 16 --blocks 4,6,8 --deltas 0.001,0.01
 uv run python block_lemma.py --min-n 10 --max-n 16 --bmax 10
-uv run python block_lemma.py --min-n 17 --max-n 19 --bmax 14   # about 40 min
+uv run python block_lemma.py --min-n 17 --max-n 19 --bmax 14           # about 40 min
+uv run python block_lemma.py --min-n 17 --max-n 19 --bmax 14 --all-p   # about 3 h
 ```
