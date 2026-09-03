@@ -116,3 +116,55 @@ and no mechanism for the linear slack is identified.
 cd experiments/rule30/p1-period2-invariant
 uv run python rw_margin.py --min-source 3 --max-source 11
 ```
+
+## 8. A mechanism for the linear slack, and its known failure mode
+
+The contrast in section 4 has a quantitative explanation, stated as a
+prediction before the measurement below was run.
+
+In `(BWH+)` the forcing pins only `H` at depth `n`, and the one bit of
+endpoint symbol choice is spent doing it, so a column costs one constraint and
+pays with one bit.  In `(RW)` the target is the exact cell `c`, which pins the
+**whole** Moore state at depth `n`: `H = 1` and `E = E(c)`, with `E(2) = 0` and
+`E(3) = 1`.  The symbol choice is still consumed by `H`, so `E` is a free
+one-bit constraint per column with nothing left to satisfy it.  On top of that
+the hard-core condition kills the branch whenever the forced symbol is `1`
+after a `1`, which costs a further `log2(4/3) = 0.415` bits if that happens a
+quarter of the time.
+
+Predicted cost per column: `1 + 0.415 = 1.415` bits, hence
+`alpha = 1/1.415 = 0.707`.
+
+Measured, by counting surviving prefixes `N_k` at each level of the complete
+search tree and fitting `log2 N_k` against `k`:
+
+| n | c | slope (bits/column) | `-1/slope` |
+|---|---|---|---|
+| 13 | 2 | -1.346 | 0.743 |
+| 13 | 3 | -1.356 | 0.737 |
+| 14 | 2 | -1.299 | 0.770 |
+| 14 | 3 | -1.378 | 0.725 |
+| 15 | 2 | -1.327 | 0.754 |
+| 15 | 3 | -1.440 | 0.695 |
+| 16 | 2 | -1.405 | 0.712 |
+| 16 | 3 | -1.224 | 0.817 |
+
+Slope clusters at `-1.35 +/- 0.15` against the predicted `-1.415`, and the
+first-level ratio is `N_1/N_0 = 0.376 = 2^-1.41`, splitting as one bit for the
+`E` constraint times `0.75` for the hard-core survival — the two predicted
+terms, separately visible.
+
+**The failure mode is known and must be stated.**  This derivation assumes the
+per-column constraints behave independently.  That is exactly the null refuted
+for `(BWH+)` in `PREREG-psi-constraint-counting.md`, where `R_k` departed from
+1 at large `k` and reached 18.  The same departure could occur here at `k`
+beyond the reach of a complete search, and it would be invisible in this fit,
+which is dominated by small `k` where the counts are large.  So section 5's
+`(RW-alpha)` is a conjecture with a mechanism sketch, not a derivation of one:
+the mechanism explains the observed rate, and the observed rate is measured
+only where the null has not yet been tested against its own clustering.
+
+What would settle it is a proof that the `E` constraint per column is not
+merely one bit on average but one bit unconditionally, given the state.  That
+is a statement about the ancestry law in `RESULTS-PSI-ANCESTRY-LAW.md` section
+3, and it is the sharpest concrete target this session leaves.
