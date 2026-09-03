@@ -1,8 +1,12 @@
 # Route: a subinvariant weight as a finite certificate on an infinite state graph
 
-Date: 2026-09-03.  **Not attempted.**  This file records a technique found by
-literature search, states it precisely enough to implement, and marks the two
-places it can fail.  Nothing here is a result.
+Date: 2026-09-03.  **Attempted the same day and KILLED**; see
+`PREREGISTRATION-SUBINVARIANT-CERTIFICATE.md` and
+`RESULTS-SUBINVARIANT-CERTIFICATE.md`.  This file records the technique as
+found by literature search and marks the two places it can fail.  Both fired.
+Section 3.1, `inf_s w > 0`, was the binding one exactly as predicted here, and
+section 6's first-return twin never applied: the survivor graph is a DAG with
+out-degree one, so it has no returns.  Nothing in this file is a result.
 
 ## 1. The technique
 
