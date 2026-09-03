@@ -263,3 +263,27 @@ forward-diagram bits; statements about the indicator of an empty set;
 forgetting that the hit vector is monotone; forgetting that the next symbol
 is forced.  Add all five to `BACKLOG-PROMPT.md` section 4 before the next
 generation round.
+
+## 16. Fifth external batch (10 entries, source reading) and round-5 screening (`backlog_screen_r5.py`, log)
+
+The generator's own triage "kept" five round-4 entries that were already
+killed; it had not seen the round-4 log.  Its lengths are still wrong
+(`W` has length `n`, `Psi` has length `n + 2`).
+
+| id | status | evidence |
+|---|---|---|
+| metallic-substitution-sources-eliminated, tribonacci-family-prefix-landscape | vacuous on arrival | Tribonacci-2 fixed point `121·12·…` contains `11` at its first junction; no admissible factor |
+| defect-window-growing-distance-echo | ill-posed | block at `j + n + 20` lies outside `Psi` |
+| reverse-affine-cancellation-source | killed: round 4 W | identity on 4910 of 10272 columns |
+| source-family-entropy-expansion | killed by arithmetic | with `m = n` it reads `C_k >= |A_n| 2^(k-4)`, impossible for `k > 4`; the map is 5-to-1 on hard-core sources |
+| source-first-diff-visible | killed | the alternating source `1212…` and its first-bit flip (`d = 0`) have identical `Psi` over the whole window at every `n = 7..14` |
+| periodic-source-defect-oscillation | killed | `W = 22121`, `p = 5`, `n = 5`: constant `Psi` (one of the two known `n = 5` BWH+ constants) |
+| boundary-read-reversal-shot | killed | every admissible pair has an equal mirrored position, `n = 6..14` |
+| source-bit-haar-coefficient-decay | killed | for near-alternating sources only 1 to 3 of the `n` bits influence `Psi` at all (`n = 6..15`), against a required `n - 4` |
+| klein-toggle-pair-distances | held, threshold vacuous | minimum pairwise-distance sum is 16 to 32 against a required `n/10 <= 1.5`; the minimizer is always `1212…` |
+
+Side fact worth a register note: for the alternating source `1212…` and its
+near neighbours, `Psi_n(W)` depends on only one to three source bits.  The
+source-to-`Psi` map has a large kernel exactly on the checkerboard-like
+sources.  Cumulative: 87 stated entries, 25 screened, 21 killed, 4 held as
+census consequences, none a proof route.
