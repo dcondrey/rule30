@@ -244,3 +244,13 @@ law in these coordinates; the joint constraint acts only in the tail, where
 survivors cluster rather than thin.  A proof cannot come from a bounded-lag
 conditional argument.  The Rule 90 control was not run (no Rule 90 carry
 kernel in this arm).
+
+**9.6 Two side facts from the backlog screening.**  (a) Hard-core alone does
+not kill: at `n = 16`, 1292 of 65536 sources have a forced continuation of
+length `n + 2` that is fully hard-core, `3.5x` the independence estimate
+`2^16 * (3/4)^18`.  The `E`-pin is what those need to fail.  (b) For the
+alternating source `1212...` and its near neighbours, `Psi_n(W)` depends on
+only one to three of the `n` source bits (`n = 6..15`); the source-to-`Psi`
+map has a large kernel exactly on the checkerboard-like sources
+(BACKLOG.md section 16).  `RESULTS-CLUSTER-ANATOMY.md` shows the same kernel
+is what the survivor clusters are: one endpoint state, several sources.

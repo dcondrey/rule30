@@ -194,7 +194,7 @@ Three recurring defects, on top of the two from earlier batches:
 
 | id | status | evidence |
 |---|---|---|
-| half-survivor-step | killed: `backlog_screen_r2_20260902.log` K | `n = 9, c = 3`: survivors 6, 6, 6, 6 at `k = 5..8` (ratio 1.0); `n = 12, c = 2`: 2, 2.  The clusters survive several levels together |
+| half-survivor-step | killed: `backlog_screen_r2_20260902.log` K | `n = 9, c = 3`: survivors 6, 6, 6, 6 at `k = 5..8` (ratio 1.0); `n = 12, c = 2`: 2, 2.  The clusters are fibres of one endpoint state (`RESULTS-CLUSTER-ANATOMY.md`): in states the run is 1, 1, 1, 1 |
 | zero-distance-affine-space | killed: `psi_structure` census | unstopped defect word is `Psi`; at `n = 15` it is `1^16 0`, distance 1 from the constant line; constants at `n = 5, 6` give distance 0 |
 | hit-language-all-ones-rare | killed: `rw_margin_20260902.log` | every `n >= 9` has a run `>= 8`, so `R(N)` is linear |
 | finite-exhaustion-depth | killed literally at `n = 3` (`E = 5 > 4.4`); held for `n = 4..28` | this is (RW-alpha) with `alpha = 0.8, C = 2`, restated as extinction depth; not a lemma with a proof route |

@@ -1,0 +1,283 @@
+== RW cluster: n=9 c=3 hardcore=True: deepest=8, 6 members
+  src=112222122 cont=12212221
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=VIOL; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=16 (m=26): 12031203120311123031123030  |Z|=6 |W2|=5 |N|=20
+     T[u][n] trajectory over continuation: 33333333
+     diagonal Q at death: 03112303030000000
+  src=121222122 cont=12212221
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=VIOL; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=16 (m=26): 12031203120311123031123030  |Z|=6 |W2|=5 |N|=20
+     T[u][n] trajectory over continuation: 33333333
+     diagonal Q at death: 03112303030000000
+  src=122222122 cont=12212221
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=VIOL; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=16 (m=26): 12031203120311123031123030  |Z|=6 |W2|=5 |N|=20
+     T[u][n] trajectory over continuation: 33333333
+     diagonal Q at death: 03112303030000000
+  src=212222122 cont=12212221
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=VIOL; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=16 (m=26): 12031203120311123031123030  |Z|=6 |W2|=5 |N|=20
+     T[u][n] trajectory over continuation: 33333333
+     diagonal Q at death: 03112303030000000
+  src=221222122 cont=12212221
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=VIOL; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=16 (m=26): 12031203120311123031123030  |Z|=6 |W2|=5 |N|=20
+     T[u][n] trajectory over continuation: 33333333
+     diagonal Q at death: 03112303030000000
+  src=222222122 cont=12212221
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=VIOL; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=16 (m=26): 12031203120311123031123030  |Z|=6 |W2|=5 |N|=20
+     T[u][n] trajectory over continuation: 33333333
+     diagonal Q at death: 03112303030000000
+  distinct forced continuations: 1
+     12212221 <- 6 sources
+  shared window cells (d=-u..n-1, '.' = differs): 12031203120311123031123030  (0 of 26 differ)
+  distinct full endpoint states at k=0 among members: 1
+  shared source bits: ...222122
+  common source suffix length: 6
+  |Z| values: [6]; |W2| values: [5]
+
+== BWH+ cluster: n=15 c=3 hardcore=False: deepest=16, 18 members
+  src=111122211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=111212211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=112212211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=112222211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=121122211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=121212211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=121222211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=122212211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=122222211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=211122211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=211212211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=212212211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=212222211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=221122211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=221212211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=221222211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=222212211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  src=222222211212112 cont=1221111112211121
+     death: forced e=1 gives E=0, need E=1 [e=1: T[u][n]=2 (H=1,E=0) hc=ok; e=2: T[u][n]=0 (H=0,E=1) hc=ok]
+     window u-1=30 (m=46): 1203112123003212111212321120312003030030312030  |Z|=12 |W2|=11 |N|=34
+     T[u][n] trajectory over continuation: 3333333333333333
+     diagonal Q at death: 0030300303120303000000000000000
+  distinct forced continuations: 1
+     1221111112211121 <- 18 sources
+  shared window cells (d=-u..n-1, '.' = differs): 1203112123003212111212321120312003030030312030  (0 of 46 differ)
+  distinct full endpoint states at k=0 among members: 1
+  shared source bits: .....2211212112
+  common source suffix length: 10
+  |Z| values: [12]; |W2| values: [11]
+
+== RW: n=12 c=2 hardcore=True: deepest=9, 2 members
+  src=111122211121 cont=212222222
+     death: forced e=2 gives E=1, need E=0 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=3 (H=1,E=1) hc=ok]
+     window u-1=20 (m=33): 212121212121212121212303003212031  |Z|=4 |W2|=13 |N|=29
+     T[u][n] trajectory over continuation: 222222222
+     diagonal Q at death: 303003212031200000000
+  src=211122211121 cont=212222222
+     death: forced e=2 gives E=1, need E=0 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=3 (H=1,E=1) hc=ok]
+     window u-1=20 (m=33): 212121212121212121212303003212031  |Z|=4 |W2|=13 |N|=29
+     T[u][n] trajectory over continuation: 222222222
+     diagonal Q at death: 303003212031200000000
+  distinct forced continuations: 1
+     212222222 <- 2 sources
+  shared window cells (d=-u..n-1, '.' = differs): 212121212121212121212303003212031  (0 of 33 differ)
+  distinct full endpoint states at k=0 among members: 1
+  shared source bits: .11122211121
+  common source suffix length: 11
+  |Z| values: [4]; |W2| values: [13]
+
+== RW: n=16 c=3 hardcore=True: deepest=10, 18 members
+  src=1111112122211122 cont=2212121212
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 212003030300031203112032112123031112303112  |Z|=11 |W2|=9 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 21230311123031123000000000
+  src=1112112122211122 cont=2212121212
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 212003030300031203112032112123031112303112  |Z|=11 |W2|=9 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 21230311123031123000000000
+  src=1122222111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=1211112122211122 cont=2212121212
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 212003030300031203112032112123031112303112  |Z|=11 |W2|=9 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 21230311123031123000000000
+  src=1212112122211122 cont=2212121212
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 212003030300031203112032112123031112303112  |Z|=11 |W2|=9 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 21230311123031123000000000
+  src=1212222111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=1221122111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=1221222111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=1222222111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=2111112122211122 cont=2212121212
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 212003030300031203112032112123031112303112  |Z|=11 |W2|=9 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 21230311123031123000000000
+  src=2112112122211122 cont=2212121212
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 212003030300031203112032112123031112303112  |Z|=11 |W2|=9 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 21230311123031123000000000
+  src=2122222111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=2211112122211122 cont=2212121212
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 212003030300031203112032112123031112303112  |Z|=11 |W2|=9 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 21230311123031123000000000
+  src=2212112122211122 cont=2212121212
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=1 (H=0,E=0) hc=ok; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 212003030300031203112032112123031112303112  |Z|=11 |W2|=9 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 21230311123031123000000000
+  src=2212222111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=2221122111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=2221222111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  src=2222222111221121 cont=2121212121
+     death: forced e=2 gives E=0, need E=1 [e=1: T[u][n]=0 (H=0,E=1) hc=VIOL; e=2: T[u][n]=2 (H=1,E=0) hc=ok]
+     window u-1=25 (m=42): 120311123003232120030303003031203211212112  |Z|=11 |W2|=10 |N|=31
+     T[u][n] trajectory over continuation: 3333333333
+     diagonal Q at death: 30312032112121123000000000
+  distinct forced continuations: 2
+     2212121212 <- 8 sources
+     2121212121 <- 10 sources
+  shared window cells (d=-u..n-1, '.' = differs): ..........0..3....................1....112  (36 of 42 differ)
+  distinct full endpoint states at k=0 among members: 2
+  shared source bits: ......21..2.112.
+  common source suffix length: 0
+  |Z| values: [11]; |W2| values: [9, 10]
+
+== survivors counted as sources vs as distinct endpoint states, hardcore=True
+   (the state at k=0 is (Q_n, Psi_n) with the source appended; a fibre is one state's preimage)
+  n=6  c=2: k=0..: 64/39/3 22/12/3 6/4/3 3/1/3
+  n=6  c=3: k=0..: 64/39/3 28/15/3 12/7/3 4/3/2
+  n=7  c=2: k=0..: 128/73/3 41/21/3 17/8/3 9/4/3 5/2/3
+  n=7  c=3: k=0..: 128/73/3 58/24/6 20/8/6 14/5/6 10/4/6
+  n=8  c=2: k=0..: 256/129/6 87/37/8 44/14/8 9/2/8
+  n=8  c=3: k=0..: 256/129/6 97/44/6 49/21/6 17/7/6 7/4/3 4/2/3 3/1/3
+  n=9  c=2: k=0..: 512/232/8 162/62/8 57/24/6 17/7/6 4/2/2
+  n=9  c=3: k=0..: 512/232/8 214/84/8 112/40/8 53/16/6 23/6/6 6/1/6 6/1/6 6/1/6 6/1/6
+  n=10 c=2: k=0..: 1024/410/8 396/138/8 177/57/7 62/20/7 26/7/7 6/2/4
+  n=10 c=3: k=0..: 1024/410/8 385/142/9 159/57/8 62/24/6 22/8/4 14/5/4 12/4/4 4/1/4
+  n=11 c=2: k=0..: 2048/742/9 728/230/9 285/85/8 93/29/8 36/10/8 9/3/4 4/1/4
+  n=11 c=3: k=0..: 2048/742/9 805/252/16 325/101/12 157/45/10 79/23/9 32/10/9 14/5/4 12/4/4
+  n=12 c=2: k=0..: 4096/1329/16 1607/451/18 752/187/18 278/72/18 119/29/18 33/12/7 14/5/4 6/2/4 2/1/2 2/1/2
+  n=12 c=3: k=0..: 4096/1329/16 1487/425/18 721/199/17 226/73/11 87/28/6 44/13/6 5/2/4 1/1/1 1/1/1
+  n=13 c=2: k=0..: 8192/2376/24 3068/785/18 1146/301/16 489/129/16 171/45/10 81/23/10 27/8/10 12/2/10
+  n=13 c=3: k=0..: 8192/2376/24 3094/773/18 1266/317/14 503/123/14 176/49/8 70/20/6 20/7/6 9/3/4 3/1/3 3/1/3
+  n=14 c=2: k=0..: 16384/4265/26 6145/1359/26 2685/550/26 1099/222/18 386/84/16 134/28/12 57/13/8 21/4/8 6/2/4 4/1/4 4/1/4
+  n=14 c=3: k=0..: 16384/4265/26 6145/1373/24 2684/589/23 1072/231/27 407/86/27 145/30/14 42/11/6 25/7/6 8/3/4
+  n=15 c=2: k=0..: 32768/7560/26 12134/2420/26 4829/921/26 1680/326/21 727/134/21 272/47/21 92/22/16 43/13/8 18/4/8 10/3/4
+  n=15 c=3: k=0..: 32768/7560/26 12533/2444/36 5054/994/30 2065/382/30 818/158/20 333/67/20 142/28/16 30/9/8 9/3/4
+  n=16 c=2: k=0..: 65536/13382/46 24540/4336/46 10598/1717/46 4332/684/32 2017/299/28 765/122/28 255/43/16 124/20/16 35/6/16 11/3/4 3/1/3
+  n=16 c=3: k=0..: 65536/13382/46 24909/4325/52 10412/1787/39 3977/688/32 1698/291/32 625/116/24 234/49/18 99/19/16 54/8/16 28/5/10 18/2/10
+   entries are sources/states/max-fibre per level
+
