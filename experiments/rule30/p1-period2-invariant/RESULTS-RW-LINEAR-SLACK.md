@@ -209,3 +209,17 @@ ordered pairs (nonzero below, even above) plus a parity correction.  The
 correction to `uc/BRIEF.md` recorded there (the `Phi` indicator is
 `[T != 0]`, not `[T == 0]`; the Moore step uses `[T == 0]`) was found by this
 check failing on the first form and passing on the second.
+
+**9.4 Census extended to `n = 20`** (`rw_margin_n18-20_20260902.log`,
+complete search, `r = 0`):
+
+| n | c=2 deepest | c=3 deepest | need | slack | slope (bits/col) |
+|---|---|---|---|---|---|
+| 18 | 12 | 11 | 20 | 8, 9 | -1.19, -1.30 |
+| 19 | 11 | 13 | 21 | 10, 8 | -1.38, -1.36 |
+| 20 | 11 | 14 | 22 | 11, 8 | -1.37, -1.22 |
+
+`deepest / n` sits at `0.55 to 0.70`; the slack has not fallen below 8 since
+`n = 15`.  The `n = 20` search visits `2^20` prefixes in about a minute, so
+the census is not compute-bound; it is stopped here because obstruction H
+says more of it proves nothing.
