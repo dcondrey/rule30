@@ -111,7 +111,9 @@ column(w)   determines and is determined by   state(w[-u:]),
 ```
 
 the complete endpoint state (column and diagonal) of the last `u` symbols.
-Verified well defined and onto `C_u` for `u = 3..8` (part 3, all `True`).
+Verified well defined and onto `C_u` for `u = 3..10` (part 3, all `True`;
+log `bij_ext_20260903.log` carries `u = 9, 10`, the latter matching a column
+at length 19 against the 410 states at depth 10).
 Two candidate maps that are not the bijection, and were checked and rejected:
 the length-`u` prefix state, and any split of the long column into a leading
 and trailing block.
@@ -123,7 +125,21 @@ say (`1.328^2 = 1.764`).  **There is one growth constant here, not two.**
 
 ## 5. The memory law, with proof
 
-### 5a. Census
+### 5a. Prior record in this repo
+
+The half-slope cone itself is **not new here.**  `uc/r1-entropy/lightcone_check.py`
+(concurrent session, log `lightcone_check.log`) states it as fact (1), "`T[u][d]`
+depends on `e_j` only if `j >= (u-d-1)/2`", and checks it exhaustively with zero
+failures for `u = 2..12`.  That script indexes by depth into the column and
+covers the diagonal cells too; this one indexes by distance from the end of the
+column.  The two conventions differ by at most one and were not reconciled
+exactly, so treat them as the same phenomenon rather than the same formula.
+
+What is new below is the **proof at all lengths**, the exact per-entry form,
+and the counting consequence `|Col_L| <= 2^ceil((L+1)/2)`.  The observation is
+theirs; the quantifier and the bound are the contribution.
+
+### 5b. Census
 
 `column_memory.py`, complete enumeration of `{1,2}^L` for `L = 1..18`, `k(L)`
 the least `k` such that `column(w)` is a well defined function of `w[-k:]`:
@@ -143,7 +159,7 @@ k(L, i) = ceil((d + 1) / 2),    d = L - i
 on every `L = 1..14` and every entry, so the memory of an entry depends only
 on its distance from the end of the column and not otherwise on `L`.
 
-### 5b. Proof of the upper bound (all lengths)
+### 5c. Proof of the upper bound (all lengths)
 
 Let `w` have length `L`, let `C` be its column (`L+1` entries, indices `0..L`)
 and let `N` be the column of `w s` (`L+2` entries).  From `psi_kernel.peek`:
@@ -187,7 +203,7 @@ half of its input, at every length.**  Hence, unconditionally,
 |Col_L| <= 2^ceil((L+1)/2),     growth base sqrt(2) < 2.
 ```
 
-The census of 5a supplies the converse, that no smaller `k` works, for
+The census of 5b supplies the converse, that no smaller `k` works, for
 `L <= 18`; sharpness is not proved at all lengths and is not needed for the
 bound.
 
@@ -202,7 +218,7 @@ map.  The state does not forget: by section 4 the state at `u` is a column at
 
 Delivered:
 
-- `|Col_L| <= 2^ceil((L+1)/2)` for every `L`, **proved** in section 5b by
+- `|Col_L| <= 2^ceil((L+1)/2)` for every `L`, **proved** in section 5c by
   induction on the append recursion, giving a growth base of `sqrt(2)` for the
   column language.  Measured base `1.328`, so the bound holds with slack and
   is not tight.
@@ -252,12 +268,13 @@ uv run python column_quotient.py --tables --umax 19    # 30 s
 uv run python affine_branch.py 9 16                    # 60 s
 uv run python merge_anatomy.py --umax 17               # 40 s
 uv run python column_decomposition.py                  # 90 s
-uv run python column_memory.py --lmax 18               # 60 s
+uv run python column_decomposition.py --umax 2 --lmax 2 --bijmax 10   # 4 min
+uv run python column_memory.py --lmax 18 --profile 14   # 90 s
 ```
 
 ## 9. Next
 
-Section 5b closed the target this document originally named, so the open leads
+Section 5c closed the target this document originally named, so the open leads
 are downstream of it.
 
 1. **Sharpness at all lengths.**  Prove the converse of 5b, that no `k` below
