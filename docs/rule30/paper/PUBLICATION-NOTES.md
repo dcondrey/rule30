@@ -1,5 +1,20 @@
 # Publication notes: Rule 30 zero-tail theorem
 
+## Submission audit, 2026-09-02
+
+The submission draft now distinguishes a horizon (the last matching time,
+starting at time zero) from a prefix length (the number of matching symbols).
+Thus the combined maximum horizon is `w+1` and the corresponding maximum
+constant-prefix length is `w+2`. The extremizer counts remain `2^w` for even
+`w` and `2^w-1` for odd `w`.
+
+The Voorhees DOI has been corrected from the unrelated `10.1007/BF01223376`
+to `10.1007/BF01223374`. The retained novelty wording no longer claims that
+the bare all-one exclusion is new: Jen 1986, Theorem 7a is too close to support
+that claim. The paper claims the exact two fiber classifications and sharp
+horizon/count laws, none of which occurs in the four audited prior sources.
+See `CITATION-AUDIT.md`.
+
 ## Defensible claim
 
 > We classify both constant center-trace fibers of Rule 30, prove that no
@@ -430,12 +445,10 @@ from a zero trace; describe it as a partial formalization only.
 
 ## Before external circulation
 
-- **AI-disclosure statement is still missing from the manuscript.**  The arXiv
-  policy quoted above requires significant use of text-to-text generative AI to
-  be reported in methodology or acknowledgments.  `zero-tail-note.tex` has no
-  such statement.  Left unwritten deliberately: the wording asserts what the
-  named author's own contribution was, which is his to state, not to be drafted
-  for him.
+- ~~**AI-disclosure statement is still missing from the manuscript.**~~
+  **DONE 2026-09-02.** Appendix A identifies OpenAI Codex's editorial,
+  computation-orchestration, and citation-checking assistance and assigns
+  responsibility for the mathematics, proofs, and final text to the author.
 - ~~Replace “Anonymous working draft” with the actual author list and
   affiliations.~~  **DONE 2026-08-28.**  `zero-tail-note.tex:26-28` and the
   `pdfauthor` field carry David Lee Condrey, WritersLogic, Inc.,
