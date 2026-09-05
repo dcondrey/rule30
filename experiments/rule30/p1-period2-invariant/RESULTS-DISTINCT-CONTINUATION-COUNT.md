@@ -100,6 +100,28 @@ extended to `n=21`:
 | measured `k_dep` | 4 | 4 (`c=3`) / 5 (`c=2`) | 5 | 6 | 6 | 7 | 7 | 7 | 8 |
 | `floor(n/2) - 2` | 3 | 4 | 5 | 6 | 6 | 7 | 7 | 8 | 8 |
 
+**Provenance of every cell (2026-09-04, late session).** `n=17..21` were
+re-derived here from the logged `D` rows in `overnight_c{2,3}_{odd,even}.log`
+against the hard-core counts `2,3,5,8,13,21,34,55,89` — not copied from any
+prior document:
+
+```
+n=17 c=2  D=[2,3,5,8,13,21,33,...]        D_6=33 < 34   -> k_dep=6
+n=17 c=3  D=[2,3,5,8,13,21,30,...]        D_6=30 < 34   -> k_dep=6
+n=18 c=2  D=[2,3,5,8,13,21,34,37,...]     D_7=37 < 55   -> k_dep=7
+n=18 c=3  D=[2,3,5,8,13,21,34,41,...]     D_7=41 < 55   -> k_dep=7
+n=19 c=2  D=[2,3,5,8,13,21,34,49,...]     D_7=49 < 55   -> k_dep=7
+n=19 c=3  D=[2,3,5,8,13,21,34,45,...]     D_7=45 < 55   -> k_dep=7
+n=20 c=2  D=[2,3,5,8,13,21,34,50,...]     D_7=50 < 55   -> k_dep=7
+n=20 c=3  D=[2,3,5,8,13,21,34,52,...]     D_7=52 < 55   -> k_dep=7
+n=21 c=2  D=[2,3,5,8,13,21,34,55,65,...]  D_8=65 < 89   -> k_dep=8
+n=21 c=3  D=[2,3,5,8,13,21,34,55,66,...]  D_8=66 < 89   -> k_dep=8
+```
+
+Note that `n=20` misses on **both** tails, so its failure is a clean off-by-one
+and not a tail split; the only tail split on record remains `n=12`.
+`n=10..16` are from the table at the top of this document.
+
 It fails three ways:
 
 1. **`n=10`:** measured 4, predicted 3 — off by one high.

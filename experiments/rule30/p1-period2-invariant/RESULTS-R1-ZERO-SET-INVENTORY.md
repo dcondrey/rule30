@@ -170,15 +170,70 @@ Caution for anyone tempted by `drive01_long`'s `|Z| = 262144 = T/2`: that is
 `T/2` **by construction**, because the drive imposes `c = (01)^inf`. It is not
 evidence about the real centre column's density.
 
+## NEW RESULT: `H(2,w) >= w`, so the SAT/SMT exhaustion route cannot close R1
+
+The obvious next measurement looked like "extend the `H(p,w)` table to
+`w = 9,10,11` and see whether it plateaus". **That measurement is void: a
+plateau cannot occur, and the reason is the same finite-prefix lemma used above
+to retire `lhp_lock_search`.** Applied to `H` itself: truncate `(01)^inf` at
+`N`, pick any compatible right prefix, let left permutivity supply `L_1..L_N`,
+zero-pad. That is a finite row of support radius `~N` whose centre trace matches
+`(01)^inf` through time `N`. Hence `H(2,w) >= w` for every `w`, and `H` is
+unbounded.
+
+Measured constructively rather than argued, in **0.04 s**
+(`uc/r1-r1zero/h_horizon_lower_bound.py`, log alongside). The construction
+prescribes the trace, takes the **empty** `t=0` right half, derives
+`s(0,-1..-D)` by left permutivity, and then evolves the resulting finite row
+with the ordinary Rule 30 evaluator — so the derivation is never trusted, only
+the measured horizon:
+
+```
+rule 30, trace (01)^inf, empty right half:
+   D   support radius w   true horizon H   H - w
+   4                  1                6       5
+   8                  7                8       1
+  16                 16               17       1
+  32                 31               32       1
+  64                 64               65       1
+ 128                127              130       3
+ 200                199              200       1
+ 300                300              302       2
+```
+
+`H - w` stays in `{1,2,3,5}` out to `w = 300`, so empirically
+`H(2,w) = w + O(1)`, not merely `>= w`. This is a **lower bound** on the table's
+`H(2,w)` (the table maximises over all rows of radius `w`, this family has
+support in `[-w, 0]` only), and it is consistent with every published cell:
+`H(2,1) = 6` is reproduced exactly, and `H(2,7) >= 8` sits under the table's 9.
+It extends the table's reach in `w` by a factor of ~37 at zero SMT cost.
+
+**Consequences.**
+
+1. The plateau branch is closed; there is no uniform horizon bound to find.
+2. A kill condition of the form `H(2,w) > w + c` is the wrong test. The one
+   drafted earlier this session (`c = 8`) would not even have fired on the
+   existing data: `H(2,8) = 14` against `w + 8 = 16`.
+3. Each `w` still yields a genuine exclusion — no row of radius `<= w` has an
+   eventually period-2 centre trace — but the horizon needed grows at least
+   linearly in `w`, and no finite `w` covers all finite rows. **Extending the
+   SAT/SMT grid cannot close R1 or the `p=2` exclusion.** A structural theorem
+   is required, exactly as `RESULTS-eventual-period.md` already concluded in
+   words; this supplies the quantitative version.
+
+**Rule 90 filter, applied to this result itself.** The same construction, run
+under `rule90_step`, also gives `H - w` in `{1,3}` out to `w = 299` (control in
+the same log). So the unboundedness is a **left-permutivity fact, not a Rule 30
+fact** — both rules are left-permutive. That is the correct reading: this result
+is a negative about the *method*, and it must not be cited as saying anything
+about Rule 30 specifically. It fails the Rule 90 filter as a positive argument,
+by design.
+
 ## What is genuinely open on R1 after this inventory
 
-- **R1-a.** Does `H(p,w)` (max pin-consistent horizon) grow linearly in `w`?
-  The `p=2` row `6,6,6,6,8,9,9,14` over `w=1..8` is too short and too irregular
-  to fit. If growth is linear the SAT/SMT route never terminates and R1 needs a
-  structural theorem, not more compute; if it plateaus, that plateau *is* the
-  theorem. **This is the single highest-value measurement available**, and it is
-  a `w = 9,10,11` extension of an existing table, not new machinery.
-  Kill condition: `H(2,w)` exceeds `w + 8` at any `w <= 11`.
+- **R1-a. CLOSED this session** — `H(2,w) >= w`, see above. It was drafted as
+  the highest-value open measurement and it turned out to be answerable for
+  free. Do not spend SMT compute on `w = 9,10,11`.
 - **R1-b.** The general-finite-row form of the zero-set obligation: over all
   finite rows (not the lone seed), is `r|Z` forced periodic by a periodic `c`?
   The driven-RHP evidence above says local forcing fails; the open question is
@@ -188,9 +243,15 @@ evidence about the real centre column's density.
 
 ## Files
 
-- `scratchpad/verify_lhp_closure.py` — pin/pass identities and LHP closure.
-- `scratchpad/direct_lone_seed_period.py` — direct lone-seed exclusion.
+All three are committed under `uc/r1-r1zero/`, beside the code they audit:
 
-Both live in this session's scratchpad, not the repo: they are three-line
-verifications of already-documented facts, and the repo does not need two more
-scripts. Their outputs are transcribed above in full.
+- `verify_lhp_closure.py` — the pin and pass identities, and the LHP-closure
+  fact. Run: `env PYTHONPATH=. .venv/bin/python3 uc/r1-r1zero/verify_lhp_closure.py`
+- `direct_lone_seed_period.py` — the 0.1 s direct lone-seed exclusion that
+  retires seed task 34.
+- `h_horizon_lower_bound.py` with `h_horizon_lower_bound.log` — the
+  `H(2,w) >= w` construction and its Rule 90 control.
+
+Each is a few lines, self-checking (every construction is re-measured with the
+plain Rule 30 evaluator), and referenced from this document, so none of them is
+unowned tooling. Their outputs are transcribed above in full.
