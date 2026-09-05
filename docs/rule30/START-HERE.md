@@ -22,6 +22,7 @@ Proved prize-adjacent results exclude eventually constant centers only:
 
 No document proves a nonconstant-period exclusion, density convergence for the
 lone seed, or a computational lower bound.
+[Ordered-ancestry obstruction paper](obstruction/BOUNDED-CERTIFICATE-OBSTRUCTIONS.md) collects the exact bounded-certificate failures and their scope corrections.
 
 ## Where every attempt is indexed
 

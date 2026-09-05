@@ -2,13 +2,15 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
 \usepackage[margin=0.85in]{geometry}
 \usepackage{microtype}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
   pdftitle={Finite Configurations Cannot Generate a Constant Trace in Rule 30},
   pdfauthor={David Lee Condrey},
-  pdfsubject={Rule 30 finite-support constant-trace theorems}
+  pdfsubject={Rule 30 finite-support constant-trace theorems},
+  pdfkeywords={cellular automata, Rule 30, temporal trace, symbolic dynamics}
 }
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
@@ -70,6 +72,12 @@ $2^w-1$ for odd $w$.  Hence no column of a nonzero finite Rule 30 orbit is
 eventually constant.
 \end{abstract}
 
+\noindent\textbf{Keywords.} cellular automata; Rule 30; temporal trace;
+finite configuration; symbolic dynamics
+
+\noindent\textbf{2020 Mathematics Subject Classification.} 37B15, 68Q80,
+68R15.
+
 \section{Introduction}
 
 Rule 30 is the binary cellular automaton on $\{0,1\}^{\mathbb Z}$ whose local
@@ -97,8 +105,8 @@ The mechanism is an exact inversion: prescribing the right half and demanding
 an all-zero center forces the left half cell by cell, as a prefix-OR of the
 right half.  A right half whose first one sits at depth $3$, for instance,
 forces $L_1,L_2,\ldots=0,0,1,0,1,0,1,\ldots$, with ones at every odd depth past
-the third.  The uniqueness step is the
-left-permutive inverse argument of \cite{rowland}.  What makes the result
+the third.  The same one-sided bijectivity underlies Rowland's unique-history
+construction \cite[Prop.~1]{rowland}.  What makes the present classification
 Rule-30-specific is the OR in \eqref{eq:rule30}, which latches; the analogous
 claim is false for Rule 90 (Section~\ref{sec:finite}).  Figure~\ref{fig:panels}
 shows the forced left half and that contrast.
@@ -412,7 +420,7 @@ zero case when $w$ is odd, with the corresponding counts $2^w$ and $2^w-1$.
 \end{proof}
 
 
-\section{Scope and further work}
+\section{Conclusion}
 
 Theorems~\ref{thm:fiber} and~\ref{thm:onefiber} classify the two constant
 fibers of the trace map, and Corollaries~\ref{cor:finite}
@@ -438,58 +446,93 @@ $n=30$; a general structural account of that exclusion, beyond the small-radius
 regularities we have observed, remains open.  We make no conjecture
 here about whether $H(2,w)-w$ is bounded.
 
-\section{Reproducibility and formalization}\label{sec:repro}
+\appendix
+\section{Reproducibility and formalization}\label{app:repro}
 
-The accompanying source archive was regenerated against repository snapshot
-
-\begin{center}
-\small\texttt{99b2d82af113e385f43452eb2b8f1b22180e6de0}.
-\end{center}
-
-From the repository root, the following commands reproduce the computational
-checks and figures.
+The audited computational source is repository commit
+\texttt{99b2d82af113e385f43452eb2b8f1b22180e6de0}.  The manuscript branch
+changes no file under \texttt{13-rule30/experiments/rule30}.  From the repository
+root, the independent numerical audit is run by
 
 \begin{verbatim}
-cd docs/rule30/paper
-uv run python ../../../experiments/rule30/constant_trace_audit.py
-uv run python ../../../experiments/rule30/figures.py --check --out figures
-uv run --with z3-solver python \
-  ../../../experiments/rule30/zero_tail_smt_certificate.py --json
+uv run python 13-rule30/experiments/rule30/constant_trace_audit.py 7
+\end{verbatim}
+
+It ends with \texttt{FAILURES: none} and returns the last matching time index
+and number of extremizers shown below.  Prefix lengths are the displayed time
+indices plus one.
+
+\begin{center}
+\small
+\begin{tabular}{@{}rrrrrrr@{}}
+\toprule
+$w$ & $H_0$ & count & $H_1$ & count & $\max H$ & count\\
+\midrule
+1&2&1&1&2&2&1\\
+2&2&3&3&4&3&4\\
+3&4&7&3&8&4&7\\
+4&4&15&5&16&5&16\\
+5&6&31&5&32&6&31\\
+6&6&63&7&64&7&64\\
+7&8&127&7&128&8&127\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every cell in Figures~\ref{fig:panels} and~\ref{fig:horizon} is generated from
+\eqref{eq:rule30}.  The first command checks the claims without writing; the
+second regenerates all nine TikZ fragments used by the two figures.
+
+\begin{verbatim}
+cd 13-rule30/experiments/rule30
+uv run python figures.py --check
+uv run python figures.py
+\end{verbatim}
+
+The check prints
+\begin{verbatim}
+figures: all claimed properties hold
+\end{verbatim}
+Regeneration begins its output with
+\begin{verbatim}
+figures: wrote TikZ fragments to
+\end{verbatim}
+followed by the clone-local paper \texttt{figures} directory.
+Figure~\ref{fig:panels} checks an all-zero center for the displayed
+$\mathcal C_3$ row, an all-zero Rule-90 center for the row with ones at
+$\{-1,1\}$, and escape of that same row under Rule 30.  The six panels in
+Figure~\ref{fig:horizon}, for $w=1,\ldots,6$, have first nonzero center times
+$3,3,5,5,7,7$.  The numerical table above is the complete expected table from
+the independent audit.
+
+The focused executable tests are run in the same directory by
+
+\begin{verbatim}
+uv run python -m unittest test_zero_tail_probe.py
+\end{verbatim}
+
+The expected result is \texttt{Ran 11 tests} followed by \texttt{OK}.  Finally,
+the PDF is built from \path{13-rule30/docs/rule30/paper} with
+
+\begin{verbatim}
 latexmk -pdf -interaction=nonstopmode -halt-on-error zero-tail-note.tex
 \end{verbatim}
 
-\pagebreak
-The exhaustive audit must end with \texttt{FAILURES: none}.  For
-$w=1,\ldots,7$, its zero-horizon/count pairs are
-\texttt{2/1, 2/3, 4/7, 4/15, 6/31, 6/63, 8/127}; its one-horizon/count pairs
-are \texttt{1/2, 3/4, 3/8, 5/16, 5/32, 7/64, 7/128}.  These are horizon
-indices, so the associated prefix lengths are one larger.  The figure command
-must print \texttt{figures: all claimed properties hold}; it generates the
-three panels of Figure~\ref{fig:panels} and the six panels of
-Figure~\ref{fig:horizon}.  The SMT report must return status \texttt{PASS}
-with all 18 local Boolean obligations \texttt{unsat}.  The paper has
-no numerical tables.  A successful \LaTeX{} build produces a six-page PDF.
+The accompanying \texttt{Rule30ZeroTail.lean} is a partial formalization.  It
+formalizes the local equation and left permutivity, propagation of a rightmost
+discrepancy and triangular unit sensitivity, the prefix-OR closed form assuming
+a first positive right-hand one, the local Boolean identities for the
+$\mathcal C_m$ invariant, and the non-left-bounded conclusion conditional on
+the classification disjunction.  It does \emph{not} derive that disjunction from
+an all-zero trace, and it does not formalize the all-one fiber, the finite-support
+corollaries, or either sharp horizon and extremizer count.  The formalization is
+therefore supporting verification, not a machine-checked proof of the main
+theorems.
 
-The Lean~4 file \texttt{experiments/rule30/Rule30ZeroTail.lean} is explicitly
-partial.  It formalizes the local Rule 30 equation and left permutivity,
-arbitrary-depth triangular sensitivity, the prefix-OR formula conditional on a
-first right-hand one, the Boolean identities used for
-$F(\mathcal C_m)\subseteq\mathcal C_{m-1}$ and
-$F(\mathcal C_1)\subseteq\mathcal C_1$, and the infinite-left-tail
-contradiction conditional on the classification.  It does not formalize the
-derivation of that classification from a zero trace, the all-one fiber, either
-sharp horizon theorem, or the eventual-constant corollaries.  With Lean
-4.33.1 installed, it is checked by
-
-\begin{verbatim}
-lean ../../../experiments/rule30/Rule30ZeroTail.lean
-\end{verbatim}
-
-which should exit successfully without output.  Lean was not installed in the
-environment used for the present editorial rebuild, so that command was not
-rerun here.  Every cell in both figures was regenerated directly from
-\eqref{eq:rule30}; the exhaustive and SMT checks supplement, but do not replace,
-the unbounded proofs above.
+\paragraph{Tool disclosure.}
+OpenAI Codex was used to assist with editorial revision, computation
+orchestration, and citation checking.  The author is responsible for the
+mathematical statements, proofs, and final text.
 
 \begin{thebibliography}{5}\footnotesize
 \setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
@@ -512,9 +555,10 @@ DOI: \href{https://doi.org/10.25088/ComplexSystems.16.3.239}{10.25088/ComplexSys
 \bibitem{voorhees} B. Voorhees, Predecessor states for certain cellular
 automata evolutions, \emph{Communications in Mathematical Physics} 117(3)
 (1988), 431--439.
-DOI: \href{https://doi.org/10.1007/BF01223376}{10.1007/BF01223376}.
+DOI: \href{https://doi.org/10.1007/BF01223374}{10.1007/BF01223374}.
 \bibitem{wolfram} S. Wolfram, Announcing the Rule 30 prizes, 2019.
-\url{https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/}.
+\href{https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/}
+{Stephen Wolfram Writings}.
 \end{thebibliography}
 
 \end{document}

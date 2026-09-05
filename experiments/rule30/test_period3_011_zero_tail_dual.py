@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from period3_zero_tail_dual import (
+from period3_011_zero_tail_dual import (
     BRANCH_SECTION,
     LEX_FACTORS,
     factor_vector,
