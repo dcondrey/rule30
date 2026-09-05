@@ -1,0 +1,2 @@
+n= 21 c=3 r=0 max_survival= 16 gamma=  7 n_distinct_states=  309036 finalists=['111112221222221111222', '112112221222221111222']
+n= 23 c=3 r=0 max_survival= 16 gamma=  9 n_distinct_states=  964059 finalists=['11112211211221121111212']
