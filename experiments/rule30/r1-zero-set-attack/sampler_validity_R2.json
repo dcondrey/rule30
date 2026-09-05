@@ -1,0 +1,212 @@
+{
+ "args": {
+  "R": 2,
+  "kmax": 4,
+  "n": 60,
+  "D": 24,
+  "T": 300,
+  "seed": 20260905
+ },
+ "cases": [
+  {
+   "case": "rule90_control",
+   "rule": 90,
+   "w": "0",
+   "q": 1,
+   "R": 2,
+   "k": 1,
+   "true_word_membership": {
+    "safety_survived": true,
+    "safety_fail_at": null,
+    "n_letters": 300,
+    "earliest_surviving_commit": 2,
+    "n_states_final": 598,
+    "onset_direct": 1
+   },
+   "true_word_diff_events": 16,
+   "true_word_col_-1_len": 298,
+   "true_word_left_depth": 24,
+   "true_word_left_detail": {
+    "stopped": null
+   },
+   "sampled_best_left_depth": 5,
+   "n_sampled": 29,
+   "min_sampled_prefix_len": 5
+  },
+  {
+   "case": "rule90_control",
+   "rule": 90,
+   "w": "0",
+   "q": 1,
+   "R": 2,
+   "k": 2,
+   "true_word_membership": {
+    "safety_survived": true,
+    "safety_fail_at": null,
+    "n_letters": 300,
+    "earliest_surviving_commit": 2,
+    "n_states_final": 598,
+    "onset_direct": 1
+   },
+   "true_word_diff_events": 16,
+   "true_word_col_-1_len": 298,
+   "true_word_left_depth": 24,
+   "true_word_left_detail": {
+    "stopped": null
+   },
+   "sampled_best_left_depth": 5,
+   "n_sampled": 60,
+   "min_sampled_prefix_len": 7
+  },
+  {
+   "case": "rule90_control",
+   "rule": 90,
+   "w": "0",
+   "q": 1,
+   "R": 2,
+   "k": 3,
+   "true_word_membership": {
+    "safety_survived": true,
+    "safety_fail_at": null,
+    "n_letters": 300,
+    "earliest_surviving_commit": 2,
+    "n_states_final": 598,
+    "onset_direct": 1
+   },
+   "true_word_diff_events": 16,
+   "true_word_col_-1_len": 298,
+   "true_word_left_depth": 24,
+   "true_word_left_detail": {
+    "stopped": null
+   },
+   "sampled_best_left_depth": 6,
+   "n_sampled": 60,
+   "min_sampled_prefix_len": 9
+  },
+  {
+   "case": "rule90_control",
+   "rule": 90,
+   "w": "0",
+   "q": 1,
+   "R": 2,
+   "k": 4,
+   "true_word_membership": {
+    "safety_survived": true,
+    "safety_fail_at": null,
+    "n_letters": 300,
+    "earliest_surviving_commit": 2,
+    "n_states_final": 598,
+    "onset_direct": 1
+   },
+   "true_word_diff_events": 16,
+   "true_word_col_-1_len": 298,
+   "true_word_left_depth": 24,
+   "true_word_left_detail": {
+    "stopped": null
+   },
+   "sampled_best_left_depth": 6,
+   "n_sampled": 60,
+   "min_sampled_prefix_len": 11
+  },
+  {
+   "case": "rule30_p2",
+   "rule": 30,
+   "w": "01",
+   "q": 1,
+   "R": 2,
+   "k": 1,
+   "true_word_membership": {
+    "safety_survived": true,
+    "safety_fail_at": null,
+    "n_letters": 300,
+    "earliest_surviving_commit": 299,
+    "n_states_final": 4,
+    "onset_direct": 298
+   },
+   "true_word_diff_events": 149,
+   "true_word_col_-1_len": 298,
+   "true_word_left_depth": 24,
+   "true_word_left_detail": {
+    "stopped": null
+   },
+   "sampled_best_left_depth": 1,
+   "n_sampled": 48,
+   "min_sampled_prefix_len": 5
+  },
+  {
+   "case": "rule30_p2",
+   "rule": 30,
+   "w": "01",
+   "q": 1,
+   "R": 2,
+   "k": 2,
+   "true_word_membership": {
+    "safety_survived": true,
+    "safety_fail_at": null,
+    "n_letters": 300,
+    "earliest_surviving_commit": 299,
+    "n_states_final": 4,
+    "onset_direct": 298
+   },
+   "true_word_diff_events": 149,
+   "true_word_col_-1_len": 298,
+   "true_word_left_depth": 24,
+   "true_word_left_detail": {
+    "stopped": null
+   },
+   "sampled_best_left_depth": 2,
+   "n_sampled": 60,
+   "min_sampled_prefix_len": 8
+  },
+  {
+   "case": "rule30_p2",
+   "rule": 30,
+   "w": "01",
+   "q": 1,
+   "R": 2,
+   "k": 3,
+   "true_word_membership": {
+    "safety_survived": true,
+    "safety_fail_at": null,
+    "n_letters": 300,
+    "earliest_surviving_commit": 299,
+    "n_states_final": 4,
+    "onset_direct": 298
+   },
+   "true_word_diff_events": 149,
+   "true_word_col_-1_len": 298,
+   "true_word_left_depth": 24,
+   "true_word_left_detail": {
+    "stopped": null
+   },
+   "sampled_best_left_depth": 4,
+   "n_sampled": 60,
+   "min_sampled_prefix_len": 10
+  },
+  {
+   "case": "rule30_p2",
+   "rule": 30,
+   "w": "01",
+   "q": 1,
+   "R": 2,
+   "k": 4,
+   "true_word_membership": {
+    "safety_survived": true,
+    "safety_fail_at": null,
+    "n_letters": 300,
+    "earliest_surviving_commit": 299,
+    "n_states_final": 4,
+    "onset_direct": 298
+   },
+   "true_word_diff_events": 149,
+   "true_word_col_-1_len": 298,
+   "true_word_left_depth": 24,
+   "true_word_left_detail": {
+    "stopped": null
+   },
+   "sampled_best_left_depth": 4,
+   "n_sampled": 60,
+   "min_sampled_prefix_len": 11
+  }
+ ]
+}
