@@ -79,10 +79,48 @@ first `k` continuation symbols are determined by roughly `2k` source
 coordinates. While `2k < n` there are enough free source coordinates to
 realize *every* hard-core prefix, so `D_k` saturates the Fibonacci bound;
 once `2k > n` the source runs out and the image must shrink. That predicts
-departure at `k ~ n/2`, which is what is measured. The surjectivity is
-therefore a light-cone counting fact, not evidence of a special
+departure at a *scale* `k ~ n/2`. **It does not predict a formula, and the
+formula written above is falsified — see the 2026-09-04 correction below.**
+The surjectivity is a light-cone counting fact, not evidence of a special
 structureless regime, and it should not be cited as an independent
 "maximal entropy" finding — it is the same memory law already on record.
+
+## Correction 2026-09-04: `k_dep = floor(n/2) - 2` is FALSIFIED
+
+The `~` in `k_departure ~ n/2 - 2` above was written from `n <= 16` data and
+was scored, in the original preregistration, with a `|k_dep - predicted| <= 1`
+tolerance. **That tolerance was a design error.** `D_k` is an exact integer
+from exhaustive enumeration — no sampling, no noise — so a tolerance on it
+makes the prediction unfalsifiable and it converted a genuine disagreement at
+`n=20` into a logged "OK". Rescored exactly (commit `a0f539b`), with the census
+extended to `n=21`:
+
+| n | 10 | 12 | 14 | 16 | 17 | 18 | 19 | 20 | 21 |
+|---|---|---|---|---|---|---|---|---|---|
+| measured `k_dep` | 4 | 4 (`c=3`) / 5 (`c=2`) | 5 | 6 | 6 | 7 | 7 | 7 | 8 |
+| `floor(n/2) - 2` | 3 | 4 | 5 | 6 | 6 | 7 | 7 | 8 | 8 |
+
+It fails three ways:
+
+1. **`n=10`:** measured 4, predicted 3 — off by one high.
+2. **`n=20`:** measured 7, predicted 8 — off by one low.
+3. **`n=12`:** the two tails disagree (`k_dep = 4` at `c=3`, `5` at `c=2`), so
+   **no formula in `n` alone can be correct**, at any tolerance. This one is
+   decisive on its own and no further `n` can repair it.
+
+The increments land at `n=18` and `n=21` — run lengths 2, then 3, then 1 —
+which is not `floor(n/2)` behaviour.
+
+**Status of the light-cone story: demoted to a heuristic.** The memory law
+`k_seed(L) = ceil((L+1)/2)` supplies the correct *order of magnitude* for where
+`D_k` must leave the hard-core bound, and that much is proved. It supplies no
+exact law, and **no exact law for `k_dep` is currently known**. Any write-up
+must say "departure occurs at scale `n/2`", never "at `floor(n/2) - 2`", and
+must not carry a tolerance on an integer-valued structural prediction.
+
+**Rule adopted from this failure:** do not attach tolerances to exact
+integer-valued predictions. Either the law reproduces every value, including
+the `n=12` tail split, or it is not a law.
 
 ## Check 3 — stability of D_k in n: FAILS
 
@@ -129,6 +167,9 @@ margin is in the product, not per step, and that distinction was not made.
    geometric means; the true per-step max is 1.0 at `n=12,14`.
 4. The surjectivity phase is explained by the already-proved light-cone
    memory law, so it is not independent evidence of anything new.
+5. "`k_departure ~ n/2 - 2`" — falsified as an exact law at `n=10`, `n=20`
+   and (decisively) `n=12`, where the two tails disagree. See the 2026-09-04
+   correction above. The light-cone argument gives a scale, not a formula.
 
 ## Status
 
@@ -138,7 +179,8 @@ survives is: (a) the computation is verified by two independent forcing
 rules; (b) `D_k` is still the correct object for an existence theorem
 (the multiplicity argument is unaffected); (c) the collapse to zero is
 real in every tested case; (d) the product-form margin holds at `n=16`.
-What is closed: `n`-independence, the constant-length Fibonacci phase, and
-any per-step uniform contraction bound. No email or write-up should assert
+What is closed: `n`-independence, the constant-length Fibonacci phase,
+any per-step uniform contraction bound, and (as of 2026-09-04) the exact
+departure law `k_dep = floor(n/2) - 2`. No email or write-up should assert
 the Fibonacci phase without the `n/2` qualifier and the light-cone
 explanation.
