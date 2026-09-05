@@ -92,7 +92,7 @@ are now stale and are corrected below.
    this session (the tool reported no match). If they still do not, write the
    task list to a file as done here; do not burn calls retrying.
 
-## n=30 SAT GRID COMPLETE — all six cells UNSAT (2026-09-05 02:42); n=31 RUNNING
+## n=30 SAT GRID COMPLETE — all six cells UNSAT (2026-09-05 02:42); n=31 not started
 
 **The RW SAT exclusion grid now runs clean through `n=30`**, extending the
 `n<=29` range recorded in `NEXT-SESSION-PROMPT.md`. No SAT job is running.
@@ -144,11 +144,15 @@ is also a datum for **B4**: solve time does not track instance size either (the
 `r=1` encoding is *smaller* than `r=2` — 30592/95001 vs 31432/97613 — yet slower
 at `n=30`). Any core-scaling study must record `r` and `c`, not just `n`.
 
-### n=31 LAUNCHED at 2026-09-05 08:34, on David's explicit instruction
+### n=31: launched 08:34, STOPPED 08:36 on David's instruction
 
-All six cells, detached, from the project directory. PIDs 23957-23962, all
-confirmed alive at 97-99% CPU. Logs `uc/r1-skeptic/gap_31_{r}_{c}.log`, all
-0 bytes until their cell returns.
+Ran for 2m17s, then all six cells were SIGTERMed (PIDs 23957-23962, all
+confirmed gone). **No results were produced and none were lost** — every
+`gap_31_*.log` was still 0 bytes, and the six empty files were deleted so that
+an empty log is not later misread as "still running". `n=31` is untouched: no
+cell of that row has ever been solved.
+
+To run it again, all six cells, from the project directory:
 
 ```sh
 for r in 0 1 2; do for c in 2 3; do
@@ -159,27 +163,22 @@ done; done
 ```
 
 **No runtime estimate is supportable** — see the retraction above; the
-`n=29 -> n=30` per-cell ratios ranged 0.88x to 12.55x. `n=30` cells spanned
-10403-27975 s, so treat "longer than a day" as possible and do not infer a
-failure from a long-empty log. Check with:
+`n=29 -> n=30` per-cell ratios ranged 0.88x to 12.55x and `n=30` cells spanned
+10403-27975 s. Do not infer a failure from a long-empty log. Check with:
 
 ```sh
 cd uc/r1-skeptic && for f in gap_31_*.log; do printf '%-20s %5s bytes  ' "$f" "$(wc -c < "$f")"; tr -s ' ' < "$f" | tr -d '\n'; echo; done
 ps -eo pid,etime,%cpu,rss,command | grep '[r]w_sat_gap_fill_one'
 ```
 
-Remember the `n=30` trap: **six cells, not four.** For `n=31` all six are in
-`gap_31_*` logs, so that particular split does not recur here, but do not
-declare the row complete off a subset.
-
 ### MEMORY RISK on this machine, not caused by the n=31 launch
 
-At launch time `fastdk_benchmark.py` (PID 87926, another session's job, 10h30m
-elapsed) was at **8.8 GB RSS**, up from 408 MB when this session started at
-23:05 — it is growing without bound. Swap was **7.87 GB used of 9.22 GB**, and
-free pages were 73 MB; the launch was judged safe only because ~8 GB of
-inactive pages are reclaimable and the six solvers were ~100 MB each at start
-(`n=30` peaked ~570 MB, so expect ~4 GB for the row).
+`fastdk_benchmark.py` (PID 87926, another session's job, 10h33m elapsed) is
+consuming multiple GB and climbing — 408 MB when this session started at 23:05,
+5.2-8.8 GB since. **Swap kept rising even after the six n=31 jobs were killed**
+(7.87 GB used of 9.22 GB before the launch, 8.29 GB used with only 921 MB free
+after everything but `fastdk_benchmark` was stopped), which identifies it as the
+memory pressure source rather than the SAT grid.
 
 This repo has a documented jetsam history. **If something gets killed, suspect
 `fastdk_benchmark.py` first, not the SAT jobs.** Whoever owns it should decide
