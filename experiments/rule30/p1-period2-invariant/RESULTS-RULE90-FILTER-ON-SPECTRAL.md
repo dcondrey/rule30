@@ -80,12 +80,39 @@ becomes `q < 1/(2 phi) = 0.309017`. Exhaustive over all 256 rules
 | 120, 180, 210, 225 | 0.75 | 2.427051 | no | mixed |
 | **240** | **1.00** | **3.236068** | no | 0, 1 |
 
-**Only five rules pass: 15, 30, 45, 75, 135.** Rule 15 is degenerate
-(`f = NOT l`, no `(c,r)` dependence at all). The other four are exactly the
-left-permutive rules with an **OR-like 1:3 asymmetry** — and 30 and 45 are the
-two classically chaotic ECA in this family, with 75 and 135 their
-reflection/complement partners. The criterion is therefore not a loose filter
-that many rules would satisfy: it isolates Rule 30's own equivalence class.
+**Only five rules pass: 15, 30, 45, 75, 135.**
+
+### CORRECTION (checked on 2026-09-05, prompted by re-examining rule 15)
+
+An earlier version of this section said the criterion "isolates Rule 30's own
+equivalence class". **That was wrong, and the truth is stronger.** Four of those
+five passers are **not quiescent**: `f(0,0,0) = 1`, so the all-zero background
+maps to all-ones and there is **no finite-seed / lone-seed framing for them at
+all.** They were never admissible, and counting them as passers overstated the
+criterion's permissiveness.
+
+```
+rule 15:  f = NOT l                f(0,0,0)=1  -> background 0 -> 1, NOT quiescent
+rule 45:  q=0.25                   f(0,0,0)=1  -> NOT quiescent
+rule 75:  q=0.25                   f(0,0,0)=1  -> NOT quiescent
+rule 135: q=0.25                   f(0,0,0)=1  -> NOT quiescent
+rule 30:  q=0.25                   f(0,0,0)=0  -> quiescent
+```
+
+Imposing quiescence, the admissible class is the **8** rules that are both
+left-permutive and quiescent — `30, 60, 90, 120, 150, 180, 210, 240` — and:
+
+> **Rule 30 is the UNIQUE quiescent left-permutive ECA satisfying the
+> extinction criterion `q < 1/(2 phi)`.** Every other admissible rule has
+> `q >= 1/2` and fails: `60, 90, 150` at `q = 1/2` (the additive ones),
+> `120, 180, 210` at `q = 3/4`, and `240` at `q = 1`.
+
+Neither ingredient was tuned to produce this: `q = n_id/4` is read straight off
+the rule table, and the threshold `1/(2 phi)` falls out of the `2^n * lambda^n`
+counting. So the selectivity is an observation, not a fit. It is evidence that
+the criterion is **non-vacuous** — it is not a condition most rules would meet —
+but it is **not** evidence that extinction is provable for Rule 30. It says the
+right rule is singled out, not that the argument closes.
 
 ### Where Rule 240 sits, and why it is a different kind of control from Rule 90
 
@@ -169,6 +196,17 @@ there is no threshold worth running to. This is an independent argument for
 
 - `scratchpad/rule90_filter.py` — the ingredient-by-ingredient filter check.
 - `scratchpad/eca_q_census.py` — the `q` census over all 256 ECA.
+
+### Rule 10: outside the framework entirely
+
+`f_10(l,c,r) = r AND NOT l` (truth table `000:0 001:1 010:0 011:1 100:0 101:0
+110:0 111:0`). It is **not left-permutive** — at `(c,r) = (0,0)`,
+`f(0,0,0) = f(1,0,0) = 0`, so `l -> f` is constant, not a bijection. The `q`
+classification is defined only for left-permutive rules (it depends on each
+fixed `(c,r)` inducing either the identity or the negation on `l`), so **the
+framework does not apply to rule 10** and it is not among the 16. It is
+quiescent, but that is not sufficient. Recorded so it is not later assumed to
+have been checked and passed, or checked and failed — it was neither.
 
 **Note on rule numbering:** elementary CA have 8 neighbourhoods, hence rules
 `0..255`. There is no "rule 270"; if a number above 255 is cited it belongs to a
