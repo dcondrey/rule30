@@ -1,7 +1,14 @@
-# Width-w window relaxation of the RW: lambda_max = phi identically, and why that is vacuous
+# Can a spectral/eigenvalue bound replace the SAT grid? Three attempts, three kills
 
 Session 2026-09-05. Preregistration and result in one file because the kill
-condition fired on the first run.
+condition fired on the first run of each.
+
+**Summary.** (1) The width-`w` window relaxation gives `lambda_max = phi`
+identically at every `w` — vacuous, provably, at every width. (2) The
+bounded-automaton spectral route was **already killed in writing** before this
+session; see the prior-art section. (3) The weighted domination test, which was
+already implemented here and had **never been scored**, was run for the first
+time and fails — and fails in a way that no choice of weights can repair.
 
 ## The proposal
 
@@ -125,8 +132,99 @@ this ratio; what is missing is domination (that the null model upper-bounds the
 truth), not the constant. That is the object worth attacking, and it is a
 different object from the `M_w` above.
 
+## PRIOR ART I SHOULD HAVE READ FIRST (two corrections against myself)
+
+**1. I duplicated existing code.** `verify_survivor_decay_markov.py:195-228`
+already implements a finite-window spectral automaton —
+`perron_frobenius_lambda(pooled, k)` builds the order-`k` chain on states
+`{1,2}^k` restricted to the "no-`11`-yet" substochastic block and takes
+`max(abs(np.linalg.eigvals(P)))`. It is on a different state space (output
+symbols rather than `(h,F)` cells), so the vacuity result above is genuinely
+new, but I should have found this before writing a builder. It was **already
+killed**: `RESULTS-SURVIVOR-DECAY.md:1` — "order-k Markov output model killed at
+k=2 and k=3, and independently by Control 1".
+
+**2. The bounded-automaton spectral route was already closed, explicitly.**
+`MEMO-COUNTING-LINE-BOUNDED-QUOTIENT.md:66-72` (verified by reading it, not
+relayed):
+
+> Conclusion: **no bounded Myhill-Nerode quotient exists** for the process
+> generating `N_j`. The number of behaviorally-distinct residual states at any
+> fixed level grows exponentially in `n`, so no fixed-size transfer
+> matrix/automaton can replace the empirical `C<4` census with a proven
+> eigenvalue bound [...]
+
+and `:87-92`:
+
+> Any future proof of `C<4` will have to argue directly about the
+> unbounded-state process [...] **not via a bounded automaton spectral radius.**
+
+That memo is about the `C<4` counting line rather than `H_r(n)` directly, so it
+is adjacent rather than identical — but the mechanism is the same one, and the
+vacuity proof above is an independent rediscovery of it by a different route.
+
+**Root cause, already proved in this directory.** `RESULTS-DIAGONAL-MEMORY.md`
+gives two proved laws, `k_seed(L) = ceil((L+1)/2)` and `k_dia(L,i) =
+ceil((L+i+1)/2)`, whence `k_dia(L) = L`: **the anti-diagonal remembers every
+symbol.** `:51-54` — "A sufficient statistic for RW survival cannot forget,
+because the diagonal does not." The dependency window is unbounded, so no
+finite-window automaton can capture the constraint exactly; it can only
+over-approximate, and the over-approximation is what went vacuous.
+
+## Third attempt: weighted domination — scored for the first time, FAILS
+
+`domination_test.py` has been in this directory unscored: its own docstring
+calls it a "throwaway experiment script; not wired into any pipeline", and
+`grep -rl domination_test` over every non-`.py` file returned **nothing** — no
+log, no mention in any results document. It targets exactly the right object
+(`RESULTS-CROSS-METHOD-INVARIANT-AUDIT.md` section 6b): is the true per-step
+survival weight dominated by `M = [[0,1/4],[1/4,1/4]]` tightly enough to give
+`2*lambda < 1`?
+
+Run 2026-09-05, `--min-n 10 --max-n 16`, 90 s, full output in
+`domination_test_20260905.log`:
+
+```
+RAW (unweighted):      max ratio = 1.0000  (n=14 c=2 depth 9, S_k = 4 -> 4)   FAILS
+WEIGHTED w=(1, phi):   max ratio = 1.0000  (n=12 c=3 depth 7, S_k = 1)        FAILS
+LP-optimal weights:    best w2 = 1.00 -> lambda_min = 1.0000                  FAILS
+```
+
+Needed: `< 0.5`. Obtained: `1.0` in all three.
+
+**The failures are entirely a small-population tail effect, not a bulk effect.**
+Bulk per-step ratios sit at 0.35-0.47, comfortably under 0.5, consistent with
+`phi/4 = 0.4045`. Every violator is at a tiny surviving population — `S_k` = 1,
+2, 3, 4, 14, 28 — at the deepest levels. This is the same `D: 1 -> 1`
+phenomenon already recorded in `RESULTS-DISTINCT-CONTINUATION-COUNT.md`
+("Strict per-step contraction fails at `n=12,14`, where a lone surviving
+continuation persists one more row"), now confirmed independently in a third
+place.
+
+**No reweighting can fix it, and that is structural rather than empirical.**
+The weighted ratio is `(sum_s w_s S_{k+1,s}) / (sum_s w_s S_{k,s})`. A step in
+which one surviving word maps to one surviving word **with the same last
+symbol** has weighted ratio exactly `w_s / w_s = 1` for *every* positive weight
+vector `w`. Such steps occur (`n=12 c=3` depth 7, `S_k = 1`, weighted ratio
+exactly 1.0000). Hence `max_k` weighted ratio `>= 1` for any `w`, and the LP
+confirms it independently by finding `lambda_min = 1.0000`. **The entire
+weighted-domination family is dead, not just the `w = (1, phi)` member.**
+
+**What this leaves.** The bulk is fine and the constant has margin; the
+obstruction is a finite tail. So the shape a working proof needs is not a better
+weight vector but a **split argument**: a spectral/counting bound valid while
+`S_k` is large, plus a separate finite argument once `S_k` drops below a
+constant. Note this is consistent with the extinction-margin lead (the strongest
+open lead on record) which is precisely a statement about the deep, small-
+population end. It is also consistent with
+`RESULTS-TRANSFER-DOMINATION-CHECK.md:71-74`, which reached the same verdict
+from the entrywise direction: "A pointwise entrywise domination inequality is
+the wrong proof shape [...] worst case observed needs ~1.75x even at `N>=100`,
+giving effective eigenvalue ~0.71, not < 1/2."
+
 ## Files
 
+- `domination_test_20260905.log` — first scoring of `domination_test.py`.
 - `scratchpad/rw_window_spectral.py` — the `M_w` builder and power iteration.
 - `scratchpad/vacuity_check.py` — the disconfirming test above.
 
