@@ -148,6 +148,63 @@ never `git add -A` or a directory sweep. Do not edit its files. If you need
 to correct something in them, write your finding in your own file and note
 the disagreement.
 
+## READ THIS BEFORE PRIORITISING: what this project is actually for
+
+Everything in this directory — PT2, RW, `H_r(n)`, `D_k`, the SAT grid — is
+the **`p=2` rung** of the R1..R7 register of direct routes to Problem 1
+(`docs/rule30/PATH.md`). Their status:
+
+| route | status |
+|---|---|
+| **R1** zero-set obligation | **OPEN — the only open route** |
+| R2 cascade descent | KILLED (determination density decays, `O(log t)` reach) |
+| R3 bounded-depth pin bootstrap | KILLED (run-of-ones wedge) |
+| R4 right-boundary anchoring | KILLED (`O(log t)` reach) |
+| R5 left permutivity/expansivity alone | KILLED (Rule 90 filter) |
+| R6 Kolmogorov/entropy framings | KILLED (three independent ways) |
+| R7 omega-automata periodicity ladder | STALLED; **mode (i) provably dead**, mode (ii) untouched |
+
+**The uncomfortable fact:** PATH.md line 933 records that no per-period
+exclusion theorem for the Rule 30 centre column exists "not even for
+`p=2`", and that this is exactly R7. So our whole `p=2` programme is one
+rung of a ladder that needs one theorem per period `p` — infinitely many.
+Completing it does **not** close Problem 1. R7's mode (i) is closed by a
+*proved* limitation theorem (the phase slip extends to a full half-plane;
+`plain_{R,k}(w)` nonempty for every `R,k,w`, so mode (i) can never return
+EMPTY at any depth), and the blocker is a state-count wall, not compute —
+do not throw CPU at it.
+
+**Why R1 is different, and verified here.** R1 assumes, for contradiction,
+that the centre column `c` is eventually periodic, and needs only ONE more
+column (`-1`) to be eventually periodic too — which hands the contradiction
+to Jen 1990 Prop. 3 / Kopra Thm 3.5 (width-two column pairs of Rule 30 from
+a finite seed are never eventually periodic). One theorem, not a ladder.
+
+The pin does half of it for free. From `c_{t+1} = l_t XOR (c_t OR r_t)`:
+
+```
+c_t = 1  ->  OR saturates  ->  l_t = NOT c_{t+1}        (determined by c alone)
+c_t = 0  ->  OR collapses  ->  l_t = c_{t+1} XOR r_t    (needs r)
+```
+
+**Verified in this session: 0 violations of both identities over 299 steps
+of real Rule 30.** So the entire remaining obligation localises to: *is `r`
+eventually periodic on the zero-set `{c_t = 0}`* — one column, half the
+timeline.
+
+**Hard constraint on any R1 attempt:** it cannot be rule-generic. Rule 90's
+centre column is eventually periodic (identically 0 after `t=0`) while its
+neighbour on that zero-set has `r_t = 1` iff `t = 2^j - 1` — aperiodic. So
+the implication is outright FALSE for Rule 90, and any valid proof must use
+Rule 30's OR-nonlinearity specifically. Arguments built on the pin pass this
+filter by construction; arguments built on permutivity/expansivity alone do
+not (that is exactly how R5 died). **Apply the Rule 90 filter to any
+candidate R1 argument before spending compute on it.**
+
+Given this, weight R1-relevant tasks above accumulating more `p=2` census
+zeros. Extending the census from `n=21` to `n=26` is six more zeros on a
+rung that does not close the problem.
+
 ## Your task now
 
 Build a task list of **at least 30 concrete tasks** using
@@ -216,3 +273,30 @@ Seed list — extend, reorder, and add your own; do not treat it as complete:
 - Do not report a subagent's number without re-deriving it.
 - Do not extend a census purely to collect more zeros when a falsifiable
   structural question is available instead.
+
+## R1 task seeds (weight these highly — add to the 30)
+
+32. Read `docs/rule30/PATH.md` R1 (around lines 215-240, 296-320, 1268-1290)
+    and `RESULTS-eventual-period.md:52-55` in full. Do not re-derive the pin;
+    it is verified (0 violations, 299 steps).
+33. Inventory `uc/r1-r1zero/` — it already contains `comoving_columns.py`,
+    `drive01_deep.py` (T=65536), `drive01_long.py` (T=524288),
+    `driven_halfplane.py` and their logs. Establish what was actually run,
+    what it showed, and what was left unfinished, BEFORE writing new code.
+34. State the zero-set obligation as a precise, falsifiable proposition and
+    build the smallest computational probe that could refute it: assume `c`
+    periodic with period `p`, and test whether `r` restricted to
+    `{c_t = 0}` is forced periodic. Start at small `p`.
+35. Apply the Rule 90 filter to every candidate argument produced: if the
+    argument would also prove the statement for Rule 90, it is wrong, since
+    Rule 90 is an explicit counterexample (`r_t = 1` iff `t = 2^j - 1` on an
+    identically-zero centre column). Record this check explicitly per
+    argument; do not leave it implicit.
+36. Check whether the `phi/4` / maximal-entropy machinery developed today
+    says anything about the DENSITY of the zero-set `{c_t = 0}` — Problem 2
+    (each colour equally often) is exactly a statement about that set, and
+    the zero-set is also R1's domain. This is the one place today's work may
+    connect to a prize problem other than through the dead ladder.
+37. Do NOT spend compute on R7 mode (i); it is closed by a proved limitation
+    theorem. If R7 is touched at all, it is mode (ii) only, and the blocker
+    there is a state-count wall, not CPU.
