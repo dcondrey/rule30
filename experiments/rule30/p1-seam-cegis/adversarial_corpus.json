@@ -1,0 +1,40 @@
+[
+  {
+    "class": "sharp-binary-wedge-saturator",
+    "source": "111122211212112",
+    "expected_suffix": "12211111122111211",
+    "expected_psi": "11111111111111110"
+  },
+  {
+    "class": "bare-holonomy-closure-collision-a",
+    "source": "12122222"
+  },
+  {
+    "class": "bare-holonomy-closure-collision-b",
+    "source": "12222222"
+  },
+  {
+    "class": "previous-endpoint-closure-collision-a",
+    "source": "121212222"
+  },
+  {
+    "class": "previous-endpoint-closure-collision-b",
+    "source": "122212222"
+  },
+  {
+    "class": "two-ended-depth-one-collision-a",
+    "source": "1212221222122"
+  },
+  {
+    "class": "two-ended-depth-one-collision-b",
+    "source": "1221221222122"
+  },
+  {
+    "class": "tail-two-charge-falsifier",
+    "source": "12212121212121212"
+  },
+  {
+    "class": "rank-zero-evolutionary-witness",
+    "source": "12222222222221222212212"
+  }
+]
