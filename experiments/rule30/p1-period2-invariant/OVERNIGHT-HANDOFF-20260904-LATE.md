@@ -92,20 +92,20 @@ are now stale and are corrected below.
    this session (the tool reported no match). If they still do not, write the
    task list to a file as done here; do not burn calls retrying.
 
-## n=30 SAT: 2 of 4 cells returned, both UNSAT (as of 2026-09-05 01:38)
+## n=30 SAT: 3 of 4 cells returned, all UNSAT (as of 2026-09-05 02:15)
 
 Read from the log files directly, not from the monitor notifications.
 
 | cell | vars | clauses | result | seconds | elapsed |
 |---|---|---|---|---|---|
-| `n=30 r=1 c=2` | — | — | **still running** | — | 6h45m |
-| `n=30 r=1 c=3` | — | — | **still running** | — | 6h45m |
+| `n=30 r=1 c=2` | — | — | **still running** | — | 7h23m |
+| `n=30 r=1 c=3` | 30592 | 95001 | **UNSAT** | 26581.05 | done 02:11 |
 | `n=30 r=2 c=2` | 31432 | 97613 | **UNSAT** | 24330.31 | done 01:33 |
 | `n=30 r=2 c=3` | 31432 | 97613 | **UNSAT** | 20477.98 | done 00:33 |
 
-**`n=30` is NOT complete and must not be claimed as such.** Both finished cells
-are `r=2`; neither `r=1` cell has returned, and both are now past the slower
-`r=2` time. Refresh with:
+**`n=30` is NOT complete and must not be claimed as such** — `r=1 c=2` is still
+running, at 7h23m, already past the longest completed cell. Three of four are
+UNSAT. Refresh with:
 
 ```sh
 for f in uc/r1-skeptic/gap_30_*.log; do printf '%-32s %5s bytes  ' "$f" "$(wc -c < "$f")"; tr -s ' ' < "$f" | tr -d '\n'; echo; done
@@ -114,9 +114,18 @@ for f in uc/r1-skeptic/gap_30_*.log; do printf '%-32s %5s bytes  ' "$f" "$(wc -c
 Cost scaling, `r=2 c=3`: `n=29` 9440.7 s -> `n=30` 20477.98 s, i.e. ~2.2x per
 `n`, putting `n=31` near 12 h.
 
-`n=31` was **not** launched, though seed task 3 now permits it: two SAT jobs
-still hold the machine, and it buys one more `p=2` zero on a rung that does not
-close Problem 1. To reverse, from the project directory:
+One observation for **B4** (`L10-SAT-CORE-SCALING`), which is about exactly
+this: solve time does **not** track instance size here. The `r=1` encoding is
+smaller than `r=2` (30592 vars / 95001 clauses against 31432 / 97613) yet slower
+(26581.05 s against 20477.98 s and 24330.31 s). Whatever makes these instances
+hard is not clause count, so a core-size-vs-`n` study should record `r` too.
+
+`n=31` was **not** launched, though seed task 3 now permits it. The load
+argument has now expired — load average is 9.02 with one SAT job left — so the
+remaining reason is the prompt's own priority: it buys one more `p=2` zero on a
+rung that does not close Problem 1, and a falsifiable structural question (R1,
+D1-D3) is available instead. That is a judgement call, and it is the next
+session's to revisit. To reverse, from the project directory:
 `nohup env PYTHONPATH=. /Volumes/A/researchpapers/.venv/bin/python3 uc/r1-skeptic/rw_sat_gap_fill_one.py 31 2 3 > uc/r1-skeptic/gap_31_2_3.log 2>&1 &`
 
 **Withdrawn:** an earlier annotation in `TASKLIST-20260904-R1.md` said A7
