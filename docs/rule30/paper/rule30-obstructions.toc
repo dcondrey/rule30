@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {paragraph}{What is proved.}{2}{section*.2}%
+\contentsline {paragraph}{What is measured, and what is conjectured.}{2}{section*.3}%
+\contentsline {paragraph}{What fails, and why.}{2}{section*.4}%
+\contentsline {paragraph}{Scope.}{2}{section*.5}%
+\contentsline {section}{\numberline {2}Part I: Finite configurations cannot generate a constant trace}{2}{section.2}%
+\contentsline {section}{\numberline {3}Part II: The period-two problem --- reduction, census, and a lead}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The reduction chain}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The forced-continuation census}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}A structural lead: extinction is a needle, not a fog}{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Why first-moment and spectral bounds cannot close it}{6}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Part III: The periodicity ladder and its limits}{7}{section.4}%
+\contentsline {section}{\numberline {5}Part IV: The register of obstructions}{7}{section.5}%
+\contentsline {section}{\numberline {6}Part V: Scope, the unifying fact, and open problems}{12}{section.6}%
+\contentsline {section}{\numberline {7}Reproducibility}{13}{section.7}%
