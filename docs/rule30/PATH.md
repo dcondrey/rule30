@@ -560,10 +560,11 @@ STATUS is exactly one of **PROVED** (a theorem was obtained), **KILLED**
 (deliberately declined), **OPEN** (still live), INFRA (tooling or validation,
 not an attempt).
 
-**Unverified premises, checked.**  One document rests on a genuinely
-unverified external premise and is flagged in its row:
-`paper/PUBLICATION-NOTES.md` (row 72), whose novelty claim turns on Jen 1986,
-which is unread.  The compiling brief also described
+**External premises, checked.**  The former Jen 1986 source gap in
+`paper/PUBLICATION-NOTES.md` (row 72) is closed: the primary source has been
+read, and its Theorem 7a narrows the manuscript's novelty claim by already
+excluding eventually-one columns for all finite Rule 30 configurations.  The
+compiling brief also described
 `p3_circuit_attack/P3_ASSESSMENT.md` as resting on an unsourced "ANF theorem";
 the register checked that and found otherwise.  That document cites
 `overnight/RESULTS-anf.md`, where `deg f_t = 2t-1` is proved unconditionally
@@ -648,7 +649,7 @@ check of it themselves.
 | 69 | Crosstalk elimination runbook and structural-exclusion ledger | none/infra | INFRA | Turns each failed mechanism into a typed exclusion that later candidates must differ from.  "Negative results narrow mechanism families, not the set of all possible algorithms." | `CROSSTALK-RUNBOOK.md` |
 | 70 | Overnight autonomous run: prompt, hard fences, compliance statement | none/infra | INFRA | Fenced session that produced rows 42-47; compliance verified by mtime rather than `git status` (the subtree is untracked), with one disclosed exception, a `__pycache__` byte-code file from a read-only import. | `OVERNIGHT-PROMPT.md`; `overnight/FENCE-COMPLIANCE.md` |
 | 71 | Settled-knowledge digest for downstream sessions | none/infra | INFRA | Read-only survey listing what is proved, what is dead, what is off-limits, and the pinned notation.  "Cite the source doc, not this file." | `overnight/CONTEXT-DIGEST.md` |
-| 72 | Zero-tail note: manuscript, figures, Lean and SMT certificates, venue path | none/infra | INFRA | Packaging for row 25, plus an independent hostile proof audit that found no critical or major issue.  **Rests on an unverified external premise:** Jen 1986 (*J. Stat. Phys.* 43, 219-242) is unread, and its abstract clause (ii) is load-bearing in both directions — if the characterization includes Rule 30 it contradicts the theorem, if it excludes Rule 30 the theorem is not novel.  "REQUIRED before circulation: read the original." | `paper/PUBLICATION-NOTES.md`; `paper/README.md`; `Rule30ZeroTail.lean`; `zero_tail_smt_certificate.py` |
+| 72 | Zero-tail note: manuscript, figures, Lean and SMT certificates, venue path | none/infra | INFRA | Packaging for row 25, plus an independent hostile proof audit that found no critical or major issue.  Jen 1986 (*J. Stat. Phys.* 43, 219-242) has now been read in full: its Thm. 7a already excludes eventually-one columns for every finite Rule 30 configuration, but it does not state the note's explicit Rule-30 zero fiber, sharp horizon, or extremizer counts.  Novelty is componentwise; see the corrected audit. | `paper/PUBLICATION-NOTES.md`; `paper/README.md`; `Rule30ZeroTail.lean`; `zero_tail_smt_certificate.py` |
 | 76 | S-adic decomposition + Morse-Hedlund factor complexity `p(n) > n` | 1 | **KILLED** | Still killed by obstruction H (any finite prefix leaves all sufficiently large `r+q` open), but the strength was **misstated on first merge and is corrected here**: Morse-Hedlund's *quantitative* form gives `p(n) <= r+q` for **every** `n`, so a single measured `p(n_0) = V` forces `r+q >= V`.  The exclusion is therefore `max_n p_hat(n) = N - L` (`L` = longest repeated factor, empirically `~2 log_2 N`) — **linear in prefix length, not bounded by `n_max`**.  The original 200,000-bit run had thus already excluded `r+q <= 199,966`, not `r+q <= 64` as first recorded (understated ~3,100x).  The `N - L` identity was proved and independently re-verified.  Relatedly, the followup's claim that this route is *strictly weaker* than direct inspection is also wrong: a repeated factor of length `L` at offset `q` **is** a period-`q` agreement running `L` positions, so the subword route executed optimally is the direct periodicity scan in different notation, not a weaker cousin.  Extended measurement: `p(n) > n` for all `n <= 64` on an 8,388,608-bit prefix (42x the prior), excluding `r+q <= 8,388,564`; generator bit-exact against OEIS A051023 (`10^5` bits) and Wolfram's own published million-bit center column (`10^6` bits).  Still ~119x below the prize announcement's `~10^9` exclusion, and pushing there is not worth it: the bound is linear in `N`, so no crossover exists (`10^9` = ~145 days locally, ~$150-500 cloud).  Originally proposed in `novel_frameworks/TRIAGE-novel-frameworks.md` (A4); `p(8)=256`, `p(16)=62377` reproduced across three independent implementations. | `novel_frameworks/TRIAGE-novel-frameworks.md` A4; `RESULTS-followup3-subword-complexity.md` (contains the same two errors in §2-§3); `RESULTS-subword-complexity-extended.md`; `experiments/rule30-subword-extended/` |
 | 91 | OpenEvolve LLM-driven evolutionary code search for a sub-quadratic `c(n)` | 3 | **NOT RUN (blocked)** | Harness built, pre-registered and previously verified, but the required sanity gate failed on re-verification: the constant-factor bit-packed control scored 0.9335 against its documented 0.210.  Diagnosed by interleaved A/B/A/B re-measurement rather than assumed: the wall-clock tail-exponent instrument does not resolve the difference it exists to detect at the smoke profile's `n <= 16000` on this machine.  The naive `O(n^2)` control -- algorithmically identical to the stored baseline -- scored 0.2667, 0.2957 and **0.7896** across three runs, i.e. the evaluator credited the baseline with beating itself by 0.41 exponent-units.  Candidate ranges overlap outright (naive 1.807-2.164, bit-packed 1.573-1.833 over six runs), and the pre-registered `+/-0.2-0.3` band is smaller than the instrument's scatter.  The ">= 3 independent runs" rule would not have caught this: it re-measures the candidate, not the baseline comparison.  Search not launched, no LLM call made, nothing tuned to force a pass.  Superseded as an instrument by row 92. | `RESULTS-openevolve-p3.md`; `experiments/openevolve-p3/` |
 | 92 | Deterministic fuel counter replacing the wall clock in the OpenEvolve P3 evaluator (the instrument row 91 was blocked on) | 3 | **INSTRUMENT VALIDATED, search not run** | Arm 3's wasmtime fuel meter (row 12) was read and rejected for reuse: WASM has only fixed-width ops so one instruction is genuinely `O(1)`, whereas OpenEvolve mutates Python where `row << 1` on a `(2n+3)`-bit int is one opcode doing `n` bits of work.  Built a new AST-rewriting word-RAM counter (`fuel.py`, `WORD_BITS = 30` = CPython's bignum digit) charging every variable-width operation proportionally and **denying by default** -- an unmodelled AST node, callable or import is a hard failure, not a silent charge of 1.  Charging raw bits instead of words was measured to inflate the naive control to 2.12-2.15 via a spurious `log n` on loop indices; the word model recovers **1.99946** at `r^2 = 0.9999999`.  All four pre-registered sanity candidates pass, against two failures under the wall clock: (a) **0.200000**, tail equal to the stored baseline in every printed digit, improvement exactly 0.0 (the clock had scored this same program 0.7896); (c) bit-packed **0.214234**, an 84x constant-factor win correctly rendered invisible to `combined_score`, against 0.9335 under the clock; (b), (d) 0.0.  Counts bit-identical across three separate processes for each of three candidates under load average 20.3-34.8 on 10 cores.  Validated against a **second** known exponent on 2026-08-31 (`PREREG-flat-opcode-ablation.md`, pre-registered strong outcome): a deliberately `Theta(n^3)` wide-operand candidate reads 2.97449 with slopes rising toward 3, so the instrument is not merely biased toward the 2 that every earlier test used.  In the same run a flat per-operation counter -- what `sys.settrace`, `cProfile` and a WASM meter each give free -- is wrong by a full exponent-unit on both discriminating candidates (0.99938 against 2, 1.99690 against 3), so proportional charging is load-bearing rather than decorative.  `evaluator.py`, `PREREGISTRATION.md` and `baseline_exponent.json` untouched -- a parallel evaluator importing the pre-registered scoring and gates rather than restating them.  **Not a claim about Rule 30**; no search launched, no LLM call.  Open before a search: the 4000-point ladder shortens the pre-registration's only above-`n=3000` anti-lookup-table check by 4x.  **Not publishable, checked 2026-08-31 and dropped:** a deterministic counter replacing wall-clock fitness in program search is prior art (Bouras, Hanna & Petke, SSBSE 2025; Cachegrind; EIP-2565 for proportional-width bignum charging), and the one slice with no prior art found -- that cost-model *granularity* changes the fitted exponent -- is a sentence, not a paper.  The instrument stands and its validation claims hold; only the publication claim is withdrawn.  Any future arm proposing to publish an instrument of this shape must first clear `LITCHECK-fuel-instrument.md`. | `RESULTS-openevolve-p3-fuel.md`; `LITCHECK-fuel-instrument.md`; `experiments/openevolve-p3/fuel.py`, `evaluator_fuel.py`, `test_fuel.py` |
@@ -870,7 +871,7 @@ with real empirical output** that explicitly disclaims proving anything, and
 
 | Who | What was tried | Outcome |
 |---|---|---|
-| Jen 1986, *JSP* 43:219-242 | Conditions on nearest-neighbour rules for finite ICs; source of "no two columns can both become periodic" | **PROVED**; full text UNOBTAINED, see 8.6 |
+| Jen 1986, *JSP* 43:219-242 | Thm. 2b: at most one eventually periodic column for Rule 30; Thm. 4: eventual diagonal periodicity; Thm. 7a: constant-nonzero trace classification | **PROVED; PRIMARY SOURCE READ.**  Thm. 7a already excludes eventually-one columns for every finite Rule 30 configuration; it does not close the exceptional zero column or any nonconstant period. |
 | Jen 1990, *Physica D* 45:3-18, Prop. 3 | At most one eventually periodic temporal sequence, for rules injective in the `(i+1)`-th component with `{100} -> 1`; covers 30, 86, 90, 150, 154, 210 | **PROVED**; leaves exactly one column open, and that column is P1 |
 | Rowland 2006, *Complex Systems* 16:239-258 | Right diagonals purely periodic with period `2^a` (Lemma 2); left diagonals eventually periodic via Jen 1986 Thm 4 | **PROVED**, diagonals not the column |
 | Kopra 2019 (TUCS Diss. 249) | Width-2 restatement; Problem 3.1.13 asks whether `W30` is regular (trace subshift sofic) | **PROVED** (width 2); soficness **OPEN** |
@@ -1077,7 +1078,7 @@ Karttunen (PARI) and the Mathematica one-liner agree across three languages.
 **Open, cheap, and never done: diff the Wolfram Data Repository million/billion
 bit datasets against the OEIS b-file.**
 
-### 8.6 Corrections, cautions, and unobtained sources
+### 8.6 Corrections, cautions, and source status
 
 **A fabricated citation is circulating on this exact topic.**  A web search
 summary asserted `P. Grassberger, "Hidden Periodicities in Rule 30 Dynamics",
@@ -1087,17 +1088,18 @@ effects in an elementary cellular automaton", *JSP* 45:27-39 (1986), and it is
 about **rule 22**.  Do not propagate the fake.  Verify every citation in this
 section against an index before reusing it.
 
-**Jen 1986 remains unread, and it is the most consequential gap.**  Paywalled
-at Springer; OSTI holds the bibliographic record (`biblio/5674011`) but the
-full-text servlet 404s; unlike Jen 1990 there is no LA-UR preprint; not on
-archive.org.  This matters because **three different results are attributed to
-that one paper**: Rowland cites its Theorem 4 (a one-sided range `[-d,0]`
-eventual-periodicity statement), Wolfram and Kopra cite it for "at most one
-periodic column", and its own abstract advertises a third clause — conditions
-under which finite ICs "generate at least one constant temporal sequence".
-Nothing retrieved restates that third clause.  **Any argument in this repo that
-concludes a column is identically zero must reckon with it**, including the
-zero-tail theorem's novelty claim in `paper/PUBLICATION-NOTES.md`.
+**Jen 1986 has been obtained and read in full** (24 PDF pages, journal pages
+219--242; DOI `10.1007/BF01010579`).  The three commonly attributed results are
+distinct: Theorem 2b gives Rule 30 at most one eventually periodic vertical
+trace, Theorem 4 concerns eventual periodicity of diagonals, and Theorem 7a
+classifies eventually-one temporal sequences for finite initial conditions.
+The necessity direction of Theorem 7a already excludes an eventually-one
+column for every finite Rule 30 configuration, because its four alternatives
+respectively require `a6=a7=1`, `a6=1`, `a7=1`, or `a5=1`, while Rule 30 has
+`a5=a6=a7=0`.  Jen states that symmetric results hold for constant-zero
+sequences but does not print a Rule-30 zero-fiber classification, sharp
+finite-radius horizon, or extremizer count.  The corrected novelty audit is in
+`paper/PUBLICATION-NOTES.md`.
 
 **Wolfram, "Random sequence generation by cellular automata" (1986), full text
 unobtained** by two independent routes (canonical PDF exceeds fetch cap; proxy
