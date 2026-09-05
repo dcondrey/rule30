@@ -124,9 +124,9 @@ other three partitions independently show the same non-saturating pattern.)
 
 Two independent kill signals (4th bullet directly, 3rd bullet
 corroborating) both fire. The amortized/drift mechanism proposed in this
-preregistration is dead, on the same underlying fact BACKLOG item 4 already
-established (complete branching / no information beyond the current
-state) -- section 3b's premise that "a deterministic, high-state process
+preregistration is dead, on this document's own fresh evidence (the
+`sigma_{j-1}` comparison in section 4) -- section 3b's premise that "a
+deterministic, high-state process
 can still produce output whose *running history* predicts death better
 than its current state" is not supported by the data. This does not kill
 the counting-line inequality itself (still open, unproven, and now known
