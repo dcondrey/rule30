@@ -77,11 +77,16 @@ the ledger's `gamma` table):
   and `c=3` runs `5,6,8,8,9,9,8,8,7,10,9,10`. The ledger separately retracted a
   claimed climb in `gamma` as an even-`n` artifact. Do not spend a session
   explaining a tail asymmetry that the data does not show.
-- **E3/E4 remain the only live entries.** E4 (excluding the max-survival family
-  by an exact argument) is the one that could become a theorem fragment, and it
-  depends on E3's structure claim, which
-  `RESULTS-FIBER-EXTREMAL-FAMILY.md` (another session) addresses and this audit
-  did not re-verify.
+- **E3/E4: re-verified 2026-09-05 and both are negative.** See
+  `RESULTS-E3-MAXSURVIVAL-WORD-STRUCTURE.md`. `RESULTS-FIBER-EXTREMAL-FAMILY.md`
+  answers E3 for the forced *continuations* (no parametrized family, `n=10..16`);
+  the separate claim in `RESULTS-EXTINCTION-MARGIN.md` that the max-survival
+  *source words* "share a long common suffix, differing mainly in their first one
+  or two symbols" is **false** on 13 of the 18 cells `n=10..18`, both tails: on
+  `c=2` the free prefix length runs 6,2,1,13,5,14,3,6,18 for `n=10..18`, and at
+  `n=18,c=2` the 16 finalists share no common suffix at all. E4 therefore has no family to exclude, and the "suffix window near
+  the append point" proof route in `RESULTS-EXTINCTION-MARGIN.md` step 1 should
+  not be attempted in that form.
 
 **Nothing here is evidence that `gap(n) >= g_min > 0` for all `n`.** That
 implication — which would give `H_r(n) = 0` outright — is stated correctly as
