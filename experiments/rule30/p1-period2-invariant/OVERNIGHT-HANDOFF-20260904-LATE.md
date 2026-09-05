@@ -92,7 +92,7 @@ are now stale and are corrected below.
    this session (the tool reported no match). If they still do not, write the
    task list to a file as done here; do not burn calls retrying.
 
-## n=30 SAT GRID COMPLETE — all six cells UNSAT (2026-09-05 02:42)
+## n=30 SAT GRID COMPLETE — all six cells UNSAT (2026-09-05 02:42); n=31 RUNNING
 
 **The RW SAT exclusion grid now runs clean through `n=30`**, extending the
 `n<=29` range recorded in `NEXT-SESSION-PROMPT.md`. No SAT job is running.
@@ -144,14 +144,13 @@ is also a datum for **B4**: solve time does not track instance size either (the
 `r=1` encoding is *smaller* than `r=2` — 30592/95001 vs 31432/97613 — yet slower
 at `n=30`). Any core-scaling study must record `r` and `c`, not just `n`.
 
-`n=31` was **not** launched. The machine is now free (load 9.02, no SAT jobs),
-so the constraint argument has expired; the remaining reason is the prompt's own
-priority — one more `p=2` zero on a rung that does not close Problem 1, with a
-falsifiable structural question (R1, D1-D3) available instead. That is a
-judgement call and it is the next session's to revisit. To launch:
+### n=31 LAUNCHED at 2026-09-05 08:34, on David's explicit instruction
+
+All six cells, detached, from the project directory. PIDs 23957-23962, all
+confirmed alive at 97-99% CPU. Logs `uc/r1-skeptic/gap_31_{r}_{c}.log`, all
+0 bytes until their cell returns.
 
 ```sh
-cd /Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant
 for r in 0 1 2; do for c in 2 3; do
   nohup env PYTHONPATH=. /Volumes/A/researchpapers/.venv/bin/python3 \
     uc/r1-skeptic/rw_sat_gap_fill_one.py 31 $r $c \
@@ -159,8 +158,33 @@ for r in 0 1 2; do for c in 2 3; do
 done; done
 ```
 
-Six cells, unknown runtime, ~10 cores. Do not launch all six blind if anything
-else is running.
+**No runtime estimate is supportable** — see the retraction above; the
+`n=29 -> n=30` per-cell ratios ranged 0.88x to 12.55x. `n=30` cells spanned
+10403-27975 s, so treat "longer than a day" as possible and do not infer a
+failure from a long-empty log. Check with:
+
+```sh
+cd uc/r1-skeptic && for f in gap_31_*.log; do printf '%-20s %5s bytes  ' "$f" "$(wc -c < "$f")"; tr -s ' ' < "$f" | tr -d '\n'; echo; done
+ps -eo pid,etime,%cpu,rss,command | grep '[r]w_sat_gap_fill_one'
+```
+
+Remember the `n=30` trap: **six cells, not four.** For `n=31` all six are in
+`gap_31_*` logs, so that particular split does not recur here, but do not
+declare the row complete off a subset.
+
+### MEMORY RISK on this machine, not caused by the n=31 launch
+
+At launch time `fastdk_benchmark.py` (PID 87926, another session's job, 10h30m
+elapsed) was at **8.8 GB RSS**, up from 408 MB when this session started at
+23:05 — it is growing without bound. Swap was **7.87 GB used of 9.22 GB**, and
+free pages were 73 MB; the launch was judged safe only because ~8 GB of
+inactive pages are reclaimable and the six solvers were ~100 MB each at start
+(`n=30` peaked ~570 MB, so expect ~4 GB for the row).
+
+This repo has a documented jetsam history. **If something gets killed, suspect
+`fastdk_benchmark.py` first, not the SAT jobs.** Whoever owns it should decide
+whether it still needs to run; it was not touched here because it is not this
+session's process.
 
 **Withdrawn earlier:** an annotation in `TASKLIST-20260904-R1.md` said A7
 devalued the SAT-core-scaling task. That conflated two grids —
