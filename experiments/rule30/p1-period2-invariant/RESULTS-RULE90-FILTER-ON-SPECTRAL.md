@@ -56,6 +56,65 @@ factor, the pin) is the part where every route failed. **The hard half and the
 Rule-30-specific half are the same half** — which is what one should expect, and
 is mild evidence the difficulty is real rather than an artefact of the encoding.
 
+## Part 1b — the same test across all 256 ECA: the criterion selects Rule 30's class
+
+Generalise the split. For a **left-permutive** `f(l,c,r)`, each fixed `(c,r)`
+makes `l -> f(l,c,r)` either the identity or the negation; let
+`n_id = #{(c,r) : identity}` and `q = n_id/4`. Then `M = [[0,q],[q,q]]` has
+leading eigenvalue `q*phi`, and the project's extinction criterion `2*lambda < 1`
+becomes `q < 1/(2 phi) = 0.309017`. Exhaustive over all 256 rules
+(`scratchpad/eca_q_census.py`):
+
+**16 of 256 ECA are left-permutive.** Their `q` takes only five values
+`{0, 1/4, 1/2, 3/4, 1}`, so the criterion is decided by a single integer
+`n_id in {0,1,2,3,4}` — and only `n_id <= 1` passes.
+
+| rule | `q` | `2*lambda` | extinction? | pin at `c=` |
+|---|---|---|---|---|
+| 15 | 0.00 | 0.000000 | **YES** (trivial: `f = NOT l`) | 0, 1 |
+| **30** | **0.25** | **0.809017** | **YES** | **1** |
+| 45 | 0.25 | 0.809017 | **YES** | 0 |
+| 75 | 0.25 | 0.809017 | **YES** | 0 |
+| 135 | 0.25 | 0.809017 | **YES** | 0 |
+| 60, 90, 105, 150, 165, 195 | 0.50 | 1.618034 | no | mixed |
+| 120, 180, 210, 225 | 0.75 | 2.427051 | no | mixed |
+| **240** | **1.00** | **3.236068** | no | 0, 1 |
+
+**Only five rules pass: 15, 30, 45, 75, 135.** Rule 15 is degenerate
+(`f = NOT l`, no `(c,r)` dependence at all). The other four are exactly the
+left-permutive rules with an **OR-like 1:3 asymmetry** — and 30 and 45 are the
+two classically chaotic ECA in this family, with 75 and 135 their
+reflection/complement partners. The criterion is therefore not a loose filter
+that many rules would satisfy: it isolates Rule 30's own equivalence class.
+
+### Where Rule 240 sits, and why it is a different kind of control from Rule 90
+
+`f_240(l,c,r) = l` — the pure left shift. It is the **opposite extreme** to
+Rule 30: all four `(c,r)` pairs induce the identity, `q = 1`, `2*lambda = 3.236`,
+no extinction. Two things follow, and they matter for how it can be used:
+
+1. **Rule 240 has a total pin, not none.** `f` is independent of `r` at *both*
+   `c = 0` and `c = 1` (Rule 30's pin fires only at `c = 1`; Rule 90 has none).
+   Indeed `l_t = c_(t+1)` identically, so the left half-plane is determined by
+   the centre column trivially.
+2. **Rule 240 does NOT falsify R1's implication.** Its lone-seed centre column is
+   eventually 0 and its neighbour is eventually 0 — both eventually periodic, so
+   "c periodic => r periodic" holds. It is therefore **not** a counterexample and
+   **cannot serve as the Rule 90 filter does.**
+
+So the two controls do different jobs, and conflating them would be an error:
+
+| rule | violates R1's implication? | role |
+|---|---|---|
+| 90 | **yes** (`c ≡ 0` periodic, `r_t = 1` iff `t = 2^j - 1` aperiodic) | the **filter** — kills rule-blind arguments |
+| 240 | no (both columns eventually periodic) | a **positive/degenerate control** — an argument may prove things about it harmlessly |
+
+Rule 240 is still useful, in one specific way: it shows the **pin alone is not
+sufficient**. Rule 240 has a strictly stronger pin than Rule 30 yet sits at the
+worst possible `q`. So any argument that leans only on the pin, without the
+`1:3` asymmetry that produces `q = 1/4`, cannot be deriving extinction from the
+pin — because the pin is maximal exactly where the criterion fails hardest.
+
 ## Part 2 — the ladder automaton's ratio -> 4: saturation, not a trigger
 
 `RESULTS-ladder-rung1.md:118-123` state counts, with the deficit from exact `4x`:
@@ -109,3 +168,9 @@ there is no threshold worth running to. This is an independent argument for
 ## Files
 
 - `scratchpad/rule90_filter.py` — the ingredient-by-ingredient filter check.
+- `scratchpad/eca_q_census.py` — the `q` census over all 256 ECA.
+
+**Note on rule numbering:** elementary CA have 8 neighbourhoods, hence rules
+`0..255`. There is no "rule 270"; if a number above 255 is cited it belongs to a
+different family (larger neighbourhood, more states, or a totalistic code) and
+the mapping above does not apply to it unchanged.
