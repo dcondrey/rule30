@@ -13,13 +13,14 @@ a paper contact per `docs/rule30/paper/PUBLICATION-NOTES.md`.
 
 1. **SAT range.** An earlier wording said "exhaustive SAT is UNSAT through
    n = 30". That is **false as of 2026-09-04**. Verified state: UNSAT for
-   every instance through `n = 29` **except** `(n=29, r=2, c=3)`, which is
-   still running (1h59m elapsed at time of writing, empty log), and all
-   four `n = 30` instances (`r=1,2` x `c=2,3`) are still running and
-   unfinished. The draft below states the verified range. Re-check
-   `uc/r1-skeptic/gap_29_2_3.log` and `gap_30_*.log` before sending; if
-   they have since returned UNSAT, the range may be updated to n=30, but
-   only then.
+   every instance through `n = 29` **except** `(n=29, r=2, c=3)`, which was
+   still running at the time of the first draft. **UPDATE (same day): that
+   cell has now returned UNSAT** (`uc/r1-skeptic/gap_29_2_3.log`:
+   `29 2 3 29473 91524 UNSAT 9440.73`, i.e. 29,473 variables / 91,524
+   clauses / 9,440.7 s). The `n = 29` grid is therefore **complete, with no
+   gaps**, and the draft below now says so. All four `n = 30` instances
+   (`r=1,2` x `c=2,3`) are still running; do not claim `n = 30` until their
+   logs are non-empty.
 2. **n=16 measured value.** The draft quotes `0.37445` at `n=16`; that is
    the `c=2` value. The `c=3` value at `n=16` is `0.38010`. The draft now
    gives the range rather than the single favorable number.
@@ -36,8 +37,8 @@ For the period-2 exclusion problem for Rule 30, we have been trying to
 prove there is no binary source word whose forced continuation stays in
 the hard-core shift and reaches a prescribed target state after n rows.
 Computationally the statement holds as far as we can push it: exhaustive
-SAT returns UNSAT for every instance through n = 29 (one cell at n = 29
-and the n = 30 row are still in flight as I write), and the exact survivor
+SAT returns UNSAT for every instance through n = 29, with no gaps (the
+n = 30 row is still in flight as I write), and the exact survivor
 census gives H_r(n) = 0 for all n <= 13.
 
 Every proof route we tried -- bounded automata, quotient congruences,

@@ -41,6 +41,52 @@ This cuts both ways for this document:
   claim is "one process, measured three ways, matches its own maximal-entropy
   null to the stated precision."
 
+## 0c. Resolution of 13/32 and of phi/4 (2026-09-04, stress tests)
+
+Both surviving numbers were stress-tested. Both hold, and both are
+**demoted** from "unexplained invariant" to "consequence of already-known
+structure". They are unrelated to each other.
+
+**13/32 is exact, and now explained.** Stress tests: the match event is NOT
+determined by the last 2-4 symbols, NOT determined by the first 2-5
+symbols, and NOT independent of either — it is genuinely global. Yet its
+probability is exactly `13/32` at every `n >= 3`, and the companion
+"last-symbol-sensitivity" fraction is exactly `7/16` (counts `28, 112, 448,
+1792, 7168 = 28*4^(n-4)`). The mechanism: **the deepest diagonal value is
+exactly uniform on the 4 states, for every `n`, over all `4^n` sequences**
+(verified exactly with rational arithmetic, `n = 1..9`). That follows from a
+fact already on record — every four-symbol action is a *permutation*
+generating D8 (`CONTINUATION-PROMPT.md`, "carry contraction") — and a
+permutation pushes uniform measure to uniform measure. So the state
+distribution is exactly uniform from the first step, and *every* event
+probability of this kind freezes to an exact rational determined by the
+uniform measure. `13/32` is therefore a restatement of measure-preservation
+(the same "no structure beyond the trivial" theme), not an independent
+discovery, and it must not be cited as a mysterious constant.
+
+**13/32 is NOT phi/4.** `0.40625` vs `0.404508...`. They come from
+different questions (uniform measure on a permutation-driven 4-state space
+vs. the leading eigenvalue of the hard-core transfer matrix). The numerical
+proximity is coincidence. Pooling them, as an earlier draft of this
+document did, was wrong.
+
+**phi/4's core assumption verified.** The null model rests on the forced
+symbol behaving uniformly over the 4 states. Measured distribution of the
+first forced symbol:
+
+```
+n=12 c=2: 0.2329, 0.2471, 0.2625, 0.2576   (max dev 0.017)
+n=14 c=2: 0.2552, 0.2439, 0.2562, 0.2448   (max dev 0.006)
+n=16 c=2: 0.2504, 0.2448, 0.2525, 0.2523   (max dev 0.005)
+```
+
+Uniformity holds and improves with `n`. **Correction to section 2:** the
+claim that first-row survival matches `3/8` "to four decimals" was true
+only at `n=14` (`0.37506`); at `n=12` the values are `0.3923` and `0.363`,
+off by ~`0.017`. The honest statement is that the rate converges toward
+`3/8` at the same rate the uniformity above tightens, not that it sits on
+it.
+
 ## 1. The null model, and why phi/4
 
 Take the crudest possible model of `literal_extension`'s forced
