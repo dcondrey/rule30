@@ -103,11 +103,21 @@ is the scale the light-cone argument supplies.
 - **Do not look for a better global weight/matrix.** Four routes have now failed
   at the same factor, and the weighted family is dead for *all* weights by the
   `1 -> 1` argument.
-- **The live shape is a split argument.** The bulk regime (`k <~ n/2`, large
-  `S_k`, fibers genuinely shrinking) is fine — measured ratios 0.35-0.47 against
-  a 0.5 threshold. The obstruction is entirely the deep regime where `S_k` is a
-  small constant and `Psi_k` is injective. A proof needs a spectral/counting
-  bound for the first regime plus a **separate finite argument** for the second.
+- **Do not pursue a per-step bound at all.** Per-step domination is *sufficient*
+  for the induction but **not necessary**, and it is now falsified three
+  independent ways: entrywise, weighted-for-every-weight, and at every
+  population floor tested (violations at `S_k` up to at least 255; LP optimum
+  `0.5611` even with a floor of 30). An earlier version of this section claimed
+  the bulk was clean and only a small-`S_k` tail failed. **That was wrong and is
+  withdrawn** — see the correction in `RESULTS-WINDOW-SPECTRAL-RELAXATION.md`.
+- **The live target is the PRODUCT, not the maximum.** The induction needs
+  `S_need / S_0 < 2^-n`, i.e. a bound on `prod_k ratio_k` — a **geometric mean**
+  below `1/phi`, not a uniform per-step ceiling. This is already the recorded
+  surviving form: `RESULTS-DISTINCT-CONTINUATION-COUNT.md` says "The *product*
+  form survives, which is what the induction actually needs [...] the
+  requirement is a geometric mean below `1/phi = 0.618`", alongside the true
+  per-step max of `1.0` at `n=12,14`. A per-step ceiling was always the wrong
+  object; the three failures above confirm that rather than adding obstacles.
 - That second regime is exactly what the **extinction margin** (the strongest
   open lead on record) measures, and exactly what
   `RESULTS-FIBER-EXTREMAL-FAMILY.md`'s shared-long-suffix structure describes.

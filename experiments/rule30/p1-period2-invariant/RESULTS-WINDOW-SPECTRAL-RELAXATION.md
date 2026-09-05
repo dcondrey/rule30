@@ -132,6 +132,27 @@ this ratio; what is missing is domination (that the null model upper-bounds the
 truth), not the constant. That is the object worth attacking, and it is a
 different object from the `M_w` above.
 
+## CONCURRENT INDEPENDENT REFUTATION, and a threshold correction
+
+The concurrent session wrote `MEMO-SPECTRAL-BOUND-CANNOT-CLOSE.md` the same day,
+refuting the same proposal independently ("Written because the idea was proposed
+again and is seductive [...] Recording the refutation so it is not re-derived a
+fourth time"). Its argument differs from the vacuity proof below and is
+**sharper on one point**, recorded here as a correction to my framing:
+
+> **`lambda_max < 2` is the wrong threshold.** `phi = 1.618 < 2` already, so the
+> criterion "fires immediately, at every width, and always would. A criterion
+> that cannot fail is not a certificate." `lambda < 2` says only that the
+> *fraction* of `{1,2}^n` surviving tends to 0; the *count* still diverges for
+> any `lambda > 1`. Extinction of a nonnegative integer count needs
+> **`lambda < 1`** — equivalently `2*rho < 1` in per-step-ratio terms, i.e. the
+> `rho < 1/2` used elsewhere in this directory.
+
+Both analyses fail the proposal, at different points. That memo shows the
+*criterion* cannot fail and so certifies nothing. The proof below shows the
+*constructed matrix* discards the target constraint entirely, at every width.
+Neither subsumes the other.
+
 ## PRIOR ART I SHOULD HAVE READ FIRST (two corrections against myself)
 
 **1. I duplicated existing code.** `verify_survivor_decay_markov.py:195-228`
@@ -192,10 +213,33 @@ LP-optimal weights:    best w2 = 1.00 -> lambda_min = 1.0000                  FA
 
 Needed: `< 0.5`. Obtained: `1.0` in all three.
 
-**The failures are entirely a small-population tail effect, not a bulk effect.**
-Bulk per-step ratios sit at 0.35-0.47, comfortably under 0.5, consistent with
-`phi/4 = 0.4045`. Every violator is at a tiny surviving population — `S_k` = 1,
-2, 3, 4, 14, 28 — at the deepest levels. This is the same `D: 1 -> 1`
+**CORRECTED 2026-09-05 — the claim that stood here was wrong and is withdrawn.**
+
+> ~~The failures are entirely a small-population tail effect, not a bulk effect.
+> Every violator is at a tiny surviving population — `S_k` = 1, 2, 3, 4, 14, 28
+> — at the deepest levels.~~
+
+That was read off the **top-8 violator list**, which is sorted by ratio. The
+largest *ratios* do sit at tiny `S_k`, but violations of the `0.5` threshold are
+**not** confined there. Re-run with the script's own `--min-count` floor at 30,
+`n = 10..16`:
+
+```
+max raw ratio      = 0.5952  n=14 c=3 depth 6   (S_k =  42 -> 25)
+                     0.5455  n=16 c=3 depth 7   (S_k =  99 -> 54)
+                     0.5032  n=11 c=3 depth 3   (S_k = 157 -> 79)
+max weighted ratio = 0.5818  n=16 c=3 depth 8   (S_k =  54)
+                     0.5615  n=16 c=2 depth 6   (S_k = 255)
+LP-optimal weights : best w2 = 1.39 -> lambda_min = 0.5611
+```
+
+`S_k = 157` and `S_k = 255` are not a tail. Raising the population floor helps
+but does not rescue the bound: the LP optimum improves from `1.0000` (floor 0)
+to `0.5611` (floor 30), still above `0.5`. That agrees with the independent
+entrywise study (`RESULTS-TRANSFER-DOMINATION-CHECK.md:45-49`): restricting to
+`N[s] >= 100` still leaves ~1.75-2.1x, "effective eigenvalue ~0.71, not < 1/2".
+
+The `1 -> 1` steps remain real and are 
 phenomenon already recorded in `RESULTS-DISTINCT-CONTINUATION-COUNT.md`
 ("Strict per-step contraction fails at `n=12,14`, where a lone surviving
 continuation persists one more row"), now confirmed independently in a third
