@@ -92,6 +92,29 @@ are now stale and are corrected below.
    this session (the tool reported no match). If they still do not, write the
    task list to a file as done here; do not burn calls retrying.
 
+## n=30 SAT: FIRST CELL RETURNED (2026-09-05 00:33)
+
+```
+uc/r1-skeptic/gap_30_2_3.log:  30 2  3   31432   97613   UNSAT   20477.98
+```
+
+Verified by reading the file, not from the monitor notification. `n=30 r=2 c=3`
+is **UNSAT**. The other three cells (`1 2`, `1 3`, `2 2`) are still running with
+0-byte logs at 5h41m, so **`n=30` is still not complete and must not be claimed
+as such.** Cost is scaling ~2.2x per `n` (`n=29 r=2 c=3`: 9440.7 s ->
+`n=30 r=2 c=3`: 20477.98 s), which puts `n=31` near 12 h.
+
+`n=31` was **not** launched, though seed task 3 now permits it: three SAT jobs
+still hold the machine, and it buys one more `p=2` zero on a rung that does not
+close Problem 1. To reverse, from the project directory:
+`nohup env PYTHONPATH=. /Volumes/A/researchpapers/.venv/bin/python3 uc/r1-skeptic/rw_sat_gap_fill_one.py 31 2 3 > uc/r1-skeptic/gap_31_2_3.log 2>&1 &`
+
+**Withdrawn:** an earlier annotation in `TASKLIST-20260904-R1.md` said A7
+devalued the SAT-core-scaling task. That conflated two different grids —
+`rw_sat_gap_fill_one.py` grids the rotated-wedge census over word length `n`,
+while `H(p,w)` grids the eventual-period SMT probe over support radius `w`.
+`H(2,w) >= w` says nothing about the `n`-grid. Corrected in place.
+
 ## Post-midnight update (2026-09-05 00:27), single read
 
 The concurrent session (`88e37218`) had three background tasks killed. What went
@@ -101,8 +124,11 @@ and the `dlp_rotated_wedge` heredoc. **Every shared long job survived**: the fou
 `overnight_census.py` streams (3 `RESULT` lines each, now working `n=23,24`), and
 `fastdk_benchmark.py`.
 
-Load average is **33.94** — down from 43.70 but still 3.4x the 10 cores.
-**The launch embargo stands.** Re-check `uptime` before doing anything else.
+Load average was **33.94** at 00:27, and **10.72** at 00:33 once
+`gap_30_2_3` finished — back to roughly one job per core. The embargo is
+therefore no longer absolute, but three SAT jobs are still running at ~98% CPU
+each; **re-check `uptime` yourself before launching anything**, and prefer the
+R1 and D1-D3 work, which needs no CPU at all.
 
 ## Job state at session end (single read, no polling)
 
