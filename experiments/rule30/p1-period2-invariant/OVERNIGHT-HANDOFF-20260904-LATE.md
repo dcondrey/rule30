@@ -92,44 +92,78 @@ are now stale and are corrected below.
    this session (the tool reported no match). If they still do not, write the
    task list to a file as done here; do not burn calls retrying.
 
-## n=30 SAT: 3 of 4 cells returned, all UNSAT (as of 2026-09-05 02:15)
+## n=30 SAT GRID COMPLETE — all six cells UNSAT (2026-09-05 02:42)
 
-Read from the log files directly, not from the monitor notifications.
+**The RW SAT exclusion grid now runs clean through `n=30`**, extending the
+`n<=29` range recorded in `NEXT-SESSION-PROMPT.md`. No SAT job is running.
 
-| cell | vars | clauses | result | seconds | elapsed |
+The grid is `r in {0,1,2}` x `c in {2,3}`. `r=1,2` come from
+`rw_sat_r_grid.py`/`rw_sat_gap_fill_one.py`; **`r=0` is a separate earlier
+scan** (`rw_sat_n30_20260903.log`) and is easy to miss — the four `gap_30_*`
+logs are only four of the six cells, so "all four gap logs returned" is NOT the
+same as "the `n=30` row is complete". Both `r=0` cells were already done.
+
+| cell | vars | clauses | result | seconds | log |
 |---|---|---|---|---|---|
-| `n=30 r=1 c=2` | — | — | **still running** | — | 7h23m |
-| `n=30 r=1 c=3` | 30592 | 95001 | **UNSAT** | 26581.05 | done 02:11 |
-| `n=30 r=2 c=2` | 31432 | 97613 | **UNSAT** | 24330.31 | done 01:33 |
-| `n=30 r=2 c=3` | 31432 | 97613 | **UNSAT** | 20477.98 | done 00:33 |
+| `n=30 r=0 c=2` | 29761 | 92417 | UNSAT | 10403.09 | `rw_sat_n30_20260903.log` |
+| `n=30 r=0 c=3` | 29761 | 92417 | UNSAT | 13242.53 | `rw_sat_n30_20260903.log` |
+| `n=30 r=1 c=2` | 30592 | 95001 | UNSAT | 27975.38 | `gap_30_1_2.log` |
+| `n=30 r=1 c=3` | 30592 | 95001 | UNSAT | 26581.05 | `gap_30_1_3.log` |
+| `n=30 r=2 c=2` | 31432 | 97613 | UNSAT | 24330.31 | `gap_30_2_2.log` |
+| `n=30 r=2 c=3` | 31432 | 97613 | UNSAT | 20477.98 | `gap_30_2_3.log` |
 
-**`n=30` is NOT complete and must not be claimed as such** — `r=1 c=2` is still
-running, at 7h23m, already past the longest completed cell. Three of four are
-UNSAT. Refresh with:
+34.2 CPU-hours for the row. `n=29` is likewise complete; its `r=0 c=3` cell is
+in `rw_sat_n29_c3.log` in a **different output format** (`n=29 r=0 c=3 ...`
+rather than columns), so a `grep '^29 0 '` misses it. Verify the row with:
 
 ```sh
-for f in uc/r1-skeptic/gap_30_*.log; do printf '%-32s %5s bytes  ' "$f" "$(wc -c < "$f")"; tr -s ' ' < "$f" | tr -d '\n'; echo; done
+cd uc/r1-skeptic && grep -hE "^30 [012] " *.log | tr -s ' ' | sort -k2,2n -k3,3n
 ```
 
-Cost scaling, `r=2 c=3`: `n=29` 9440.7 s -> `n=30` 20477.98 s, i.e. ~2.2x per
-`n`, putting `n=31` near 12 h.
+### CORRECTION: my "~2.2x per n" scaling claim was wrong
 
-One observation for **B4** (`L10-SAT-CORE-SCALING`), which is about exactly
-this: solve time does **not** track instance size here. The `r=1` encoding is
-smaller than `r=2` (30592 vars / 95001 clauses against 31432 / 97613) yet slower
-(26581.05 s against 20477.98 s and 24330.31 s). Whatever makes these instances
-hard is not clause count, so a core-size-vs-`n` study should record `r` too.
+Two turns ago I wrote that cost scales ~2.2x per `n` and that `n=31` is
+therefore ~12 h. **That was drawn from a single cell (`r=2 c=3`) and does not
+generalise.** Per-cell `n=29 -> n=30` ratios:
 
-`n=31` was **not** launched, though seed task 3 now permits it. The load
-argument has now expired — load average is 9.02 with one SAT job left — so the
-remaining reason is the prompt's own priority: it buys one more `p=2` zero on a
-rung that does not close Problem 1, and a falsifiable structural question (R1,
-D1-D3) is available instead. That is a judgement call, and it is the next
-session's to revisit. To reverse, from the project directory:
-`nohup env PYTHONPATH=. /Volumes/A/researchpapers/.venv/bin/python3 uc/r1-skeptic/rw_sat_gap_fill_one.py 31 2 3 > uc/r1-skeptic/gap_31_2_3.log 2>&1 &`
+```
+r=0 c=2   11796.39 ->  10403.09    0.88x   (FASTER at larger n)
+r=0 c=3    6419.65 ->  13242.53    2.06x
+r=1 c=2    2228.47 ->  27975.38   12.55x
+r=1 c=3    2547.48 ->  26581.05   10.43x
+r=2 c=2   12747.06 ->  24330.31    1.91x
+r=2 c=3    9440.73 ->  20477.98    2.17x
+```
 
-**Withdrawn:** an earlier annotation in `TASKLIST-20260904-R1.md` said A7
-devalued the SAT-core-scaling task. That conflated two different grids —
+The ratio ranges 0.88x to 12.55x — one cell got *faster* — so no single growth
+factor describes this grid and **no `n=31` runtime estimate is currently
+supportable.** What is visible instead is the spread collapsing: `n=29` spans
+2228-12747 s, `n=30` spans 10403-27975 s. That is the same
+generalise-from-one-case failure the prompt lists four retractions for, and it
+is also a datum for **B4**: solve time does not track instance size either (the
+`r=1` encoding is *smaller* than `r=2` — 30592/95001 vs 31432/97613 — yet slower
+at `n=30`). Any core-scaling study must record `r` and `c`, not just `n`.
+
+`n=31` was **not** launched. The machine is now free (load 9.02, no SAT jobs),
+so the constraint argument has expired; the remaining reason is the prompt's own
+priority — one more `p=2` zero on a rung that does not close Problem 1, with a
+falsifiable structural question (R1, D1-D3) available instead. That is a
+judgement call and it is the next session's to revisit. To launch:
+
+```sh
+cd /Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant
+for r in 0 1 2; do for c in 2 3; do
+  nohup env PYTHONPATH=. /Volumes/A/researchpapers/.venv/bin/python3 \
+    uc/r1-skeptic/rw_sat_gap_fill_one.py 31 $r $c \
+    > uc/r1-skeptic/gap_31_${r}_${c}.log 2>&1 &
+done; done
+```
+
+Six cells, unknown runtime, ~10 cores. Do not launch all six blind if anything
+else is running.
+
+**Withdrawn earlier:** an annotation in `TASKLIST-20260904-R1.md` said A7
+devalued the SAT-core-scaling task. That conflated two grids —
 `rw_sat_gap_fill_one.py` grids the rotated-wedge census over word length `n`,
 while `H(p,w)` grids the eventual-period SMT probe over support radius `w`.
 `H(2,w) >= w` says nothing about the `n`-grid. Corrected in place.
