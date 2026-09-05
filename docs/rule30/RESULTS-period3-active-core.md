@@ -200,7 +200,7 @@ the action of `u` on `000` or `111`, and the next coding section is `200`
 or `202` followed by the corresponding section of `u`.  Because each action
 is a permutation of the eight three-bit blocks, at most one branch emits
 digit zero.  This is the exact partial zero-tail dual in
-`period3_zero_tail_dual.py`.
+`period3_011_zero_tail_dual.py`.
 
 A finite signature has an eventually-zero base-eight expansion.  Therefore
 an immortal finite core would give an infinite orbit of this partial dual.
