@@ -78,11 +78,18 @@ eventually periodic.* **That reading is wrong**, for two independent reasons.
    through time `N`. So *no contradiction can depend on a bounded number of
    centre symbols independent of support size*. Pin survival must grow with
    support radius `w`, and the same document's SMT table shows it does:
-   `H(p=2,w) = 6,6,6,6,8,9,9,14` for `w=1..8`.
+   `H(p=2,w) = 6,6,6,6,8,9,9,14` for `w=1..8`. (`H` there is the maximum
+   *periodic-prefix* horizon under full Rule 30 consistency — SAT through `H`,
+   UNSAT at `H+1` — not a pin-only horizon. Full consistency subsumes the pin,
+   so `H` upper-bounds any pin-only survival horizon.)
 
-   The `lhp_lock_search` numbers sit exactly on that scale (longest
-   violation-free tails 9, 14, 65), which is consistent with the table rather
-   than additional to it.
+   The `lhp_lock_search` tails (9, 14, 65) must **not** be compared to `H`
+   numerically: they count pin violations only, they are measured over a
+   window `[T/2, T)` rather than from `t=0`, and the 65 is a run ending at the
+   window's right edge, so it is a truncation artefact rather than a horizon.
+   The two measurements are different objects. The argument above does not
+   need them to agree — it needs only that `lhp_lock_search` varies the prefix
+   and the word while holding the left half fixed at zero.
 
 **Verdict: `lhp_lock_search`'s zero-lock result adds no exclusion beyond the
 existing `H(p,w)` table.** It should not be cited as evidence against eventual

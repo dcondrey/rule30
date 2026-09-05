@@ -19,8 +19,9 @@ are now stale and are corrected below.
    self-consistency condition on `c` that never mentions `r`.
 4. **`lhp_lock_search`'s "0 lock candidates" is NOT an exclusion.** It fixes LHP
    init to zero and is blocked by the PROVED finite-prefix lemma in
-   `docs/rule30/RESULTS-eventual-period.md`. Its longest violation-free tails
-   (9, 14, 65) sit on the existing `H(p,w)` scale rather than adding to it.
+   `docs/rule30/RESULTS-eventual-period.md`. Its violation-free tails (9, 14,
+   65) are pin-only and measured over `[T/2, T)`, so they are **not**
+   comparable to the `H(p,w)` horizons; the argument does not rest on them.
    **Do not cite it as evidence against eventual periodicity.**
 5. **Seed task 34 retired as stated.** The lone-seed form of the zero-set probe
    is trivial: direct computation of `c` excludes every period `p <= 64` at
@@ -47,8 +48,10 @@ are now stale and are corrected below.
 
 ## OPEN
 
-- **A7 — the highest-value item, blocked on load.** Extend the max
-  pin-consistent horizon table `H(p,w)` to `w = 9,10,11` at `p = 2`. Existing
+- **A7 — the highest-value item, blocked on load.** Extend the maximum
+  periodic-prefix horizon table `H(p,w)` (`docs/rule30/RESULTS-eventual-period.md`;
+  SAT through `H`, UNSAT at `H+1`, over all nonzero rows of support radius `w`)
+  to `w = 9,10,11` at `p = 2`. Existing
   row (`w=1..8`): `6,6,6,6,8,9,9,14`. Linear growth in `w` ⇒ the SAT/SMT route
   never terminates and R1 needs a structural theorem; a plateau **is** the
   theorem. Kill condition: `H(2,w) > w + 8` at any `w <= 11`.
