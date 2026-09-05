@@ -92,19 +92,29 @@ are now stale and are corrected below.
    this session (the tool reported no match). If they still do not, write the
    task list to a file as done here; do not burn calls retrying.
 
-## n=30 SAT: FIRST CELL RETURNED (2026-09-05 00:33)
+## n=30 SAT: 2 of 4 cells returned, both UNSAT (as of 2026-09-05 01:38)
 
+Read from the log files directly, not from the monitor notifications.
+
+| cell | vars | clauses | result | seconds | elapsed |
+|---|---|---|---|---|---|
+| `n=30 r=1 c=2` | — | — | **still running** | — | 6h45m |
+| `n=30 r=1 c=3` | — | — | **still running** | — | 6h45m |
+| `n=30 r=2 c=2` | 31432 | 97613 | **UNSAT** | 24330.31 | done 01:33 |
+| `n=30 r=2 c=3` | 31432 | 97613 | **UNSAT** | 20477.98 | done 00:33 |
+
+**`n=30` is NOT complete and must not be claimed as such.** Both finished cells
+are `r=2`; neither `r=1` cell has returned, and both are now past the slower
+`r=2` time. Refresh with:
+
+```sh
+for f in uc/r1-skeptic/gap_30_*.log; do printf '%-32s %5s bytes  ' "$f" "$(wc -c < "$f")"; tr -s ' ' < "$f" | tr -d '\n'; echo; done
 ```
-uc/r1-skeptic/gap_30_2_3.log:  30 2  3   31432   97613   UNSAT   20477.98
-```
 
-Verified by reading the file, not from the monitor notification. `n=30 r=2 c=3`
-is **UNSAT**. The other three cells (`1 2`, `1 3`, `2 2`) are still running with
-0-byte logs at 5h41m, so **`n=30` is still not complete and must not be claimed
-as such.** Cost is scaling ~2.2x per `n` (`n=29 r=2 c=3`: 9440.7 s ->
-`n=30 r=2 c=3`: 20477.98 s), which puts `n=31` near 12 h.
+Cost scaling, `r=2 c=3`: `n=29` 9440.7 s -> `n=30` 20477.98 s, i.e. ~2.2x per
+`n`, putting `n=31` near 12 h.
 
-`n=31` was **not** launched, though seed task 3 now permits it: three SAT jobs
+`n=31` was **not** launched, though seed task 3 now permits it: two SAT jobs
 still hold the machine, and it buys one more `p=2` zero on a rung that does not
 close Problem 1. To reverse, from the project directory:
 `nohup env PYTHONPATH=. /Volumes/A/researchpapers/.venv/bin/python3 uc/r1-skeptic/rw_sat_gap_fill_one.py 31 2 3 > uc/r1-skeptic/gap_31_2_3.log 2>&1 &`
