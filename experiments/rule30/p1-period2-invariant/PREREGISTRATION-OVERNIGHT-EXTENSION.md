@@ -76,3 +76,25 @@ predictions* — not in P2's expected zeros.
 - Memory: streaming counts only; no storage of per-word continuations
   (the machine has ~1.7 GB free and a documented history of jetsam kills
   from runaway python).
+
+## SCORING CORRECTION (2026-09-04, later same evening)
+
+P1 above was written with the clause "scored as correct if
+`|k_dep - (floor(n/2) - 2)| <= 1`". **That tolerance was a design error and
+is withdrawn.** `D_k` is an exact integer from exhaustive enumeration —
+there is no sampling and no noise, so a tolerance on it is not a
+concession to measurement error, it is a licence to absorb genuine
+disagreement. Rescored exactly:
+
+```
+n         10  12   14  16  17  18  19  20  21
+k_dep      4  4/5   5   6   6   7   7   7   8
+floor(n/2)-2  3   4    5   6   6   7   7   8   8
+```
+
+`n=10` off by one high; `n=20` off by one low; and at `n=12` the two tails
+disagree (`4` at `c=3`, `5` at `c=2`), so no function of `n` alone can be
+correct. **P1 is falsified as an exact formula.** The light-cone argument
+gives a heuristic scale of order `n/2`, not a law. Any downstream document
+asserting the formula (notably
+`RESULTS-DISTINCT-CONTINUATION-COUNT.md`) must be corrected.
