@@ -291,6 +291,35 @@ census consequences, none a proof route.
 
 ## 17. Single-flip injection between survivor levels (`flip_pairing.py`, `RESULTS-FLIP-PAIRING.md`)
 
+**CORRECTION (2026-09-04, `RESULTS-MEASURE-SUPPRESSION.md` V3(b), independently
+re-verified directly against both functions).** Every row in this section's
+table is about `flip_pairing.forced_orbit`'s survivor population, which
+forces each appended symbol by `psi_kernel`'s high-bit condition
+(`H(dia[n])==1`) — this is the `(BWH+)`/`Psi_n` object from
+`PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md` section 0, the one that
+document explicitly says was abandoned for full-generality `W` (full
+algebraic degree `n`, no bounded-arity law). It is **NOT** `H_r(n)`
+(`PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md` section 4), which forces
+each appended symbol by `literal_extension`'s exact-tail-match condition.
+Checked directly: on `word=(1,1,2,1,2,2,1,2)`, `tail=2`,
+`literal_extension` gives `(3,0,2,2,1,1,2,1,2,3)` (fails hard-core
+immediately, value `3` at index 0) while `forced_orbit` gives
+`(2,1,2,2,2,1,1,1,1,2)` (stays in `{1,2}` throughout) — the two forced
+continuations diverge from the very first appended symbol, at essentially
+chance-level first-symbol agreement (250/500 pairs at `n=10`). There is no
+index shift under which this section's `N_j(n)` equals `|H_r(n)|`. The
+"RW" name in `RESULTS-FLIP-PAIRING.md`'s own title predates
+`PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md`'s narrower, later, formal
+definition of RW/`H_r(n)` by about a day — this section's `0.4^j` rate,
+its `99->54->28->18` trajectories, and its counting-line row are all real
+findings about `(BWH+)`/`Psi_n`, not about DLP/RW. `BACKLOG.md` section 19
+and `PREREGISTRATION-ENDPOINT-ENERGY-INVARIANT.md` section 1 both cited
+this section's `0.4` as if it were independent corroborating evidence
+about the same object as `H_r(n)`; that framing is now known to be wrong
+and should not be repeated. Do not reuse this section's `N_j`/`S_j` as a
+stand-in for `H_r(n)` or its survivor population in any future document
+without re-deriving the object from `literal_extension` directly.
+
 The one proof shape the full-degree result leaves open is an injection
 `S_{j+1} -> D_j` pairing each level-`j` pass with a same-level `E` failure.
 Tried with single source flips as the pairing, `n = 9..16`, both `c`.
@@ -322,6 +351,27 @@ lost.
 Kill condition: if the survivor language fails the pumping lemma for
 context-free languages at a computable scale (a few hundred symbols), this
 route is dead too, cheaply, before any proof effort.
+
+**Prerequisite check (2026-09-04, `RESULTS-FIB-ABSENT-M8-M9-M10.md`,
+`fib_absent_check_m8910.py`), SUPERSEDED BY THE SECTION-17 CORRECTION
+ABOVE.** Checked whether the "missing hard-core blocks" signal at m=8,9,10
+in `fib_transfer_screen_20260902.log` is real or the same sampling artifact
+already found at m=7 (which it was, for m=7). m=8 fully resolved (0/18
+still absent at `n=18..20`); m=9, m=10 left 15/65, 86/136 unresolved with
+sample counts too small to call it either way. **But this whole check
+reused `fib_transfer_screen.forced_words`, which forces symbols by
+`psi_kernel`'s H-bit condition — the same `(BWH+)`/`Psi_n` object the
+section-17 correction just identified, not `literal_extension`/`H_r(n)`.**
+Section 10's `B_RW` table and this check's "RW forced-symbol language" are
+therefore about `Psi_n`, already known to have full algebraic degree `n`
+with no bounded-arity law (capsule section 7) — not about the actual
+`literal_extension`-based survivor language section 18 asks about. The
+m=8/9/10 sampling question above is a real finding about `Psi_n`'s block
+language, but says nothing about section 18's premise either way. If
+section 18 is pursued, the block census needs rebuilding on
+`late_pull_diagonal_sat.literal_extension` outputs directly (matching
+`rw_population_h.py`'s `H_r(n)` construction, not `fib_transfer_screen.py`'s),
+before any absent-block or pumping-lemma question is meaningful.
 
 Paired idea from the same note (golden-mean SFT -> rotation via the
 Ostrowski/continued-fraction coding) is NOT open — it already shipped as
