@@ -16,20 +16,16 @@ document's proposed mechanism (section 3b) was that history should add
 something beyond the current-state snapshot that BACKLOG item 4 already
 showed was vacuous; it does not.
 
-**Important caveat on scope, found after this design was registered:**
-`RESULTS-MEASURE-SUPPRESSION.md`'s V3(b) check (same day) established that
-`flip_pairing.forced_orbit`'s survivor population -- the object `N_j`,
-`S_j`, and the D8 class sequence `sigma_j(w)` used throughout this
-document -- is the `(BWH+)`/`Psi_n` construction, not `H_r(n)`/DLP-RW
-(`BACKLOG.md` section 17's correction note). This document's target
-(section 1: "same numerical target already on record... the counting
-line... exactly as defined in `flip_pairing.py`") inherited that mislabel.
-So even had the drift mechanism survived, it would have been a fact about
-`(BWH+)`/`Psi_n`, not about the DLP/RW route this project is actually
-pursuing. That does not change today's verdict (the mechanism fails on its
-own terms regardless), but it means this route would need to be
-re-registered against `literal_extension`'s actual `H_r(n)` construction
-before it could bear on RW at all, not merely re-run.
+**Scope note (revised 2026-09-04).** An earlier version of this section
+carried a caveat claiming the object measured here (`N_j`, `S_j`, and the
+D8 class sequence `sigma_j(w)` from `flip_pairing`) was the
+`(BWH+)`/`Psi_n` construction rather than `H_r(n)`/DLP-RW. **That caveat
+was based on a retracted claim and is removed** — see `BACKLOG.md` section
+17's retraction. The two constructions define the same survivor
+population (0 death-level mismatches out of 7,168 words, `n=9,10,11`, both
+tails). So this document's measurements are genuinely about the
+`H_r(n)`/DLP-RW survival process, and the kill below applies to it
+directly, with no re-registration needed.
 
 ## 1. What was run
 

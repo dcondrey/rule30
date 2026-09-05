@@ -30,7 +30,7 @@ section 7.3 (killed mechanisms and obstructions).
 | L3-QUAD-COUPLING | cross-term rank of the bilinear form between window halves `>= m/2 - 2` | RW-alpha (unsupported) | unclear | untestable as stated | holonomy-defect word | The bilinear form in letter variables is triangular of full rank trivially; the letters are not free.  Needs a precise statement about which matrix |
 | L7-DIAG-SAT-UNSAT-RANGE | RW UNSAT for `n = 21..30` by SAT on the diagonal encoding | RW on a finite range | complete SAT | in flight: WF skeptic lens (`uc/*/rw_sat.py`) | bounded SAT tables | A SAT model would be an RW counterexample, the most valuable possible outcome |
 | L10-SAT-CORE-SCALING | UNSAT core grows `>= exp(0.1 n)` | meta-evidence | proof-logging SAT | deferred | resolution bounds (killed for `c_n`) | Does not advance a proof; run only if SAT runs happen anyway |
-| L11-RW-TERMINAL-DEFECT | `|H_r(n)| / 2^n` (the hard-core + `12a`-terminal RW candidate population) decays with `n`, `r = 0,1,2` | motivates a shrinking-population argument for RW where `(BWH+)`'s full-degree obstruction blocks the unrestricted version | exhaustive `H_r(n)` count vs `2^n`, both `c`, `r = 0,1,2` (not yet built; needs the two independent constructions per prereg control #1) | S1'/S2 done and empty (`RESULTS-PSI-ANCESTRY-R-EXTENSION.md`): `r=1,2` constant-`Psi` counts computed through n=17, zero at n>=7 for both, matches `r=0`'s shape; every constant word at n=5,6 (`r=0,1`) fails `literal_witness` for both `c`. Section 4's actual `\|H_r(n)\|/2^n` measurement is the remaining, unstarted step | full-degree `Delta` (obstruction, not kill) | `PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md`; fires the capsule section 7 fallback; the collapse lemma (RW witness existence = `literal_extension` surviving hard-core+`12a`) is resolved by reading the code, no run needed |
+| L11-RW-TERMINAL-DEFECT | `|H_r(n)| / 2^n` (the hard-core + `12a`-terminal RW candidate population) decays with `n`, `r = 0,1,2` | motivates a shrinking-population argument for RW where `(BWH+)`'s full-degree obstruction blocks the unrestricted version | exhaustive `H_r(n)` count vs `2^n`, both `c`, `r = 0,1,2` | S1'/S2 done and empty (`RESULTS-PSI-ANCESTRY-R-EXTENSION.md`). Section 4 measurement now run (`RESULTS-RW-TERMINAL-DEFECT-H-POPULATION.md`, `rw_population_h.py`): `|H_r(n)| = 0` exactly for every `n = 1..16`, every `r`, both `c` — stronger than the stated decay question, the population is already empty, not just shrinking. Exhaustive, not sampled; control #1 (two independent constructions) agreed on every word. Not yet extended past `n=16`, and no structural proof of the emptiness exists yet | full-degree `Delta` (obstruction, not kill) | `PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md`; fires the capsule section 7 fallback; the collapse lemma (RW witness existence = `literal_extension` surviving hard-core+`12a`) is resolved by reading the code, no run needed. Next: look for why `H_r(n)` is forced empty (an invariant of `literal_extension`'s row-by-row forcing), not just extend the census |
 
 ## 2. Killed or closed on arrival (no compute needed)
 
@@ -291,34 +291,31 @@ census consequences, none a proof route.
 
 ## 17. Single-flip injection between survivor levels (`flip_pairing.py`, `RESULTS-FLIP-PAIRING.md`)
 
-**CORRECTION (2026-09-04, `RESULTS-MEASURE-SUPPRESSION.md` V3(b), independently
-re-verified directly against both functions).** Every row in this section's
-table is about `flip_pairing.forced_orbit`'s survivor population, which
-forces each appended symbol by `psi_kernel`'s high-bit condition
-(`H(dia[n])==1`) — this is the `(BWH+)`/`Psi_n` object from
-`PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md` section 0, the one that
-document explicitly says was abandoned for full-generality `W` (full
-algebraic degree `n`, no bounded-arity law). It is **NOT** `H_r(n)`
-(`PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md` section 4), which forces
-each appended symbol by `literal_extension`'s exact-tail-match condition.
-Checked directly: on `word=(1,1,2,1,2,2,1,2)`, `tail=2`,
-`literal_extension` gives `(3,0,2,2,1,1,2,1,2,3)` (fails hard-core
-immediately, value `3` at index 0) while `forced_orbit` gives
-`(2,1,2,2,2,1,1,1,1,2)` (stays in `{1,2}` throughout) — the two forced
-continuations diverge from the very first appended symbol, at essentially
-chance-level first-symbol agreement (250/500 pairs at `n=10`). There is no
-index shift under which this section's `N_j(n)` equals `|H_r(n)|`. The
-"RW" name in `RESULTS-FLIP-PAIRING.md`'s own title predates
-`PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md`'s narrower, later, formal
-definition of RW/`H_r(n)` by about a day — this section's `0.4^j` rate,
-its `99->54->28->18` trajectories, and its counting-line row are all real
-findings about `(BWH+)`/`Psi_n`, not about DLP/RW. `BACKLOG.md` section 19
-and `PREREGISTRATION-ENDPOINT-ENERGY-INVARIANT.md` section 1 both cited
-this section's `0.4` as if it were independent corroborating evidence
-about the same object as `H_r(n)`; that framing is now known to be wrong
-and should not be repeated. Do not reuse this section's `N_j`/`S_j` as a
-stand-in for `H_r(n)` or its survivor population in any future document
-without re-deriving the object from `literal_extension` directly.
+**RETRACTED CORRECTION (2026-09-04).** An earlier version of this note
+claimed this section's `N_j(n)` was the `(BWH+)`/`Psi_n` object and NOT
+`H_r(n)`, i.e. that there was a project-wide naming collision. **That claim
+was false and is withdrawn.** Its stated evidence was an elementwise
+comparison of `literal_extension`'s output against `forced_orbit`'s output
+showing they "diverge from the first symbol". Those two outputs are
+different-typed objects: `literal_extension` searches all four values and
+returns the forced *edge* value (a `0` or `3` means death), while
+`forced_orbit` only ever tries `{1,2}` and returns a *source symbol*.
+Comparing them elementwise tests nothing, and both the original claim and
+its purported independent re-verification made the same type error.
+
+**What is actually true** (`RESULTS-MEASURE-SUPPRESSION.md` V3(b), and
+re-verified directly here): the two constructions define the **same**
+survivor population. `rw_population_h.survival_curve`'s `alive_after[j]`
+equals `block_halving.chains`'s `src[j]` at the *same* index `j`, and the
+stronger word-level check finds **0 death-level mismatches out of 7,168
+words** (`n=9,10,11`, both tails, every word). So this section's `0.4^j`
+rate, its `99->54->28->18` trajectories, the block-halving `k<=3`, and the
+counting-line constant are all genuinely about the `H_r(n)`/DLP-RW
+survival process, and may be cited as such.
+
+The one real correction is an index shift: `|H_r(n)| <= N_{n+r+2}(n)`, not
+`N_n(n)`, because `H_r(n)` adds the `terminal_pull` filter on top of
+survival through row `n+r+2`. The containment is generically strict.
 
 The one proof shape the full-degree result leaves open is an injection
 `S_{j+1} -> D_j` pairing each level-`j` pass with a same-level `E` failure.

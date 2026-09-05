@@ -14,6 +14,33 @@ found. It is a quantitative measurement of the *absence* of one, and it is
 the same fact as four other numbers already on record that had not been
 connected to it.
 
+## 0b. Correction affecting the independence claim (2026-09-04, same day)
+
+An earlier same-day note in `BACKLOG.md` section 17 claimed
+`flip_pairing.py`/`block_halving.py` measured a *different* object
+(`(BWH+)`/`Psi_n`) from `H_r(n)`. **That claim has been retracted** — it
+rested on comparing two different-typed outputs elementwise. The two
+constructions in fact define the same survivor population: 0 death-level
+mismatches out of 7,168 words (`n=9,10,11`, both tails).
+
+This cuts both ways for this document:
+
+- **In favour:** the section 3 table's grouping is correct, and
+  `flip_pairing`'s `0.4^j` and block-halving's ratio genuinely describe the
+  `H_r(n)` survival process, so they may be compared with the `H_r(n)`
+  per-row measurements directly.
+- **Against:** those are therefore *not* three independent objects
+  agreeing. `rw_population_h`, `flip_pairing` and `block_halving` are three
+  codings of the **same** process, so their agreement is a consistency
+  check, not independent confirmation. The genuinely independent
+  measurement in the `0.4` family is the endpoint-coordinate `13/32`
+  statistic (a different statistic on the raw `Endpoint` recursion), and it
+  is *not* equal to `phi/4` (`0.40625` vs `0.404508`) — it is a separate
+  exact rational that happens to land nearby. Any claim of the form "three
+  independent codings converge on one constant" must be dropped; the honest
+  claim is "one process, measured three ways, matches its own maximal-entropy
+  null to the stated precision."
+
 ## 1. The null model, and why phi/4
 
 Take the crudest possible model of `literal_extension`'s forced
