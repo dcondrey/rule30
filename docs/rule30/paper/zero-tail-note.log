@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  30 AUG 2026 17:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) (preloaded format=pdflatex 2026.3.4)  2 SEP 2026 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -880,7 +880,7 @@ vips/cm-super/cm-super-t1.enc}] [2] [3]
 (./figures/fig-horizon-1.tex) (./figures/fig-horizon-2.tex)
 (./figures/fig-horizon-3.tex) (./figures/fig-horizon-4.tex)
 (./figures/fig-horizon-5.tex) (./figures/fig-horizon-6.tex) [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 469--471
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
 []\T1/cmr/m/n/9 (+20) S. Wol-fram, An-nounc-ing the Rule 30 prizes, 2019. []$\T
 1/cmtt/m/n/9 https : / / writings . stephenwolfram . com / 2019 / 10 /
  []
@@ -891,14 +891,14 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `zero-tail-note.out' has not changed.
-(rerunfilecheck)             Checksum: 0CEBC72A68F4C4FB9A211B40C0DF1749;752.
+(rerunfilecheck)             Checksum: 9BB6BC7E799AE78245B0837F0D6FF8E4;966.
  ) 
 Here is how much of TeX's memory you used:
- 24954 strings out of 467525
- 465937 string characters out of 5408440
- 993643 words of memory out of 5000000
- 53210 multiletter control sequences out of 15000+600000
- 656102 words of font info for 200 fonts, out of 8000000 for 9000
+ 24975 strings out of 467525
+ 466223 string characters out of 5408440
+ 995098 words of memory out of 5000000
+ 53217 multiletter control sequences out of 15000+600000
+ 657070 words of font info for 208 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,17n,107p,1011b,803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/am
@@ -934,11 +934,13 @@ ist/fonts/type1/public/cm-super/sfti0900.pfb></opt/homebrew/Cellar/texlive/2026
 0301/share/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></opt/homebrew/C
 ellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pf
 b></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/cm
--super/sftt1200.pfb>
-Output written on zero-tail-note.pdf (6 pages, 471670 bytes).
+-super/sftt1000.pfb></opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fon
+ts/type1/public/cm-super/sftt1095.pfb></opt/homebrew/Cellar/texlive/20260301/sh
+are/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on zero-tail-note.pdf (6 pages, 530621 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 231 compressed objects within 3 object streams
+ 307 PDF objects out of 1000 (max. 8388607)
+ 235 compressed objects within 3 object streams
  42 named destinations out of 1000 (max. 500000)
- 48181 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 49213 words of extra memory for PDF output out of 51595 (max. 10000000)
 
