@@ -68,12 +68,24 @@ def main():
             out.append(f"  {''.join(map(str, w)):6s} pre={prefix_len} |Z|={len(Z):5d} "
                        f"I_all={viol_all:5d}/{T} I_Z={viol_Z:5d}/{len(Z)} "
                        f"rZ={rZ_ep} lZ={lZ_ep} l={l_ep}")
-    # positive control: identity I on a real diagram, where l, c, r share one configuration
-    cols = lone_seed_columns(T, [-1, 0, 1])
+    # Control A: identity I on a real diagram, where l, c, r share one configuration.
+    cols = lone_seed_columns(T + 2, [-1, 0, 1])
     lc, cc, rc = cols[-1], cols[0], cols[1]
     ctrl = sum(1 for t in range(T) if cc[t + 1] != (lc[t] ^ (cc[t] | rc[t])))
-    out.append(f"CONTROL true lone-seed diagram (l, c, r from one configuration): "
+    out.append(f"CONTROL A true lone-seed diagram (l, c, r from one configuration): "
                f"I-violations {ctrl}/{T}")
+    # Control B: are the two driven models themselves faithful?  Feed them a
+    # REALIZABLE drive -- the true lone-seed centre column -- and compare against
+    # the true diagram's own columns, then re-test identity I on that driven pair.
+    rr = [(row >> 1) & 1 for row in driven_rhp(cc, T)]
+    ll = [(row >> 1) & 1 for row in driven_lhp(cc, T)]
+    mr = sum(1 for t in range(T + 1) if rr[t] != rc[t])
+    ml = sum(1 for t in range(T + 1) if ll[t] != lc[t])
+    ib = sum(1 for t in range(T) if cc[t + 1] != (ll[t] ^ (cc[t] | rr[t])))
+    out.append(f"CONTROL B driven models fed the TRUE centre column: "
+               f"driven_rhp vs true r mismatches {mr}/{T + 1}, "
+               f"driven_lhp vs true l mismatches {ml}/{T + 1}, "
+               f"identity I on that driven pair {ib}/{T} violations")
     out.append(f"TOTALS over {tot['n']} drives: r|Z periodic {tot['rZ']}, l|Z periodic {tot['lZ']}, "
                f"l periodic {tot['l']}, drives satisfying identity I everywhere: {tot['clean']}")
     print("\n".join(out))

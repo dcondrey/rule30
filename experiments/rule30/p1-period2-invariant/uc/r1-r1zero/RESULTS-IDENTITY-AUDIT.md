@@ -25,27 +25,44 @@ neither was tested.
 ## Result
 
 **Neither candidate explanation is needed. There is no inconsistency, because
-identity I is not a property of the pair of sequences being compared.**
+identity I is not a property of the pair of sequences being compared -- and the
+reason is sharper than "two separate simulations".**
 
-`driven_halfplane.py` runs two *separate* simulations. `driven_rhp` builds the
-right half-plane `x >= 1` from the drive; `driven_lhp` builds the left half-plane
+`driven_halfplane.py` runs two simulations. `driven_rhp` builds the right
+half-plane `x >= 1` from the drive; `driven_lhp` builds the left half-plane
 `x <= -1` from the same drive. Each writes `c_{t+1}` into its own `x = 0` slot by
-fiat (`nxt = (nxt & ~1) | ct1` in both, `r1zero_lib.py`), discarding whatever the
-rule would have produced there. The rule instance at `x = 0` -- the *only* thing
-that couples `l` to `r` -- is therefore enforced in neither model. `l` and `r` as
-measured come from two configurations that share a boundary word and nothing else.
+fiat (`nxt = (nxt & ~1) | ct1` in both, `r1zero_lib.py`), so the rule instance at
+`x = 0` -- the only thing that couples `l` to `r` -- is enforced in neither.
 
-Measured directly, all 44 drives, `T = 4096`:
+But that is not because the models are wrong. Fed a **realizable** drive they are
+exactly faithful and the identity is restored. Control B, `T = 4096`, drive = the
+true lone-seed centre column:
+
+| | mismatches |
+|---|---|
+| `driven_rhp(true c)` against the true diagram's `r` | **0 / 4097** |
+| `driven_lhp(true c)` against the true diagram's `l` | **0 / 4097** |
+| identity I on that same driven **pair** | **0 / 4096 violations** |
+
+So identity I holding across the driven pair is exactly a **realizability test on
+the drive**. Measured over all 44 (word, prefix) drives the original script uses:
 
 | | value |
 |---|---|
 | drives satisfying identity I at every `t` | **0 / 44** |
 | typical I-violation rate | ~2000 / 4096, i.e. ~50%, coin-flip |
-| **control**: identity I on the true lone-seed diagram (`l`, `c`, `r` from one configuration) | **0 violations / 4096** |
+| control A: identity I on the true lone-seed diagram | **0 violations / 4096** |
+| control B: identity I on the driven pair fed the true centre column | **0 violations / 4096** |
 
-The control is the point: identity I is exact where the three columns come from
-one configuration, and is satisfied at chance rate where they do not. The
-premise of the flag fails before either candidate explanation is reached.
+Every one of the 44 drives is a periodic word that is **not the centre column of
+any diagram**, so the `r` and the `l` it produces belong to no common
+configuration and no identity relates them. The flag's premise fails before
+either of its candidate explanations is reached.
+
+(Realizability failing for these particular short periodic words is not itself
+news -- eventual period 1 is already proved out, and periods 2..6 are far inside
+every finite check on record. The point is that it is the *whole* content of the
+flagged 10-vs-0 split.)
 
 ## The length-matched column, which also rules out explanation 2
 
@@ -64,6 +81,11 @@ objects looks like.
 - **Settles**: the flagged discrepancy. `RESULTS-R1-ZERO-SET-ATTACK.md` section 6
   can be marked resolved, with its explanations 1 and 2 both unneeded rather than
   refuted -- they were never reached.
+- **Clears the two half-plane simulators.** Control B is the first faithfulness
+  check on record for `driven_rhp`/`driven_lhp`: both reproduce the true diagram
+  exactly on a realizable drive. Any future result from them is a statement about
+  a *hypothetical* periodic centre column, which is the intended reading; the
+  models are not buggy.
 - **Does not settle**: anything about R1. The 10/44 figure is *not* thereby
   validated as evidence that a periodic `c` sometimes forces `r|Z` periodic in a
   real diagram; it is a statement about a driven model with an arbitrary clamp,
@@ -82,6 +104,6 @@ cd experiments/rule30/p1-period2-invariant/uc/r1-r1zero
 env PYTHONPATH=. /Volumes/A/researchpapers/.venv/bin/python3 identity_audit.py 4096 512
 ```
 
-~20 s. Reuses `r1zero_lib.py` (`driven_rhp`, `driven_lhp`, `eventual_period`,
+~25 s. Reuses `r1zero_lib.py` (`driven_rhp`, `driven_lhp`, `eventual_period`,
 `lone_seed_columns`) and reconstructs the same 44 drives as `driven_halfplane.py`.
 No file outside this directory is written or modified.
