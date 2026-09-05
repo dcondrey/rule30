@@ -1,0 +1,8 @@
+n=17 c=2 class=10 free=6 distinct_edges= 1 edge_len=34 diff_positions=[] n_diff=0
+n=17 c=3 class= 6 free=3 distinct_edges= 1 edge_len=34 diff_positions=[] n_diff=0
+n=18 c=2 class= 8 free=5 distinct_edges= 1 edge_len=36 diff_positions=[] n_diff=0
+n=18 c=2 class= 8 free=3 distinct_edges= 2 edge_len=36 diff_positions=[35] n_diff=1
+n=18 c=3 class=12 free=5 distinct_edges= 2 edge_len=36 diff_positions=[35] n_diff=1
+n=19 c=2 class= 4 free=2 distinct_edges= 1 edge_len=38 diff_positions=[] n_diff=0
+n=19 c=2 class= 4 free=2 distinct_edges= 2 edge_len=38 diff_positions=[37] n_diff=1
+n=19 c=3 class= 6 free=3 distinct_edges= 2 edge_len=38 diff_positions=[36, 37] n_diff=2
