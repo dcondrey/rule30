@@ -104,8 +104,8 @@ def fit_geometric_rate(alive_after: list[int]) -> float | None:
     return math.exp(slope)
 
 
-def census(max_source: int, tail: int, residue: int) -> list[tuple[int, int, int]]:
-    rows = []
+def census(max_source: int, tail: int, residue: int):
+    """Yield (n, count, 2**n) as each n finishes, instead of batching."""
     for n in range(1, max_source + 1):
         count = 0
         for word in product((1, 2), repeat=n):
@@ -121,8 +121,7 @@ def census(max_source: int, tail: int, residue: int) -> list[tuple[int, int, int
             )
             if direct:
                 count += 1
-        rows.append((n, count, 2 ** n))
-    return rows
+        yield (n, count, 2 ** n)
 
 
 def main() -> None:
@@ -135,14 +134,15 @@ def main() -> None:
 
     for residue in args.residues:
         for tail in args.tails:
-            print(f"\n--- r={residue} c={tail} (both constructions agree per-word) ---")
-            print(" n   |H_r(n)|   2^n        ratio")
+            print(f"\n--- r={residue} c={tail} (both constructions agree per-word) ---", flush=True)
+            print(" n   |H_r(n)|   2^n        ratio", flush=True)
             start = time.time()
             for n, count, total in census(args.max_source, tail, residue):
                 ratio = count / total
-                print(f"{n:3d}   {count:8d}   {total:10d}   {ratio:.6f}")
+                n_elapsed = time.time() - start
+                print(f"{n:3d}   {count:8d}   {total:10d}   {ratio:.6f}   ({n_elapsed:.1f}s cum)", flush=True)
             elapsed = time.time() - start
-            print(f"  ({elapsed:.1f}s)")
+            print(f"  ({elapsed:.1f}s)", flush=True)
 
             if args.curve_n:
                 curve = survival_curve(args.curve_n, tail, residue)

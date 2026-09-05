@@ -4,7 +4,10 @@ Date: 2026-09-04 (revised same day after an advisor pass caught a trivial
 kill condition, a drifted reading of "rows n,n+1,n+2", and an unverified
 range claim in the first draft)
 
-Status: design only. No census, no code changes. Frozen before any run.
+Status: design frozen here (unchanged below). The section 4 measurement
+has now been run: see `RESULTS-RW-TERMINAL-DEFECT-H-POPULATION.md` —
+`|H_r(n)| = 0` exactly for `n = 1..16`, every `r`, both `c`, stronger than
+the decay question this document poses. Not yet extended past `n=16`.
 
 ## 0. Why this route, and why not the alternatives already killed
 
