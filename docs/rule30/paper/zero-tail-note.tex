@@ -47,7 +47,7 @@
 
 \title{\vspace{-2.2em}Finite Configurations Cannot Generate a Constant Trace in Rule 30}
 \author{David Lee Condrey\\WritersLogic, Inc.\\\texttt{david@writerslogic.com}}
-\date{August 2026\vspace{-1.5em}}
+\date{September 2026\vspace{-1.5em}}
 
 \renewenvironment{abstract}{\small\quotation}{\endquotation}
 
@@ -59,13 +59,15 @@ For every right half with $R_0=0$ we determine the unique left half whose
 Rule-30 central trace is identically zero, and for every right half with
 $R_0=1$ the unique left half whose trace is identically one.  The first is an
 alternating tail selected by the leading one of the right half; the second is a
-single checkerboard, the same for every right half.  Both carry infinitely many
-ones, so the zero configuration is the only finitely supported member of either
-fiber.  For support radius $w$ the longest constant central prefix has length
-$2\lceil w/2\rceil$ in the zero case and $w+1$ or $w$ in the one case
-according to the parity of $w$, so $w+1$ over both, attained by exactly $2^w$
-rows for even $w$ and $2^w-1$ for odd $w$.  Hence no column of a nonzero finite
-Rule 30 orbit is eventually constant.
+single checkerboard, the same for every right half.  Every nonzero member of
+either fiber carries infinitely many ones, so the union of the two fibers
+contains exactly one finitely supported configuration, the zero row.  For
+support radius $w$, the sharp maximum
+constant-prefix length is $2\lceil w/2\rceil+1$ when the initial center is zero
+and $2\lfloor w/2\rfloor+2$ when it is one.  The maximum over both constants is
+therefore $w+2$, attained by exactly $2^w$ configurations for even $w$ and
+$2^w-1$ for odd $w$.  Hence no column of a nonzero finite Rule 30 orbit is
+eventually constant.
 \end{abstract}
 
 \section{Introduction}
@@ -80,14 +82,16 @@ rule is the following.
 It is left permutive: fixing $x_i$ and $x_{i+1}$, the value $F(x)_i$ is a
 bijection of $x_{i-1}$.
 
-Whether the center column of Rule 30 from a finite initial condition can be
-eventually periodic is open \cite{wolfram}.  Jen's theorem leaves at most one
-exceptional periodic column \cite[Thms.~2a,~2b,~3]{jen1986}
-\cite[Prop.~3]{jen}, and a zero column is precisely where that exception
-could sit; Kopra's width-two exclusion does not reach width one
-\cite{kopra,kopra-thesis}.  The gap is one column wide.  We settle its
-eventually-constant subcase, and no more: the nonconstant eventually periodic
-case is untouched, so nothing here bears on the center-column problem itself.
+Wolfram's Prize Problem~1 asks whether the center trace from the lone-seed
+configuration is eventually periodic \cite{wolfram}; Kopra records the broader
+finite-configuration version as open \cite{kopra-thesis}.  Jen proved that a
+finite Rule 30 orbit has at most one eventually periodic column
+\cite[Thm.~2b]{jen1986}\cite[Prop.~3]{jen}, while Kopra's width-two theorem
+does not decide whether that single exceptional column exists
+\cite{kopra}.  We settle the entire eventual-period-one subcase for every
+nonzero finite configuration, a class strictly broader than the lone seed.
+This is a direct partial result toward the center-column question, but it does
+not resolve Prize Problem~1 and leaves every nonconstant eventual period open.
 
 The mechanism is an exact inversion: prescribing the right half and demanding
 an all-zero center forces the left half cell by cell, as a prefix-OR of the
@@ -99,16 +103,21 @@ Rule-30-specific is the OR in \eqref{eq:rule30}, which latches; the analogous
 claim is false for Rule 90 (Section~\ref{sec:finite}).  Figure~\ref{fig:panels}
 shows the forced left half and that contrast.
 
-Two prior results bound what is new here.  Jen derives necessary and sufficient
-conditions on the nearest-neighbor rules whose arbitrary finite initial
-conditions all generate at least one constant temporal sequence
-\cite[Thm.~7a]{jen1986}; Rule 30 meets that theorem's hypothesis
-$a_0=0$, $a_1=a_4=1$ but none of its four conditions, so it lies outside the
-class.  That exclusion is existential, giving one finite initial condition with
-no constant column.  Corollary~\ref{cor:finite} is universal over nonzero finite
-configurations and fixes the locus, so it strengthens the exclusion rather than
-following from it.  Separately, inversion for nearest-neighbor rules has been
-solved for the \emph{additive} class over $\mathbb Z_p$, by an operator
+Two prior results bound what is new here.  Jen gives necessary and sufficient
+conditions for a finite initial condition to generate an eventually-one
+temporal sequence \cite[Thm.~7a]{jen1986}.  Rule 30 meets that theorem's
+hypothesis $a_0=0$, $a_1=a_4=1$ but none of its four alternatives: their
+coefficient conditions require, respectively, $a_6=a_7=1$, $a_6=1$,
+$a_7=1$, or $a_5=1$, whereas Rule 30 has $a_5=a_6=a_7=0$.  The necessity
+direction therefore already excludes an eventually-one column for every
+finite Rule 30 configuration.  We do not claim novelty for that finite-support
+exclusion.  The results here instead give both exact fixed-locus fibers,
+establish the Rule-30 zero exclusion explicitly, and supply sharp quantitative
+horizons and extremizer counts.  Jen remarks that symmetric results hold for
+constant-zero sequences, but does not state a Rule-30 zero-fiber classification
+or any of these quantitative conclusions.  Separately, inversion for
+nearest-neighbor rules has been solved for the \emph{additive} class over
+$\mathbb Z_p$, by an operator
 analogous to backward integration \cite{voorhees}, against a general predecessor
 problem that is NP-complete.  Theorem~\ref{thm:fiber} inverts a constraint
 imposed over all future time rather than one step, for a rule that is not
@@ -161,7 +170,7 @@ central trace, then they are equal.
 If $-n$ is their rightmost differing coordinate, locality preserves agreement
 to its right through time $n$.  Left permutivity preserves the discrepancy
 along $(-n,0),(-n+1,1),\ldots,(0,n)$, contradicting equal traces.  In its
-finite form, if the rows agree on $i\geq-r$ and their traces agree for
+finite form, if the rows agree on $i\geq0$ and their traces agree for
 $0\leq t\leq r$, the same induction forces agreement at
 $-r,-r+1,\ldots,-1$.
 \end{proof}
@@ -323,6 +332,9 @@ $x\in\mathcal S_w$, the zero-center horizon is defined as follows.
  H(x)=\max\{h:F^t(x)_0=0\text{ for }0\leq t\leq h\}
 \end{equation}
 
+Thus $H(x)$ is the last matching time index; the corresponding prefix contains
+$H(x)+1$ symbols, including the symbol at time zero.
+
 \begin{theorem}[Sharp finite horizon]\label{thm:horizon}
 Let $w\geq1$.  Then both of the following hold.
 
@@ -386,16 +398,17 @@ parity that splits each one separately.
 
 \begin{corollary}\label{cor:bothhorizon}
 Let $w\geq1$ and let $x\neq0$ have $\supp(x)\subseteq[-w,w]$.  The longest
-constant prefix of the central trace of $x$ has length at most $w+1$, and
-exactly $2^w$ rows attain $w+1$ when $w$ is even, $2^w-1$ when $w$ is odd.
+constant prefix of the central trace of $x$ has length at most $w+2$, and
+exactly $2^w$ configurations attain length $w+2$ when $w$ is even, while
+exactly $2^w-1$ attain it when $w$ is odd.
 \end{corollary}
 \begin{proof}
 For $x_0=0$ Theorem~\ref{thm:horizon} gives $2\lceil w/2\rceil$, which is $w$
 for even $w$ and $w+1$ for odd $w$; for $x_0=1$
 Theorem~\ref{thm:onehorizon} gives $q-1$, which is $w+1$ for even $w$ and $w$
-for odd $w$.  The maximum is $w+1$ in both parities, attained in the one case
-when $w$ is even and in the zero case when $w$ is odd, with the corresponding
-counts $2^w$ and $2^w-1$.
+for odd $w$.  Hence the maximum horizon index is $w+1$, so the maximum prefix
+length is $w+2$.  It is attained in the one case when $w$ is even and in the
+zero case when $w$ is odd, with the corresponding counts $2^w$ and $2^w-1$.
 \end{proof}
 
 
@@ -404,45 +417,78 @@ counts $2^w$ and $2^w-1$.
 Theorems~\ref{thm:fiber} and~\ref{thm:onefiber} classify the two constant
 fibers of the trace map, and Corollaries~\ref{cor:finite}
 and~\ref{cor:constant} say that neither meets the finite configurations away
-from the origin.  Nonconstant eventual periods remain
-open, and the argument here does not reach them: the classification is driven
-by the prefix-OR of the right half, which a nonconstant periodic trace does not
-supply.
+from the origin.  The next unresolved case is eventual period two; no claim
+about that case or any higher period is made here.
 
-The latch that makes the argument Rule-30-specific also localizes what is
-left.  Write $l_t=F^t(x)_{-1}$ and $r_t=F^t(x)_1$.  Applying \eqref{eq:rule30}
-at the origin gives $l_t=c_{t+1}\oplus(c_t\lor r_t)$, and splitting on $c_t$
-gives the two branches below.
+That case is genuinely harder, and in a way the present method makes precise.
+Write $H(p,w)$ for the sharp maximum length of an eventually $p$-periodic
+central prefix over rows of support radius $w$.  Theorems~\ref{thm:horizon}
+and~\ref{thm:onehorizon} together compute $H(1,w)=w+2$ exactly.  For $p=2$ no exact law is known, and no bounded
+one can exist: left permutivity supplies, for any prescribed trace of length
+$N$ and any compatible right prefix, a unique left half and hence a finite row
+of support radius $\approx N$ realizing that trace through time $N$, so
+$H(2,w)\ge w$ for every $w$.  A constructive check of this bound, evolving each
+derived row with the ordinary Rule 30 map, gives $H(2,w)-w\in\{1,2,3,5\}$ for
+$w\le 300$, and reproduces $H(2,1)=6$.  Consequently $H(2,\cdot)$ is unbounded
+and the constant case is not merely the first of a uniform family: the
+$p=1$ horizon is sharp and finite in $w$, while the $p=2$ horizon grows at
+least linearly.  Exhaustive search confirms the difficulty from the other side,
+returning UNSAT for every instance of a period-two exclusion grid through
+$n=30$ without exhibiting any structural reason for it.  We make no conjecture
+here about whether $H(2,w)-w$ is bounded.
 
-\begin{equation}\label{eq:latch}
- c_t=1\ \Longrightarrow\ l_t=1\oplus c_{t+1},
- \qquad
- c_t=0\ \Longrightarrow\ l_t=c_{t+1}\oplus r_t
-\end{equation}
+\section{Reproducibility and formalization}\label{sec:repro}
 
-On the first branch $l_t$ is a function of the trace alone, with no reference
-to the right neighbor.  Consequently, if $c$ is eventually periodic with period
-$p$ and $r$ eventually agrees with some $p$-periodic function on
-$\{t:c_t=0\}$, then column $-1$ is eventually periodic, which is forbidden
-alongside a periodic column $0$ \cite{jen,kopra}.  The whole remaining
-obligation is therefore one column, restricted to the zero set of the trace.
-The constant-zero case settled above is exactly the extreme in which that zero
-set is everything and the first branch never fires, so the latch supplies
-nothing and the fiber classification does the work instead;
-Corollary~\ref{cor:constant} is the opposite extreme, where the first branch
-fires at every time and the fiber classification is not needed.
+The accompanying source archive was regenerated against repository snapshot
 
-Two questions follow.  Does $\mathcal C_m$ have an analogue over an eventually
-periodic trace of period greater than one, so that the infinite-tail argument
-applies verbatim?  Failing that, is $r$ on $\{t:c_t=0\}$ determined by $c$ at
-all?  A negative answer to the second would show that no argument of this shape
-can close the width-one question, which would be worth knowing.
+\begin{center}
+\small\texttt{99b2d82af113e385f43452eb2b8f1b22180e6de0}.
+\end{center}
 
-The figures, the exhaustive finite verification, the exact transducer, and
-machine-checked certificates for the finite Boolean schemas are available with
-this note in the accompanying source archive, together with a partial Lean~4
-formalization of the inductive core; every cell in Figures~\ref{fig:panels}
-and~\ref{fig:horizon} is computed from \eqref{eq:rule30}.
+From the repository root, the following commands reproduce the computational
+checks and figures.
+
+\begin{verbatim}
+cd docs/rule30/paper
+uv run python ../../../experiments/rule30/constant_trace_audit.py
+uv run python ../../../experiments/rule30/figures.py --check --out figures
+uv run --with z3-solver python \
+  ../../../experiments/rule30/zero_tail_smt_certificate.py --json
+latexmk -pdf -interaction=nonstopmode -halt-on-error zero-tail-note.tex
+\end{verbatim}
+
+\pagebreak
+The exhaustive audit must end with \texttt{FAILURES: none}.  For
+$w=1,\ldots,7$, its zero-horizon/count pairs are
+\texttt{2/1, 2/3, 4/7, 4/15, 6/31, 6/63, 8/127}; its one-horizon/count pairs
+are \texttt{1/2, 3/4, 3/8, 5/16, 5/32, 7/64, 7/128}.  These are horizon
+indices, so the associated prefix lengths are one larger.  The figure command
+must print \texttt{figures: all claimed properties hold}; it generates the
+three panels of Figure~\ref{fig:panels} and the six panels of
+Figure~\ref{fig:horizon}.  The SMT report must return status \texttt{PASS}
+with all 18 local Boolean obligations \texttt{unsat}.  The paper has
+no numerical tables.  A successful \LaTeX{} build produces a six-page PDF.
+
+The Lean~4 file \texttt{experiments/rule30/Rule30ZeroTail.lean} is explicitly
+partial.  It formalizes the local Rule 30 equation and left permutivity,
+arbitrary-depth triangular sensitivity, the prefix-OR formula conditional on a
+first right-hand one, the Boolean identities used for
+$F(\mathcal C_m)\subseteq\mathcal C_{m-1}$ and
+$F(\mathcal C_1)\subseteq\mathcal C_1$, and the infinite-left-tail
+contradiction conditional on the classification.  It does not formalize the
+derivation of that classification from a zero trace, the all-one fiber, either
+sharp horizon theorem, or the eventual-constant corollaries.  With Lean
+4.33.1 installed, it is checked by
+
+\begin{verbatim}
+lean ../../../experiments/rule30/Rule30ZeroTail.lean
+\end{verbatim}
+
+which should exit successfully without output.  Lean was not installed in the
+environment used for the present editorial rebuild, so that command was not
+rerun here.  Every cell in both figures was regenerated directly from
+\eqref{eq:rule30}; the exhaustive and SMT checks supplement, but do not replace,
+the unbounded proofs above.
 
 \begin{thebibliography}{5}\footnotesize
 \setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
