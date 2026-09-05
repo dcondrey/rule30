@@ -1,0 +1,17 @@
+rbf_adversarial.py args={'seed': 1, 'families': 'B', 'exhaustive': None, 'm_transfer': 400, 'm_brute': 13, 'mutate': 'const'}
+rule: CONE rebuilt from the carry action equals psi_kernel.CONE; F1 decoupling and F2 boundary on all 16 pairs PASS
+Traceback (most recent call last):
+  File "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-quadratic-prove-retained-bit-form-structural-verify-compute/rbf_adversarial.py", line 526, in <module>
+    main()
+  File "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-quadratic-prove-retained-bit-form-structural-verify-compute/rbf_adversarial.py", line 513, in main
+    family_B(log, rng)
+  File "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-quadratic-prove-retained-bit-form-structural-verify-compute/rbf_adversarial.py", line 372, in family_B
+    run_orbit(src, n, 3 * n + 2, st, toggle_every=5, tag=("B", name, n))
+  File "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-quadratic-prove-retained-bit-form-structural-verify-compute/rbf_adversarial.py", line 300, in run_orbit
+    cur = check_column(prev, n, do_toggles=(toggle_every > 0 and k % toggle_every == 0), stats=stats, tag=tag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-quadratic-prove-retained-bit-form-structural-verify-compute/rbf_adversarial.py", line 251, in check_column
+    assert win.phi() == E(cur[m + 1]), ("c", tag, n, u)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('c', ('B', '1^n', 16), 16, 19)
+exit=1

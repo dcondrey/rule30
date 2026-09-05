@@ -1,0 +1,22 @@
+rbf_kill.py args={'umax': 18, 'fut': 4, 'rand_n': [30, 40], 'samples': 200, 'seed': 1, 'letters_m': 10, 'letters_m4': 7, 'balance_brute': 10, 'balance_transfer': 60, 'gate_n': 9, 'skip': ['R', 'L', 'E'], 'mutate': False}
+GATE: 10238 forced columns agree with psi_column_map.forced_columns, qf_common and psi_kernel.psi, n <= 9
+  X u=1   words=2       columns so far=2   [0s]
+  X u=2   words=4       columns so far=10   [0s]
+  X u=3   words=8       columns so far=34   [0s]
+  X u=4   words=16      columns so far=98   [0s]
+  X u=5   words=32      columns so far=258   [0s]
+  X u=6   words=64      columns so far=642   [0s]
+  X u=7   words=128     columns so far=1538   [0s]
+  X u=8   words=256     columns so far=3586   [0s]
+  X u=9   words=512     columns so far=8194   [1s]
+  X u=10  words=1024    columns so far=18434   [1s]
+  X u=11  words=2048    columns so far=40962   [3s]
+  X u=12  words=4096    columns so far=90114   [7s]
+  X u=13  words=8192    columns so far=196610   [15s]
+  X u=14  words=16384   columns so far=425986   [34s]
+  X u=15  words=32768   columns so far=917506   [80s]
+  X u=16  words=65536   columns so far=1966082   [191s]
+  X u=17  words=131072  columns so far=4194306   [396s]
+  X u=18  words=262144  columns so far=8912898   [846s]
+X exhaustive: all binary words of length u <= 18, all n <= u: 8912898 (word, n) pairs, checks A B C C' D1 D2 D3 PASS; 327937 distinct (n,u,Z_(u-1),Z_u) keys; Z_(u-1) alone: 263957 keys, 48694 with >1 column, max 18; mean non-retained runs per column 10.510
+ALL PASS   [847s]

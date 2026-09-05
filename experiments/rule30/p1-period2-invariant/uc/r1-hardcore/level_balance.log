@@ -1,0 +1,87 @@
+## cross-check R13_n against realized_language(n)
+n= 1 exact=    2 R13=    2 equal=True
+n= 2 exact=    3 R13=    3 equal=True
+n= 3 exact=    5 R13=    5 equal=True
+n= 4 exact=    8 R13=    8 equal=True
+n= 5 exact=   12 R13=   12 equal=True
+n= 6 exact=   17 R13=   17 equal=True
+n= 7 exact=   25 R13=   25 equal=True
+n= 8 exact=   36 R13=   36 equal=True
+n= 9 exact=   50 R13=   50 equal=True
+n=10 exact=   68 R13=   68 equal=True
+n=11 exact=   91 R13=   91 equal=True
+## balance on BIN: size, #E0=0, excess over half, excess/sqrt(size); #(E0=0,E1=0), #(E0=1,E1=1), lang-ok@0 count
+n= 3 size=       8 E0=0:       2 excess=     -2.0 (-0.71 sd)  both0=      0 both1=      2 (quarter=2)  lang0=8
+n= 4 size=      16 E0=0:      12 excess=     +4.0 (+1.00 sd)  both0=     11 both1=      4 (quarter=4)  lang0=16
+n= 5 size=      32 E0=0:      14 excess=     -2.0 (-0.35 sd)  both0=      1 both1=     13 (quarter=8)  lang0=32
+n= 6 size=      64 E0=0:      32 excess=     +0.0 (+0.00 sd)  both0=     15 both1=     17 (quarter=16)  lang0=64
+n= 7 size=     128 E0=0:      54 excess=    -10.0 (-0.88 sd)  both0=     26 both1=     26 (quarter=32)  lang0=128
+n= 8 size=     256 E0=0:     124 excess=     -4.0 (-0.25 sd)  both0=     68 both1=     70 (quarter=64)  lang0=256
+n= 9 size=     512 E0=0:     216 excess=    -40.0 (-1.77 sd)  both0=    106 both1=    161 (quarter=128)  lang0=512
+n=10 size=    1024 E0=0:     509 excess=     -3.0 (-0.09 sd)  both0=    249 both1=    254 (quarter=256)  lang0=1024
+n=11 size=    2048 E0=0:     977 excess=    -47.0 (-1.04 sd)  both0=    487 both1=    533 (quarter=512)  lang0=2048
+n=12 size=    4096 E0=0:    2087 excess=    +39.0 (+0.61 sd)  both0=   1090 both1=   1043 (quarter=1024)  lang0=4096
+n=13 size=    8192 E0=0:    4020 excess=    -76.0 (-0.84 sd)  both0=   1870 both1=   1987 (quarter=2048)  lang0=8192
+n=14 size=   16384 E0=0:    8193 excess=     +1.0 (+0.01 sd)  both0=   4250 both1=   4118 (quarter=4096)  lang0=16384
+n=15 size=   32768 E0=0:   16385 excess=     +1.0 (+0.01 sd)  both0=   7861 both1=   8085 (quarter=8192)  lang0=32768
+n=16 size=   65536 E0=0:   32590 excess=   -178.0 (-0.70 sd)  both0=  16819 both1=  16743 (quarter=16384)  lang0=65536
+n=17 size=  131072 E0=0:   66051 excess=   +515.0 (+1.42 sd)  both0=  33018 both1=  32461 (quarter=32768)  lang0=131072
+n=18 size=  262144 E0=0:  130184 excess=   -888.0 (-1.73 sd)  both0=  65405 both1=  65916 (quarter=65536)  lang0=262144
+## balance on HC: size, #E0=0, excess over half, excess/sqrt(size); #(E0=0,E1=0), #(E0=1,E1=1), lang-ok@0 count
+n= 3 size=       5 E0=0:       1 excess=     -1.5 (-0.67 sd)  both0=      0 both1=      2 (quarter=1)  lang0=5
+n= 4 size=       8 E0=0:       7 excess=     +3.0 (+1.06 sd)  both0=      7 both1=      1 (quarter=2)  lang0=6
+n= 5 size=      13 E0=0:       5 excess=     -1.5 (-0.42 sd)  both0=      0 both1=      7 (quarter=3)  lang0=8
+n= 6 size=      21 E0=0:      11 excess=     +0.5 (+0.11 sd)  both0=      3 both1=      3 (quarter=5)  lang0=19
+n= 7 size=      34 E0=0:      15 excess=     -2.0 (-0.34 sd)  both0=      7 both1=     11 (quarter=8)  lang0=33
+n= 8 size=      55 E0=0:      28 excess=     +0.5 (+0.07 sd)  both0=     16 both1=     19 (quarter=14)  lang0=39
+n= 9 size=      89 E0=0:      34 excess=    -10.5 (-1.11 sd)  both0=     20 both1=     35 (quarter=22)  lang0=65
+n=10 size=     144 E0=0:      66 excess=     -6.0 (-0.50 sd)  both0=     17 both1=     38 (quarter=36)  lang0=111
+n=11 size=     233 E0=0:     123 excess=     +6.5 (+0.43 sd)  both0=     73 both1=     55 (quarter=58)  lang0=196
+n=12 size=     377 E0=0:     213 excess=    +24.5 (+1.26 sd)  both0=     97 both1=    100 (quarter=94)  lang0=277
+n=13 size=     610 E0=0:     292 excess=    -13.0 (-0.53 sd)  both0=    146 both1=    132 (quarter=152)  lang0=478
+n=14 size=     987 E0=0:     481 excess=    -12.5 (-0.40 sd)  both0=    256 both1=    233 (quarter=247)  lang0=751
+n=15 size=    1597 E0=0:     815 excess=    +16.5 (+0.41 sd)  both0=    387 both1=    368 (quarter=399)  lang0=1284
+n=16 size=    2584 E0=0:    1284 excess=     -8.0 (-0.16 sd)  both0=    665 both1=    625 (quarter=646)  lang0=2025
+n=17 size=    4181 E0=0:    2170 excess=    +79.5 (+1.23 sd)  both0=   1047 both1=    983 (quarter=1045)  lang0=3292
+n=18 size=    6765 E0=0:    3467 excess=    +84.5 (+1.03 sd)  both0=   1733 both1=   1546 (quarter=1691)  lang0=5444
+n=19 size=   10946 E0=0:    5571 excess=    +98.0 (+0.94 sd)  both0=   2707 both1=   2537 (quarter=2736)  lang0=8893
+n=20 size=   17711 E0=0:    8957 excess=   +101.5 (+0.76 sd)  both0=   4477 both1=   4287 (quarter=4428)  lang0=14299
+n=21 size=   28657 E0=0:   14759 excess=   +430.5 (+2.54 sd)  both0=   7451 both1=   7098 (quarter=7164)  lang0=22957
+n=22 size=   46368 E0=0:   23165 excess=    -19.0 (-0.09 sd)  both0=  11863 both1=  11236 (quarter=11592)  lang0=37657
+n=23 size=   75025 E0=0:   37609 excess=    +96.5 (+0.35 sd)  both0=  18577 both1=  18218 (quarter=18756)  lang0=60904
+n=24 size=  121393 E0=0:   59859 excess=   -837.5 (-2.40 sd)  both0=  30062 both1=  30493 (quarter=30348)  lang0=98170
+## balance on R13: size, #E0=0, excess over half, excess/sqrt(size); #(E0=0,E1=0), #(E0=1,E1=1), lang-ok@0 count
+n= 3 size=       5 E0=0:       1 excess=     -1.5 (-0.67 sd)  both0=      0 both1=      2 (quarter=1)  lang0=5
+n= 4 size=       8 E0=0:       7 excess=     +3.0 (+1.06 sd)  both0=      7 both1=      1 (quarter=2)  lang0=6
+n= 5 size=      12 E0=0:       5 excess=     -1.0 (-0.29 sd)  both0=      0 both1=      6 (quarter=3)  lang0=6
+n= 6 size=      17 E0=0:       8 excess=     -0.5 (-0.12 sd)  both0=      2 both1=      2 (quarter=4)  lang0=15
+n= 7 size=      25 E0=0:      11 excess=     -1.5 (-0.30 sd)  both0=      5 both1=      9 (quarter=6)  lang0=24
+n= 8 size=      36 E0=0:      15 excess=     -3.0 (-0.50 sd)  both0=      9 both1=     15 (quarter=9)  lang0=22
+n= 9 size=      50 E0=0:      18 excess=     -7.0 (-0.99 sd)  both0=     11 both1=     19 (quarter=12)  lang0=33
+n=10 size=      68 E0=0:      26 excess=     -8.0 (-0.97 sd)  both0=      7 both1=     22 (quarter=17)  lang0=42
+n=11 size=      91 E0=0:      55 excess=     +9.5 (+1.00 sd)  both0=     29 both1=     25 (quarter=23)  lang0=56
+n=12 size=     119 E0=0:      68 excess=     +8.5 (+0.78 sd)  both0=     29 both1=     33 (quarter=30)  lang0=67
+n=13 size=     156 E0=0:      63 excess=    -15.0 (-1.20 sd)  both0=     33 both1=     25 (quarter=39)  lang0=88
+n=14 size=     202 E0=0:     110 excess=     +9.0 (+0.63 sd)  both0=     69 both1=     43 (quarter=50)  lang0=124
+n=15 size=     259 E0=0:     138 excess=     +8.5 (+0.53 sd)  both0=     70 both1=     68 (quarter=65)  lang0=165
+n=16 size=     333 E0=0:     162 excess=     -4.5 (-0.25 sd)  both0=     90 both1=     88 (quarter=83)  lang0=211
+n=17 size=     423 E0=0:     191 excess=    -20.5 (-1.00 sd)  both0=     92 both1=     96 (quarter=106)  lang0=285
+n=18 size=     543 E0=0:     240 excess=    -31.5 (-1.35 sd)  both0=    135 both1=    129 (quarter=136)  lang0=365
+n=19 size=     688 E0=0:     322 excess=    -22.0 (-0.84 sd)  both0=    190 both1=    172 (quarter=172)  lang0=476
+n=20 size=     873 E0=0:     475 excess=    +38.5 (+1.30 sd)  both0=    212 both1=    228 (quarter=218)  lang0=541
+n=21 size=    1109 E0=0:     556 excess=     +1.5 (+0.05 sd)  both0=    274 both1=    280 (quarter=277)  lang0=690
+n=22 size=    1407 E0=0:     655 excess=    -48.5 (-1.29 sd)  both0=    348 both1=    354 (quarter=352)  lang0=905
+n=23 size=    1780 E0=0:     893 excess=     +3.0 (+0.07 sd)  both0=    439 both1=    433 (quarter=445)  lang0=1112
+n=24 size=    2251 E0=0:    1190 excess=    +64.5 (+1.36 sd)  both0=    625 both1=    549 (quarter=563)  lang0=1361
+n=25 size=    2846 E0=0:    1490 excess=    +67.0 (+1.26 sd)  both0=    717 both1=    676 (quarter=712)  lang0=1805
+n=26 size=    3599 E0=0:    1730 excess=    -69.5 (-1.16 sd)  both0=    823 both1=    924 (quarter=900)  lang0=2302
+n=27 size=    4544 E0=0:    2211 excess=    -61.0 (-0.90 sd)  both0=   1178 both1=   1173 (quarter=1136)  lang0=2841
+n=28 size=    5731 E0=0:    2875 excess=     +9.5 (+0.13 sd)  both0=   1405 both1=   1390 (quarter=1433)  lang0=3712
+n=29 size=    7242 E0=0:    3545 excess=    -76.0 (-0.89 sd)  both0=   1810 both1=   1819 (quarter=1810)  lang0=4361
+n=30 size=    9136 E0=0:    4538 excess=    -30.0 (-0.31 sd)  both0=   2232 both1=   2373 (quarter=2284)  lang0=5624
+n=31 size=   11523 E0=0:    5858 excess=    +96.5 (+0.90 sd)  both0=   2930 both1=   2952 (quarter=2881)  lang0=7301
+n=32 size=   14533 E0=0:    7527 excess=   +260.5 (+2.16 sd)  both0=   3826 both1=   3621 (quarter=3633)  lang0=9147
+n=33 size=   18333 E0=0:    9209 excess=    +42.5 (+0.31 sd)  both0=   4324 both1=   4496 (quarter=4583)  lang0=11647
+n=34 size=   23125 E0=0:   11233 excess=   -329.5 (-2.17 sd)  both0=   5669 both1=   5847 (quarter=5781)  lang0=14634
+n=35 size=   29150 E0=0:   14805 excess=   +230.0 (+1.35 sd)  both0=   7283 both1=   7224 (quarter=7288)  lang0=18332
+n=36 size=   36752 E0=0:   18316 excess=    -60.0 (-0.31 sd)  both0=   9210 both1=   9283 (quarter=9188)  lang0=22909

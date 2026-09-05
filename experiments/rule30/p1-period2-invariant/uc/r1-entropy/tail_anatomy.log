@@ -1,0 +1,241 @@
+cone check: 634896 cell comparisons, 0 violations (claim: W_j touches only u-d <= 2j+1)
+
+# n=9 c=2: deepest joint k=4, deepest E-only k=5
+joint survivors at k=4: 4
+  W=112112122 cont=21211 hits=11110 kE=4 death=Emiss
+  W=121211112 cont=12211 hits=11110 kE=4 death=Emiss
+  W=212112122 cont=21211 hits=11110 kE=4 death=Emiss
+  W=221211112 cont=12211 hits=11110 kE=4 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2, 3, 5, 7]
+E-only survivors at kE=5: 2
+  cont=12121 hc=ILLEGAL members=1 varying_coords=[] example W=112112121
+  cont=12222 hc=ILLEGAL members=1 varying_coords=[] example W=211221121
+
+# n=9 c=3: deepest joint k=8, deepest E-only k=8
+joint survivors at k=8: 6
+  W=112222122 cont=122122211 hits=111111110 kE=8 death=Emiss
+  W=121222122 cont=122122211 hits=111111110 kE=8 death=Emiss
+  W=122222122 cont=122122211 hits=111111110 kE=8 death=Emiss
+  W=212222122 cont=122122211 hits=111111110 kE=8 death=Emiss
+  W=221222122 cont=122122211 hits=111111110 kE=8 death=Emiss
+  W=222222122 cont=122122211 hits=111111110 kE=8 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2]
+E-only survivors at kE=8: 10
+  cont=11112112 hc=ILLEGAL members=4 varying_coords=[0, 1] example W=112212221
+  cont=12212221 hc=legal members=6 varying_coords=[0, 1, 2] example W=112222122
+
+# n=10 c=2: deepest joint k=5, deepest E-only k=9
+joint survivors at k=5: 6
+  W=1121111112 cont=121211 hits=111110 kE=5 death=Emiss
+  W=1211121112 cont=222222 hits=111110 kE=5 death=Emiss
+  W=1221111112 cont=121211 hits=111110 kE=5 death=Emiss
+  W=2121111112 cont=121211 hits=111110 kE=5 death=Emiss
+  W=2211121112 cont=222222 hits=111110 kE=5 death=Emiss
+  W=2221111112 cont=121211 hits=111110 kE=5 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2, 5]
+E-only survivors at kE=9: 6
+  cont=111111122 hc=ILLEGAL members=6 varying_coords=[0, 1, 3, 4] example W=1111111221
+
+# n=10 c=3: deepest joint k=7, deepest E-only k=9
+joint survivors at k=7: 4
+  W=1122111222 cont=1222121111 hits=1111111110 kE=9 death=HC
+  W=1222111222 cont=1222121111 hits=1111111110 kE=9 death=HC
+  W=2122111222 cont=1222121111 hits=1111111110 kE=9 death=HC
+  W=2222111222 cont=1222121111 hits=1111111110 kE=9 death=HC
+  coordinates varying within the joint-deepest set: [0, 1]
+E-only survivors at kE=9: 6
+  cont=211221111 hc=ILLEGAL members=2 varying_coords=[0] example W=1121121111
+  cont=122212111 hc=ILLEGAL members=4 varying_coords=[0, 1] example W=1122111222
+
+# n=11 c=2: deepest joint k=6, deepest E-only k=9
+joint survivors at k=6: 4
+  W=11121111211 cont=2121212 hits=1111110 kE=6 death=Emiss
+  W=12121111211 cont=2121212 hits=1111110 kE=6 death=Emiss
+  W=21121111211 cont=2121212 hits=1111110 kE=6 death=Emiss
+  W=22121111211 cont=2121212 hits=1111110 kE=6 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1]
+E-only survivors at kE=9: 6
+  cont=111112111 hc=ILLEGAL members=6 varying_coords=[0, 1, 2, 3] example W=11221112221
+
+# n=11 c=3: deepest joint k=7, deepest E-only k=8
+joint survivors at k=7: 12
+  W=11221112211 cont=21222212 hits=11111110 kE=7 death=Emiss
+  W=12112121221 cont=22222121 hits=11111110 kE=7 death=Emiss
+  W=12221112211 cont=21222212 hits=11111110 kE=7 death=Emiss
+  W=12221121212 cont=21212121 hits=11111110 kE=7 death=Emiss
+  W=12221122122 cont=21212221 hits=11111110 kE=7 death=Emiss
+  W=21221112211 cont=21222212 hits=11111110 kE=7 death=Emiss
+  W=21221121212 cont=21212121 hits=11111110 kE=7 death=Emiss
+  W=21221122122 cont=21212221 hits=11111110 kE=7 death=Emiss
+  W=22112121221 cont=22222121 hits=11111110 kE=7 death=Emiss
+  W=22221112211 cont=21222212 hits=11111110 kE=7 death=Emiss
+  W=22221121212 cont=21212121 hits=11111110 kE=7 death=Emiss
+  W=22221122122 cont=21212221 hits=11111110 kE=7 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10]
+E-only survivors at kE=8: 2
+  cont=21121111 hc=ILLEGAL members=2 varying_coords=[0] example W=12111212221
+
+# n=12 c=2: deepest joint k=9, deepest E-only k=9
+joint survivors at k=9: 2
+  W=111122211121 cont=2122222222 hits=1111111110 kE=9 death=Emiss
+  W=211122211121 cont=2122222222 hits=1111111110 kE=9 death=Emiss
+  coordinates varying within the joint-deepest set: [0]
+E-only survivors at kE=9: 2
+  cont=212222222 hc=legal members=2 varying_coords=[0] example W=111122211121
+
+# n=12 c=3: deepest joint k=8, deepest E-only k=11
+joint survivors at k=8: 1
+  W=112211212122 cont=222212221 hits=111111110 kE=8 death=Emiss
+  coordinates varying within the joint-deepest set: []
+E-only survivors at kE=11: 6
+  cont=12222122121 hc=ILLEGAL members=6 varying_coords=[0, 1, 2] example W=112222211221
+
+# n=13 c=2: deepest joint k=7, deepest E-only k=10
+joint survivors at k=7: 12
+  W=1111221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=1112211211122 cont=22212221 hits=11111110 kE=7 death=Emiss
+  W=1112221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=1121221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=1211221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=1221221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=2111221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=2112211211122 cont=22212221 hits=11111110 kE=7 death=Emiss
+  W=2112221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=2121221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=2211221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  W=2221221112121 cont=22222222 hits=11111110 kE=7 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2, 3, 5, 7, 9, 12]
+E-only survivors at kE=10: 8
+  cont=2112211211 hc=ILLEGAL members=4 varying_coords=[0, 1] example W=1121212212221
+  cont=2111222112 hc=ILLEGAL members=2 varying_coords=[0] example W=1212112112121
+  cont=1121111122 hc=ILLEGAL members=2 varying_coords=[0] example W=1212112222111
+
+# n=13 c=3: deepest joint k=9, deepest E-only k=10
+joint survivors at k=9: 3
+  W=1222221122112 cont=2221221212 hits=1111111110 kE=9 death=Emiss
+  W=2122221122112 cont=2221221212 hits=1111111110 kE=9 death=Emiss
+  W=2222221122112 cont=2221221212 hits=1111111110 kE=9 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1]
+E-only survivors at kE=10: 1
+  cont=1222222212 hc=ILLEGAL members=1 varying_coords=[] example W=1122112122121
+
+# n=14 c=2: deepest joint k=10, deepest E-only k=11
+joint survivors at k=10: 4
+  W=11121222211121 cont=212222122112 hits=111111111110 kE=11 death=HC
+  W=12112222211121 cont=212222122112 hits=111111111110 kE=11 death=HC
+  W=21121222211121 cont=212222122112 hits=111111111110 kE=11 death=HC
+  W=22112222211121 cont=212222122112 hits=111111111110 kE=11 death=HC
+  coordinates varying within the joint-deepest set: [0, 1, 3, 4]
+E-only survivors at kE=11: 4
+  cont=21222212211 hc=ILLEGAL members=4 varying_coords=[0, 1, 3, 4] example W=11121222211121
+
+# n=14 c=3: deepest joint k=8, deepest E-only k=11
+joint survivors at k=8: 8
+  W=11112111222222 cont=121222212 hits=111111110 kE=8 death=Emiss
+  W=11211222222212 cont=222121221 hits=111111110 kE=8 death=Emiss
+  W=12112111222222 cont=121222212 hits=111111110 kE=8 death=Emiss
+  W=12211212212112 cont=222222121 hits=111111110 kE=8 death=Emiss
+  W=21112111222222 cont=121222212 hits=111111110 kE=8 death=Emiss
+  W=21211222222212 cont=222121221 hits=111111110 kE=8 death=Emiss
+  W=22112111222222 cont=121222212 hits=111111110 kE=8 death=Emiss
+  W=22211212212112 cont=222222121 hits=111111110 kE=8 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2, 4, 5, 6, 7, 9, 11, 12]
+E-only survivors at kE=11: 2
+  cont=12111221111 hc=ILLEGAL members=2 varying_coords=[0] example W=12111122112211
+
+# n=15 c=2: deepest joint k=9, deepest E-only k=11
+joint survivors at k=9: 10
+  W=111111121221212 cont=2222121212 hits=1111111110 kE=9 death=Emiss
+  W=111111222121122 cont=2122221211 hits=1111111110 kE=9 death=Emiss
+  W=121111121221212 cont=2222121212 hits=1111111110 kE=9 death=Emiss
+  W=121111222121122 cont=2122221211 hits=1111111110 kE=9 death=Emiss
+  W=121211121211212 cont=2212212121 hits=1111111110 kE=9 death=Emiss
+  W=211111121221212 cont=2222121212 hits=1111111110 kE=9 death=Emiss
+  W=211111222121122 cont=2122221211 hits=1111111110 kE=9 death=Emiss
+  W=221111121221212 cont=2222121212 hits=1111111110 kE=9 death=Emiss
+  W=221111222121122 cont=2122221211 hits=1111111110 kE=9 death=Emiss
+  W=221211121211212 cont=2212212121 hits=1111111110 kE=9 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 3, 6, 8, 9, 10, 12, 13]
+E-only survivors at kE=11: 12
+  cont=11121121122 hc=ILLEGAL members=4 varying_coords=[0, 1] example W=111111121122111
+  cont=21112111221 hc=ILLEGAL members=4 varying_coords=[0, 3] example W=111112122112111
+  cont=12211111222 hc=ILLEGAL members=2 varying_coords=[0] example W=121111211221212
+  cont=21111222122 hc=ILLEGAL members=2 varying_coords=[0] example W=121211121112112
+
+# n=15 c=3: deepest joint k=8, deepest E-only k=16
+joint survivors at k=8: 9
+  W=111121211111122 cont=221222222 hits=111111110 kE=8 death=Emiss
+  W=121112111222222 cont=122221211 hits=111111110 kE=8 death=Emiss
+  W=121121211111122 cont=221222222 hits=111111110 kE=8 death=Emiss
+  W=122121121222121 cont=222121222 hits=111111110 kE=8 death=Emiss
+  W=211121211111122 cont=221222222 hits=111111110 kE=8 death=Emiss
+  W=212121121222121 cont=222121222 hits=111111110 kE=8 death=Emiss
+  W=221112111222222 cont=122221211 hits=111111110 kE=8 death=Emiss
+  W=221121211111122 cont=221222222 hits=111111110 kE=8 death=Emiss
+  W=222121121222121 cont=222121222 hits=111111110 kE=8 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2, 4, 5, 6, 7, 9, 10, 11, 12, 14]
+E-only survivors at kE=16: 18
+  cont=1221111112211121 hc=ILLEGAL members=18 varying_coords=[0, 1, 2, 3, 4] example W=111122211212112
+
+# n=16 c=2: deepest joint k=10, deepest E-only k=14
+joint survivors at k=10: 3
+  W=1122212122122122 cont=22212122222 hits=11111111110 kE=10 death=Emiss
+  W=1212212122122122 cont=22212122222 hits=11111111110 kE=10 death=Emiss
+  W=2212212122122122 cont=22212122222 hits=11111111110 kE=10 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2]
+E-only survivors at kE=14: 8
+  cont=21222222111222 hc=ILLEGAL members=4 varying_coords=[0, 1] example W=1111111112121111
+  cont=21122112122122 hc=ILLEGAL members=4 varying_coords=[0, 1] example W=1111112211121121
+
+# n=16 c=3: deepest joint k=10, deepest E-only k=14
+joint survivors at k=10: 18
+  W=1111112122211122 cont=22121212122 hits=11111111110 kE=10 death=Emiss
+  W=1112112122211122 cont=22121212122 hits=11111111110 kE=10 death=Emiss
+  W=1122222111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=1211112122211122 cont=22121212122 hits=11111111110 kE=10 death=Emiss
+  W=1212112122211122 cont=22121212122 hits=11111111110 kE=10 death=Emiss
+  W=1212222111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=1221122111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=1221222111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=1222222111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=2111112122211122 cont=22121212122 hits=11111111110 kE=10 death=Emiss
+  W=2112112122211122 cont=22121212122 hits=11111111110 kE=10 death=Emiss
+  W=2122222111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=2211112122211122 cont=22121212122 hits=11111111110 kE=10 death=Emiss
+  W=2212112122211122 cont=22121212122 hits=11111111110 kE=10 death=Emiss
+  W=2212222111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=2221122111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=2221222111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  W=2222222111221121 cont=21212121212 hits=11111111110 kE=10 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2, 3, 4, 5, 8, 9, 11, 15]
+E-only survivors at kE=14: 12
+  cont=21111112211121 hc=ILLEGAL members=12 varying_coords=[0, 1, 2, 3] example W=1112221121211212
+
+# n=17 c=2: deepest joint k=11, deepest E-only k=13
+joint survivors at k=11: 10
+  W=11112121111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=11211221111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=11221221111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=12112121111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=12221221111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=21112121111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=21211221111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=21221221111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=22112121111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  W=22221221111111212 cont=222221222222 hits=111111111110 kE=11 death=Emiss
+  coordinates varying within the joint-deepest set: [0, 1, 2, 3, 4, 5]
+E-only survivors at kE=13: 7
+  cont=2122212111222 hc=ILLEGAL members=4 varying_coords=[0, 1] example W=11112211111211121
+  cont=2122122121112 hc=ILLEGAL members=3 varying_coords=[0, 1] example W=11212121212121212
+
+# n=17 c=3: deepest joint k=10, deepest E-only k=13
+joint survivors at k=10: 6
+  W=11222211112212111 cont=2222122221121 hits=1111111111110 kE=12 death=HC
+  W=12122211112212111 cont=2222122221121 hits=1111111111110 kE=12 death=HC
+  W=12222211112212111 cont=2222122221121 hits=1111111111110 kE=12 death=HC
+  W=21222211112212111 cont=2222122221121 hits=1111111111110 kE=12 death=HC
+  W=22122211112212111 cont=2222122221121 hits=1111111111110 kE=12 death=HC
+  W=22222211112212111 cont=2222122221121 hits=1111111111110 kE=12 death=HC
+  coordinates varying within the joint-deepest set: [0, 1, 2]
+E-only survivors at kE=13: 2
+  cont=1222112121121 hc=ILLEGAL members=2 varying_coords=[0] example W=11112212221211211

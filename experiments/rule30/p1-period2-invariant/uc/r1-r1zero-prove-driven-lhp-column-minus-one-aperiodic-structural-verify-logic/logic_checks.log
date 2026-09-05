@@ -1,0 +1,6 @@
+logic_checks.py: validation for the logic verdict on PROOF.md (driven-lhp-column-minus-one-aperiodic)
+CHECK L1 y=delta_0 (nonzero, finite), c=0^omega, T=512: half-plane identically zero=True; l eventually periodic (q,onset)=(1, 0); lemma's literal hypothesis is insufficient=True
+CHECK L2 Theorem 2 instances: random y (width<=12), random eventually periodic c (p<=6, prefix<=8), columns -1..-8, T=2048, q<=128, onset<=T/2: runs=196 eventually periodic columns found=0
+CHECK L3 Lemma 7 enumeration identity z_(k+k_p) = z_k + p for k >= k_0, T=4096: runs=246 violations=0
+INFO L4 Rule 90 lone seed, T=2048: c*=1 0^omega: True; l*_t = c*_(t+1) XOR r*_t at every t<T: True; ones(r*) = 2^j-1: True; eventual_period(c*, q<=4)=(1, 1) eventual_period(r*, q<=256)=None
+FINAL: L2 periodic columns + L3 violations = 0 [0.7s]

@@ -1,0 +1,27 @@
+(1) kill test: distinct columns of p.2^(3m) at index 4m-1 (want 1) and 4m-2 (want >1); p.1^(3m+1) at 4m (want 1), 4m-1 (want >1)
+  m= 1: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m= 2: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m= 3: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m= 4: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m= 5: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m= 6: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m= 7: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m= 8: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m= 9: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m=10: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+  m=11: 2-run: at 4m-1 -> 1 distinct, at 4m-2 -> 2;   1-run: at 4m -> 1, at 4m-1 -> 2   OK
+
+(2) partial erasure: distinct columns of p.2^L, prefix length M, vs 2^(M-floor(L/3)) and 2^(M-ceil(L/3))
+  M=4: L=0:13(2^3.70) L=1:12(2^3.58) L=2:10(2^3.32) L=3:8(2^3.00) L=4:6(2^2.58) L=5:5(2^2.32) L=6:4(2^2.00) L=7:4(2^2.00) L=8:2(2^1.00) L=9:2(2^1.00) L=10:2(2^1.00) L=11:2(2^1.00) L=12:1(2^0.00)
+        floor law 2^(M-floor(L/3)): L=0:16 L=1:16 L=2:16 L=3:8 L=4:8 L=5:8 L=6:4 L=7:4 L=8:4 L=9:2 L=10:2 L=11:2 L=12:1
+  M=6: L=0:39(2^5.29) L=1:36(2^5.17) L=2:30(2^4.91) L=3:26(2^4.70) L=4:22(2^4.46) L=5:20(2^4.32) L=6:17(2^4.09) L=7:12(2^3.58) L=8:11(2^3.46) L=9:10(2^3.32) L=10:8(2^3.00) L=11:5(2^2.32) L=12:5(2^2.32) L=13:4(2^2.00) L=14:2(2^1.00) L=15:2(2^1.00) L=16:2(2^1.00) L=17:2(2^1.00) L=18:1(2^0.00)
+        floor law 2^(M-floor(L/3)): L=0:64 L=1:64 L=2:64 L=3:32 L=4:32 L=5:32 L=6:16 L=7:16 L=8:16 L=9:8 L=10:8 L=11:8 L=12:4 L=13:4 L=14:4 L=15:2 L=16:2 L=17:2 L=18:1
+  M=8: L=0:129(2^7.01) L=1:117(2^6.87) L=2:106(2^6.73) L=3:97(2^6.60) L=4:83(2^6.38) L=5:69(2^6.11) L=6:59(2^5.88) L=7:51(2^5.67) L=8:44(2^5.46) L=9:35(2^5.13) L=10:31(2^4.95) L=11:25(2^4.64) L=12:19(2^4.25) L=13:15(2^3.91) L=14:11(2^3.46) L=15:9(2^3.17) L=16:7(2^2.81) L=17:5(2^2.32) L=18:5(2^2.32) L=19:4(2^2.00) L=20:2(2^1.00) L=21:2(2^1.00) L=22:2(2^1.00) L=23:2(2^1.00) L=24:1(2^0.00)
+        floor law 2^(M-floor(L/3)): L=0:256 L=1:256 L=2:256 L=3:128 L=4:128 L=5:128 L=6:64 L=7:64 L=8:64 L=9:32 L=10:32 L=11:32 L=12:16 L=13:16 L=14:16 L=15:8 L=16:8 L=17:8 L=18:4 L=19:4 L=20:4 L=21:2 L=22:2 L=23:2 L=24:1
+
+(3) four-state prefixes over {0,1,2,3}: distinct columns of p.2^L at the end, L = 3m and the least L giving 1
+  m=1: least L with one column = 4  (binary law: 3)
+  m=2: least L with one column = 7  (binary law: 6)
+  m=3: least L with one column = 10  (binary law: 9)
+  m=4: least L with one column = 13  (binary law: 12)
+  m=5: least L with one column = 16  (binary law: 15)

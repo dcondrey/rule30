@@ -1,0 +1,26 @@
+n=3 c=2: 4^n=64  region hits: 0  +hard-core: 0  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [0s]
+
+n=3 c=3: 4^n=64  region hits: 5  +hard-core: 0  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [0s]
+
+n=4 c=2: 4^n=256  region hits: 7  +hard-core: 0  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [0s]
+
+n=4 c=3: 4^n=256  region hits: 5  +hard-core: 0  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [0s]
+
+n=5 c=2: 4^n=1024  region hits: 3  +hard-core: 2  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [0s]
+
+n=5 c=3: 4^n=1024  region hits: 28  +hard-core: 14  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [0s]
+
+n=6 c=2: 4^n=4096  region hits: 53  +hard-core: 15  +12a: 4  (of which e_(n-1) binary: 4)  binary-source-symbol histogram: {2: 2, 3: 1, 4: 1}  RW counterexamples: 0   [0s]
+    g = 30013121212121   (source 300131 | region 21212121)
+    g = 12313121212121   (source 123131 | region 21212121)
+
+n=6 c=3: 4^n=4096  region hits: 22  +hard-core: 0  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [0s]
+
+n=7 c=2: 4^n=16384  region hits: 6  +hard-core: 6  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [1s]
+
+n=7 c=3: 4^n=16384  region hits: 95  +hard-core: 21  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [0s]
+
+n=8 c=2: 4^n=65536  region hits: 68  +hard-core: 0  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [2s]
+
+n=8 c=3: 4^n=65536  region hits: 98  +hard-core: 10  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [2s]
+

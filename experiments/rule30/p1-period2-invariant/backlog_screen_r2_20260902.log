@@ -1,0 +1,44 @@
+== K  diagonal-martingale: coordinates determined by the others on S_k (bits, then whole symbols)
+   n=6 c=2  k=0:|S|=64,detbits=8,detsym=1  k=1:|S|=22,detbits=11,detsym=4  k=2:|S|=6,detbits=12,detsym=5  k=3:|S|=3,detbits=12,detsym=6
+   n=6 c=3  k=0:|S|=64,detbits=8,detsym=1  k=1:|S|=28,detbits=8,detsym=1  k=2:|S|=12,detbits=10,detsym=4  k=3:|S|=4,detbits=12,detsym=6
+   n=7 c=2  k=0:|S|=128,detbits=9,detsym=1  k=1:|S|=41,detbits=10,detsym=1  k=2:|S|=17,detbits=14,detsym=7  k=3:|S|=9,detbits=14,detsym=7  k=4:|S|=5,detbits=14,detsym=7
+   n=7 c=3  k=0:|S|=128,detbits=9,detsym=1  k=1:|S|=58,detbits=11,detsym=1  k=2:|S|=20,detbits=13,detsym=4  k=3:|S|=14,detbits=14,detsym=6  k=4:|S|=10,detbits=14,detsym=6
+   n=8 c=2  k=0:|S|=256,detbits=10,detsym=1  k=1:|S|=87,detbits=14,detsym=3  k=2:|S|=44,detbits=15,detsym=4  k=3:|S|=9,detbits=16,detsym=7
+   n=8 c=3  k=0:|S|=256,detbits=10,detsym=1  k=1:|S|=97,detbits=14,detsym=2  k=2:|S|=49,detbits=14,detsym=5  k=3:|S|=17,detbits=15,detsym=6  k=4:|S|=7,detbits=16,detsym=8  k=5:|S|=4,detbits=16,detsym=8  k=6:|S|=3,detbits=16,detsym=8
+   n=9 c=2  k=0:|S|=512,detbits=11,detsym=1  k=1:|S|=162,detbits=15,detsym=3  k=2:|S|=57,detbits=17,detsym=5  k=3:|S|=17,detbits=18,detsym=8  k=4:|S|=4,detbits=18,detsym=9
+   n=9 c=3  k=0:|S|=512,detbits=11,detsym=1  k=1:|S|=214,detbits=13,detsym=1  k=2:|S|=112,detbits=16,detsym=3  k=3:|S|=53,detbits=18,detsym=8  k=4:|S|=23,detbits=18,detsym=8  k=5:|S|=6,detbits=18,detsym=8  k=6:|S|=6,detbits=18,detsym=8  k=7:|S|=6,detbits=18,detsym=8  k=8:|S|=6,detbits=18,detsym=8
+   n=10 c=2  k=0:|S|=1024,detbits=12,detsym=1  k=1:|S|=396,detbits=14,detsym=2  k=2:|S|=177,detbits=16,detsym=5  k=3:|S|=62,detbits=20,detsym=9  k=4:|S|=26,detbits=20,detsym=9  k=5:|S|=6,detbits=20,detsym=10
+   n=10 c=3  k=0:|S|=1024,detbits=12,detsym=1  k=1:|S|=385,detbits=15,detsym=2  k=2:|S|=159,detbits=17,detsym=6  k=3:|S|=62,detbits=20,detsym=7  k=4:|S|=22,detbits=20,detsym=10  k=5:|S|=14,detbits=20,detsym=10  k=6:|S|=12,detbits=20,detsym=10  k=7:|S|=4,detbits=20,detsym=10
+   n=11 c=2  k=0:|S|=2048,detbits=13,detsym=1  k=1:|S|=728,detbits=15,detsym=2  k=2:|S|=285,detbits=18,detsym=6  k=3:|S|=93,detbits=19,detsym=7  k=4:|S|=36,detbits=21,detsym=9  k=5:|S|=9,detbits=22,detsym=11  k=6:|S|=4,detbits=22,detsym=11
+   n=11 c=3  k=0:|S|=2048,detbits=13,detsym=1  k=1:|S|=805,detbits=16,detsym=2  k=2:|S|=325,detbits=18,detsym=4  k=3:|S|=157,detbits=22,detsym=5  k=4:|S|=79,detbits=22,detsym=11  k=5:|S|=32,detbits=22,detsym=11  k=6:|S|=14,detbits=22,detsym=11  k=7:|S|=12,detbits=22,detsym=11
+   n=12 c=2  k=0:|S|=4096,detbits=14,detsym=1  k=1:|S|=1607,detbits=16,detsym=2  k=2:|S|=752,detbits=19,detsym=5  k=3:|S|=278,detbits=22,detsym=8  k=4:|S|=119,detbits=24,detsym=11  k=5:|S|=33,detbits=24,detsym=11  k=6:|S|=14,detbits=24,detsym=12  k=7:|S|=6,detbits=24,detsym=12  k=8:|S|=2,detbits=24,detsym=12  k=9:|S|=2,detbits=24,detsym=12
+   n=12 c=3  k=0:|S|=4096,detbits=14,detsym=1  k=1:|S|=1487,detbits=17,detsym=3  k=2:|S|=721,detbits=18,detsym=5  k=3:|S|=226,detbits=20,detsym=6  k=4:|S|=87,detbits=22,detsym=10  k=5:|S|=44,detbits=24,detsym=12  k=6:|S|=5,detbits=24,detsym=12
+
+== L  diagonal-cube-separation: C_needed = max_subcube fraction * 4^q, q=1..3 symbols fixed
+   n=8 c=2  k=0:|S|=256,C=8.0  k=1:|S|=87,C=13.2  k=2:|S|=44,C=13.1
+   n=8 c=3  k=0:|S|=256,C=8.0  k=1:|S|=97,C=9.9  k=2:|S|=49,C=10.4
+   n=9 c=2  k=0:|S|=512,C=8.0  k=1:|S|=162,C=9.5  k=2:|S|=57,C=12.4
+   n=9 c=3  k=0:|S|=512,C=8.0  k=1:|S|=214,C=9.3  k=2:|S|=112,C=9.7  k=3:|S|=53,C=12.1
+   n=10 c=2  k=0:|S|=1024,C=8.0  k=1:|S|=396,C=8.9  k=2:|S|=177,C=9.8  k=3:|S|=62,C=13.4
+   n=10 c=3  k=0:|S|=1024,C=8.0  k=1:|S|=385,C=9.0  k=2:|S|=159,C=9.7  k=3:|S|=62,C=14.5
+   n=11 c=2  k=0:|S|=2048,C=8.0  k=1:|S|=728,C=9.1  k=2:|S|=285,C=10.3  k=3:|S|=93,C=11.7  k=4:|S|=36,C=14.2
+   n=11 c=3  k=0:|S|=2048,C=8.0  k=1:|S|=805,C=8.5  k=2:|S|=325,C=8.9  k=3:|S|=157,C=11.4  k=4:|S|=79,C=11.3  k=5:|S|=32,C=20.0
+   n=12 c=2  k=0:|S|=4096,C=8.0  k=1:|S|=1607,C=8.3  k=2:|S|=752,C=9.0  k=3:|S|=278,C=9.2  k=4:|S|=119,C=10.2  k=5:|S|=33,C=23.3
+   n=12 c=3  k=0:|S|=4096,C=8.0  k=1:|S|=1487,C=8.8  k=2:|S|=721,C=8.3  k=3:|S|=226,C=8.8  k=4:|S|=87,C=11.0  k=5:|S|=44,C=13.1
+
+== M  diagonal-permutation-cylinder: free bits per survivor, largest box, cover lower bound |S|/2^box
+   n=8 c=2  k=0:|S|=256,maxbox=2,cover>=64,isolated=81  k=1:|S|=87,maxbox=1,cover>=44,isolated=66  k=2:|S|=44,maxbox=1,cover>=22,isolated=42  k=3:|S|=9,maxbox=0,cover>=9,isolated=9
+   n=8 c=3  k=0:|S|=256,maxbox=2,cover>=64,isolated=81  k=1:|S|=97,maxbox=1,cover>=48,isolated=77  k=2:|S|=49,maxbox=1,cover>=24,isolated=43  k=3:|S|=17,maxbox=1,cover>=8,isolated=15
+   n=9 c=2  k=0:|S|=512,maxbox=2,cover>=128,isolated=151  k=1:|S|=162,maxbox=1,cover>=81,isolated=140  k=2:|S|=57,maxbox=1,cover>=28,isolated=55  k=3:|S|=17,maxbox=0,cover>=17,isolated=17
+   n=9 c=3  k=0:|S|=512,maxbox=2,cover>=128,isolated=151  k=1:|S|=214,maxbox=1,cover>=107,isolated=149  k=2:|S|=112,maxbox=1,cover>=56,isolated=100  k=3:|S|=53,maxbox=0,cover>=53,isolated=53  k=4:|S|=23,maxbox=0,cover>=23,isolated=23
+   n=10 c=2  k=0:|S|=1024,maxbox=2,cover>=256,isolated=354  k=1:|S|=396,maxbox=1,cover>=198,isolated=300  k=2:|S|=177,maxbox=1,cover>=88,isolated=153  k=3:|S|=62,maxbox=0,cover>=62,isolated=62  k=4:|S|=26,maxbox=0,cover>=26,isolated=26
+   n=10 c=3  k=0:|S|=1024,maxbox=2,cover>=256,isolated=354  k=1:|S|=385,maxbox=1,cover>=192,isolated=274  k=2:|S|=159,maxbox=1,cover>=80,isolated=143  k=3:|S|=62,maxbox=0,cover>=62,isolated=62  k=4:|S|=22,maxbox=0,cover>=22,isolated=22  k=5:|S|=14,maxbox=0,cover>=14,isolated=14  k=6:|S|=12,maxbox=0,cover>=12,isolated=12
+   n=11 c=2  k=0:|S|=2048,maxbox=2,cover>=512,isolated=633  k=1:|S|=728,maxbox=1,cover>=364,isolated=460  k=2:|S|=285,maxbox=1,cover>=142,isolated=233  k=3:|S|=93,maxbox=1,cover>=46,isolated=79  k=4:|S|=36,maxbox=1,cover>=18,isolated=32  k=5:|S|=9,maxbox=0,cover>=9,isolated=9
+   n=11 c=3  k=0:|S|=2048,maxbox=2,cover>=512,isolated=633  k=1:|S|=805,maxbox=1,cover>=402,isolated=544  k=2:|S|=325,maxbox=1,cover>=162,isolated=295  k=3:|S|=157,maxbox=0,cover>=157,isolated=157  k=4:|S|=79,maxbox=0,cover>=79,isolated=79  k=5:|S|=32,maxbox=0,cover>=32,isolated=32  k=6:|S|=14,maxbox=0,cover>=14,isolated=14  k=7:|S|=12,maxbox=0,cover>=12,isolated=12
+   n=12 c=2  k=0:|S|=4096,maxbox=3,cover>=512,isolated=1154  k=1:|S|=1607,maxbox=1,cover>=804,isolated=1106  k=2:|S|=752,maxbox=1,cover>=376,isolated=665  k=3:|S|=278,maxbox=1,cover>=139,isolated=272  k=4:|S|=119,maxbox=0,cover>=119,isolated=119  k=5:|S|=33,maxbox=0,cover>=33,isolated=33  k=6:|S|=14,maxbox=0,cover>=14,isolated=14
+   n=12 c=3  k=0:|S|=4096,maxbox=3,cover>=512,isolated=1154  k=1:|S|=1487,maxbox=2,cover>=372,isolated=1021  k=2:|S|=721,maxbox=1,cover>=360,isolated=599  k=3:|S|=226,maxbox=1,cover>=113,isolated=206  k=4:|S|=87,maxbox=1,cover>=44,isolated=81  k=5:|S|=44,maxbox=0,cover>=44,isolated=44
+
+== N  plain transition matrix on (h,F), i.i.d. letters with empirical frequencies: eigenvalues
+   eigenvalues: [np.float64(1.0), np.float64(0.572), np.float64(0.4626), np.float64(0.4626)]
+   heuristic only: the real input to column u is column u-1
+

@@ -1,0 +1,125 @@
+2026-09-01 14:30:06,745 - openevolve.controller - INFO - Logging to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/logs/openevolve_20260901_143006.log
+2026-09-01 14:30:06,794 - openevolve.controller - INFO - Set random seed to 47 for reproducibility
+2026-09-01 14:30:06,832 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: deepseek/deepseek-chat-v3.1
+2026-09-01 14:30:06,833 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: openai/gpt-4o-mini
+2026-09-01 14:30:06,834 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: deepseek/deepseek-chat-v3.1 (weight: 0.70), openai/gpt-4o-mini (weight: 0.30)
+2026-09-01 14:30:06,836 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: deepseek/deepseek-chat-v3.1 (weight: 0.70), openai/gpt-4o-mini (weight: 0.30)
+2026-09-01 14:30:06,839 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2026-09-01 14:30:06,840 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-09-01 14:30:06,840 - openevolve.database - INFO - Initialized program database with 0 programs
+2026-09-01 14:30:06,844 - openevolve.evaluator - INFO - Successfully loaded evaluation function from /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/evaluator.py
+2026-09-01 14:30:06,844 - openevolve.evaluator - INFO - Initialized evaluator with /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/evaluator.py
+2026-09-01 14:30:06,844 - openevolve.controller - INFO - Initialized OpenEvolve with /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/initial_program.py
+2026-09-01 14:30:06,844 - openevolve.controller - INFO - Adding initial program to database
+2026-09-01 14:30:06,889 - openevolve.evaluator - INFO - Evaluated program 1664bc7d-9fd7-47c5-8925-e5970af1aafd in 0.05s: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:30:06,890 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'holdout_extremality': 3, 'large_cutoff_ratio': 3}
+2026-09-01 14:30:06,890 - openevolve.controller - INFO - Stored artifacts for initial program
+2026-09-01 14:30:06,895 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2026-09-01 14:30:06,895 - openevolve.process_parallel - INFO - Set max None tasks per child
+2026-09-01 14:30:06,896 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2026-09-01 14:30:06,896 - openevolve.controller - INFO - Using island-based evolution with 3 islands
+2026-09-01 14:30:06,896 - openevolve.database - INFO - Island Status:
+2026-09-01 14:30:06,896 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.7030, avg=0.7030, diversity=0.00, gen=0 (best: 1664bc7d-9fd7-47c5-8925-e5970af1aafd)
+2026-09-01 14:30:06,896 - openevolve.database - INFO -    Island 1: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-09-01 14:30:06,896 - openevolve.database - INFO -    Island 2: 0 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=0
+2026-09-01 14:30:06,896 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 18 iterations (total: 19)
+2026-09-01 14:30:06,904 - openevolve.process_parallel - INFO - Early stopping disabled
+2026-09-01 14:30:37,256 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'holdout_extremality': 0, 'large_cutoff_ratio': 0}
+2026-09-01 14:30:37,257 - openevolve.process_parallel - INFO - Iteration 1: Program 31cf4cdf-d315-4f87-a8b2-7ecd02a87022 (parent: 1664bc7d-9fd7-47c5-8925-e5970af1aafd) completed in 29.55s
+2026-09-01 14:30:37,257 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=disallowed syntax: While
+2026-09-01 14:30:42,779 - openevolve.database - INFO - New MAP-Elites cell occupied in island 1: {'holdout_extremality': 0, 'large_cutoff_ratio': 0}
+2026-09-01 14:30:42,779 - openevolve.process_parallel - INFO - Iteration 2: Program c1b8a446-e83e-4552-9ac4-a4c51662f426 (parent: 1664bc7d-9fd7-47c5-8925-e5970af1aafd) completed in 5.52s
+2026-09-01 14:30:42,779 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=disallowed syntax: FunctionDef
+2026-09-01 14:31:14,858 - openevolve.database - INFO - New MAP-Elites cell occupied in island 2: {'holdout_extremality': 0, 'large_cutoff_ratio': 0}
+2026-09-01 14:31:14,858 - openevolve.process_parallel - INFO - Iteration 3: Program a391ecf5-f440-410d-8f52-df219f4eee60 (parent: 1664bc7d-9fd7-47c5-8925-e5970af1aafd) completed in 32.07s
+2026-09-01 14:31:14,858 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=disallowed syntax: While
+2026-09-01 14:31:14,859 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 3
+2026-09-01 14:31:14,859 - openevolve.database - INFO - Island Status:
+2026-09-01 14:31:14,859 - openevolve.database - INFO -  * Island 0: 2 programs, best=0.7030, avg=0.3515, diversity=220.10, gen=1 (best: 1664bc7d-9fd7-47c5-8925-e5970af1aafd)
+2026-09-01 14:31:14,859 - openevolve.database - INFO -    Island 1: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1 (best: c1b8a446-e83e-4552-9ac4-a4c51662f426)
+2026-09-01 14:31:14,859 - openevolve.database - INFO -    Island 2: 1 programs, best=0.0000, avg=0.0000, diversity=0.00, gen=1 (best: a391ecf5-f440-410d-8f52-df219f4eee60)
+2026-09-01 14:31:14,861 - openevolve.database - INFO - Saved database with 4 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_3
+2026-09-01 14:31:14,861 - openevolve.controller - INFO - Saved best program at checkpoint 3 with metrics: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:31:14,861 - openevolve.controller - INFO - Saved checkpoint at iteration 3 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_3
+2026-09-01 14:31:33,412 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'holdout_extremality': 5, 'large_cutoff_ratio': 5}
+2026-09-01 14:31:33,412 - openevolve.process_parallel - INFO - Iteration 4: Program 22b3630f-029b-4662-bb7f-0866cc4e833b (parent: 1664bc7d-9fd7-47c5-8925-e5970af1aafd) completed in 18.56s
+2026-09-01 14:31:33,412 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6695, train_extremality=0.8579, holdout_extremality=0.7597, large_cutoff_ratio=0.5026, worst_large_ratio=0.4898, linear_bound_falsified=0.0000, simplicity=0.4494
+2026-09-01 14:31:43,507 - openevolve.process_parallel - INFO - Iteration 5: Program f9846d40-91cf-494b-93ba-8fd4890ad47e (parent: c1b8a446-e83e-4552-9ac4-a4c51662f426) completed in 10.10s
+2026-09-01 14:31:43,515 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=string data and lookup encodings are forbidden
+2026-09-01 14:32:30,265 - openevolve.process_parallel - INFO - Iteration 6: Program 8320cbff-2be2-44f9-8a76-7a89876f819d (parent: a391ecf5-f440-410d-8f52-df219f4eee60) completed in 46.76s
+2026-09-01 14:32:30,265 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=cutoff 5: output is not hard-core
+2026-09-01 14:32:30,265 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 6
+2026-09-01 14:32:30,266 - openevolve.database - INFO - Island Status:
+2026-09-01 14:32:30,266 - openevolve.database - INFO -  * Island 0: 3 programs, best=0.7030, avg=0.4575, diversity=147.40, gen=2 (best: 1664bc7d-9fd7-47c5-8925-e5970af1aafd)
+2026-09-01 14:32:30,266 - openevolve.database - INFO -    Island 1: 2 programs, best=0.0000, avg=0.0000, diversity=21.90, gen=2 (best: c1b8a446-e83e-4552-9ac4-a4c51662f426)
+2026-09-01 14:32:30,266 - openevolve.database - INFO -    Island 2: 2 programs, best=0.0000, avg=0.0000, diversity=149.50, gen=2 (best: a391ecf5-f440-410d-8f52-df219f4eee60)
+2026-09-01 14:32:30,269 - openevolve.database - INFO - Saved database with 7 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_6
+2026-09-01 14:32:30,270 - openevolve.controller - INFO - Saved best program at checkpoint 6 with metrics: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:32:30,270 - openevolve.controller - INFO - Saved checkpoint at iteration 6 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_6
+2026-09-01 14:32:50,021 - openevolve.database - INFO - Island 0 MAP-Elites cell improved: {'holdout_extremality': 5, 'large_cutoff_ratio': 5} (fitness: 0.670 -> 0.682)
+2026-09-01 14:32:50,021 - openevolve.process_parallel - INFO - Iteration 7: Program 81cc3373-ec78-4f9e-933e-7f8913f56bd7 (parent: 22b3630f-029b-4662-bb7f-0866cc4e833b) completed in 19.75s
+2026-09-01 14:32:50,021 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6818, train_extremality=0.8795, holdout_extremality=0.7593, large_cutoff_ratio=0.4993, worst_large_ratio=0.4912, linear_bound_falsified=0.0000, simplicity=0.5839
+2026-09-01 14:32:57,210 - openevolve.process_parallel - INFO - Iteration 8: Program 027b4bda-6972-4f60-8124-dd981d2e0c00 (parent: f9846d40-91cf-494b-93ba-8fd4890ad47e) completed in 7.19s
+2026-09-01 14:32:57,210 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=string data and lookup encodings are forbidden
+2026-09-01 14:33:25,699 - openevolve.database - INFO - New MAP-Elites cell occupied in island 2: {'holdout_extremality': 5, 'large_cutoff_ratio': 5}
+2026-09-01 14:33:25,700 - openevolve.process_parallel - INFO - Iteration 9: Program 62b08dce-08c0-4c13-b153-6885f7313ce0 (parent: a391ecf5-f440-410d-8f52-df219f4eee60) completed in 28.50s
+2026-09-01 14:33:25,700 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6656, train_extremality=0.8614, holdout_extremality=0.7421, large_cutoff_ratio=0.5035, worst_large_ratio=0.4898, linear_bound_falsified=0.0000, simplicity=0.4324
+2026-09-01 14:33:25,700 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 9
+2026-09-01 14:33:25,700 - openevolve.database - INFO - Island Status:
+2026-09-01 14:33:25,700 - openevolve.database - INFO -  * Island 0: 3 programs, best=0.7030, avg=0.4616, diversity=147.73, gen=3 (best: 1664bc7d-9fd7-47c5-8925-e5970af1aafd)
+2026-09-01 14:33:25,700 - openevolve.database - INFO -    Island 1: 3 programs, best=0.0000, avg=0.0000, diversity=20.00, gen=3 (best: c1b8a446-e83e-4552-9ac4-a4c51662f426)
+2026-09-01 14:33:25,700 - openevolve.database - INFO -    Island 2: 3 programs, best=0.6656, avg=0.2219, diversity=113.33, gen=3 (best: 62b08dce-08c0-4c13-b153-6885f7313ce0)
+2026-09-01 14:33:25,702 - openevolve.database - INFO - Saved database with 9 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_9
+2026-09-01 14:33:25,703 - openevolve.controller - INFO - Saved best program at checkpoint 9 with metrics: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:33:25,703 - openevolve.controller - INFO - Saved checkpoint at iteration 9 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_9
+2026-09-01 14:33:45,403 - openevolve.process_parallel - INFO - Iteration 10: Program 9f16f33f-9f54-4132-a004-e8955fdf8562 (parent: 1664bc7d-9fd7-47c5-8925-e5970af1aafd) completed in 19.70s
+2026-09-01 14:33:45,403 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=disallowed call: int
+2026-09-01 14:33:56,803 - openevolve.process_parallel - INFO - Iteration 11: Program 666d6001-1649-4b25-82a9-6dd778d886db (parent: c1b8a446-e83e-4552-9ac4-a4c51662f426) completed in 11.39s
+2026-09-01 14:33:56,803 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=disallowed method: join
+2026-09-01 14:34:20,819 - openevolve.process_parallel - INFO - Iteration 12: Program ef974ddd-643b-46b9-a597-7255ec37acad (parent: 8320cbff-2be2-44f9-8a76-7a89876f819d) completed in 24.03s
+2026-09-01 14:34:20,819 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=disallowed call: int
+2026-09-01 14:34:20,819 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 12
+2026-09-01 14:34:20,819 - openevolve.database - INFO - Island Status:
+2026-09-01 14:34:20,819 - openevolve.database - INFO -  * Island 0: 4 programs, best=0.7030, avg=0.3462, diversity=126.45, gen=4 (best: 1664bc7d-9fd7-47c5-8925-e5970af1aafd)
+2026-09-01 14:34:20,819 - openevolve.database - INFO -    Island 1: 4 programs, best=0.0000, avg=0.0000, diversity=35.28, gen=4 (best: c1b8a446-e83e-4552-9ac4-a4c51662f426)
+2026-09-01 14:34:20,819 - openevolve.database - INFO -    Island 2: 4 programs, best=0.6656, avg=0.1664, diversity=102.02, gen=4 (best: 62b08dce-08c0-4c13-b153-6885f7313ce0)
+2026-09-01 14:34:20,822 - openevolve.database - INFO - Saved database with 12 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_12
+2026-09-01 14:34:20,823 - openevolve.controller - INFO - Saved best program at checkpoint 12 with metrics: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:34:20,823 - openevolve.controller - INFO - Saved checkpoint at iteration 12 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_12
+2026-09-01 14:34:28,293 - openevolve.process_parallel - INFO - Iteration 13: Program 0ac75067-2a9d-4fdd-acb6-60e241572825 (parent: 81cc3373-ec78-4f9e-933e-7f8913f56bd7) completed in 7.47s
+2026-09-01 14:34:28,302 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6818, train_extremality=0.8795, holdout_extremality=0.7593, large_cutoff_ratio=0.4993, worst_large_ratio=0.4912, linear_bound_falsified=0.0000, simplicity=0.5839
+2026-09-01 14:34:39,627 - openevolve.database - INFO - New MAP-Elites cell occupied in island 1: {'holdout_extremality': 5, 'large_cutoff_ratio': 5}
+2026-09-01 14:34:39,627 - openevolve.process_parallel - INFO - Iteration 14: Program 3c948eea-8e6c-44a5-af38-657fcf4364df (parent: 666d6001-1649-4b25-82a9-6dd778d886db) completed in 11.33s
+2026-09-01 14:34:39,627 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6997, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.5634
+2026-09-01 14:35:07,852 - openevolve.process_parallel - INFO - Iteration 15: Program 3137ad39-b73d-4621-a2b1-f208ed21000b (parent: 62b08dce-08c0-4c13-b153-6885f7313ce0) completed in 28.23s
+2026-09-01 14:35:07,872 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=disallowed syntax: While
+2026-09-01 14:35:07,872 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 15
+2026-09-01 14:35:07,872 - openevolve.database - INFO - Island Status:
+2026-09-01 14:35:07,872 - openevolve.database - INFO -  * Island 0: 5 programs, best=0.7030, avg=0.4133, diversity=91.80, gen=5 (best: 1664bc7d-9fd7-47c5-8925-e5970af1aafd)
+2026-09-01 14:35:07,872 - openevolve.database - INFO -    Island 1: 5 programs, best=0.6997, avg=0.1399, diversity=31.03, gen=5 (best: 3c948eea-8e6c-44a5-af38-657fcf4364df)
+2026-09-01 14:35:07,872 - openevolve.database - INFO -    Island 2: 5 programs, best=0.6656, avg=0.1331, diversity=80.73, gen=5 (best: 62b08dce-08c0-4c13-b153-6885f7313ce0)
+2026-09-01 14:35:07,893 - openevolve.database - INFO - Saved database with 15 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_15
+2026-09-01 14:35:07,893 - openevolve.controller - INFO - Saved best program at checkpoint 15 with metrics: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:35:07,893 - openevolve.controller - INFO - Saved checkpoint at iteration 15 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_15
+2026-09-01 14:35:26,069 - openevolve.process_parallel - INFO - Iteration 16: Program 56ec6e58-1bfa-47b7-9b33-f179d771e537 (parent: 31cf4cdf-d315-4f87-a8b2-7ecd02a87022) completed in 18.21s
+2026-09-01 14:35:26,069 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=disallowed syntax: Set
+2026-09-01 14:35:32,220 - openevolve.process_parallel - INFO - Iteration 17: Program 0797d1bb-96be-414e-863f-5d287fa33916 (parent: f9846d40-91cf-494b-93ba-8fd4890ad47e) completed in 6.15s
+2026-09-01 14:35:32,221 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=string data and lookup encodings are forbidden
+2026-09-01 14:36:12,202 - openevolve.process_parallel - INFO - Iteration 18: Program 0eb9eb60-9086-4174-b2ff-ed6e1cab2433 (parent: 3137ad39-b73d-4621-a2b1-f208ed21000b) completed in 39.98s
+2026-09-01 14:36:12,202 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0000, train_extremality=0.0000, holdout_extremality=0.0000, large_cutoff_ratio=0.0000, worst_large_ratio=0.0000, linear_bound_falsified=0.0000, simplicity=0.0000, error=literal tables longer than eight entries are forbidden
+2026-09-01 14:36:12,202 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 18
+2026-09-01 14:36:12,202 - openevolve.database - INFO - Island Status:
+2026-09-01 14:36:12,202 - openevolve.database - INFO -  * Island 0: 6 programs, best=0.7030, avg=0.3444, diversity=147.37, gen=6 (best: 1664bc7d-9fd7-47c5-8925-e5970af1aafd)
+2026-09-01 14:36:12,202 - openevolve.database - INFO -    Island 1: 6 programs, best=0.6997, avg=0.1166, diversity=35.62, gen=6 (best: 3c948eea-8e6c-44a5-af38-657fcf4364df)
+2026-09-01 14:36:12,202 - openevolve.database - INFO -    Island 2: 6 programs, best=0.6656, avg=0.1109, diversity=81.67, gen=6 (best: 62b08dce-08c0-4c13-b153-6885f7313ce0)
+2026-09-01 14:36:12,217 - openevolve.database - INFO - Saved database with 18 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_18
+2026-09-01 14:36:12,218 - openevolve.controller - INFO - Saved best program at checkpoint 18 with metrics: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:36:12,218 - openevolve.controller - INFO - Saved checkpoint at iteration 18 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_18
+2026-09-01 14:36:12,218 - openevolve.process_parallel - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-09-01 14:36:12,221 - openevolve.database - INFO - Saved database with 18 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_18
+2026-09-01 14:36:12,221 - openevolve.controller - INFO - Saved best program at checkpoint 18 with metrics: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:36:12,221 - openevolve.controller - INFO - Saved checkpoint at iteration 18 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/checkpoints/checkpoint_18
+2026-09-01 14:36:12,226 - openevolve.process_parallel - INFO - Stopped process pool
+2026-09-01 14:36:12,226 - openevolve.controller - INFO - Using tracked best program: 1664bc7d-9fd7-47c5-8925-e5970af1aafd
+2026-09-01 14:36:12,226 - openevolve.controller - INFO - Evolution complete. Best program has metrics: combined_score=0.7030, train_extremality=0.9326, holdout_extremality=0.7590, large_cutoff_ratio=0.5093, worst_large_ratio=0.4923, linear_bound_falsified=0.0000, simplicity=0.6299
+2026-09-01 14:36:12,227 - openevolve.controller - INFO - Saved best program to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/best/best_program.py with program info to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-rank-zero/openevolve_output_search/best/best_program_info.json

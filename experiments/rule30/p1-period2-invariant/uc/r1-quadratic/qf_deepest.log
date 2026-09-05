@@ -1,0 +1,141 @@
+n=9 c=3 deepest run=8 (need 11); 6 sources attain it
+  W=112222122 forced=12212221
+     col u=8   depth n..-(u+1): 032111302112321212                           zeros=2   e_u=2
+     col u=9   depth n..-(u+1): 32130303212130213021                         zeros=4   e_u=1
+     col u=10  depth n..-(u+1): 303003213021230300212                        zeros=7   e_u=2
+     col u=11  depth n..-(u+1): 3211121211302112321212                       zeros=1   e_u=2
+     col u=12  depth n..-(u+1): 30303030303212130213021                      zeros=7   e_u=1
+     col u=13  depth n..-(u+1): 321123003213021230300212                     zeros=6   e_u=2
+     col u=14  depth n..-(u+1): 3030211121211302112321212                    zeros=3   e_u=2
+     col u=15  depth n..-(u+1): 32113030213030021212121212                   zeros=5   e_u=2
+     col u=16  depth n..-(u+1): 303032113032111302130213021                  zeros=6   e_u=1
+  W=121222122 forced=12212221  (same region as above)
+  W=122222122 forced=12212221  (same region as above)
+  W=212222122 forced=12212221  (same region as above)
+  W=221222122 forced=12212221  (same region as above)
+  W=222222122 forced=12212221  (same region as above)
+
+n=12 c=3 deepest run=8 (need 14); 1 sources attain it
+  W=112211212122 forced=22221222
+     col u=11  depth n..-(u+1): 032130212300032112321212                     zeros=5   e_u=2
+     col u=12  depth n..-(u+1): 32130321212323021212121212                   zeros=2   e_u=2
+     col u=13  depth n..-(u+1): 303003030303032121212121212                  zeros=7   e_u=2
+     col u=14  depth n..-(u+1): 3211123003211212121212121212                 zeros=2   e_u=2
+     col u=15  depth n..-(u+1): 30303032302121212121212121212                zeros=4   e_u=2
+     col u=16  depth n..-(u+1): 321123021130213021302130213021               zeros=6   e_u=1
+     col u=17  depth n..-(u+1): 3030211303002123030021230300212              zeros=11  e_u=2
+     col u=18  depth n..-(u+1): 32113030032303032111302112321212             zeros=6   e_u=2
+     col u=19  depth n..-(u+1): 303032111212300303030021212121212            zeros=8   e_u=2
+
+n=13 c=3 deepest run=9 (need 15); 3 sources attain it
+  W=1222221122112 forced=222122121
+     col u=12  depth n..-(u+1): 23213030321212303032130212                   zeros=5   e_u=2
+     col u=13  depth n..-(u+1): 3030300321302130032130321212                 zeros=8   e_u=2
+     col u=14  depth n..-(u+1): 32112321303212111212112121212                zeros=1   e_u=2
+     col u=15  depth n..-(u+1): 303021303213021213021212121212               zeros=5   e_u=2
+     col u=16  depth n..-(u+1): 3211303213032121211302130213021              zeros=5   e_u=1
+     col u=17  depth n..-(u+1): 30303213032130213030021230300212             zeros=10  e_u=2
+     col u=18  depth n..-(u+1): 321121211212113032111302112321212            zeros=2   e_u=2
+     col u=19  depth n..-(u+1): 3030213030303032130303212130213021           zeros=10  e_u=1
+     col u=20  depth n..-(u+1): 32113032112300303003213021230300212          zeros=10  e_u=2
+     col u=21  depth n..-(u+1): 303032130303230032302123030321113021         zeros=10  e_u=1
+  W=2122221122112 forced=222122121  (same region as above)
+  W=2222221122112 forced=222122121  (same region as above)
+
+n=14 c=2 deepest run=10 (need 16); 4 sources attain it
+  W=11121222211121 forced=2122221221
+     col u=13  depth n..-(u+1): 2121130303212123003212113021                 zeros=5   e_u=1
+     col u=14  depth n..-(u+1): 212121230030303032302130300212               zeros=9   e_u=2
+     col u=15  depth n..-(u+1): 2130213000321123021130321113021              zeros=7   e_u=1
+     col u=16  depth n..-(u+1): 21230300003030211303003030300212             zeros=14  e_u=2
+     col u=17  depth n..-(u+1): 213003232300321212300032112321212            zeros=7   e_u=2
+     col u=18  depth n..-(u+1): 2123213021112121212323021212121212           zeros=2   e_u=2
+     col u=19  depth n..-(u+1): 21302123030303030303032121212121212          zeros=8   e_u=2
+     col u=20  depth n..-(u+1): 212303032112300321123021302130213021         zeros=8   e_u=1
+     col u=21  depth n..-(u+1): 2130032130303230212123030021230300212        zeros=11  e_u=2
+     col u=22  depth n..-(u+1): 21232130321121230303032111302112321212       zeros=5   e_u=2
+     col u=23  depth n..-(u+1): 213021230212121230032130303212130213021      zeros=8   e_u=1
+  W=12112222211121 forced=2122221221  (same region as above)
+  W=21121222211121 forced=2122221221  (same region as above)
+  W=22112222211121 forced=2122221221  (same region as above)
+
+n=15 c=2 deepest run=9 (need 17); 10 sources attain it
+  W=111111121221212 forced=222212121
+     col u=14  depth n..-(u+1): 213021212123212123003030300212               zeros=7   e_u=2
+     col u=15  depth n..-(u+1): 21211302130213021300032112321212             zeros=6   e_u=2
+     col u=16  depth n..-(u+1): 213030021230300212323021212121212            zeros=7   e_u=2
+     col u=17  depth n..-(u+1): 2123000213003230303032121212121212           zeros=8   e_u=2
+     col u=18  depth n..-(u+1): 21300002123213003211212121212121212          zeros=6   e_u=2
+     col u=19  depth n..-(u+1): 212323212121211121213021302130213021         zeros=4   e_u=1
+     col u=20  depth n..-(u+1): 2130213021302121302123030021230300212        zeros=10  e_u=2
+     col u=21  depth n..-(u+1): 21230300212303030021300323030321113021       zeros=12  e_u=1
+     col u=22  depth n..-(u+1): 213003230303211232121112123003030300212      zeros=10  e_u=2
+     col u=23  depth n..-(u+1): 2123213003213030303030303032300321113021     zeros=12  e_u=1
+  W=111111222121122 forced=212222121
+     col u=14  depth n..-(u+1): 212303021300323211232130321212               zeros=5   e_u=2
+     col u=15  depth n..-(u+1): 21212300212321302121212112121212             zeros=3   e_u=2
+     col u=16  depth n..-(u+1): 213021113021303212121212130213021            zeros=5   e_u=1
+     col u=17  depth n..-(u+1): 2123030300212302130213021230300212           zeros=10  e_u=2
+     col u=18  depth n..-(u+1): 21300321113021130321211302112321212          zeros=5   e_u=2
+     col u=19  depth n..-(u+1): 212321303032121230213030021212121212         zeros=6   e_u=2
+     col u=20  depth n..-(u+1): 2130212300303030321211232121212121212        zeros=6   e_u=2
+     col u=21  depth n..-(u+1): 21230303230032112121213021302130213021       zeros=8   e_u=1
+     col u=22  depth n..-(u+1): 213003213000303021302123030021230300212      zeros=14  e_u=2
+     col u=23  depth n..-(u+1): 2123213032321123030021300323030321113021     zeros=9   e_u=1
+  W=121111121221212 forced=222212121  (same region as above)
+  W=121111222121122 forced=212222121  (same region as above)
+  W=121211121211212 forced=221221212
+     col u=14  depth n..-(u+1): 130321211303232130302130300212               zeros=7   e_u=2
+     col u=15  depth n..-(u+1): 21230213030030303003212112321212             zeros=8   e_u=2
+     col u=16  depth n..-(u+1): 213002123000321123213021212121212            zeros=6   e_u=2
+     col u=17  depth n..-(u+1): 2123212123230212121211302130213021           zeros=4   e_u=1
+     col u=18  depth n..-(u+1): 21302130213002130213030021230300212          zeros=11  e_u=2
+     col u=19  depth n..-(u+1): 212303002123212113032111302112321212         zeros=5   e_u=2
+     col u=20  depth n..-(u+1): 2130032303030303032130303212130213021        zeros=11  e_u=1
+     col u=21  depth n..-(u+1): 21232130032112300303003213021230300212       zeros=11  e_u=2
+     col u=22  depth n..-(u+1): 213021232130303230032302123030321113021      zeros=9   e_u=1
+     col u=23  depth n..-(u+1): 2123030303003213000303212123003030300212     zeros=15  e_u=2
+  W=211111121221212 forced=222212121  (same region as above)
+  W=211111222121122 forced=212222121  (same region as above)
+  W=221111121221212 forced=222212121  (same region as above)
+  W=221111222121122 forced=212222121  (same region as above)
+  W=221211121211212 forced=221221212  (same region as above)
+
+n=15 c=3 deepest run=8 (need 17); 9 sources attain it
+  W=111121211111122 forced=22122222
+     col u=14  depth n..-(u+1): 212121300032113032121130321212               zeros=5   e_u=2
+     col u=15  depth n..-(u+1): 30303030000303032130212112121212             zeros=10  e_u=2
+     col u=16  depth n..-(u+1): 321123000003211212113021212121212            zeros=6   e_u=2
+     col u=17  depth n..-(u+1): 3030211111121213021211302130213021           zeros=6   e_u=1
+     col u=18  depth n..-(u+1): 32113030303030300213030021230300212          zeros=13  e_u=2
+     col u=19  depth n..-(u+1): 303032112300321113032111302112321212         zeros=6   e_u=2
+     col u=20  depth n..-(u+1): 3211212130003030300303030021212121212        zeros=11  e_u=2
+     col u=21  depth n..-(u+1): 30302130323211230003211232121212121212       zeros=6   e_u=2
+     col u=22  depth n..-(u+1): 321130321302121232302121212121212121212      zeros=3   e_u=2
+  W=121112111222222 forced=12222121
+     col u=14  depth n..-(u+1): 000021230303211212121212121212               zeros=6   e_u=2
+     col u=15  depth n..-(u+1): 32323030321121213021302130213021             zeros=6   e_u=1
+     col u=16  depth n..-(u+1): 303032112121302123030021230300212            zeros=9   e_u=2
+     col u=17  depth n..-(u+1): 3211212130212303032111302112321212           zeros=4   e_u=2
+     col u=18  depth n..-(u+1): 30302130321212300303030021212121212          zeros=9   e_u=2
+     col u=19  depth n..-(u+1): 321130321302130003211232121212121212         zeros=5   e_u=2
+     col u=20  depth n..-(u+1): 3030321303212111121213021302130213021        zeros=7   e_u=1
+     col u=21  depth n..-(u+1): 32112121121212121302123030021230300212       zeros=7   e_u=2
+     col u=22  depth n..-(u+1): 303021303030303030021300323030321113021      zeros=14  e_u=1
+  W=121121211111122 forced=22122222  (same region as above)
+  W=122121121222121 forced=22212122
+     col u=14  depth n..-(u+1): 030300021230300323030321113021               zeros=11  e_u=1
+     col u=15  depth n..-(u+1): 32112323030321112123003030300212             zeros=8   e_u=2
+     col u=16  depth n..-(u+1): 303021300321303021300032112321212            zeros=9   e_u=2
+     col u=17  depth n..-(u+1): 3211303230212300212323021212121212           zeros=5   e_u=2
+     col u=18  depth n..-(u+1): 30303213002130002130211302130213021          zeros=11  e_u=1
+     col u=19  depth n..-(u+1): 321121211130323212113030021230300212         zeros=7   e_u=2
+     col u=20  depth n..-(u+1): 3030213030321302130300323030321113021        zeros=11  e_u=1
+     col u=21  depth n..-(u+1): 32113032112121130321112123003030300212       zeros=8   e_u=2
+     col u=22  depth n..-(u+1): 303032130303030321303021300032112321212      zeros=11  e_u=2
+  W=211121211111122 forced=22122222  (same region as above)
+  W=212121121222121 forced=22212122  (same region as above)
+  W=221112111222222 forced=12222121  (same region as above)
+  W=221121211111122 forced=22122222  (same region as above)
+  W=222121121222121 forced=22212122  (same region as above)
+

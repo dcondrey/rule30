@@ -1,0 +1,17 @@
+n=4 c=2: S1 cells=5040 S2 columns=96 S3 peels=11
+n=4 c=3: S1 cells=10080 S2 columns=192 S3 peels=16
+n=5 c=2: S1 cells=27296 S2 columns=416 S3 peels=17
+n=5 c=3: S1 cells=44512 S2 columns=640 S3 peels=51
+n=6 c=2: S1 cells=98656 S2 columns=1152 S3 peels=98
+n=6 c=3: S1 cells=152800 S2 columns=1664 S3 peels=129
+n=7 c=2: S1 cells=313056 S2 columns=2816 S3 peels=201
+n=7 c=3: S1 cells=473312 S2 columns=3968 S3 peels=261
+n=8 c=2: S1 cells=926432 S2 columns=6528 S3 peels=396
+n=8 c=3: S1 cells=1379552 S2 columns=9088 S3 peels=526
+n=9 c=2: S1 cells=2615008 S2 columns=14720 S3 peels=686
+n=9 c=3: S1 cells=3850464 S2 columns=20352 S3 peels=1093
+n=10 c=2: S1 cells=7122144 S2 columns=32640 S3 peels=1593
+n=10 c=3: S1 cells=10393824 S2 columns=44928 S3 peels=2173
+n=11 c=2: S1 cells=18850016 S2 columns=71552 S3 peels=3144
+n=11 c=3: S1 cells=27306208 S2 columns=98176 S3 peels=4284
+ALL PASS: light-cone cells 27306208, hit<=>target equivalences 98176, autonomous peel steps 4284

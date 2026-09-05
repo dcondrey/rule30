@@ -33,8 +33,8 @@ one for each question.
 | Problem | Official question | Status here | Strongest live edge |
 |---|---|---|---|
 | **P1** | Does the center column always remain non-periodic? | **Open** | Exclude a nonconstant period-two center trace for every nonzero finite row |
-| **P2** | Does each color occur equally often on average in the center column? | **Open** | Bridge ensemble results to the single-seed orbit |
-| **P3** | Does the `n`th center cell require at least `O(n)` computational effort? | **Open** | Prove a fixed-sequence work lower bound in an explicit computation model |
+| **P2** | Does each color occur equally often on average in the center column? | **Open** | Prove seed-specific dyadic-shell Walsh/correlation decay |
+| **P3** | Does the `n`th center cell require at least `O(n)` computational effort? | **Open** | Prove a fixed-sequence work lower bound or find an exact sublinear query algorithm |
 
 The exact problem statements and submission rules are maintained at
 [rule30prize.org](https://rule30prize.org/).
@@ -74,6 +74,54 @@ This explains exactly why several natural contraction, bounded-summary, and
 local-ranking arguments fail. Those failures are preserved as independently
 checkable negative certificates rather than discarded experiments.
 
+The current strongest finite-rank reduction is a deterministic growing queue.
+For either constant cut tail `c in {2,3}`, reverse the full newest dependency
+diagonal `R` and scan
+
+```text
+S_0=c,  S_i=g_(S_(i-1))(R_i).
+```
+
+The final scan state uniquely emits or rejects the next hard-core endpoint.
+Mortality of every such finite queue would prove the period-two rung.  The
+exact quotient `3 -> 1` reduces its nonleading alphabet to three symbols, and
+every normalized successor avoids `20`, `22`, and `011`; the all-length
+mortality induction remains open.  The exact survival-language morph expands
+minimal DFA rank, so the remaining target is an amortized proof that its
+shortest accepted queue tends to infinity.  This minimum now has an exact
+graph form: at horizon `h`, it is one plus product-graph distance from the
+constant height-`h+1` frontier to the `F_(h+3)` hard-core inverse-cone
+diagonals, with the invariant suffix DFA as the second factor.  The bare
+frontier graph handles arbitrary queues.  Proving either equivalent distance
+divergence would close the period-two rung.
+
+There is now a uniform ordered descent inside each successful queue update.
+After removing the newly appended boundary symbol, the transformed old
+coordinates are strictly smaller in colex order for both `0<2<1` and
+`2<0<1`.  Hence the rightmost decisive input is always a `1`, replaced by
+`0` or `2`.  Finite synchronous products prove this for words of every
+length.  It is not yet mortality: an appended boundary `1` can replace the
+consumed pivot at a newer coordinate, so the remaining task is an ancestry
+bound on those replacements.  Symbol-count, feature-start, and root-coordinate
+budgets are all false.  The last is killed by the targeted family
+`3001 0^m 2`: at `m=382`, root 3 reaches pull depth 3 despite capacity 2;
+at `m=390` it reaches depth 4.  Long zero runs therefore store dyadic phase
+to the right of the root.  The live ancestry options are to retain those
+gap scales, or to prove a bound only for reversed diagonals derived from a
+hard-core endpoint—the abstract counterfamily is not endpoint-derived.  In
+that restricted setting an all-length table argument now localizes every
+pull root to the last three initial queue coordinates: a possible time-zero
+pull forces current raw diagonal prefix `203`, and every later pull lies on
+the proved third-last ray.
+
+Conditioning the terminal set on the complete actual Rule 30 right cone
+raises the tail-2 minimum from `18` to `23` at horizon 12 and changes exact
+`D8` phase costs.  The conditioned sets form a uniform inverse subsystem, but
+rank descent may prepend a finite artificial endpoint prefix.  Whole-prefix
+conditioning is therefore too strong for the application; actual-right
+information must be imposed beyond that prefix, as in the scale-block
+reduction.
+
 No period-two impossibility theorem has yet been proved.
 
 ### Bounded P2 and P3 evidence is reproducible
@@ -82,7 +130,13 @@ The repository also contains:
 
 - exact center-column and subword-complexity measurements through recorded
   finite horizons;
+- an exact equivalence between P2 and sublinear maximal discrepancy on dyadic
+  shells, plus sufficient time-index Walsh and xor-autocorrelation bounds;
 - checkerboard-patch growth measurements with bit-exact kernel cross-checks;
+- an exact Hashlife-style center-query implementation with a polylogarithmic
+  Rule 90 control and a negative finite result for the literal Rule 30 route;
+- exact finite certificates excluding nontrivial rational additive local
+  densities through width 12;
 - bounded circuit-synthesis and proof-complexity probes;
 - a deterministic word-RAM fuel instrument for evaluating proposed P3
   algorithms; and
@@ -98,9 +152,12 @@ require loading the full research history.
 
 1. Read [`START-HERE.md`](docs/rule30/START-HERE.md) for current status, live
    theorem targets, and the compact attempt router.
-2. Consult [`FACT-INDEX.md`](docs/rule30/FACT-INDEX.md) for exact identities,
+2. Use [`EXPERIMENT-ATLAS.md`](docs/rule30/EXPERIMENT-ATLAS.md) to compare
+   experiment assumptions, state representations, evidence levels, failure
+   modes, and compatible synthesis opportunities.
+3. Consult [`FACT-INDEX.md`](docs/rule30/FACT-INDEX.md) for exact identities,
    proved facts, controls, and reusable obstructions.
-3. Open [`PATH.md`](docs/rule30/PATH.md) only when auditing the complete attempt
+4. Open [`PATH.md`](docs/rule30/PATH.md) only when auditing the complete attempt
    register or checking whether an idea has already been tried.
 
 For the active period-two P1 effort, go directly to the
@@ -152,11 +209,16 @@ and negative certificates they implement; it does not prove P1.
 | Path | Purpose |
 |---|---|
 | `docs/rule30/START-HERE.md` | Compact status and attempt router |
+| `docs/rule30/EXPERIMENT-ATLAS.md` | Cross-examination matrix, correlations, and synthesis queue |
+| `docs/rule30/RESULTS-cross-route-synthesis-2026-09-02.md` | Corrected cross-route correlations, mashups, and ranked next lemmas |
 | `docs/rule30/FACT-INDEX.md` | Theorem, identity, control, and obstruction index |
 | `docs/rule30/PATH.md` | Exhaustive internal and external attempt register |
+| `experiments/README.md` | Executable-artifact directory router |
 | `docs/rule30/paper/` | Zero-tail manuscript and publication audit |
 | `experiments/rule30/p1-period2-invariant/` | Current P1 derivations and exact certificates |
 | `experiments/rule30-subword-extended/` | P2 center-word and factor-complexity measurements |
+| `experiments/openevolve-p1-cocycle/` | P1 adaptive-rank conjecture search and width-18 falsifier |
+| `experiments/openevolve-p1-rank-zero/` | Exact zero-tail OpenEvolve/GA witness search |
 | `experiments/openevolve-p3/` | P3 evaluator and deterministic fuel instrument |
 | `experiments/overnight-arms/` | Preregistered exploratory arms and raw findings |
 | `runs/` | Preserved run manifests and verifier outputs |
@@ -201,16 +263,49 @@ uniform proof and independently checkable artifacts.
 
 ## Current best next theorem
 
-The most focused live target is the following period-two bridge:
+The cleanest finite-word target is now the **projected diagonal-support
+lemma**.  If
+`s_c(W)` is the legal continuation length inside the exact forced block
+`R_c(W)`, it is enough to prove for every nonempty hard-core word `W` that
 
-> **Hard-core isolated-pulse theorem.** If a binary sequence `rho` has no
-> adjacent ones and its complete forced-left Rule 30 reconstruction is
-> eventually zero, then `rho` is eventually periodic.
+```text
+s_2(W) <= |W|,
+s_3(W) <= |W| + 1.
+```
 
-It retains the three hypotheses lost by earlier finite-state ladders: Rule
-30's nonlinear OR, the relationship between both sides of the same orbit, and
-finite spatial support. A proof would settle the period-two rung only—not all
-of Prize Problem 1.
+Zero the source coordinates successively from left to right.  At survival row
+`j`, it is enough to prove one adjacent change at some token `k>=j`, using
+only `(alpha,beta)` for tail 2 and `(alpha,gamma)` for tail 3 (the latter only
+through the final nonfinal row).  No matching or greedy history is required.
+The claim has zero failures on the complete hard-core corpus through length
+23; its held-out unrestricted tail-2 supplement alone contains 111,899 cases.
+This is a uniform conjecture, not a proof.  An independent one-credit halving
+recurrence also passes through length 23 and would suffice if proved.  Its
+held-out refinement uses the fixed child `(left half, tail 2)` for both parent
+tails and passes 365,414 cases.  See
+`RESULTS-PROJECTED-DIAGONAL-HALVING.md`.  Pointwise derivative, affine-rank,
+reverse-order, local edge-monotonicity, and literal half-block embeddings have
+exact counterexamples.
+
+A new output-only bridge gives a potentially cleaner route. Peeling one core
+symbol is the fixed local map
+
+```text
+(Peel x)_t = tau_(swap(x_(t-1)))^(-1)(x_t).
+```
+
+Thus a finite core produces an eventually `Peel`-nilpotent cut. Proving that
+the inverse-terminal cut of a hard-core endpoint is never finitely
+`Peel`-nilpotent would settle the period-two rung only—not all of Prize
+Problem 1. See `RESULTS-DYADIC-EXCEPTION-SEPARATOR.md` in the period-two
+directory.
+
+The inverse-terminal and Peel triangles now satisfy the exact rotated law
+`P(I(sigma e))=sigma^2 I(e)`.  Combined with preservation of a finite
+rightmost nonzero cell, it excludes every eventually periodic hard-core
+endpoint from finite Peel rank, including rank zero.  Every remaining
+collision must have an aperiodic endpoint; positive tail ranks grow exactly
+as `m,m+1,...`.  See `RESULTS-ROTATED-PEEL-IDENTITY.md` in the same directory.
 
 ## Authorship and citation
 

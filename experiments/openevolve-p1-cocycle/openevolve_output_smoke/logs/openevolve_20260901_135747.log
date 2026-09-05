@@ -1,0 +1,64 @@
+2026-09-01 13:57:47,988 - openevolve.controller - INFO - Logging to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/logs/openevolve_20260901_135747.log
+2026-09-01 13:57:48,041 - openevolve.controller - INFO - Set random seed to 42 for reproducibility
+2026-09-01 13:57:48,080 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: deepseek/deepseek-chat-v3.1
+2026-09-01 13:57:48,080 - openevolve.llm.openai - INFO - Initialized OpenAI LLM with model: openai/gpt-4o-mini
+2026-09-01 13:57:48,081 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: deepseek/deepseek-chat-v3.1 (weight: 0.70), openai/gpt-4o-mini (weight: 0.30)
+2026-09-01 13:57:48,081 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: deepseek/deepseek-chat-v3.1 (weight: 0.70), openai/gpt-4o-mini (weight: 0.30)
+2026-09-01 13:57:48,084 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2026-09-01 13:57:48,086 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-09-01 13:57:48,086 - openevolve.database - INFO - Initialized program database with 0 programs
+2026-09-01 13:57:48,088 - openevolve.evaluator - INFO - Successfully loaded evaluation function from /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/evaluator.py
+2026-09-01 13:57:48,088 - openevolve.evaluator - INFO - Initialized evaluator with /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/evaluator.py
+2026-09-01 13:57:48,088 - openevolve.controller - INFO - Initialized OpenEvolve with /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/initial_program.py
+2026-09-01 13:57:48,088 - openevolve.controller - INFO - Adding initial program to database
+2026-09-01 13:57:48,090 - openevolve.evaluator - INFO - Evaluated program 810fb19a-b6eb-4f28-ad52-3ffe558052d0 in 0.00s: combined_score=0.1267, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.8205
+2026-09-01 13:57:48,090 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'train_plateau': 2, 'holdout_plateau': 2}
+2026-09-01 13:57:48,090 - openevolve.controller - INFO - Stored artifacts for initial program
+2026-09-01 13:57:48,094 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2026-09-01 13:57:48,094 - openevolve.process_parallel - INFO - Set max None tasks per child
+2026-09-01 13:57:48,095 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2026-09-01 13:57:48,095 - openevolve.controller - INFO - Using island-based evolution with 1 islands
+2026-09-01 13:57:48,095 - openevolve.database - INFO - Island Status:
+2026-09-01 13:57:48,095 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.1267, avg=0.1267, diversity=0.00, gen=0 (best: 810fb19a-b6eb-4f28-ad52-3ffe558052d0)
+2026-09-01 13:57:48,095 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 8 iterations (total: 9)
+2026-09-01 13:57:48,100 - openevolve.process_parallel - INFO - Early stopping disabled
+2026-09-01 13:57:55,497 - openevolve.process_parallel - ERROR - Error processing result from iteration 1: Feature dimension 'train_plateau' specified in config but not found in program metrics. Available metrics: ['combined_score', 'error']. Built-in features: 'complexity', 'diversity', 'score'. Either remove 'train_plateau' from feature_dimensions or ensure your evaluator returns it.
+2026-09-01 13:58:02,832 - openevolve.process_parallel - INFO - Iteration 2: Program fd4a84a8-c590-4b54-b5cd-52e23e1c9ab9 (parent: 810fb19a-b6eb-4f28-ad52-3ffe558052d0) completed in 7.33s
+2026-09-01 13:58:02,833 - openevolve.process_parallel - INFO - Metrics: combined_score=0.1100, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.4848
+2026-09-01 13:58:02,833 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 2
+2026-09-01 13:58:02,833 - openevolve.database - INFO - Island Status:
+2026-09-01 13:58:02,833 - openevolve.database - INFO -  * Island 0: 2 programs, best=0.1267, avg=0.1183, diversity=10.00, gen=1 (best: 810fb19a-b6eb-4f28-ad52-3ffe558052d0)
+2026-09-01 13:58:02,861 - openevolve.database - INFO - Saved database with 3 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/checkpoints/checkpoint_2
+2026-09-01 13:58:02,862 - openevolve.controller - INFO - Saved best program at checkpoint 2 with metrics: combined_score=0.1267, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.8205
+2026-09-01 13:58:02,862 - openevolve.controller - INFO - Saved checkpoint at iteration 2 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/checkpoints/checkpoint_2
+2026-09-01 13:58:12,040 - openevolve.process_parallel - ERROR - Error processing result from iteration 3: Feature dimension 'train_plateau' specified in config but not found in program metrics. Available metrics: ['combined_score', 'error']. Built-in features: 'complexity', 'diversity', 'score'. Either remove 'train_plateau' from feature_dimensions or ensure your evaluator returns it.
+2026-09-01 13:58:18,883 - openevolve.process_parallel - INFO - Iteration 4: Program cb9239be-d80a-4c12-a14d-4a164f8b78fd (parent: 810fb19a-b6eb-4f28-ad52-3ffe558052d0) completed in 6.85s
+2026-09-01 13:58:18,884 - openevolve.process_parallel - INFO - Metrics: combined_score=0.1103, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.4923
+2026-09-01 13:58:18,884 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 4
+2026-09-01 13:58:18,884 - openevolve.database - INFO - Island Status:
+2026-09-01 13:58:18,884 - openevolve.database - INFO -  * Island 0: 3 programs, best=0.1267, avg=0.1157, diversity=7.33, gen=2 (best: 810fb19a-b6eb-4f28-ad52-3ffe558052d0)
+2026-09-01 13:58:18,886 - openevolve.database - INFO - Saved database with 5 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/checkpoints/checkpoint_4
+2026-09-01 13:58:18,886 - openevolve.controller - INFO - Saved best program at checkpoint 4 with metrics: combined_score=0.1267, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.8205
+2026-09-01 13:58:18,886 - openevolve.controller - INFO - Saved checkpoint at iteration 4 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/checkpoints/checkpoint_4
+2026-09-01 13:58:22,660 - openevolve.process_parallel - INFO - Iteration 5: Program 590f998b-aa40-4d90-9195-169a590e6818 (parent: 810fb19a-b6eb-4f28-ad52-3ffe558052d0) completed in 3.77s
+2026-09-01 13:58:22,660 - openevolve.process_parallel - INFO - Metrics: combined_score=0.1148, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.5818
+2026-09-01 13:58:32,459 - openevolve.process_parallel - ERROR - Error processing result from iteration 6: Feature dimension 'train_plateau' specified in config but not found in program metrics. Available metrics: ['combined_score', 'error']. Built-in features: 'complexity', 'diversity', 'score'. Either remove 'train_plateau' from feature_dimensions or ensure your evaluator returns it.
+2026-09-01 13:58:42,603 - openevolve.process_parallel - ERROR - Error processing result from iteration 7: Feature dimension 'train_plateau' specified in config but not found in program metrics. Available metrics: ['combined_score', 'error']. Built-in features: 'complexity', 'diversity', 'score'. Either remove 'train_plateau' from feature_dimensions or ensure your evaluator returns it.
+2026-09-01 13:58:48,025 - openevolve.database - INFO - Population size (9) exceeds limit (8), removing 1 programs
+2026-09-01 13:58:48,025 - openevolve.database - INFO - Population size after cleanup: 8
+2026-09-01 13:58:48,025 - openevolve.process_parallel - INFO - Iteration 8: Program 46c98d26-572f-4b5e-b970-f5832d90a9fd (parent: cb9239be-d80a-4c12-a14d-4a164f8b78fd) completed in 5.43s
+2026-09-01 13:58:48,025 - openevolve.process_parallel - INFO - Metrics: combined_score=0.1103, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.4923
+2026-09-01 13:58:48,025 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 8
+2026-09-01 13:58:48,026 - openevolve.database - INFO - Island Status:
+2026-09-01 13:58:48,026 - openevolve.database - INFO -  * Island 0: 5 programs, best=0.1267, avg=0.1144, diversity=4.42, gen=4 (best: 810fb19a-b6eb-4f28-ad52-3ffe558052d0)
+2026-09-01 13:58:48,027 - openevolve.database - INFO - Saved database with 8 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/checkpoints/checkpoint_8
+2026-09-01 13:58:48,027 - openevolve.controller - INFO - Saved best program at checkpoint 8 with metrics: combined_score=0.1267, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.8205
+2026-09-01 13:58:48,027 - openevolve.controller - INFO - Saved checkpoint at iteration 8 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/checkpoints/checkpoint_8
+2026-09-01 13:58:48,027 - openevolve.process_parallel - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-09-01 13:58:48,028 - openevolve.database - INFO - Saved database with 8 programs to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/checkpoints/checkpoint_8
+2026-09-01 13:58:48,028 - openevolve.controller - INFO - Saved best program at checkpoint 8 with metrics: combined_score=0.1267, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.8205
+2026-09-01 13:58:48,028 - openevolve.controller - INFO - Saved checkpoint at iteration 8 to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/checkpoints/checkpoint_8
+2026-09-01 13:58:48,031 - openevolve.process_parallel - INFO - Stopped process pool
+2026-09-01 13:58:48,031 - openevolve.controller - INFO - Using tracked best program: 810fb19a-b6eb-4f28-ad52-3ffe558052d0
+2026-09-01 13:58:48,031 - openevolve.controller - INFO - Evolution complete. Best program has metrics: combined_score=0.1267, train_plateau=0.0000, holdout_plateau=0.2857, restart_control=0.0000, closure_collision=0.0000, simplicity=0.8205
+2026-09-01 13:58:48,032 - openevolve.controller - INFO - Saved best program to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/best/best_program.py with program info to /Volumes/A/researchpapers/13-rule30/experiments/openevolve-p1-cocycle/openevolve_output_smoke/best/best_program_info.json

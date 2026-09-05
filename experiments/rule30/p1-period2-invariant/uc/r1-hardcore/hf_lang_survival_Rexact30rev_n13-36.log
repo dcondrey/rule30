@@ -1,0 +1,98 @@
+Rexact: 237 minimal forbidden factors through length 30
+##### prefix language Rexact, continuation language Rexact
+n=13 |L_n|=    156 h=0.391 null_lang=  8.3 null_joint=  3.2 | LANG-only deepest= 11 (0.846 n) full(n+2)=     0 | E-only deepest c2=  5 c3=  5 | joint deepest c2=  4 c3=  3 need=15  (0.0s)
+    LANG-only N_k: 0:156 1:96 2:53 3:35 4:20 5:11 6:6 7:2 8:1 9:1 10:1 11:1
+    killing factor at first LANG failure: 11:77, 00000:18, 1010010:11, 1010001010:7, 0000101010:7, 100101:7, 100010010:7, 101000010010:6
+    LANG-only deepest witnesses: 0010010010010|010000101010  1010101010101|00010010
+n=14 |L_n|=    199 h=0.351 null_lang=  7.6 null_joint=  3.0 | LANG-only deepest=  9 (0.643 n) full(n+2)=     0 | E-only deepest c2=  8 c3=  8 | joint deepest c2=  5 c3=  5 need=16  (0.0s)
+    LANG-only N_k: 0:199 1:120 2:76 3:45 4:27 5:14 6:6 7:4 8:3 9:2
+    killing factor at first LANG failure: 11:119, 00000:26, 1010010:11, 100101:8, 0000101010:6, 100010001010:5, 101000010010:5, 100010010:5
+    LANG-only deepest witnesses: 01001001001001|0000101010  00001001001001|0000101010
+n=15 |L_n|=    251 h=0.335 null_lang=  7.6 null_joint=  3.0 | LANG-only deepest=  8 (0.533 n) full(n+2)=     0 | E-only deepest c2=  8 c3=  7 | joint deepest c2=  4 c3=  3 need=17  (0.0s)
+    LANG-only N_k: 0:251 1:155 2:95 3:61 4:27 5:18 6:8 7:5 8:3
+    killing factor at first LANG failure: 11:124, 00000:33, 1010010:15, 100010010:15, 100101:13, 0000101010:11, 10010001010:6, 100010001010:5
+    LANG-only deepest witnesses: 000101000010000|100001011  010101000010000|100001011
+n=16 |L_n|=    316 h=0.332 null_lang=  8.0 null_joint=  3.2 | LANG-only deepest= 10 (0.625 n) full(n+2)=     0 | E-only deepest c2=  5 c3=  8 | joint deepest c2=  5 c3=  5 need=18  (0.0s)
+    LANG-only N_k: 0:316 1:194 2:106 3:68 4:45 5:23 6:13 7:9 8:6 9:5 10:4
+    killing factor at first LANG failure: 11:174, 00000:38, 1010010:21, 1010001010:13, 100010010:12, 100101:9, 0000101010:7, 100010001010:6
+    LANG-only deepest witnesses: 0001010101010101|01010001011  0001000010000100|01010001010
+n=17 |L_n|=    393 h=0.315 null_lang=  7.8 null_joint=  3.2 | LANG-only deepest=  8 (0.471 n) full(n+2)=     0 | E-only deepest c2= 13 c3= 11 | joint deepest c2=  4 c3=  3 need=19  (0.0s)
+    LANG-only N_k: 0:393 1:253 2:166 3:92 4:58 5:37 6:20 7:15 8:9
+    killing factor at first LANG failure: 11:205, 00000:42, 100010010:20, 1010010:18, 0000101010:17, 100010001010:15, 1010001010:11, 10010001001:7
+    LANG-only deepest witnesses: 10101010101010101|010001011  01010000100010101|000010011
+n=18 |L_n|=    487 h=0.309 null_lang=  8.1 null_joint=  3.3 | LANG-only deepest=  8 (0.444 n) full(n+2)=     0 | E-only deepest c2= 11 c3=  6 | joint deepest c2=  4 c3=  4 need=20  (0.0s)
+    LANG-only N_k: 0:487 1:293 2:164 3:105 4:59 5:32 6:16 7:4 8:2
+    killing factor at first LANG failure: 11:251, 00000:59, 1010010:23, 100010010:18, 1010001010:16, 100101:15, 100010001010:14, 1000100001001:12
+    LANG-only deepest witnesses: 010001010101000010|100010010  010000100001000010|010001010
+n=19 |L_n|=    596 h=0.291 null_lang=  7.8 null_joint=  3.2 | LANG-only deepest= 10 (0.526 n) full(n+2)=     0 | E-only deepest c2=  8 c3=  7 | joint deepest c2=  5 c3=  6 need=21  (0.0s)
+    LANG-only N_k: 0:596 1:359 2:211 3:121 4:72 5:37 6:19 7:9 8:7 9:3 10:1
+    killing factor at first LANG failure: 11:359, 00000:60, 100101:19, 100010010:17, 100010001010:14, 1010001010:13, 1010010:12, 0000101010:12
+    LANG-only deepest witnesses: 0100001001001001001|00010001011  0000100100001010001|0001000011
+n=20 |L_n|=    721 h=0.275 null_lang=  7.6 null_joint=  3.2 | LANG-only deepest= 11 (0.550 n) full(n+2)=     0 | E-only deepest c2= 12 c3= 11 | joint deepest c2=  5 c3=  4 need=22  (0.0s)
+    LANG-only N_k: 0:721 1:440 2:255 3:152 4:89 5:50 6:38 7:14 8:6 9:5 10:4 11:4
+    killing factor at first LANG failure: 11:390, 00000:82, 100010010:28, 100010001010:26, 1010010:25, 100101:19, 0000101010:18, 1000100001000:14
+    LANG-only deepest witnesses: 01010101010101010101|010100010010  00010000100001001001|000010100011
+n=21 |L_n|=    875 h=0.279 null_lang=  8.1 null_joint=  3.4 | LANG-only deepest= 11 (0.524 n) full(n+2)=     0 | E-only deepest c2= 12 c3= 10 | joint deepest c2=  4 c3=  4 need=23  (0.0s)
+    LANG-only N_k: 0:875 1:528 2:293 3:174 4:112 5:59 6:33 7:17 8:12 9:11 10:4 11:2
+    killing factor at first LANG failure: 11:477, 00000:112, 100010010:41, 100010001010:30, 1010010:29, 100101:22, 1010001010:18, 10010001001:11
+    LANG-only deepest witnesses: 001001000010001010100|001010001011  100001000010001010100|001010001011
+n=22 |L_n|=   1054 h=0.269 null_lang=  8.1 null_joint=  3.4 | LANG-only deepest= 12 (0.545 n) full(n+2)=     0 | E-only deepest c2=  8 c3= 11 | joint deepest c2=  4 c3=  4 need=24  (0.0s)
+    LANG-only N_k: 0:1054 1:637 2:393 3:236 4:129 5:79 6:59 7:44 8:24 9:16 10:9 11:5 12:2
+    killing factor at first LANG failure: 11:536, 00000:127, 1010010:45, 100010010:40, 100010001010:35, 100101:31, 1010001010:28, 0000101010:26
+    LANG-only deepest witnesses: 1000010000100100001001|0010010010011  0010010000100100001001|0010010010011
+n=23 |L_n|=   1255 h=0.252 null_lang=  7.7 null_joint=  3.3 | LANG-only deepest= 11 (0.478 n) full(n+2)=     0 | E-only deepest c2= 13 c3=  9 | joint deepest c2=  6 c3=  6 need=25  (0.0s)
+    LANG-only N_k: 0:1255 1:724 2:414 3:250 4:155 5:92 6:57 7:36 8:21 9:13 10:7 11:2
+    killing factor at first LANG failure: 11:655, 00000:135, 100010010:56, 1010010:50, 100010001010:50, 1010001010:32, 100101:27, 0000101010:24
+    LANG-only deepest witnesses: 00100010101000010001010|100010001010  01000010001010101010101|010001000011
+n=24 |L_n|=   1493 h=0.251 null_lang=  8.0 null_joint=  3.4 | LANG-only deepest= 14 (0.583 n) full(n+2)=     0 | E-only deepest c2= 10 c3= 10 | joint deepest c2=  5 c3=  5 need=26  (0.0s)
+    LANG-only N_k: 0:1493 1:877 2:522 3:310 4:195 5:120 6:79 7:49 8:21 9:9 10:6 11:3 12:1 13:1 14:1
+    killing factor at first LANG failure: 11:813, 00000:177, 100010010:61, 1010010:48, 1010001010:41, 100010001010:30, 100101:29, 0000101010:28
+    LANG-only deepest witnesses: 100010101010000101000100|010000101000011  000100100100100001000101|000100001001
+n=25 |L_n|=   1780 h=0.254 null_lang=  8.5 null_joint=  3.6 | LANG-only deepest= 13 (0.520 n) full(n+2)=     0 | E-only deepest c2= 11 c3=  8 | joint deepest c2=  6 c3=  4 need=27  (0.0s)
+    LANG-only N_k: 0:1780 1:1048 2:641 3:387 4:235 5:163 6:73 7:40 8:28 9:19 10:7 11:7 12:7 13:4
+    killing factor at first LANG failure: 11:903, 00000:186, 1010010:78, 100010010:63, 100101:53, 1010001010:51, 100010001010:39, 0000101010:38
+    LANG-only deepest witnesses: 1000010010000100100100001|00010101010010  1000010010010010010000100|10010000100011
+n=26 |L_n|=   2111 h=0.246 null_lang=  8.5 null_joint=  3.6 | LANG-only deepest= 16 (0.615 n) full(n+2)=     0 | E-only deepest c2=  9 c3= 10 | joint deepest c2=  5 c3=  5 need=28  (0.0s)
+    LANG-only N_k: 0:2111 1:1230 2:723 3:462 4:240 5:142 6:101 7:62 8:31 9:17 10:10 11:7 12:2 13:2 14:2 15:2 16:2
+    killing factor at first LANG failure: 11:1089, 00000:195, 1010010:97, 100010010:81, 1010001010:61, 100101:58, 0000101010:46, 100010001010:43
+    LANG-only deepest witnesses: 10101010101010101010101000|01000101000100011  00101010101010101010101000|01000101000100011
+n=27 |L_n|=   2483 h=0.234 null_lang=  8.3 null_joint=  3.6 | LANG-only deepest= 14 (0.519 n) full(n+2)=     0 | E-only deepest c2= 12 c3= 12 | joint deepest c2=  5 c3=  5 need=29  (0.0s)
+    LANG-only N_k: 0:2483 1:1452 2:795 3:454 4:282 5:170 6:86 7:48 8:33 9:21 10:10 11:10 12:9 13:6 14:4
+    killing factor at first LANG failure: 11:1336, 00000:233, 1010010:122, 100010010:76, 100101:71, 100010001010:67, 1010001010:59, 101000010010:40
+    LANG-only deepest witnesses: 010000100001001000010000100|100100100100011  010101010101010101010100001|000101000100011
+n=28 |L_n|=   2904 h=0.226 null_lang=  8.2 null_joint=  3.6 | LANG-only deepest= 14 (0.500 n) full(n+2)=     0 | E-only deepest c2= 11 c3= 12 | joint deepest c2=  6 c3=  5 need=30  (0.0s)
+    LANG-only N_k: 0:2904 1:1700 2:1016 3:621 4:328 5:179 6:84 7:55 8:31 9:18 10:14 11:11 12:9 13:2 14:2
+    killing factor at first LANG failure: 11:1501, 00000:296, 1010010:152, 100010010:100, 100010001010:83, 1010001010:72, 100101:64, 0000101010:54
+    LANG-only deepest witnesses: 0100100100001000101010000100|010101010001010  0000100100001000101010000100|010101010001010
+n=29 |L_n|=   3378 h=0.218 null_lang=  8.1 null_joint=  3.6 | LANG-only deepest= 12 (0.414 n) full(n+2)=     0 | E-only deepest c2= 15 c3= 11 | joint deepest c2=  5 c3=  5 need=31  (0.0s)
+    LANG-only N_k: 0:3378 1:1931 2:1060 3:615 4:325 5:213 6:120 7:68 8:34 9:22 10:14 11:3 12:3
+    killing factor at first LANG failure: 11:1754, 00000:372, 1010010:168, 100010010:109, 1010001010:108, 100101:84, 100010001010:74, 0000101010:58
+    LANG-only deepest witnesses: 01000010010000100100001001000|1000100001000  00010010000100010101000010001|0101010001010
+n=30 |L_n|=   3908 h=0.210 null_lang=  8.0 null_joint=  3.5 | LANG-only deepest= 18 (0.600 n) full(n+2)=     0 | E-only deepest c2= 10 c3= 13 | joint deepest c2=  5 c3=  6 need=32  (0.0s)
+    LANG-only N_k: 0:3908 1:2251 2:1292 3:821 4:495 5:274 6:149 7:95 8:42 9:28 10:18 11:7 12:2 13:2 14:1 15:1 16:1 17:1 18:1
+    killing factor at first LANG failure: 11:1958, 00000:484, 1010010:166, 100010010:134, 100101:121, 1010001010:106, 100010001010:97, 0000101010:72
+    LANG-only deepest witnesses: 010001010101010000100010101010|0001010001000100011  000101010101010101010000100010|10100001010011
+n=31 |L_n|=   4543 h=0.217 null_lang=  8.6 null_joint=  3.8 | LANG-only deepest= 16 (0.516 n) full(n+2)=     0 | E-only deepest c2= 10 c3= 11 | joint deepest c2=  9 c3=  6 need=33  (0.0s)
+    LANG-only N_k: 0:4543 1:2617 2:1497 3:879 4:491 5:302 6:171 7:109 8:65 9:26 10:14 11:3 12:1 13:1 14:1 15:1 16:1
+    killing factor at first LANG failure: 11:2314, 00000:518, 1010010:200, 100010010:145, 1010001010:129, 100010001010:106, 100101:96, 0000101010:94
+    LANG-only deepest witnesses: 1000101010101000010001010101000|01010001000100011  1010101010101010101000010001010|100001010011
+n=32 |L_n|=   5285 h=0.218 null_lang=  8.9 null_joint=  3.9 | LANG-only deepest= 14 (0.438 n) full(n+2)=     0 | E-only deepest c2= 12 c3= 16 | joint deepest c2=  7 c3=  6 need=34  (0.1s)
+    LANG-only N_k: 0:5285 1:3075 2:1769 3:1062 4:625 5:368 6:219 7:122 8:66 9:38 10:13 11:7 12:2 13:2 14:2
+    killing factor at first LANG failure: 11:2773, 00000:628, 1010010:237, 100010010:153, 100101:142, 100010001010:128, 1010001010:116, 0000101010:101
+    LANG-only deepest witnesses: 01010101010100001000101010100001|010001000100011  00010101010100001000101010100001|010001000100011
+n=33 |L_n|=   6155 h=0.220 null_lang=  9.3 null_joint=  4.1 | LANG-only deepest= 15 (0.455 n) full(n+2)=     0 | E-only deepest c2= 11 c3= 19 | joint deepest c2=  8 c3=  5 need=35  (0.1s)
+    LANG-only N_k: 0:6155 1:3665 2:2088 3:1205 4:672 5:389 6:222 7:142 8:82 9:49 10:25 11:23 12:7 13:5 14:5 15:3
+    killing factor at first LANG failure: 11:3111, 00000:689, 1010010:273, 100010010:211, 100010001010:174, 1010001010:164, 100101:150, 0000101010:113
+    LANG-only deepest witnesses: 000100100100001000010010010000100|0010010000100011  100100100100001000010010010000100|0010010000100011
+n=34 |L_n|=   7174 h=0.221 null_lang=  9.6 null_joint=  4.2 | LANG-only deepest= 14 (0.412 n) full(n+2)=     0 | E-only deepest c2= 13 c3= 11 | joint deepest c2=  7 c3=  7 need=36  (0.1s)
+    LANG-only N_k: 0:7174 1:4195 2:2442 3:1383 4:803 5:470 6:285 7:171 8:79 9:50 10:18 11:11 12:7 13:5 14:3
+    killing factor at first LANG failure: 11:3723, 00000:798, 1010010:282, 100010010:254, 1010001010:188, 100010001010:186, 100101:177, 0000101010:113
+    LANG-only deepest witnesses: 1000010000100100100001000010010000|100001001000011  0010010000100100100001000010010000|100001001000011
+n=35 |L_n|=   8359 h=0.221 null_lang=  9.9 null_joint=  4.3 | LANG-only deepest= 13 (0.371 n) full(n+2)=     0 | E-only deepest c2= 11 c3= 10 | joint deepest c2=  6 c3=  5 need=37  (0.1s)
+    LANG-only N_k: 0:8359 1:4864 2:2782 3:1640 4:916 5:570 6:323 7:201 8:113 9:71 10:49 11:27 12:9 13:3
+    killing factor at first LANG failure: 11:4250, 00000:951, 1010010:363, 100010010:274, 1010001010:265, 100010001010:224, 100101:213, 0000101010:187
+    LANG-only deepest witnesses: 00010101010000100010101000010100010|00010100010011  01010101010000100010101000010100010|00010100010011
+n=36 |L_n|=   9750 h=0.222 null_lang= 10.3 null_joint=  4.5 | LANG-only deepest= 12 (0.333 n) full(n+2)=     0 | E-only deepest c2= 13 c3= 14 | joint deepest c2=  6 c3=  7 need=38  (0.1s)
+    LANG-only N_k: 0:9750 1:5690 2:3182 3:1916 4:1132 5:650 6:351 7:209 8:110 9:55 10:25 11:11 12:4
+    killing factor at first LANG failure: 11:4996, 00000:1080, 1010010:451, 100010010:345, 1010001010:280, 100101:241, 100010001010:224, 0000101010:174
+    LANG-only deepest witnesses: 000100001001000010001010101000010001|0100001010011  000010010000100001000010010000101000|1000100010000

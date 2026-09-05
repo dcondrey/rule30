@@ -1,0 +1,25 @@
+n=14 c=2 HARD-CORE max_surv=7 gamma=9 fiber=3 classes=1 secs=0
+    size=  3 suffix_len=12 free= 2 suffix=212122122221 cont=2222222 killer=3
+n=14 c=3 HARD-CORE max_surv=5 gamma=11 fiber=15 classes=3 secs=0
+    size=  7 suffix_len= 8 free= 6 suffix=22222212 cont=22121 killer=0
+    size=  5 suffix_len= 8 free= 6 suffix=22212221 cont=21222 killer=0
+    size=  3 suffix_len=12 free= 2 suffix=212122122222 cont=21221 killer=0
+n=15 c=2 HARD-CORE max_surv=7 gamma=10 fiber=2 classes=1 secs=1
+    size=  2 suffix_len=14 free= 1 suffix=21212222122122 cont=1212222 killer=0
+n=15 c=3 HARD-CORE max_surv=6 gamma=11 fiber=7 classes=1 secs=1
+    size=  7 suffix_len= 9 free= 6 suffix=222221222 cont=212122 killer=0
+n=16 c=2 HARD-CORE max_surv=10 gamma=8 fiber=2 classes=1 secs=2
+    size=  2 suffix_len=15 free= 1 suffix=212212122122122 cont=2221212222 killer=3
+n=16 c=3 HARD-CORE max_surv=6 gamma=12 fiber=3 classes=1 secs=1
+    size=  3 suffix_len=14 free= 2 suffix=22122212212122 cont=212221 killer=0
+n=17 c=2 HARD-CORE max_surv=10 gamma=9 fiber=2 classes=1 secs=3
+    size=  2 suffix_len=16 free= 1 suffix=2212121212121212 cont=2122122121 killer=1
+n=17 c=3 HARD-CORE max_surv=5 gamma=14 fiber=24 classes=4 secs=3
+    size= 11 suffix_len=12 free= 5 suffix=222221222212 cont=22221 killer=0
+    size=  8 suffix_len=13 free= 4 suffix=2122122122222 cont=22121 killer=0
+    size=  3 suffix_len=15 free= 2 suffix=212122212121212 cont=21221 killer=0
+    size=  2 suffix_len=16 free= 1 suffix=2121222121222222 cont=12122 killer=3
+n=18 c=2 HARD-CORE max_surv=9 gamma=11 fiber=8 classes=1 secs=5
+    size=  8 suffix_len=14 free= 4 suffix=22121221222221 cont=222122122 killer=3
+n=18 c=3 HARD-CORE max_surv=9 gamma=11 fiber=2 classes=1 secs=5
+    size=  2 suffix_len=17 free= 1 suffix=21212212222221222 cont=212212121 killer=0

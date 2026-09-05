@@ -1,0 +1,2415 @@
+{
+  "abstract_tail_branch_audit": {
+    "max_steps": 27000,
+    "tails": [
+      {
+        "first_branch": {
+          "driver_cycle": "0000330003030033",
+          "period": 16,
+          "return_transform": [
+            0,
+            2,
+            2,
+            2
+          ],
+          "step": 26603,
+          "successor_cycles": [
+            "0000020000220002",
+            "0022202222202222"
+          ]
+        },
+        "period_changes": [
+          {
+            "cycle": "2",
+            "period": 1,
+            "return_transform": [
+              3,
+              1,
+              1,
+              1
+            ],
+            "step": 0
+          },
+          {
+            "cycle": "23",
+            "period": 2,
+            "return_transform": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "step": 2
+          },
+          {
+            "cycle": "0022",
+            "period": 4,
+            "return_transform": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "step": 4
+          },
+          {
+            "cycle": "22323323",
+            "period": 8,
+            "return_transform": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "step": 15
+          },
+          {
+            "cycle": "0000022022222002",
+            "period": 16,
+            "return_transform": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "step": 200
+          }
+        ],
+        "tail": 2
+      },
+      {
+        "first_branch": {
+          "driver_cycle": "0000110001010011",
+          "period": 16,
+          "return_transform": [
+            2,
+            3,
+            2,
+            3
+          ],
+          "step": 26603,
+          "successor_cycles": [
+            "2222232222332223",
+            "2233323333323333"
+          ]
+        },
+        "period_changes": [
+          {
+            "cycle": "3",
+            "period": 1,
+            "return_transform": [
+              2,
+              0,
+              0,
+              0
+            ],
+            "step": 0
+          },
+          {
+            "cycle": "02",
+            "period": 2,
+            "return_transform": [
+              3,
+              1,
+              1,
+              1
+            ],
+            "step": 1
+          },
+          {
+            "cycle": "2233",
+            "period": 4,
+            "return_transform": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "step": 4
+          },
+          {
+            "cycle": "00202202",
+            "period": 8,
+            "return_transform": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "step": 14
+          },
+          {
+            "cycle": "2222233233333223",
+            "period": 16,
+            "return_transform": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "step": 200
+          }
+        ],
+        "tail": 3
+      }
+    ]
+  },
+  "corpus_size": 5172,
+  "doubling_monoid_transforms": [
+    [
+      1,
+      2,
+      3,
+      2
+    ],
+    [
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      2,
+      3,
+      2
+    ]
+  ],
+  "doubling_profile_edges": 6,
+  "doubling_profile_nodes": 6,
+  "ga_records": [
+    {
+      "doublings": [
+        {
+          "after_cycle": "23",
+          "after_preperiod": 21,
+          "after_profile": [
+            2,
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "1",
+          "before_preperiod": 22,
+          "before_profile": [
+            1,
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            0,
+            0
+          ],
+          "step": 2
+        },
+        {
+          "after_cycle": "2200",
+          "after_preperiod": 19,
+          "after_profile": [
+            4,
+            [
+              2,
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "03",
+          "before_preperiod": 21,
+          "before_profile": [
+            2,
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "32322323",
+          "after_preperiod": 26,
+          "after_profile": [
+            8,
+            [
+              0,
+              0,
+              4,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "1011",
+          "before_preperiod": 26,
+          "before_profile": [
+            4,
+            [
+              1,
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 15
+        }
+      ],
+      "label": "ga_tail2_results.json:T=23",
+      "period_trace": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 28,
+      "tail": 2
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "23",
+          "after_preperiod": 32,
+          "after_profile": [
+            2,
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "1",
+          "before_preperiod": 32,
+          "before_profile": [
+            1,
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            0,
+            0
+          ],
+          "step": 2
+        },
+        {
+          "after_cycle": "2200",
+          "after_preperiod": 30,
+          "after_profile": [
+            4,
+            [
+              2,
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "03",
+          "before_preperiod": 32,
+          "before_profile": [
+            2,
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "32322323",
+          "after_preperiod": 37,
+          "after_profile": [
+            8,
+            [
+              0,
+              0,
+              4,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "1011",
+          "before_preperiod": 37,
+          "before_profile": [
+            4,
+            [
+              1,
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 15
+        }
+      ],
+      "label": "ga_tail2_results.json:T=32",
+      "period_trace": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 42,
+      "tail": 2
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "23",
+          "after_preperiod": 47,
+          "after_profile": [
+            2,
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "1",
+          "before_preperiod": 47,
+          "before_profile": [
+            1,
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            0,
+            0
+          ],
+          "step": 2
+        },
+        {
+          "after_cycle": "0022",
+          "after_preperiod": 47,
+          "after_profile": [
+            4,
+            [
+              2,
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "03",
+          "before_preperiod": 47,
+          "before_profile": [
+            2,
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "23323223",
+          "after_preperiod": 54,
+          "after_profile": [
+            8,
+            [
+              0,
+              0,
+              4,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "1101",
+          "before_preperiod": 55,
+          "before_profile": [
+            4,
+            [
+              1,
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 15
+        }
+      ],
+      "label": "ga_tail2_results.json:T=48",
+      "period_trace": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 56,
+      "tail": 2
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "23",
+          "after_preperiod": 63,
+          "after_profile": [
+            2,
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "1",
+          "before_preperiod": 63,
+          "before_profile": [
+            1,
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            0,
+            0
+          ],
+          "step": 2
+        },
+        {
+          "after_cycle": "2200",
+          "after_preperiod": 61,
+          "after_profile": [
+            4,
+            [
+              2,
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "03",
+          "before_preperiod": 63,
+          "before_profile": [
+            2,
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "23323223",
+          "after_preperiod": 66,
+          "after_profile": [
+            8,
+            [
+              0,
+              0,
+              4,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "1101",
+          "before_preperiod": 67,
+          "before_profile": [
+            4,
+            [
+              1,
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 15
+        }
+      ],
+      "label": "ga_tail2_results.json:T=64",
+      "period_trace": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 74,
+      "tail": 2
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "23",
+          "after_preperiod": 96,
+          "after_profile": [
+            2,
+            [
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "1",
+          "before_preperiod": 96,
+          "before_profile": [
+            1,
+            [
+              0,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            0,
+            0
+          ],
+          "step": 2
+        },
+        {
+          "after_cycle": "2200",
+          "after_preperiod": 94,
+          "after_profile": [
+            4,
+            [
+              2,
+              0,
+              2,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "03",
+          "before_preperiod": 96,
+          "before_profile": [
+            2,
+            [
+              1,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "23323223",
+          "after_preperiod": 95,
+          "after_profile": [
+            8,
+            [
+              0,
+              0,
+              4,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "1101",
+          "before_preperiod": 96,
+          "before_profile": [
+            4,
+            [
+              1,
+              3,
+              0,
+              0
+            ],
+            [
+              3,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 15
+        }
+      ],
+      "label": "ga_tail2_results.json:T=96",
+      "period_trace": [
+        1,
+        1,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 103,
+      "tail": 2
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "02",
+          "after_preperiod": 22,
+          "after_profile": [
+            2,
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "3",
+          "before_preperiod": 23,
+          "before_profile": [
+            1,
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            0,
+            0
+          ],
+          "step": 1
+        },
+        {
+          "after_cycle": "3223",
+          "after_preperiod": 23,
+          "after_profile": [
+            4,
+            [
+              0,
+              0,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "01",
+          "before_preperiod": 22,
+          "before_profile": [
+            2,
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "02202002",
+          "after_preperiod": 29,
+          "after_profile": [
+            8,
+            [
+              4,
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "3303",
+          "before_preperiod": 30,
+          "before_profile": [
+            4,
+            [
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 14
+        }
+      ],
+      "label": "ga_tail3_results.json:T=23",
+      "period_trace": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 29,
+      "tail": 3
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "02",
+          "after_preperiod": 30,
+          "after_profile": [
+            2,
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "3",
+          "before_preperiod": 31,
+          "before_profile": [
+            1,
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            0,
+            0
+          ],
+          "step": 1
+        },
+        {
+          "after_cycle": "3223",
+          "after_preperiod": 33,
+          "after_profile": [
+            4,
+            [
+              0,
+              0,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "01",
+          "before_preperiod": 32,
+          "before_profile": [
+            2,
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "02202002",
+          "after_preperiod": 39,
+          "after_profile": [
+            8,
+            [
+              4,
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "3303",
+          "before_preperiod": 40,
+          "before_profile": [
+            4,
+            [
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 14
+        }
+      ],
+      "label": "ga_tail3_results.json:T=32",
+      "period_trace": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 37,
+      "tail": 3
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "02",
+          "after_preperiod": 47,
+          "after_profile": [
+            2,
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "3",
+          "before_preperiod": 48,
+          "before_profile": [
+            1,
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            0,
+            0
+          ],
+          "step": 1
+        },
+        {
+          "after_cycle": "3223",
+          "after_preperiod": 48,
+          "after_profile": [
+            4,
+            [
+              0,
+              0,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "01",
+          "before_preperiod": 47,
+          "before_profile": [
+            2,
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "02202002",
+          "after_preperiod": 54,
+          "after_profile": [
+            8,
+            [
+              4,
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "3303",
+          "before_preperiod": 55,
+          "before_profile": [
+            4,
+            [
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 14
+        }
+      ],
+      "label": "ga_tail3_results.json:T=48",
+      "period_trace": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 56,
+      "tail": 3
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "20",
+          "after_preperiod": 61,
+          "after_profile": [
+            2,
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "3",
+          "before_preperiod": 63,
+          "before_profile": [
+            1,
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            0,
+            0
+          ],
+          "step": 1
+        },
+        {
+          "after_cycle": "3223",
+          "after_preperiod": 63,
+          "after_profile": [
+            4,
+            [
+              0,
+              0,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "01",
+          "before_preperiod": 62,
+          "before_profile": [
+            2,
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "02202002",
+          "after_preperiod": 69,
+          "after_profile": [
+            8,
+            [
+              4,
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "3303",
+          "before_preperiod": 70,
+          "before_profile": [
+            4,
+            [
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 14
+        }
+      ],
+      "label": "ga_tail3_results.json:T=64",
+      "period_trace": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 72,
+      "tail": 3
+    },
+    {
+      "doublings": [
+        {
+          "after_cycle": "20",
+          "after_preperiod": 92,
+          "after_profile": [
+            2,
+            [
+              1,
+              0,
+              1,
+              0
+            ],
+            [
+              3,
+              1,
+              1,
+              1
+            ],
+            1,
+            1
+          ],
+          "before_cycle": "3",
+          "before_preperiod": 94,
+          "before_profile": [
+            1,
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            0,
+            0
+          ],
+          "step": 1
+        },
+        {
+          "after_cycle": "3223",
+          "after_preperiod": 90,
+          "after_profile": [
+            4,
+            [
+              0,
+              0,
+              2,
+              2
+            ],
+            [
+              2,
+              2,
+              2,
+              2
+            ],
+            2,
+            2
+          ],
+          "before_cycle": "01",
+          "before_preperiod": 89,
+          "before_profile": [
+            2,
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              2
+            ],
+            1,
+            1
+          ],
+          "step": 4
+        },
+        {
+          "after_cycle": "02202002",
+          "after_preperiod": 96,
+          "after_profile": [
+            8,
+            [
+              4,
+              0,
+              4,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            4,
+            4
+          ],
+          "before_cycle": "3303",
+          "before_preperiod": 97,
+          "before_profile": [
+            4,
+            [
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              0
+            ],
+            1,
+            2
+          ],
+          "step": 14
+        }
+      ],
+      "label": "ga_tail3_results.json:T=96",
+      "period_trace": [
+        1,
+        2,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "survival": 110,
+      "tail": 3
+    }
+  ],
+  "lasso_cycles": 0,
+  "maximum_doublings": 3,
+  "maximum_period": 8,
+  "nondeterministic_profile_nodes": 0,
+  "profile_collisions": {},
+  "universal_cycle_audit": {
+    "doublings": 1112,
+    "exact_cycle_collision_nodes": 0,
+    "exact_cycle_collisions": {},
+    "exact_cycle_edges": 40,
+    "exact_cycle_nodes": 40,
+    "lifts": 262144,
+    "max_period": 8,
+    "period_rows": [
+      {
+        "doublings": 8,
+        "lifts": 16,
+        "period": 1,
+        "primitive_words": 4
+      },
+      {
+        "doublings": 16,
+        "lifts": 48,
+        "period": 2,
+        "primitive_words": 12
+      },
+      {
+        "doublings": 64,
+        "lifts": 960,
+        "period": 4,
+        "primitive_words": 240
+      },
+      {
+        "doublings": 1024,
+        "lifts": 261120,
+        "period": 8,
+        "primitive_words": 65280
+      }
+    ],
+    "primitive_words": 65536,
+    "profile_collision_nodes": 4,
+    "profile_collisions": [
+      {
+        "before_profile": [
+          8,
+          [
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            3,
+            2
+          ],
+          3,
+          3
+        ],
+        "outputs": [
+          {
+            "after_cycle": "2222223233333323",
+            "after_profile": [
+              16,
+              [
+                0,
+                0,
+                8,
+                8
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              8,
+              8
+            ],
+            "before_cycle": "00000111",
+            "initial": 0
+          },
+          {
+            "after_cycle": "2222232233333233",
+            "after_profile": [
+              16,
+              [
+                0,
+                0,
+                8,
+                8
+              ],
+              [
+                2,
+                2,
+                2,
+                2
+              ],
+              8,
+              8
+            ],
+            "before_cycle": "00001101",
+            "initial": 0
+          }
+        ]
+      },
+      {
+        "before_profile": [
+          8,
+          [
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            3,
+            2
+          ],
+          1,
+          1
+        ],
+        "outputs": [
+          {
+            "after_cycle": "2222333233332223",
+            "after_profile": [
+              16,
+              [
+                0,
+                0,
+                8,
+                8
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              8,
+              8
+            ],
+            "before_cycle": "00010011",
+            "initial": 0
+          },
+          {
+            "after_cycle": "2222332233332233",
+            "after_profile": [
+              16,
+              [
+                0,
+                0,
+                8,
+                8
+              ],
+              [
+                2,
+                2,
+                2,
+                2
+              ],
+              8,
+              8
+            ],
+            "before_cycle": "00010101",
+            "initial": 0
+          }
+        ]
+      },
+      {
+        "before_profile": [
+          8,
+          [
+            3,
+            5,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            3,
+            2
+          ],
+          3,
+          3
+        ],
+        "outputs": [
+          {
+            "after_cycle": "2222323233332323",
+            "after_profile": [
+              16,
+              [
+                0,
+                0,
+                8,
+                8
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              8,
+              8
+            ],
+            "before_cycle": "00011111",
+            "initial": 0
+          },
+          {
+            "after_cycle": "2223232233323233",
+            "after_profile": [
+              16,
+              [
+                0,
+                0,
+                8,
+                8
+              ],
+              [
+                2,
+                2,
+                2,
+                2
+              ],
+              8,
+              8
+            ],
+            "before_cycle": "00111101",
+            "initial": 0
+          }
+        ]
+      },
+      {
+        "before_profile": [
+          8,
+          [
+            3,
+            5,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            3,
+            2
+          ],
+          1,
+          1
+        ],
+        "outputs": [
+          {
+            "after_cycle": "2223223233323323",
+            "after_profile": [
+              16,
+              [
+                0,
+                0,
+                8,
+                8
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              8,
+              8
+            ],
+            "before_cycle": "00110111",
+            "initial": 0
+          },
+          {
+            "after_cycle": "2232332233232233",
+            "after_profile": [
+              16,
+              [
+                0,
+                0,
+                8,
+                8
+              ],
+              [
+                2,
+                2,
+                2,
+                2
+              ],
+              8,
+              8
+            ],
+            "before_cycle": "01010111",
+            "initial": 0
+          }
+        ]
+      }
+    ],
+    "profile_edges": 24,
+    "profile_nodes": 20
+  }
+}

@@ -1,0 +1,115 @@
+W=0 rows=1
+  000111: tests=3 max=4 atcap=0 alive(S>=W-1, all residues<2^W)=3 band_alive=3 null~3 ratio=1.26 surv>=s  witness row=0x0 ph=0
+  00001: tests=4 max=4 atcap=0 alive(S>=W-1, all residues<2^W)=4 band_alive=4 null~10 ratio=0.40 surv>=s  witness row=0x0 ph=0
+  0011: tests=2 max=6 atcap=0 alive(S>=W-1, all residues<2^W)=2 band_alive=2 null~2 ratio=3.00 surv>=s  witness row=0x0 ph=0
+  00011: tests=3 max=8 atcap=0 alive(S>=W-1, all residues<2^W)=3 band_alive=3 null~4 ratio=2.02 surv>=s 8:1 witness row=0x0 ph=0
+  1: tests=0 max=0 atcap=0 alive(S>=W-1, all residues<2^W)=0 band_alive=0 null~1 ratio=0.00 surv>=s  witness row=0x0 ph=None
+W=1 rows=1
+  000111: tests=3 max=5 atcap=0 alive(S>=W-1, all residues<2^W)=6 band_alive=3 null~3 ratio=1.58 surv>=s  witness row=0x1 ph=4
+  00001: tests=1 max=0 atcap=0 alive(S>=W-1, all residues<2^W)=5 band_alive=1 null~5 ratio=0.00 surv>=s  witness row=0x1 ph=4
+  0011: tests=2 max=4 atcap=0 alive(S>=W-1, all residues<2^W)=4 band_alive=2 null~2 ratio=2.00 surv>=s  witness row=0x1 ph=2
+  00011: tests=2 max=5 atcap=0 alive(S>=W-1, all residues<2^W)=5 band_alive=2 null~2 ratio=2.00 surv>=s  witness row=0x1 ph=3
+  1: tests=1 max=1 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~1 ratio=1.00 surv>=s  witness row=0x1 ph=0
+W=2 rows=2
+  000111: tests=6 max=9 atcap=0 alive(S>=W-1, all residues<2^W)=9 band_alive=4 null~5 ratio=1.74 surv>=s 8:1 witness row=0x2 ph=1
+  00001: tests=5 max=19 atcap=0 alive(S>=W-1, all residues<2^W)=9 band_alive=5 null~12 ratio=1.64 surv>=s 8:3 16:1 witness row=0x2 ph=0
+  0011: tests=4 max=3 atcap=0 alive(S>=W-1, all residues<2^W)=6 band_alive=3 null~4 ratio=0.75 surv>=s  witness row=0x2 ph=0
+  00011: tests=5 max=4 atcap=0 alive(S>=W-1, all residues<2^W)=8 band_alive=4 null~6 ratio=0.69 surv>=s  witness row=0x3 ph=4
+  1: tests=1 max=0 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~1 ratio=0.00 surv>=s  witness row=0x3 ph=0
+W=3 rows=4
+  000111: tests=12 max=8 atcap=0 alive(S>=W-1, all residues<2^W)=14 band_alive=7 null~7 ratio=1.12 surv>=s 8:1 witness row=0x6 ph=2
+  00001: tests=10 max=18 atcap=0 alive(S>=W-1, all residues<2^W)=16 band_alive=8 null~17 ratio=1.08 surv>=s 8:5 16:1 witness row=0x6 ph=1
+  0011: tests=8 max=11 atcap=0 alive(S>=W-1, all residues<2^W)=9 band_alive=4 null~6 ratio=1.83 surv>=s 8:1 witness row=0x4 ph=0
+  00011: tests=10 max=12 atcap=0 alive(S>=W-1, all residues<2^W)=13 band_alive=6 null~8 ratio=1.44 surv>=s 8:1 witness row=0x4 ph=1
+  1: tests=2 max=3 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~1 ratio=3.00 surv>=s  witness row=0x5 ph=0
+W=4 rows=8
+  000111: tests=24 max=10 atcap=0 alive(S>=W-1, all residues<2^W)=21 band_alive=10 null~9 ratio=1.09 surv>=s 8:1 witness row=0xf ph=5
+  00001: tests=20 max=17 atcap=0 alive(S>=W-1, all residues<2^W)=28 band_alive=15 null~22 ratio=0.79 surv>=s 8:10 16:3 witness row=0x8 ph=2
+  0011: tests=16 max=10 atcap=0 alive(S>=W-1, all residues<2^W)=12 band_alive=5 null~8 ratio=1.25 surv>=s 8:1 witness row=0xe ph=1
+  00011: tests=20 max=11 atcap=0 alive(S>=W-1, all residues<2^W)=20 band_alive=9 null~11 ratio=1.02 surv>=s 8:2 witness row=0xe ph=2
+  1: tests=4 max=2 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~2 ratio=1.00 surv>=s  witness row=0xd ph=0
+W=5 rows=16
+  000111: tests=48 max=16 atcap=0 alive(S>=W-1, all residues<2^W)=28 band_alive=15 null~11 ratio=1.43 surv>=s 8:4 16:1 witness row=0x1e ph=0
+  00001: tests=40 max=16 atcap=0 alive(S>=W-1, all residues<2^W)=48 band_alive=22 null~27 ratio=0.60 surv>=s 8:11 16:3 witness row=0x12 ph=3
+  0011: tests=32 max=14 atcap=0 alive(S>=W-1, all residues<2^W)=16 band_alive=10 null~10 ratio=1.40 surv>=s 8:4 witness row=0x12 ph=0
+  00011: tests=40 max=12 atcap=0 alive(S>=W-1, all residues<2^W)=28 band_alive=16 null~13 ratio=0.90 surv>=s 8:8 witness row=0x10 ph=2
+  1: tests=8 max=5 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~3 ratio=1.67 surv>=s  witness row=0x15 ph=0
+W=6 rows=32
+  000111: tests=96 max=15 atcap=0 alive(S>=W-1, all residues<2^W)=36 band_alive=19 null~13 ratio=1.14 surv>=s 8:9 witness row=0x2e ph=1
+  00001: tests=80 max=40 atcap=0 alive(S>=W-1, all residues<2^W)=80 band_alive=42 null~32 ratio=1.27 surv>=s 8:29 16:1 24:1 32:1 witness row=0x27 ph=4
+  0011: tests=64 max=13 atcap=0 alive(S>=W-1, all residues<2^W)=24 band_alive=11 null~12 ratio=1.08 surv>=s 8:6 witness row=0x3e ph=1
+  00011: tests=80 max=17 atcap=0 alive(S>=W-1, all residues<2^W)=40 band_alive=20 null~16 ratio=1.08 surv>=s 8:13 16:1 witness row=0x24 ph=1
+  1: tests=16 max=4 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~4 ratio=1.00 surv>=s  witness row=0x35 ph=0
+W=7 rows=64
+  000111: tests=192 max=14 atcap=0 alive(S>=W-1, all residues<2^W)=48 band_alive=25 null~15 ratio=0.92 surv>=s 8:14 witness row=0x42 ph=1
+  00001: tests=160 max=39 atcap=0 alive(S>=W-1, all residues<2^W)=144 band_alive=70 null~37 ratio=1.07 surv>=s 8:56 16:13 24:6 32:6 witness row=0x7a ph=0
+  0011: tests=128 max=13 atcap=0 alive(S>=W-1, all residues<2^W)=36 band_alive=21 null~14 ratio=0.93 surv>=s 8:10 witness row=0x40 ph=1
+  00011: tests=160 max=24 atcap=0 alive(S>=W-1, all residues<2^W)=64 band_alive=34 null~18 ratio=1.31 surv>=s 8:20 16:3 24:1 witness row=0x5b ph=4
+  1: tests=32 max=7 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~5 ratio=1.40 surv>=s  witness row=0x55 ph=0
+W=8 rows=128
+  000111: tests=384 max=13 atcap=0 alive(S>=W-1, all residues<2^W)=72 band_alive=34 null~17 ratio=0.76 surv>=s 8:23 witness row=0xcd ph=3
+  00001: tests=320 max=38 atcap=0 alive(S>=W-1, all residues<2^W)=256 band_alive=128 null~42 ratio=0.91 surv>=s 8:108 16:28 24:9 32:4 witness row=0x86 ph=1
+  0011: tests=256 max=12 atcap=0 alive(S>=W-1, all residues<2^W)=48 band_alive=17 null~16 ratio=0.75 surv>=s 8:9 witness row=0xe1 ph=2
+  00011: tests=320 max=23 atcap=0 alive(S>=W-1, all residues<2^W)=104 band_alive=47 null~21 ratio=1.11 surv>=s 8:33 16:6 witness row=0xd2 ph=0
+  1: tests=64 max=6 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~6 ratio=1.00 surv>=s  witness row=0xd5 ph=0
+W=9 rows=256
+  000111: tests=768 max=17 atcap=0 alive(S>=W-1, all residues<2^W)=112 band_alive=59 null~19 ratio=0.89 surv>=s 8:59 16:3 witness row=0x1fa ph=0
+  00001: tests=640 max=37 atcap=0 alive(S>=W-1, all residues<2^W)=448 band_alive=226 null~47 ratio=0.79 surv>=s 8:226 16:92 24:30 32:16 witness row=0x1a6 ph=2
+  0011: tests=512 max=12 atcap=0 alive(S>=W-1, all residues<2^W)=64 band_alive=33 null~18 ratio=0.67 surv>=s 8:33 witness row=0x161 ph=2
+  00011: tests=640 max=22 atcap=0 alive(S>=W-1, all residues<2^W)=160 band_alive=82 null~23 ratio=0.94 surv>=s 8:82 16:7 witness row=0x144 ph=1
+  1: tests=128 max=9 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~7 ratio=1.29 surv>=s 8:1 witness row=0x155 ph=0
+W=10 rows=512
+  000111: tests=1536 max=23 atcap=0 alive(S>=W-1, all residues<2^W)=168 band_alive=78 null~21 ratio=1.09 surv>=s 8:112 16:6 witness row=0x21b ph=5
+  00001: tests=1280 max=44 atcap=0 alive(S>=W-1, all residues<2^W)=768 band_alive=390 null~52 ratio=0.85 surv>=s 8:448 16:194 24:68 32:31 witness row=0x284 ph=0
+  0011: tests=1024 max=15 atcap=0 alive(S>=W-1, all residues<2^W)=96 band_alive=43 null~20 ratio=0.75 surv>=s 8:64 witness row=0x204 ph=0
+  00011: tests=1280 max=28 atcap=0 alive(S>=W-1, all residues<2^W)=224 band_alive=116 null~26 ratio=1.09 surv>=s 8:160 16:21 24:5 witness row=0x276 ph=0
+  1: tests=256 max=8 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~8 ratio=1.00 surv>=s 8:1 witness row=0x355 ph=0
+W=11 rows=1024
+  000111: tests=3072 max=22 atcap=0 alive(S>=W-1, all residues<2^W)=224 band_alive=122 null~23 ratio=0.95 surv>=s 8:224 16:15 witness row=0x69e ph=0
+  00001: tests=2560 max=43 atcap=0 alive(S>=W-1, all residues<2^W)=1280 band_alive=644 null~57 ratio=0.76 surv>=s 8:896 16:309 24:107 32:37 witness row=0x6a2 ph=1
+  0011: tests=2048 max=23 atcap=0 alive(S>=W-1, all residues<2^W)=144 band_alive=75 null~22 ratio=1.05 surv>=s 8:128 16:9 witness row=0x43f ph=3
+  00011: tests=2560 max=27 atcap=0 alive(S>=W-1, all residues<2^W)=320 band_alive=159 null~28 ratio=0.95 surv>=s 8:320 16:26 24:5 witness row=0x5a4 ph=1
+  1: tests=512 max=11 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~9 ratio=1.22 surv>=s 8:2 witness row=0x555 ph=0
+W=12 rows=2048
+  000111: tests=6144 max=28 atcap=0 alive(S>=W-1, all residues<2^W)=288 band_alive=141 null~25 ratio=1.11 surv>=s 8:448 16:29 24:3 witness row=0xf4b ph=5
+  00001: tests=5120 max=46 atcap=0 alive(S>=W-1, all residues<2^W)=2304 band_alive=1162 null~62 ratio=0.75 surv>=s 8:1792 16:588 24:218 32:65 witness row=0xb0a ph=3
+  0011: tests=4096 max=27 atcap=0 alive(S>=W-1, all residues<2^W)=192 band_alive=92 null~24 ratio=1.12 surv>=s 8:256 16:20 24:2 witness row=0x813 ph=3
+  00011: tests=5120 max=28 atcap=0 alive(S>=W-1, all residues<2^W)=512 band_alive=252 null~31 ratio=0.91 surv>=s 8:640 16:61 24:7 witness row=0xb7e ph=1
+  1: tests=1024 max=10 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~10 ratio=1.00 surv>=s 8:4 witness row=0xd55 ph=0
+W=13 rows=4096
+  000111: tests=12288 max=27 atcap=0 alive(S>=W-1, all residues<2^W)=384 band_alive=195 null~27 ratio=0.99 surv>=s 8:896 16:69 24:7 witness row=0x1716 ph=0
+  00001: tests=10240 max=53 atcap=0 alive(S>=W-1, all residues<2^W)=4096 band_alive=2012 null~67 ratio=0.80 surv>=s 8:3584 16:1055 24:372 32:110 48:17 witness row=0x1350 ph=1
+  0011: tests=8192 max=28 atcap=0 alive(S>=W-1, all residues<2^W)=256 band_alive=148 null~26 ratio=1.08 surv>=s 8:512 16:56 24:12 witness row=0x1413 ph=3
+  00011: tests=10240 max=29 atcap=0 alive(S>=W-1, all residues<2^W)=832 band_alive=416 null~33 ratio=0.87 surv>=s 8:1280 16:161 24:16 witness row=0x11a3 ph=4
+  1: tests=2048 max=13 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~11 ratio=1.18 surv>=s 8:8 witness row=0x1555 ph=0
+W=14 rows=8192
+  000111: tests=24576 max=35 atcap=0 alive(S>=W-1, all residues<2^W)=576 band_alive=290 null~29 ratio=1.20 surv>=s 8:1792 16:124 24:12 32:2 witness row=0x21fa ph=0
+  00001: tests=20480 max=60 atcap=0 alive(S>=W-1, all residues<2^W)=7168 band_alive=3590 null~72 ratio=0.84 surv>=s 8:7168 16:2295 24:708 32:266 48:43 witness row=0x277b ph=4
+  0011: tests=16384 max=27 atcap=0 alive(S>=W-1, all residues<2^W)=384 band_alive=188 null~28 ratio=0.96 surv>=s 8:1024 16:78 24:15 witness row=0x3540 ph=0
+  00011: tests=20480 max=32 atcap=0 alive(S>=W-1, all residues<2^W)=1280 band_alive=655 null~36 ratio=0.89 surv>=s 8:2560 16:281 24:31 32:1 witness row=0x2880 ph=2
+  1: tests=4096 max=12 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~12 ratio=1.00 surv>=s 8:16 witness row=0x3555 ph=0
+W=15 rows=16384
+  000111: tests=49152 max=34 atcap=0 alive(S>=W-1, all residues<2^W)=896 band_alive=454 null~31 ratio=1.09 surv>=s 8:3584 16:237 24:16 32:2 witness row=0x72f4 ph=1
+  00001: tests=40960 max=59 atcap=0 alive(S>=W-1, all residues<2^W)=12288 band_alive=6178 null~77 ratio=0.77 surv>=s 8:14336 16:4732 24:1511 32:529 48:79 witness row=0x7c42 ph=0
+  0011: tests=32768 max=26 atcap=0 alive(S>=W-1, all residues<2^W)=576 band_alive=283 null~30 ratio=0.87 surv>=s 8:2048 16:125 24:8 witness row=0x655e ph=1
+  00011: tests=40960 max=33 atcap=0 alive(S>=W-1, all residues<2^W)=1792 band_alive=903 null~38 ratio=0.86 surv>=s 8:5120 16:532 24:48 32:8 witness row=0x4a40 ph=0
+  1: tests=8192 max=15 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~13 ratio=1.15 surv>=s 8:32 witness row=0x5555 ph=0
+W=16 rows=32768
+  000111: tests=98304 max=33 atcap=0 alive(S>=W-1, all residues<2^W)=1344 band_alive=652 null~33 ratio=0.99 surv>=s 8:7168 16:402 24:15 32:1 witness row=0xce86 ph=2
+  00001: tests=81920 max=62 atcap=0 alive(S>=W-1, all residues<2^W)=20480 band_alive=10148 null~82 ratio=0.76 surv>=s 8:28672 16:9085 24:2813 32:1009 48:136 witness row=0x85a6 ph=2
+  0011: tests=65536 max=32 atcap=0 alive(S>=W-1, all residues<2^W)=768 band_alive=368 null~32 ratio=1.00 surv>=s 8:4096 16:241 24:16 32:4 witness row=0x9013 ph=3
+  00011: tests=81920 max=46 atcap=0 alive(S>=W-1, all residues<2^W)=2560 band_alive=1223 null~41 ratio=1.13 surv>=s 8:10240 16:947 24:100 32:5 witness row=0x9dd0 ph=2
+  1: tests=16384 max=14 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~14 ratio=1.00 surv>=s 8:64 witness row=0xd555 ph=0
+W=17 rows=65536
+  000111: tests=196608 max=32 atcap=0 alive(S>=W-1, all residues<2^W)=1792 band_alive=906 null~35 ratio=0.91 surv>=s 8:14336 16:906 24:41 32:3 witness row=0x14d6e ph=1
+  00001: tests=163840 max=63 atcap=0 alive(S>=W-1, all residues<2^W)=36864 band_alive=18464 null~87 ratio=0.73 surv>=s 8:57344 16:18464 24:6001 32:1900 48:250 witness row=0x1e726 ph=1
+  0011: tests=131072 max=33 atcap=0 alive(S>=W-1, all residues<2^W)=1024 band_alive=495 null~34 ratio=0.97 surv>=s 8:8192 16:495 24:42 32:6 witness row=0x1355e ph=1
+  00011: tests=163840 max=45 atcap=0 alive(S>=W-1, all residues<2^W)=4096 band_alive=2050 null~43 ratio=1.04 surv>=s 8:20480 16:2050 24:216 32:28 witness row=0x1f119 ph=3
+  1: tests=32768 max=17 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=1 null~15 ratio=1.13 surv>=s 8:128 16:1 witness row=0x15555 ph=0
+W=18 rows=131072
+  000111: tests=393216 max=36 atcap=0 alive(S>=W-1, all residues<2^W)=2304 band_alive=1166 null~37 ratio=0.97 surv>=s 8:28672 16:1792 24:130 32:5 witness row=0x3cc3d ph=3
+  00001: tests=327680 max=83 atcap=0 alive(S>=W-1, all residues<2^W)=65536 band_alive=32784 null~92 ratio=0.91 surv>=s 8:114688 16:36864 24:12809 32:4197 48:468 64:27 witness row=0x24210 ph=1
+  0011: tests=262144 max=33 atcap=0 alive(S>=W-1, all residues<2^W)=1536 band_alive=779 null~36 ratio=0.92 surv>=s 8:16384 16:1024 24:56 32:4 witness row=0x2e719 ph=2
+  00011: tests=327680 max=45 atcap=0 alive(S>=W-1, all residues<2^W)=6656 band_alive=3302 null~46 ratio=0.98 surv>=s 8:40960 16:4096 24:473 32:62 witness row=0x21d19 ph=3
+  1: tests=65536 max=16 atcap=0 alive(S>=W-1, all residues<2^W)=1 band_alive=0 null~16 ratio=1.00 surv>=s 8:256 16:1 witness row=0x35555 ph=0
+elapsed 2.0s

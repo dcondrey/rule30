@@ -1,0 +1,6 @@
+rbf_kill.py args={'umax': 12, 'fut': 4, 'rand_n': [150, 200], 'samples': 100, 'seed': 2, 'letters_m': 10, 'letters_m4': 7, 'balance_brute': 10, 'balance_transfer': 60, 'gate_n': 8, 'skip': ['gate', 'X', 'L', 'E'], 'mutate': False}
+  R n=150 samples=100 columns=15200 distinct pairs=15200   [9s]
+  R n=200 samples=100 columns=20200 distinct pairs=20200   [15s]
+R random n=150: 15200 (word, n) pairs, checks A B C C' D1 D2 D3 PASS; 15200 distinct pair keys; mean non-retained runs per column 141.503
+R random n=200: 20200 (word, n) pairs, checks A B C C' D1 D2 D3 PASS; 20200 distinct pair keys; mean non-retained runs per column 188.440
+ALL PASS   [24s]

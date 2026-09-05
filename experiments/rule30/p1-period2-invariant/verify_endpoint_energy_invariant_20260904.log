@@ -1,0 +1,92 @@
+# n=9: forced orbits for 512 sources in 0.0s
+# n=9 sigma+death build done, t=0.0s
+# n=10: forced orbits for 1024 sources in 0.1s
+# n=10 sigma+death build done, t=0.1s
+# n=11: forced orbits for 2048 sources in 0.2s
+# n=11 sigma+death build done, t=0.3s
+# n=12: forced orbits for 4096 sources in 0.7s
+# n=12 sigma+death build done, t=1.1s
+# n=13: forced orbits for 8192 sources in 1.4s
+# n=13 sigma+death build done, t=2.6s
+# n=14: forced orbits for 16384 sources in 3.2s
+# n=14 sigma+death build done, t=6.1s
+# n=15: forced orbits for 32768 sources in 6.9s
+# n=15 sigma+death build done, t=13.6s
+# n=16: forced orbits for 65536 sources in 18.1s
+# n=16 sigma+death build done, t=33.6s
+# n=17: forced orbits for 131072 sources in 36.9s
+# n=17 sigma+death build done, t=73.3s
+# n=18: forced orbits for 262144 sources in 81.7s
+# n=18 sigma+death build done, t=161.0s
+
+## Control 1: regression check (same extended census)
+n=9 c=2: block_halving k=1 (worst ratio 0.352)  [expect k<=3]
+n=9 c=3: block_halving k=4 (worst ratio 0.261)  [expect k<=3]
+n=12 c=2: block_halving k=2 (worst ratio 0.333)  [expect k<=3]
+n=12 c=3: block_halving k=2 (worst ratio 0.200)  [expect k<=3]
+n=16 c=2: block_halving k=1 (worst ratio 0.486)  [expect k<=3]
+n=16 c=3: block_halving k=2 (worst ratio 0.333)  [expect k<=3]
+
+## Screening 128 partitions at n=[9, 10, 11, 12]
+swept ALL 128 partitions at n=9..12 (both c) for the small-n screen
+top 8 by |mean r| at n=9..12:
+  F=[0, 1, 4, 5] mean_r=-0.1178  per-(n,c) r=['-0.137', '-0.202', '-0.090', '-0.131', '-0.092', '-0.056', '-0.126', '-0.109']
+  F=[0, 2, 3, 6, 7] mean_r=+0.1111  per-(n,c) r=['0.141', '0.181', '0.083', '0.140', '0.082', '0.047', '0.121', '0.094']
+  F=[0, 2, 3, 7] mean_r=+0.1059  per-(n,c) r=['0.134', '0.183', '0.077', '0.117', '0.075', '0.044', '0.108', '0.109']
+  F=[0, 1, 4, 5, 6] mean_r=-0.1030  per-(n,c) r=['-0.130', '-0.167', '-0.076', '-0.101', '-0.082', '-0.047', '-0.106', '-0.115']
+  F=[0, 1, 5] mean_r=-0.1021  per-(n,c) r=['-0.158', '-0.103', '-0.084', '-0.084', '-0.109', '-0.035', '-0.111', '-0.133']
+  F=[0, 2, 3, 4, 6, 7] mean_r=+0.0964  per-(n,c) r=['0.162', '0.086', '0.079', '0.093', '0.098', '0.029', '0.107', '0.118']
+  F=[0, 1, 5, 6] mean_r=-0.0931  per-(n,c) r=['-0.151', '-0.106', '-0.071', '-0.059', '-0.097', '-0.029', '-0.093', '-0.139']
+  F=[0, 2, 3, 4, 7] mean_r=+0.0926  per-(n,c) r=['0.155', '0.098', '0.072', '0.071', '0.091', '0.025', '0.095', '0.133']
+
+taking top 5 partitions forward to the full n=9..18 stability check
+
+## Full n=9..18 stability
+F=[0, 1, 4, 5]: n=9:[-0.137,-0.202] n=10:[-0.090,-0.131] n=11:[-0.092,-0.056] n=12:[-0.126,-0.109] n=13:[-0.073,-0.135] n=14:[-0.113,-0.095] n=15:[-0.080,-0.095] n=16:[-0.110,-0.111] n=17:[-0.085,-0.093] n=18:[-0.110,-0.100]
+F=[0, 2, 3, 6, 7]: n=9:[0.141,0.181] n=10:[0.083,0.140] n=11:[0.082,0.047] n=12:[0.121,0.094] n=13:[0.071,0.128] n=14:[0.108,0.088] n=15:[0.067,0.092] n=16:[0.107,0.102] n=17:[0.077,0.087] n=18:[0.098,0.095]
+F=[0, 2, 3, 7]: n=9:[0.134,0.183] n=10:[0.077,0.117] n=11:[0.075,0.044] n=12:[0.108,0.109] n=13:[0.063,0.124] n=14:[0.103,0.089] n=15:[0.072,0.096] n=16:[0.119,0.106] n=17:[0.082,0.088] n=18:[0.107,0.098]
+F=[0, 1, 4, 5, 6]: n=9:[-0.130,-0.167] n=10:[-0.076,-0.101] n=11:[-0.082,-0.047] n=12:[-0.106,-0.115] n=13:[-0.058,-0.124] n=14:[-0.097,-0.087] n=15:[-0.079,-0.091] n=16:[-0.110,-0.106] n=17:[-0.082,-0.086] n=18:[-0.109,-0.095]
+F=[0, 1, 5]: n=9:[-0.158,-0.103] n=10:[-0.084,-0.084] n=11:[-0.109,-0.035] n=12:[-0.111,-0.133] n=13:[-0.084,-0.126] n=14:[-0.127,-0.110] n=15:[-0.088,-0.088] n=16:[-0.101,-0.101] n=17:[-0.084,-0.100] n=18:[-0.101,-0.095]
+
+## Kill-check: absorption structure (Var(k | alive) vs level j)
+F=[0, 1, 4, 5] n=16 c=2: Var(k|alive@j) = j0:0.00 j2:0.00 j4:0.00 j6:0.00 j8:0.00
+F=[0, 2, 3, 6, 7] n=16 c=2: Var(k|alive@j) = j0:0.00 j2:0.00 j4:0.97 j6:0.98 j8:1.59
+F=[0, 2, 3, 7] n=16 c=2: Var(k|alive@j) = j0:0.00 j2:0.00 j4:1.12 j6:2.15 j8:1.00
+F=[0, 1, 4, 5, 6] n=16 c=2: Var(k|alive@j) = j0:0.00 j2:0.00 j4:0.95 j6:0.99 j8:1.18
+F=[0, 1, 5] n=16 c=2: Var(k|alive@j) = j0:0.00 j2:0.00 j4:0.80 j6:0.90 j8:1.91
+
+## Kill-check: does correlation reduce to sigma_{j-1}(w) alone?
+F=[0, 1, 4, 5] n=16 c=2: r(k,death)=-0.1095  r(sigma_(j-1) in F, death)=-0.1465
+F=[0, 1, 4, 5] n=16 c=3: r(k,death)=-0.1106  r(sigma_(j-1) in F, death)=-0.1721
+F=[0, 2, 3, 6, 7] n=16 c=2: r(k,death)=+0.1070  r(sigma_(j-1) in F, death)=+0.1565
+F=[0, 2, 3, 6, 7] n=16 c=3: r(k,death)=+0.1018  r(sigma_(j-1) in F, death)=+0.1740
+F=[0, 2, 3, 7] n=16 c=2: r(k,death)=+0.1188  r(sigma_(j-1) in F, death)=+0.1669
+F=[0, 2, 3, 7] n=16 c=3: r(k,death)=+0.1057  r(sigma_(j-1) in F, death)=+0.1746
+F=[0, 1, 4, 5, 6] n=16 c=2: r(k,death)=-0.1095  r(sigma_(j-1) in F, death)=-0.1574
+F=[0, 1, 4, 5, 6] n=16 c=3: r(k,death)=-0.1059  r(sigma_(j-1) in F, death)=-0.1731
+F=[0, 1, 5] n=16 c=2: r(k,death)=-0.1013  r(sigma_(j-1) in F, death)=-0.1593
+F=[0, 1, 5] n=16 c=3: r(k,death)=-0.1012  r(sigma_(j-1) in F, death)=-0.1740
+
+## Control 3: shuffle control (permute each w's own sigma sequence)
+F=[0, 1, 4, 5] n=12 c=2: r_real=-0.1261  r_shuffled=+0.0074
+F=[0, 1, 4, 5] n=12 c=3: r_real=-0.1090  r_shuffled=+0.0090
+F=[0, 1, 4, 5] n=16 c=2: r_real=-0.1095  r_shuffled=-0.0023
+F=[0, 1, 4, 5] n=16 c=3: r_real=-0.1106  r_shuffled=-0.0016
+F=[0, 2, 3, 6, 7] n=12 c=2: r_real=+0.1206  r_shuffled=+0.0070
+F=[0, 2, 3, 6, 7] n=12 c=3: r_real=+0.0937  r_shuffled=-0.0057
+F=[0, 2, 3, 6, 7] n=16 c=2: r_real=+0.1070  r_shuffled=-0.0097
+F=[0, 2, 3, 6, 7] n=16 c=3: r_real=+0.1018  r_shuffled=-0.0055
+F=[0, 2, 3, 7] n=12 c=2: r_real=+0.1080  r_shuffled=+0.0153
+F=[0, 2, 3, 7] n=12 c=3: r_real=+0.1085  r_shuffled=+0.0186
+F=[0, 2, 3, 7] n=16 c=2: r_real=+0.1188  r_shuffled=-0.0018
+F=[0, 2, 3, 7] n=16 c=3: r_real=+0.1057  r_shuffled=-0.0002
+F=[0, 1, 4, 5, 6] n=12 c=2: r_real=-0.1060  r_shuffled=+0.0118
+F=[0, 1, 4, 5, 6] n=12 c=3: r_real=-0.1148  r_shuffled=-0.0054
+F=[0, 1, 4, 5, 6] n=16 c=2: r_real=-0.1095  r_shuffled=-0.0125
+F=[0, 1, 4, 5, 6] n=16 c=3: r_real=-0.1059  r_shuffled=-0.0054
+F=[0, 1, 5] n=12 c=2: r_real=-0.1107  r_shuffled=+0.0037
+F=[0, 1, 5] n=12 c=3: r_real=-0.1334  r_shuffled=-0.0114
+F=[0, 1, 5] n=16 c=2: r_real=-0.1013  r_shuffled=+0.0070
+F=[0, 1, 5] n=16 c=3: r_real=-0.1012  r_shuffled=+0.0059
+
+# total time 165.6s

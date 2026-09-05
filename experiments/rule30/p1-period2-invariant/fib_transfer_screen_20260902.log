@@ -1,0 +1,34 @@
+pooled over n=10..17, both c; blocks strictly inside the forced word
+ m   2^m  Fib(m+2)   B_H-only   B_hit    B_RW    RW/Fib   longest-run occurrences RW
+ 2     4         5          4        4       3   0.600   137291
+ 3     8         8          8        8       5   0.625   54568
+ 4    16        13         16       16       8   0.615   21868
+ 5    32        21         32       32      13   0.619   8515
+ 6    64        34         64       64      21   0.618   3265
+ 7   128        55        128      128      33   0.600   1194
+ 8   256        89        256      227      37   0.416   426
+ 9   512       144        512      226      24   0.167   155
+10  1024       233       1024      136       8   0.034   54
+
+hard-core blocks ABSENT from RW forced words, by m:
+  m=4: 0/8 absent: []
+        of these, present in the hit-only language (so hard-core is not what removes them): []
+  m=5: 0/13 absent: []
+        of these, present in the hit-only language (so hard-core is not what removes them): []
+  m=6: 0/21 absent: []
+        of these, present in the hit-only language (so hard-core is not what removes them): []
+  m=7: 1/34 absent: ['1221222']
+        of these, present in the hit-only language (so hard-core is not what removes them): ['1221222']
+  m=8: 18/55 absent: ['12121221', '12121222', '12122121', '12122212', '12122222', '12212121', '12212122', '12212221', '12212222', '12221212', '12221221', '12221222', '21212212', '21212221', '21221222', '21222122', '22122122', '22222222']
+        of these, present in the hit-only language (so hard-core is not what removes them): ['12121221', '12122121', '12122222', '12212122', '12212222', '12221221', '12221222']
+
+growth-rate estimates B(m)/B(m-1) for RW (meaningful only while counts are not sample-limited):
+  m=3: 1.667
+  m=4: 1.600
+  m=5: 1.625
+  m=6: 1.615
+  m=7: 1.571
+  m=8: 1.121
+  m=9: 0.649
+  m=10: 0.333
+  hard-core reference ratio -> phi = 1.618; binary -> 2

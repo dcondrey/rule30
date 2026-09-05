@@ -1,0 +1,20 @@
+rbf_adversarial.py args={'seed': 1, 'families': 'ABCDF', 'exhaustive': None, 'm_transfer': 400, 'm_brute': 13, 'mutate': None}
+rule: CONE rebuilt from the carry action equals psi_kernel.CONE; F1 decoupling and F2 boundary on all 16 pairs PASS
+A n=20   300 random sources, forced orbit u=n..4n: 18300 columns, mean zeros/window=16.67, mean |N|=53.3, odd flips invisible 70562, even flips visible 69201 PASS  [7s]
+A n=30   150 random sources, forced orbit u=n..4n: 13650 columns, mean zeros/window=25.39, mean |N|=79.6, odd flips invisible 75909, even flips visible 74925 PASS  [11s]
+A n=45   80 random sources, forced orbit u=n..4n: 10880 columns, mean zeros/window=38.41, mean |N|=119.1, odd flips invisible 94989, even flips visible 94208 PASS  [15s]
+A n=64   40 random sources, forced orbit u=n..4n: 7720 columns, mean zeros/window=55.06, mean |N|=168.9, odd flips invisible 94140, even flips visible 93591 PASS  [19s]
+A n=100  12 random sources, forced orbit u=n..4n: 3612 columns, mean zeros/window=86.74, mean |N|=263.3, odd flips invisible 67381, even flips visible 67107 PASS  [21s]
+B n=16   15 structured sources, forced orbit u=n..3n+2: 525 columns, odd flips invisible 1898, even flips visible 1846 PASS  [0s]
+B n=24   15 structured sources, forced orbit u=n..3n+2: 765 columns, odd flips invisible 4614, even flips visible 4532 PASS  [0s]
+B n=33   15 structured sources, forced orbit u=n..3n+2: 1035 columns, odd flips invisible 7937, even flips visible 7832 PASS  [1s]
+B n=50   15 structured sources, forced orbit u=n..3n+2: 1545 columns, odd flips invisible 18061, even flips visible 17903 PASS  [2s]
+B n=71   15 structured sources, forced orbit u=n..3n+2: 2175 columns, odd flips invisible 35030, even flips visible 34826 PASS  [6s]
+B n=100  15 structured sources, forced orbit u=n..3n+2: 3045 columns, odd flips invisible 69702, even flips visible 69407 PASS  [16s]
+B n=15 falsifier 111122211212112 orbit to u=60 and its 32-symbol word for all n<=32: 78 columns, odd flips invisible 1473, even flips visible 1433 PASS
+C 150 arbitrary binary words u in [30,60], every n<=u: 6730 (word, n) pairs, odd flips invisible 29184, even flips visible 28646 PASS  [3s]
+D Lemma H and Lemma E on 49800 cells of 200 random four-state prefixes u in [20,40], all four e_u PASS  [0s]
+F (e) transfer matrix: N0 = (3^m+1)/2 exactly for every m <= 400 (exact integers) PASS
+F (e) brute force with block formula and q_2 involution to m = 13 (1594323 words at the top) PASS
+ALL PASS  [145s]
+exit=0

@@ -1,0 +1,150 @@
+# n=11: forced orbits for 2048 sources in 0.2s
+n=11 p= 5 c=2 b=4 delta=0.001  | lambda=0.167 mu=0.000(j=None) B=0.167 | aggregate max N_(j+b)/N_j = 0.018
+n=11 p= 5 c=2 b=4 delta=0.01   | lambda=0.167 mu=0.000(j=None) B=0.167 | aggregate max N_(j+b)/N_j = 0.018
+n=11 p= 5 c=2 b=6 delta=0.001  | lambda=0.016 mu=0.000(j=None) B=0.016 | aggregate max N_(j+b)/N_j = 0.002
+n=11 p= 5 c=2 b=6 delta=0.01   | lambda=0.016 mu=0.000(j=None) B=0.016 | aggregate max N_(j+b)/N_j = 0.002
+n=11 p= 5 c=2 b=8 delta=0.001  | lambda=0.000 mu=0.000(j=None) B=0.000 | aggregate max N_(j+b)/N_j = 0.000
+n=11 p= 5 c=2 b=8 delta=0.01   | lambda=0.000 mu=0.000(j=None) B=0.000 | aggregate max N_(j+b)/N_j = 0.000
+n=11 p= 5 c=3 b=4 delta=0.001  | lambda=0.500 mu=0.000(j=None) B=0.500 | aggregate max N_(j+b)/N_j = 0.076
+n=11 p= 5 c=3 b=4 delta=0.01   | lambda=0.500 mu=0.006(j=3) B=0.503 | aggregate max N_(j+b)/N_j = 0.076
+n=11 p= 5 c=3 b=6 delta=0.001  | lambda=0.107 mu=0.000(j=None) B=0.107 | aggregate max N_(j+b)/N_j = 0.015
+n=11 p= 5 c=3 b=6 delta=0.01   | lambda=0.107 mu=0.006(j=3) B=0.113 | aggregate max N_(j+b)/N_j = 0.015
+n=11 p= 5 c=3 b=8 delta=0.001  | lambda=0.000 mu=0.000(j=None) B=0.000 | aggregate max N_(j+b)/N_j = 0.000
+n=11 p= 5 c=3 b=8 delta=0.01   | lambda=0.000 mu=0.006(j=3) B=0.006 | aggregate max N_(j+b)/N_j = 0.000
+n=11 p= 7 c=2 b=4 delta=0.001  | lambda=0.250 mu=0.000(j=None) B=0.250 | aggregate max N_(j+b)/N_j = 0.018
+n=11 p= 7 c=2 b=4 delta=0.01   | lambda=0.250 mu=0.250(j=0) B=0.438 | aggregate max N_(j+b)/N_j = 0.018
+n=11 p= 7 c=2 b=6 delta=0.001  | lambda=0.062 mu=0.000(j=None) B=0.062 | aggregate max N_(j+b)/N_j = 0.002
+n=11 p= 7 c=2 b=6 delta=0.01   | lambda=0.062 mu=0.250(j=0) B=0.297 | aggregate max N_(j+b)/N_j = 0.002
+n=11 p= 7 c=2 b=8 delta=0.001  | lambda=0.000 mu=0.000(j=None) B=0.000 | aggregate max N_(j+b)/N_j = 0.000
+n=11 p= 7 c=2 b=8 delta=0.01   | lambda=0.000 mu=0.250(j=0) B=0.250 | aggregate max N_(j+b)/N_j = 0.000
+n=11 p= 7 c=3 b=4 delta=0.001  | lambda=1.000 mu=0.000(j=None) B=1.000 | aggregate max N_(j+b)/N_j = 0.076
+n=11 p= 7 c=3 b=4 delta=0.01   | lambda=1.000 mu=0.250(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.076
+n=11 p= 7 c=3 b=6 delta=0.001  | lambda=0.250 mu=0.000(j=None) B=0.250 | aggregate max N_(j+b)/N_j = 0.015
+n=11 p= 7 c=3 b=6 delta=0.01   | lambda=0.222 mu=0.250(j=0) B=0.417 | aggregate max N_(j+b)/N_j = 0.015
+n=11 p= 7 c=3 b=8 delta=0.001  | lambda=0.000 mu=0.000(j=None) B=0.000 | aggregate max N_(j+b)/N_j = 0.000
+n=11 p= 7 c=3 b=8 delta=0.01   | lambda=0.000 mu=0.250(j=0) B=0.250 | aggregate max N_(j+b)/N_j = 0.000
+# n=12: forced orbits for 4096 sources in 0.4s
+n=12 p= 6 c=2 b=4 delta=0.001  | lambda=0.500 mu=0.000(j=None) B=0.500 | aggregate max N_(j+b)/N_j = 0.061
+n=12 p= 6 c=2 b=4 delta=0.01   | lambda=0.500 mu=0.067(j=4) B=0.534 | aggregate max N_(j+b)/N_j = 0.061
+n=12 p= 6 c=2 b=6 delta=0.001  | lambda=0.167 mu=0.000(j=None) B=0.167 | aggregate max N_(j+b)/N_j = 0.007
+n=12 p= 6 c=2 b=6 delta=0.01   | lambda=0.167 mu=0.067(j=4) B=0.223 | aggregate max N_(j+b)/N_j = 0.007
+n=12 p= 6 c=2 b=8 delta=0.001  | lambda=0.045 mu=0.000(j=None) B=0.045 | aggregate max N_(j+b)/N_j = 0.001
+n=12 p= 6 c=2 b=8 delta=0.01   | lambda=0.045 mu=0.067(j=4) B=0.110 | aggregate max N_(j+b)/N_j = 0.001
+n=12 p= 6 c=3 b=4 delta=0.001  | lambda=0.250 mu=0.000(j=None) B=0.250 | aggregate max N_(j+b)/N_j = 0.030
+n=12 p= 6 c=3 b=4 delta=0.01   | lambda=0.250 mu=0.035(j=3) B=0.277 | aggregate max N_(j+b)/N_j = 0.030
+n=12 p= 6 c=3 b=6 delta=0.001  | lambda=0.077 mu=0.000(j=None) B=0.077 | aggregate max N_(j+b)/N_j = 0.001
+n=12 p= 6 c=3 b=6 delta=0.01   | lambda=0.077 mu=0.035(j=3) B=0.110 | aggregate max N_(j+b)/N_j = 0.001
+n=12 p= 6 c=3 b=8 delta=0.001  | lambda=0.016 mu=0.000(j=None) B=0.016 | aggregate max N_(j+b)/N_j = 0.000
+n=12 p= 6 c=3 b=8 delta=0.01   | lambda=0.016 mu=0.035(j=3) B=0.050 | aggregate max N_(j+b)/N_j = 0.000
+n=12 p= 8 c=2 b=4 delta=0.001  | lambda=1.000 mu=0.000(j=None) B=1.000 | aggregate max N_(j+b)/N_j = 0.061
+n=12 p= 8 c=2 b=4 delta=0.01   | lambda=1.000 mu=0.645(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.061
+n=12 p= 8 c=2 b=6 delta=0.001  | lambda=0.500 mu=0.000(j=None) B=0.500 | aggregate max N_(j+b)/N_j = 0.007
+n=12 p= 8 c=2 b=6 delta=0.01   | lambda=0.500 mu=0.645(j=0) B=0.822 | aggregate max N_(j+b)/N_j = 0.007
+n=12 p= 8 c=2 b=8 delta=0.001  | lambda=0.143 mu=0.000(j=None) B=0.143 | aggregate max N_(j+b)/N_j = 0.001
+n=12 p= 8 c=2 b=8 delta=0.01   | lambda=0.000 mu=0.645(j=0) B=0.645 | aggregate max N_(j+b)/N_j = 0.001
+n=12 p= 8 c=3 b=4 delta=0.001  | lambda=0.333 mu=0.000(j=None) B=0.333 | aggregate max N_(j+b)/N_j = 0.030
+n=12 p= 8 c=3 b=4 delta=0.01   | lambda=0.333 mu=0.645(j=0) B=0.763 | aggregate max N_(j+b)/N_j = 0.030
+n=12 p= 8 c=3 b=6 delta=0.001  | lambda=0.250 mu=0.000(j=None) B=0.250 | aggregate max N_(j+b)/N_j = 0.001
+n=12 p= 8 c=3 b=6 delta=0.01   | lambda=0.000 mu=0.645(j=0) B=0.645 | aggregate max N_(j+b)/N_j = 0.001
+n=12 p= 8 c=3 b=8 delta=0.001  | lambda=0.062 mu=0.000(j=None) B=0.062 | aggregate max N_(j+b)/N_j = 0.000
+n=12 p= 8 c=3 b=8 delta=0.01   | lambda=0.000 mu=0.645(j=0) B=0.645 | aggregate max N_(j+b)/N_j = 0.000
+# n=13: forced orbits for 8192 sources in 0.8s
+n=13 p= 6 c=2 b=4 delta=0.001  | lambda=0.167 mu=0.000(j=None) B=0.167 | aggregate max N_(j+b)/N_j = 0.026
+n=13 p= 6 c=2 b=4 delta=0.01   | lambda=0.167 mu=0.018(j=4) B=0.181 | aggregate max N_(j+b)/N_j = 0.026
+n=13 p= 6 c=2 b=6 delta=0.001  | lambda=0.023 mu=0.000(j=None) B=0.023 | aggregate max N_(j+b)/N_j = 0.004
+n=13 p= 6 c=2 b=6 delta=0.01   | lambda=0.023 mu=0.018(j=4) B=0.040 | aggregate max N_(j+b)/N_j = 0.004
+n=13 p= 6 c=2 b=8 delta=0.001  | lambda=0.000 mu=0.000(j=None) B=0.000 | aggregate max N_(j+b)/N_j = 0.000
+n=13 p= 6 c=2 b=8 delta=0.01   | lambda=0.000 mu=0.018(j=4) B=0.018 | aggregate max N_(j+b)/N_j = 0.000
+n=13 p= 6 c=3 b=4 delta=0.001  | lambda=0.500 mu=0.000(j=None) B=0.500 | aggregate max N_(j+b)/N_j = 0.043
+n=13 p= 6 c=3 b=4 delta=0.01   | lambda=0.500 mu=0.010(j=3) B=0.505 | aggregate max N_(j+b)/N_j = 0.043
+n=13 p= 6 c=3 b=6 delta=0.001  | lambda=0.143 mu=0.000(j=None) B=0.143 | aggregate max N_(j+b)/N_j = 0.006
+n=13 p= 6 c=3 b=6 delta=0.01   | lambda=0.143 mu=0.010(j=3) B=0.151 | aggregate max N_(j+b)/N_j = 0.006
+n=13 p= 6 c=3 b=8 delta=0.001  | lambda=0.020 mu=0.000(j=None) B=0.020 | aggregate max N_(j+b)/N_j = 0.001
+n=13 p= 6 c=3 b=8 delta=0.01   | lambda=0.020 mu=0.010(j=3) B=0.030 | aggregate max N_(j+b)/N_j = 0.001
+n=13 p= 8 c=2 b=4 delta=0.001  | lambda=1.000 mu=0.000(j=None) B=1.000 | aggregate max N_(j+b)/N_j = 0.026
+n=13 p= 8 c=2 b=4 delta=0.01   | lambda=0.250 mu=0.678(j=1) B=0.758 | aggregate max N_(j+b)/N_j = 0.026
+n=13 p= 8 c=2 b=6 delta=0.001  | lambda=0.111 mu=0.000(j=None) B=0.111 | aggregate max N_(j+b)/N_j = 0.004
+n=13 p= 8 c=2 b=6 delta=0.01   | lambda=0.111 mu=0.678(j=1) B=0.714 | aggregate max N_(j+b)/N_j = 0.004
+n=13 p= 8 c=2 b=8 delta=0.001  | lambda=0.000 mu=0.000(j=None) B=0.000 | aggregate max N_(j+b)/N_j = 0.000
+n=13 p= 8 c=2 b=8 delta=0.01   | lambda=0.000 mu=0.678(j=1) B=0.678 | aggregate max N_(j+b)/N_j = 0.000
+n=13 p= 8 c=3 b=4 delta=0.001  | lambda=1.000 mu=0.000(j=None) B=1.000 | aggregate max N_(j+b)/N_j = 0.043
+n=13 p= 8 c=3 b=4 delta=0.01   | lambda=1.000 mu=0.680(j=1) B=1.000 | aggregate max N_(j+b)/N_j = 0.043
+n=13 p= 8 c=3 b=6 delta=0.001  | lambda=1.000 mu=0.000(j=None) B=1.000 | aggregate max N_(j+b)/N_j = 0.006
+n=13 p= 8 c=3 b=6 delta=0.01   | lambda=0.083 mu=0.680(j=1) B=0.706 | aggregate max N_(j+b)/N_j = 0.006
+n=13 p= 8 c=3 b=8 delta=0.001  | lambda=0.083 mu=0.000(j=None) B=0.083 | aggregate max N_(j+b)/N_j = 0.001
+n=13 p= 8 c=3 b=8 delta=0.01   | lambda=0.083 mu=0.680(j=1) B=0.706 | aggregate max N_(j+b)/N_j = 0.001
+# n=14: forced orbits for 16384 sources in 1.6s
+n=14 p= 7 c=2 b=4 delta=0.001  | lambda=1.000 mu=0.000(j=None) B=1.000 | aggregate max N_(j+b)/N_j = 0.070
+n=14 p= 7 c=2 b=4 delta=0.01   | lambda=0.500 mu=0.250(j=0) B=0.625 | aggregate max N_(j+b)/N_j = 0.070
+n=14 p= 7 c=2 b=6 delta=0.001  | lambda=0.333 mu=0.000(j=None) B=0.333 | aggregate max N_(j+b)/N_j = 0.010
+n=14 p= 7 c=2 b=6 delta=0.01   | lambda=0.333 mu=0.250(j=0) B=0.500 | aggregate max N_(j+b)/N_j = 0.010
+n=14 p= 7 c=2 b=8 delta=0.001  | lambda=0.056 mu=0.000(j=None) B=0.056 | aggregate max N_(j+b)/N_j = 0.001
+n=14 p= 7 c=2 b=8 delta=0.01   | lambda=0.053 mu=0.250(j=0) B=0.289 | aggregate max N_(j+b)/N_j = 0.001
+n=14 p= 7 c=3 b=4 delta=0.001  | lambda=0.500 mu=0.000(j=None) B=0.500 | aggregate max N_(j+b)/N_j = 0.025
+n=14 p= 7 c=3 b=4 delta=0.01   | lambda=0.250 mu=0.255(j=1) B=0.441 | aggregate max N_(j+b)/N_j = 0.025
+n=14 p= 7 c=3 b=6 delta=0.001  | lambda=0.050 mu=0.000(j=None) B=0.050 | aggregate max N_(j+b)/N_j = 0.004
+n=14 p= 7 c=3 b=6 delta=0.01   | lambda=0.050 mu=0.255(j=1) B=0.292 | aggregate max N_(j+b)/N_j = 0.004
+n=14 p= 7 c=3 b=8 delta=0.001  | lambda=0.008 mu=0.000(j=None) B=0.008 | aggregate max N_(j+b)/N_j = 0.000
+n=14 p= 7 c=3 b=8 delta=0.01   | lambda=0.008 mu=0.255(j=1) B=0.260 | aggregate max N_(j+b)/N_j = 0.000
+n=14 p= 9 c=2 b=4 delta=0.001  | lambda=1.000 mu=0.012(j=3) B=1.000 | aggregate max N_(j+b)/N_j = 0.070
+n=14 p= 9 c=2 b=4 delta=0.01   | lambda=1.000 mu=0.933(j=1) B=1.000 | aggregate max N_(j+b)/N_j = 0.070
+n=14 p= 9 c=2 b=6 delta=0.001  | lambda=1.000 mu=0.012(j=3) B=1.000 | aggregate max N_(j+b)/N_j = 0.010
+n=14 p= 9 c=2 b=6 delta=0.01   | lambda=0.250 mu=0.933(j=1) B=0.950 | aggregate max N_(j+b)/N_j = 0.010
+n=14 p= 9 c=2 b=8 delta=0.001  | lambda=0.200 mu=0.012(j=3) B=0.209 | aggregate max N_(j+b)/N_j = 0.001
+n=14 p= 9 c=2 b=8 delta=0.01   | lambda=0.000 mu=0.933(j=1) B=0.933 | aggregate max N_(j+b)/N_j = 0.001
+n=14 p= 9 c=3 b=4 delta=0.001  | lambda=1.000 mu=0.009(j=3) B=1.000 | aggregate max N_(j+b)/N_j = 0.025
+n=14 p= 9 c=3 b=4 delta=0.01   | lambda=0.111 mu=0.898(j=0) B=0.910 | aggregate max N_(j+b)/N_j = 0.025
+n=14 p= 9 c=3 b=6 delta=0.001  | lambda=0.333 mu=0.009(j=3) B=0.340 | aggregate max N_(j+b)/N_j = 0.004
+n=14 p= 9 c=3 b=6 delta=0.01   | lambda=0.000 mu=0.898(j=0) B=0.898 | aggregate max N_(j+b)/N_j = 0.004
+n=14 p= 9 c=3 b=8 delta=0.001  | lambda=0.031 mu=0.009(j=3) B=0.040 | aggregate max N_(j+b)/N_j = 0.000
+n=14 p= 9 c=3 b=8 delta=0.01   | lambda=0.000 mu=0.898(j=0) B=0.898 | aggregate max N_(j+b)/N_j = 0.000
+# n=15: forced orbits for 32768 sources in 3.8s
+n=15 p= 7 c=2 b=4 delta=0.001  | lambda=1.000 mu=0.000(j=None) B=1.000 | aggregate max N_(j+b)/N_j = 0.037
+n=15 p= 7 c=2 b=4 delta=0.01   | lambda=0.500 mu=0.250(j=0) B=0.625 | aggregate max N_(j+b)/N_j = 0.037
+n=15 p= 7 c=2 b=6 delta=0.001  | lambda=0.100 mu=0.000(j=None) B=0.100 | aggregate max N_(j+b)/N_j = 0.006
+n=15 p= 7 c=2 b=6 delta=0.01   | lambda=0.100 mu=0.250(j=0) B=0.325 | aggregate max N_(j+b)/N_j = 0.006
+n=15 p= 7 c=2 b=8 delta=0.001  | lambda=0.011 mu=0.000(j=None) B=0.011 | aggregate max N_(j+b)/N_j = 0.001
+n=15 p= 7 c=2 b=8 delta=0.01   | lambda=0.011 mu=0.250(j=0) B=0.258 | aggregate max N_(j+b)/N_j = 0.001
+n=15 p= 7 c=3 b=4 delta=0.001  | lambda=0.200 mu=0.000(j=None) B=0.200 | aggregate max N_(j+b)/N_j = 0.028
+n=15 p= 7 c=3 b=4 delta=0.01   | lambda=0.167 mu=0.251(j=1) B=0.376 | aggregate max N_(j+b)/N_j = 0.028
+n=15 p= 7 c=3 b=6 delta=0.001  | lambda=0.034 mu=0.000(j=None) B=0.034 | aggregate max N_(j+b)/N_j = 0.004
+n=15 p= 7 c=3 b=6 delta=0.01   | lambda=0.029 mu=0.251(j=1) B=0.273 | aggregate max N_(j+b)/N_j = 0.004
+n=15 p= 7 c=3 b=8 delta=0.001  | lambda=0.004 mu=0.000(j=None) B=0.004 | aggregate max N_(j+b)/N_j = 0.000
+n=15 p= 7 c=3 b=8 delta=0.01   | lambda=0.004 mu=0.251(j=1) B=0.254 | aggregate max N_(j+b)/N_j = 0.000
+n=15 p=10 c=2 b=4 delta=0.001  | lambda=1.000 mu=0.073(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.037
+n=15 p=10 c=2 b=4 delta=0.01   | lambda=1.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.037
+n=15 p=10 c=2 b=6 delta=0.001  | lambda=0.500 mu=0.073(j=0) B=0.537 | aggregate max N_(j+b)/N_j = 0.006
+n=15 p=10 c=2 b=6 delta=0.01   | lambda=0.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.006
+n=15 p=10 c=2 b=8 delta=0.001  | lambda=0.100 mu=0.073(j=0) B=0.166 | aggregate max N_(j+b)/N_j = 0.001
+n=15 p=10 c=2 b=8 delta=0.01   | lambda=0.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.001
+n=15 p=10 c=3 b=4 delta=0.001  | lambda=0.500 mu=0.081(j=3) B=0.541 | aggregate max N_(j+b)/N_j = 0.028
+n=15 p=10 c=3 b=4 delta=0.01   | lambda=0.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.028
+n=15 p=10 c=3 b=6 delta=0.001  | lambda=0.250 mu=0.081(j=3) B=0.311 | aggregate max N_(j+b)/N_j = 0.004
+n=15 p=10 c=3 b=6 delta=0.01   | lambda=0.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.004
+n=15 p=10 c=3 b=8 delta=0.001  | lambda=0.031 mu=0.081(j=3) B=0.110 | aggregate max N_(j+b)/N_j = 0.000
+n=15 p=10 c=3 b=8 delta=0.01   | lambda=0.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.000
+# n=16: forced orbits for 65536 sources in 8.8s
+n=16 p= 8 c=2 b=4 delta=0.001  | lambda=0.500 mu=0.001(j=4) B=0.500 | aggregate max N_(j+b)/N_j = 0.031
+n=16 p= 8 c=2 b=4 delta=0.01   | lambda=0.500 mu=0.659(j=2) B=0.830 | aggregate max N_(j+b)/N_j = 0.031
+n=16 p= 8 c=2 b=6 delta=0.001  | lambda=0.143 mu=0.001(j=4) B=0.144 | aggregate max N_(j+b)/N_j = 0.005
+n=16 p= 8 c=2 b=6 delta=0.01   | lambda=0.143 mu=0.659(j=2) B=0.708 | aggregate max N_(j+b)/N_j = 0.005
+n=16 p= 8 c=2 b=8 delta=0.001  | lambda=0.026 mu=0.001(j=4) B=0.027 | aggregate max N_(j+b)/N_j = 0.001
+n=16 p= 8 c=2 b=8 delta=0.01   | lambda=0.026 mu=0.659(j=2) B=0.668 | aggregate max N_(j+b)/N_j = 0.001
+n=16 p= 8 c=3 b=4 delta=0.001  | lambda=1.000 mu=0.000(j=None) B=1.000 | aggregate max N_(j+b)/N_j = 0.077
+n=16 p= 8 c=3 b=4 delta=0.01   | lambda=0.500 mu=0.684(j=2) B=0.842 | aggregate max N_(j+b)/N_j = 0.077
+n=16 p= 8 c=3 b=6 delta=0.001  | lambda=0.500 mu=0.000(j=None) B=0.500 | aggregate max N_(j+b)/N_j = 0.011
+n=16 p= 8 c=3 b=6 delta=0.01   | lambda=0.111 mu=0.684(j=2) B=0.719 | aggregate max N_(j+b)/N_j = 0.011
+n=16 p= 8 c=3 b=8 delta=0.001  | lambda=0.029 mu=0.000(j=None) B=0.029 | aggregate max N_(j+b)/N_j = 0.002
+n=16 p= 8 c=3 b=8 delta=0.01   | lambda=0.025 mu=0.684(j=2) B=0.692 | aggregate max N_(j+b)/N_j = 0.002
+n=16 p=10 c=2 b=4 delta=0.001  | lambda=1.000 mu=0.094(j=4) B=1.000 | aggregate max N_(j+b)/N_j = 0.031
+n=16 p=10 c=2 b=4 delta=0.01   | lambda=0.500 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.031
+n=16 p=10 c=2 b=6 delta=0.001  | lambda=0.333 mu=0.094(j=4) B=0.396 | aggregate max N_(j+b)/N_j = 0.005
+n=16 p=10 c=2 b=6 delta=0.01   | lambda=0.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.005
+n=16 p=10 c=2 b=8 delta=0.001  | lambda=0.125 mu=0.094(j=4) B=0.207 | aggregate max N_(j+b)/N_j = 0.001
+n=16 p=10 c=2 b=8 delta=0.01   | lambda=0.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.001
+n=16 p=10 c=3 b=4 delta=0.001  | lambda=1.000 mu=0.073(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.077
+n=16 p=10 c=3 b=4 delta=0.01   | lambda=1.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.077
+n=16 p=10 c=3 b=6 delta=0.001  | lambda=0.500 mu=0.073(j=0) B=0.537 | aggregate max N_(j+b)/N_j = 0.011
+n=16 p=10 c=3 b=6 delta=0.01   | lambda=0.250 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.011
+n=16 p=10 c=3 b=8 delta=0.001  | lambda=0.100 mu=0.073(j=0) B=0.166 | aggregate max N_(j+b)/N_j = 0.002
+n=16 p=10 c=3 b=8 delta=0.01   | lambda=0.000 mu=1.000(j=0) B=1.000 | aggregate max N_(j+b)/N_j = 0.002

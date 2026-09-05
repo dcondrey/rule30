@@ -1,0 +1,21 @@
+L=28 cap=400 words=['01', '001', '011', '0001', '0111', '00101']
+Pi-tree leaves at depth 28: 43664 (log2 = 15)
+word 01: tests=43664 max survival=20 steps (~10.0 one-times; null max ~15 one-times ~ 30 steps); reached cap: 0
+   survivors >= s (s multiples of p): 0:43664 2:26579 4:14990 6:8850 8:1561 16:88 20:48
+   best leaf: phase=1 row_bits(len)=29
+word 001: tests=66358 max survival=17 steps (~5.7 one-times; null max ~16 one-times ~ 48 steps); reached cap: 0
+   survivors >= s (s multiples of p): 0:66358 3:37031 6:22146 9:10797 12:4699 15:2059 17:96
+   best leaf: phase=0 row_bits(len)=29
+word 011: tests=64634 max survival=18 steps (~12.0 one-times; null max ~15 one-times ~ 22 steps); reached cap: 0
+   survivors >= s (s multiples of p): 0:64634 3:9574 6:3189 18:45
+   best leaf: phase=1 row_bits(len)=29
+word 0001: tests=89052 max survival=22 steps (~5.5 one-times; null max ~16 one-times ~ 64 steps); reached cap: 0
+   survivors >= s (s multiples of p): 0:89052 4:50592 8:20774 16:6679 20:4359 22:2739
+   best leaf: phase=1 row_bits(len)=29
+word 0111: tests=85604 max survival=12 steps (~9.0 one-times; null max ~16 one-times ~ 21 steps); reached cap: 0
+   survivors >= s (s multiples of p): 0:85604 4:9374 8:630 12:24
+   best leaf: phase=3 row_bits(len)=29
+word 00101: tests=110022 max survival=22 steps (~8.8 one-times; null max ~16 one-times ~ 40 steps); reached cap: 0
+   survivors >= s (s multiples of p): 0:110022 5:33505 10:6264 15:2028 22:24
+   best leaf: phase=0 row_bits(len)=29
+elapsed 0.8s

@@ -1,0 +1,12 @@
+rbf_kill.py args={'umax': 12, 'fut': 4, 'rand_n': [30, 40, 60, 80, 100], 'samples': 300, 'seed': 1, 'letters_m': 10, 'letters_m4': 7, 'balance_brute': 10, 'balance_transfer': 60, 'gate_n': 8, 'skip': ['gate', 'X', 'L', 'E'], 'mutate': False}
+  R n=30  samples=300 columns=9600 distinct pairs=9600   [1s]
+  R n=40  samples=300 columns=12600 distinct pairs=12600   [2s]
+  R n=60  samples=300 columns=18600 distinct pairs=18600   [4s]
+  R n=80  samples=300 columns=24600 distinct pairs=24600   [7s]
+  R n=100 samples=300 columns=30600 distinct pairs=30600   [11s]
+R random n=30: 9600 (word, n) pairs, checks A B C C' D1 D2 D3 PASS; 9600 distinct pair keys; mean non-retained runs per column 28.987
+R random n=40: 12600 (word, n) pairs, checks A B C C' D1 D2 D3 PASS; 12600 distinct pair keys; mean non-retained runs per column 38.347
+R random n=60: 18600 (word, n) pairs, checks A B C C' D1 D2 D3 PASS; 18600 distinct pair keys; mean non-retained runs per column 57.126
+R random n=80: 24600 (word, n) pairs, checks A B C C' D1 D2 D3 PASS; 24600 distinct pair keys; mean non-retained runs per column 75.831
+R random n=100: 30600 (word, n) pairs, checks A B C C' D1 D2 D3 PASS; 30600 distinct pair keys; mean non-retained runs per column 94.630
+ALL PASS   [26s]

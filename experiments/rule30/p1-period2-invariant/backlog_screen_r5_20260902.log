@@ -1,0 +1,44 @@
+== first-diff-visible: hard-core W,W' with first difference d, Psi equal on [n, min(2n+1, d+n+6)]?
+   n=6: KILLED e.g. ((1, 2, 1, 2, 1, 2), (1, 2, 1, 2, 2, 2), 4)
+   n=7: KILLED e.g. ((1, 2, 1, 2, 1, 2, 1), (2, 2, 1, 2, 1, 2, 1), 0)
+   n=8: KILLED e.g. ((1, 2, 1, 2, 1, 2, 1, 2), (2, 2, 1, 2, 1, 2, 1, 2), 0)
+   n=9: KILLED e.g. ((1, 2, 1, 2, 1, 2, 1, 2, 1), (2, 1, 2, 1, 2, 2, 2, 1, 2), 0)
+   n=10: KILLED e.g. ((1, 2, 1, 2, 1, 2, 1, 2, 1, 2), (2, 2, 1, 2, 1, 2, 1, 2, 1, 2), 0)
+   n=11: KILLED e.g. ((1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1), (1, 2, 2, 2, 2, 1, 2, 1, 2, 2, 1), 2)
+   n=12: KILLED e.g. ((1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2), (2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2), 0)
+   n=13: KILLED e.g. ((1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1), (2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 2, 1), 0)
+   n=14: KILLED e.g. ((1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2), (2, 1, 2, 2, 2, 1, 2, 2, 2, 2, 1, 2, 1, 2), 0)
+== klein-toggle: sum of 6 pairwise Psi distances over {W, W^R, W^C, W^RC} >= n/10, all four hard-core
+   n=6: min sum=4 need 0.6 -> holds  at W=121212
+   n=7: min sum=28 need 0.7 -> holds  at W=1212121
+   n=8: min sum=24 need 0.8 -> holds  at W=12121212
+   n=9: min sum=16 need 0.9 -> holds  at W=121212121
+   n=10: min sum=32 need 1.0 -> holds  at W=1212121212
+   n=11: min sum=20 need 1.1 -> holds  at W=12121212121
+   n=12: min sum=32 need 1.2 -> holds  at W=121212121212
+   n=13: min sum=20 need 1.3 -> holds  at W=1212121212121
+   n=14: min sum=24 need 1.4 -> holds  at W=12121212121212
+   n=15: min sum=20 need 1.5 -> holds  at W=121212121212121
+== periodic-source-defect-oscillation: periodic hard-core W, p<=12, n multiple of p, n<=60: Psi constant?
+   constant Psi tails: [(5, '22121', 5, 1)] -> KILLED
+== boundary-read-reversal-shot: W^S = reversed Q_n(W) truncated to n; pointwise Psi_j(W^S) != Psi_{L-1-j}(W)?
+   n=6: 2 of 2 admissible pairs have an equal mirrored position -> KILLED
+   n=7: 5 of 5 admissible pairs have an equal mirrored position -> KILLED
+   n=8: 5 of 5 admissible pairs have an equal mirrored position -> KILLED
+   n=9: 18 of 18 admissible pairs have an equal mirrored position -> KILLED
+   n=10: 11 of 11 admissible pairs have an equal mirrored position -> KILLED
+   n=11: 7 of 7 admissible pairs have an equal mirrored position -> KILLED
+   n=12: 31 of 31 admissible pairs have an equal mirrored position -> KILLED
+   n=13: 44 of 44 admissible pairs have an equal mirrored position -> KILLED
+   n=14: 41 of 41 admissible pairs have an equal mirrored position -> KILLED
+== haar-influence: #bits whose hard-core-preserving flip changes Psi somewhere >= n-4, min over hard-core W
+   n=6: min influential bits=1 need 2 -> KILLED  at W=121212
+   n=7: min influential bits=2 need 3 -> KILLED  at W=1212212
+   n=8: min influential bits=2 need 4 -> KILLED  at W=12122212
+   n=9: min influential bits=2 need 5 -> KILLED  at W=121221212
+   n=10: min influential bits=2 need 6 -> KILLED  at W=2122212212
+   n=11: min influential bits=3 need 7 -> KILLED  at W=12121221221
+   n=12: min influential bits=3 need 8 -> KILLED  at W=121212212212
+   n=13: min influential bits=3 need 9 -> KILLED  at W=1221212212212
+   n=14: min influential bits=3 need 10 -> KILLED  at W=21221212212212
+   n=15: min influential bits=3 need 11 -> KILLED  at W=121221212212212

@@ -1,0 +1,62 @@
+rbf_verify.py args: {'ns': [13, 15, 17, 20, 24, 31, 32, 33, 47, 64, 65, 100, 127, 128, 200, 257, 300, 500, 1000], 'ms': [13, 14, 15, 16, 20, 25, 33, 50, 64, 100, 128, 200, 500, 1000, 2000], 'fut': 6, 'odd_checks': 6, 'extra_depth': 4, 'seed': 7, 'balance_brute': 13, 'balance_transfer': 3000}
+CONE[l][r] rows l=0..3: [[0, 1, 3, 2], [3, 2, 1, 0], [3, 2, 0, 1], [3, 2, 1, 0]]
+BOUNDARY: [3, 2, 1, 0]
+F  (F1) (F2) (F3) (C1) (C2) (C3) on all 16 pairs / 4 values: PASS   [0s]
+C51 Corollary 5.1 as written (1+h(d)+h(d+1) = [T != 0]): 40952 of 40952 cells FAIL; first witness (word, n, d, T[u-1][d], h(d), h(d+1)) = ((1,), 1, -1, 1, 1, 0)
+C51 corrected display (1+h(d)+h(d+1) = [T == 0]): 0 of 40952 cells fail
+C51 the display in Corollary 5.1 is off by a complement; the corrected form holds on all cells: RECORDED   [0s]
+A  n=13: kinds=16, columns u in [n, 31], 304 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (0s)   [0s]
+A  n=15: kinds=16, columns u in [n, 35], 336 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (0s)   [0s]
+A  n=17: kinds=16, columns u in [n, 39], 368 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (0s)   [1s]
+A  n=20: kinds=16, columns u in [n, 45], 416 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (0s)   [1s]
+A  n=24: kinds=16, columns u in [n, 53], 480 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (1s)   [2s]
+A  n=31: kinds=16, columns u in [n, 67], 592 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (1s)   [3s]
+A  n=32: kinds=16, columns u in [n, 69], 608 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (1s)   [5s]
+A  n=33: kinds=16, columns u in [n, 71], 624 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (1s)   [6s]
+A  n=47: kinds=16, columns u in [n, 99], 848 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (1s)   [7s]
+A  n=64: kinds=16, columns u in [n, 133], 1120 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (2s)   [9s]
+A  n=65: kinds=16, columns u in [n, 135], 1136 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (2s)   [11s]
+A  n=100: kinds=16, columns u in [n, 205], 1696 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (4s)   [15s]
+A  n=127: kinds=16, columns u in [n, 259], 2128 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (6s)   [21s]
+A  n=128: kinds=16, columns u in [n, 261], 2144 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (6s)   [27s]
+A  n=200: kinds=16, columns u in [n, 405], 3296 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (15s)   [42s]
+A  n=257: kinds=16, columns u in [n, 519], 4208 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (8s)   [50s]
+A  n=300: kinds=16, columns u in [n, 605], 4896 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (12s)   [62s]
+A  n=500: kinds=16, columns u in [n, 1005], 8096 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (31s)   [93s]
+A  n=1000: kinds=16, columns u in [n, 2005], 16096 columns checked, (a)-(d), Lemma 1, pair rebuild, 6-step future from the pair, odd/even bits: PASS  (139s)   [232s]
+A  total columns checked: 419832   [232s]
+B  m=13: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=14: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=15: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=16: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=20: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=25: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=33: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=50: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=64: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=100: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=128: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=200: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=500: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=1000: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (0s)   [232s]
+B  m=2000: 44 structured/biased windows in {0,1,2,3}^m, free bottom letter: (a)-(d) PASS  (1s)   [233s]
+B  total windows: 660   [233s]
+   E m=1: #Phi=0 = 2 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 2
+   E m=2: #Phi=0 = 5 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 2
+   E m=3: #Phi=0 = 14 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 10
+   E m=4: #Phi=0 = 41 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 26
+   E m=5: #Phi=0 = 122 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 82
+   E m=6: #Phi=0 = 365 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 242
+   E m=7: #Phi=0 = 1094 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 730
+   E m=8: #Phi=0 = 3281 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 2186
+   E m=9: #Phi=0 = 9842 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 6562
+   E m=10: #Phi=0 = 29525 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 19682
+   E m=11: #Phi=0 = 88574 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 59050
+   E m=12: #Phi=0 = 265721 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 177146
+   E m=13: #Phi=0 = 797162 = (3^m+1)/2; N>=2 patterns balanced; bottom-nonzero zeros = 531442
+E  brute force through CONE for m <= 13: PASS   [244s]
+   transfer matrix rows: [[1, 0, 2, 0], [0, 1, 0, 2], [1, 1, 0, 1], [1, 1, 1, 0]]
+   characteristic polynomial coefficients (x^4 ... 1): [1, -2, -4, 2, 3]
+E  transfer matrix: d(m) = 1 exactly for all m <= 3000: PASS   [244s]
+ALL PASS   [244s]
+exit=0

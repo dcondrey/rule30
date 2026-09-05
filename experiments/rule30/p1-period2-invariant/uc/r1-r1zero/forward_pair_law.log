@@ -1,0 +1,4 @@
+exhaustive 16-case check of forward (H,E) law: failures = 0
+lone seed T=2000: H-integral checks=3996 failures=0; E-integral checks=3996 failures=0
+r on zero set via crossing-pair E-integral: checks=1023 failures=0
+for t=1001: the H-integral for c_t sums over x in [-1000,0] (cells left of the centre; outside-cone cells contribute 1 each)

@@ -1,0 +1,208 @@
+{
+  "archived_obstruction_words": 9,
+  "full_recurrence_exhaustive_words": 1022,
+  "minimal_sufficient_fields": [
+    "a",
+    "x",
+    "y",
+    "z"
+  ],
+  "nonzero_delta_by_length": {
+    "1": [
+      2,
+      2
+    ],
+    "2": [
+      4,
+      4
+    ],
+    "3": [
+      8,
+      8
+    ],
+    "4": [
+      16,
+      16
+    ],
+    "5": [
+      30,
+      32
+    ],
+    "6": [
+      61,
+      64
+    ],
+    "7": [
+      128,
+      128
+    ],
+    "8": [
+      256,
+      256
+    ],
+    "9": [
+      512,
+      512
+    ]
+  },
+  "operator_cost": 5,
+  "phase_free_projection_collision": [
+    {
+      "bits": "000010",
+      "target": 1
+    },
+    {
+      "bits": "100010",
+      "target": 0
+    }
+  ],
+  "phase_profile_split_closure_checks": 9216,
+  "rejections": [
+    {
+      "candidate": [
+        "zero"
+      ],
+      "minimal_counterexample": {
+        "bits": "000001",
+        "target": 1
+      },
+      "rendered": "0"
+    },
+    {
+      "candidate": [
+        "var",
+        "z"
+      ],
+      "minimal_counterexample": {
+        "bits": "000010",
+        "target": 1
+      },
+      "rendered": "z"
+    },
+    {
+      "candidate": [
+        "xor",
+        [
+          "var",
+          "y"
+        ],
+        [
+          "var",
+          "z"
+        ]
+      ],
+      "minimal_counterexample": {
+        "bits": "000100",
+        "target": 1
+      },
+      "rendered": "(y^z)"
+    },
+    {
+      "candidate": [
+        "xor",
+        [
+          "xor",
+          [
+            "var",
+            "x"
+          ],
+          [
+            "var",
+            "y"
+          ]
+        ],
+        [
+          "var",
+          "z"
+        ]
+      ],
+      "minimal_counterexample": {
+        "bits": "000110",
+        "target": 1
+      },
+      "rendered": "((x^y)^z)"
+    },
+    {
+      "candidate": [
+        "xor",
+        [
+          "xor",
+          [
+            "and",
+            [
+              "xor",
+              [
+                "one"
+              ],
+              [
+                "var",
+                "x"
+              ]
+            ],
+            [
+              "var",
+              "y"
+            ]
+          ],
+          [
+            "var",
+            "x"
+          ]
+        ],
+        [
+          "var",
+          "z"
+        ]
+      ],
+      "minimal_counterexample": {
+        "bits": "100010",
+        "target": 0
+      },
+      "rendered": "((((1^x)&y)^x)^z)"
+    }
+  ],
+  "rendered_expression": "(((((1^a)^x)&y)^x)^z)",
+  "scope_warning": "The phase/holonomy decoder is universal. A recursive Join law that derives the phase profile from split source intervals is still open.",
+  "semantic_library_size": 3525,
+  "source_interval_split_closure": "OPEN: requires a recursive Join law deriving the phase profile",
+  "status": "exact-local-seam-law-proved",
+  "synthesized_expression": [
+    "xor",
+    [
+      "xor",
+      [
+        "and",
+        [
+          "xor",
+          [
+            "xor",
+            [
+              "one"
+            ],
+            [
+              "var",
+              "a"
+            ]
+          ],
+          [
+            "var",
+            "x"
+          ]
+        ],
+        [
+          "var",
+          "y"
+        ]
+      ],
+      [
+        "var",
+        "x"
+      ]
+    ],
+    [
+      "var",
+      "z"
+    ]
+  ],
+  "z3_universal_check": "UNSAT for candidate != exact D8 seam target"
+}

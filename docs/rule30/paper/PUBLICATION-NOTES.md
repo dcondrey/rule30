@@ -2,10 +2,11 @@
 
 ## Defensible claim
 
-> We prove a Rule-30-specific zero-trace fiber theorem for finite
-> configurations, settling the eventually-constant case of Kopra's width-one
-> finite-configuration eventual-periodicity problem, and obtain a sharp
-> finite-radius escape-time law.
+> We classify both constant center-trace fibers of Rule 30, prove that no
+> column of a nonzero finite configuration is eventually constant, and obtain
+> a sharp support-radius law with exact extremizer counts.  This settles the
+> eventual-period-one case of Kopra's width-one finite-configuration question;
+> it does not address any nonconstant eventual period.
 
 **Scope widened 2026-08-30 from constant-zero to eventually-constant.**
 `zero-tail-note.tex` now carries Corollary 5: no column of the orbit of a
@@ -15,8 +16,9 @@ identity at the origin, and needs nothing outside the manuscript.  The
 constant-one side is now stated in full rather than gestured at: Theorem 3 gives
 the all-one fiber, a single checkerboard left half independent of the right
 half, Theorem 7 its sharp horizon `q-1` for `q` the least even integer past `w`
-with `2^w` extremizers, and Corollary 8 the combined law, longest constant central prefix `w+1` with `2^w` extremizers for even `w`
-and `2^w-1` for odd `w`.  All of this was already proved in
+with `2^w` extremizers, and Corollary 8 the combined law: maximum horizon index
+`w+1`, hence longest constant central prefix `w+2`, with `2^w` extremizers for
+even `w` and `2^w-1` for odd `w`.  All of this was already proved in
 `../RESULTS-eventual-period.md`; the note had been carrying only the zero half,
 so it under-claimed against the repo's own settled results.  Independently
 re-verified in `../../../experiments/rule30/constant_trace_audit.py`, which
@@ -30,14 +32,15 @@ form, so say "settles the eventually-constant case of Kopra's width-one
 finite-configuration question (2019 thesis, after Thm 3.1.12)", never "settles
 Problem 3.10".
 
-**The novelty half of this claim is corpus-bounded.**  "Settling" asserts the
-subcase was open, and that assertion rests on the sources listed under *Novelty
-audit* below.  Jen, *J. Stat. Phys.* **43** (1986) 219-242 is **unread**, and
-its abstract clause (ii), on nearest-neighbor rules whose finite initial
-conditions generate a constant temporal sequence, is the one passage in the
-located literature that could touch T1 in either direction.  Until it is read,
-the honest form of the claim is "not found in the corpus searched", not
-"novel".
+**The novelty claim is componentwise and corpus-bounded.**  Jen's 1986 paper
+has now been read in full.  Its Theorem 7a already excludes an eventually-one
+column for every finite Rule 30 configuration, so the note does not claim that
+finite-support exclusion as new.  No explicit Rule-30 zero-fiber
+classification, sharp finite-radius horizon, or extremizer count was found in
+the searched corpus.  The defensible wording is therefore that the note gives
+an exact treatment of both period-one fibers and settles the remaining
+eventually-zero half for finite Rule 30 configurations, not that every
+component of the eventually-constant corollary is novel.
 
 Do not describe the manuscript as a proof of Rule 30 center-column
 nonperiodicity. Nonconstant eventual periods remain open.  A separate exact
@@ -64,11 +67,11 @@ This is an internal independent review, not journal peer review.
 
 ## Novelty audit
 
-**Status: primary sources read, 2026-08-28.**  The earlier version of this
-section said "no prior source was located", which is a search result rather
-than a reading.  The two load-bearing passages have now been fetched and read
-in the original; the verbatim text is below.  One source remains unread and is
-named at the end.
+**Status: all named primary sources read, updated 2026-09-02.**  The earlier
+version of this section said "no prior source was located", which is a search
+result rather than a reading.  The load-bearing passages have now been fetched
+and read in the originals; the relevant text and conclusions are recorded
+below.
 
 ### Kopra's open problem exists in two forms, and only the broad one is ours
 
@@ -137,16 +140,12 @@ Attribution: Wolfram's prize page credits **Jen 1986** ("Erica Jen showed in
 1986 that no two columns can both become periodic"); Kopra credits **Jen 1990,
 Proposition 3**.  Cite both.
 
-### The one source still unread
+### Jen 1986 and the diagonal result
 
-**Jen, "Global properties of cellular automata", J. Stat. Phys. 43 (1986)
-219-242.**  Still not read in the original.  Springer paywalled (303
-to `idp.springer.com`); OSTI holds the bibliographic record `biblio/5674011` but
-`servlets/purl/5674011` is 404, so unlike her 1990 paper there is **no LA-UR
-preprint**; no arXiv, no scholar.archive.org (`sim_journal-of-statistical-
-physics_1986*` does not exist), no CORE, no zbMATH review (the `api.zbmath.org`
-record Zbl 0638.68043 carries only a truncated publisher abstract, which must
-not be quoted), MathSciNet paywalled and its archive.org scan lending-restricted.
+**Jen, "Global properties of cellular automata", J. Stat. Phys. 43 (1986),
+219--242, has been read in the original.**  The local copy has 24 PDF pages,
+one for each printed journal page.  The theorem-number audit below distinguishes
+its vertical-trace, diagonal, and constant-trace results.
 
 **What Theorem 4 gives, from the only source that cites it by number.**  Rowland
 2006 cites it twice, and his ref [1] is confirmed as this paper (bibliography
@@ -172,23 +171,15 @@ diagonals.  That is exactly the A094605 / Rowland Lemma 2 territory already
 recorded as prior art in `../RESULTS-diagonal-periodicity.md`, and it does not
 touch a center-column statement.
 
-*Verified locally:* all three quotes read out of the Rowland PDF on disk, not
-from a summary.
+*Verified locally:* the Rowland quotations were read from his PDF, and the
+scope of Jen's Theorem 4 was checked against Jen's own statement and proof.
 
-**The residual exposure is abstract clause (ii), not Theorem 4.**  The OSTI
-abstract promises conditions characterizing nearest-neighbor rules whose
-arbitrary finite initial conditions "(ii) generate at least one constant
-temporal sequence".  No retrieved source restates clause (ii) or names the
-numbered result carrying it, and nearest-neighbor is Rule 30's class, so the
-clause is load-bearing in both directions.
-
-## RESOLVED 2026-08-30: full text obtained and read
+## Full-text resolution, corrected 2026-09-02
 
 The paper was obtained (`~/Downloads/Global_properties_of_cellular_automata.pdf`,
-10 pp. scan of JSP 43:219-242) and read in full by the parent session.  The
-speculation below this heading is superseded; the earlier dichotomy claim
-"there is no third reading in which clause (ii) is irrelevant" was **wrong**,
-and the third reading is the one that obtains.
+24 PDF pages, corresponding to JSP 43:219--242) and read in full.  This section
+supersedes the former source-access speculation and corrects the first audit's
+quantifier error.
 
 **Clause (ii) is Section 5, Theorem 7a (p. 236).**  Verbatim: "A rule R with
 `a_0 = 0`, `a_1 = a_4 = 1` will generate from arbitrary finite initial
@@ -204,14 +195,18 @@ T1's.
 holds.  Machine-checked against the four conditions: (i) needs `a_6=a_7=1`;
 (ii) needs `a_6=1`; (iii) needs `a_7=1`; (iv) needs `a_5=1`.  All false.
 
-**The quantifier decides it, and T1 survives.**  Theorem 7a characterizes rules
-for which *arbitrary* (i.e. all) finite initial conditions generate at least one
-constant column *somewhere*.  Rule 30's failure yields only the negation:
-*there exists* a finite initial condition with no constant column.  T1 is
-universal over nonzero finite configurations and fixes the locus.  T1 is
-therefore **strictly stronger and not derivable from Jen 1986**.  Novelty is
-retained, and the note now positions against Theorem 7a explicitly rather than
-claiming absence of prior art.
+**The necessity direction decides the scope.**  Fix any finite initial
+condition and suppose its orbit contains an eventually-one temporal sequence.
+The necessity proof of Theorem 7a forces that orbit into one of alternatives
+(i)--(iv), each of which includes the coefficient requirements listed above.
+Rule 30 fails all four requirements, independently of the chosen initial
+condition.  Hence Jen already excludes an eventually-one column for **every**
+finite Rule 30 configuration.  The earlier existential reading was incorrect.
+The note's all-one fiber is an independent and more explicit classification,
+but its finite-support nonexistence consequence is prior art.  The printed
+paper only says that symmetric results hold for constant-zero sequences; it
+does not state the Rule-30 zero fiber, the sharp horizon, or the extremizer
+counts proved in the note.  Novelty claims must be limited accordingly.
 
 **The three circulating attributions are resolved**, all to different results in
 this one paper: "at most one periodic column" is Theorems 2a/2b (rule list
@@ -389,7 +384,7 @@ author carries full responsibility for the contents.
 - Eric Rowland, Associate Professor, Department of Mathematics, Hofstra
   University.  `ericrowland.github.io`; his email is deliberately obscured on
   the site's contact page, so use that page.  He cites Jen 1986 Theorem 4 by
-  number, which makes him the single best person to ask about clause (ii).
+  number; that attribution has now been checked against Jen's primary text.
 - Jarkko Kari, Professor of Mathematics, University of Turku, `jkari@utu.fi`.
 - Ville Salo, Associate Professor of Mathematics, University of Turku,
   `vosalo@utu.fi`.
@@ -404,7 +399,7 @@ cannot be asked about her own 1986 paper.  Cite the work.
 
 ## Reproducibility package
 
-- `zero-tail-note.tex`: standalone six-page theorem note in five sections,
+- `zero-tail-note.tex`: standalone six-page theorem note in six sections,
   with two generated space-time figures and verified author metadata.  The
   hand-drawn inverse-transducer schematic was cut; its worked example is now
   one sentence in the introduction.

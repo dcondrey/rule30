@@ -1,0 +1,3 @@
+n=30: 3000 random sources x 2 targets, 192000 columns: G1..G4 PASS; 192000 distinct zero-pattern pairs   [13s]
+n=40: 3000 random sources x 2 targets, 252000 columns: G1..G4 PASS; 252000 distinct zero-pattern pairs   [24s]
+n=50: 3000 random sources x 2 targets, 312000 columns: G1..G4 PASS; 312000 distinct zero-pattern pairs   [39s]

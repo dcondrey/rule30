@@ -1,0 +1,11 @@
+V0 (F1) (F2) on 16 pairs and (F3) on 4 values: PASS
+V2 [CONE] all binary words u <= 13, all n <= u: 196610 (word, n) pairs; (a) (b) (c) (d) PASS; pair key -> column u on [-u-1, n] and forced symbols to u' = 2n+1: PASS; 17827 distinct keys   [25s]
+V1 [CONE] Corollary 5.1 as printed ('1 + h(d) + h(d+1) = [T != 0]') holds on 0 of 3686392 window cells; corrected form ('= [T == 0]') holds on 3686392 of 3686392
+V3 n=15 near-miss W=111122211212112: forced continuation = Q, diagonal = 3^16 2, (a)-(d) on all 17 columns u = 15..31: PASS
+V3 n=5: 2 constant-Psi sources [('12121', '1211212', 1), ('22121', '1211212', 1)]; (a)-(d) hold on every column of each: PASS
+V3 n=6: 3 constant-Psi sources [('111222', '12111112', 0), ('112122', '12111112', 0), ('211222', '12111112', 0)]; (a)-(d) hold on every column of each: PASS
+V1 [n15+consts] Corollary 5.1 printed 0/1200, corrected 1200/1200
+V4 (e) #Phi=0 = (3^m+1)/2 through phi for m <= 9: PASS
+V5 Lemma 10 on the WHOLE column u (depths to u): 69984 replacements, odd-indexed invisible, even-indexed visible: PASS
+V6 control: linear rule with (F1) but E(phi) = E(r) (no shear) on u <= 8: (a) (b) still hold on all 3586 pairs, (c)/(d) fail on 1793 of 3586; so (F2) is load-bearing and the identity is not a tautology of (F1) alone
+ALL PASS   [26s]

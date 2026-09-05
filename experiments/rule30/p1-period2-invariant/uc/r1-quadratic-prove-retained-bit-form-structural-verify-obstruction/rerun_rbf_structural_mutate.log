@@ -1,0 +1,15 @@
+rbf_structural_checks.py args={'ub': 6, 'u4': 4, 'm': 4, 'mutate': True}
+S1 decoupling: H(phi(l,r)) = H(r)+1+[l=0], E(phi(l,r)) = E(r)+H(r)[Lo(l)=0] on all 16 pairs; phi right-bijective for each l PASS
+S2 boundary: BOUNDARY[s]=s^3, CONE[3][r]=BOUNDARY[r], H(s^3)=1+H(s), E(s^3)=E(s) on 4 symbols; E(1)=E(2)=E(1^3)=E(2^3)=0 PASS
+S3 kernel = triangle recurrence: 466 words (binary u<=6, four-state u<=4), every column PASS   [0s]
+S4 Lemma H and Lemma E on 17016 cells (binary prefixes u<=6 and four-state u<=4, all four e_u, every d in [-u,u]) PASS   [0s]
+Traceback (most recent call last):
+  File "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-quadratic-prove-retained-bit-form-structural/rbf_structural_checks.py", line 407, in <module>
+    main()
+  File "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-quadratic-prove-retained-bit-form-structural/rbf_structural_checks.py", line 394, in main
+    st = s5_statements(args.ub)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-quadratic-prove-retained-bit-form-structural/rbf_structural_checks.py", line 234, in s5_statements
+    assert H(cur[d]) == (1 if retained[d] else 0), ("b", word, n, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('b', (1,), 1, -1)

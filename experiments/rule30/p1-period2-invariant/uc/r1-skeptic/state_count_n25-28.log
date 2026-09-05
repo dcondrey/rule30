@@ -1,0 +1,20 @@
+n=25 c=2 deepest=16 Q_n=D_0=2123116 [33s]
+   k     N_k      D_k    D_E   D_HC  D_both  maxfib  pE_src  pE_st  pHC_st  pboth_st
+n=25 c=3 deepest=16 [5s]
+   k     N_k      D_k    D_E   D_HC  D_both  maxfib  pE_src  pE_st  pHC_st  pboth_st
+n=26 c=2 deepest=15 Q_n=D_0=3743069 [73s]
+   k     N_k      D_k    D_E   D_HC  D_both  maxfib  pE_src  pE_st  pHC_st  pboth_st
+n=26 c=3 deepest=15 [7s]
+   k     N_k      D_k    D_E   D_HC  D_both  maxfib  pE_src  pE_st  pHC_st  pboth_st
+n=27 c=2 deepest=17 Q_n=D_0=6597180 [216s]
+   k     N_k      D_k    D_E   D_HC  D_both  maxfib  pE_src  pE_st  pHC_st  pboth_st
+n=27 c=3 deepest=19 [27s]
+   k     N_k      D_k    D_E   D_HC  D_both  maxfib  pE_src  pE_st  pHC_st  pboth_st
+n=28 c=2 deepest=21 Q_n=D_0=11622852 [446s]
+   k     N_k      D_k    D_E   D_HC  D_both  maxfib  pE_src  pE_st  pHC_st  pboth_st
+n=28 c=3 deepest=17 [37s]
+   k     N_k      D_k    D_E   D_HC  D_both  maxfib  pE_src  pE_st  pHC_st  pboth_st
+
+pooled by absolute level k (all n, c above):  N  D  pE_src  pE_states  pHC_states  pboth_states  maxfib
+
+pooled by offset k - deepest:  D  pE_states  pHC_states  pboth_states

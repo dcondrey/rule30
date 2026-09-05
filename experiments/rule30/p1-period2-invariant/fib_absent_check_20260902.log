@@ -1,0 +1,4 @@
+n=18 c=2: runs of length >= 7: 606; containing 1221222: 67
+n=18 c=3: runs of length >= 7: 444; containing 1221222: 6
+n=19 c=2: runs of length >= 7: 837; containing 1221222: 32
+n=19 c=3: runs of length >= 7: 891; containing 1221222: 8

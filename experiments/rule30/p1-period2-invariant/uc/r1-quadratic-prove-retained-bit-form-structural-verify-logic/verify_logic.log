@@ -1,0 +1,7 @@
+verify_logic.py args={'nb': 11, 'u4r': 40, 'samples': 300, 'seed': 1, 'm': 13}
+V1 (a)(b)(c)(d) on 53244 (source, u) pairs, all binary sources n<=11, u=n..2n+2; 15682 distinct (n,u,Z_(u-1),Z_u) keys, each with one column u on [-u-1,n] and one forced future (symbols and hits to u=2n+2) PASS   [3s]
+V2 fibre probe: 14488 (n,u,Z_(u-1)) fibres, 940 with more than one column u; in every fibre #distinct columns == #distinct even-indexed even-bit vectors, every column carries exactly one even-indexed vector, and 329 columns are shared by windows differing only in odd-indexed even-bits.  So Z_(u-1) fails to determine column u because of the even-indexed bits (read), not the odd-indexed ones (discarded) PASS
+V3 Lemma H and Lemma E on 97200 cells: 300 random four-state prefixes of length 40 (seed 1), all four e_u, every d in [-u,u] PASS   [0s]
+V4 Theorem E by the bare Moore machine: N0(m) = (3^m+1)/2 for m<=13 (3^13 = 1594323 words at the top) PASS   [4s]
+ALL PASS   [7s]
+exit=0

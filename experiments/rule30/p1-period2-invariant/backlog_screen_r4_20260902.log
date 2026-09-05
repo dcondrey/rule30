@@ -1,0 +1,28 @@
+== V  min Hamming distance between Psi words under single toggle / reversal / complement, n=6..15
+   n=6 L=8: toggle min=0 (need 2.0)  reversal min=0 (need 1.6)  complement min=1 (need 1.3)
+   n=7 L=9: toggle min=0 (need 2.2)  reversal min=1 (need 1.8)  complement min=2 (need 1.5)
+   n=8 L=10: toggle min=0 (need 2.5)  reversal min=2 (need 2.0)  complement min=1 (need 1.7)
+   n=9 L=11: toggle min=0 (need 2.8)  reversal min=1 (need 2.2)  complement min=2 (need 1.8)
+   n=10 L=12: toggle min=0 (need 3.0)  reversal min=1 (need 2.4)  complement min=2 (need 2.0)
+   n=11 L=13: toggle min=0 (need 3.2)  reversal min=2 (need 2.6)  complement min=1 (need 2.2)
+   n=12 L=14: toggle min=0 (need 3.5)  reversal min=1 (need 2.8)  complement min=1 (need 2.3)
+   n=13 L=15: toggle min=0 (need 3.8)  reversal min=0 (need 3.0)  complement min=2 (need 2.5)
+   n=14 L=16: toggle min=0 (need 4.0)  reversal min=0 (need 3.2)  complement min=1 (need 2.7)
+   n=15 L=17: toggle min=0 (need 4.2)  reversal min=1 (need 3.4)  complement min=1 (need 2.8)
+
+== W  reverse-affine-cancellation on forced columns of survivors, n=8..12
+   columns=10272 identity=4910 zero-translation=4910  -> KILLED
+
+== X  spiral parity ladder: longest constant run of cumulative parity of (H+Lo) over spiral-ordered diagonal, n=8..14
+   n=8: longest constant run 7 (need < 2.0)  -> KILLED
+   n=9: longest constant run 8 (need < 2.2)  -> KILLED
+   n=10: longest constant run 8 (need < 2.5)  -> KILLED
+   n=11: longest constant run 8 (need < 2.8)  -> KILLED
+   n=12: longest constant run 8 (need < 3.0)  -> KILLED
+   n=13: longest constant run 9 (need < 3.2)  -> KILLED
+   n=14: longest constant run 10 (need < 3.5)  -> KILLED
+
+== Y  Fibonacci-word factors as fully structured sources, n<=100, r=0, both c
+   RW COUNTEREXAMPLE from Fibonacci factor at n=5 c=3: 121211211212
+   max (run - 0.6n) = 4.0 at (n,c,run)=(5, 3, 7)
+

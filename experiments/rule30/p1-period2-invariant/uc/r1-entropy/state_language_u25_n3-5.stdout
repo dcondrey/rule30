@@ -1,0 +1,102 @@
+# part 1: reachable column language.  u = prefix length; |C_u| = distinct full columns u-1
+  u      |C_u|     2^u   |C_u|/|C_{u-1}|  log2 ratio   max fibre   sec
+  1          2        2          -           -            1
+  2          4        4        2.0000       1.0000         1    0.0
+  3          8        8        2.0000       1.0000         1    0.0
+  4         13       16        1.6250       0.7004         2    0.0
+  5         23       32        1.7692       0.8231         3    0.0
+  6         39       64        1.6957       0.7618         3    0.0
+  7         73      128        1.8718       0.9044         3    0.0
+  8        129      256        1.7671       0.8214         6    0.0
+  9        232      512        1.7984       0.8468         8    0.0
+ 10        410     1024        1.7672       0.8215         8    0.0
+ 11        742     2048        1.8098       0.8558         9    0.0
+ 12       1329     4096        1.7911       0.8409        16    0.0
+ 13       2376     8192        1.7878       0.8382        24    0.0
+ 14       4265    16384        1.7950       0.8440        26    0.0
+ 15       7560    32768        1.7726       0.8258        26    0.0
+ 16      13382    65536        1.7701       0.8238        46    0.0
+ 17      23803   131072        1.7787       0.8308        62    0.1
+ 18      42199   262144        1.7728       0.8261        72    0.2
+ 19      74613   524288        1.7681       0.8222        72    0.4
+ 20     131873  1048576        1.7674       0.8217       110    0.8
+ 21     233042  2097152        1.7672       0.8214       160    1.3
+ 22     411664  4194304        1.7665       0.8209       201    2.5
+ 23     726498  8388608        1.7648       0.8195       256    6.0
+ 24    1282142 16777216        1.7648       0.8195       340   11.0
+ 25    2261280 33554432        1.7637       0.8186       438   20.0
+
+# linear recurrence test on |C_u| (exact rational arithmetic), transient skipped = 4
+  order 1: coefficients ['39/23']; verification failures on 19 of 19 held-out terms
+  order 2: coefficients ['60/79', '149/79']; verification failures on 17 of 17 held-out terms
+  order 3: coefficients ['751/289', '-25/578', '-1483/578']; verification failures on 15 of 15 held-out terms
+  order 4: coefficients ['7984/10163', '-1406/10163', '10227/10163', '44855/10163']; verification failures on 13 of 13 held-out terms
+  order 5: coefficients ['-88267/6542', '35878/3271', '-2236/3271', '122837/6542', '410411/6542']; verification failures on 11 of 11 held-out terms
+  order 6: coefficients ['-8345639/1953743', '-112951274/5861229', '115290589/5861229', '21598090/5861229', '8032154/177613', '610101509/5861229']; verification failures on 9 of 9 held-out terms
+  order 7: coefficients ['49517056393/19522432960', '-175902419/131023040', '3787474449/9761216480', '-154198038393/19522432960', '24426196275/1952243296', '54930771863/9761216480', '-1176547517/131023040']; verification failures on 7 of 7 held-out terms
+  order 8: coefficients ['29603529256010/14537164704459', '2170111617544/14537164704459', '9764665614680/14537164704459', '-16457148975904/4845721568153', '116661186969/28009951261', '53592518476437/4845721568153', '-236607524981186/14537164704459', '-403565142577606/14537164704459']; verification failures on 5 of 5 held-out terms
+  -> no exact linear recurrence of order <= 8 found
+
+# n=3 c=2: |C_n|=8 states, 2^n=8 sources, mean fibre 1.00
+  k   NE_st  NE_src  NJ_st  NJ_src | NE_st/(C 2^-k)  NJ_st/(C 2^-k)  NJ_st/golden_st | NE_src/2^(n-k)  NJ_src/2^(n-k) | mean fibre E-surv
+  0       8       8      8       8 |      1.000          1.000           1.000    |      1.000          1.000    |    1.00
+  1       2       2      1       1 |      0.500          0.250           0.333    |      0.500          0.250    |    1.00
+  deepest E-run 1, deepest joint run 1 (need 5); max NE_st/(C 2^-k) = 1.000, max NJ_st/(C 2^-k) = 1.000, max NJ_st/golden_st = 1.000
+  first HC violation index among the 0 E-survivor states with E-run >= n-1: {}
+
+# n=3 c=3: |C_n|=8 states, 2^n=8 sources, mean fibre 1.00
+  k   NE_st  NE_src  NJ_st  NJ_src | NE_st/(C 2^-k)  NJ_st/(C 2^-k)  NJ_st/golden_st | NE_src/2^(n-k)  NJ_src/2^(n-k) | mean fibre E-surv
+  0       8       8      8       8 |      1.000          1.000           1.000    |      1.000          1.000    |    1.00
+  1       6       6      6       6 |      1.500          1.500           2.000    |      1.500          1.500    |    1.00
+  2       2       2      2       2 |      1.000          1.000           1.600    |      1.000          1.000    |    1.00
+  3       2       2      2       2 |      2.000          2.000           4.000    |      2.000          2.000    |    1.00
+  4       2       2      2       2 |      4.000          4.000           9.846    |      4.000          4.000    |    1.00
+  deepest E-run 4, deepest joint run 4 (need 5); max NE_st/(C 2^-k) = 4.000, max NJ_st/(C 2^-k) = 4.000, max NJ_st/golden_st = 9.846
+  first HC violation index among the 2 E-survivor states with E-run >= n-1: {'none': 2}
+
+# n=4 c=2: |C_n|=13 states, 2^n=16 sources, mean fibre 1.23
+  k   NE_st  NE_src  NJ_st  NJ_src | NE_st/(C 2^-k)  NJ_st/(C 2^-k)  NJ_st/golden_st | NE_src/2^(n-k)  NJ_src/2^(n-k) | mean fibre E-surv
+  0      13      16     13      16 |      1.000          1.000           1.000    |      1.000          1.000    |    1.23
+  1       9      12      6       8 |      1.385          0.923           1.231    |      1.500          1.000    |    1.33
+  2       8      11      5       7 |      2.462          1.538           2.462    |      2.750          1.750    |    1.38
+  deepest E-run 2, deepest joint run 2 (need 6); max NE_st/(C 2^-k) = 2.462, max NJ_st/(C 2^-k) = 1.538, max NJ_st/golden_st = 2.462
+  first HC violation index among the 0 E-survivor states with E-run >= n-1: {}
+
+# n=4 c=3: |C_n|=13 states, 2^n=16 sources, mean fibre 1.23
+  k   NE_st  NE_src  NJ_st  NJ_src | NE_st/(C 2^-k)  NJ_st/(C 2^-k)  NJ_st/golden_st | NE_src/2^(n-k)  NJ_src/2^(n-k) | mean fibre E-surv
+  0      13      16     13      16 |      1.000          1.000           1.000    |      1.000          1.000    |    1.23
+  1       4       4      3       3 |      0.615          0.462           0.615    |      0.500          0.375    |    1.00
+  2       4       4      2       2 |      1.231          0.615           0.985    |      1.000          0.500    |    1.00
+  3       1       1      0       0 |      0.615          0.000           0.000    |      0.500          0.000    |    1.00
+  deepest E-run 3, deepest joint run 2 (need 6); max NE_st/(C 2^-k) = 1.231, max NJ_st/(C 2^-k) = 1.000, max NJ_st/golden_st = 1.000
+  first HC violation index among the 1 E-survivor states with E-run >= n-1: {0: 1}
+
+# n=5 c=2: |C_n|=23 states, 2^n=32 sources, mean fibre 1.39
+  k   NE_st  NE_src  NJ_st  NJ_src | NE_st/(C 2^-k)  NJ_st/(C 2^-k)  NJ_st/golden_st | NE_src/2^(n-k)  NJ_src/2^(n-k) | mean fibre E-surv
+  0      23      32     23      32 |      1.000          1.000           1.000    |      1.000          1.000    |    1.39
+  1      10      14      8       9 |      0.870          0.696           0.928    |      0.875          0.562    |    1.40
+  2       1       1      1       1 |      0.174          0.174           0.278    |      0.125          0.125    |    1.00
+  deepest E-run 2, deepest joint run 2 (need 7); max NE_st/(C 2^-k) = 1.000, max NJ_st/(C 2^-k) = 1.000, max NJ_st/golden_st = 1.000
+  first HC violation index among the 0 E-survivor states with E-run >= n-1: {}
+
+# n=5 c=3: |C_n|=23 states, 2^n=32 sources, mean fibre 1.39
+  k   NE_st  NE_src  NJ_st  NJ_src | NE_st/(C 2^-k)  NJ_st/(C 2^-k)  NJ_st/golden_st | NE_src/2^(n-k)  NJ_src/2^(n-k) | mean fibre E-surv
+  0      23      32     23      32 |      1.000          1.000           1.000    |      1.000          1.000    |    1.39
+  1      13      18      8      12 |      1.130          0.696           0.928    |      1.125          0.750    |    1.38
+  2       8      13      4       6 |      1.391          0.696           1.113    |      1.625          0.750    |    1.62
+  3       3       7      1       2 |      1.043          0.348           0.696    |      1.750          0.500    |    2.33
+  4       2       4      1       2 |      1.391          0.696           1.712    |      2.000          1.000    |    2.00
+  5       2       4      0       0 |      2.783          0.000           0.000    |      4.000          0.000    |    2.00
+  6       1       2      0       0 |      2.783          0.000           0.000    |      4.000          0.000    |    2.00
+  7       1       2      0       0 |      5.565          0.000           0.000    |      8.000          0.000    |    2.00
+  8       1       2      0       0 |     11.130          0.000           0.000    |     16.000          0.000    |    2.00
+  deepest E-run 8, deepest joint run 4 (need 7); max NE_st/(C 2^-k) = 11.130, max NJ_st/(C 2^-k) = 1.000, max NJ_st/golden_st = 1.712
+  first HC violation index among the 2 E-survivor states with E-run >= n-1: {0: 1, 4: 1}
+
+# summary: n c |C_n| deepestE deepestJ need max(NE_st/null) max(NJ_st/null) max(NJ_st/golden)
+  3 2        8    1    1    5     1.000     1.000     1.000
+  3 3        8    4    4    5     4.000     4.000     9.846
+  4 2       13    2    2    6     2.462     1.538     2.462
+  4 3       13    3    2    6     1.231     1.000     1.000
+  5 2       23    2    2    7     1.000     1.000     1.000
+  5 3       23    8    4    7    11.130     1.000     1.712

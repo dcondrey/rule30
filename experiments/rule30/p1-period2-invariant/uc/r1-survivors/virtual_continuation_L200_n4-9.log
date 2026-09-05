@@ -1,0 +1,97 @@
+virtual continuation e* to length L=200, n=4..9
+g[y][l] (upward step r = g[y][l], CONE[l][r] = y):
+  y=0: 0 3 2 3
+  y=1: 1 2 3 2
+  y=2: 3 1 1 1
+  y=3: 2 0 0 0
+
+n=4 c=2: 16 sources, kernel mismatches=0
+  first non-binary index distribution: 0:4, 1:1, 2:11
+  max first non-binary = 2 (BWH+ needs >= 6)
+  eventually periodic within L: 0/16; periods: 
+  periodic parts entirely binary: 0
+  longest binary run anywhere in e*: 10 (W=1221); longest hard-core binary run anywhere: 8
+
+n=4 c=3: 16 sources, kernel mismatches=0
+  first non-binary index distribution: 0:12, 2:3, 3:1
+  max first non-binary = 3 (BWH+ needs >= 6)
+  eventually periodic within L: 1/16; periods: 1:1
+  transient max=193, distribution: 193:1
+  periodic parts entirely binary: 0
+  longest binary run anywhere in e*: 11 (W=2112); longest hard-core binary run anywhere: 8
+
+n=5 c=2: 32 sources, kernel mismatches=0
+  first non-binary index distribution: 0:18, 1:13, 2:1
+  max first non-binary = 2 (BWH+ needs >= 7)
+  eventually periodic within L: 0/32; periods: 
+  periodic parts entirely binary: 0
+  longest binary run anywhere in e*: 14 (W=12211); longest hard-core binary run anywhere: 8
+
+n=5 c=3: 32 sources, kernel mismatches=0
+  first non-binary index distribution: 0:14, 1:5, 2:6, 3:3, 5:2, 8:2
+  max first non-binary = 8 (BWH+ needs >= 7)
+  eventually periodic within L: 0/32; periods: 
+  periodic parts entirely binary: 0
+  longest binary run anywhere in e*: 14 (W=12111); longest hard-core binary run anywhere: 8
+
+n=6 c=2: 64 sources, kernel mismatches=0
+  first non-binary index distribution: 0:32, 1:17, 2:6, 3:1, 4:5, 9:3
+  max first non-binary = 9 (BWH+ needs >= 8)
+  eventually periodic within L: 0/64; periods: 
+  periodic parts entirely binary: 0
+  longest binary run anywhere in e*: 11 (W=122112); longest hard-core binary run anywhere: 10
+
+n=6 c=3: 64 sources, kernel mismatches=0
+  first non-binary index distribution: 0:32, 1:15, 2:7, 3:8, 4:1, 6:1
+  max first non-binary = 6 (BWH+ needs >= 8)
+  eventually periodic within L: 4/64; periods: 1:4
+  transient max=191, distribution: 190:2, 191:2
+  periodic parts entirely binary: 1
+  longest binary run anywhere in e*: 15 (W=122212); longest hard-core binary run anywhere: 10
+
+n=7 c=2: 128 sources, kernel mismatches=0
+  first non-binary index distribution: 0:74, 1:28, 2:8, 3:7, 4:3, 5:2, 6:3, 7:3
+  max first non-binary = 7 (BWH+ needs >= 9)
+  eventually periodic within L: 2/128; periods: 1:2
+  transient max=189, distribution: 189:2
+  periodic parts entirely binary: 2
+  longest binary run anywhere in e*: 12 (W=1111211); longest hard-core binary run anywhere: 9
+
+n=7 c=3: 128 sources, kernel mismatches=0
+  first non-binary index distribution: 0:54, 1:48, 2:8, 3:6, 4:10, 6:2
+  max first non-binary = 6 (BWH+ needs >= 9)
+  eventually periodic within L: 11/128; periods: 1:9, 2:2
+  transient max=190, distribution: 187:2, 190:9
+  periodic parts entirely binary: 5
+  longest binary run anywhere in e*: 17 (W=1121112); longest hard-core binary run anywhere: 10
+
+n=8 c=2: 256 sources, kernel mismatches=0
+  first non-binary index distribution: 0:132, 1:56, 2:44, 3:5, 4:5, 5:4, 6:10
+  max first non-binary = 6 (BWH+ needs >= 10)
+  eventually periodic within L: 0/256; periods: 
+  periodic parts entirely binary: 0
+  longest binary run anywhere in e*: 11 (W=12112211); longest hard-core binary run anywhere: 10
+
+n=8 c=3: 256 sources, kernel mismatches=0
+  first non-binary index distribution: 0:124, 1:62, 2:45, 3:12, 4:1, 5:7, 7:5
+  max first non-binary = 7 (BWH+ needs >= 10)
+  eventually periodic within L: 24/256; periods: 1:24
+  transient max=189, distribution: 187:3, 188:4, 189:17
+  periodic parts entirely binary: 5
+  longest binary run anywhere in e*: 16 (W=11221221); longest hard-core binary run anywhere: 14
+
+n=9 c=2: 512 sources, kernel mismatches=0
+  first non-binary index distribution: 0:296, 1:110, 2:67, 3:26, 4:11, 5:2
+  max first non-binary = 5 (BWH+ needs >= 11)
+  eventually periodic within L: 34/512; periods: 1:34
+  transient max=188, distribution: 186:2, 188:32
+  periodic parts entirely binary: 16
+  longest binary run anywhere in e*: 19 (W=122111221); longest hard-core binary run anywhere: 10
+
+n=9 c=3: 512 sources, kernel mismatches=0
+  first non-binary index distribution: 0:216, 1:135, 2:59, 3:36, 4:26, 5:22, 6:8, 8:10
+  max first non-binary = 8 (BWH+ needs >= 11)
+  eventually periodic within L: 37/512; periods: 1:37
+  transient max=188, distribution: 186:1, 187:6, 188:30
+  periodic parts entirely binary: 15
+  longest binary run anywhere in e*: 12 (W=111212121); longest hard-core binary run anywhere: 11

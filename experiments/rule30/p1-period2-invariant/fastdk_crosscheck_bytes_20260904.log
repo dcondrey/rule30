@@ -1,0 +1,8 @@
+n=  8 c=2 r=0: PASS  brute=    0.03s tuple=    0.01s bytes=    0.01s  max_survival=3
+n=  8 c=3 r=0: PASS  brute=    0.03s tuple=    0.01s bytes=    0.01s  max_survival=6
+n= 10 c=2 r=0: PASS  brute=    0.27s tuple=    0.07s bytes=    0.08s  max_survival=5
+n= 10 c=3 r=0: PASS  brute=    0.36s tuple=    0.05s bytes=    0.12s  max_survival=7
+n= 12 c=2 r=0: PASS  brute=    2.30s tuple=    0.28s bytes=    0.33s  max_survival=9
+n= 12 c=3 r=0: PASS  brute=    2.23s tuple=    0.25s bytes=    0.35s  max_survival=8
+n= 14 c=2 r=0: PASS  brute=   13.09s tuple=    1.60s bytes=    1.67s  max_survival=10
+n= 14 c=3 r=0: PASS  brute=   12.71s tuple=    1.36s bytes=    1.50s  max_survival=8

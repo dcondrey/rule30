@@ -1,0 +1,135 @@
+P0 orientation: standard rows 0..5 mismatches=0; centre column first 40 == OEIS A051023 prefix: True
+P0 done ok=True [0.0s]
+P1 detector gate: 400 sequences (200 planted periods q<=40, 200 random); failures=0
+P1 done ok=True [0.1s]
+P2 Lemma B on cylinders (driven and plain, L=3..14, T=24000): 96 configurations with columns 0 and -1 eventually periodic (onset <= T/2, >= 4 periods); every column P-periodic from max(t0',t1) failures=0 (P = pq in 81, P = lcm(p,q) in 15 where pq did not fit the horizon); skipped: no trusted period=0, no fit=0
+P2 done ok=True [28.7s]
+P4 (a1) gate with independent kernels: T=16384, cells=268500995, row mismatches=0
+P4 done ok=True [0.8s]
+P5 (a5)/(a6)/D4 on synthetic r: 3928 drives (primitive words period<=10, random prefixes, T=5000); z_(i+k)=z_i+p failures=0; enumeration-periodic r|Z => l (qp)-periodic failures=0; D4 equivalence (both directions) failures=0
+P5 done ok=True [8.1s]
+  P3 y=1@x=-1, c=0^w: T=65536 Q=4096 ones(l)=32602 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=1@x=-2, c=0^w: T=65536 Q=4096 ones(l)=32984 l eventual_period=None longest periodic tail=4097 at q=4094 edge violations=0
+  P3 y=1@x=-3, c=0^w: T=65536 Q=4096 ones(l)=32599 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=1@x=-5, c=0^w: T=65536 Q=4096 ones(l)=32598 l eventual_period=None longest periodic tail=4097 at q=4095 edge violations=0
+  P3 y=1@x=-8, c=0^w: T=65536 Q=4096 ones(l)=32981 l eventual_period=None longest periodic tail=4099 at q=4095 edge violations=0
+  P3 y=1@x=-21, c=0^w: T=65536 Q=4096 ones(l)=32662 l eventual_period=None longest periodic tail=4096 at q=4094 edge violations=0
+  P3 y=1@x=-100, c=0^w: T=65536 Q=4096 ones(l)=33003 l eventual_period=None longest periodic tail=4098 at q=4095 edge violations=0
+  P3 y=1^2@[-2,-1], c=0^w: T=65536 Q=4096 ones(l)=32601 l eventual_period=None longest periodic tail=4096 at q=4095 edge violations=0
+  P3 y=1^5@[-5,-1], c=0^w: T=65536 Q=4096 ones(l)=32836 l eventual_period=None longest periodic tail=4098 at q=4094 edge violations=0
+  P3 y=1^16@[-16,-1], c=0^w: T=65536 Q=4096 ones(l)=32737 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=1^33@[-33,-1], c=0^w: T=65536 Q=4096 ones(l)=32886 l eventual_period=None longest periodic tail=4097 at q=4092 edge violations=0
+  P3 y=1^64@[-64,-1], c=0^w: T=65536 Q=4096 ones(l)=32986 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P3 y=random width 40, c=0^w: T=65536 Q=4096 ones(l)=32647 l eventual_period=None longest periodic tail=4097 at q=4095 edge violations=0
+  P3 y=0, c=0^0 1 0^w: T=65536 Q=4096 ones(l)=32602 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=0, c=0^0 1 (01)^w: T=65536 Q=4096 ones(l)=32791 l eventual_period=None longest periodic tail=4099 at q=4096 edge violations=0
+  P3 y=0, c=0^0 1 (0111)^w: T=65536 Q=4096 ones(l)=32570 l eventual_period=None longest periodic tail=4099 at q=4094 edge violations=0
+  P3 y=0, c=0^7 1 0^w: T=65536 Q=4096 ones(l)=32599 l eventual_period=None longest periodic tail=4103 at q=4096 edge violations=0
+  P3 y=0, c=0^7 1 (01)^w: T=65536 Q=4096 ones(l)=32789 l eventual_period=None longest periodic tail=4098 at q=4095 edge violations=0
+  P3 y=0, c=0^7 1 (0111)^w: T=65536 Q=4096 ones(l)=32566 l eventual_period=None longest periodic tail=4097 at q=4094 edge violations=0
+  P3 y=0, c=0^100 1 0^w: T=65536 Q=4096 ones(l)=32545 l eventual_period=None longest periodic tail=4096 at q=4094 edge violations=0
+  P3 y=0, c=0^100 1 (01)^w: T=65536 Q=4096 ones(l)=32739 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=0, c=0^100 1 (0111)^w: T=65536 Q=4096 ones(l)=32529 l eventual_period=None longest periodic tail=4099 at q=4094 edge violations=0
+  P3 y=0, c=0^1000 1 0^w: T=65536 Q=4096 ones(l)=32106 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=0, c=0^1000 1 (01)^w: T=65536 Q=4096 ones(l)=32293 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P3 y=0, c=0^1000 1 (0111)^w: T=65536 Q=4096 ones(l)=32053 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=1@x=-200, c=(01)^w: T=65536 Q=4096 ones(l)=32837 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=1@x=-200, c=(10)^w: T=65536 Q=4096 ones(l)=32872 l eventual_period=None longest periodic tail=4098 at q=4094 edge violations=0
+  P3 y=1^64, c=(001)^w: T=65536 Q=4096 ones(l)=32762 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=1^64, c=1^w: T=65536 Q=4096 ones(l)=32815 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=0, c=1^w: T=65536 Q=4096 ones(l)=32744 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=0, c=1 then 100000010^w (p=9): T=65536 Q=4096 ones(l)=32816 l eventual_period=None longest periodic tail=4097 at q=4095 edge violations=0
+  P3 y=0, c=1 then 100110010^w (p=9): T=65536 Q=4096 ones(l)=32804 l eventual_period=None longest periodic tail=4099 at q=4096 edge violations=0
+  P3 y=0, c=1 then 101000001^w (p=9): T=65536 Q=4096 ones(l)=32751 l eventual_period=None longest periodic tail=4098 at q=4094 edge violations=0
+  P3 y=0, c=1 then 110001110^w (p=9): T=65536 Q=4096 ones(l)=32871 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=0, c=1 then 010011101^w (p=9): T=65536 Q=4096 ones(l)=32874 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=0, c=1 then 100001111^w (p=9): T=65536 Q=4096 ones(l)=32928 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=0, c=1 then 1110010001^w (p=10): T=65536 Q=4096 ones(l)=32811 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P3 y=0, c=1 then 1010111101^w (p=10): T=65536 Q=4096 ones(l)=32793 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P3 y=0, c=1 then 1100100001^w (p=10): T=65536 Q=4096 ones(l)=32868 l eventual_period=None longest periodic tail=4099 at q=4095 edge violations=0
+  P3 y=0, c=1 then 1011000001^w (p=10): T=65536 Q=4096 ones(l)=32638 l eventual_period=None longest periodic tail=4099 at q=4096 edge violations=0
+  P3 y=0, c=1 then 0001011100^w (p=10): T=65536 Q=4096 ones(l)=32455 l eventual_period=None longest periodic tail=4096 at q=4095 edge violations=0
+  P3 y=0, c=1 then 0110000010^w (p=10): T=65536 Q=4096 ones(l)=32929 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=0, c=1 then 11000001011^w (p=11): T=65536 Q=4096 ones(l)=32862 l eventual_period=None longest periodic tail=4102 at q=4095 edge violations=0
+  P3 y=0, c=1 then 11001111011^w (p=11): T=65536 Q=4096 ones(l)=32960 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=0, c=1 then 10001111000^w (p=11): T=65536 Q=4096 ones(l)=32835 l eventual_period=None longest periodic tail=4097 at q=4095 edge violations=0
+  P3 y=0, c=1 then 00010001111^w (p=11): T=65536 Q=4096 ones(l)=32815 l eventual_period=None longest periodic tail=4099 at q=4096 edge violations=0
+  P3 y=0, c=1 then 10011000100^w (p=11): T=65536 Q=4096 ones(l)=32722 l eventual_period=None longest periodic tail=4099 at q=4096 edge violations=0
+  P3 y=0, c=1 then 01111001101^w (p=11): T=65536 Q=4096 ones(l)=32942 l eventual_period=None longest periodic tail=4099 at q=4094 edge violations=0
+  P3 y=0, c=1 then 010001011011^w (p=12): T=65536 Q=4096 ones(l)=32714 l eventual_period=None longest periodic tail=4100 at q=4095 edge violations=0
+  P3 y=0, c=1 then 011010000111^w (p=12): T=65536 Q=4096 ones(l)=32793 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P3 y=0, c=1 then 100011000011^w (p=12): T=65536 Q=4096 ones(l)=32843 l eventual_period=None longest periodic tail=4096 at q=4093 edge violations=0
+  P3 y=0, c=1 then 000100111010^w (p=12): T=65536 Q=4096 ones(l)=32716 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=0, c=1 then 010001111101^w (p=12): T=65536 Q=4096 ones(l)=32811 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=0, c=1 then 010001111001^w (p=12): T=65536 Q=4096 ones(l)=32816 l eventual_period=None longest periodic tail=4097 at q=4095 edge violations=0
+  P3 y=random width 7, c=001000101^w (p=9): T=65536 Q=4096 ones(l)=32938 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P3 y=random width 14, c=010110101^w (p=9): T=65536 Q=4096 ones(l)=32771 l eventual_period=None longest periodic tail=4096 at q=4092 edge violations=0
+  P3 y=random width 14, c=101010001^w (p=9): T=65536 Q=4096 ones(l)=32944 l eventual_period=None longest periodic tail=4096 at q=4090 edge violations=0
+  P3 y=random width 6, c=011010101001^w (p=12): T=65536 Q=4096 ones(l)=32819 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P3 y=random width 16, c=011100100101^w (p=12): T=65536 Q=4096 ones(l)=32933 l eventual_period=None longest periodic tail=4102 at q=4095 edge violations=0
+  P3 y=random width 13, c=100100000110^w (p=12): T=65536 Q=4096 ones(l)=32558 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+P3 SUMMARY (rule 30): 60 structured drives, T=65536, Q=4096: l eventually periodic in 0/60; moving-edge violations 0; longest periodic tail min/median/max = 4096/4097/4103 (random null about log2(T*Q) = 28.0) [26s]
+P3 done ok=True [26.5s]
+  P6 y=1@x=-1, c=0^w: T=65536 Q=4096 ones(l)=16 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=1@x=-2, c=0^w: T=65536 Q=4096 ones(l)=15 l eventual_period=None longest periodic tail=4099 at q=4096 edge violations=0
+  P6 y=1@x=-3, c=0^w: T=65536 Q=4096 ones(l)=29 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=1@x=-5, c=0^w: T=65536 Q=4096 ones(l)=41 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=1@x=-8, c=0^w: T=65536 Q=4096 ones(l)=13 l eventual_period=None longest periodic tail=4105 at q=4096 edge violations=0
+  P6 y=1@x=-21, c=0^w: T=65536 Q=4096 ones(l)=93 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=1@x=-100, c=0^w: T=65536 Q=4096 ones(l)=66 l eventual_period=None longest periodic tail=4101 at q=4096 edge violations=0
+  P6 y=1^2@[-2,-1], c=0^w: T=65536 Q=4096 ones(l)=31 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=1^5@[-5,-1], c=0^w: T=65536 Q=4096 ones(l)=57 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=1^16@[-16,-1], c=0^w: T=65536 Q=4096 ones(l)=64 l eventual_period=None longest periodic tail=4105 at q=4096 edge violations=0
+  P6 y=1^33@[-33,-1], c=0^w: T=65536 Q=4096 ones(l)=114 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=1^64@[-64,-1], c=0^w: T=65536 Q=4096 ones(l)=76 l eventual_period=None longest periodic tail=4129 at q=4096 edge violations=0
+  P6 y=random width 40, c=0^w: T=65536 Q=4096 ones(l)=204 l eventual_period=None longest periodic tail=4099 at q=4096 edge violations=0
+  P6 y=0, c=0^0 1 0^w: T=65536 Q=4096 ones(l)=16 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=0^0 1 (01)^w: T=65536 Q=4096 ones(l)=21845 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=0^0 1 (0111)^w: T=65536 Q=4096 ones(l)=43690 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=0^7 1 0^w: T=65536 Q=4096 ones(l)=15 l eventual_period=None longest periodic tail=32762 at q=1 edge violations=0
+  P6 y=0, c=0^7 1 (01)^w: T=65536 Q=4096 ones(l)=21843 l eventual_period=None longest periodic tail=32764 at q=2 edge violations=0
+  P6 y=0, c=0^7 1 (0111)^w: T=65536 Q=4096 ones(l)=43686 l eventual_period=None longest periodic tail=32763 at q=4 edge violations=0
+  P6 y=0, c=0^100 1 0^w: T=65536 Q=4096 ones(l)=15 l eventual_period=None longest periodic tail=32669 at q=1 edge violations=0
+  P6 y=0, c=0^100 1 (01)^w: T=65536 Q=4096 ones(l)=21796 l eventual_period=None longest periodic tail=32671 at q=2 edge violations=0
+  P6 y=0, c=0^100 1 (0111)^w: T=65536 Q=4096 ones(l)=43616 l eventual_period=None longest periodic tail=32670 at q=4 edge violations=0
+  P6 y=0, c=0^1000 1 0^w: T=65536 Q=4096 ones(l)=15 l eventual_period=None longest periodic tail=31769 at q=1 edge violations=0
+  P6 y=0, c=0^1000 1 (01)^w: T=65536 Q=4096 ones(l)=21346 l eventual_period=None longest periodic tail=31771 at q=2 edge violations=0
+  P6 y=0, c=0^1000 1 (0111)^w: T=65536 Q=4096 ones(l)=42941 l eventual_period=None longest periodic tail=31770 at q=4 edge violations=0
+  P6 y=1@x=-200, c=(01)^w: T=65536 Q=4096 ones(l)=21904 l eventual_period=None longest periodic tail=4096 at q=4095 edge violations=0
+  P6 y=1@x=-200, c=(10)^w: T=65536 Q=4096 ones(l)=21842 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=1^64, c=(001)^w: T=65536 Q=4096 ones(l)=26246 l eventual_period=None longest periodic tail=4128 at q=4095 edge violations=0
+  P6 y=1^64, c=1^w: T=65536 Q=4096 ones(l)=43690 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=0, c=1^w: T=65536 Q=4096 ones(l)=43690 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=0, c=1 then 001010101^w (p=9): T=65536 Q=4096 ones(l)=23683 l eventual_period=None longest periodic tail=4096 at q=4094 edge violations=0
+  P6 y=0, c=1 then 000111101^w (p=9): T=65536 Q=4096 ones(l)=32347 l eventual_period=None longest periodic tail=4096 at q=4095 edge violations=0
+  P6 y=0, c=1 then 111001111^w (p=9): T=65536 Q=4096 ones(l)=27082 l eventual_period=None longest periodic tail=4097 at q=4093 edge violations=0
+  P6 y=0, c=1 then 010011000^w (p=9): T=65536 Q=4096 ones(l)=33521 l eventual_period=None longest periodic tail=4098 at q=4093 edge violations=0
+  P6 y=0, c=1 then 101101011^w (p=9): T=65536 Q=4096 ones(l)=36805 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=0, c=1 then 101001000^w (p=9): T=65536 Q=4096 ones(l)=37108 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=1 then 1101011000^w (p=10): T=65536 Q=4096 ones(l)=35213 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=0, c=1 then 0000000101^w (p=10): T=65536 Q=4096 ones(l)=13482 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=1 then 0100001100^w (p=10): T=65536 Q=4096 ones(l)=29767 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=1 then 1001101110^w (p=10): T=65536 Q=4096 ones(l)=38758 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=1 then 1100001101^w (p=10): T=65536 Q=4096 ones(l)=35205 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=0, c=1 then 1100001010^w (p=10): T=65536 Q=4096 ones(l)=28572 l eventual_period=None longest periodic tail=4099 at q=4096 edge violations=0
+  P6 y=0, c=1 then 00100110011^w (p=11): T=65536 Q=4096 ones(l)=25790 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=0, c=1 then 11000000010^w (p=11): T=65536 Q=4096 ones(l)=41260 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=1 then 10010101011^w (p=11): T=65536 Q=4096 ones(l)=29471 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=0, c=1 then 10110001110^w (p=11): T=65536 Q=4096 ones(l)=32048 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=0, c=1 then 01101010010^w (p=11): T=65536 Q=4096 ones(l)=33897 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=0, c=1 then 10110110011^w (p=11): T=65536 Q=4096 ones(l)=37918 l eventual_period=None longest periodic tail=4103 at q=4096 edge violations=0
+  P6 y=0, c=1 then 010101101110^w (p=12): T=65536 Q=4096 ones(l)=32020 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=0, c=1 then 010011011111^w (p=12): T=65536 Q=4096 ones(l)=39337 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=0, c=1 then 110100011110^w (p=12): T=65536 Q=4096 ones(l)=36411 l eventual_period=None longest periodic tail=4098 at q=4095 edge violations=0
+  P6 y=0, c=1 then 110000111101^w (p=12): T=65536 Q=4096 ones(l)=24770 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=0, c=1 then 101001000110^w (p=12): T=65536 Q=4096 ones(l)=36412 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=0, c=1 then 010110110000^w (p=12): T=65536 Q=4096 ones(l)=29135 l eventual_period=None longest periodic tail=4096 at q=4095 edge violations=0
+  P6 y=random width 23, c=110110110^w (p=9): T=65536 Q=4096 ones(l)=40774 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=random width 3, c=101000000^w (p=9): T=65536 Q=4096 ones(l)=21452 l eventual_period=None longest periodic tail=4096 at q=4095 edge violations=0
+  P6 y=random width 13, c=110101101^w (p=9): T=65536 Q=4096 ones(l)=22521 l eventual_period=None longest periodic tail=4098 at q=4096 edge violations=0
+  P6 y=random width 18, c=100000110110^w (p=12): T=65536 Q=4096 ones(l)=40776 l eventual_period=None longest periodic tail=4097 at q=4096 edge violations=0
+  P6 y=random width 16, c=001010001011^w (p=12): T=65536 Q=4096 ones(l)=33500 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+  P6 y=random width 11, c=111100001100^w (p=12): T=65536 Q=4096 ones(l)=46568 l eventual_period=None longest periodic tail=4096 at q=4096 edge violations=0
+P6 SUMMARY (rule 90): 60 structured drives, T=65536, Q=4096: l eventually periodic in 0/60; moving-edge violations 0; longest periodic tail min/median/max = 4096/4098/32764 (random null about log2(T*Q) = 28.0) [23s]
+P6 done ok=True [23.4s]
+ALL ADVERSARIAL CHECKS PASS=True {'P0': True, 'P1': True, 'P2': True, 'P4': True, 'P5': True, 'P3': True, 'P6': True} elapsed=88s

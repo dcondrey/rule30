@@ -1,0 +1,10 @@
+--- rule30_p2_plain ---
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 7, "pin": false, "x_min": -7, "empty": false, "raw_states": 1439333, "tail_nodes": 3060, "bisim_classes": 15, "raw_over_alphabet": 5.491}
+FIT rule30_p2_plain: {"exponent": null, "n_points": 1}
+--- rule30_p2_pin ---
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 7, "pin": true, "x_min": -7, "empty": false, "raw_states": 143151, "tail_nodes": 356, "bisim_classes": 20, "raw_over_alphabet": 0.546}
+FIT rule30_p2_pin: {"exponent": null, "n_points": 1}
+--- rule90_control_plain ---
+{"rule": 90, "w": "0", "q": 1, "R": 2, "k": 7, "pin": false, "x_min": -7, "empty": false, "raw_states": 1253399, "tail_nodes": 2304, "bisim_classes": 32, "raw_over_alphabet": 4.781}
+FIT rule90_control_plain: {"exponent": null, "n_points": 1}
+written k_language_sweep_R2_k7.json

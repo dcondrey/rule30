@@ -1,0 +1,31 @@
+=== n=21 c=3: prefixes with exactly v violations over 23 four-state forced columns [0.2s]
+    v=0: 0 prefixes, 0 with the 12a ending
+    v=1: 10 prefixes, 10 with the 12a ending
+    v=1 with 12a: 1 distinct forced-process state(s); fibers [10]
+    state with fiber 10:
+      W  = 111212122222121122112
+      Q  = 22212312212221222222121   (four-state forced word, length 23)
+      ending (e_2n-1, e_2n) = (1, 2)  [12a pull satisfied]
+      violation at continuation column 5 (u = 26): non-binary 3; previous-column window m=47 |Z|=10 |W2|=14
+      binary-bookkeeping admissible run of this prefix: 5 of 23
+      members: 111212122222121122112 211212122222121122112 112212122222121122112 212212122222121122112 122212122222121122112 222212122222121122112 111111222222121122112 211111222222121122112 121111222222121122112 221111222222121122112
+=== n=22 c=3: prefixes with exactly v violations over 24 four-state forced columns [0.5s]
+    v=0: 0 prefixes, 0 with the 12a ending
+    v=1: 0 prefixes, 0 with the 12a ending
+    v=2: 62 prefixes, 0 with the 12a ending
+    (no prefix at v = vmax with the 12a ending)
+=== n=27 c=2: prefixes with exactly v violations over 29 four-state forced columns [19.1s]
+    v=0: 0 prefixes, 0 with the 12a ending
+    v=1: 0 prefixes, 0 with the 12a ending
+    v=2: 0 prefixes, 0 with the 12a ending
+    v=3: 30 prefixes, 24 with the 12a ending
+    v=3 with 12a: 1 distinct forced-process state(s); fibers [24]
+    state with fiber 24:
+      W  = 111122211211121112221121111
+      Q  = 21222120122212212123122220121   (four-state forced word, length 29)
+      ending (e_2n-1, e_2n) = (1, 2)  [12a pull satisfied]
+      violation at continuation column 7 (u = 34): non-binary 0; previous-column window m=61 |Z|=15 |W2|=15
+      violation at continuation column 19 (u = 46): non-binary 3; previous-column window m=73 |Z|=18 |W2|=20
+      violation at continuation column 25 (u = 52): non-binary 0; previous-column window m=79 |Z|=17 |W2|=21
+      binary-bookkeeping admissible run of this prefix: 7 of 29
+      members: 111122211211121112221121111 111212211211121112221121111 111222211211121112221121111 112122211211121112221121111 112212211211121112221121111 112222211211121112221121111 121122211211121112221121111 121212211211121112221121111 121222211211121112221121111 122122211211121112221121111 122212211211121112221121111 122222211211121112221121111 211122211211121112221121111 211212211211121112221121111 211222211211121112221121111 212122211211121112221121111 212212211211121112221121111 212222211211121112221121111 221122211211121112221121111 221212211211121112221121111 221222211211121112221121111 222122211211121112221121111 222212211211121112221121111 222222211211121112221121111

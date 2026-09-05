@@ -1,0 +1,83 @@
+n   2^n      Q_n     Q_n/2^n   max fiber   fiber-size histogram (size:count)
+4   16       12      0.7500    3           1:9 2:2 3:1
+5   32       20      0.6250    3           1:11 2:6 3:3
+6   64       37      0.5781    3           1:17 2:13 3:7
+7   128      69      0.5391    6           1:26 2:30 3:12 6:1
+8   256      123     0.4805    8           1:34 2:60 3:22 4:4 6:2 8:1
+9   512      219     0.4277    8           1:48 2:107 3:37 4:14 5:1 6:9 8:3
+10  1024     391     0.3818    8           1:61 2:188 3:65 4:42 5:4 6:20 7:4 8:7
+11  2048     701     0.3423    16          1:83 2:314 3:107 4:107 5:14 6:47 7:9 8:15 9:3 10:1 16:1
+12  4096     1257    0.3069    18          1:124 2:510 3:159 4:242 5:32 6:115 7:16 8:38 9:8 10:3 11:1 12:3 14:3 16:2 18:1
+13  8192     2255    0.2753    24          1:190 2:822 3:239 4:490 5:65 6:254 7:31 8:90 9:18 10:14 11:4 12:15 13:1 14:7 15:1 16:7 17:1 18:5 24:1
+14  16384    4009    0.2447    26          1:266 2:1311 3:350 4:946 5:121 6:510 7:55 8:218 9:40 10:45 11:11 12:61 13:3 14:24 15:4 16:22 17:4 18:13 21:1 22:1 23:1 24:1 26:1
+15  32768    7115    0.2171    46          1:384 2:2019 3:508 4:1796 5:199 6:957 7:107 8:529 9:66 10:131 11:28 12:174 13:13 14:56 15:7 16:69 17:12 18:27 19:4 20:6 21:3 22:6 23:3 24:6 26:2 30:1 36:1 46:1
+16  65536    12647   0.1930    60          1:556 2:3130 3:742 4:3283 5:281 6:1754 7:177 8:1170 9:122 10:324 11:68 12:427 13:34 14:150 15:20 16:177 17:20 18:75 19:14 20:34 21:7 22:26 23:4 24:19 25:2 26:7 27:5 28:2 30:4 32:5 36:2 38:1 40:1 42:1 46:2 60:1
+
+e_0 flip: fraction of W with q(W) == q(W with e_0 flipped)
+n=4   same=3/8 = 0.3750
+n=5   same=9/16 = 0.5625
+n=6   same=20/32 = 0.6250
+n=7   same=45/64 = 0.7031
+n=8   same=99/128 = 0.7734
+n=9   same=211/256 = 0.8242
+n=10  same=441/512 = 0.8613
+n=11  same=910/1024 = 0.8887
+n=12  same=1870/2048 = 0.9131
+n=13  same=3805/4096 = 0.9290
+n=14  same=7740/8192 = 0.9448
+n=15  same=15677/16384 = 0.9568
+n=16  same=31667/32768 = 0.9664
+
+n=15 BWH+ extremal suffix 211212112: distinct q over the 64 six-symbol prefixes
+  fiber size 18  prefixes 111122 111212 112212 112222 121122 121212 121222 122212 122222 211122 211212 212212 212222 221122 221212 221222 222212 222222
+  fiber size 10  prefixes 112111 112211 121211 122111 122211 212111 212211 221211 222111 222211
+  fiber size 6   prefixes 111222 112122 122122 211222 212122 222122
+  fiber size 6   prefixes 112221 121221 122221 212221 221221 222221
+  fiber size 4   prefixes 111112 121112 211112 221112
+  fiber size 4   prefixes 111121 121121 211121 221121
+  fiber size 4   prefixes 112112 122112 212112 222112
+  fiber size 4   prefixes 112121 122121 212121 222121
+  fiber size 2   prefixes 111111 211111
+  fiber size 2   prefixes 111211 211211
+  fiber size 2   prefixes 111221 211221
+  fiber size 2   prefixes 121111 221111
+
+Deepest RW witnesses in census_n07_20.json: distinct q per witness set
+  n=7   c=2 deepest=4   witnesses=5    distinct q=2   fiber sizes=[3, 2]
+  n=7   c=3 deepest=4   witnesses=10   distinct q=5   fiber sizes=[3, 3, 2, 1, 1]
+  n=8   c=2 deepest=3   witnesses=9    distinct q=2   fiber sizes=[8, 1]
+  n=8   c=3 deepest=6   witnesses=3    distinct q=1   fiber sizes=[3]
+  n=9   c=2 deepest=4   witnesses=4    distinct q=2   fiber sizes=[2, 2]
+  n=9   c=3 deepest=8   witnesses=6    distinct q=1   fiber sizes=[6]
+  n=10  c=2 deepest=5   witnesses=6    distinct q=2   fiber sizes=[4, 2]
+  n=10  c=3 deepest=7   witnesses=4    distinct q=2   fiber sizes=[3, 1]
+  n=11  c=2 deepest=6   witnesses=4    distinct q=1   fiber sizes=[4]
+  n=11  c=3 deepest=7   witnesses=12   distinct q=4   fiber sizes=[4, 3, 3, 2]
+  n=12  c=2 deepest=9   witnesses=2    distinct q=1   fiber sizes=[2]
+  n=12  c=3 deepest=8   witnesses=1    distinct q=1   fiber sizes=[1]
+  n=13  c=2 deepest=7   witnesses=12   distinct q=2   fiber sizes=[10, 2]
+  n=13  c=3 deepest=9   witnesses=3    distinct q=1   fiber sizes=[3]
+  n=14  c=2 deepest=10  witnesses=4    distinct q=1   fiber sizes=[4]
+  n=14  c=3 deepest=8   witnesses=8    distinct q=3   fiber sizes=[4, 2, 2]
+  n=15  c=2 deepest=9   witnesses=10   distinct q=3   fiber sizes=[4, 4, 2]
+  n=15  c=3 deepest=8   witnesses=9    distinct q=3   fiber sizes=[4, 3, 2]
+  n=16  c=2 deepest=10  witnesses=3    distinct q=1   fiber sizes=[3]
+  n=16  c=3 deepest=10  witnesses=18   distinct q=2   fiber sizes=[10, 8]
+  n=17  c=2 deepest=11  witnesses=10   distinct q=1   fiber sizes=[10]
+  n=17  c=3 deepest=10  witnesses=6    distinct q=1   fiber sizes=[6]
+  n=18  c=2 deepest=12  witnesses=16   distinct q=2   fiber sizes=[8, 8]
+  n=18  c=3 deepest=11  witnesses=12   distinct q=1   fiber sizes=[12]
+  n=19  c=2 deepest=11  witnesses=8    distinct q=2   fiber sizes=[4, 4]
+  n=19  c=3 deepest=13  witnesses=6    distinct q=1   fiber sizes=[6]
+  n=20  c=2 deepest=11  witnesses=20   distinct q=3   fiber sizes=[12, 4, 4]
+  n=20  c=3 deepest=14  witnesses=12   distinct q=1   fiber sizes=[12]
+
+Deepest RW witnesses in census_n21_30.json: distinct q per witness set
+  n=21  c=2 deepest=13  witnesses=24   distinct q=4   fiber sizes=[14, 6, 2, 2]
+  n=21  c=3 deepest=16  witnesses=24   distinct q=1   fiber sizes=[24]
+  n=22  c=2 deepest=12  witnesses=60   distinct q=7   fiber sizes=[16, 14, 10, 8, 6, 4, 2]
+  n=22  c=3 deepest=14  witnesses=28   distinct q=2   fiber sizes=[24, 4]
+  n=23  c=2 deepest=16  witnesses=8    distinct q=2   fiber sizes=[6, 2]
+  n=23  c=3 deepest=16  witnesses=2    distinct q=1   fiber sizes=[2]
+  n=24  c=2 deepest=14  witnesses=66   distinct q=3   fiber sizes=[32, 18, 16]
+  n=24  c=3 deepest=16  witnesses=12   distinct q=1   fiber sizes=[12]

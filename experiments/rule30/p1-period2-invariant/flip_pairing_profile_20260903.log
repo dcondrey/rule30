@@ -1,0 +1,135 @@
+# n=12: forced orbits for 4096 sources in 0.4s
+## death profile n=12 c=2: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..11, and the death level of W' capped at j
+ j=0 |S_j+1|=  1607  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|=   752  P(alive@j | delta): 0.43 0.43 0.39 0.40 0.40 0.43 0.46 0.44 0.46 0.50 0.70 0.97
+        death level of W': 0:0.50 1:0.50
+ j=2 |S_j+1|=   278  P(alive@j | delta): 0.18 0.22 0.16 0.14 0.30 0.19 0.29 0.29 0.24 0.33 0.64 0.96
+        death level of W': 0:0.48 1:0.19 2:0.33
+ j=3 |S_j+1|=   119  P(alive@j | delta): 0.05 0.00 0.08 0.03 0.19 0.04 0.21 0.20 0.13 0.33 0.67 0.96
+        death level of W': 0:0.46 1:0.19 2:0.11 3:0.24
+ j=4 |S_j+1|=    33  P(alive@j | delta): 0.00 0.00 0.00 0.00 0.00 0.00 0.06 0.00 0.06 0.24 0.30 0.91
+        death level of W': 0:0.48 1:0.23 2:0.11 3:0.05 4:0.13
+ j=5 |S_j+1|=    14  P(alive@j | delta): 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.29 0.29 1.00
+        death level of W': 0:0.48 1:0.26 2:0.12 3:0.01 5:0.13
+## death profile n=12 c=3: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..11, and the death level of W' capped at j
+ j=0 |S_j+1|=  1487  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|=   721  P(alive@j | delta): 0.35 0.35 0.33 0.33 0.31 0.46 0.46 0.41 0.44 0.47 0.68 0.95
+        death level of W': 0:0.54 1:0.46
+ j=2 |S_j+1|=   226  P(alive@j | delta): 0.19 0.15 0.21 0.15 0.14 0.28 0.23 0.34 0.27 0.26 0.56 0.92
+        death level of W': 0:0.51 1:0.18 2:0.31
+ j=3 |S_j+1|=    87  P(alive@j | delta): 0.07 0.07 0.18 0.03 0.02 0.09 0.02 0.10 0.14 0.11 0.64 0.92
+        death level of W': 0:0.55 1:0.15 2:0.10 3:0.20
+ j=4 |S_j+1|=    44  P(alive@j | delta): 0.05 0.00 0.07 0.00 0.00 0.18 0.00 0.00 0.18 0.00 0.68 0.95
+        death level of W': 0:0.58 1:0.14 2:0.07 3:0.04 4:0.18
+ j=5 |S_j+1|=     5  P(alive@j | delta): 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.80 0.80
+        death level of W': 0:0.65 1:0.08 2:0.10 3:0.02 4:0.02 5:0.13
+# n=13: forced orbits for 8192 sources in 0.9s
+## death profile n=13 c=2: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..12, and the death level of W' capped at j
+ j=0 |S_j+1|=  3068  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|=  1146  P(alive@j | delta): 0.37 0.42 0.42 0.40 0.38 0.43 0.39 0.42 0.44 0.45 0.49 0.71 0.95
+        death level of W': 0:0.52 1:0.48
+ j=2 |S_j+1|=   489  P(alive@j | delta): 0.18 0.21 0.20 0.18 0.17 0.16 0.11 0.17 0.15 0.21 0.34 0.58 0.94
+        death level of W': 0:0.51 1:0.22 2:0.28
+ j=3 |S_j+1|=   171  P(alive@j | delta): 0.04 0.12 0.13 0.07 0.03 0.09 0.05 0.03 0.14 0.20 0.25 0.55 0.91
+        death level of W': 0:0.53 1:0.20 2:0.07 3:0.20
+ j=4 |S_j+1|=    81  P(alive@j | delta): 0.02 0.02 0.00 0.00 0.00 0.05 0.10 0.00 0.05 0.10 0.20 0.54 0.94
+        death level of W': 0:0.51 1:0.23 2:0.06 3:0.04 4:0.16
+ j=5 |S_j+1|=    27  P(alive@j | delta): 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.22 0.30 0.59 0.96
+        death level of W': 0:0.58 1:0.17 2:0.05 3:0.03 4:0.01 5:0.16
+## death profile n=13 c=3: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..12, and the death level of W' capped at j
+ j=0 |S_j+1|=  3094  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|=  1266  P(alive@j | delta): 0.37 0.37 0.37 0.39 0.33 0.39 0.40 0.41 0.41 0.41 0.49 0.70 0.95
+        death level of W': 0:0.54 1:0.46
+ j=2 |S_j+1|=   503  P(alive@j | delta): 0.15 0.16 0.20 0.17 0.12 0.17 0.12 0.16 0.19 0.18 0.34 0.64 0.94
+        death level of W': 0:0.53 1:0.19 2:0.27
+ j=3 |S_j+1|=   176  P(alive@j | delta): 0.05 0.09 0.02 0.16 0.06 0.03 0.06 0.03 0.10 0.07 0.28 0.65 0.93
+        death level of W': 0:0.53 1:0.20 2:0.07 3:0.20
+ j=4 |S_j+1|=    70  P(alive@j | delta): 0.03 0.03 0.01 0.19 0.11 0.00 0.03 0.00 0.00 0.00 0.20 0.66 0.94
+        death level of W': 0:0.53 1:0.22 2:0.06 3:0.03 4:0.17
+ j=5 |S_j+1|=    20  P(alive@j | delta): 0.00 0.00 0.00 0.15 0.00 0.00 0.00 0.00 0.00 0.00 0.20 0.50 0.90
+        death level of W': 0:0.52 1:0.29 2:0.03 3:0.01 4:0.01 5:0.13
+# n=14: forced orbits for 16384 sources in 1.9s
+## death profile n=14 c=2: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..13, and the death level of W' capped at j
+ j=0 |S_j+1|=  6145  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|=  2685  P(alive@j | delta): 0.35 0.41 0.39 0.40 0.38 0.43 0.39 0.42 0.41 0.40 0.45 0.55 0.77 0.97
+        death level of W': 0:0.52 1:0.48
+ j=2 |S_j+1|=  1099  P(alive@j | delta): 0.17 0.16 0.12 0.19 0.14 0.23 0.18 0.20 0.18 0.17 0.28 0.40 0.71 0.96
+        death level of W': 0:0.50 1:0.21 2:0.29
+ j=3 |S_j+1|=   386  P(alive@j | delta): 0.05 0.06 0.05 0.08 0.06 0.10 0.07 0.08 0.03 0.06 0.17 0.30 0.64 0.95
+        death level of W': 0:0.52 1:0.20 2:0.09 3:0.19
+ j=4 |S_j+1|=   134  P(alive@j | delta): 0.00 0.03 0.00 0.00 0.02 0.01 0.00 0.03 0.01 0.00 0.10 0.30 0.72 0.94
+        death level of W': 0:0.52 1:0.19 2:0.10 3:0.04 4:0.16
+ j=5 |S_j+1|=    57  P(alive@j | delta): 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.21 0.70 0.91
+        death level of W': 0:0.55 1:0.16 2:0.11 3:0.03 4:0.02 5:0.13
+## death profile n=14 c=3: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..13, and the death level of W' capped at j
+ j=0 |S_j+1|=  6145  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|=  2684  P(alive@j | delta): 0.30 0.39 0.42 0.40 0.44 0.37 0.38 0.39 0.43 0.45 0.45 0.55 0.77 0.97
+        death level of W': 0:0.52 1:0.48
+ j=2 |S_j+1|=  1072  P(alive@j | delta): 0.14 0.17 0.16 0.15 0.20 0.16 0.18 0.17 0.20 0.20 0.24 0.37 0.71 0.96
+        death level of W': 0:0.51 1:0.20 2:0.29
+ j=3 |S_j+1|=   407  P(alive@j | delta): 0.03 0.03 0.10 0.02 0.08 0.07 0.10 0.05 0.04 0.10 0.10 0.29 0.67 0.97
+        death level of W': 0:0.52 1:0.21 2:0.09 3:0.19
+ j=4 |S_j+1|=   145  P(alive@j | delta): 0.00 0.00 0.03 0.00 0.00 0.00 0.01 0.03 0.00 0.10 0.03 0.22 0.70 0.98
+        death level of W': 0:0.52 1:0.21 2:0.10 3:0.02 4:0.15
+ j=5 |S_j+1|=    42  P(alive@j | delta): 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.10 0.00 0.19 0.67 0.95
+        death level of W': 0:0.47 1:0.23 2:0.14 3:0.01 4:0.01 5:0.14
+# n=15: forced orbits for 32768 sources in 4.4s
+## death profile n=15 c=2: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..14, and the death level of W' capped at j
+ j=0 |S_j+1|= 12134  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|=  4829  P(alive@j | delta): 0.36 0.42 0.40 0.37 0.37 0.39 0.41 0.38 0.41 0.41 0.40 0.44 0.55 0.80 0.98
+        death level of W': 0:0.53 1:0.47
+ j=2 |S_j+1|=  1680  P(alive@j | delta): 0.18 0.20 0.15 0.15 0.14 0.18 0.17 0.15 0.16 0.13 0.16 0.23 0.42 0.75 0.97
+        death level of W': 0:0.53 1:0.20 2:0.28
+ j=3 |S_j+1|=   727  P(alive@j | delta): 0.01 0.06 0.03 0.03 0.10 0.04 0.09 0.03 0.03 0.08 0.10 0.18 0.32 0.75 0.96
+        death level of W': 0:0.54 1:0.20 2:0.08 3:0.19
+ j=4 |S_j+1|=   272  P(alive@j | delta): 0.00 0.12 0.01 0.00 0.06 0.00 0.10 0.00 0.01 0.02 0.09 0.19 0.29 0.81 0.96
+        death level of W': 0:0.53 1:0.19 2:0.08 3:0.02 4:0.18
+ j=5 |S_j+1|=    92  P(alive@j | delta): 0.00 0.17 0.00 0.00 0.00 0.00 0.17 0.00 0.02 0.00 0.09 0.09 0.09 0.70 0.93
+        death level of W': 0:0.56 1:0.18 2:0.07 3:0.03 4:0.01 5:0.15
+## death profile n=15 c=3: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..14, and the death level of W' capped at j
+ j=0 |S_j+1|= 12533  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|=  5054  P(alive@j | delta): 0.33 0.43 0.42 0.39 0.41 0.40 0.42 0.42 0.44 0.43 0.38 0.45 0.56 0.78 0.98
+        death level of W': 0:0.52 1:0.48
+ j=2 |S_j+1|=  2065  P(alive@j | delta): 0.12 0.17 0.18 0.18 0.16 0.14 0.19 0.17 0.20 0.21 0.18 0.27 0.42 0.73 0.97
+        death level of W': 0:0.51 1:0.20 2:0.29
+ j=3 |S_j+1|=   818  P(alive@j | delta): 0.05 0.07 0.09 0.09 0.05 0.06 0.09 0.03 0.05 0.09 0.08 0.17 0.32 0.71 0.97
+        death level of W': 0:0.53 1:0.20 2:0.08 3:0.20
+ j=4 |S_j+1|=   333  P(alive@j | delta): 0.02 0.01 0.08 0.02 0.04 0.04 0.04 0.01 0.01 0.02 0.02 0.07 0.26 0.71 0.98
+        death level of W': 0:0.52 1:0.21 2:0.08 3:0.04 4:0.16
+ j=5 |S_j+1|=   142  P(alive@j | delta): 0.00 0.00 0.08 0.00 0.00 0.05 0.03 0.00 0.00 0.00 0.00 0.08 0.25 0.77 0.97
+        death level of W': 0:0.48 1:0.24 2:0.09 3:0.03 4:0.01 5:0.15
+# n=16: forced orbits for 65536 sources in 9.1s
+## death profile n=16 c=2: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..15, and the death level of W' capped at j
+ j=0 |S_j+1|= 24540  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|= 10598  P(alive@j | delta): 0.36 0.39 0.38 0.39 0.41 0.41 0.41 0.39 0.39 0.39 0.39 0.42 0.46 0.58 0.83 0.98
+        death level of W': 0:0.53 1:0.47
+ j=2 |S_j+1|=  4332  P(alive@j | delta): 0.16 0.17 0.16 0.17 0.18 0.17 0.18 0.17 0.17 0.16 0.16 0.19 0.27 0.47 0.79 0.98
+        death level of W': 0:0.53 1:0.19 2:0.28
+ j=3 |S_j+1|=  2017  P(alive@j | delta): 0.07 0.08 0.05 0.08 0.11 0.08 0.08 0.06 0.08 0.06 0.08 0.13 0.24 0.42 0.79 0.98
+        death level of W': 0:0.52 1:0.19 2:0.08 3:0.21
+ j=4 |S_j+1|=   765  P(alive@j | delta): 0.06 0.01 0.01 0.01 0.06 0.05 0.04 0.04 0.03 0.03 0.03 0.12 0.20 0.38 0.75 0.97
+        death level of W': 0:0.53 1:0.18 2:0.08 3:0.03 4:0.17
+ j=5 |S_j+1|=   255  P(alive@j | delta): 0.09 0.00 0.00 0.00 0.08 0.00 0.05 0.00 0.00 0.00 0.00 0.00 0.21 0.40 0.78 0.96
+        death level of W': 0:0.52 1:0.20 2:0.08 3:0.02 4:0.01 5:0.16
+## death profile n=16 c=3: for W in S_(j+1) and each single flip at depth delta, P(W' alive at level j) by delta=0..15, and the death level of W' capped at j
+ j=0 |S_j+1|= 24909  P(alive@j | delta): 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+        death level of W': 0:1.00
+ j=1 |S_j+1|= 10412  P(alive@j | delta): 0.36 0.42 0.40 0.39 0.42 0.40 0.40 0.41 0.40 0.39 0.41 0.43 0.45 0.59 0.83 0.98
+        death level of W': 0:0.52 1:0.48
+ j=2 |S_j+1|=  3977  P(alive@j | delta): 0.15 0.19 0.14 0.17 0.20 0.15 0.19 0.16 0.17 0.18 0.17 0.23 0.24 0.46 0.79 0.98
+        death level of W': 0:0.51 1:0.21 2:0.29
+ j=3 |S_j+1|=  1698  P(alive@j | delta): 0.06 0.07 0.06 0.06 0.06 0.06 0.06 0.07 0.08 0.07 0.07 0.13 0.18 0.43 0.76 0.98
+        death level of W': 0:0.52 1:0.20 2:0.08 3:0.20
+ j=4 |S_j+1|=   625  P(alive@j | delta): 0.00 0.04 0.02 0.04 0.00 0.00 0.02 0.01 0.02 0.02 0.03 0.08 0.18 0.33 0.73 0.98
+        death level of W': 0:0.52 1:0.20 2:0.08 3:0.04 4:0.16
+ j=5 |S_j+1|=   234  P(alive@j | delta): 0.00 0.00 0.02 0.02 0.00 0.00 0.01 0.00 0.00 0.00 0.00 0.11 0.19 0.29 0.68 0.97
+        death level of W': 0:0.53 1:0.18 2:0.08 3:0.05 4:0.01 5:0.14

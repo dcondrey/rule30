@@ -1,0 +1,18 @@
+n=5 c=2: words=59049  all 7 hits: 612  +hard-core: 112  +12a: 0  reachable among +12a: 0   [0s]
+
+n=5 c=3: words=59049  all 7 hits: 368  +hard-core: 216  +12a: 0  reachable among +12a: 0   [0s]
+
+n=6 c=2: words=531441  all 8 hits: 3244  +hard-core: 320  +12a: 176  reachable among +12a: 0   [5s]
+    col n-1 (d=-n..n-1) = 101111021201   forced e_n..e_2n+1 = 21212122
+    col n-1 (d=-n..n-1) = 101111021202   forced e_n..e_2n+1 = 21212122
+
+n=6 c=3: words=531441  all 8 hits: 5472  +hard-core: 936  +12a: 576  reachable among +12a: 0   [5s]
+    col n-1 (d=-n..n-1) = 000102012111   forced e_n..e_2n+1 = 22122122
+    col n-1 (d=-n..n-1) = 000102012112   forced e_n..e_2n+1 = 22122122
+
+n=7 c=2: words=4782969  all 9 hits: 5212  +hard-core: 1392  +12a: 0  reachable among +12a: 0   [66s]
+
+n=7 c=3: words=4782969  all 9 hits: 13320  +hard-core: 2172  +12a: 140  reachable among +12a: 0   [105s]
+    col n-1 (d=-n..n-1) = 20000120101100   forced e_n..e_2n+1 = 121222121
+    col n-1 (d=-n..n-1) = 20000120101200   forced e_n..e_2n+1 = 121222121
+

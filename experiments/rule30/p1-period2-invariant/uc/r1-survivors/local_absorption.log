@@ -1,0 +1,41 @@
+U=15: absorption of e_i at column 14 (full column equality after flipping e_i)
+
+ i=0: overall absorbed fraction 0.9514 over 16384 pairs
+   p=1: best pattern 2 frac 0.9960 (8159/8192); perfect patterns: none; worst 1 0.9067
+   p=2: best pattern 22 frac 1.0000 (4096/4096); perfect patterns: ['22']; worst 12 0.8323
+   p=3: best pattern 212 frac 1.0000 (2048/2048); perfect patterns: ['212', '221', '222']; worst 122 0.8262
+   p=4: best pattern 1111 frac 1.0000 (1024/1024); perfect patterns: ['1111', '1121', '2111', '2121', '2122', '2211', '2212', '2221', '2222']; worst 1212 0.7285
+   p=5: best pattern 11111 frac 1.0000 (512/512); perfect patterns: ['11111', '11112', '11122', '11211', '11212', '11222', '21111', '21112', '21211', '21212', '21221', '21222', '22111', '22112', '22121', '22122', '22211', '22212', '22221', '22222']; worst 12121 0.5332
+   p=6: best pattern 111111 frac 1.0000 (256/256); perfect patterns: ['111111', '111112', '111121', '111122', '111212', '111221', '111222', '112111', '112112', '112121', '112122', '112212', '112221', '112222', '121111', '122222', '211111', '211112', '211121', '211122', '211212', '212111', '212112', '212121', '212122', '212211', '212212', '212221', '212222', '221111', '221112', '221121', '221122', '221211', '221212', '221221', '221222', '222111', '222112', '222121', '222122', '222211', '222212', '222221', '222222']; worst 122112 0.5078
+
+ i=1: overall absorbed fraction 0.6373 over 16384 pairs
+   p=1: best pattern 2 frac 0.7904 (6475/8192); perfect patterns: none; worst 1 0.4841
+   p=2: best pattern 22 frac 0.9131 (3740/4096); perfect patterns: none; worst 12 0.3210
+   p=3: best pattern 222 frac 0.9263 (1897/2048); perfect patterns: none; worst 122 0.2886
+   p=4: best pattern 2212 frac 0.9805 (1004/1024); perfect patterns: none; worst 1221 0.2568
+   p=5: best pattern 22222 frac 1.0000 (512/512); perfect patterns: ['22222']; worst 12121 0.1680
+   p=6: best pattern 211111 frac 1.0000 (256/256); perfect patterns: ['211111', '221222', '222212', '222221', '222222']; worst 122112 0.1133
+
+ i=2: overall absorbed fraction 0.2704 over 16384 pairs
+   p=1: best pattern 2 frac 0.4032 (3303/8192); perfect patterns: none; worst 1 0.1376
+   p=2: best pattern 22 frac 0.5701 (2335/4096); perfect patterns: none; worst 12 0.0664
+   p=3: best pattern 222 frac 0.6357 (1302/2048); perfect patterns: none; worst 122 0.0503
+   p=4: best pattern 2222 frac 0.7090 (726/1024); perfect patterns: none; worst 1222 0.0293
+   p=5: best pattern 22222 frac 0.7734 (396/512); perfect patterns: none; worst 12222 0.0273
+   p=6: best pattern 222222 frac 0.8359 (214/256); perfect patterns: none; worst 111121 0.0000
+
+ i=3: overall absorbed fraction 0.0963 over 16384 pairs
+   p=1: best pattern 2 frac 0.1423 (1166/8192); perfect patterns: none; worst 1 0.0503
+   p=2: best pattern 22 frac 0.2300 (942/4096); perfect patterns: none; worst 12 0.0103
+   p=3: best pattern 222 frac 0.2954 (605/2048); perfect patterns: none; worst 122 0.0039
+   p=4: best pattern 2222 frac 0.4004 (410/1024); perfect patterns: none; worst 1221 0.0020
+   p=5: best pattern 22222 frac 0.4297 (220/512); perfect patterns: none; worst 12212 0.0000
+   p=6: best pattern 222222 frac 0.4844 (124/256); perfect patterns: none; worst 111121 0.0000
+
+ i=4: overall absorbed fraction 0.0281 over 16384 pairs
+   p=1: best pattern 2 frac 0.0409 (335/8192); perfect patterns: none; worst 1 0.0153
+   p=2: best pattern 22 frac 0.0703 (288/4096); perfect patterns: none; worst 12 0.0007
+   p=3: best pattern 222 frac 0.1064 (218/2048); perfect patterns: none; worst 122 0.0000
+   p=4: best pattern 2222 frac 0.1777 (182/1024); perfect patterns: none; worst 1211 0.0000
+   p=5: best pattern 22222 frac 0.2266 (116/512); perfect patterns: none; worst 11111 0.0000
+   p=6: best pattern 222222 frac 0.2734 (70/256); perfect patterns: none; worst 111111 0.0000

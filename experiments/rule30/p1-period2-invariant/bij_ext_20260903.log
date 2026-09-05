@@ -1,0 +1,20 @@
+# part 1: the two factors of the endpoint state
+  u     |C_u|   |Col_u|   |Dia_u|   Cbase ColBase DiaBase     C/Col
+  1         2         2         2     nan     nan     nan      1.00
+  2         4         3         4  2.0000  1.5000  2.0000      1.33
+
+# part 2: the column language alone, and the identity |Col_{2u-1}| = |C_u|
+  L    |Col_L|     base     u      |C_u|  identity
+  1          2      nan     1          2      True
+  2          3  1.50000
+
+# part 3: the suffix bijection  column(w), |w| = 2u-1   <->   state(w[-u:])
+  u    |C_u|  |Col_2u-1|  well-defined  onto C_u
+  3        8           8          True      True
+  4       13          13          True      True
+  5       23          23          True      True
+  6       39          39          True      True
+  7       73          73          True      True
+  8      129         129          True      True
+  9      232         232          True      True
+ 10      410         410          True      True

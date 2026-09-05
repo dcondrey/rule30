@@ -1,0 +1,25 @@
+--- rule30_p2_plain ---
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 1, "pin": false, "x_min": -1, "empty": false, "raw_states": 469, "tail_nodes": 68, "bisim_classes": 15, "raw_over_alphabet": 7.328}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 2, "pin": false, "x_min": -2, "empty": false, "raw_states": 1445, "tail_nodes": 108, "bisim_classes": 15, "raw_over_alphabet": 5.645}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 3, "pin": false, "x_min": -3, "empty": false, "raw_states": 5861, "tail_nodes": 180, "bisim_classes": 15, "raw_over_alphabet": 5.724}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 4, "pin": false, "x_min": -4, "empty": false, "raw_states": 23397, "tail_nodes": 372, "bisim_classes": 15, "raw_over_alphabet": 5.712}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 5, "pin": false, "x_min": -5, "empty": false, "raw_states": 92005, "tail_nodes": 780, "bisim_classes": 15, "raw_over_alphabet": 5.616}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 6, "pin": false, "x_min": -6, "empty": false, "raw_states": 362533, "tail_nodes": 1548, "bisim_classes": 15, "raw_over_alphabet": 5.532}
+FIT rule30_p2_plain: {"exponent": 0.0, "n_points": 5, "ks": [2, 3, 4, 5, 6], "bisim_classes": [15, 15, 15, 15, 15], "successive_ratios": [1.0, 1.0, 1.0, 1.0]}
+--- rule30_p2_pin ---
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 1, "pin": true, "x_min": -1, "empty": false, "raw_states": 247, "tail_nodes": 41, "bisim_classes": 20, "raw_over_alphabet": 3.859}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 2, "pin": true, "x_min": -2, "empty": false, "raw_states": 607, "tail_nodes": 53, "bisim_classes": 20, "raw_over_alphabet": 2.371}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 3, "pin": true, "x_min": -3, "empty": false, "raw_states": 1817, "tail_nodes": 69, "bisim_classes": 20, "raw_over_alphabet": 1.774}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 4, "pin": true, "x_min": -4, "empty": false, "raw_states": 5445, "tail_nodes": 109, "bisim_classes": 20, "raw_over_alphabet": 1.329}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 5, "pin": true, "x_min": -5, "empty": false, "raw_states": 16147, "tail_nodes": 179, "bisim_classes": 20, "raw_over_alphabet": 0.986}
+{"rule": 30, "w": "01", "q": 1, "R": 2, "k": 6, "pin": true, "x_min": -6, "empty": false, "raw_states": 47903, "tail_nodes": 257, "bisim_classes": 20, "raw_over_alphabet": 0.731}
+FIT rule30_p2_pin: {"exponent": 0.0, "n_points": 5, "ks": [2, 3, 4, 5, 6], "bisim_classes": [20, 20, 20, 20, 20], "successive_ratios": [1.0, 1.0, 1.0, 1.0]}
+--- rule90_control_plain ---
+{"rule": 90, "w": "0", "q": 1, "R": 2, "k": 1, "pin": false, "x_min": -1, "empty": false, "raw_states": 407, "tail_nodes": 48, "bisim_classes": 32, "raw_over_alphabet": 6.359}
+{"rule": 90, "w": "0", "q": 1, "R": 2, "k": 2, "pin": false, "x_min": -2, "empty": false, "raw_states": 1271, "tail_nodes": 72, "bisim_classes": 32, "raw_over_alphabet": 4.965}
+{"rule": 90, "w": "0", "q": 1, "R": 2, "k": 3, "pin": false, "x_min": -3, "empty": false, "raw_states": 4919, "tail_nodes": 144, "bisim_classes": 32, "raw_over_alphabet": 4.804}
+{"rule": 90, "w": "0", "q": 1, "R": 2, "k": 4, "pin": false, "x_min": -4, "empty": false, "raw_states": 19607, "tail_nodes": 288, "bisim_classes": 32, "raw_over_alphabet": 4.787}
+{"rule": 90, "w": "0", "q": 1, "R": 2, "k": 5, "pin": false, "x_min": -5, "empty": false, "raw_states": 78359, "tail_nodes": 576, "bisim_classes": 32, "raw_over_alphabet": 4.783}
+{"rule": 90, "w": "0", "q": 1, "R": 2, "k": 6, "pin": false, "x_min": -6, "empty": false, "raw_states": 313367, "tail_nodes": 1152, "bisim_classes": 32, "raw_over_alphabet": 4.782}
+FIT rule90_control_plain: {"exponent": 0.0, "n_points": 5, "ks": [2, 3, 4, 5, 6], "bisim_classes": [32, 32, 32, 32, 32], "successive_ratios": [1.0, 1.0, 1.0, 1.0]}
+written k_language_sweep_R2.json

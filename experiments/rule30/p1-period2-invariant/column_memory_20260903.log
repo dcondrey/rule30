@@ -1,0 +1,35 @@
+  L   |Col_L|  k(L)  ceil((L+1)/2)  match
+  1         2     1              1   True
+  2         3     2              2   True
+  3         4     2              2   True
+  4         6     3              3   True
+  5         8     3              3   True
+  6        10     4              4   True
+  7        13     4              4   True
+  8        17     5              5   True
+  9        23     5              5   True
+ 10        29     6              6   True
+ 11        39     6              6   True
+ 12        54     7              7   True
+ 13        73     7              7   True
+ 14        99     8              8   True
+ 15       129     8              8   True
+ 16       173     9              9   True
+ 17       232     9              9   True
+ 18       314    10             10   True
+
+# k(L,i), least k with column(w)[i] a function of w[-k:]; column has L+1 entries
+L= 1 k(L,i)=[1, 1] law=ceil((L-i+1)/2) match=True
+L= 2 k(L,i)=[2, 1, 1] law=ceil((L-i+1)/2) match=True
+L= 3 k(L,i)=[2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L= 4 k(L,i)=[3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L= 5 k(L,i)=[3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L= 6 k(L,i)=[4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L= 7 k(L,i)=[4, 4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L= 8 k(L,i)=[5, 4, 4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L= 9 k(L,i)=[5, 5, 4, 4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L=10 k(L,i)=[6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L=11 k(L,i)=[6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L=12 k(L,i)=[7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L=13 k(L,i)=[7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True
+L=14 k(L,i)=[8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1] law=ceil((L-i+1)/2) match=True

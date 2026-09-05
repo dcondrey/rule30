@@ -1,0 +1,11 @@
+n=9 c=2: 4^n=262144  region hits: 67  +hard-core: 0  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [12s]
+
+n=9 c=3: 4^n=262144  region hits: 439  +hard-core: 68  +12a: 68  (of which e_(n-1) binary: 68)  binary-source-symbol histogram: {2: 2, 3: 14, 4: 30, 5: 20, 6: 2}  RW counterexamples: 0   [12s]
+    g = 30113130122122122121   (source 301131301 | region 22122122121)
+    g = 30013130122122122121   (source 300131301 | region 22122122121)
+
+n=10 c=2: 4^n=1048576  region hits: 156  +hard-core: 0  +12a: 0  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {}  RW counterexamples: 0   [64s]
+
+n=10 c=3: 4^n=1048576  region hits: 134  +hard-core: 9  +12a: 1  (of which e_(n-1) binary: 0)  binary-source-symbol histogram: {5: 1}  RW counterexamples: 0   [65s]
+    g = 2100210203122122222121   (source 2100210203 | region 122122222121)
+

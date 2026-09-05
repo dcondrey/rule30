@@ -1,0 +1,86 @@
+== A  L5-ALLORB-CONST: N_k <= 4 * 2^n * 0.47^k, n=4..16, both c
+   violations: [(9, 3, 8, 6, 4.9)]
+   tightest N_k / bound = 1.230 at (n,c,k,N_k,bound)=(9, 3, 8, 6, 4.9)
+   verdict: KILLED
+
+== B  L10-PERSIST-INFLUENCE: min_i Pr[S(f) != S(f xor e_i)] >= 1/4, n=6..11
+   n=6 c=2 min influence=0.125 (at i=0) max=0.688
+   n=6 c=3 min influence=0.250 (at i=0) max=0.812
+   n=7 c=2 min influence=0.109 (at i=0) max=0.562
+   n=7 c=3 min influence=0.094 (at i=0) max=0.703
+   n=8 c=2 min influence=0.125 (at i=0) max=0.539
+   n=8 c=3 min influence=0.141 (at i=0) max=0.594
+   n=9 c=2 min influence=0.082 (at i=0) max=0.547
+   n=9 c=3 min influence=0.090 (at i=0) max=0.684
+   n=10 c=2 min influence=0.070 (at i=0) max=0.611
+   n=10 c=3 min influence=0.080 (at i=0) max=0.594
+   n=11 c=2 min influence=0.052 (at i=0) max=0.544
+   n=11 c=3 min influence=0.053 (at i=0) max=0.599
+
+== C  L6-COND-HIT-GAP: hit fraction given last-3 forced symbols <= 0.44, n=8..13
+   max conditional hit fraction (buckets with >=30 samples) = 0.824 at (n,c,k,history,count)=(13, 2, 4, (1, 2, 2), 34)
+   verdict: KILLED (exceeds 0.44)
+
+== D  L6-Z-DENSITY-FORCE: |Z|/m in [0.17,0.33] on surviving columns with u >= n+5, n=8..14
+   min density 0.029 at (14, 3, 20);  max density 0.429 at (8, 3, 13)
+   verdict: KILLED
+
+== E  L1-DIAG-INJ-MOD: diagonal -> forced suffix e[n:] injective, n=3..7
+   diag_to_edge validated against the kernel on all 4^3 diagonals: 64 / 64 OK
+   diag_to_edge validated against the kernel on all 4^4 diagonals: 256 / 256 OK
+   n=3 c=2: 64 diagonals, 35 distinct suffixes, collisions=29  e.g. ((0, 2, 2), (1, 0, 1), (3, 1, 2, 2, 0))
+   n=3 c=3: 64 diagonals, 37 distinct suffixes, collisions=27  e.g. ((0, 0, 0), (0, 2, 0), (3, 0, 2, 3, 1))
+   n=4 c=2: 256 diagonals, 95 distinct suffixes, collisions=161  e.g. ((0, 0, 0, 0), (0, 1, 0, 1), (0, 0, 1, 1, 0, 2))
+   n=4 c=3: 256 diagonals, 103 distinct suffixes, collisions=153  e.g. ((0, 0, 0, 1), (0, 1, 2, 2), (0, 1, 1, 3, 2, 0))
+   n=5 c=2: 1024 diagonals, 269 distinct suffixes, collisions=755  e.g. ((0, 0, 0, 0, 0), (0, 0, 1, 0, 2), (2, 0, 2, 2, 2, 0, 1))
+   n=5 c=3: 1024 diagonals, 281 distinct suffixes, collisions=743  e.g. ((0, 0, 0, 1, 2), (0, 0, 1, 2, 2), (0, 2, 0, 1, 3, 3, 1))
+   n=6 c=2: 4096 diagonals, 732 distinct suffixes, collisions=3364  e.g. ((0, 0, 0, 0, 0, 1), (0, 0, 0, 2, 2, 2), (2, 3, 0, 3, 0, 2, 1, 2))
+   n=6 c=3: 4096 diagonals, 792 distinct suffixes, collisions=3304  e.g. ((0, 0, 0, 0, 3, 1), (0, 0, 0, 3, 1, 1), (2, 1, 1, 3, 2, 2, 2, 0))
+   n=7 c=2: 16384 diagonals, 1993 distinct suffixes, collisions=14391  e.g. ((0, 0, 0, 0, 1, 2, 0), (0, 0, 0, 0, 2, 2, 0), (1, 2, 0, 0, 1, 1, 2, 0, 2))
+   n=7 c=3: 16384 diagonals, 2168 distinct suffixes, collisions=14216  e.g. ((0, 0, 0, 0, 1, 2, 1), (0, 0, 0, 1, 0, 2, 1), (0, 2, 2, 0, 2, 1, 3, 0, 3))
+
+== F  L7-PERIODIC-SOURCE-CAP: periodic sources, p<=7, n=6..40
+   reading (ii) forced continuation: max (run - 0.6n) = 2.6 at (n,c,pattern,run)=(9, 3, '2212', 8)
+   reading (i) fully periodic f:      max (run - 0.6n) = 0.0 at None
+   verdict (cap 0.6n+4): HOLDS to n=40
+
+== G  L6-FORBIDDEN-FACTOR: hard-core 6-blocks of forced symbols inside runs of >= 6 hits, n=6..12
+   hard-core 6-blocks: 21; occurring inside 6-hit runs: 18; absent: ['121221', '122121', '212212']
+   212121 occurrences: 12
+   verdict: KILLED as stated (212121 co-occurs)
+
+== H  L1-DIAG-DEGREE (corrected): algebraic degree of E(e_u) and H(e_u) in the 2n diagonal bits (H,E of each D_m), n=3..7
+   n=3 c=2 deg E(e_u) u=0..7: [1, 1, 3, 5, 6, 6, 5, 5]
+            deg H(e_u):          [1, 1, 3, 5, 6, 5, 6, 6]
+   n=3 c=3 deg E(e_u) u=0..7: [1, 1, 3, 5, 5, 5, 6, 5]
+            deg H(e_u):          [1, 1, 3, 5, 6, 5, 6, 4]
+   n=4 c=2 deg E(e_u) u=0..9: [1, 1, 3, 5, 7, 8, 7, 8, 7, 8]
+            deg H(e_u):          [1, 1, 3, 5, 6, 8, 7, 7, 7, 7]
+   n=4 c=3 deg E(e_u) u=0..9: [1, 1, 3, 5, 7, 7, 8, 7, 7, 7]
+            deg H(e_u):          [1, 1, 3, 5, 6, 8, 8, 8, 8, 8]
+   n=5 c=2 deg E(e_u) u=0..11: [1, 1, 3, 5, 7, 9, 10, 10, 10, 10, 9, 9]
+            deg H(e_u):          [1, 1, 3, 5, 6, 8, 10, 9, 9, 10, 9, 10]
+   n=5 c=3 deg E(e_u) u=0..11: [1, 1, 3, 5, 7, 9, 9, 10, 9, 10, 10, 9]
+            deg H(e_u):          [1, 1, 3, 5, 6, 8, 10, 10, 9, 9, 10, 10]
+   n=6 c=2 deg E(e_u) u=0..13: [1, 1, 3, 5, 7, 9, 11, 12, 11, 11, 11, 12, 12, 11]
+            deg H(e_u):          [1, 1, 3, 5, 6, 8, 11, 11, 12, 11, 11, 12, 11, 11]
+   n=6 c=3 deg E(e_u) u=0..13: [1, 1, 3, 5, 7, 9, 11, 12, 11, 12, 12, 11, 12, 12]
+            deg H(e_u):          [1, 1, 3, 5, 6, 8, 11, 11, 12, 11, 11, 11, 12, 11]
+   n=7 c=2 deg E(e_u) u=0..15: [1, 1, 3, 5, 7, 9, 11, 13, 13, 13, 13, 13, 14, 14, 14, 13]
+            deg H(e_u):          [1, 1, 3, 5, 6, 8, 11, 13, 14, 13, 13, 14, 13, 14, 13, 13]
+   n=7 c=3 deg E(e_u) u=0..15: [1, 1, 3, 5, 7, 9, 11, 13, 13, 13, 13, 14, 14, 14, 14, 14]
+            deg H(e_u):          [1, 1, 3, 5, 6, 8, 11, 13, 14, 13, 13, 14, 13, 14, 13, 13]
+
+== I  L10-FIB-TRANSFER: distinct forced-symbol m-blocks among survivors with >= 4 hits vs Fibonacci, n=10..13
+   n=10: m=3:5/5  m=4:8/8  m=5:9/13  m=6:5/21  m=7:1/34  m=8:0/55
+   n=11: m=3:5/5  m=4:8/8  m=5:12/13  m=6:9/21  m=7:4/34  m=8:0/55
+   n=12: m=3:5/5  m=4:8/8  m=5:10/13  m=6:9/21  m=7:6/34  m=8:3/55
+   n=13: m=3:5/5  m=4:8/8  m=5:13/13  m=6:12/21  m=7:7/34  m=8:2/55
+
+== J  transfer operator on (h,F), corrected alphabet {(0,0),(0,1),(1,1)}, i.i.d. letters with empirical column frequencies
+   empirical letter frequencies on surviving columns: {(0, 0): 0.5004239896561358, (0, 1): 0.28562563814769676, (1, 1): 0.21395037219616753}
+   character t=(0,1): twisted spectral radius ~ 1.000
+   character t=(1,0): twisted spectral radius ~ 1.000
+   character t=(1,1): twisted spectral radius ~ 1.000
+   note: heuristic only; the real input to column u is column u-1, not i.i.d. letters
+

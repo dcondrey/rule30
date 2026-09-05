@@ -1,0 +1,255 @@
+n=21 c=2 k=12: 217 witnesses, gate failures=0, states=11, fibres=[122, 22, 20, 15, 14, 8, 6, 4]...
+    state fibre= 122 run=12 suffix=221212122 (|s|=9) free j=12 members/2^j=122/4096 affine=False hull_dim=10 hardcore_prefixes=42 log2F+run-n=-2.07
+    state fibre=  22 run=12 suffix=2222221212122 (|s|=13) free j=8 members/2^j=22/256 affine=False hull_dim=6 hardcore_prefixes=10 log2F+run-n=-4.54
+       prefixes: 11121122 11122221 11211122 11212221 11222221 12121122 12121212 12122221 12211122 12212221 12222221 21121122 21122221 21211122 21212221 21222221 22121122 22121212 22122221 22211122 22212221 22222221
+    state fibre=  20 run=12 suffix=221112211121222 (|s|=15) free j=6 members/2^j=20/64 affine=False hull_dim=6 hardcore_prefixes=11 log2F+run-n=-4.68
+       prefixes: 111222 112122 112211 112212 112222 121222 122122 122211 122212 122222 211222 212122 212211 212212 212222 221222 222122 222211 222212 222222
+n=21 c=2 k=13: 24 witnesses, gate failures=0, states=4, fibres=[14, 6, 2, 2]
+    state fibre=  14 run=13 suffix=1221112121222112 (|s|=16) free j=5 members/2^j=14/32 affine=False hull_dim=4 hardcore_prefixes=5 log2F+run-n=-4.19
+       prefixes: 11111 11122 11211 11222 12122 12211 12222 21111 21122 21211 21222 22122 22211 22222
+    state fibre=   6 run=13 suffix=111122221222211122 (|s|=18) free j=3 members/2^j=6/8 affine=False hull_dim=3 hardcore_prefixes=4 log2F+run-n=-5.42
+       prefixes: 111 121 122 211 221 222
+    state fibre=   2 run=13 suffix=21122121112121222112 (|s|=20) free j=1 members/2^j=2/2 affine=True hull_dim=1 hardcore_prefixes=2 log2F+run-n=-7.00
+       prefixes: 1 2
+n=21 c=3 k=15: 24 witnesses, gate failures=0, states=1, fibres=[24]
+    state fibre=  24 run=16 suffix=222221111222 (|s|=12) free j=9 members/2^j=24/512 affine=False hull_dim=6 hardcore_prefixes=5 log2F+run-n=-0.42
+       prefixes: 111112221 111121221 111211212 111221221 112112221 112221221 121112221 121121221 121211212 121221221 122112221 122221221 211112221 211121221 211211212 211221221 212112221 212221221 221112221 221121221 221211212 221221221 222112221 222221221
+n=21 c=3 k=16: 24 witnesses, gate failures=0, states=1, fibres=[24]
+    state fibre=  24 run=16 suffix=222221111222 (|s|=12) free j=9 members/2^j=24/512 affine=False hull_dim=6 hardcore_prefixes=5 log2F+run-n=-0.42
+       prefixes: 111112221 111121221 111211212 111221221 112112221 112221221 121112221 121121221 121211212 121221221 122112221 122221221 211112221 211121221 211211212 211221221 212112221 212221221 221112221 221121221 221211212 221221221 222112221 222221221
+n=22 c=2 k=11: 170 witnesses, gate failures=0, states=17, fibres=[36, 22, 16, 14, 12, 10, 8, 8]...
+    state fibre=  36 run=11 suffix=22122221112212 (|s|=14) free j=8 members/2^j=36/256 affine=False hull_dim=8 hardcore_prefixes=5 log2F+run-n=-5.83
+       prefixes: 11111112 11111121 11111122 11112122 11121212 11211121 11211122 11211222 11221212 12111112 12111121 12111122 12112122 12121212 12211121 12211122 12211222 12221212 21111112 21111121 21111122 21112122 21121212 21211121 21211122 21211222 21221212 22111112 22111121 22111122 22112122 22121212 22211121 22211122 22211222 22221212
+    state fibre=  22 run=11 suffix=2111212122211221 (|s|=16) free j=6 members/2^j=22/64 affine=False hull_dim=6 hardcore_prefixes=10 log2F+run-n=-6.54
+       prefixes: 111112 111212 111221 112212 112221 121112 121122 121212 121221 122212 122221 211112 211212 211221 212212 212221 221112 221122 221212 221221 222212 222221
+    state fibre=  16 run=12 suffix=2211221221112111 (|s|=16) free j=6 members/2^j=16/64 affine=True hull_dim=4 hardcore_prefixes=3 log2F+run-n=-6.00
+       prefixes: 111112 111121 112112 112121 121112 121121 122112 122121 211112 211121 212112 212121 221112 221121 222112 222121
+n=22 c=2 k=12: 60 witnesses, gate failures=0, states=7, fibres=[16, 14, 10, 8, 6, 4, 2]
+    state fibre=  16 run=12 suffix=2211221221112111 (|s|=16) free j=6 members/2^j=16/64 affine=True hull_dim=4 hardcore_prefixes=3 log2F+run-n=-6.00
+       prefixes: 111112 111121 112112 112121 121112 121121 122112 122121 211112 211121 212112 212121 221112 221121 222112 222121
+    state fibre=  14 run=12 suffix=112212211112211122 (|s|=18) free j=4 members/2^j=14/16 affine=False hull_dim=4 hardcore_prefixes=6 log2F+run-n=-6.19
+       prefixes: 1111 1112 1121 1122 1211 1221 1222 2111 2112 2121 2122 2211 2221 2222
+    state fibre=  10 run=12 suffix=121221111121222221 (|s|=18) free j=4 members/2^j=10/16 affine=False hull_dim=4 hardcore_prefixes=3 log2F+run-n=-6.68
+       prefixes: 1111 1112 1122 1211 1222 2111 2112 2122 2211 2222
+n=22 c=3 k=13: 48 witnesses, gate failures=0, states=5, fibres=[24, 10, 6, 4, 4]
+    state fibre=  24 run=14 suffix=22222111122222 (|s|=14) free j=8 members/2^j=24/256 affine=False hull_dim=6 hardcore_prefixes=5 log2F+run-n=-3.42
+       prefixes: 11111212 11112221 11121221 11211212 11221122 11221221 12111212 12112221 12121221 12211212 12221122 12221221 21111212 21112221 21121221 21211212 21221122 21221221 22111212 22112221 22121221 22211212 22221122 22221221
+    state fibre=  10 run=13 suffix=221222111111121221 (|s|=18) free j=4 members/2^j=10/16 affine=False hull_dim=4 hardcore_prefixes=3 log2F+run-n=-5.68
+       prefixes: 1111 1112 1121 1211 1221 2111 2112 2121 2211 2221
+    state fibre=   6 run=13 suffix=1111221121221111122 (|s|=19) free j=3 members/2^j=6/8 affine=False hull_dim=3 hardcore_prefixes=3 log2F+run-n=-6.42
+       prefixes: 111 112 121 211 212 221
+n=22 c=3 k=14: 28 witnesses, gate failures=0, states=2, fibres=[24, 4]
+    state fibre=  24 run=14 suffix=22222111122222 (|s|=14) free j=8 members/2^j=24/256 affine=False hull_dim=6 hardcore_prefixes=5 log2F+run-n=-3.42
+       prefixes: 11111212 11112221 11121221 11211212 11221122 11221221 12111212 12112221 12121221 12211212 12221122 12221221 21111212 21112221 21121221 21211212 21221122 21221221 22111212 22112221 22121221 22211212 22221122 22221221
+    state fibre=   4 run=14 suffix=21211211221222121122 (|s|=20) free j=2 members/2^j=4/4 affine=True hull_dim=2 hardcore_prefixes=3 log2F+run-n=-6.00
+       prefixes: 11 12 21 22
+n=23 c=2 k=15: 8 witnesses, gate failures=0, states=2, fibres=[6, 2]
+    state fibre=   6 run=16 suffix=21211212221222111112 (|s|=20) free j=3 members/2^j=6/8 affine=False hull_dim=3 hardcore_prefixes=5 log2F+run-n=-4.42
+       prefixes: 112 121 122 212 221 222
+    state fibre=   2 run=16 suffix=1121211212221222111112 (|s|=22) free j=1 members/2^j=2/2 affine=True hull_dim=1 hardcore_prefixes=2 log2F+run-n=-6.00
+       prefixes: 1 2
+n=23 c=2 k=16: 8 witnesses, gate failures=0, states=2, fibres=[6, 2]
+    state fibre=   6 run=16 suffix=21211212221222111112 (|s|=20) free j=3 members/2^j=6/8 affine=False hull_dim=3 hardcore_prefixes=5 log2F+run-n=-4.42
+       prefixes: 112 121 122 212 221 222
+    state fibre=   2 run=16 suffix=1121211212221222111112 (|s|=22) free j=1 members/2^j=2/2 affine=True hull_dim=1 hardcore_prefixes=2 log2F+run-n=-6.00
+       prefixes: 1 2
+n=23 c=3 k=15: 8 witnesses, gate failures=0, states=2, fibres=[6, 2]
+    state fibre=   6 run=15 suffix=221211121111111211 (|s|=18) free j=5 members/2^j=6/32 affine=False hull_dim=3 hardcore_prefixes=3 log2F+run-n=-5.42
+       prefixes: 11122 11212 12121 21122 21212 22121
+    state fibre=   2 run=16 suffix=1112211211221121111212 (|s|=22) free j=1 members/2^j=2/2 affine=True hull_dim=1 hardcore_prefixes=2 log2F+run-n=-6.00
+       prefixes: 1 2
+n=23 c=3 k=16: 2 witnesses, gate failures=0, states=1, fibres=[2]
+    state fibre=   2 run=16 suffix=1112211211221121111212 (|s|=22) free j=1 members/2^j=2/2 affine=True hull_dim=1 hardcore_prefixes=2 log2F+run-n=-6.00
+       prefixes: 1 2
+n=24 c=2 k=13: 74 witnesses, gate failures=0, states=5, fibres=[32, 18, 16, 4, 4]
+    state fibre=  32 run=14 suffix=22112111111221112 (|s|=17) free j=7 members/2^j=32/128 affine=True hull_dim=5 hardcore_prefixes=5 log2F+run-n=-5.00
+       prefixes: 1111112 1111121 1112112 1112121 1121112 1121121 1122112 1122121 1211112 1211121 1212112 1212121 1221112 1221121 1222112 1222121 2111112 2111121 2112112 2112121 2121112 2121121 2122112 2122121 2211112 2211121 2212112 2212121 2221112 2221121 2222112 2222121
+    state fibre=  18 run=14 suffix=222122211111212 (|s|=15) free j=9 members/2^j=18/512 affine=False hull_dim=5 hardcore_prefixes=0 log2F+run-n=-5.83
+       prefixes: 111222112 112122112 112221121 112222112 121221121 121222112 122122112 122221121 122222112 211222112 212122112 212221121 212222112 221221121 221222112 222122112 222221121 222222112
+    state fibre=  16 run=14 suffix=21222122211111212 (|s|=17) free j=7 members/2^j=16/128 affine=True hull_dim=4 hardcore_prefixes=0 log2F+run-n=-6.00
+       prefixes: 1111211 1112112 1121211 1122112 1211211 1212112 1221211 1222112 2111211 2112112 2121211 2122112 2211211 2212112 2221211 2222112
+n=24 c=2 k=14: 66 witnesses, gate failures=0, states=3, fibres=[32, 18, 16]
+    state fibre=  32 run=14 suffix=22112111111221112 (|s|=17) free j=7 members/2^j=32/128 affine=True hull_dim=5 hardcore_prefixes=5 log2F+run-n=-5.00
+       prefixes: 1111112 1111121 1112112 1112121 1121112 1121121 1122112 1122121 1211112 1211121 1212112 1212121 1221112 1221121 1222112 1222121 2111112 2111121 2112112 2112121 2121112 2121121 2122112 2122121 2211112 2211121 2212112 2212121 2221112 2221121 2222112 2222121
+    state fibre=  18 run=14 suffix=222122211111212 (|s|=15) free j=9 members/2^j=18/512 affine=False hull_dim=5 hardcore_prefixes=0 log2F+run-n=-5.83
+       prefixes: 111222112 112122112 112221121 112222112 121221121 121222112 122122112 122221121 122222112 211222112 212122112 212221121 212222112 221221121 221222112 222122112 222221121 222222112
+    state fibre=  16 run=14 suffix=21222122211111212 (|s|=17) free j=7 members/2^j=16/128 affine=True hull_dim=4 hardcore_prefixes=0 log2F+run-n=-6.00
+       prefixes: 1111211 1112112 1121211 1122112 1211211 1212112 1221211 1222112 2111211 2112112 2121211 2122112 2211211 2212112 2221211 2222112
+n=24 c=3 k=15: 16 witnesses, gate failures=0, states=2, fibres=[12, 4]
+    state fibre=  12 run=16 suffix=22212112112211111121 (|s|=20) free j=4 members/2^j=12/16 affine=False hull_dim=4 hardcore_prefixes=8 log2F+run-n=-4.42
+       prefixes: 1112 1121 1122 1212 1221 1222 2112 2121 2122 2212 2221 2222
+    state fibre=   4 run=15 suffix=2111121122121121121122 (|s|=22) free j=2 members/2^j=4/4 affine=True hull_dim=2 hardcore_prefixes=3 log2F+run-n=-7.00
+       prefixes: 11 12 21 22
+n=24 c=3 k=16: 12 witnesses, gate failures=0, states=1, fibres=[12]
+    state fibre=  12 run=16 suffix=22212112112211111121 (|s|=20) free j=4 members/2^j=12/16 affine=False hull_dim=4 hardcore_prefixes=8 log2F+run-n=-4.42
+       prefixes: 1112 1121 1122 1212 1221 1222 2112 2121 2122 2212 2221 2222
+n=25 c=2 k=15: 30 witnesses, gate failures=0, states=3, fibres=[12, 10, 8]
+    state fibre=  12 run=16 suffix=212121111111111122221 (|s|=21) free j=4 members/2^j=12/16 affine=False hull_dim=4 hardcore_prefixes=5 log2F+run-n=-5.42
+       prefixes: 1111 1112 1122 1211 1212 1222 2111 2112 2122 2211 2212 2222
+    state fibre=  10 run=15 suffix=212112121221222121111 (|s|=21) free j=4 members/2^j=10/16 affine=False hull_dim=4 hardcore_prefixes=3 log2F+run-n=-6.68
+       prefixes: 1111 1112 1121 1211 1221 2111 2112 2121 2211 2221
+    state fibre=   8 run=15 suffix=1111211212111111221122 (|s|=22) free j=3 members/2^j=8/8 affine=True hull_dim=3 hardcore_prefixes=5 log2F+run-n=-7.00
+       prefixes: 111 112 121 122 211 212 221 222
+n=25 c=2 k=16: 12 witnesses, gate failures=0, states=1, fibres=[12]
+    state fibre=  12 run=16 suffix=212121111111111122221 (|s|=21) free j=4 members/2^j=12/16 affine=False hull_dim=4 hardcore_prefixes=5 log2F+run-n=-5.42
+       prefixes: 1111 1112 1122 1211 1212 1222 2111 2112 2122 2211 2212 2222
+n=25 c=3 k=13: 44 witnesses, gate failures=0, states=11, fibres=[10, 8, 6, 6, 2, 2, 2, 2]...
+    state fibre=  10 run=13 suffix=2211212221222221112 (|s|=19) free j=6 members/2^j=10/64 affine=False hull_dim=4 hardcore_prefixes=4 log2F+run-n=-8.68
+       prefixes: 121112 121121 121122 121212 121222 221112 221121 221122 221212 221222
+    state fibre=   8 run=13 suffix=2222121221112112121 (|s|=19) free j=6 members/2^j=8/64 affine=False hull_dim=4 hardcore_prefixes=4 log2F+run-n=-9.00
+       prefixes: 121112 121122 121212 121221 221112 221122 221212 221221
+    state fibre=   6 run=13 suffix=22211122212222122212 (|s|=20) free j=5 members/2^j=6/32 affine=False hull_dim=3 hardcore_prefixes=4 log2F+run-n=-9.42
+       prefixes: 12112 12121 12122 22112 22121 22122
+n=25 c=3 k=14: 4 witnesses, gate failures=0, states=2, fibres=[2, 2]
+    state fibre=   2 run=14 suffix=212221211211221111112122 (|s|=24) free j=1 members/2^j=2/2 affine=True hull_dim=1 hardcore_prefixes=2 log2F+run-n=-10.00
+       prefixes: 1 2
+    state fibre=   2 run=14 suffix=211221222122211222212222 (|s|=24) free j=1 members/2^j=2/2 affine=True hull_dim=1 hardcore_prefixes=2 log2F+run-n=-10.00
+       prefixes: 1 2
+n=25 c=3 k=15: 6 witnesses, gate failures=0, states=1, fibres=[6]
+    state fibre=   6 run=16 suffix=1121111112222221 (|s|=16) free j=9 members/2^j=6/512 affine=False hull_dim=3 hardcore_prefixes=0 log2F+run-n=-6.42
+       prefixes: 111221122 112111211 122111211 211221122 212111211 222111211
+n=25 c=3 k=16: 6 witnesses, gate failures=0, states=1, fibres=[6]
+    state fibre=   6 run=16 suffix=1121111112222221 (|s|=16) free j=9 members/2^j=6/512 affine=False hull_dim=3 hardcore_prefixes=0 log2F+run-n=-6.42
+       prefixes: 111221122 112111211 122111211 211221122 212111211 222111211
+n=26 c=2 k=14: 432 witnesses, gate failures=0, states=11, fibres=[128, 60, 56, 52, 46, 22, 20, 16]...
+    state fibre= 128 run=15 suffix=2222222212122211 (|s|=16) free j=10 members/2^j=128/1024 affine=False hull_dim=10 hardcore_prefixes=35 log2F+run-n=-4.00
+    state fibre=  60 run=15 suffix=2222111122112 (|s|=13) free j=13 members/2^j=60/8192 affine=False hull_dim=8 hardcore_prefixes=18 log2F+run-n=-5.09
+    state fibre=  56 run=15 suffix=221222221121211122 (|s|=18) free j=8 members/2^j=56/256 affine=False hull_dim=6 hardcore_prefixes=13 log2F+run-n=-5.19
+n=26 c=2 k=15: 318 witnesses, gate failures=0, states=6, fibres=[128, 60, 56, 46, 20, 8]
+    state fibre= 128 run=15 suffix=2222222212122211 (|s|=16) free j=10 members/2^j=128/1024 affine=False hull_dim=10 hardcore_prefixes=35 log2F+run-n=-4.00
+    state fibre=  60 run=15 suffix=2222111122112 (|s|=13) free j=13 members/2^j=60/8192 affine=False hull_dim=8 hardcore_prefixes=18 log2F+run-n=-5.09
+    state fibre=  56 run=15 suffix=221222221121211122 (|s|=18) free j=8 members/2^j=56/256 affine=False hull_dim=6 hardcore_prefixes=13 log2F+run-n=-5.19
+n=26 c=3 k=14: 132 witnesses, gate failures=0, states=7, fibres=[44, 32, 16, 16, 12, 8, 4]
+    state fibre=  44 run=15 suffix=212111222211212 (|s|=15) free j=11 members/2^j=44/2048 affine=False hull_dim=6 hardcore_prefixes=5 log2F+run-n=-5.54
+    state fibre=  32 run=14 suffix=112111111222222122 (|s|=18) free j=8 members/2^j=32/256 affine=False hull_dim=6 hardcore_prefixes=5 log2F+run-n=-7.00
+       prefixes: 11112211 11121122 11121211 11122122 11211122 11221122 11221211 11222122 12111211 12112211 12121122 12122122 12211122 12221122 12221211 12222122 21112211 21121122 21121211 21122122 21211122 21221122 21221211 21222122 22111211 22112211 22121122 22122122 22211122 22221122 22221211 22222122
+    state fibre=  16 run=14 suffix=1211112221212212221211 (|s|=22) free j=4 members/2^j=16/16 affine=True hull_dim=4 hardcore_prefixes=8 log2F+run-n=-8.00
+       prefixes: 1111 1112 1121 1122 1211 1212 1221 1222 2111 2112 2121 2122 2211 2212 2221 2222
+n=26 c=3 k=15: 64 witnesses, gate failures=0, states=3, fibres=[44, 16, 4]
+    state fibre=  44 run=15 suffix=212111222211212 (|s|=15) free j=11 members/2^j=44/2048 affine=False hull_dim=6 hardcore_prefixes=5 log2F+run-n=-5.54
+    state fibre=  16 run=15 suffix=112112111212221221212 (|s|=21) free j=5 members/2^j=16/32 affine=True hull_dim=4 hardcore_prefixes=10 log2F+run-n=-7.00
+       prefixes: 11121 11122 11221 11222 12121 12122 12221 12222 21121 21122 21221 21222 22121 22122 22221 22222
+    state fibre=   4 run=15 suffix=212112111122222222211212 (|s|=24) free j=2 members/2^j=4/4 affine=True hull_dim=2 hardcore_prefixes=3 log2F+run-n=-9.00
+       prefixes: 11 12 21 22
+n=27 c=2 k=14: 93 witnesses, gate failures=0, states=8, fibres=[29, 16, 8, 8, 8, 8, 8, 8]
+    state fibre=  29 run=15 suffix=2221212121212122112 (|s|=19) free j=8 members/2^j=29/256 affine=False hull_dim=6 hardcore_prefixes=8 log2F+run-n=-7.14
+       prefixes: 11121111 11121122 11121212 11121222 11221111 11221212 11221222 12121111 12121122 12121222 12221111 12221122 12221212 12221222 21121111 21121122 21121212 21121222 21221111 21221122 21221212 21221222 22121111 22121122 22121222 22221111 22221122 22221212 22221222
+    state fibre=  16 run=15 suffix=22212212221122211211 (|s|=20) free j=7 members/2^j=16/128 affine=True hull_dim=4 hardcore_prefixes=10 log2F+run-n=-8.00
+       prefixes: 1112121 1112122 1122121 1122122 1212121 1212122 1222121 1222122 2112121 2112122 2122121 2122122 2212121 2212122 2222121 2222122
+    state fibre=   8 run=14 suffix=212111121112221122121211 (|s|=24) free j=3 members/2^j=8/8 affine=True hull_dim=3 hardcore_prefixes=5 log2F+run-n=-10.00
+       prefixes: 111 112 121 122 211 212 221 222
+n=27 c=2 k=15: 69 witnesses, gate failures=0, states=4, fibres=[33, 20, 12, 4]
+    state fibre=  33 run=15 suffix=2221212121212122112 (|s|=19) free j=8 members/2^j=33/256 affine=False hull_dim=7 hardcore_prefixes=8 log2F+run-n=-6.96
+       prefixes: 11111122 11121111 11121122 11121212 11121222 11221111 11221212 11221222 12111122 12121111 12121122 12121222 12221111 12221122 12221212 12221222 21111122 21121111 21121122 21121212 21121222 21221111 21221122 21221212 21221222 22111122 22121111 22121122 22121222 22221111 22221122 22221212 22221222
+    state fibre=  20 run=15 suffix=22212212221122211211 (|s|=20) free j=7 members/2^j=20/128 affine=False hull_dim=5 hardcore_prefixes=10 log2F+run-n=-7.68
+       prefixes: 1111122 1112121 1112122 1122121 1122122 1211122 1212121 1212122 1222121 1222122 2111122 2112121 2112122 2122121 2122122 2211122 2212121 2212122 2222121 2222122
+    state fibre=  12 run=15 suffix=12112221211122222222211 (|s|=23) free j=4 members/2^j=12/16 affine=False hull_dim=4 hardcore_prefixes=5 log2F+run-n=-8.42
+       prefixes: 1111 1112 1122 1211 1212 1222 2111 2112 2122 2211 2212 2222
+n=27 c=2 k=16: 40 witnesses, gate failures=0, states=3, fibres=[20, 16, 4]
+    state fibre=  20 run=17 suffix=2121112122211121111222 (|s|=22) free j=5 members/2^j=20/32 affine=False hull_dim=5 hardcore_prefixes=8 log2F+run-n=-5.68
+       prefixes: 11112 11122 11211 11212 11222 12112 12122 12211 12212 12222 21112 21122 21211 21212 21222 22112 22122 22211 22212 22222
+    state fibre=  16 run=17 suffix=21211122221221112122222 (|s|=23) free j=4 members/2^j=16/16 affine=True hull_dim=4 hardcore_prefixes=8 log2F+run-n=-6.00
+       prefixes: 1111 1112 1121 1122 1211 1212 1221 1222 2111 2112 2121 2122 2211 2212 2221 2222
+    state fibre=   4 run=16 suffix=1112212221221122122211221 (|s|=25) free j=2 members/2^j=4/4 affine=True hull_dim=2 hardcore_prefixes=3 log2F+run-n=-9.00
+       prefixes: 11 12 21 22
+n=27 c=2 k=17: 36 witnesses, gate failures=0, states=2, fibres=[20, 16]
+    state fibre=  20 run=17 suffix=2121112122211121111222 (|s|=22) free j=5 members/2^j=20/32 affine=False hull_dim=5 hardcore_prefixes=8 log2F+run-n=-5.68
+       prefixes: 11112 11122 11211 11212 11222 12112 12122 12211 12212 12222 21112 21122 21211 21212 21222 22112 22122 22211 22212 22222
+    state fibre=  16 run=17 suffix=21211122221221112122222 (|s|=23) free j=4 members/2^j=16/16 affine=True hull_dim=4 hardcore_prefixes=8 log2F+run-n=-6.00
+       prefixes: 1111 1112 1121 1122 1211 1212 1221 1222 2111 2112 2121 2122 2211 2212 2221 2222
+n=27 c=3 k=15: 148 witnesses, gate failures=0, states=9, fibres=[56, 40, 16, 12, 8, 4, 4, 4]...
+    state fibre=  56 run=16 suffix=2211122112211212 (|s|=16) free j=11 members/2^j=56/2048 affine=False hull_dim=9 hardcore_prefixes=0 log2F+run-n=-5.19
+    state fibre=  40 run=15 suffix=2221111212222111122 (|s|=19) free j=8 members/2^j=40/256 affine=False hull_dim=6 hardcore_prefixes=10 log2F+run-n=-6.68
+       prefixes: 11111112 11111221 11121112 11121221 11122221 11211112 11211221 11221112 11221221 11222221 12111112 12111221 12121112 12121221 12122221 12211112 12211221 12221112 12221221 12222221 21111112 21111221 21121112 21121221 21122221 21211112 21211221 21221112 21221221 21222221 22111112 22111221 22121112 22121221 22122221 22211112 22211221 22221112 22221221 22222221
+    state fibre=  16 run=15 suffix=2121122112211212121112 (|s|=22) free j=5 members/2^j=16/32 affine=True hull_dim=4 hardcore_prefixes=5 log2F+run-n=-8.00
+       prefixes: 11111 11122 11211 11222 12111 12122 12211 12222 21111 21122 21211 21222 22111 22122 22211 22222
+n=27 c=3 k=16: 56 witnesses, gate failures=0, states=1, fibres=[56]
+    state fibre=  56 run=16 suffix=2211122112211212 (|s|=16) free j=11 members/2^j=56/2048 affine=False hull_dim=9 hardcore_prefixes=0 log2F+run-n=-5.19
+n=27 c=3 k=17: 3 witnesses, gate failures=0, states=1, fibres=[3]
+    state fibre=   3 run=18 suffix=2121212111122212212122212 (|s|=25) free j=2 members/2^j=3/4 affine=False hull_dim=2 hardcore_prefixes=2 log2F+run-n=-7.42
+       prefixes: 11 12 22
+n=27 c=3 k=18: 9 witnesses, gate failures=0, states=2, fibres=[5, 4]
+    state fibre=   5 run=19 suffix=121122121222121121111221 (|s|=24) free j=3 members/2^j=5/8 affine=False hull_dim=3 hardcore_prefixes=3 log2F+run-n=-5.68
+       prefixes: 111 121 211 212 221
+    state fibre=   4 run=18 suffix=2121212111122212212122212 (|s|=25) free j=2 members/2^j=4/4 affine=True hull_dim=2 hardcore_prefixes=3 log2F+run-n=-7.00
+       prefixes: 11 12 21 22
+n=27 c=3 k=19: 5 witnesses, gate failures=0, states=1, fibres=[5]
+    state fibre=   5 run=19 suffix=121122121222121121111221 (|s|=24) free j=3 members/2^j=5/8 affine=False hull_dim=3 hardcore_prefixes=3 log2F+run-n=-5.68
+       prefixes: 111 121 211 212 221
+n=28 c=2 k=14: 80 witnesses, gate failures=0, states=16, fibres=[8, 8, 8, 8, 4, 4, 4, 4]...
+    state fibre=   8 run=14 suffix=2211121222112111111112 (|s|=22) free j=6 members/2^j=8/64 affine=True hull_dim=3 hardcore_prefixes=3 log2F+run-n=-11.00
+       prefixes: 111112 112121 121112 122121 211112 212121 221112 222121
+    state fibre=   8 run=15 suffix=2211212111212112122112 (|s|=22) free j=6 members/2^j=8/64 affine=True hull_dim=3 hardcore_prefixes=3 log2F+run-n=-10.00
+       prefixes: 111112 112121 121112 122121 211112 212121 221112 222121
+    state fibre=   8 run=14 suffix=2211111222121121122222 (|s|=22) free j=6 members/2^j=8/64 affine=True hull_dim=3 hardcore_prefixes=3 log2F+run-n=-11.00
+       prefixes: 111112 112121 121112 122121 211112 212121 221112 222121
+n=28 c=2 k=15: 154 witnesses, gate failures=0, states=13, fibres=[28, 24, 24, 16, 16, 8, 8, 8]...
+    state fibre=  28 run=16 suffix=11211212212111222 (|s|=17) free j=11 members/2^j=28/2048 affine=False hull_dim=7 hardcore_prefixes=0 log2F+run-n=-7.19
+    state fibre=  24 run=15 suffix=11121221122111212112 (|s|=20) free j=8 members/2^j=24/256 affine=False hull_dim=6 hardcore_prefixes=0 log2F+run-n=-8.42
+       prefixes: 11111121 11112121 11121121 11211112 11212112 11221121 12111121 12112121 12121121 12211112 12212112 12221121 21111121 21112121 21121121 21211112 21212112 21221121 22111121 22112121 22121121 22211112 22212112 22221121
+    state fibre=  24 run=15 suffix=2221122212222212 (|s|=16) free j=12 members/2^j=24/4096 affine=False hull_dim=6 hardcore_prefixes=0 log2F+run-n=-8.42
+n=28 c=2 k=16: 40 witnesses, gate failures=0, states=3, fibres=[28, 8, 4]
+    state fibre=  28 run=16 suffix=11211212212111222 (|s|=17) free j=11 members/2^j=28/2048 affine=False hull_dim=7 hardcore_prefixes=0 log2F+run-n=-7.19
+    state fibre=   8 run=16 suffix=112211221111111121211111 (|s|=24) free j=4 members/2^j=8/16 affine=True hull_dim=3 hardcore_prefixes=2 log2F+run-n=-9.00
+       prefixes: 1111 1112 1211 1212 2111 2112 2211 2212
+    state fibre=   4 run=16 suffix=21112112211111112211212121 (|s|=26) free j=2 members/2^j=4/4 affine=True hull_dim=2 hardcore_prefixes=3 log2F+run-n=-10.00
+       prefixes: 11 12 21 22
+n=28 c=2 k=20: 32 witnesses, gate failures=0, states=1, fibres=[32]
+    state fibre=  32 run=21 suffix=2222122211222221122111 (|s|=22) free j=6 members/2^j=32/64 affine=False hull_dim=6 hardcore_prefixes=18 log2F+run-n=-2.00
+       prefixes: 111122 111212 111221 111222 112122 112212 112221 112222 121122 121212 121221 121222 122122 122212 122221 122222 211122 211212 211221 211222 212122 212212 212221 212222 221122 221212 221221 221222 222122 222212 222221 222222
+n=28 c=2 k=21: 32 witnesses, gate failures=0, states=1, fibres=[32]
+    state fibre=  32 run=21 suffix=2222122211222221122111 (|s|=22) free j=6 members/2^j=32/64 affine=False hull_dim=6 hardcore_prefixes=18 log2F+run-n=-2.00
+       prefixes: 111122 111212 111221 111222 112122 112212 112221 112222 121122 121212 121221 121222 122122 122212 122221 122222 211122 211212 211221 211222 212122 212212 212221 212222 221122 221212 221221 221222 222122 222212 222221 222222
+n=28 c=3 k=14: 104 witnesses, gate failures=0, states=13, fibres=[24, 8, 8, 8, 8, 8, 8, 8]...
+    state fibre=  24 run=14 suffix=221112211221121212 (|s|=18) free j=10 members/2^j=24/1024 affine=False hull_dim=5 hardcore_prefixes=3 log2F+run-n=-9.42
+       prefixes: 1111211211 1111212111 1111212212 1121211211 1121212111 1121212212 1211211211 1211212111 1211212212 1221211211 1221212111 1221212212 2111211211 2111212111 2111212212 2121211211 2121212111 2121212212 2211211211 2211212111 2211212212 2221211211 2221212111 2221212212
+    state fibre=   8 run=14 suffix=1211211121122121111121111 (|s|=25) free j=3 members/2^j=8/8 affine=True hull_dim=3 hardcore_prefixes=5 log2F+run-n=-11.00
+       prefixes: 111 112 121 122 211 212 221 222
+    state fibre=   8 run=14 suffix=1211211211121112212122212 (|s|=25) free j=3 members/2^j=8/8 affine=True hull_dim=3 hardcore_prefixes=5 log2F+run-n=-11.00
+       prefixes: 111 112 121 122 211 212 221 222
+n=28 c=3 k=15: 160 witnesses, gate failures=0, states=13, fibres=[32, 28, 16, 16, 8, 8, 8, 8]...
+    state fibre=  32 run=15 suffix=1211211222121221121122 (|s|=22) free j=6 members/2^j=32/64 affine=False hull_dim=6 hardcore_prefixes=8 log2F+run-n=-8.00
+       prefixes: 111111 111112 111121 111212 112111 112112 112121 112212 121111 121112 121121 121212 122111 122112 122121 122212 211111 211112 211121 211212 212111 212112 212121 212212 221111 221112 221121 221212 222111 222112 222121 222212
+    state fibre=  28 run=15 suffix=21211121112121211212 (|s|=20) free j=8 members/2^j=28/256 affine=False hull_dim=6 hardcore_prefixes=0 log2F+run-n=-8.19
+       prefixes: 11111111 11111112 11112111 11122111 11211111 11211112 11222111 12111111 12111112 12112111 12122111 12211111 12211112 12222111 21111111 21111112 21112111 21122111 21211111 21211112 21222111 22111111 22111112 22112111 22122111 22211111 22211112 22222111
+    state fibre=  16 run=16 suffix=221221211122112122112 (|s|=21) free j=7 members/2^j=16/128 affine=True hull_dim=4 hardcore_prefixes=0 log2F+run-n=-8.00
+       prefixes: 1111112 1111121 1121112 1121121 1211112 1211121 1221112 1221121 2111112 2111121 2121112 2121121 2211112 2211121 2221112 2221121
+n=28 c=3 k=16: 86 witnesses, gate failures=0, states=7, fibres=[24, 24, 12, 8, 8, 6, 4]
+    state fibre=  24 run=16 suffix=221221211122112122112 (|s|=21) free j=7 members/2^j=24/128 affine=False hull_dim=5 hardcore_prefixes=0 log2F+run-n=-7.42
+       prefixes: 1111112 1111121 1112112 1121112 1121121 1122112 1211112 1211121 1212112 1221112 1221121 1222112 2111112 2111121 2112112 2121112 2121121 2122112 2211112 2211121 2212112 2221112 2221121 2222112
+    state fibre=  24 run=17 suffix=212122212112111122122 (|s|=21) free j=7 members/2^j=24/128 affine=False hull_dim=5 hardcore_prefixes=8 log2F+run-n=-6.42
+       prefixes: 1111221 1112112 1112221 1121221 1122112 1122221 1211221 1212112 1212221 1221221 1222112 1222221 2111221 2112112 2112221 2121221 2122112 2122221 2211221 2212112 2212221 2221221 2222112 2222221
+    state fibre=  12 run=16 suffix=111221211122121221 (|s|=18) free j=10 members/2^j=12/1024 affine=False hull_dim=5 hardcore_prefixes=3 log2F+run-n=-8.42
+       prefixes: 1111221222 1112112121 1112121222 1122121222 1211221222 1222121222 2111221222 2112112121 2112121222 2122121222 2211221222 2222121222
+n=28 c=3 k=17: 24 witnesses, gate failures=0, states=1, fibres=[24]
+    state fibre=  24 run=17 suffix=212122212112111122122 (|s|=21) free j=7 members/2^j=24/128 affine=False hull_dim=5 hardcore_prefixes=8 log2F+run-n=-6.42
+       prefixes: 1111221 1112112 1112221 1121221 1122112 1122221 1211221 1212112 1212221 1221221 1222112 1222221 2111221 2112112 2112221 2121221 2122112 2122221 2211221 2212112 2212221 2221221 2222112 2222221
+n=29 c=2 k=13: 292 witnesses, gate failures=0, states=33, fibres=[16, 16, 16, 16, 12, 8, 8, 8]...
+    state fibre=  16 run=13 suffix=11211211112221111 (|s|=17) free j=12 members/2^j=16/4096 affine=True hull_dim=4 hardcore_prefixes=0 log2F+run-n=-12.00
+    state fibre=  16 run=13 suffix=11211212112122212212 (|s|=20) free j=9 members/2^j=16/512 affine=True hull_dim=4 hardcore_prefixes=0 log2F+run-n=-12.00
+       prefixes: 111111121 111111122 112111121 112111122 121111121 121111122 122111121 122111122 211111121 211111122 212111121 212111122 221111121 221111122 222111121 222111122
+    state fibre=  16 run=13 suffix=21122212112111112122 (|s|=20) free j=9 members/2^j=16/512 affine=True hull_dim=4 hardcore_prefixes=0 log2F+run-n=-12.00
+       prefixes: 111111112 111111121 112111112 112111121 121111112 121111121 122111112 122111121 211111112 211111121 212111112 212111121 221111112 221111121 222111112 222111121
+n=29 c=2 k=14: 132 witnesses, gate failures=0, states=21, fibres=[16, 8, 8, 8, 8, 8, 8, 8]...
+    state fibre=  16 run=14 suffix=211122121212212212122 (|s|=21) free j=8 members/2^j=16/256 affine=True hull_dim=4 hardcore_prefixes=0 log2F+run-n=-11.00
+       prefixes: 11111111 11111112 11211111 11211112 12111111 12111112 12211111 12211112 21111111 21111112 21211111 21211112 22111111 22111112 22211111 22211112
+    state fibre=   8 run=14 suffix=11111121112112211121211111 (|s|=26) free j=3 members/2^j=8/8 affine=True hull_dim=3 hardcore_prefixes=5 log2F+run-n=-12.00
+       prefixes: 111 112 121 122 211 212 221 222
+    state fibre=   8 run=14 suffix=11111221221112122211121111 (|s|=26) free j=3 members/2^j=8/8 affine=True hull_dim=3 hardcore_prefixes=5 log2F+run-n=-12.00
+       prefixes: 111 112 121 122 211 212 221 222
+n=29 c=2 k=15: 130 witnesses, gate failures=0, states=12, fibres=[26, 20, 16, 12, 12, 8, 8, 8]...
+    state fibre=  26 run=16 suffix=2212211211212221122221 (|s|=22) free j=7 members/2^j=26/128 affine=False hull_dim=6 hardcore_prefixes=0 log2F+run-n=-8.30
+       prefixes: 1111122 1111211 1111212 1121122 1121211 1122211 1211122 1211211 1211212 1212211 1221122 1221211 1222211 2111122 2111211 2111212 2121122 2121211 2122211 2211122 2211211 2211212 2212211 2221122 2221211 2222211
+    state fibre=  20 run=15 suffix=2212221222112222212112 (|s|=22) free j=7 members/2^j=20/128 affine=False hull_dim=5 hardcore_prefixes=0 log2F+run-n=-9.68
+       prefixes: 1111121 1112112 1121112 1121121 1122112 1211121 1212112 1221112 1221121 1222112 2111121 2112112 2121112 2121121 2122112 2211121 2212112 2221112 2221121 2222112
+    state fibre=  16 run=15 suffix=22111212111221212221111 (|s|=23) free j=6 members/2^j=16/64 affine=False hull_dim=5 hardcore_prefixes=0 log2F+run-n=-10.00
+       prefixes: 111112 111121 112111 112112 121112 121121 122111 122112 211112 211121 212111 212112 221112 221121 222111 222112
+n=29 c=2 k=16: 72 witnesses, gate failures=0, states=7, fibres=[28, 10, 10, 8, 6, 6, 4]
+    state fibre=  28 run=16 suffix=2212211211212221122221 (|s|=22) free j=7 members/2^j=28/128 affine=False hull_dim=6 hardcore_prefixes=0 log2F+run-n=-8.19
+       prefixes: 1111122 1111211 1111212 1112211 1121122 1121211 1122211 1211122 1211211 1211212 1212211 1221122 1221211 1222211 2111122 2111211 2111212 2112211 2121122 2121211 2122211 2211122 2211211 2211212 2212211 2221122 2221211 2222211
+    state fibre=  10 run=17 suffix=2222212122222212212112 (|s|=22) free j=7 members/2^j=10/128 affine=False hull_dim=4 hardcore_prefixes=3 log2F+run-n=-8.68
+       prefixes: 1111112 1112121 1122121 1211112 1222121 2111112 2112121 2122121 2211112 2222121
+    state fibre=  10 run=17 suffix=222211222211212121121 (|s|=21) free j=8 members/2^j=10/256 affine=False hull_dim=4 hardcore_prefixes=5 log2F+run-n=-8.68
+       prefixes: 11122112 11122121 11222121 12122121 12222121 21122112 21122121 21222121 22122121 22222121
+n=29 c=2 k=17: 50 witnesses, gate failures=0, states=3, fibres=[22, 18, 10]
+    state fibre=  22 run=18 suffix=111111222122212121211 (|s|=21) free j=8 members/2^j=22

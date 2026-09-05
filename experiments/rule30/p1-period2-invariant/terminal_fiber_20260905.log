@@ -1,0 +1,10 @@
+n=15 c=2 max_survival=9 gamma=8 fiber=10 distinct_conts=3 common_suffix=1 free_prefix=14 suffix=2 cont=222212121 killer=3 secs=9
+n=15 c=3 max_survival=8 gamma=9 fiber=9 distinct_conts=3 common_suffix=0 free_prefix=15 suffix= cont=22122222 killer=3 secs=10
+n=16 c=2 max_survival=10 gamma=8 fiber=3 distinct_conts=1 common_suffix=13 free_prefix=3 suffix=2212122122122 cont=2221212222 killer=3 secs=22
+n=16 c=3 max_survival=10 gamma=8 fiber=18 distinct_conts=2 common_suffix=0 free_prefix=16 suffix= cont=2212121212 killer=3 secs=22
+n=17 c=2 max_survival=11 gamma=8 fiber=10 distinct_conts=1 common_suffix=11 free_prefix=6 suffix=21111111212 cont=22222122222 killer=3 secs=48
+n=17 c=3 max_survival=10 gamma=9 fiber=6 distinct_conts=1 common_suffix=14 free_prefix=3 suffix=22211112212111 cont=2222122221 killer=1 secs=49
+n=18 c=2 max_survival=12 gamma=8 fiber=16 distinct_conts=2 common_suffix=0 free_prefix=18 suffix= cont=221212212121 killer=3 secs=110
+n=18 c=3 max_survival=11 gamma=9 fiber=12 distinct_conts=1 common_suffix=13 free_prefix=5 suffix=2111112221212 cont=21222212122 killer=0 secs=109
+n=19 c=2 max_survival=11 gamma=10 fiber=8 distinct_conts=2 common_suffix=0 free_prefix=19 suffix= cont=12121221221 killer=0 secs=256
+n=19 c=3 max_survival=13 gamma=8 fiber=6 distinct_conts=1 common_suffix=16 free_prefix=3 suffix=2212122211221122 cont=2221221221221 killer=1 secs=244

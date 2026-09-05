@@ -1,0 +1,3 @@
+    assert H(cur[d]) == (1 if retained[d] else 0), ("b", word, n, d)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('b', (1,), 1, -1)

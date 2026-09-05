@@ -1,0 +1,37 @@
+n=18 c=2 k=3: N_k=16374, prefixes with fibre >= 5: 6
+  prefix 112221212211212 (length 15) fibre 5 of 8 completions:
+     W=112221212211212111  suffix=111  depth=4  forced=22121
+     W=112221212211212112  suffix=112  depth=3  forced=2121
+     W=112221212211212122  suffix=122  depth=5  forced=221222
+     W=112221212211212221  suffix=221  depth=3  forced=2221
+     W=112221212211212222  suffix=222  depth=4  forced=22211
+  prefix 121221212211212 (length 15) fibre 5 of 8 completions:
+     W=121221212211212111  suffix=111  depth=4  forced=22121
+     W=121221212211212112  suffix=112  depth=3  forced=2121
+     W=121221212211212122  suffix=122  depth=5  forced=221222
+     W=121221212211212221  suffix=221  depth=3  forced=2221
+     W=121221212211212222  suffix=222  depth=4  forced=22211
+  prefix 122221212211212 (length 15) fibre 5 of 8 completions:
+     W=122221212211212111  suffix=111  depth=4  forced=22121
+     W=122221212211212112  suffix=112  depth=3  forced=2121
+     W=122221212211212122  suffix=122  depth=5  forced=221222
+     W=122221212211212221  suffix=221  depth=3  forced=2221
+     W=122221212211212222  suffix=222  depth=4  forced=22211
+  prefix 212221212211212 (length 15) fibre 5 of 8 completions:
+     W=212221212211212111  suffix=111  depth=4  forced=22121
+     W=212221212211212112  suffix=112  depth=3  forced=2121
+     W=212221212211212122  suffix=122  depth=5  forced=221222
+     W=212221212211212221  suffix=221  depth=3  forced=2221
+     W=212221212211212222  suffix=222  depth=4  forced=22211
+  prefix 221221212211212 (length 15) fibre 5 of 8 completions:
+     W=221221212211212111  suffix=111  depth=4  forced=22121
+     W=221221212211212112  suffix=112  depth=3  forced=2121
+     W=221221212211212122  suffix=122  depth=5  forced=221222
+     W=221221212211212221  suffix=221  depth=3  forced=2221
+     W=221221212211212222  suffix=222  depth=4  forced=22211
+  prefix 222221212211212 (length 15) fibre 5 of 8 completions:
+     W=222221212211212111  suffix=111  depth=4  forced=22121
+     W=222221212211212112  suffix=112  depth=3  forced=2121
+     W=222221212211212122  suffix=122  depth=5  forced=221222
+     W=222221212211212221  suffix=221  depth=3  forced=2221
+     W=222221212211212222  suffix=222  depth=4  forced=22211

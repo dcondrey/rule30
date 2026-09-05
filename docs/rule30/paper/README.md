@@ -11,11 +11,12 @@
 <!-- repo-header:end -->
 
 This directory contains a six-page theorem note for the proved
-finite-support constant-trace results, in five sections with two figures.  It
+finite-support constant-trace results, in six sections with two figures.  It
 was four pages before the constant-one half was added on 2026-08-30:
 Theorem 3 (the all-one fiber is a single checkerboard), Corollary 5 (no
 eventually constant column), Theorem 7 (the all-one sharp horizon) and
-Corollary 8 (the combined `w+1` law).  Numbering after that insertion is
+Corollary 8 (maximum horizon index `w+1`, hence combined prefix length
+`w+2`).  Numbering after that insertion is
 Lemma 1, Theorem 2, Theorem 3, Corollary 4, Corollary 5, Theorem 6, Theorem 7,
 Corollary 8.  Author metadata is set to David Lee Condrey, WritersLogic, Inc.
 
@@ -56,10 +57,12 @@ theorems and their single-cell uniqueness, and all three horizon laws
 exhaustively for radius `w <= 7`, matching Theorem 7's extremizer set exactly
 rather than only its cardinality.  It exits nonzero on any mismatch.
 
-When `z3-solver` is available, the optional local-schema certificate is:
+The optional local-schema certificate can be run in an isolated environment
+with its dependency supplied explicitly:
 
 ```bash
-python ../../../experiments/rule30/zero_tail_smt_certificate.py --json
+uv run --with z3-solver python \
+  ../../../experiments/rule30/zero_tail_smt_certificate.py --json
 ```
 
 It proves the negations of all finite Boolean proof obligations UNSAT. The
@@ -76,5 +79,6 @@ lean ../../../experiments/rule30/Rule30ZeroTail.lean
 It formalizes left permutivity, arbitrary-depth triangular sensitivity, the
 prefix-OR closed form, the local invariant identities, and the infinite-tail
 contradiction conditional on the paper's classification disjunction. It does
-not yet formalize the derivation of that classification from an all-zero
-trace, so it is not labelled a full machine-checked proof.
+not formalize the derivation of that classification from an all-zero trace,
+the all-one fiber, either sharp horizon theorem, or the eventual-constant
+corollaries, so it is not labelled a full machine-checked proof.
