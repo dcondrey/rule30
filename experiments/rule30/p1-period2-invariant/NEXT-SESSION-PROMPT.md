@@ -38,7 +38,12 @@ always with `PYTHONPATH=.` from the project directory.
 
 ## State of play — verified, do not redo
 
-**SAT.** Complete UNSAT grid through `n=29`, no gaps (last cell
+**SAT.** [SUPERSEDED 2026-09-05: the grid is now complete and all-UNSAT through
+`n=30` (six cells: `r in {0,1,2}` x `c in {2,3}`; the `r=0` pair is in
+`rw_sat_n30_20260903.log`, not the `gap_30_*` logs). `n=31` has never been
+solved. See `OVERNIGHT-HANDOFF-20260904-LATE.md`.]
+
+Complete UNSAT grid through `n=29`, no gaps (last cell
 `n=29,r=2,c=3` returned UNSAT: 29473 vars, 91524 clauses, 9440.7 s). Four
 `n=30` instances still running; logs `uc/r1-skeptic/gap_30_*.log` are empty
 until they finish. **Do not claim n=30 until those files are non-empty.**

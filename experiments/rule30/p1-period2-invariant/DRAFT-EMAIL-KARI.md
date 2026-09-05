@@ -12,20 +12,54 @@ a paper contact per `docs/rule30/paper/PUBLICATION-NOTES.md`.
 ## Factual corrections applied to the draft before parking
 
 1. **SAT range.** An earlier wording said "exhaustive SAT is UNSAT through
-   n = 30". That is **false as of 2026-09-04**. Verified state: UNSAT for
-   every instance through `n = 29` **except** `(n=29, r=2, c=3)`, which was
-   still running at the time of the first draft. **UPDATE (same day): that
-   cell has now returned UNSAT** (`uc/r1-skeptic/gap_29_2_3.log`:
-   `29 2 3 29473 91524 UNSAT 9440.73`, i.e. 29,473 variables / 91,524
-   clauses / 9,440.7 s). The `n = 29` grid is therefore **complete, with no
-   gaps**, and the draft below now says so. All four `n = 30` instances
-   (`r=1,2` x `c=2,3`) are still running; do not claim `n = 30` until their
-   logs are non-empty.
+   n = 30". That was **false when written on 2026-09-04** — at that point
+   `(n=29, r=2, c=3)` was still running — and it became true only on
+   2026-09-05. Sequence, kept intact so the claim's history is auditable:
+   `(29,2,3)` returned UNSAT (`uc/r1-skeptic/gap_29_2_3.log`:
+   `29 2 3 29473 91524 UNSAT 9440.73`), completing `n = 29`; then all four
+   `gap_30_*` cells returned UNSAT between 00:33 and 02:42 on 2026-09-05.
+
+   **The `n = 30` row is now complete and every cell is UNSAT**, 34.2
+   CPU-hours for the row:
+
+   | cell | vars | clauses | seconds | log |
+   |---|---|---|---|---|
+   | `r=0 c=2` | 29761 | 92417 | 10403.09 | `rw_sat_n30_20260903.log` |
+   | `r=0 c=3` | 29761 | 92417 | 13242.53 | `rw_sat_n30_20260903.log` |
+   | `r=1 c=2` | 30592 | 95001 | 27975.38 | `gap_30_1_2.log` |
+   | `r=1 c=3` | 30592 | 95001 | 26581.05 | `gap_30_1_3.log` |
+   | `r=2 c=2` | 31432 | 97613 | 24330.31 | `gap_30_2_2.log` |
+   | `r=2 c=3` | 31432 | 97613 | 20477.98 | `gap_30_2_3.log` |
+
+   **Trap for anyone re-verifying:** the grid is `r in {0,1,2}` x `c in {2,3}`,
+   **six** cells, but only four are in `gap_30_*` logs — the `r=0` pair lives
+   in `rw_sat_n30_20260903.log`. "All four gap logs returned" is not "the row
+   is complete". Likewise `n=29 r=0 c=3` is in `rw_sat_n29_c3.log` in a
+   different output format, so `grep '^29 0 '` misses it.
+
+   `n = 31` has **not** been run: it was launched on 2026-09-05 08:34 and
+   stopped 2m17s later with every log still empty, so no `n=31` cell has ever
+   been solved. No runtime estimate for it is supportable — the per-cell
+   `n=29 -> n=30` ratios range 0.88x (one cell got *faster*) to 12.55x.
 2. **n=16 measured value.** The draft quotes `0.37445` at `n=16`; that is
    the `c=2` value. The `c=3` value at `n=16` is `0.38010`. The draft now
    gives the range rather than the single favorable number.
 3. **Marginal vs joint.** The draft states both halves explicitly, so the
    claim cannot be read as "the process is maximum entropy".
+4. **"Three independent codings" — REMOVED 2026-09-05.** The draft said the
+   `phi/4` rate was "measured independently in three different codings". That
+   claim is retracted: they are three codings of **one** process, not three
+   independent measurements, so the wording overstated the evidence to a
+   reader who would reasonably read "independently" as corroboration. The
+   sentence now simply states the rate.
+5. **Census range.** The body said `H_r(n) = 0` for `n <= 13`; the verified
+   range is now `n <= 21` (every `r in {0,1,2}`, both `c in {2,3}`).
+6. **P1 / light-cone.** If any future version of this letter mentions the
+   departure index `k_dep`, it must not claim `k_dep = floor(n/2) - 2`. That
+   is falsified: it misses at `n=10` and at `n=20` (both tails), and at
+   `n=12` the two tails disagree, so no formula in `n` alone can be correct.
+   The light-cone argument supplies a scale `~n/2`, not a formula. See
+   `RESULTS-DISTINCT-CONTINUATION-COUNT.md`.
 
 ---
 
@@ -37,9 +71,8 @@ For the period-2 exclusion problem for Rule 30, we have been trying to
 prove there is no binary source word whose forced continuation stays in
 the hard-core shift and reaches a prescribed target state after n rows.
 Computationally the statement holds as far as we can push it: exhaustive
-SAT returns UNSAT for every instance through n = 29, with no gaps (the
-n = 30 row is still in flight as I write), and the exact survivor
-census gives H_r(n) = 0 for all n <= 13.
+SAT returns UNSAT for every instance through n = 30, with no gaps, and
+the exact survivor census gives H_r(n) = 0 for all n <= 21.
 
 Every proof route we tried -- bounded automata, quotient congruences,
 algebraic degree bounds, descent arguments, SAT core extraction,
@@ -47,7 +80,7 @@ Markov/DFA collapse -- failed for the same reason: the obstruction does
 not localize.
 
 The measurements now point at something sharper. The recurring per-row
-survival rate, measured independently in three different codings, is
+survival rate is
 
     lambda = phi/4 = (1+sqrt 5)/8 = 0.404508...
 
