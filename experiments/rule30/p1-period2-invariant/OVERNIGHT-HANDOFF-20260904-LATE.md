@@ -50,16 +50,19 @@ are now stale and are corrected below.
    `n=21` `k_dep=8`).
 11. **Task list written** (`TASKLIST-20260904-R1.md`), R1-first, with every
     compute item marked blocked and the reason.
-12. **`H(2,w) >= w` — the SAT/SMT exhaustion route cannot close R1 or the
-    `p=2` exclusion.** This started the session as the top open item ("does the
-    horizon table plateau? a plateau IS the theorem") and turned out to be
-    answerable for free. A plateau cannot occur: the finite-prefix lemma gives
-    `H(2,w) >= w`, and the construction measures it to `w = 300` in **0.04 s**
+12. **`H(2,w) >= w` — VALIDATION, not a finding.** This started the session as
+    the top open item ("does the horizon table plateau? a plateau IS the
+    theorem"). It was already settled: the finite-prefix lemma proved in
+    `docs/rule30/RESULTS-eventual-period.md` gives `H(2,N) >= N` outright, so a
+    plateau cannot occur and the question should never have been queued as a
+    measurement. The run adds an implementation check and a Rule 90 control,
+    and measures the bound to `w = 300` in **0.04 s**
     with `H - w` in `{1,2,3,5}`, reproducing the published `H(2,1) = 6` exactly
     and sitting under every other published cell. **Do not spend SMT compute on
     `w = 9,10,11`.** Rule 90 control shows the same behaviour, so this is a
     left-permutivity fact and a negative about the *method*; it says nothing
-    about Rule 30 specifically and must not be cited as if it did.
+    about Rule 30 specifically and must not be cited as if it did, nor cited as
+    a new result.
     (`uc/r1-r1zero/h_horizon_lower_bound.py` + `.log`.)
 
 ## OPEN
@@ -128,12 +131,16 @@ ps -eo pid,etime,%cpu,command | grep '[p]ython3 ' | grep -v uv
 
 ## Frozen predictions and their current scores
 
+Registered predictions only. `H(p,w)` growth is deliberately **not** listed: it
+was raised and answered inside this one session and was never pre-registered,
+and this table exists to keep "a registered kill condition fired" distinct from
+"we asked something and answered it". See DONE item 12 instead.
+
 | id | prediction | score |
 |---|---|---|
 | P1 | `k_dep = floor(n/2) - 2` | **FALSIFIED** exactly (`a0f539b`). Fails at `n=10` (one high) and `n=20` (one low, on both tails), and decisively at `n=12`, where the two tails disagree (`4` at `c=3`, `5` at `c=2`) so no formula in `n` alone can hold at any tolerance |
 | P3 | extinction margin bounded below by a positive constant | **SURVIVING.** Running minimum still 5 (at `n=12`). New: `n=20` gives 11/8, `n=21` gives 10/7 (`c=2`/`c=3`). Report the running minimum, never the mean |
 | P4 | post-departure geometric mean `< 1/phi = 0.618` | **UNSCORED** at `n>=20`; the `c=3` series was creeping (0.427, 0.395, 0.530, 0.569). Watch for a crossing |
-| — | `H(p,w)` growth in `w` | **RESOLVED: `H(2,w) >= w`, measured to `w=300`.** Unbounded, so R1 is **not** reachable by extending the SAT/SMT grid. Rule 90 behaves identically, so this constrains the method, not the rule |
 
 ## Rules earned this session
 

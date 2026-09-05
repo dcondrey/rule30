@@ -170,9 +170,26 @@ Caution for anyone tempted by `drive01_long`'s `|Z| = 262144 = T/2`: that is
 `T/2` **by construction**, because the drive imposes `c = (01)^inf`. It is not
 evidence about the real centre column's density.
 
-## NEW RESULT: `H(2,w) >= w`, so the SAT/SMT exhaustion route cannot close R1
+## VALIDATION (not a finding): `H(2,w) >= w`, confirmed constructively to `w = 300`
 
-The obvious next measurement looked like "extend the `H(p,w)` table to
+**This is a corroboration of a lemma already proved in the repo, not a new
+result.** The finite-prefix lemma in `docs/rule30/RESULTS-eventual-period.md`
+states it directly: for any finite desired trace `tau_0..tau_N` and any
+compatible right prefix, left permutivity supplies a unique `L_1..L_N` and zero
+padding gives a finite row matching the trace through time `N` — a row of
+support radius `~N`. So `H(2,N) >= N` follows with no measurement at all, and
+the same document already draws the operational conclusion in words ("no
+contradiction can depend only on `p` or on a bounded number of centre symbols
+independent of support size"). What the run below adds is an implementation
+check, a numerical reach of `w = 300`, and a Rule 90 control. It is labelled
+validation so an expected result is not later mis-cited as a discovery — the
+failure mode behind all four of the retractions listed in
+`NEXT-SESSION-PROMPT.md`.
+
+The practical call it settles is still worth the session: **do not spend SMT
+compute on `w = 9,10,11`.**
+
+The measurement looked like "extend the `H(p,w)` table to
 `w = 9,10,11` and see whether it plateaus". **That measurement is void: a
 plateau cannot occur, and the reason is the same finite-prefix lemma used above
 to retire `lhp_lock_search`.** Applied to `H` itself: truncate `(01)^inf` at
@@ -206,7 +223,9 @@ rule 30, trace (01)^inf, empty right half:
 `H(2,w)` (the table maximises over all rows of radius `w`, this family has
 support in `[-w, 0]` only), and it is consistent with every published cell:
 `H(2,1) = 6` is reproduced exactly, and `H(2,7) >= 8` sits under the table's 9.
-It extends the table's reach in `w` by a factor of ~37 at zero SMT cost.
+It extends the reach of the **lower bound** by a factor of ~37 at zero SMT
+cost. It does **not** extend the table: `H(2,300)` is not a table value, since
+the table maximises over all rows of radius `w` and this family does not.
 
 **Consequences.**
 
@@ -221,13 +240,14 @@ It extends the table's reach in `w` by a factor of ~37 at zero SMT cost.
    is required, exactly as `RESULTS-eventual-period.md` already concluded in
    words; this supplies the quantitative version.
 
-**Rule 90 filter, applied to this result itself.** The same construction, run
+**Rule 90 filter, applied to this validation itself.** The same construction, run
 under `rule90_step`, also gives `H - w` in `{1,3}` out to `w = 299` (control in
 the same log). So the unboundedness is a **left-permutivity fact, not a Rule 30
 fact** — both rules are left-permutive. That is the correct reading: this result
 is a negative about the *method*, and it must not be cited as saying anything
 about Rule 30 specifically. It fails the Rule 90 filter as a positive argument,
-by design.
+by design — which is the expected outcome for a left-permutivity lemma, and a
+check that the instrument is reporting honestly.
 
 ## What is genuinely open on R1 after this inventory
 
