@@ -92,6 +92,18 @@ are now stale and are corrected below.
    this session (the tool reported no match). If they still do not, write the
    task list to a file as done here; do not burn calls retrying.
 
+## Post-midnight update (2026-09-05 00:27), single read
+
+The concurrent session (`88e37218`) had three background tasks killed. What went
+with them was its own work only: both `scratch_finalist_via_dedup.py` processes
+and the `dlp_rotated_wedge` heredoc. **Every shared long job survived**: the four
+`rw_sat_gap_fill_one.py 30 *` (now 5h34m, logs still 0 bytes), the four
+`overnight_census.py` streams (3 `RESULT` lines each, now working `n=23,24`), and
+`fastdk_benchmark.py`.
+
+Load average is **33.94** — down from 43.70 but still 3.4x the 10 cores.
+**The launch embargo stands.** Re-check `uptime` before doing anything else.
+
 ## Job state at session end (single read, no polling)
 
 ```
