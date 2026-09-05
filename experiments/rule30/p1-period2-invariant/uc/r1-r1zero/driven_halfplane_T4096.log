@@ -1,0 +1,236 @@
+T=4096 max_period=256
+periodic words tested: 23 (primitive, period 1..6, canonical rotation)
+word 0 prefix_len=0 |Z|=4096
+  RHP r|Z (rule 30): len=4096 ones=4096 eventual_period(q<=256, onset<=len/2)=(1, 0) longest shift-agreement run=4095 at shift 1 start 0
+  LHP l (rule 30): len=4097 ones=2015 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 131 start 3852
+  LHP l|Z (rule 30): len=4096 ones=2015 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 131 start 3851
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1 of 1
+word 0 prefix_len=8 |Z|=4092
+  RHP r|Z (rule 30): len=4092 ones=4089 eventual_period(q<=256, onset<=len/2)=(1, 3) longest shift-agreement run=4088 at shift 1 start 3
+  LHP l (rule 30): len=4097 ones=2117 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 69 start 939
+  LHP l|Z (rule 30): len=4092 ones=2115 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 69 start 934
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 0 of 5
+word 1 prefix_len=0 |Z|=0
+  zero set too small, skipped
+word 1 prefix_len=8 |Z|=3
+  zero set too small, skipped
+word 01 prefix_len=0 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=436 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=145 at shift 188 start 860
+  LHP l (rule 30): len=4097 ones=2082 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 161 start 777
+  LHP l|Z (rule 30): len=2048 ones=1070 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 63 start 1218
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1036 of 2049
+word 01 prefix_len=8 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=440 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=149 at shift 223 start 1301
+  LHP l (rule 30): len=4097 ones=2083 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 161 start 777
+  LHP l|Z (rule 30): len=2048 ones=1071 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 63 start 1218
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1034 of 2049
+word 001 prefix_len=0 |Z|=2731
+  RHP r|Z (rule 30): len=2731 ones=395 eventual_period(q<=256, onset<=len/2)=(14, 197) longest shift-agreement run=2520 at shift 14 start 197
+  LHP l (rule 30): len=4097 ones=2041 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 136 start 3905
+  LHP l|Z (rule 30): len=2731 ones=1375 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 26 start 1920
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 700 of 1366
+word 001 prefix_len=8 |Z|=2729
+  RHP r|Z (rule 30): len=2729 ones=394 eventual_period(q<=256, onset<=len/2)=(14, 167) longest shift-agreement run=2548 at shift 14 start 167
+  LHP l (rule 30): len=4097 ones=2065 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 114 start 231
+  LHP l|Z (rule 30): len=2729 ones=1368 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 213 start 2237
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 668 of 1367
+word 011 prefix_len=0 |Z|=1365
+  RHP r|Z (rule 30): len=1365 ones=1111 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=85 at shift 143 start 1042
+  LHP l (rule 30): len=4097 ones=2079 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=21 at shift 176 start 2600
+  LHP l|Z (rule 30): len=1365 ones=686 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 118 start 65
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1344 of 2731
+word 011 prefix_len=8 |Z|=1366
+  RHP r|Z (rule 30): len=1366 ones=1114 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=62 at shift 196 start 209
+  LHP l (rule 30): len=4097 ones=2038 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 163 start 3074
+  LHP l|Z (rule 30): len=1366 ones=676 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 101 start 25
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1331 of 2730
+word 0001 prefix_len=0 |Z|=3072
+  RHP r|Z (rule 30): len=3072 ones=1025 eventual_period(q<=256, onset<=len/2)=(3, 1) longest shift-agreement run=3068 at shift 3 start 1
+  LHP l (rule 30): len=4097 ones=2086 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 220 start 727
+  LHP l|Z (rule 30): len=3072 ones=1563 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 22 start 1223
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 502 of 1025
+word 0001 prefix_len=8 |Z|=3070
+  RHP r|Z (rule 30): len=3070 ones=1030 eventual_period(q<=256, onset<=len/2)=(3, 143) longest shift-agreement run=2924 at shift 3 start 143
+  LHP l (rule 30): len=4097 ones=2087 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 220 start 727
+  LHP l|Z (rule 30): len=3070 ones=1562 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 22 start 1221
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 499 of 1027
+word 0011 prefix_len=0 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=2048 eventual_period(q<=256, onset<=len/2)=(1, 0) longest shift-agreement run=2047 at shift 1 start 0
+  LHP l (rule 30): len=4097 ones=2041 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 212 start 2850
+  LHP l|Z (rule 30): len=2048 ones=1026 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 165 start 605
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1042 of 2049
+word 0011 prefix_len=8 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=2045 eventual_period(q<=256, onset<=len/2)=(1, 3) longest shift-agreement run=2044 at shift 1 start 3
+  LHP l (rule 30): len=4097 ones=2042 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 212 start 2850
+  LHP l|Z (rule 30): len=2048 ones=1027 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 165 start 605
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1037 of 2049
+word 0111 prefix_len=0 |Z|=1024
+  RHP r|Z (rule 30): len=1024 ones=0 eventual_period(q<=256, onset<=len/2)=(1, 0) longest shift-agreement run=1023 at shift 1 start 0
+  LHP l (rule 30): len=4097 ones=2020 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 36 start 346
+  LHP l|Z (rule 30): len=1024 ones=522 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 28 start 900
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1506 of 3073
+word 0111 prefix_len=8 |Z|=1026
+  RHP r|Z (rule 30): len=1026 ones=3 eventual_period(q<=256, onset<=len/2)=(1, 9) longest shift-agreement run=1016 at shift 1 start 9
+  LHP l (rule 30): len=4097 ones=2022 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 36 start 346
+  LHP l|Z (rule 30): len=1026 ones=524 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 28 start 902
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1502 of 3071
+word 00001 prefix_len=0 |Z|=3277
+  RHP r|Z (rule 30): len=3277 ones=1789 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=168 at shift 228 start 901
+  LHP l (rule 30): len=4097 ones=2094 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 74 start 1758
+  LHP l|Z (rule 30): len=3277 ones=1680 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 148 start 1660
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 406 of 820
+word 00001 prefix_len=8 |Z|=3275
+  RHP r|Z (rule 30): len=3275 ones=1784 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=124 at shift 220 start 2413
+  LHP l (rule 30): len=4097 ones=2081 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=23 at shift 151 start 20
+  LHP l|Z (rule 30): len=3275 ones=1650 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 56 start 550
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 388 of 822
+word 00011 prefix_len=0 |Z|=2458
+  RHP r|Z (rule 30): len=2458 ones=2274 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=101 at shift 42 start 1647
+  LHP l (rule 30): len=4097 ones=2074 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 192 start 1724
+  LHP l|Z (rule 30): len=2458 ones=1231 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 68 start 1580
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 811 of 1639
+word 00011 prefix_len=8 |Z|=2457
+  RHP r|Z (rule 30): len=2457 ones=2266 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=107 at shift 42 start 394
+  LHP l (rule 30): len=4097 ones=1991 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 252 start 623
+  LHP l|Z (rule 30): len=2457 ones=1208 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 52 start 1630
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 854 of 1639
+word 00101 prefix_len=0 |Z|=2458
+  RHP r|Z (rule 30): len=2458 ones=597 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=145 at shift 6 start 1285
+  LHP l (rule 30): len=4097 ones=1983 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=27 at shift 191 start 3349
+  LHP l|Z (rule 30): len=2458 ones=1211 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 100 start 856
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 867 of 1639
+word 00101 prefix_len=8 |Z|=2457
+  RHP r|Z (rule 30): len=2457 ones=611 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=106 at shift 123 start 1357
+  LHP l (rule 30): len=4097 ones=1960 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=21 at shift 179 start 2047
+  LHP l|Z (rule 30): len=2457 ones=1181 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 156 start 1239
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 858 of 1640
+word 00111 prefix_len=0 |Z|=1639
+  RHP r|Z (rule 30): len=1639 ones=815 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=118 at shift 88 start 1074
+  LHP l (rule 30): len=4097 ones=2090 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 210 start 813
+  LHP l|Z (rule 30): len=1639 ones=833 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 125 start 947
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1195 of 2458
+word 00111 prefix_len=8 |Z|=1639
+  RHP r|Z (rule 30): len=1639 ones=812 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=94 at shift 216 start 308
+  LHP l (rule 30): len=4097 ones=2020 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 74 start 1073
+  LHP l|Z (rule 30): len=1639 ones=800 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 240 start 35
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1216 of 2457
+word 01011 prefix_len=0 |Z|=1638
+  RHP r|Z (rule 30): len=1638 ones=383 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=142 at shift 74 start 222
+  LHP l (rule 30): len=4097 ones=2056 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 33 start 238
+  LHP l|Z (rule 30): len=1638 ones=837 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 192 start 1070
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1263 of 2458
+word 01011 prefix_len=8 |Z|=1639
+  RHP r|Z (rule 30): len=1639 ones=382 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=142 at shift 74 start 1252
+  LHP l (rule 30): len=4097 ones=2096 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=21 at shift 215 start 1659
+  LHP l|Z (rule 30): len=1639 ones=821 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 202 start 866
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1232 of 2457
+word 01111 prefix_len=0 |Z|=819
+  RHP r|Z (rule 30): len=819 ones=412 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=659 at shift 2 start 0
+  LHP l (rule 30): len=4097 ones=2000 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 47 start 3946
+  LHP l|Z (rule 30): len=819 ones=397 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 86 start 187
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1599 of 3277
+word 01111 prefix_len=8 |Z|=821
+  RHP r|Z (rule 30): len=821 ones=417 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=476 at shift 2 start 37
+  LHP l (rule 30): len=4097 ones=2063 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 89 start 3099
+  LHP l|Z (rule 30): len=821 ones=385 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 207 start 129
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1644 of 3275
+word 000001 prefix_len=0 |Z|=3414
+  RHP r|Z (rule 30): len=3414 ones=2232 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=520 at shift 10 start 870
+  LHP l (rule 30): len=4097 ones=2005 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 142 start 1585
+  LHP l|Z (rule 30): len=3414 ones=1671 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 244 start 2516
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 349 of 683
+word 000001 prefix_len=8 |Z|=3411
+  RHP r|Z (rule 30): len=3411 ones=2250 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=375 at shift 10 start 2790
+  LHP l (rule 30): len=4097 ones=2084 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 4 start 947
+  LHP l|Z (rule 30): len=3411 ones=1753 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 182 start 2535
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 352 of 686
+word 000011 prefix_len=0 |Z|=2731
+  RHP r|Z (rule 30): len=2731 ones=2636 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=195 at shift 28 start 1540
+  LHP l (rule 30): len=4097 ones=2040 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 99 start 2257
+  LHP l|Z (rule 30): len=2731 ones=1364 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 97 start 2613
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 701 of 1365
+word 000011 prefix_len=8 |Z|=2730
+  RHP r|Z (rule 30): len=2730 ones=2626 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=159 at shift 28 start 1892
+  LHP l (rule 30): len=4097 ones=2088 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 7 start 1802
+  LHP l|Z (rule 30): len=2730 ones=1373 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 225 start 1068
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 700 of 1367
+word 000101 prefix_len=0 |Z|=2731
+  RHP r|Z (rule 30): len=2731 ones=1441 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=91 at shift 76 start 1532
+  LHP l (rule 30): len=4097 ones=2052 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 136 start 1829
+  LHP l|Z (rule 30): len=2731 ones=1403 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=22 at shift 99 start 2143
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 717 of 1366
+word 000101 prefix_len=8 |Z|=2730
+  RHP r|Z (rule 30): len=2730 ones=1406 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=83 at shift 4 start 1008
+  LHP l (rule 30): len=4097 ones=2035 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 58 start 2386
+  LHP l|Z (rule 30): len=2730 ones=1360 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 7 start 762
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 689 of 1367
+word 000111 prefix_len=0 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=1037 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=112 at shift 63 start 1337
+  LHP l (rule 30): len=4097 ones=2045 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 105 start 1435
+  LHP l|Z (rule 30): len=2048 ones=1009 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 72 start 701
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1048 of 2048
+word 000111 prefix_len=8 |Z|=2049
+  RHP r|Z (rule 30): len=2049 ones=1035 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=129 at shift 48 start 1594
+  LHP l (rule 30): len=4097 ones=2065 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 164 start 3278
+  LHP l|Z (rule 30): len=2049 ones=1026 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 204 start 616
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 988 of 2048
+word 001011 prefix_len=0 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=802 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=140 at shift 96 start 141
+  LHP l (rule 30): len=4097 ones=2034 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 225 start 1820
+  LHP l|Z (rule 30): len=2048 ones=991 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 83 start 1285
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1014 of 2048
+word 001011 prefix_len=8 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=801 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=137 at shift 48 start 718
+  LHP l (rule 30): len=4097 ones=2083 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 17 start 1566
+  LHP l|Z (rule 30): len=2048 ones=1054 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 201 start 0
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1074 of 2048
+word 001101 prefix_len=0 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=717 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=386 at shift 9 start 198
+  LHP l (rule 30): len=4097 ones=2068 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=22 at shift 218 start 2120
+  LHP l|Z (rule 30): len=2048 ones=1030 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 6 start 1952
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1022 of 2049
+word 001101 prefix_len=8 |Z|=2048
+  RHP r|Z (rule 30): len=2048 ones=679 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=430 at shift 9 start 760
+  LHP l (rule 30): len=4097 ones=2005 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 249 start 2966
+  LHP l|Z (rule 30): len=2048 ones=982 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 102 start 985
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1029 of 2048
+word 001111 prefix_len=0 |Z|=1365
+  RHP r|Z (rule 30): len=1365 ones=869 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=59 at shift 44 start 494
+  LHP l (rule 30): len=4097 ones=2038 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=18 at shift 27 start 3891
+  LHP l|Z (rule 30): len=1365 ones=674 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 14 start 65
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1359 of 2731
+word 001111 prefix_len=8 |Z|=1367
+  RHP r|Z (rule 30): len=1367 ones=868 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=73 at shift 128 start 698
+  LHP l (rule 30): len=4097 ones=2059 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 29 start 1034
+  LHP l|Z (rule 30): len=1367 ones=697 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 157 start 232
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1360 of 2729
+word 010111 prefix_len=0 |Z|=1365
+  RHP r|Z (rule 30): len=1365 ones=223 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=75 at shift 142 start 452
+  LHP l (rule 30): len=4097 ones=2001 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=19 at shift 144 start 3584
+  LHP l|Z (rule 30): len=1365 ones=676 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=15 at shift 39 start 173
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1393 of 2731
+word 010111 prefix_len=8 |Z|=1367
+  RHP r|Z (rule 30): len=1367 ones=217 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=141 at shift 18 start 870
+  LHP l (rule 30): len=4097 ones=2085 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 107 start 3380
+  LHP l|Z (rule 30): len=1367 ones=691 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 121 start 415
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1379 of 2730
+word 011111 prefix_len=0 |Z|=682
+  RHP r|Z (rule 30): len=682 ones=80 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=42 at shift 88 start 226
+  LHP l (rule 30): len=4097 ones=2042 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=25 at shift 223 start 1789
+  LHP l|Z (rule 30): len=682 ones=335 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 151 start 307
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1714 of 3414
+word 011111 prefix_len=8 |Z|=685
+  RHP r|Z (rule 30): len=685 ones=88 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=43 at shift 68 start 531
+  LHP l (rule 30): len=4097 ones=1981 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 60 start 746
+  LHP l|Z (rule 30): len=685 ones=334 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=16 at shift 201 start 379
+  pin violations (c_t=1, l_t != 1+c_(t+1)) in driven LHP: 1656 of 3411
+elapsed 5.7s
+SUMMARY rule30: RHP r|Z eventually periodic in 10/44 drives; LHP l eventually periodic in 0/44 drives
+CONTROLS
+  rule 90 RHP r, c = 1 0^inf (expect ones at t = 2^j - 1, aperiodic): len=4097 ones=12 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=2046 at shift 1 start 2048
+  rule 90 ones at t = [1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095]
+  rule 90 RHP r|Z, c = 1 (10)^inf: len=2048 ones=1365 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=1023 at shift 1 start 1023
+  lone seed actual r|Z: len=2068 ones=1037 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 1 start 1458
+  lone seed actual l: len=4097 ones=2032 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 241 start 1161
+  Bernoulli(1/2) seed 1: len=2048 ones=1056 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=20 at shift 41 start 1687
+  Bernoulli(1/2) seed 2: len=2048 ones=1029 eventual_period(q<=256, onset<=len/2)=None longest shift-agreement run=17 at shift 40 start 1697

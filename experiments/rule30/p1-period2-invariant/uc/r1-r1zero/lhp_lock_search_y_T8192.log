@@ -1,0 +1,4 @@
+T=8192 N=150 words=['01', '10', '0001', '0010', '0100', '1000', '0011', '0110', '1100', '1001', '0111', '1110', '1101', '1011', '001', '010', '100']
+runs=2550 second-half violation rate per one-time=0.5001 lock candidates=0
+longest violation-free tail: from t=8127 (length 65) for ('0001', '001111111010', '0100101100001110')
+elapsed 15.5s

@@ -1,6 +1,6 @@
 # Period-two proof-state capsule
 
-Updated: 2026-09-02
+Updated: 2026-09-03
 
 Status: **TOKEN-COMPRESSED SYNTHESIS.  THE NONCONSTANT PERIOD-TWO EXCLUSION
 AND P1 REMAIN OPEN.**
@@ -170,6 +170,7 @@ defect with its `D8` phase, not another scalar count.
 | Endpoint event grammar | `U` | Off the singleton credit: `A=21`, `B=22`, `C=12`; finitely many pulls means eventually `2` |
 | Queue/frontier construction | `U/R` | Exact endpoint-derived inverse system and target `(SEP)` |
 | High-bit elimination | `U/R` | `BWH+` reduces exactly to deterministic one-bit `(PSI)` |
+| Endpoint restart fiber | `U/R` | Exact mod-four restart and a pure-period-32 five-symbol quotient eliminate the extremal gap; successive zero-tail endpoint defects satisfy `k_(i+1)<=2k_i` |
 
 ## 5. Killed mechanism classes: do not rename and retry
 
@@ -188,6 +189,14 @@ defect with its `D8` phase, not another scalar count.
 | Sharp binary-wedge bound `M_c(n)<=n` | `M_3(15)=16` witness displayed above |
 | Static right-boundary penetration | Structured information reaches only `O(log t)` depth while the center is `Theta(t)` away |
 | Larger bounded SAT/GA tables | They falsify candidates but cannot supply the missing all-length quantifier |
+| Single-source-flip injection between RW survivor levels | A flip at any depth but the first three source symbols is a fresh coin on every forced level (`0.4^j` alive at level `j`, flat in the flip position); coverage decays like `0.4^j`, the nearest partner sits at depth `n-1`, and per-level halving is itself false at deep levels (`99 -> 54 -> 28 -> 18`, `n=16`).  `RESULTS-FLIP-PAIRING.md` |
+| Exact symbol congruence on the retained state | `CONE[1] == CONE[3]`, so the append factors through `q: 3 -> 1`.  A true congruence, but a 5.7 percent constant-factor collapse: base `1.7671` against `1.7681` at `u=19`.  `RESULTS-COLUMN-DECOMPOSITION.md` 1a |
+| Counting the RW levels by `F_2` rank | Branch survivor sets are not affine subspaces: 420 of 516 classes fail, and all 96 that pass have size 4 or 8.  The carry action contains an `OR`.  `RESULTS-COLUMN-DECOMPOSITION.md` 1b |
+| Induction on single-position column richness | 99.3 percent of merging parents have IDENTICAL columns and differ only in the diagonal; the merge mechanism is diagonal collapse, not column variation.  `RESULTS-COLUMN-DECOMPOSITION.md` 2 |
+| Column memory as a rate mechanism for RW | The `ceil((L+1)/2)` law is proved, but the column is not a sufficient statistic for survival: from `n=10` every column class contains sources with different RW death levels (spread to 10 levels), and the least augmentation restoring uniformity is the entire diagonal (`t=n`).  `RESULTS-COLUMN-DECOMPOSITION.md` 10 |
+| Conditional block contraction at any exact prefix state | A uniform per-state contraction exists at each fixed `n` and `p`, but the rate DECREASES monotonically with conditioning depth (`1.121` at `p=2` to `0.231` at `p=16`, `n=17..19`) and with `n`, against the `1.0` bits per level `(RW-alpha)` needs.  The only depths clearing `1.0` have 4 and 8 states and are the aggregate in disguise.  `RESULTS-CONDITIONAL-BLOCK-LOSS.md` 4, 4b, 4c |
+| Any symbol quotient of the anti-diagonal | Exhaustive over all 15 partitions of the four-state alphabet: zero nontrivial full congruences.  Only one-sided closures exist (`CONE[1]==CONE[3]` on the driving word; the high bit on the trajectory), neither of which compresses.  `RESULTS-DIAGONAL-MEMORY.md` 8 |
+| Additive position-indexed weight on the anti-diagonal (subinvariant / Lyapunov certificate) | `t = 0` on the RW survivor edges for every window size through the full diagonal length, `n = 10..15`, both `c`, with exact integer Farkas certificates; the `K = 0` core is one survivor edge whose symbol counts move by `(1,0,0,0)`.  Relaxing to signed coefficients bounded below only on the survivor sublanguage is feasible, but its unique feasible direction is the diagonal LENGTH, whose `alpha_hat` equals the observed longest run over `n` in all ten cells; excluding that one direction restores `t = 0`.  `RESULTS-SUBINVARIANT-CERTIFICATE.md` |
 
 All these failures have the same cause: a growing ordered dependency diagonal
 stores phase in long gaps.  A bounded annotation loses it; a complete state
@@ -228,6 +237,16 @@ transports it reversibly and grows.
    residual state has not been reduced to a fixed graph.  Deriving that exact
    graph or seam law is a prerequisite, not a technicality.
 
+7. **Craig sections plus the zero-cut fiber retain boundary phase exactly.**
+   The endpoint morph has exact leading-`0` and leading-`2` sections, giving
+   `12 -> 03 -> 10 -> 00 -> 12`.  In the sole phase that could attain the
+   old gap bound, injectivity and row-permutativity force the entire residual
+   to `T(2^omega)`.  Its five-symbol moving-tail quotient is purely periodic
+   with period 32 and has no hard-core favorable state.  Hence a hypothetical
+   rank-zero endpoint obeys `k_(i+1)<=2k_i`, not merely `2k_i+2`.  This is an
+   exact adaptive finite quotient that works because its fiber is fixed; it
+   does not justify a bounded quotient for the unrestricted growing queue.
+
 ## 7. Next proof program
 
 Do not extend the horizon census.  Derive an exact composition/ancestry law
@@ -254,16 +273,24 @@ RW/DLP and retain its two facts discarded by `BWH+`: the hard-core suffix and
 the terminal `12a` pull.  The proof target then becomes a forced adjacent
 `E` change only at rows `n,n+1,n+2`, not for every arbitrary binary source.
 
+An independent rank-zero continuation is to extend the exact moving-tail
+quotient of `RESULTS-ENDPOINT-RESTART-COCYCLE.md` from the eliminated equality
+fiber to a scale-sensitive band below equality.  A useful extension must
+improve the factor `2`, not merely subtract another fixed constant; otherwise
+a doubling sequence remains possible.
+
 ## 8. Minimal reading order
 
 1. This file.
 2. `RESULTS-BINARY-WEDGE-HIGH-ELIMINATION.md`.
 3. `RESULTS-DLP-ROTATED-WEDGE.md`.
 4. `RESULTS-LATE-PULL-DIAGONAL.md`.
-5. Read `RESULTS-ROTATED-PEEL-IDENTITY.md` and
+5. `RESULTS-ENDPOINT-RESTART-COCYCLE.md` for the sharpest direct rank-zero
+   gap theorem.
+6. Read `RESULTS-ROTATED-PEEL-IDENTITY.md` and
    `RESULTS-RANK-ZERO-REDUCTION.md` only when auditing the implication back
    to period two.
-6. Use `README.md` or `docs/rule30/EXPERIMENT-ATLAS.md` only to investigate a
+7. Use `README.md` or `docs/rule30/EXPERIMENT-ATLAS.md` only to investigate a
    collision with older work.
 
 This order replaces the chronological 800-line continuation prompt for

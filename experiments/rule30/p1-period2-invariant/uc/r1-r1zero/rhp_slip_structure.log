@@ -1,0 +1,23 @@
+(1) drive (01)^inf, 300 random prefixes len 24, T=4096: locked (period<=64, onset<=|Z|/2) = 14/300; lock periods {2: 11, 7: 3}
+(2) empty prefix T=65536: |Z|=32768 ones=7019 gap histogram [(3, 1163), (5, 5855)]
+    slips (gap != 5): 1163; 5-gaps between consecutive slips: histogram [(1, 13), (3, 703), (4, 10), (5, 136), (6, 10), (7, 67), (8, 12), (9, 74), (10, 46), (11, 33), (12, 16), (13, 12), (14, 1), (15, 7), (17, 10), (19, 6), (21, 3), (23, 3)]
+    mean 5-gaps between slips 5.025 (geometric fit p = 0.166)
+    slip density per block of 438 gaps: [0.153, 0.155, 0.155, 0.18, 0.178, 0.171, 0.164, 0.155, 0.151, 0.16, 0.164, 0.171, 0.155, 0.183, 0.189, 0.169]
+    first 40 between-slip counts: [6, 9, 3, 3, 5, 3, 5, 3, 3, 3, 5, 3, 6, 3, 3, 3, 3, 10, 7, 3, 17, 12, 9, 3, 3, 9, 3, 3, 3, 10, 3, 3, 3, 3, 9, 13, 3, 3, 3, 3]
+(3) locked example prefix(seed5)=1010111111110101: r|Z eventual period (2, 8)
+    column 1: eventual period (4, 23)
+    column 2: eventual period (4, 23)
+    column 3: eventual period (4, 22)
+    column 4: eventual period (4, 23)
+    column 5: eventual period (4, 24)
+    column 6: eventual period (4, 24)
+    column 7: eventual period (8, 33)
+    column 8: eventual period (8, 33)
+    column 9: eventual period (8, 34)
+    column 10: eventual period (8, 34)
+    column 11: eventual period (8, 38)
+    column 12: eventual period (8, 38)
+    column 13: eventual period (8, 36)
+    column 14: eventual period (8, 38)
+    column 15: eventual period None
+elapsed 1.4s

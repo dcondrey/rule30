@@ -1,0 +1,29 @@
+V1 rule 30: l eventually periodic (q<=64, onset<=T/2) in 0/987 drives with (N) (T=1024; words period<=4, prefixes 4, y width<=4; 5 drives without (N) skipped); first hit=None
+V1 rule 90: l eventually periodic (q<=64, onset<=T/2) in 15/987 drives with (N) (T=1024; words period<=4, prefixes 4, y width<=4; 5 drives without (N) skipped); first hit=('001', '', '', (3, 511))
+V1 rule 60: l eventually periodic (q<=64, onset<=T/2) in 987/987 drives with (N) (T=1024; words period<=4, prefixes 4, y width<=4; 5 drives without (N) skipped); first hit=('0', '', '1', (1, 0))
+V1 rule 110: l eventually periodic (q<=64, onset<=T/2) in 391/987 drives with (N) (T=1024; words period<=4, prefixes 4, y width<=4; 5 drives without (N) skipped); first hit=('0', '', '1', (1, 0))
+V1 verdict: theorem holds on the family for rules 30 and 90; controls 60 (no edge step) and 110 (not left permutive) fire; test can fire=False
+V2 rule 90 lone seed T=4096: c* eventual_period=(1, 1) (1 0^omega); l* eventual_period=None; r* eventual_period=None; ones(l*)==ones(r*)==[1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095]: True; |Z|=4096; r*|Z eventual_period=None; driven LHP_0(c*) column -1 equals true column -1: True
+V2 verdict: transported theorem and (a) are TRUE for Rule 90 (c* e.p., l* and r*|Z aperiodic); R1^90 is false and P1^90 is false, both together, as (a7) says; nothing false is proved=True
+V3 (i) y=0 on x<=-1, c=0^omega, Rule 30, T=2048: l identically zero=True (literal lemma fails without (N))
+V3 (ii) infinite-support y=...0101 (Rule 30 fixed point), c=0^omega, T=256: l identically one=True (finite support of y is load-bearing; both c and l periodic)
+V3 (iii) y=0, c=1 0^omega (a single 1), Rule 30, T=2048: l eventual_period(q<=64)=None, ones(l)=1011 ('infinitely many ones' is not needed)
+V4 (a5)/(a6) independent: 48 drives (primitive words period<=5 with both letters), T=2000; z_(i+k)=z_i+p failures=0; r enumeration-q-periodic on Z => l (qp)-periodic failures=0
+  word 0 prefix -: first glue failure t=0 pin(one-time)
+  word 0 prefix 110: first glue failure t=2 coupling(zero-time)
+  word 1 prefix -: first glue failure t=1 pin(one-time)
+  word 1 prefix 110: first glue failure t=5 pin(one-time)
+  word 01 prefix -: first glue failure t=3 pin(one-time)
+  word 01 prefix 110: first glue failure t=2 coupling(zero-time)
+  word 001 prefix -: first glue failure t=0 pin(one-time)
+  word 001 prefix 110: first glue failure t=2 coupling(zero-time)
+  word 011 prefix -: first glue failure t=1 pin(one-time)
+  word 011 prefix 110: first glue failure t=2 coupling(zero-time)
+  word 0001 prefix -: first glue failure t=0 pin(one-time)
+  word 0001 prefix 110: first glue failure t=2 coupling(zero-time)
+  word 0011 prefix -: first glue failure t=0 pin(one-time)
+  word 0011 prefix 110: first glue failure t=2 coupling(zero-time)
+  word 0111 prefix -: first glue failure t=1 pin(one-time)
+  word 0111 prefix 110: first glue failure t=2 coupling(zero-time)
+V5 glue (b4) on 16 eventually periodic drives with c_0=1, T=512: first failure at a one-time (pin) in 9, at a zero-time (coupling) in 7, no failure to T in 0
+ALL VERIFY CHECKS PASS=False elapsed=470.8s

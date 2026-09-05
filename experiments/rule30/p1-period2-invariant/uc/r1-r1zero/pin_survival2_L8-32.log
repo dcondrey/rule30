@@ -1,0 +1,51 @@
+Ls=[8, 12, 16, 20, 24, 28, 32] cap=400 tails=['01', '0001', '011', '1', 'R1', 'R2']
+L=8: Pi-leaves=16
+  tail 01: tests=16 max=3 atcap=0 | fail-time hist (top): [(0, 6), (1, 2), (2, 3), (3, 5)] | survivors>=s: 
+  tail 0001: tests=30 max=11 atcap=0 | fail-time hist (top): [(0, 6), (1, 2), (2, 2), (3, 5), (4, 3), (5, 5), (6, 5), (11, 2)] | survivors>=s: 4:15 8:2
+  tail 011: tests=25 max=5 atcap=0 | fail-time hist (top): [(0, 9), (1, 10), (3, 1), (4, 2), (5, 3)] | survivors>=s: 4:5
+  tail 1: tests=9 max=2 atcap=0 | fail-time hist (top): [(0, 3), (1, 1), (2, 5)] | survivors>=s: 
+  tail R1: tests=16 max=2 atcap=0 | fail-time hist (top): [(0, 3), (1, 6), (2, 7)] | survivors>=s: 
+  tail R2: tests=16 max=2 atcap=0 | fail-time hist (top): [(0, 3), (1, 6), (2, 7)] | survivors>=s: 
+L=12: Pi-leaves=77
+  tail 01: tests=77 max=5 atcap=0 | fail-time hist (top): [(0, 23), (1, 24), (2, 18), (3, 8), (4, 2), (5, 2)] | survivors>=s: 4:4
+  tail 0001: tests=145 max=25 atcap=0 | fail-time hist (top): [(4, 17), (5, 8), (6, 11), (7, 6), (10, 8), (15, 15), (20, 3), (25, 2)] | survivors>=s: 4:70 8:28 12:20 16:5 20:5 24:2
+  tail 011: tests=120 max=9 atcap=0 | fail-time hist (top): [(0, 43), (1, 24), (2, 11), (3, 20), (4, 15), (5, 3), (9, 4)] | survivors>=s: 4:22 8:4
+  tail 1: tests=43 max=2 atcap=0 | fail-time hist (top): [(0, 20), (1, 9), (2, 14)] | survivors>=s: 
+  tail R1: tests=77 max=4 atcap=0 | fail-time hist (top): [(0, 20), (1, 19), (2, 29), (3, 4), (4, 5)] | survivors>=s: 4:5
+  tail R2: tests=77 max=11 atcap=0 | fail-time hist (top): [(0, 20), (1, 19), (2, 29), (3, 5), (11, 4)] | survivors>=s: 4:4 8:4
+L=16: Pi-leaves=361
+  tail 01: tests=361 max=19 atcap=0 | fail-time hist (top): [(0, 124), (1, 122), (2, 58), (3, 46), (4, 1), (8, 3), (19, 7)] | survivors>=s: 4:11 8:10 12:7 16:7
+  tail 0001: tests=711 max=21 atcap=0 | fail-time hist (top): [(8, 3), (9, 25), (10, 3), (11, 60), (13, 13), (16, 13), (19, 25), (21, 7)] | survivors>=s: 4:259 8:149 12:58 16:45 20:7
+  tail 011: tests=547 max=11 atcap=0 | fail-time hist (top): [(0, 186), (1, 81), (2, 35), (3, 100), (4, 91), (5, 29), (6, 12), (11, 13)] | survivors>=s: 4:145 8:13
+  tail 1: tests=186 max=2 atcap=0 | fail-time hist (top): [(0, 62), (1, 96), (2, 28)] | survivors>=s: 
+  tail R1: tests=361 max=9 atcap=0 | fail-time hist (top): [(0, 62), (1, 149), (2, 119), (4, 3), (9, 28)] | survivors>=s: 4:31 8:28
+  tail R2: tests=361 max=3 atcap=0 | fail-time hist (top): [(0, 62), (1, 149), (2, 119), (3, 31)] | survivors>=s: 
+L=20: Pi-leaves=1727
+  tail 01: tests=1727 max=15 atcap=0 | fail-time hist (top): [(2, 294), (3, 206), (4, 30), (5, 65), (7, 120), (8, 26), (12, 18), (15, 68)] | survivors>=s: 4:327 8:112 12:86
+  tail 0001: tests=3433 max=29 atcap=0 | fail-time hist (top): [(9, 159), (10, 125), (11, 69), (12, 141), (14, 156), (15, 160), (17, 38), (29, 30)] | survivors>=s: 4:1783 8:928 12:525 16:68 20:30 24:30 28:30
+  tail 011: tests=2601 max=8 atcap=0 | fail-time hist (top): [(1, 754), (2, 282), (3, 257), (4, 118), (5, 153), (6, 105), (7, 34), (8, 24)] | survivors>=s: 4:434 8:24
+  tail 1: tests=874 max=4 atcap=0 | fail-time hist (top): [(0, 368), (1, 211), (2, 233), (3, 39), (4, 23)] | survivors>=s: 4:23
+  tail R1: tests=1727 max=14 atcap=0 | fail-time hist (top): [(0, 368), (1, 670), (2, 419), (3, 79), (4, 48), (9, 23), (14, 120)] | survivors>=s: 4:191 8:143 12:120
+  tail R2: tests=1727 max=11 atcap=0 | fail-time hist (top): [(0, 368), (1, 670), (2, 419), (3, 191), (8, 36), (10, 39), (11, 4)] | survivors>=s: 4:79 8:79
+L=24: Pi-leaves=8603
+  tail 01: tests=8603 max=11 atcap=0 | fail-time hist (top): [(4, 734), (5, 263), (6, 295), (7, 180), (8, 164), (9, 88), (10, 240), (11, 524)] | survivors>=s: 4:2488 8:1016
+  tail 0001: tests=17109 max=25 atcap=0 | fail-time hist (top): [(12, 42), (13, 176), (14, 191), (15, 12), (17, 4), (20, 356), (22, 4), (25, 348)] | survivors>=s: 4:9201 8:5032 12:1133 16:712 20:708 24:348
+  tail 011: tests=12953 max=12 atcap=0 | fail-time hist (top): [(3, 729), (4, 635), (5, 914), (6, 64), (7, 36), (8, 72), (11, 56), (12, 75)] | survivors>=s: 4:1852 8:203 12:75
+  tail 1: tests=4350 max=5 atcap=0 | fail-time hist (top): [(0, 2495), (1, 930), (2, 168), (3, 325), (4, 414), (5, 18)] | survivors>=s: 4:432
+  tail R1: tests=8603 max=19 atcap=0 | fail-time hist (top): [(0, 2495), (1, 3248), (2, 757), (3, 1418), (4, 148), (9, 34), (12, 447), (19, 56)] | survivors>=s: 4:685 8:537 12:503 16:56
+  tail R2: tests=8603 max=10 atcap=0 | fail-time hist (top): [(0, 2495), (1, 3248), (2, 757), (3, 685), (8, 582), (10, 836)] | survivors>=s: 4:1418 8:1418
+L=28: Pi-leaves=43664
+  tail 01: tests=43664 max=20 atcap=0 | fail-time hist (top): [(5, 942), (6, 1662), (7, 5627), (8, 1065), (9, 168), (11, 240), (16, 40), (20, 48)] | survivors>=s: 4:14990 8:1561 12:88 16:88 20:48
+  tail 0001: tests=89052 max=22 atcap=0 | fail-time hist (top): [(14, 150), (15, 432), (16, 2212), (18, 24), (19, 84), (20, 48), (21, 1572), (22, 2739)] | survivors>=s: 4:50592 8:20774 12:10224 16:6679 20:4359
+  tail 011: tests=64634 max=18 atcap=0 | fail-time hist (top): [(3, 3366), (4, 2043), (5, 976), (6, 2330), (7, 239), (8, 443), (10, 132), (18, 45)] | survivors>=s: 4:6208 8:620 12:45 16:45
+  tail 1: tests=20970 max=7 atcap=0 | fail-time hist (top): [(0, 12500), (1, 2539), (2, 671), (3, 2654), (4, 412), (5, 544), (7, 1650)] | survivors>=s: 4:2606
+  tail R1: tests=43664 max=12 atcap=0 | fail-time hist (top): [(0, 12500), (1, 16618), (2, 3219), (3, 7912), (4, 2440), (9, 819), (12, 156)] | survivors>=s: 4:3415 8:975 12:156
+  tail R2: tests=43664 max=12 atcap=0 | fail-time hist (top): [(0, 12500), (1, 16618), (2, 3219), (3, 3415), (8, 944), (10, 2480), (11, 48), (12, 4440)] | survivors>=s: 4:7912 8:7912 12:4440
+L=32: Pi-leaves=226860
+  tail 01: tests=226860 max=20 atcap=0 | fail-time hist (top): [(8, 48), (9, 822), (10, 104), (11, 124), (12, 1332), (15, 240), (16, 288), (20, 1138)] | survivors>=s: 4:35712 8:4096 12:2998 16:1426 20:1138
+  tail 0001: tests=464646 max=34 atcap=0 | fail-time hist (top): [(17, 21066), (18, 20437), (20, 1242), (21, 240), (22, 2819), (24, 468), (29, 100), (34, 36)] | survivors>=s: 4:222191 8:108382 12:67519 16:47437 20:4905 24:604 28:136 32:36
+  tail 011: tests=334827 max=17 atcap=0 | fail-time hist (top): [(5, 8665), (6, 364), (7, 4224), (8, 3040), (9, 564), (11, 775), (14, 741), (17, 504)] | survivors>=s: 4:43502 8:5624 12:1245 16:504
+  tail 1: tests=107967 max=7 atcap=0 | fail-time hist (top): [(0, 42731), (1, 24901), (2, 17830), (3, 20679), (4, 54), (6, 100), (7, 1672)] | survivors>=s: 4:1826
+  tail R1: tests=226860 max=12 atcap=0 | fail-time hist (top): [(0, 42731), (1, 103026), (2, 40042), (3, 27113), (4, 10450), (9, 874), (12, 2624)] | survivors>=s: 4:13948 8:3498 12:2624
+  tail R2: tests=226860 max=16 atcap=0 | fail-time hist (top): [(0, 42731), (1, 103026), (2, 40042), (3, 13948), (8, 11811), (10, 1859), (11, 13427), (16, 16)] | survivors>=s: 4:27113 8:27113 12:16 16:16
+elapsed 4.8s

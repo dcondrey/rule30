@@ -37,9 +37,11 @@ class Instance:
     source_high: tuple[int, ...]
 
 
-def build_instance(n: int, tail: int) -> Instance:
+def build_instance(n: int, tail: int, extra: int = 2) -> Instance:
     if n < 1 or tail not in (2, 3):
         raise ValueError("require n>=1 and tail in {2,3}")
+    if extra < 0:
+        raise ValueError("extra must be nonnegative")
     encoder = Encoder()
     source: list[BitPair] = []
     source_high = []
@@ -61,7 +63,7 @@ def build_instance(n: int, tail: int) -> Instance:
         )
         endpoint.append(value)
 
-    for row in range(n + 2):
+    for row in range(n + extra):
         high = encoder.new(f"extension.{row}.high")
         value = (high, -high)
         edge = append_edge(
@@ -81,13 +83,15 @@ def decode_source(instance: Instance, model: Iterable[int]) -> Vector:
     )
 
 
-def direct_witness(word: Vector, tail: int) -> bool:
-    extension = literal_extension(word, tail, len(word) + 2)
+def direct_witness(word: Vector, tail: int, extra: int = 2) -> bool:
+    extension = literal_extension(word, tail, len(word) + extra)
     return all(value in (1, 2) for value in extension)
 
 
-def solve(n: int, tail: int) -> tuple[bool, Vector | None, float]:
-    instance = build_instance(n, tail)
+def solve(
+    n: int, tail: int, extra: int = 2
+) -> tuple[bool, Vector | None, float]:
+    instance = build_instance(n, tail, extra)
     started = time.perf_counter()
     with Solver(
         name="cadical195", bootstrap_with=instance.encoder.clauses
@@ -99,22 +103,24 @@ def solve(n: int, tail: int) -> tuple[bool, Vector | None, float]:
         return False, None, elapsed
     assert model is not None
     word = decode_source(instance, model)
-    assert direct_witness(word, tail)
+    assert direct_witness(word, tail, extra)
     return True, word, elapsed
 
 
-def controls(max_n: int = 7) -> int:
+def controls(max_n: int = 7, extra: int = 2) -> int:
     checked = 0
     for n in range(1, max_n + 1):
         for tail in (2, 3):
             direct = any(
-                direct_witness(word, tail)
+                direct_witness(word, tail, extra)
                 for word in itertools.product((1, 2), repeat=n)
             )
-            sat, word, _elapsed = solve(n, tail)
+            sat, word, _elapsed = solve(n, tail, extra)
             assert sat == direct
             if sat:
-                assert word is not None and direct_witness(word, tail)
+                assert word is not None and direct_witness(
+                    word, tail, extra
+                )
             checked += 1
     return checked
 
@@ -122,18 +128,31 @@ def controls(max_n: int = 7) -> int:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--first-n", type=int, default=7)
-    parser.add_argument("--last-n", type=int, default=30)
+    parser.add_argument("--last-n", type=int, default=16)
     parser.add_argument("--control-n", type=int, default=7)
+    parser.add_argument(
+        "--extra",
+        type=int,
+        default=2,
+        help="require n+extra binary continuation cells (BWH+ uses 2)",
+    )
     args = parser.parse_args()
-    if not 1 <= args.first_n <= args.last_n or args.control_n < 0:
+    if (
+        not 1 <= args.first_n <= args.last_n
+        or args.control_n < 0
+        or args.extra < 0
+    ):
         parser.error("invalid length range")
 
-    print(f"SAT/direct controls: {controls(args.control_n)} PASS", flush=True)
+    print(
+        f"SAT/direct controls: {controls(args.control_n, args.extra)} PASS",
+        flush=True,
+    )
     counterexamples = 0
     for n in range(args.first_n, args.last_n + 1):
         fields = []
         for tail in (2, 3):
-            sat, word, elapsed = solve(n, tail)
+            sat, word, elapsed = solve(n, tail, args.extra)
             if sat:
                 counterexamples += 1
                 assert word is not None
@@ -141,11 +160,13 @@ def main() -> None:
             else:
                 status = "UNSAT"
             fields.append(f"c{tail}={status} t={elapsed:.3f}s")
-        print(f"n={n:3d} " + " | ".join(fields), flush=True)
+        print(
+            f"n={n:3d} rows={n+args.extra} " + " | ".join(fields),
+            flush=True,
+        )
     if counterexamples:
         raise SystemExit(1)
 
 
 if __name__ == "__main__":
     main()
-

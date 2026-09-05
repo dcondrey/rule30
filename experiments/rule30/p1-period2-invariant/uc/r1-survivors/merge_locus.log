@@ -1,0 +1,56 @@
+u= 3  b-merged pairs      3  max shallowest-diff dist   0   hist(shallowest dist from bottom of col_(u-1)): 0:3
+       b-merge differing cells by dist: 0:3
+u= 3  q-merged pairs      1  max shallowest-diff dist   2   hist(shallowest dist from bottom of col_u): 2:1
+       q-merge differing cells by dist: 2:1
+u= 4  b-merged pairs      3  max shallowest-diff dist   2   hist(shallowest dist from bottom of col_(u-1)): 0:1 2:2
+       b-merge differing cells by dist: 0:1 2:2
+u= 4  q-merged pairs      3  max shallowest-diff dist   4   hist(shallowest dist from bottom of col_u): 0:2 4:1
+       q-merge differing cells by dist: 0:2 4:1
+u= 5  b-merged pairs      7  max shallowest-diff dist   4   hist(shallowest dist from bottom of col_(u-1)): 0:5 4:2
+       b-merge differing cells by dist: 0:5 4:2
+u= 5  q-merged pairs      2  max shallowest-diff dist   6   hist(shallowest dist from bottom of col_u): 0:1 6:1
+       q-merge differing cells by dist: 0:1 6:1
+u= 6  b-merged pairs      5  max shallowest-diff dist   6   hist(shallowest dist from bottom of col_(u-1)): 0:3 6:2
+       b-merge differing cells by dist: 0:3 6:2
+u= 6  q-merged pairs      4  max shallowest-diff dist   0   hist(shallowest dist from bottom of col_u): 0:4
+       q-merge differing cells by dist: 0:4
+u= 7  b-merged pairs     18  max shallowest-diff dist   1   hist(shallowest dist from bottom of col_(u-1)): 0:16 1:2
+       b-merge differing cells by dist: 0:17 1:2
+u= 7  q-merged pairs      6  max shallowest-diff dist   2   hist(shallowest dist from bottom of col_u): 0:3 1:2 2:1
+       q-merge differing cells by dist: 0:3 1:2 2:1
+u= 8  b-merged pairs     29  max shallowest-diff dist   2   hist(shallowest dist from bottom of col_(u-1)): 0:15 1:8 2:6
+       b-merge differing cells by dist: 0:18 1:9 2:6
+u= 8  q-merged pairs     13  max shallowest-diff dist   4   hist(shallowest dist from bottom of col_u): 0:11 3:1 4:1
+       q-merge differing cells by dist: 0:11 3:1 4:1
+u= 9  b-merged pairs     57  max shallowest-diff dist   4   hist(shallowest dist from bottom of col_(u-1)): 0:37 1:4 2:1 3:7 4:8
+       b-merge differing cells by dist: 0:39 1:5 2:2 3:8 4:8
+u= 9  q-merged pairs     20  max shallowest-diff dist   6   hist(shallowest dist from bottom of col_u): 0:15 1:1 2:2 6:2
+       q-merge differing cells by dist: 0:16 1:1 2:2 6:2
+u=10  b-merged pairs     89  max shallowest-diff dist   6   hist(shallowest dist from bottom of col_(u-1)): 0:47 1:12 2:6 3:5 4:1 5:7 6:11
+       b-merge differing cells by dist: 0:57 1:17 2:8 3:6 4:2 5:8 6:11
+u=10  q-merged pairs     43  max shallowest-diff dist   8   hist(shallowest dist from bottom of col_u): 0:30 1:2 2:7 3:1 4:1 8:2
+       q-merge differing cells by dist: 0:32 1:2 2:7 3:1 4:1 8:2
+u=11  b-merged pairs    176  max shallowest-diff dist   8   hist(shallowest dist from bottom of col_(u-1)): 0:103 1:10 2:16 3:17 4:6 5:6 6:2 7:6 8:10
+       b-merge differing cells by dist: 0:123 1:12 2:21 3:23 4:7 5:7 6:4 7:6 8:10
+u=11  q-merged pairs     81  max shallowest-diff dist  10   hist(shallowest dist from bottom of col_u): 0:41 1:11 2:16 3:2 4:7 6:1 10:3
+       q-merge differing cells by dist: 0:50 1:11 2:17 3:2 4:7 6:1 10:3
+u=12  b-merged pairs    339  max shallowest-diff dist  10   hist(shallowest dist from bottom of col_(u-1)): 0:168 1:46 2:46 3:11 4:16 5:9 6:5 7:12 8:4 9:10 10:12
+       b-merge differing cells by dist: 0:227 1:49 2:55 3:15 4:18 5:15 6:6 7:14 8:5 9:10 10:12
+u=12  q-merged pairs    135  max shallowest-diff dist  12   hist(shallowest dist from bottom of col_u): 0:77 1:11 2:18 3:3 4:11 5:3 6:7 8:1 12:4
+       q-merge differing cells by dist: 0:92 1:13 2:24 3:3 4:13 5:3 6:7 8:1 12:4
+u=13  b-merged pairs    565  max shallowest-diff dist  12   hist(shallowest dist from bottom of col_(u-1)): 0:296 1:65 2:60 3:19 4:41 5:12 6:18 7:6 8:6 9:13 10:4 11:12 12:13
+       b-merge differing cells by dist: 0:384 1:88 2:83 3:23 4:51 5:15 6:18 7:18 8:8 9:15 10:4 11:12 12:13
+u=13  q-merged pairs    284  max shallowest-diff dist  14   hist(shallowest dist from bottom of col_u): 0:169 1:36 2:28 3:10 4:13 5:2 6:10 7:7 8:4 14:5
+       q-merge differing cells by dist: 0:192 1:39 2:39 3:12 4:17 5:2 6:10 7:7 8:4 14:5
+u=14  b-merged pairs   1146  max shallowest-diff dist  14   hist(shallowest dist from bottom of col_(u-1)): 0:618 1:139 2:109 3:65 4:46 5:22 6:54 7:20 8:12 9:4 10:4 11:13 12:6 13:19 14:15
+       b-merge differing cells by dist: 0:773 1:179 2:171 3:91 4:62 5:26 6:59 7:23 8:12 9:23 10:8 11:15 12:6 13:19 14:15
+u=14  q-merged pairs    480  max shallowest-diff dist  16   hist(shallowest dist from bottom of col_u): 0:277 1:59 2:61 3:33 4:12 5:6 6:10 8:10 9:4 10:5 16:3
+       q-merge differing cells by dist: 0:308 1:65 2:66 3:36 4:20 5:6 6:14 8:10 9:4 10:5 16:3
+u=15  b-merged pairs   2031  max shallowest-diff dist  16   hist(shallowest dist from bottom of col_(u-1)): 0:1065 1:266 2:220 3:166 4:72 5:52 6:43 7:14 8:63 9:13 10:13 11:3 12:4 13:9 14:5 15:11 16:12
+       b-merge differing cells by dist: 0:1369 1:337 2:276 3:218 4:101 5:72 6:54 7:22 8:65 9:15 10:13 11:15 12:8 13:11 14:5 15:11 16:12
+u=15  q-merged pairs    793  max shallowest-diff dist  18   hist(shallowest dist from bottom of col_u): 0:468 1:91 2:73 3:44 4:41 5:26 6:12 7:5 8:8 10:13 11:6 12:3 18:3
+       q-merge differing cells by dist: 0:512 1:106 2:87 3:48 4:44 5:27 6:17 7:5 8:11 10:13 11:6 12:3 18:3
+u=16  b-merged pairs   3459  max shallowest-diff dist  18   hist(shallowest dist from bottom of col_(u-1)): 0:1828 1:397 2:339 3:250 4:172 5:124 6:62 7:74 8:41 9:15 10:80 11:28 12:8 13:2 14:4 15:10 16:4 17:6 18:15
+       b-merge differing cells by dist: 0:2304 1:546 2:459 3:330 4:211 5:164 6:86 7:89 8:49 9:26 10:81 11:28 12:8 13:9 14:10 15:11 16:4 17:6 18:15
+u=16  q-merged pairs   1462  max shallowest-diff dist  20   hist(shallowest dist from bottom of col_u): 0:877 1:150 2:150 3:84 4:46 5:44 6:29 7:23 8:14 9:6 10:10 12:12 13:11 14:2 20:4
+       q-merge differing cells by dist: 0:965 1:171 2:159 3:94 4:53 5:47 6:34 7:24 8:21 9:6 10:12 12:12 13:11 14:2 20:4

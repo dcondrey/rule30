@@ -1,0 +1,26 @@
+c = 2: row n-j, max preperiod t_j over tails, minimal periods seen
+   j= 1: tails=   4  max t_j=      1  periods=[1]  undetected(within U=40000)=0
+   j= 2: tails=  16  max t_j=      2  periods=[2]  undetected(within U=40000)=0
+   j= 3: tails=  64  max t_j=      3  periods=[2]  undetected(within U=40000)=0
+   j= 4: tails= 256  max t_j=      4  periods=[4]  undetected(within U=40000)=0
+   j= 5: tails=1024  max t_j=      7  periods=[4]  undetected(within U=40000)=0
+   j= 6: tails=  60  max t_j=      8  periods=[4]  undetected(within U=40000)=0
+   j= 7: tails=  60  max t_j=     10  periods=[4]  undetected(within U=40000)=0
+   j= 8: tails=  60  max t_j=     14  periods=[4]  undetected(within U=40000)=0
+   j= 9: tails=  60  max t_j=     17  periods=[4]  undetected(within U=40000)=0
+   j=10: tails=  60  max t_j=     19  periods=[4]  undetected(within U=40000)=0
+   j=11: tails=  60  max t_j=     20  periods=[4]  undetected(within U=200000)=0
+   j=12: tails=  60  max t_j=     21  periods=[4]  undetected(within U=200000)=0
+c = 3: row n-j, max preperiod t_j over tails, minimal periods seen
+   j= 1: tails=   4  max t_j=      0  periods=[2]  undetected(within U=40000)=0
+   j= 2: tails=  16  max t_j=      2  periods=[2]  undetected(within U=40000)=0
+   j= 3: tails=  64  max t_j=      4  periods=[2]  undetected(within U=40000)=0
+   j= 4: tails= 256  max t_j=      6  periods=[4]  undetected(within U=40000)=0
+   j= 5: tails=1024  max t_j=      8  periods=[4]  undetected(within U=40000)=0
+   j= 6: tails=  60  max t_j=      9  periods=[4]  undetected(within U=40000)=0
+   j= 7: tails=  60  max t_j=     11  periods=[4]  undetected(within U=40000)=0
+   j= 8: tails=  60  max t_j=     13  periods=[4]  undetected(within U=40000)=0
+   j= 9: tails=  60  max t_j=     16  periods=[4]  undetected(within U=40000)=0
+   j=10: tails=  60  max t_j=     18  periods=[4]  undetected(within U=40000)=0
+   j=11: tails=  60  max t_j=     19  periods=[4]  undetected(within U=200000)=0
+   j=12: tails=  60  max t_j=     21  periods=[4]  undetected(within U=200000)=0

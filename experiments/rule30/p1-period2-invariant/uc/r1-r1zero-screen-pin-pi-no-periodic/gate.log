@@ -1,0 +1,4 @@
+(a) int-row versus dict reference: 18300 rows compared, mismatches=0
+(b) lone seed T=1500: LHP_seed(c*) versus true diagram on columns -40..0: 61541 cells, mismatches=0; pin: ones=717 violations=0
+(c) planted pin-consistent drives reaching cap=400: 50/50
+(d) L=28 leaves=43664 (expected 43664); tests,max per tail: {'01': (43664, 20), '0001': (89052, 22), '011': (64634, 18), '1': (20970, 7)} (expected 01:(43664,20) 0001:(89052,22) 011:(64634,18) 1:(20970,7))

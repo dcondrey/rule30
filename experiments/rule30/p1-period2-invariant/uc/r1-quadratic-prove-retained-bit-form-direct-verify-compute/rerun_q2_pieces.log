@@ -1,0 +1,30 @@
+n=2 c=2: 17 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 1, 1, 2]
+   [0.0s]
+n=2 c=3: 17 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 1, 2, 2]
+   [0.0s]
+n=3 c=2: 99 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 2, 3, 2]
+   [0.0s]
+n=3 c=3: 99 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 2, 3, 3]
+   [0.0s]
+n=4 c=2: 577 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 2, 3, 3]
+   [0.1s]
+n=4 c=3: 577 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 2, 3, 4]
+   [0.1s]
+n=5 c=2: 3363 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 2, 4, 4]
+   [0.9s]
+n=5 c=3: 3363 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 2, 4, 4]
+   [1.0s]
+n=6 c=2: 19601 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 2, 5, 6]
+   [9.9s]
+n=6 c=3: 19601 pieces PASS (P1, P2); hit_n affine all-ones on retained w's PASS
+   max algebraic degree of hit_(n+j) in the retained w's, j=0..3: [1, 2, 5, 5]
+   [10.1s]

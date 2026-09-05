@@ -1,0 +1,10 @@
+V1 Corollary 5.1 as displayed  '1 + h(d) + h(d+1) = [T != 0]':  holds 0, fails 105464
+V1 Corollary 5.1 corrected     'h(d) + h(d+1) = [T != 0]'    :  holds 105464, fails 0
+V1 verdict: the displayed formula is off by a complement on EVERY cell; the corrected form holds on every cell. Downstream use (h profile determines Z) is unaffected.
+V2 transfer matrix rows (states 00,01,10,11): [[1, 0, 2, 0], [0, 1, 0, 2], [1, 1, 0, 1], [1, 1, 1, 0]]
+V2 charpoly det(xI - A), high to low: [1, -2, -4, 2, 3]; p(1)=0 p(3)=0 p(-1)=0
+V2 verdict: charpoly matches PROOF.md; d(m) = 1 and N0 = (3^m+1)/2 for m <= 40 by exact matrix power.
+V3 Lemma 10 at ALL depths of column u (up to depth u): 8194 (word, n) pairs, 90962 odd-index replacements, column u identical on [-u-1, u] in every case. Extension beyond depth n holds (trivially, since depths > n read the window only through T[u][n]).
+V4 pair (n,u,Z_(u-1),Z_u) -> column u+1 on [-u-2, n]: consistent on all keys, u <= 9.
+V4 no witness of a depth n+1 disagreement found in this range.
+verify_logic_checks: DONE

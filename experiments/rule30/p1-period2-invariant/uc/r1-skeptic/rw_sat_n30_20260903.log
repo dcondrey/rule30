@@ -1,0 +1,3 @@
+ n  r  c   vars    clauses   result   seconds
+30 0  2   29761   92417     UNSAT    10403.09  
+30 0  3   29761   92417     UNSAT    13242.53  

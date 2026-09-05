@@ -49,6 +49,8 @@ Use this routing table:
 | Stronger active-core diagonal CNF | `RESULTS-CORE-MORTALITY-SAT.md`; `core_mortality_sat.py` |
 | Projected cut / interpolant probe | `PREREGISTRATION-CORE-INTERPOLANT.md`; `RESULTS-CORE-INTERPOLANT.md`; `core_interpolant_probe.py` |
 | Peel/Craig endpoint morph | `RESULTS-CORE-CRAIG-MORPH.md`; `core_craig_morph.py` |
+| Endpoint zero/two sections and four-phase restart | `RESULTS-ENDPOINT-RESTART-COCYCLE.md`; `endpoint_restart_cocycle.py` |
+| Survivor clusters are fibres of one endpoint state; state census | `RESULTS-CLUSTER-ANATOMY.md`; `cluster_anatomy.py` |
 | Cartier/rationality route disposition | `RESULTS-CARTIER-ROUTE-DISPOSITION.md` |
 | Dyadic-period graph audit | `RESULTS-DYADIC-PERIODICITY.md`; `dyadic_periodicity_analyzer.py` |
 | Dyadic exceptional-family separator | `RESULTS-DYADIC-EXCEPTION-SEPARATOR.md`; `dyadic_exception_separator.py` |
@@ -77,6 +79,7 @@ Use this routing table:
 | Projected-support algebra and route disposition | `RESULTS-PROJECTED-SUPPORT-DISPOSITION.md`; `constant_tail_projected_support_algebra.py` |
 | Deterministic-halving morph obstruction | `RESULTS-HALVING-ROUTE-DISPOSITION.md`; `constant_tail_halving_morph_audit.py` |
 | Moving endpoint-flip cocycle | `RESULTS-ENDPOINT-FLIP-COCYCLE.md`; `endpoint_flip_cocycle.py` |
+| Single-flip pairing on RW survivor levels (killed); block halving and the counting constant `C = 3` | `RESULTS-FLIP-PAIRING.md`; `flip_pairing.py`; `block_halving.py` |
 | Evolutionary rank-zero witness search | `docs/rule30/RESULTS-openevolve-p1-rank-zero.md`; `experiments/openevolve-p1-rank-zero/` |
 | Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
@@ -193,6 +196,7 @@ carry `c XOR d=1`, and the next forced rho is `1 XOR c`.
 | Frontier-distance cocycle | Stack `h+1` queue rows; reading symbol `a` sends `v` to `w_0=a, w_j=g_(v_j)(w_(j-1))`; terminal vertices are exactly the inverse-cone diagonals of hard-core words of length `h+1` | **Uniform graph theorem:** bare distance from `(c,...,c)` to the `F_(h+3)`-vertex terminal set gives the arbitrary-queue minimum; product with the invariant suffix DFA gives the language-cocycle minimum. Their divergence is equivalent. Height extension is a four-sheeted permutation cover whose fiber maps generate `D8`, so no fiber rank contracts. Both distances are exact through `h=12`; proving divergence remains open |
 | Actual-right frontier product | Complete finite Rule 30 right-cone membership on each terminal endpoint, with exact height projection and augmented `D8` path action | **Uniform subsystem plus scope correction:** actual targets shrink from `610` to `156` at `h=12`, raising the tail-2 minimum `18 -> 23`; all eight phases remain by `h=7`. Rank descent can prepend artificial state `2`s, so whole-prefix actual-right conditioning is too strong. Apply it only beyond a proved source-ancestry prefix or in the scale block beyond both prefixes |
 | Moving endpoint flips | Flipping endpoint coordinate `k` from `1` to `2` preserves hard-core legality and rewrites the inverse cut only on `[k,2k+1]` | **Uniform cocycle:** exact adaptive formula update and interval-cover condition proved; supports may still escape, so no descent yet |
+| Endpoint restart and exceptional fiber | `F(0e)=r_0(e_0)F(e)` and `F(2e)=r_2(e_0)F(e)` give the exact phase cycle `12 -> 03 -> 10 -> 00 -> 12`; the only favorable zero-cut fiber has an autonomous five-symbol tail quotient | **Uniform theorem:** the quotient is a pure 32-cycle and every favorable phase is non-hard-core, improving the eventual zero-tail gap bound to `k_(i+1)<=2k_i`; a doubling defect set still satisfies the bound, so separation remains open |
 | OpenEvolve/GA rank-zero witnesses | Independent exact reconstruction of every proposed hard-core prefix over a genuine zero-tail cut | **Finite negative:** GA reproduces the `T=23` optimum and reaches survival 107 at `T=96`, but finds no `2T+2` falsifier; no uniform separator follows |
 
 Do not retry the killed fixed-summary classes merely by increasing locality,

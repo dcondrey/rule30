@@ -1,0 +1,47 @@
+rbf_direct_gate.py args={'gate_n': 12, 'umax': 14, 'fut': 3, 'rand_n': [150, 200], 'samples': 100, 'seed': 2, 'letters_m3': 12, 'letters_m4': 9, 'balance_brute': 12, 'balance_transfer': 100, 'skip': []}
+G0 local facts: decoupling on 16 pairs, BOUNDARY = XOR 3, E(XOR 3) = E, E(1)=E(2)=0, CONE[1] = CONE[3], right-bijective: PASS
+G1 own triangle = psi_kernel.Endpoint on 8190 binary words, u <= 12: PASS
+  P u=1   pairs so far=2   [0s]
+  P u=2   pairs so far=10   [0s]
+  P u=3   pairs so far=34   [0s]
+  P u=4   pairs so far=98   [0s]
+  P u=5   pairs so far=258   [0s]
+  P u=6   pairs so far=642   [0s]
+  P u=7   pairs so far=1538   [0s]
+  P u=8   pairs so far=3586   [0s]
+  P u=9   pairs so far=8194   [0s]
+  P u=10  pairs so far=18434   [1s]
+  P u=11  pairs so far=40962   [2s]
+  P u=12  pairs so far=90114   [5s]
+  P u=13  pairs so far=196610   [12s]
+  P u=14  pairs so far=425986   [26s]
+P exhaustive: all binary words u <= 14, all n <= u: 425986 (word, n) pairs; forcing unique; (a) (b) (c) (c-setform) (d-runs) (d-readout) (d-pair with 3 future steps) PASS; 32143 distinct (n,u,Z_(u-1),Z_u) keys; Z_(u-1) alone 25655 keys, 4773 ambiguous, max fibre 9
+P random n=150: 100 words, u in [n, 2n+1], 15200 (word, u) pairs, all checks PASS; 15200 distinct pair keys   [12s]
+P random n=200: 100 words, u in [n, 2n+1], 20200 (word, u) pairs, all checks PASS; 20200 distinct pair keys   [24s]
+  L3 m=1   words=3   [0s]
+  L3 m=2   words=9   [0s]
+  L3 m=3   words=27   [0s]
+  L3 m=4   words=81   [0s]
+  L3 m=5   words=243   [0s]
+  L3 m=6   words=729   [0s]
+  L3 m=7   words=2187   [0s]
+  L3 m=8   words=6561   [0s]
+  L3 m=9   words=19683   [2s]
+  L3 m=10  words=59049   [6s]
+  L3 m=11  words=177147   [21s]
+  L3 m=12  words=531441   [73s]
+L letter space: 797160 windows in {0,1,2}^m, m <= 12: Moore = phi recursion, (a)-(d), odd cells unread, even cells read, image 2^floor(N/2), fibre 2^ceil(N/2) PASS; 349524 windows in {0..3}^m, m <= 9: Moore = phi, (a)-(d) PASS   [80s]
+  E m=1   #Phi=0=2 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=2
+  E m=2   #Phi=0=5 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=2
+  E m=3   #Phi=0=14 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=10
+  E m=4   #Phi=0=41 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=26
+  E m=5   #Phi=0=122 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=82
+  E m=6   #Phi=0=365 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=242
+  E m=7   #Phi=0=1094 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=730
+  E m=8   #Phi=0=3281 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=2186
+  E m=9   #Phi=0=9842 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=6562
+  E m=10  #Phi=0=29525 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=19682
+  E m=11  #Phi=0=88574 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=59050
+  E m=12  #Phi=0=265721 = (3^m+1)/2; by-N decomposition PASS; bottom-nonzero zeros=177146
+E balance: brute force m <= 12 through phi with the by-N decomposition PASS; transfer matrix charpoly [1, -2, -4, 2, 3] = (x-1)(x-3)(x+1)^2, d(m) = 1 for m <= 100 PASS   [6s]
+ALL PASS   [149s]

@@ -1,0 +1,10 @@
+CHECK1 x=0 rule with r free: 8 tuples (c_t,c_t+1,l_t); solvable iff pin; unique r on c_t=0; failures=0
+CHECK2 inverse rule s(t,x-1) = s(t+1,x) XOR g(s(t,x),s(t,x+1)): 8 neighbourhoods x 2 rules, failures=0
+CHECK3 moving-edge step: (0,0,1)->1 and (0,0,0)->0 for rules 30 and 90, failures=0
+CHECK4 kernel vs cell-array reference: 60 random (y,c) pairs, rules 30 and 90, T=40, cells=127592, mismatches=0
+CHECK5 moving edge: 40 drives (random y and y=0 cases, rules 30 and 90), T=600, rows checked=24040, violations=0
+CHECK6 true lone-seed x<=0 half-plane vs LHP_seed(c*): T=3000, cells=9012003, row mismatches=0
+CHECK7 Z-enumeration: 312 drives (primitive words period<=6 with a 0 and a 1, random prefixes, T=3000); z_(i+k)=z_i+p failures=0; r|Z q-periodic => l (qp)-periodic from max(t0,z_i0,z_i1) failures=0
+CHECK8 degenerate y=0, c=0^inf: half-plane identically zero=True, l=0^inf periodic (hypothesis (N) is needed)
+CHECK8 single-one drive y=0, c=1 0^inf: moving edge holds to T=4096: True; l eventual_period(q<=64, onset<=T/2)=None; ones(l)=2015
+ALL CHECKS PASS=True elapsed=0.3s

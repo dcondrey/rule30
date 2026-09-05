@@ -1,0 +1,15 @@
+verify_driven_lhp.py: finite gates for PROOF.md, lemma driven-lhp-column-minus-one-aperiodic
+CHECK G1 back-solve identity a = d XOR g(b,c), 16 cases (8 triples x 2 rules): mismatches=0
+CHECK G2a moving edge, exhaustive y on x=-1..-6 (64) x period-8 drives (256) x 2 rules, T=40: runs=32766 edge violations=0
+CHECK G2b moving edge, random y (width<=24) and random aperiodic c, T=200, 2 rules: runs=1000 edge violations=0
+CHECK G2c int kernel vs cell-array reference, 60 random (y,c), 2 rules: cells=123041 mismatches=0
+CHECK G3 back-solve reconstruction of columns -2..-61 from columns 0,-1, 40 random drives, T=300: cells=505200 mismatches=0
+CHECK G4a true lone-seed diagram x<=0 equals LHP_seed(c*), T=4096: cells=16793603 mismatches=0
+CHECK G4b true lone-seed diagram x>=1 equals RHP_seed(c*), T=4096: cells=8394753 mismatches=0
+CHECK G4c pin l*_t = 1 XOR c*_(t+1) at one-times: checked=2028 violations=0; coupling r*_t = c*_(t+1) XOR l*_t at zero-times: checked=2068 violations=0
+INFO G4d lone seed to T=4096: |Z|=2068 eventual_period(c*, q<=256)=None eventual_period(l*, q<=256)=None (information only; not a proof step)
+CHECK G5 assembly uniqueness, T=12, all 2^12 words with c_0=1: words satisfying the x=0 rule at every t<T: 1; equal to c*[:13]: True; words satisfying only the pin: 77 (information)
+CHECK G6 Rule 90 LHP_seed(1 0^inf) column -1: ones at [1, 3, 7, 15, 31, 63, 127, 255]... equals 2^j-1: True; eventual_period(q<=256)=None; edge violations=0
+CHECK G7 Theorem 1 instance c=0^omega, y={-1}, T=4096: ones(l)=2016 eventual_period(q<=256, onset<=T/2)=None longest shift-agreement run=19 at shift 131 (random null log2(T*256)=20.0) edge violations=0
+CHECK G7 Theorem 1 instance c=0^omega, y={-3,-1}, T=4096: ones(l)=2015 eventual_period(q<=256, onset<=T/2)=None longest shift-agreement run=19 at shift 131 (random null log2(T*256)=20.0) edge violations=0
+FINAL: total mismatches/violations across G1..G7 = 0; verdict PASS [3.9s]

@@ -1,0 +1,7 @@
+V1 I1/I2/I3 exhaustive over all argument tuples: failures=0
+V2 Lemma A (moving edge) on 24 random drives, both cases of (a,t0), cell-array kernel, T=200: rows checked=4824, violations=0
+V3 (a1) gate, independent cell-array lone seed vs LHP_0(c*): T=400, cells=161603, mismatches=0; c*_0=1
+V4 theorem counterexample search: y supported in [-6,-1] (64 choices), primitive words period<=5, prefix len<=2, T=2048, Q=256, onset<=T/2: drives=23293, (N)-failing skipped=3, eventually periodic l found=0
+V5 y=0, c=0^omega: l identically zero to T=512: True (so (N) is necessary; the lemma's literal text without (N) is false)
+V6 D4 (enumeration) vs time-index (period multiple of p) reading of 'r|Z eventually periodic': 400 samples, enumeration-periodic=208, disagreements=0
+ALL VERIFY-LOGIC CHECKS PASS=True elapsed=22.2s

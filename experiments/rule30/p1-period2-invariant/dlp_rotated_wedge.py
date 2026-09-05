@@ -18,8 +18,17 @@ from rank_zero_separator import peel_power
 from dyadic_periodicity_analyzer import inverse_cone_diagonal
 
 
-def rotated_wedge_witness(word: Vector, tail: int, residue: int) -> bool:
-    """Return the exact unpadded DLP predicate for one binary source."""
+def rotated_wedge_population(
+    word: Vector, tail: int, residue: int
+) -> tuple[bool, bool, Vector]:
+    """Return (surviving, terminal_pull, finite_endpoint).
+
+    ``surviving`` and ``terminal_pull`` are exactly the two checks
+    ``rotated_wedge_witness`` applies before it ever asks about constancy;
+    this is the population test PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md
+    section 4 calls ``H_r(n)`` membership.  Split out so a second, unpadded
+    construction can reuse these exact booleans without recomputing them.
+    """
 
     n = len(word)
     target = n + residue
@@ -38,6 +47,17 @@ def rotated_wedge_witness(word: Vector, tail: int, residue: int) -> bool:
         for index, value in enumerate(finite_endpoint)
         if index >= n
     )
+    terminal_pull = finite_endpoint[-3:-1] == (1, 2)
+    return surviving, terminal_pull, finite_endpoint
+
+
+def rotated_wedge_witness(word: Vector, tail: int, residue: int) -> bool:
+    """Return the exact unpadded DLP predicate for one binary source."""
+
+    n = len(word)
+    surviving, terminal_pull, finite_endpoint = rotated_wedge_population(
+        word, tail, residue
+    )
     if not surviving:
         return False
 
@@ -45,7 +65,6 @@ def rotated_wedge_witness(word: Vector, tail: int, residue: int) -> bool:
     expected_length = n + residue + 2
     assert len(cut) == expected_length
     constant_row = cut == (tail,) * expected_length
-    terminal_pull = finite_endpoint[-3:-1] == (1, 2)
     return constant_row and terminal_pull
 
 

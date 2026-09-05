@@ -25,3 +25,5 @@
 27 0  3   24235   75242     UNSAT      261.17  
 28 0  2   26014   80771     UNSAT     1622.37  
 28 0  3   26014   80771     UNSAT     1386.20  
+29 0  2   27856   86496     UNSAT    11796.39  
+stopping: 11796.4s exceeds the per-instance budget 3600.0s

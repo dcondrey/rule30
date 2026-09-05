@@ -18,7 +18,7 @@ section 7.3 (killed mechanisms and obstructions).
 | id | statement (short) | implies | kill test | status | nearest killed row | notes |
 |---|---|---|---|---|---|---|
 | L5-ALLORB-CONST | `N_k(n) <= 4 * 2^n * 0.47^k` for all `n, k` | RW-alpha, `alpha = 0.92` | exhaustive `N_k`, `n = 4..16` | killed: `N_8 = 6 > 4.9` at `(9,3)`, small-number tail | naive `2^(n-k)` (false, ratio 4) | This IS the rate target in counting form; a proof is the open problem, the test only calibrates the constant |
-| L7-PERIODIC-SOURCE-CAP | periodic sources `s^omega`, `p <= 7`, admissible run `<= 0.6n + 4` | structured-family exclusion | all `2^p` patterns, `n = 6..40`, both readings (periodic `W` with forced tail; fully periodic `f`) | **held to n = 40**: max `run - 0.6n = 2.6` | bounded SAT tables | Cheap and reaches `n = 40`; a positive result forces any counterexample to be aperiodic in `W` |
+| L7-PERIODIC-SOURCE-CAP | periodic sources `s^omega`, `p <= 28`, admissible run `<= n + 2` | structured-family exclusion | all `2^p` patterns, `p <= 28`, `n <= 400`, both hard-core readings | **held to `p = 28`, `n = 400`** (`periodic_family.py`, `uc/r1-skeptic/periodic_family_p28.log`): 0 counterexamples, worst-case excess `run - (n+2) = -3` at `n = 9`, `c = 3` | bounded SAT tables | Cheap and reaches `n = 400`; a positive result forces any counterexample to be aperiodic in `W`. Prior "held to n=40, pattern 2212" citation of `fib_source_check.py` did not reproduce (that script is vacuous, see `uc/r1-skeptic/FIB-SOURCE-REPRO.md`); replaced with the actual source of this claim |
 | L1-DIAG-DEGREE (corrected) | degree of `E(e_u)` in the `2n` diagonal bits is `u - n + 1` | structural | Moebius over `4^n` diagonals, `n = 3..7` | measured: `deg E(e_u) = 2u-1` for `u <= n`, then full | ANF of centre bit (inert) | As submitted it was ill-posed (`T[u][n] = c` is the constraint, not a function); corrected to the edge defect.  Source-bit degree is full; diagonal coordinates may differ, and that would matter |
 | L1-DIAG-INJ-MOD | diagonal -> forced suffix `e[n:]` injective | counting transfer | all `4^n`, `n = 3..7` | killed: fiber grows to 8.2 at `n = 7` | centre-trace injectivity (killed) | `diag_to_edge` validated against the kernel first |
 | L10-PERSIST-INFLUENCE | every source bit flips the hit vector w.p. `>= 1/4` | none directly | all `2^n`, all `i`, `n = 6..11` | killed: bit-0 influence 0.125 -> 0.052 over `n = 6..11` | no-forgetting probe (measurement) | The implication to a per-column entropy loss is not established; the test formalizes 9.2 of the RW doc |
@@ -30,6 +30,7 @@ section 7.3 (killed mechanisms and obstructions).
 | L3-QUAD-COUPLING | cross-term rank of the bilinear form between window halves `>= m/2 - 2` | RW-alpha (unsupported) | unclear | untestable as stated | holonomy-defect word | The bilinear form in letter variables is triangular of full rank trivially; the letters are not free.  Needs a precise statement about which matrix |
 | L7-DIAG-SAT-UNSAT-RANGE | RW UNSAT for `n = 21..30` by SAT on the diagonal encoding | RW on a finite range | complete SAT | in flight: WF skeptic lens (`uc/*/rw_sat.py`) | bounded SAT tables | A SAT model would be an RW counterexample, the most valuable possible outcome |
 | L10-SAT-CORE-SCALING | UNSAT core grows `>= exp(0.1 n)` | meta-evidence | proof-logging SAT | deferred | resolution bounds (killed for `c_n`) | Does not advance a proof; run only if SAT runs happen anyway |
+| L11-RW-TERMINAL-DEFECT | `|H_r(n)| / 2^n` (the hard-core + `12a`-terminal RW candidate population) decays with `n`, `r = 0,1,2` | motivates a shrinking-population argument for RW where `(BWH+)`'s full-degree obstruction blocks the unrestricted version | exhaustive `H_r(n)` count vs `2^n`, both `c`, `r = 0,1,2` (not yet built; needs the two independent constructions per prereg control #1) | S1'/S2 done and empty (`RESULTS-PSI-ANCESTRY-R-EXTENSION.md`): `r=1,2` constant-`Psi` counts computed through n=17, zero at n>=7 for both, matches `r=0`'s shape; every constant word at n=5,6 (`r=0,1`) fails `literal_witness` for both `c`. Section 4's actual `\|H_r(n)\|/2^n` measurement is the remaining, unstarted step | full-degree `Delta` (obstruction, not kill) | `PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md`; fires the capsule section 7 fallback; the collapse lemma (RW witness existence = `literal_extension` surviving hard-core+`12a`) is resolved by reading the code, no run needed |
 
 ## 2. Killed or closed on arrival (no compute needed)
 
@@ -78,7 +79,7 @@ wrong.  Retained in `BACKLOG-PROMPT.md` section 4.
 | L6-COND-HIT-GAP | killed | conditional hit fraction 0.824 (history `122`, `n = 13`, 34 samples); average is ~1/2 as predicted |
 | L6-Z-DENSITY-FORCE | killed | `|Z|/m` from 0.029 to 0.429 on surviving columns |
 | L1-DIAG-INJ-MOD | killed | `4^n` diagonals give `4^n / 8.2` distinct forced suffixes at `n = 7`; fiber size 1.8, 2.7, 3.8, 5.6, 8.2 for `n = 3..7`, growing |
-| L7-PERIODIC-SOURCE-CAP | **held to n = 40** | forced continuation from periodic `W` (`p <= 7`): max `run - 0.6n = 2.6` at `n = 9`, pattern `2212`; fully periodic `f`: never above `0.6n` |
+| L7-PERIODIC-SOURCE-CAP | **held to `p = 28`, `n = 400`** (`periodic_family.py`) | forced continuation from periodic `W`, `p <= 28`: 0 counterexamples, worst-case `run - (n+2) = -3` at `n = 9`, `c = 3`; fully periodic `f`: same bound, never exceeded |
 | L6-FORBIDDEN-FACTOR | killed as stated; census kept | `212121` co-occurs 12 times; absent from all 6-hit runs through `n = 12`: `121221`, `122121`, `212212` |
 | L1-DIAG-DEGREE (corrected) | measured | `deg E(e_u) = 2u - 1` for `u <= n`, then `2n - 1` or `2n` (full) for `u >= n`; diagonal coordinates do not lower the degree |
 | L10-FIB-TRANSFER | inconclusive | sample-limited at `n <= 13` |
@@ -253,7 +254,7 @@ Vacuous, not a family.
 
 Four external batches, 77 stated entries.  Closed on arrival 41 (killed by
 logs 17, ill-posed 24), duplicates 9, untestable 3, screened 24: killed 20,
-held 4 (`L7-PERIODIC-SOURCE-CAP` to `n = 40`, `no-small-period-source` to
+held 4 (`L7-PERIODIC-SOURCE-CAP` to `p = 28, n = 400`, `no-small-period-source` to
 `n = 100`, `forced-column-prefix-uniformity` to `n = 20` with constant 4,
 `survivor-3over4-bound` to `n = 20`).  The four that held are all
 consequences of the census, not routes to a proof.  RW itself stands at
@@ -287,3 +288,61 @@ near neighbours, `Psi_n(W)` depends on only one to three source bits.  The
 source-to-`Psi` map has a large kernel exactly on the checkerboard-like
 sources.  Cumulative: 87 stated entries, 25 screened, 21 killed, 4 held as
 census consequences, none a proof route.
+
+## 17. Single-flip injection between survivor levels (`flip_pairing.py`, `RESULTS-FLIP-PAIRING.md`)
+
+The one proof shape the full-degree result leaves open is an injection
+`S_{j+1} -> D_j` pairing each level-`j` pass with a same-level `E` failure.
+Tried with single source flips as the pairing, `n = 9..16`, both `c`.
+
+| id | status | evidence |
+|---|---|---|
+| flip-pairing-injection | killed | coverage `0.97, 0.65, 0.33, 0.15, 0.07, 0` at `j = 0..5` (`n = 16`), not improving with `n`; max matching `23722/24909` at `j = 0` and `0/234` at `j = 5`; nearest partner at depth `n-1`.  Mechanism: a flip at depth `delta <= n-4` is alive at level `j` with probability `0.4^j` independent of `delta`; only `e_0, e_1, e_2` preserve earlier levels, and they do so by changing nothing |
+| per-level E balance (unconditional) | false | `S_1(c) = D_0(3-c)` so strict balance fails for one `c` at level 0; against all deaths it fails at deep levels: `99 -> 54 -> 28 -> 18` (`n = 16, c = 3`), `22 -> 14 -> 12` (`n = 10, c = 3`), `6 -> 6 -> 6 -> 6` (`n = 9, c = 3`).  Only the average rate `0.4` per level is true of the data |
+| block halving `N_(j+k) <= N_j / 2` | true, too weak | least `k <= 3` for all `n = 11..18`, sources and states (`block_halving.py`); rate `1/k` bit per level cannot reach the rate `1` that `(RW-alpha)` needs |
+| counting line `N_j <= C 2^(n - j)` | held, `C = 3` tight at `n = 9` | `C(n, 1.0) = 1` for every `(n, c)` with `n = 10..18`; only `n = 9, c = 3` needs `C = 3` (levels 7, 8).  Slope `1.1` holds with `C = 1` on 16 of 18 cases; at slope `1.3` the constant follows the deepest plateau (`3.03` at `n = 18`) and is not visibly bounded.  The statement to prove is `N_j <= 3 * 2^(n - j)`; `C < 4` suffices for `(RW)` |
+
+## 18. Pushdown-language representation-change candidate (proposed, not started)
+
+Recovered verbatim from a transcript after the original proposal survived
+only as a one-line name across two later handoffs (lost to `/clear` before
+being written to a project file). Not vacuous, not yet run.
+
+Motivation: every kill logged above constrains a finite-state or
+finite-certificate object (DFA rank, affine subspaces, symbol congruences,
+bounded weights). None touch a pushdown automaton or context-free grammar.
+The dependency queue in the current formulation is already stack-shaped
+(newest dependency diagonal, LIFO) — exactly the structure a PDA is built
+for.
+
+Proposal: try to show the RW survivor language is (or isn't) context-free,
+using the stack to carry the D8 phase that every bounded quotient above
+lost.
+
+Kill condition: if the survivor language fails the pumping lemma for
+context-free languages at a computable scale (a few hundred symbols), this
+route is dead too, cheaply, before any proof effort.
+
+Paired idea from the same note (golden-mean SFT -> rotation via the
+Ostrowski/continued-fraction coding) is NOT open — it already shipped as
+`sturmian_sources.py`.
+
+## 19. Endpoint-coordinate descent, fusion of counting-line + minimal-counterexample descent (`RESULTS-ENDPOINT-COORD-DESCENT.md`)
+
+David's proposed fix to `MEMO-RW-DESCENT-EXPLORATION.md`'s
+padding-misalignment kill: move the `n -> n-1` reduction onto the
+endpoint/cut coordinate `e` (holding distance-to-cut fixed) instead of the
+source word `W`. Checked directly against `psi_kernel.Endpoint`
+(`scratch_endpoint_coord_check.py`): dropping any one endpoint coordinate
+and reading the shorter sequence's diagonal at a fixed offset reproduces the
+deepest cut coordinate at a stable constant rate `13/32 = 0.4062` (best
+case, drop-first), flat across `n = 3..8`, neither -> 1 (no identity) nor
+-> 0 (not a vanishing coincidence). Same order as the already-recorded
+0.4-per-level flip-pairing coverage rate (section 17) and block-halving's
+per-level ratio — three independent codings now agree on this constant.
+Killed as a descent lemma: a stable non-degenerate correlation is not an
+identity. The obstruction is the same one already on record (cut coordinate
+`I(e)_t`'s dependency window grows linearly with `t`, no fixed-radius
+truncation, per `constant_tail_scale.py`'s own docstring) — relocating the
+reduction from `W` to `e` moves where the growing window shows up, it does
+not shrink it.

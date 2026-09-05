@@ -1,0 +1,8 @@
+rbf_adversarial.py args={'seed': 1, 'families': '', 'exhaustive': [13, 16], 'm_transfer': 400, 'm_brute': 13, 'mutate': None}
+rule: CONE rebuilt from the carry action equals psi_kernel.CONE; F1 decoupling and F2 boundary on all 16 pairs PASS
+E n=13  exhaustive 8192 sources, forced orbit u=n..2n+3: 139264 columns PASS  [17s]
+E n=14  exhaustive 16384 sources, forced orbit u=n..2n+3: 294912 columns PASS  [36s]
+E n=15  exhaustive 32768 sources, forced orbit u=n..2n+3: 622592 columns PASS  [87s]
+E n=16  exhaustive 65536 sources, forced orbit u=n..2n+3: 1310720 columns PASS  [180s]
+ALL PASS  [320s]
+exit=0

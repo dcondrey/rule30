@@ -1,0 +1,47 @@
+G1 retained-run structure: 212988 columns PASS
+G2 forced symbol = parity of nonzero count: 212988 columns PASS
+G3 top read-out of E(T[u][n]): 212988 columns PASS
+G4 (Z_(u-1), Z_u) -> column u well defined: 212988 columns PASS; 56064 distinct pairs
+    Z_(u-1) alone: 51988 keys, 3260 with >1 column, max 7 columns per key
+   [8.1s]
+G5 letter-space balance: m, #Phi=0, 3^m, 2*#Phi=0 - 3^m   (brute force vs transfer matrix)
+   m=1   zeros=2                      3^m=3                      2*zeros-3^m=1  brute=2 PASS
+   m=2   zeros=5                      3^m=9                      2*zeros-3^m=1  brute=5 PASS
+   m=3   zeros=14                     3^m=27                     2*zeros-3^m=1  brute=14 PASS
+   m=4   zeros=41                     3^m=81                     2*zeros-3^m=1  brute=41 PASS
+   m=5   zeros=122                    3^m=243                    2*zeros-3^m=1  brute=122 PASS
+   m=6   zeros=365                    3^m=729                    2*zeros-3^m=1  brute=365 PASS
+   m=7   zeros=1094                   3^m=2187                   2*zeros-3^m=1  brute=1094 PASS
+   m=8   zeros=3281                   3^m=6561                   2*zeros-3^m=1  brute=3281 PASS
+   m=9   zeros=9842                   3^m=19683                  2*zeros-3^m=1  brute=9842 PASS
+   m=10  zeros=29525                  3^m=59049                  2*zeros-3^m=1  brute=29525 PASS
+   m=11  zeros=88574                  3^m=177147                 2*zeros-3^m=1
+   m=12  zeros=265721                 3^m=531441                 2*zeros-3^m=1
+   m=13  zeros=797162                 3^m=1594323                2*zeros-3^m=1
+   m=14  zeros=2391485                3^m=4782969                2*zeros-3^m=1
+   m=15  zeros=7174454                3^m=14348907               2*zeros-3^m=1
+   m=16  zeros=21523361               3^m=43046721               2*zeros-3^m=1
+   m=17  zeros=64570082               3^m=129140163              2*zeros-3^m=1
+   m=18  zeros=193710245              3^m=387420489              2*zeros-3^m=1
+   m=19  zeros=581130734              3^m=1162261467             2*zeros-3^m=1
+   m=20  zeros=1743392201             3^m=3486784401             2*zeros-3^m=1
+   m=21  zeros=5230176602             3^m=10460353203            2*zeros-3^m=1
+   m=22  zeros=15690529805            3^m=31381059609            2*zeros-3^m=1
+   m=23  zeros=47071589414            3^m=94143178827            2*zeros-3^m=1
+   m=24  zeros=141214768241           3^m=282429536481           2*zeros-3^m=1
+   m=25  zeros=423644304722           3^m=847288609443           2*zeros-3^m=1
+   m=26  zeros=1270932914165          3^m=2541865828329          2*zeros-3^m=1
+   m=27  zeros=3812798742494          3^m=7625597484987          2*zeros-3^m=1
+   m=28  zeros=11438396227481         3^m=22876792454961         2*zeros-3^m=1
+   m=29  zeros=34315188682442         3^m=68630377364883         2*zeros-3^m=1
+   m=30  zeros=102945566047325        3^m=205891132094649        2*zeros-3^m=1
+   m=31  zeros=308836698141974        3^m=617673396283947        2*zeros-3^m=1
+   m=32  zeros=926510094425921        3^m=1853020188851841       2*zeros-3^m=1
+   m=33  zeros=2779530283277762       3^m=5559060566555523       2*zeros-3^m=1
+   m=34  zeros=8338590849833285       3^m=16677181699666569      2*zeros-3^m=1
+   m=35  zeros=25015772549499854      3^m=50031545098999707      2*zeros-3^m=1
+   m=36  zeros=75047317648499561      3^m=150094635296999121     2*zeros-3^m=1
+   m=37  zeros=225141952945498682     3^m=450283905890997363     2*zeros-3^m=1
+   m=38  zeros=675425858836496045     3^m=1350851717672992089    2*zeros-3^m=1
+   m=39  zeros=2026277576509488134    3^m=4052555153018976267    2*zeros-3^m=1
+   m=40  zeros=6078832729528464401    3^m=12157665459056928801   2*zeros-3^m=1

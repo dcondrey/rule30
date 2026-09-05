@@ -1,0 +1,118 @@
+attack_driven_lhp.py: adversarial compute checks on PROOF.md (lemma driven-lhp-column-minus-one-aperiodic)
+== A0: the (ND) boundary, literal hypothesis 'nonzero finite y' ==
+  y = delta_0 (zero on x <= -1), c = 0^omega: LHP identically zero, l = 0^omega is periodic. COUNTEREXAMPLE to the literal text; excluded by the proof's (ND).
+ATTACK A0a literal-hypothesis degenerate case: hits=1 (expected 1: this is the case PROOF.md section 0 names and (ND) removes)
+  ok  c*[:1] 0^omega: ones(l)=8165 run=20 edge_violations=0 t0=0
+  ok  c*[:2] 0^omega: ones(l)=8165 run=20 edge_violations=0 t0=0
+  ok  c*[:3] 0^omega: ones(l)=8165 run=20 edge_violations=0 t0=0
+  ok  c*[:5] 0^omega: ones(l)=8151 run=21 edge_violations=0 t0=0
+  ok  c*[:8] 0^omega: ones(l)=8151 run=21 edge_violations=0 t0=0
+  ok  c*[:16] 0^omega: ones(l)=8224 run=19 edge_violations=0 t0=0
+  ok  c*[:64] 0^omega: ones(l)=8284 run=23 edge_violations=0 t0=0
+  ok  c*[:256] 0^omega: ones(l)=8143 run=20 edge_violations=0 t0=0
+  ok  c*[:1024] 0^omega: ones(l)=8107 run=19 edge_violations=0 t0=0
+  ok  1^1 0^omega: ones(l)=8165 run=20 edge_violations=0 t0=0
+  ok  1^2 0^omega: ones(l)=8165 run=20 edge_violations=0 t0=0
+  ok  1^3 0^omega: ones(l)=8165 run=20 edge_violations=0 t0=0
+  ok  1^7 0^omega: ones(l)=8203 run=23 edge_violations=0 t0=0
+  ok  1^100 0^omega: ones(l)=8239 run=22 edge_violations=0 t0=0
+  ok  0^100 1 0^omega: ones(l)=8110 run=100 edge_violations=0 t0=100
+ATTACK A0b finitely-many-ones drives with seed y, T=16384: families=15 hits=0
+  [attack_a0 0.9s]
+== A1: (EDGE) at scale ==
+ATTACK A1 (EDGE), T=20000, widths (1,7,64,513,2000) x 6 drives x 2 rules: runs=60 violations=0
+  [attack_a1 2.5s]
+== A2: Theorem 1 in families outside the screen (T = 65536) ==
+  ok  y={-1} c=(0)^omega: ones(l)=32602 kmp_min_period(tail)=32766 run=26 edge_violations=0
+  ok  y={-1} c=(1)^omega: ones(l)=32745 kmp_min_period(tail)=32767 run=24 edge_violations=0
+  ok  y={-1} c=(01)^omega: ones(l)=32792 kmp_min_period(tail)=32767 run=29 edge_violations=0
+  ok  y={-1} c=(011)^omega: ones(l)=32715 kmp_min_period(tail)=32768 run=23 edge_violations=0
+  ok  y={-1} c=(0001)^omega: ones(l)=32874 kmp_min_period(tail)=32768 run=23 edge_violations=0
+  ok  y={-10} c=(0)^omega: ones(l)=32708 kmp_min_period(tail)=32767 run=22 edge_violations=0
+  ok  y={-10} c=(1)^omega: ones(l)=32895 kmp_min_period(tail)=32766 run=26 edge_violations=0
+  ok  y={-10} c=(01)^omega: ones(l)=32842 kmp_min_period(tail)=32766 run=26 edge_violations=0
+  ok  y={-10} c=(011)^omega: ones(l)=32724 kmp_min_period(tail)=32765 run=23 edge_violations=0
+  ok  y={-10} c=(0001)^omega: ones(l)=32570 kmp_min_period(tail)=32769 run=23 edge_violations=0
+  ok  y={-100} c=(0)^omega: ones(l)=33003 kmp_min_period(tail)=32767 run=98 edge_violations=0
+  ok  y={-100} c=(1)^omega: ones(l)=32877 kmp_min_period(tail)=32767 run=27 edge_violations=0
+  ok  y={-100} c=(01)^omega: ones(l)=32879 kmp_min_period(tail)=32764 run=25 edge_violations=0
+  ok  y={-100} c=(011)^omega: ones(l)=32787 kmp_min_period(tail)=32769 run=24 edge_violations=0
+  ok  y={-100} c=(0001)^omega: ones(l)=32512 kmp_min_period(tail)=32767 run=24 edge_violations=0
+  ok  y={-1000} c=(0)^omega: ones(l)=32031 kmp_min_period(tail)=32767 run=998 edge_violations=0
+  ok  y={-1000} c=(1)^omega: ones(l)=32713 kmp_min_period(tail)=32765 run=22 edge_violations=0
+  ok  y={-1000} c=(01)^omega: ones(l)=32916 kmp_min_period(tail)=32767 run=29 edge_violations=0
+  ok  y={-1000} c=(011)^omega: ones(l)=32598 kmp_min_period(tail)=32768 run=21 edge_violations=0
+  ok  y={-1000} c=(0001)^omega: ones(l)=32650 kmp_min_period(tail)=32769 run=21 edge_violations=0
+  ok  seed, random primitive word p=16 (1111000010111100...): ones(l)=32696 kmp_min_period(tail)=32769 run=23 edge_violations=0
+  ok  seed, random primitive word p=16 (1010110101011111...): ones(l)=32772 kmp_min_period(tail)=32766 run=22 edge_violations=0
+  ok  seed, random primitive word p=16 (1011010101000101...): ones(l)=32646 kmp_min_period(tail)=32768 run=21 edge_violations=0
+  ok  seed, random primitive word p=32 (0110011100000010...): ones(l)=32900 kmp_min_period(tail)=32767 run=20 edge_violations=0
+  ok  seed, random primitive word p=32 (0110010110010001...): ones(l)=33048 kmp_min_period(tail)=32768 run=23 edge_violations=0
+  ok  seed, random primitive word p=32 (1010111001001101...): ones(l)=32888 kmp_min_period(tail)=32768 run=22 edge_violations=0
+  ok  seed, random primitive word p=64 (1011110001011011...): ones(l)=32678 kmp_min_period(tail)=32767 run=22 edge_violations=0
+  ok  seed, random primitive word p=64 (1010001011101011...): ones(l)=32646 kmp_min_period(tail)=32765 run=23 edge_violations=0
+  ok  seed, random primitive word p=64 (0001100101100111...): ones(l)=32603 kmp_min_period(tail)=32769 run=22 edge_violations=0
+  ok  seed, random primitive word p=128 (0101101010001110...): ones(l)=32722 kmp_min_period(tail)=32768 run=23 edge_violations=0
+  ok  seed, random primitive word p=128 (0110001101011010...): ones(l)=32663 kmp_min_period(tail)=32764 run=26 edge_violations=0
+  ok  seed, random primitive word p=128 (1110110101111110...): ones(l)=32807 kmp_min_period(tail)=32766 run=22 edge_violations=0
+  ok  seed, c*[:64] then (0)^omega: ones(l)=32768 kmp_min_period(tail)=32769 run=23 edge_violations=0
+  ok  seed, c*[:64] then (1)^omega: ones(l)=32917 kmp_min_period(tail)=32769 run=24 edge_violations=0
+  ok  seed, c*[:64] then (01)^omega: ones(l)=32993 kmp_min_period(tail)=32767 run=21 edge_violations=0
+  ok  seed, c*[:64] then (011)^omega: ones(l)=32762 kmp_min_period(tail)=32769 run=23 edge_violations=0
+  ok  seed, c*[:64] then (0011)^omega: ones(l)=32867 kmp_min_period(tail)=32768 run=22 edge_violations=0
+  ok  seed, c*[:256] then (0)^omega: ones(l)=32699 kmp_min_period(tail)=32767 run=25 edge_violations=0
+  ok  seed, c*[:256] then (1)^omega: ones(l)=32700 kmp_min_period(tail)=32766 run=26 edge_violations=0
+  ok  seed, c*[:256] then (01)^omega: ones(l)=32886 kmp_min_period(tail)=32769 run=24 edge_violations=0
+  ok  seed, c*[:256] then (011)^omega: ones(l)=32662 kmp_min_period(tail)=32765 run=23 edge_violations=0
+  ok  seed, c*[:256] then (0011)^omega: ones(l)=32638 kmp_min_period(tail)=32766 run=24 edge_violations=0
+  ok  seed, c*[:1024] then (0)^omega: ones(l)=32681 kmp_min_period(tail)=32767 run=23 edge_violations=0
+  ok  seed, c*[:1024] then (1)^omega: ones(l)=32793 kmp_min_period(tail)=32769 run=25 edge_violations=0
+  ok  seed, c*[:1024] then (01)^omega: ones(l)=32748 kmp_min_period(tail)=32766 run=26 edge_violations=0
+  ok  seed, c*[:1024] then (011)^omega: ones(l)=32727 kmp_min_period(tail)=32769 run=24 edge_violations=0
+  ok  seed, c*[:1024] then (0011)^omega: ones(l)=32813 kmp_min_period(tail)=32768 run=23 edge_violations=0
+  ok  seed, c*[:4096] then (0)^omega: ones(l)=32580 kmp_min_period(tail)=32768 run=21 edge_violations=0
+  ok  seed, c*[:4096] then (1)^omega: ones(l)=32527 kmp_min_period(tail)=32769 run=21 edge_violations=0
+  ok  seed, c*[:4096] then (01)^omega: ones(l)=32808 kmp_min_period(tail)=32766 run=24 edge_violations=0
+  ok  seed, c*[:4096] then (011)^omega: ones(l)=32589 kmp_min_period(tail)=32767 run=24 edge_violations=0
+  ok  seed, c*[:4096] then (0011)^omega: ones(l)=32928 kmp_min_period(tail)=32768 run=24 edge_violations=0
+  ok  y={-37}, c*[:512] then (01)^omega: ones(l)=32677 kmp_min_period(tail)=32769 run=23 edge_violations=0
+ATTACK A2 Theorem 1 outside the screen, T=65536, Q=2048 plus KMP tail detector: families=53 hits=0; longest shift-agreement run min/median/max=20/23/998 (random null log2(T*256)=24.0)
+  [attack_a2 28.1s]
+== A3: Theorem 2 beyond the screened columns (columns -1..-256, T = 16384) ==
+  ok  seed (01)^omega: 0 of 256 columns eventually periodic (both detectors)
+  ok  seed 1 0^omega: 0 of 256 columns eventually periodic (both detectors)
+  ok  seed 1^omega: 0 of 256 columns eventually periodic (both detectors)
+  ok  seed (011)^omega: 0 of 256 columns eventually periodic (both detectors)
+  ok  seed c*[:64] (0001)^omega: 0 of 256 columns eventually periodic (both detectors)
+  ok  y={-5,-2} (0111)^omega: 0 of 256 columns eventually periodic (both detectors)
+ATTACK A3 Theorem 2 columns -1..-256, T=16384: drives=6 periodic columns found=0
+  [attack_a3 15.6s]
+== A4: Theorem 2 with non-periodic drives constructed to make column -1 periodic ==
+  ok  y={-1} target l=0^omega onset=2 nodes=6176: l periodic by construction; c aperiodic (kmp tail period 2048, ones 2017), column -2 aperiodic (kmp tail period 2047, ones 2015), edge violations 0; c[:48]=111011100110100100010111110010110110011100111011
+  y={-1} target l=1^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  y={-1} target l=(01)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  y={-1} target l=(0011)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  y={-1} target l=(011)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  y={-1} target l=(0001)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  ok  seed target l=0^omega onset=3 nodes=6178: l periodic by construction; c aperiodic (kmp tail period 2047, ones 2017), column -2 aperiodic (kmp tail period 2047, ones 2015), edge violations 0; c[:48]=111101110011010010001011111001011011001110011101
+  seed target l=1^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  seed target l=(01)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  seed target l=(0011)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  seed target l=(011)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  seed target l=(0001)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  ok  y={-3,-1} target l=0^omega onset=4 nodes=6089: l periodic by construction; c aperiodic (kmp tail period 2047, ones 2120), column -2 aperiodic (kmp tail period 2047, ones 2117), edge violations 0; c[:48]=111101000100110010000100111011010001000110011100
+  y={-3,-1} target l=1^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  y={-3,-1} target l=(01)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  y={-3,-1} target l=(0011)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  y={-3,-1} target l=(011)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+  y={-3,-1} target l=(0001)^omega: no drive found within budget (not a hit; DFS exhausted or budget)
+ATTACK A4 Theorem 2 adversarial drives, T=4096: drives found=3 hits=0
+  [attack_a4 0.9s]
+== A5: exhaustive small-parameter search for Theorem 1's impossible configuration ==
+ATTACK A5 exhaustive y width<=8 x primitive drives period<=6 (all rotations), T=512, Q=64 and KMP(tail, >=4 reps): runs=27135 hits=0
+  [attack_a5 8.3s]
+== A6: Lemma 7 on random periodic drives; Proposition B exhaustive at T = 16 ==
+ATTACK A6a Lemma 7 z_(k+k_p) = z_k + p on 200 random eventually periodic drives: checks=237090 violations=0
+ATTACK A6b Proposition B exhaustive T=16, all 2^16 words with c_0=1: solutions=1 equal to c*[:17]=True
+  [attack_a6 0.2s]
+FINAL: hits against PROOF.md claims (excluding the A0a degenerate case the proof itself excludes) = 0; [56.6s]

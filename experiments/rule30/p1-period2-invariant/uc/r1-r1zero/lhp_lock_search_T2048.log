@@ -1,0 +1,6 @@
+T=2048 random prefixes per word=60 periods<=7
+words (all phases, primitive, with at least one 1): 231
+runs=14091 second-half violation rate per one-time = 0.5001 (null 0.5)
+earliest last-violation time over all runs (longest violation-free tail): t=2034 for ('0100101', '111111111111111111111111')  (tail length 14)
+lock candidates (zero violations in [T/2,T)): 0
+elapsed 17.2s

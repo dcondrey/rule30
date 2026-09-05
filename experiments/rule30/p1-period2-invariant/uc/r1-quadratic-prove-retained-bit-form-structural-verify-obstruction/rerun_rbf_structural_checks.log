@@ -1,0 +1,18 @@
+rbf_structural_checks.py args={'ub': 12, 'u4': 6, 'm': 10, 'mutate': False}
+S1 decoupling: H(phi(l,r)) = H(r)+1+[l=0], E(phi(l,r)) = E(r)+H(r)[Lo(l)=0] on all 16 pairs; phi right-bijective for each l PASS
+S2 boundary: BOUNDARY[s]=s^3, CONE[3][r]=BOUNDARY[r], H(s^3)=1+H(s), E(s^3)=E(s) on 4 symbols; E(1)=E(2)=E(1^3)=E(2^3)=0 PASS
+S3 kernel = triangle recurrence: 13650 words (binary u<=12, four-state u<=6), every column PASS   [0s]
+S4 Lemma H and Lemma E on 1023096 cells (binary prefixes u<=12 and four-state u<=6, all four e_u, every d in [-u,u]) PASS   [2s]
+S5 statements (a)(b)(c)(d1)(d2)(d3)(d5) and the set form of Phi on 90114 (word, n) pairs, all binary words u<=12, all n<=u; forced symbol unique everywhere; 9830 distinct (n,u,Z_(u-1),Z_u) keys each with one column; odd-indexed even-bit flips invisible: 648434; even-indexed flips visible: 603132 PASS   [10s]
+  S6 m=1  N0=2      N1=1      N0-N1=1  N<=1 census (Phi=0,1)=(2,1) matches closed form; involution checked on 0 words with N>=2
+  S6 m=2  N0=5      N1=4      N0-N1=1  N<=1 census (Phi=0,1)=(3,2) matches closed form; involution checked on 4 words with N>=2
+  S6 m=3  N0=14     N1=13     N0-N1=1  N<=1 census (Phi=0,1)=(4,3) matches closed form; involution checked on 20 words with N>=2
+  S6 m=4  N0=41     N1=40     N0-N1=1  N<=1 census (Phi=0,1)=(5,4) matches closed form; involution checked on 72 words with N>=2
+  S6 m=5  N0=122    N1=121    N0-N1=1  N<=1 census (Phi=0,1)=(6,5) matches closed form; involution checked on 232 words with N>=2
+  S6 m=6  N0=365    N1=364    N0-N1=1  N<=1 census (Phi=0,1)=(7,6) matches closed form; involution checked on 716 words with N>=2
+  S6 m=7  N0=1094   N1=1093   N0-N1=1  N<=1 census (Phi=0,1)=(8,7) matches closed form; involution checked on 2172 words with N>=2
+  S6 m=8  N0=3281   N1=3280   N0-N1=1  N<=1 census (Phi=0,1)=(9,8) matches closed form; involution checked on 6544 words with N>=2
+  S6 m=9  N0=9842   N1=9841   N0-N1=1  N<=1 census (Phi=0,1)=(10,9) matches closed form; involution checked on 19664 words with N>=2
+  S6 m=10 N0=29525  N1=29524  N0-N1=1  N<=1 census (Phi=0,1)=(11,10) matches closed form; involution checked on 59028 words with N>=2
+S6 balance (e): block formula = Moore Phi, q_2 toggle flips Phi on N>=2, N<=1 census closed form, N0-N1=1 and N0=(3^m+1)/2 for m<=10 PASS   [10s]
+ALL PASS   [10s]

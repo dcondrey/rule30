@@ -1,0 +1,12 @@
+adversarial_checks.py: independent checks on PROOF.md (structural), lemma driven-lhp-column-minus-one-aperiodic
+CHECK A1 rule 30: Theorem 1 counterexample search, y on x=-1..-6 (64) x drives (primitive w period 1..5, prefix 0..1) = 153, (ND) enforced, T=2048, q<=256 on [T/2,T]: runs=9792 hits=0 first_hit=None [24s]
+CHECK A1 rule 90: Theorem 1 counterexample search, y on x=-1..-6 (64) x drives (primitive w period 1..5, prefix 0..1) = 153, (ND) enforced, T=2048, q<=256 on [T/2,T]: runs=9792 hits=36 first_hit=(0, [0, 1], [0], 1) [25s]
+CHECK A1 rule 150: Theorem 1 counterexample search, y on x=-1..-6 (64) x drives (primitive w period 1..5, prefix 0..1) = 153, (ND) enforced, T=2048, q<=256 on [T/2,T]: runs=9792 hits=0 first_hit=None [30s]
+CHECK A1 rule 60: Theorem 1 counterexample search, y on x=-1..-6 (64) x drives (primitive w period 1..5, prefix 0..1) = 153, (ND) enforced, T=2048, q<=256 on [T/2,T]: runs=9792 hits=9792 first_hit=(0, [1], [], 1) [15s]
+CHECK A2 rule 30: Theorem 2 pairwise, y on x=-1..-5 (32) x pure periodic w period 1..4, T=1024, columns -1..-6, q<=64 on [T/2,T]: runs=672 runs_with_two_or_more_periodic_columns=0 example=None
+CHECK A2 rule 90: Theorem 2 pairwise, y on x=-1..-5 (32) x pure periodic w period 1..4, T=1024, columns -1..-6, q<=64 on [T/2,T]: runs=672 runs_with_two_or_more_periodic_columns=1 example=(0, [0, 0, 0, 1], [4, 1, None, None, None, None])
+CHECK A2 rule 60: Theorem 2 pairwise, y on x=-1..-5 (32) x pure periodic w period 1..4, T=1024, columns -1..-6, q<=64 on [T/2,T]: runs=672 runs_with_two_or_more_periodic_columns=672 example=(0, [1], [1, 1, 1, 1, 1, 1])
+CHECK A3 Rule 90 lone seed, T=4096: c eventually periodic (q on tail)=1; |Z|=4096 (= T, Z infinite); ones of r|Z at times [1, 3, 7, 15, 31, 63]... == 2^j-1: True; r|Z period q<=256 on tail: None; l period q<=256 on tail: None; Prop A analogue holds on this instance: True
+CHECK A4 (ND) necessity: y = 0 on x<=-1 (the lone-seed y = delta_0 restricted), c = 0^omega, Rule 30, T=256: sum(l)=0 l periodic with q=1; lemma text 'nonzero finite y' is insufficient: True
+CHECK A5 Rule 90 transport of Corollary A.1: P1_90 (c aperiodic) = False; R1_90 ('c periodic => r|Z periodic') = False; equivalence R1_90 <=> P1_90 consistent: True; nothing false is proved
+DONE [96s]

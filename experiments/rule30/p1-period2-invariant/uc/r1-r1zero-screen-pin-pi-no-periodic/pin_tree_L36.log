@@ -1,0 +1,12 @@
+L=36 cap=400 tails=['01', '10', '001', '011', '0001', '0111', '00101', '000111'] workers=8 split_depth=20
+subtree roots at depth 20: 1727
+L=36: Pi-leaves=1149508
+  tail 01: tests=1149508 max=16 atcap=0 null_max_steps~40 ratio max/null=0.40 | top hist [(6, 4800), (7, 71634), (8, 32724), (9, 16788), (10, 545), (11, 3189), (12, 2552), (16, 22522)] | survivors>=s: 4:384212 8:78320 12:25074 16:22522 | witness row=0x1bd9c586c7 phase=1
+  tail 10: tests=1149508 max=16 atcap=0 null_max_steps~40 ratio max/null=0.40 | top hist [(6, 4800), (7, 71634), (8, 32724), (9, 16788), (10, 545), (11, 3189), (12, 2552), (16, 22522)] | survivors>=s: 4:384212 8:78320 12:25074 16:22522 | witness row=0x1bd9c586c7 phase=0
+  tail 001: tests=1697792 max=21 atcap=0 null_max_steps~62 ratio max/null=0.34 | top hist [(12, 4948), (13, 8022), (14, 2804), (15, 44272), (16, 30032), (17, 16650), (19, 144), (21, 2830)] | survivors>=s: 4:708172 8:191308 12:109702 16:49656 20:2830 | witness row=0x190b96a6c3 phase=2
+  tail 011: tests=1750732 max=13 atcap=0 null_max_steps~31 ratio max/null=0.42 | top hist [(5, 64717), (6, 17250), (7, 10614), (8, 24374), (9, 864), (10, 813), (11, 390), (13, 712)] | survivors>=s: 4:246736 8:27153 12:712 | witness row=0x1bd9c58509 phase=1
+  tail 0001: tests=2246076 max=35 atcap=0 null_max_steps~84 ratio max/null=0.41 | top hist [(19, 17066), (20, 3926), (22, 5504), (25, 4200), (27, 390), (28, 48), (30, 144), (35, 672)] | survivors>=s: 4:1142825 8:549540 12:332451 16:102079 20:14884 24:5454 28:864 32:672 | witness row=0x190b96a648 phase=0
+  tail 0111: tests=2351956 max=13 atcap=0 null_max_steps~28 ratio max/null=0.46 | top hist [(6, 39436), (7, 17568), (8, 11388), (9, 18730), (10, 1088), (11, 1830), (12, 450), (13, 4465)] | survivors>=s: 4:270690 8:37951 12:4915 | witness row=0x1bcd3a5e48 phase=0
+  tail 00101: tests=2847300 max=26 atcap=0 null_max_steps~54 ratio max/null=0.49 | top hist [(10, 30795), (11, 20636), (12, 43269), (13, 55602), (14, 51834), (17, 28266), (18, 22522), (26, 47520)] | survivors>=s: 4:1092384 8:417205 12:249013 16:98308 20:47520 24:47520 | witness row=0x1bcd3a5e0a phase=1
+  tail 000111: tests=3448524 max=18 atcap=0 null_max_steps~43 ratio max/null=0.41 | top hist [(8, 26944), (9, 57010), (10, 42017), (11, 38165), (12, 17861), (13, 712), (16, 4348), (18, 25920)] | survivors>=s: 4:894366 8:212977 12:48841 16:30268 | witness row=0x1bcd3a5e0f phase=5
+elapsed 5.5s

@@ -1,0 +1,35 @@
+gate: 1022 binary prefixes agree with psi_kernel.psi through n=9
+##### prefix language R13, continuation language R13
+n=13 |L_n|=    156 h=0.391 null_lang=  8.3 null_joint=  3.2 | LANG-only deepest=  8 (0.615 n) full(n+2)=     0 | E-only deepest c2=  5 c3=  5 | joint deepest c2=  3 c3=  3 need=15  (0.0s)
+    LANG-only N_k: 0:156 1:88 2:61 3:41 4:26 5:16 6:9 7:1 8:1
+    killing factor at first LANG failure: 11:64, 101001:26, 00000:25, 0100101:14, 01010001001:8, 0101000101:5, 010100010001:3, 010010001:3
+    LANG-only deepest witnesses: 0010010010010|010000101  1010101010101|0001001  1010100001010|1010000
+n=14 |L_n|=    202 h=0.373 null_lang=  8.3 null_joint=  3.2 | LANG-only deepest=  7 (0.500 n) full(n+2)=     0 | E-only deepest c2=  5 c3=  8 | joint deepest c2=  4 c3=  5 need=16  (0.0s)
+    LANG-only N_k: 0:202 1:124 2:81 3:57 4:31 5:11 6:8 7:1
+    killing factor at first LANG failure: 11:103, 00000:26, 101001:16, 0100101:16, 0101010000:9, 010100010001:6, 010010001:6, 010010000101:6
+    LANG-only deepest witnesses: 00010001000010|10101001  10001001001001|0000101  10101000010001|0100011
+n=15 |L_n|=    259 h=0.359 null_lang=  8.4 null_joint=  3.3 | LANG-only deepest=  9 (0.600 n) full(n+2)=     0 | E-only deepest c2=  7 c3=  6 | joint deepest c2=  4 c3=  3 need=17  (0.0s)
+    LANG-only N_k: 0:259 1:165 2:103 3:55 4:37 5:19 6:12 7:6 8:6 9:2
+    killing factor at first LANG failure: 11:112, 00000:41, 0100101:32, 101001:27, 01010001001:13, 0101000101:10, 010010001:6, 1001000010001:5
+    LANG-only deepest witnesses: 100010100001010|1000100000  000010100001010|1000100000  000101000010000|100001011
+n=16 |L_n|=    333 h=0.363 null_lang=  9.1 null_joint=  3.5 | LANG-only deepest= 10 (0.625 n) full(n+2)=     0 | E-only deepest c2=  5 c3=  9 | joint deepest c2=  3 c3=  3 need=18  (0.0s)
+    LANG-only N_k: 0:333 1:211 2:145 3:99 4:54 5:34 6:26 7:14 8:10 9:8 10:4
+    killing factor at first LANG failure: 11:149, 00000:36, 101001:30, 0100101:27, 0101000101:22, 0101010000:17, 01010001001:13, 010010001:13
+    LANG-only deepest witnesses: 1001000010010010|00010010011  0001000010010010|00010010011  1000101000010001|00010100011
+##### prefix language BIN, continuation language HC
+n=13 |L_n|=   8192 h=1.000 null_lang=  inf null_joint= 13.0 | LANG-only deepest= 15 (1.154 n) full(n+2)=   333 | E-only deepest c2= 10 c3= 10 | joint deepest c2=  7 c3=  9 need=15  (0.0s)
+    LANG-only N_k: 0:8192 1:6162 2:5093 3:4034 4:3319 5:2696 6:2219 7:1715 8:1364 9:1044 10:827 11:662 12:560 13:433 14:382 15:333
+    killing factor at first LANG failure: 11:7859
+    LANG-only deepest witnesses: 0011101111100|100101000101001  0110011011100|000100010000000  1011101111100|100101000101001
+n=14 |L_n|=  16384 h=1.000 null_lang=  inf null_joint= 14.0 | LANG-only deepest= 16 (1.143 n) full(n+2)=   569 | E-only deepest c2= 11 c3= 11 | joint deepest c2= 10 c3=  8 need=16  (0.1s)
+    LANG-only N_k: 0:16384 1:12290 2:10291 3:8210 4:6535 5:5235 6:4178 7:3343 8:2687 9:2098 10:1793 11:1493 12:1243 13:990 14:832 15:671 16:569
+    killing factor at first LANG failure: 11:15815
+    LANG-only deepest witnesses: 11000110111000|1000010000100000  11000101110010|1010100100100001  11001110100010|0001000100000000
+n=15 |L_n|=  32768 h=1.000 null_lang=  inf null_joint= 15.0 | LANG-only deepest= 17 (1.133 n) full(n+2)=  1063 | E-only deepest c2= 11 c3= 16 | joint deepest c2=  9 c3=  8 need=17  (0.1s)
+    LANG-only N_k: 0:32768 1:24667 2:20622 3:16446 4:13307 5:10719 6:8738 7:6879 8:5717 9:4691 10:3819 11:3094 12:2594 13:2122 14:1799 15:1536 16:1294 17:1063
+    killing factor at first LANG failure: 11:31705
+    LANG-only deepest witnesses: 111000000000110|10100100100000001  100010100110110|00001000010000101  100010101010101|00010000001010101
+n=16 |L_n|=  65536 h=1.000 null_lang=  inf null_joint= 16.0 | LANG-only deepest= 18 (1.125 n) full(n+2)=  1292 | E-only deepest c2= 14 c3= 14 | joint deepest c2= 10 c3= 10 need=18  (0.3s)
+    LANG-only N_k: 0:65536 1:49449 2:41176 3:32940 4:26870 5:21408 6:17559 7:14292 8:11426 9:9323 10:7776 11:6292 12:5240 13:4264 14:3585 15:2866 16:2205 17:1785 18:1292
+    killing factor at first LANG failure: 11:64244
+    LANG-only deepest witnesses: 1100110110100011|010010100010010010  1000000010000010|010010010001001001  0000110010100110|001010101010001000

@@ -1,0 +1,9 @@
+A (rows from-state, cols to-state, states (h,F) = [(0, 0), (0, 1), (1, 0), (1, 1)] ):
+    [1, 0, 2, 0]
+    [0, 1, 0, 2]
+    [1, 1, 0, 1]
+    [1, 1, 1, 0]
+characteristic polynomial coefficients (x^4 .. x^0): ['1', '-2', '-4', '2', '3']
+p(1) = 0   -> constant sequences satisfy the recurrence: True
+d(m) = N_0(m) - N_1(m) for m = 1..8: [1, 1, 1, 1, 1, 1, 1, 1]
+PROOF COMPLETE (p(1)=0 and d(1..4)=1): True

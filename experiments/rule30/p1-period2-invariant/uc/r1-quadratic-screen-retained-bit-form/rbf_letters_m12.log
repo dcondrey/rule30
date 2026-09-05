@@ -1,0 +1,16 @@
+rbf_kill.py args={'umax': 12, 'fut': 4, 'rand_n': [30, 40], 'samples': 200, 'seed': 1, 'letters_m': 12, 'letters_m4': 8, 'balance_brute': 10, 'balance_transfer': 60, 'gate_n': 8, 'skip': ['gate', 'X', 'R', 'E'], 'mutate': False}
+  L m=1   words=3   [0s]
+  L m=2   words=9   [0s]
+  L m=3   words=27   [0s]
+  L m=4   words=81   [0s]
+  L m=5   words=243   [0s]
+  L m=6   words=729   [0s]
+  L m=7   words=2187   [0s]
+  L m=8   words=6561   [0s]
+  L m=9   words=19683   [0s]
+  L m=10  words=59049   [1s]
+  L m=11  words=177147   [4s]
+  L m=12  words=531441   [13s]
+  L four-state words checked=87380 (3 interchangeable with 1)   [13s]
+L letter space: 797160 three-letter windows m <= 12: Moore = kernel PASS; odd-indexed even-bit flips 3255076 all invisible PASS; even-indexed flips 2856496 all visible PASS; 87380 four-state windows m <= 8: 3 = 1 PASS
+ALL PASS   [13s]
