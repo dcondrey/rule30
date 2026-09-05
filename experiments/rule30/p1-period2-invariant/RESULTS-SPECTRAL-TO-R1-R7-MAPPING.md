@@ -112,10 +112,24 @@ mechanizing R1, not evidence about R1's truth.
   theorem.
 - R7 mode (ii) is untouched but inherits the `4^R` wall.
 - The unblocked work remains where the previous handoff put it: **R1 directly**
-  (the general-finite-row zero-set obligation, A8), and the **deep-regime split
-  argument** identified in `RESULTS-FIB-FIBER-UNIFICATION.md` — the bulk is
-  fine, the obstruction is the small-`S_k` tail, which is the extinction-margin
-  lead.
+  (the general-finite-row zero-set obligation, A8), and the split argument
+  identified in `RESULTS-FIB-FIBER-UNIFICATION.md`.
+
+  **Corrected 2026-09-05.** This bullet previously read "the bulk is fine, the
+  obstruction is the small-`S_k` tail". That framing was **withdrawn** the same
+  day (commit `cc22299`, correction recorded in
+  `RESULTS-WINDOW-SPECTRAL-RELAXATION.md` and
+  `RESULTS-FIB-FIBER-UNIFICATION.md`): the per-step failure is *not* confined to
+  a small-population tail — it is falsified entrywise, weighted-for-every-weight,
+  and at every population floor tested (violations at `S_k` up to at least 255).
+  A per-step ceiling was always the wrong object. The live target is the
+  **product**: the induction needs `S_need / S_0 < 2^-n`, i.e. a geometric mean
+  below `1/phi = 0.61803`, not a uniform per-step bound. Scored against a
+  pre-registered kill condition over 24 cells `n = 10..24`, both tails, the kill
+  did **not** fire: max geometric mean `0.5987` (`n=12, c=2`). See
+  `RESULTS-PRODUCT-GEOMETRIC-MEAN.md`. That pass rests on a *fitted*, not proved,
+  slope separation (`log_phi(D_peak) ~ 0.398n` against `m' ~ 0.217n`, fitted
+  `n <= 24`).
 
 ## Correction to my own framing earlier this session
 

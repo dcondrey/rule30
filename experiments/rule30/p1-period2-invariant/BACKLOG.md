@@ -207,14 +207,33 @@ Three recurring defects, on top of the two from earlier batches:
 | period-trace-q-finite | untestable | finite simulation cannot certify eventual periodicity |
 | tri-inj-forced-suffix, forced-column-prefix-uniformity, survivor-3over4-bound, no-small-period-source, unstopped-language entropy, group-cocycle-4-cycle, affine-translation-nonzero | screening: `backlog_screen_r3.py` | results in section 12 |
 
-## 12. RW by complete SAT to n = 28 (from the dead workflow's skeptic lens)
+## 12. RW by complete SAT to n = 30 (from the dead workflow's skeptic lens)
 
-`uc/r1-skeptic/rw_sat.py`, logs `rw_sat_check.log` and `rw_sat_scan.log`.
+`uc/r1-skeptic/rw_sat.py`, logs `rw_sat_check.log`, `rw_sat_scan.log`,
+`rw_sat_n29_c3.log`, `rw_sat_n30_20260903.log`, `rw_sat_r_grid_20260903.log`,
+`gap_29_2_3.log`, `gap_30_{1,2}_{2,3}.log`.
 The SAT encoding of RW (`r = 0`, both `c`) is gated against the census at
 `n = 9..16`: satisfiable at exactly the census's deepest run and unsatisfiable
-one deeper, at every `n` and both `c`.  Then `n = 21..28`, both `c`: **UNSAT**,
-solve times 14 s to 27 min.  The RW census therefore stands at `n = 28` for
-`r = 0`; `r = 1, 2` only add constraints.  Obstruction H applies as always.
+one deeper, at every `n` and both `c`.  **UNSAT at every solved cell**, no SAT
+model anywhere:
+
+- `r = 0`, both `c`, `n = 16..30` — `rw_sat_scan.log` carries `n = 16..29`
+  (`c = 2` only at `n = 29`, where the 3600 s budget stopped the scan after
+  11796 s), `rw_sat_n29_c3.log` the `n = 29, c = 3` cell, and
+  `rw_sat_n30_20260903.log` both `n = 30` cells (10403 s and 13243 s).
+- `r = 1, 2`, both `c`, `n = 6..30` — `rw_sat_r_grid_20260903.log` carries
+  `n = 6..29` less the `n = 29, r = 2, c = 3` cell (budget stop at 12747 s),
+  which is in `gap_29_2_3.log`; the four `n = 30` cells are in `gap_30_*.log`
+  (20478 s to 27975 s).
+
+**The RW census therefore stands at `n = 30`, for `r = 0, 1, 2` and both `c`.**
+(Corrected 2026-09-05: this section previously said `n = 28` for `r = 0`, which
+predated the `n = 29`/`n = 30` logs above.  Do not re-cite the `n = 28` figure.
+Separately, do not conflate this with the *exhaustive* population result
+`|H_r(n)| = 0` for `n = 1..16` in `RESULTS-RW-TERMINAL-DEFECT-H-POPULATION.md`:
+that is a weaker, necessary-only statement over a different, smaller range.)
+Obstruction H applies as always: this is a bounded horizon, not an all-`n`
+proof.
 
 ## 13. Round-3 screening results (`backlog_screen_r3_20260902.log`)
 

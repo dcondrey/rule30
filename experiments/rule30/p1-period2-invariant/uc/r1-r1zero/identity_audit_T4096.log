@@ -1,0 +1,48 @@
+identity audit  T=4096 max_period=512
+columns: drive | |Z| | I-violations(all t) | I-violations(t in Z) | r|Z ep | l|Z ep | l ep
+  0      pre=0 |Z|= 4096 I_all= 2081/4096 I_Z= 2080/4096 rZ=(1, 0) lZ=None l=None
+  0      pre=8 |Z|= 4092 I_all= 1976/4096 I_Z= 1976/4092 rZ=(1, 3) lZ=None l=None
+  01     pre=0 |Z|= 2048 I_all= 2003/4096 I_Z=  967/2048 rZ=None lZ=None l=None
+  01     pre=8 |Z|= 2048 I_all= 2005/4096 I_Z=  971/2048 rZ=None lZ=None l=None
+  001    pre=0 |Z|= 2731 I_all= 2059/4096 I_Z= 1359/2731 rZ=(14, 197) lZ=None l=None
+  001    pre=8 |Z|= 2729 I_all= 2032/4096 I_Z= 1364/2729 rZ=(14, 167) lZ=None l=None
+  011    pre=0 |Z|= 1365 I_all= 2042/4096 I_Z=  698/1365 rZ=None lZ=None l=None
+  011    pre=8 |Z|= 1366 I_all= 2027/4096 I_Z=  696/1366 rZ=None lZ=None l=None
+  0001   pre=0 |Z|= 3072 I_all= 2064/4096 I_Z= 1562/3072 rZ=(3, 1) lZ=None l=None
+  0001   pre=8 |Z|= 3070 I_all= 2064/4096 I_Z= 1565/3070 rZ=(3, 143) lZ=None l=None
+  0011   pre=0 |Z|= 2048 I_all= 2029/4096 I_Z=  987/2048 rZ=(1, 0) lZ=None l=None
+  0011   pre=8 |Z|= 2048 I_all= 2023/4096 I_Z=  986/2048 rZ=(1, 3) lZ=None l=None
+  0111   pre=0 |Z|= 1024 I_all= 2008/4096 I_Z=  502/1024 rZ=(1, 0) lZ=None l=None
+  0111   pre=8 |Z|= 1026 I_all= 2005/4096 I_Z=  503/1026 rZ=(1, 9) lZ=None l=None
+  00001  pre=0 |Z|= 3277 I_all= 2050/4096 I_Z= 1644/3277 rZ=None lZ=None l=None
+  00001  pre=8 |Z|= 3275 I_all= 2038/4096 I_Z= 1650/3275 rZ=None lZ=None l=None
+  00011  pre=0 |Z|= 2458 I_all= 2041/4096 I_Z= 1230/2458 rZ=None lZ=None l=None
+  00011  pre=8 |Z|= 2457 I_all= 2115/4096 I_Z= 1261/2457 rZ=None lZ=None l=None
+  00101  pre=0 |Z|= 2458 I_all= 2077/4096 I_Z= 1210/2458 rZ=None lZ=None l=None
+  00101  pre=8 |Z|= 2457 I_all= 2129/4096 I_Z= 1271/2457 rZ=None lZ=None l=None
+  00111  pre=0 |Z|= 1639 I_all= 2036/4096 I_Z=  841/1639 rZ=None lZ=None l=None
+  00111  pre=8 |Z|= 1639 I_all= 2031/4096 I_Z=  815/1639 rZ=None lZ=None l=None
+  01011  pre=0 |Z|= 1638 I_all= 2087/4096 I_Z=  824/1638 rZ=None lZ=None l=None
+  01011  pre=8 |Z|= 1639 I_all= 2068/4096 I_Z=  836/1639 rZ=None lZ=None l=None
+  01111  pre=0 |Z|=  819 I_all= 2013/4096 I_Z=  414/819 rZ=None lZ=None l=None
+  01111  pre=8 |Z|=  821 I_all= 2041/4096 I_Z=  397/821 rZ=None lZ=None l=None
+  000001 pre=0 |Z|= 3414 I_all= 2092/4096 I_Z= 1743/3414 rZ=None lZ=None l=None
+  000001 pre=8 |Z|= 3411 I_all= 2083/4096 I_Z= 1731/3411 rZ=None lZ=None l=None
+  000011 pre=0 |Z|= 2731 I_all= 2092/4096 I_Z= 1391/2731 rZ=None lZ=None l=None
+  000011 pre=8 |Z|= 2730 I_all= 2092/4096 I_Z= 1392/2730 rZ=None lZ=None l=None
+  000101 pre=0 |Z|= 2731 I_all= 2146/4096 I_Z= 1429/2731 rZ=None lZ=None l=None
+  000101 pre=8 |Z|= 2730 I_all= 2025/4096 I_Z= 1336/2730 rZ=None lZ=None l=None
+  000111 pre=0 |Z|= 2048 I_all= 2085/4096 I_Z= 1037/2048 rZ=None lZ=None l=None
+  000111 pre=8 |Z|= 2049 I_all= 2010/4096 I_Z= 1022/2049 rZ=None lZ=None l=None
+  001011 pre=0 |Z|= 2048 I_all= 2023/4096 I_Z= 1009/2048 rZ=None lZ=None l=None
+  001011 pre=8 |Z|= 2048 I_all= 2059/4096 I_Z=  985/2048 rZ=None lZ=None l=None
+  001101 pre=0 |Z|= 2048 I_all= 2044/4096 I_Z= 1022/2048 rZ=None lZ=None l=None
+  001101 pre=8 |Z|= 2048 I_all= 2060/4096 I_Z= 1031/2048 rZ=None lZ=None l=None
+  001111 pre=0 |Z|= 1365 I_all= 2033/4096 I_Z=  674/1365 rZ=None lZ=None l=None
+  001111 pre=8 |Z|= 1367 I_all= 2052/4096 I_Z=  692/1367 rZ=None lZ=None l=None
+  010111 pre=0 |Z|= 1365 I_all= 2053/4096 I_Z=  660/1365 rZ=None lZ=None l=None
+  010111 pre=8 |Z|= 1367 I_all= 2061/4096 I_Z=  682/1367 rZ=None lZ=None l=None
+  011111 pre=0 |Z|=  682 I_all= 2057/4096 I_Z=  343/682 rZ=None lZ=None l=None
+  011111 pre=8 |Z|=  685 I_all= 2009/4096 I_Z=  353/685 rZ=None lZ=None l=None
+CONTROL true lone-seed diagram (l, c, r from one configuration): I-violations 0/4096
+TOTALS over 44 drives: r|Z periodic 10, l|Z periodic 0, l periodic 0, drives satisfying identity I everywhere: 0

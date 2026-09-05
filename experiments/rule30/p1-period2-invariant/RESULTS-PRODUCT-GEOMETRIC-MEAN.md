@@ -191,9 +191,15 @@ neither was substituted for the other.
 
 Extinction occurs strictly inside the `n+2` horizon in every cell, minimum
 margin `5` (at `n=12`), and the per-`n` minimum margin grows: `5, 5, 6, 8, 8, 8,
-8, 8, 7, 10, 9, 10`. Reported as measured; scoring against the E1-E5
-preregistration is not done here, and `RESULTS-EXTINCTION-MARGIN.md` is owned by
-another session and was not touched.
+8, 8, 7, 10, 9, 10`. Reported as measured; `RESULTS-EXTINCTION-MARGIN.md` is
+owned by another session and was not touched.
+
+**Corrected 2026-09-05:** this paragraph originally said "scoring against the
+E1-E5 preregistration is not done here", which implies a preregistration is
+pending. **There is no E1-E5 preregistration** — `TASKLIST-20260904-R1.md:74-78`
+defines E1-E5 as audit/re-derivation tasks with no metric or kill condition. The
+margin table is descriptive, un-preregistered data and must not be reported as a
+passed test. See `RESULTS-EXTINCTION-MARGIN-AUDIT.md`.
 
 ## Provenance — every row verified against code this session
 
