@@ -82,6 +82,23 @@ def main():
     mr = sum(1 for t in range(T + 1) if rr[t] != rc[t])
     ml = sum(1 for t in range(T + 1) if ll[t] != lc[t])
     ib = sum(1 for t in range(T) if cc[t + 1] != (ll[t] ^ (cc[t] | rr[t])))
+    # Control C: what identity I actually tests.  Both models use zero initial data
+    # off the origin, so c determines l and r outright; I holds iff c is the centre
+    # column of the diagram grown from (..0, c_0, 0..).  Only two such c exist.
+    def viol(cc):
+        a = [(row >> 1) & 1 for row in driven_rhp(cc, T)]
+        b = [(row >> 1) & 1 for row in driven_lhp(cc, T)]
+        return sum(1 for t in range(T) if cc[t + 1] != (b[t] ^ (cc[t] | a[t])))
+    zero = viol([0] * (T + 3))
+    flips = []
+    for pos in (100, 3000, 4000):
+        d = list(cc)
+        d[pos] ^= 1
+        flips.append((pos, viol(d)))
+    out.append(f"CONTROL C all-zero drive c = 0^inf (the other admissible centre "
+               f"column): I-violations {zero}/{T}")
+    out.append("CONTROL C true centre column with ONE bit flipped: "
+               + ", ".join(f"t={pos} -> {v}/{T}" for pos, v in flips))
     out.append(f"CONTROL B driven models fed the TRUE centre column: "
                f"driven_rhp vs true r mismatches {mr}/{T + 1}, "
                f"driven_lhp vs true l mismatches {ml}/{T + 1}, "

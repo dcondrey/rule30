@@ -34,9 +34,8 @@ half-plane `x >= 1` from the drive; `driven_lhp` builds the left half-plane
 fiat (`nxt = (nxt & ~1) | ct1` in both, `r1zero_lib.py`), so the rule instance at
 `x = 0` -- the only thing that couples `l` to `r` -- is enforced in neither.
 
-But that is not because the models are wrong. Fed a **realizable** drive they are
-exactly faithful and the identity is restored. Control B, `T = 4096`, drive = the
-true lone-seed centre column:
+But that is not because the models are wrong. Fed the true centre column they are
+exactly faithful and the identity is restored. Control B, `T = 4096`:
 
 | | mismatches |
 |---|---|
@@ -44,25 +43,40 @@ true lone-seed centre column:
 | `driven_lhp(true c)` against the true diagram's `l` | **0 / 4097** |
 | identity I on that same driven **pair** | **0 / 4096 violations** |
 
-So identity I holding across the driven pair is exactly a **realizability test on
-the drive**. Measured over all 44 (word, prefix) drives the original script uses:
+So identity I is not a weak coupling check. Both models use **zero initial data
+off the origin**, so the drive `c` determines `l` and `r` outright, and if I held
+at every `t` the glued row `driven_lhp ++ c_t ++ driven_rhp` would satisfy the
+rule at every `x` -- a genuine diagram grown from `(.. 0, c_0, 0 ..)`. Evolution
+from that row is deterministic, so **identity I holds iff `c` is that diagram's
+own centre column**, and there are exactly two such `c`: `0^inf` (from `c_0 = 0`)
+and the true lone-seed column (from `c_0 = 1`). Control C confirms both ends:
+
+| drive | I-violations / 4096 |
+|---|---|
+| true lone-seed centre column | **0** |
+| `c = 0^inf`, the other admissible column | **0** |
+| true column, one bit flipped at `t = 100` | 477 |
+| true column, one bit flipped at `t = 3000` | 158 |
+| true column, one bit flipped at `t = 4000` | 18 |
+
+A single flipped bit breaks it. The test is equality to the true centre column,
+nothing weaker.
+
+Measured over all 44 (word, prefix) drives the original script uses:
 
 | | value |
 |---|---|
 | drives satisfying identity I at every `t` | **0 / 44** |
 | typical I-violation rate | ~2000 / 4096, i.e. ~50%, coin-flip |
 | control A: identity I on the true lone-seed diagram | **0 violations / 4096** |
-| control B: identity I on the driven pair fed the true centre column | **0 violations / 4096** |
+| control B: driven pair fed the true centre column | **0 violations / 4096** |
 
-Every one of the 44 drives is a periodic word that is **not the centre column of
-any diagram**, so the `r` and the `l` it produces belong to no common
-configuration and no identity relates them. The flag's premise fails before
-either of its candidate explanations is reached.
-
-(Realizability failing for these particular short periodic words is not itself
-news -- eventual period 1 is already proved out, and periods 2..6 are far inside
-every finite check on record. The point is that it is the *whole* content of the
-flagged 10-vs-0 split.)
+**This is what makes the flag's premise fail, and it has nothing to do with
+periodicity.** None of the 44 drives *is* the true centre column -- they are
+periodic words with periods 1 to 6, chosen precisely because they are not -- so
+no identity relates the `l` from one run to the `r` from the other. The 0/44 is
+forced, expected, and carries no information about `l`. Comparing it against the
+10/44 was comparing a measurement to a constant.
 
 ## The length-matched column, which also rules out explanation 2
 

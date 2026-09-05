@@ -45,5 +45,7 @@ columns: drive | |Z| | I-violations(all t) | I-violations(t in Z) | r|Z ep | l|Z
   011111 pre=0 |Z|=  682 I_all= 2057/4096 I_Z=  343/682 rZ=None lZ=None l=None
   011111 pre=8 |Z|=  685 I_all= 2009/4096 I_Z=  353/685 rZ=None lZ=None l=None
 CONTROL A true lone-seed diagram (l, c, r from one configuration): I-violations 0/4096
+CONTROL C all-zero drive c = 0^inf (the other admissible centre column): I-violations 0/4096
+CONTROL C true centre column with ONE bit flipped: t=100 -> 477/4096, t=3000 -> 158/4096, t=4000 -> 18/4096
 CONTROL B driven models fed the TRUE centre column: driven_rhp vs true r mismatches 0/4097, driven_lhp vs true l mismatches 0/4097, identity I on that driven pair 0/4096 violations
 TOTALS over 44 drives: r|Z periodic 10, l|Z periodic 0, l periodic 0, drives satisfying identity I everywhere: 0
