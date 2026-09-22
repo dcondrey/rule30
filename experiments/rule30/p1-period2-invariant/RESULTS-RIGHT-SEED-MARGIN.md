@@ -127,7 +127,7 @@ traces. The pre-registered bound `2 log2 M + 8` was loose by that reading; `log2
 the right null.
 
 Extension (2026-09-17, `forward-boundary/strengthen/strengthen_1.log`, `strengthen_2.log`,
-subagent runs re-read here). Width 18 at `M = 4096`: 126,762 distinct traces, maximum 28
+delegated runs re-read here). Width 18 at `M = 4096`: 126,762 distinct traces, maximum 28
 against a fair-coin expected maximum of 28.3 (`log2(NM) = 29.0`), tail run 17. Width 20 at
 `M = 2048`: 505,964 distinct traces, maximum 26 against an expected 29.3 (`log2(NM) = 30.0`),
 the probability of a fair-coin maximum at or below 26 being 0.022, tail run 21. Width 16 at
@@ -383,7 +383,7 @@ traces, and not the true traces, makes the reconstructed row's zero runs longer 
 real, section 6 and `RESULTS-R-STRUCTURE.md`) does not translate into deeper runs. The
 right trace is not chaotic near the wall over the horizon seen: it is a period-5 word with
 sparse defects, and the archive's picture of two chaotic sequences compared at the centre
-(`NEXT-SESSION-PROMPT-20260916.md`, stop rule) is wrong for the right half at width 16 and
+(from the standing stop rule for this thread) is wrong for the right half at width 16 and
 `t <= 4096`; what is chaotic is the timing and shape of the defects. And there exist seeds
 whose trace is provably periodic forever, for which `(PT2)` is a theorem. None of this bounds
 the free phase for a general seed; the defects are where the exterior's chaos reaches column

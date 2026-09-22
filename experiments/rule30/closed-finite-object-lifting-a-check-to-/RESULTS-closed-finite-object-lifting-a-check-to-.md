@@ -142,9 +142,9 @@ The verification script `test_preconditions.py` executed three automated control
 ## 4. Artifacts and Reproduction
 
 All scripts, certificates, and logs are contained strictly within `experiments/rule30/closed-finite-object-lifting-a-check-to-/`:
-- Audit Script: [`test_preconditions.py`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/closed-finite-object-lifting-a-check-to-/test_preconditions.py)
-- Machine Certificate: [`precondition-audit.json`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/closed-finite-object-lifting-a-check-to-/precondition-audit.json)
-- Execution Log: [`precondition-audit.log`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/closed-finite-object-lifting-a-check-to-/precondition-audit.log)
+- Audit Script: [`test_preconditions.py`](../../../experiments/rule30/closed-finite-object-lifting-a-check-to-/test_preconditions.py)
+- Machine Certificate: [`precondition-audit.json`](../../../experiments/rule30/closed-finite-object-lifting-a-check-to-/precondition-audit.json)
+- Execution Log: [`precondition-audit.log`](../../../experiments/rule30/closed-finite-object-lifting-a-check-to-/precondition-audit.log)
 
 Replay command:
 ```sh

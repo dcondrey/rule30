@@ -56,7 +56,7 @@ probability is exactly `13/32` at every `n >= 3`, and the companion
 exactly uniform on the 4 states, for every `n`, over all `4^n` sequences**
 (verified exactly with rational arithmetic, `n = 1..9`). That follows from a
 fact already on record — every four-symbol action is a *permutation*
-generating D8 (`CONTINUATION-PROMPT.md`, "carry contraction") — and a
+generating D8 (established previously, under "carry contraction") — and a
 permutation pushes uniform measure to uniform measure. So the state
 distribution is exactly uniform from the first step, and *every* event
 probability of this kind freezes to an exact rational determined by the
@@ -227,13 +227,13 @@ what this project has independently hit:
 The claim "every (class,symbol) pair reaches all 8 D8 successors,
 complete branching, 32/32", used in today's
 `PREREGISTRATION-ENDPOINT-ENERGY-INVARIANT.md` section 0 (and repeated
-into its results file), cites `CONTINUATION-PROMPT.md` lines 503-521. Those
-lines do **not** contain it; they record a related but distinct result
-(exact Farkas-style multiset obstructions for the four carry states, the
-eight D8 prefix actions, and D8-x-carry; plus "bounded D8 lookahead/action
-summaries: closure collisions"). The `32/32` figure appears in no file in
-this directory -- it is an unverified figure inherited from a prior
-session's chat summary, and the one `32/32` that IS in the files
+into its results file), cites prior notes (no longer in this directory)
+around lines 503-521. Those notes do **not** contain it; they record a
+related but distinct result (exact Farkas-style multiset obstructions for
+the four carry states, the eight D8 prefix actions, and D8-x-carry; plus
+"bounded D8 lookahead/action summaries: closure collisions"). The `32/32`
+figure appears in no file in this directory -- it is an unverified
+inherited figure, and the one `32/32` that IS in the files
 (`README.md:243`, `RESULTS-DIVERGENCE.md:204`) is an unrelated `F^2`
 truth-table control. Both documents have been annotated. The qualitative
 fact (bounded D8 observers are dead) stands on the cited source; the

@@ -193,7 +193,7 @@ collide at lengths 8, 9, 13) and Obstruction D.
 - Net: this closes the "compare the states across n" question the archaeology
   left open (§8.1, §11). The answer is negative. The p=2 needle remains a
   per-n exhaustive certificate; the cocycle template does not reach it here.
-- Next action (handoff, not a claim): with the state-family route closed, the
+- Next action (a recommendation, not a claim): with the state-family route closed, the
   cheapest remaining calibration on this thread is the Rule 90 carry-kernel
   control (archaeology §8.3). Any theorem here must route through the OR collapse
   `FORWARD[2]==FORWARD[3]` (only 3 distinct left-actions), which is vacuous under

@@ -5,7 +5,7 @@ Updated: 2026-09-03
 Status: **TOKEN-COMPRESSED SYNTHESIS.  THE NONCONSTANT PERIOD-TWO EXCLUSION
 AND P1 REMAIN OPEN.**
 
-This file is the shortest authoritative handoff for the active period-two
+This file is the shortest authoritative index for the active period-two
 work.  It is an index and logical audit, not a source for publication claims.
 Use the linked result reports for proofs, controls, and counterexamples.
 
@@ -293,6 +293,3 @@ a doubling sequence remains possible.
    to period two.
 7. Use `README.md` or `docs/rule30/EXPERIMENT-ATLAS.md` only to investigate a
    collision with older work.
-
-This order replaces the chronological 800-line continuation prompt for
-ordinary resumption.

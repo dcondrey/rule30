@@ -78,7 +78,7 @@ and it is exactly what the transfer matrix cannot see.
 
 ## 5. The structural reason no fixed-`w` certificate can work
 
-Verified this session against the source: `append_dependency_edge` recomputes
+Verified against the source: `append_dependency_edge` recomputes
 every array position from scratch on every call (appending 10 symbols rewrites
 all 20 earlier positions).  The recursion has **genuinely unbounded memory with
 no local mixing**.  A width-`w` transfer matrix is by construction a bounded-

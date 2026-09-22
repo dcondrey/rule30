@@ -32,17 +32,17 @@ re-propose under a new name: a fixed weighting `v` over the 8 D8 classes
 such that every individual `(class, symbol)` transition strictly decreases
 `v`-weighted energy. That is vacuous because every class reaches all 8
 successor classes ("complete branching"). **Citation correction
-(2026-09-04, after the fact):** this document originally cited
-`CONTINUATION-PROMPT.md` lines 503-521 for the "every (class,symbol) pair
-reaches all 8 successors, 32/32" figure. Those lines do NOT contain it —
+(2026-09-04, after the fact):** this document originally cited prior notes
+(no longer in this directory) for the "every (class,symbol) pair
+reaches all 8 successors, 32/32" figure. Those notes do NOT contain it —
 they record a related but distinct result (exact Farkas-style multiset
 obstructions to bounded-below additive edge costs on the four carry
 states, the eight D8 prefix actions, and D8-x-carry; plus "bounded D8
 lookahead/action summaries: closure collisions"). The specific 32/32
 complete-branching count appears in no file in this directory and is an
-unverified claim inherited from a prior session's chat summary. The
+unverified inherited claim. The
 qualitative fact it stands in for (bounded D8 observers are dead) IS
-supported by that citation; the numeric figure is not. Do not re-cite the
+supported by that source; the numeric figure is not. Do not re-cite the
 32/32 without recomputing it. Any Phi
 proposed here that reduces to a snapshot function of the *current* bounded
 D8/carry state, applied deterministically per step, is the same killed

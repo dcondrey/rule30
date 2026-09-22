@@ -1,6 +1,6 @@
-# Rule 90 filter applied to this session's machinery, and what the ladder's 4x ratio is
+# Rule 90 filter applied to the Fibonacci/fiber machinery, and what the ladder's 4x ratio is
 
-Session 2026-09-05. Two questions answered: how the Fibonacci/fiber apparatus
+Date: 2026-09-05. Two questions answered: how the Fibonacci/fiber apparatus
 maps to Rule 90, and whether the ladder automaton's state ratio approaching 4 is
 a trigger, an oscillation, or something else.
 

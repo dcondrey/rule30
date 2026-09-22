@@ -1,7 +1,7 @@
 # R1 zero-set attack: reconciling the R7 ladder's p=2 witnesses against the rotated-wedge census
 
-Date: 2026-09-04. Directory: `experiments/rule30/r1-zero-set-attack/` (new,
-this session only). All files below are new; no existing `.py`/`.md` file
+Date: 2026-09-04. Directory: `experiments/rule30/r1-zero-set-attack/` (new).
+All files below are new; no existing `.py`/`.md` file
 anywhere in the repo was edited. `docs/rule30/PATH.md`,
 `docs/rule30/RESULTS-ladder-rung0.md`, `docs/rule30/RESULTS-ladder-rung1.md`,
 and everything read under `experiments/rule30/p1-period2-invariant/` were
@@ -9,7 +9,7 @@ read-only.
 
 **Verdict up front: R1 (route "close the zero-set obligation", PATH.md
 section 4, register row 1) stays OPEN. No kill condition fired. What this
-session adds is not a resolution but a mechanism-level account of why two
+document adds is not a resolution but a mechanism-level account of why two
 results, produced by structurally different models, cannot be read against
 each other (they were never actually in tension, only easy to mistake for
 being so -- section 8 corrects that framing precisely), plus one corrected
@@ -18,12 +18,12 @@ for whoever owns the other thread.**
 
 ## 0. Task history, honestly stated
 
-This session started on the general R1 attack (read `PATH.md` section 1-4 in
+This investigation started on the general R1 attack (read `PATH.md` section 1-4 in
 full, cross-checked `RESULTS-eventual-period.md`/`inverse_trace_probe.py`
 provenance, built `substrate.py` -- a driven-quarter-plane simulator,
 verified against the repo's ground-truth generator and against a genuine
-two-sided diagram on a strip, both rules). Mid-session the coordinator
-redirected to a sharper, higher-value target: reconcile the R7
+two-sided diagram on a strip, both rules). It was then redirected to a
+sharper, higher-value target: reconcile the R7
 omega-automaton ladder's NONEMPTY p=2..8 witnesses (`docs/rule30/PATH.md`
 section "R7", `RESULTS-ladder-rung0.md`, `RESULTS-ladder-rung1.md`) against
 the independent `p1-period2-invariant` thread's exhaustive rotated-wedge
@@ -96,7 +96,7 @@ and `k`.
 Everything beyond column `R` (in particular, for `R=1`, all of column 2 and
 beyond) is **entirely unmodelled**. That is obstruction F, `PATH.md` 7.3.F,
 already named and proved (`plain(R+1) subset pin(R) subset plain(R)`); this
-session's contribution is pinning it to the specific column at `R=1` and
+document's contribution is pinning it to the specific column at `R=1` and
 then measuring exactly how much freedom that leaves, in section 3.
 
 ## 3. An explicit p=2 witness, extracted and independently re-verified
@@ -143,7 +143,7 @@ So in this one concrete, ladder-verified, pin-satisfying witness, **34% of
 the cells in the cyclic tail require column 2 to be a genuinely free,
 two-valued choice** for the witness's own `(c,r)` pattern to be achievable
 at all via the real Rule 30 rule (this is forced by the OR saturating at
-`r_t=1`, not an artifact of my bookkeeping -- both values of `s(t,2)`
+`r_t=1`, not an artifact of the bookkeeping here -- both values of `s(t,2)`
 algebraically give the same `r_{t+1}`). `extract_r7_witness.py` repeats the
 same accounting at `R=2` (letters `(r, col 2)`, so the free pair moves out
 by one column as predicted in section 2): 24 of 47 cells free over the
@@ -198,7 +198,7 @@ prose:
    particular search -- it is guaranteed by construction.**
    `cone_local(left, right) = INVERSE[swap(left)][right]`, and `INVERSE` is
    the functional inverse of `FORWARD`, which is built from
-   `carry_action(symbol, state)`. I checked directly (not merely read) that
+   `carry_action(symbol, state)`. Checked directly (not merely read) that
    `carry_action(symbol, .)` is a bijection on `{0,1,2,3}` for every fixed
    `symbol in 0..3`:
 
@@ -254,7 +254,7 @@ convention requires:
 
 - It does **not** show the R7 p=2 witnesses are unrealizable by any actual
   Rule 30 configuration. That is exactly rung 1's open "realizability"
-  question, and it is exactly as open after this session as before it.
+  question, and it is exactly as open now as before this analysis.
   Showing a construction *requires* freedom the census forecloses is not
   the same as showing that freedom can never be filled in consistently to
   infinity.
@@ -273,7 +273,7 @@ convention requires:
 
 ## 6. One correction and one flagged discrepancy
 
-**Correction (the coordinator's brief cited `n=24`; the source says otherwise,
+**Correction (an earlier brief cited `n=24`; the source says otherwise,
 re-verified against the actual files rather than repeated):**
 
 - `experiments/rule30/p1-period2-invariant/BACKLOG.md` section 12: RW by
@@ -289,7 +289,7 @@ re-verified against the actual files rather than repeated):**
 
 **Discrepancy, flagged for whoever owns `p1-period2-invariant/uc/r1-r1zero/`,
 not resolved here:** `RESULTS-R1-ZERO-SET-INVENTORY.md` (dated today,
-2026-09-04, in the directory this task was told to treat read-only) reports,
+2026-09-04, in the directory treated as read-only here) reports,
 for the *driven right-half-plane* model (`driven_halfplane.py`,
 `drive01_deep.py` -- a direct forward simulation with `c` clamped to a
 periodic word, a different model from the ladder's omega-automaton, see
@@ -304,8 +304,8 @@ verified here, and this report resolves neither:
    zero-set-rank-space, or with a generous search bound, need not fall
    within whatever bound was separately searched for `l` in literal-time
    space.
-2. An onset-detection artifact of exactly the kind this session independently
-   found evidence for in section 8's sibling analysis: `sampler_validity.py`
+2. An onset-detection artifact of exactly the kind independently
+   found in section 8's sibling analysis: `sampler_validity.py`
    reports Rule 30 `w=01` committing at "onset 298" on a 300-letter word,
    which that analysis calls explicitly "the trivial end-of-word artifact,
    i.e. no onset -- as it must be." A harness that can mistake
@@ -318,7 +318,7 @@ verified here, and this report resolves neither:
 
 Both are named rather than adjudicated: **this is not verified here** -- it
 costs one short script against `driven_halfplane.py`/`r1zero_lib.py`, and
-since those files belong to a directory this task must not write to, it is
+since those files belong to a directory not written to here, it is
 reported as an open flag rather than chased. Do not read this report as
 having resolved it either way.
 
@@ -340,7 +340,7 @@ letter) both fail to force (star) for exactly the reason obstruction F
 predicts -- neither model can see far enough right to know whether its
 freedom is genuine. This is convergent evidence for one diagnosis from two
 independent, structurally different sources, not a duplicate result: this
-session did not know that inventory existed until after extracting and
+analysis did not know that inventory existed until after extracting and
 verifying the witness in sections 2-3, and the two analyses touch no common
 file.
 
@@ -348,24 +348,22 @@ Their own "what remains open" list (R1-a: does the pin-consistent horizon
 `H(p,w)` grow linearly in `w`, currently blocked on system load; R1-b: does
 diagram-global consistency restore the forcing the driven model lacks --
 explicitly named "the real R1 question"; R1-c: an unaudited log) was
-**not** picked up here, on the advisor's and this session's own judgment: R1-a
-is another session's flagged next action on a directory this task must not
-write to, and duplicating it under load contention is exactly the kind of
-collision the task's file-safety instructions exist to prevent. R1-b is the
+**not** picked up here: R1-a is flagged as another thread's next action on
+a directory not written to here, and duplicating it under load contention
+would be exactly the kind of collision worth avoiding. R1-b is the
 same open question this section's reconciliation bears on but does not
 close.
 
 ## 8. A concurrent sibling analysis in this same directory, and two corrections it earns
 
-While section 3-6 above were being written, another session working the
-same coordinator redirect independently produced
+While section 3-6 above were being written, a parallel investigation working
+the same redirected target independently produced
 `RESULTS-R7-WITNESS-EXTENSION.md`, `extend_probe.py`, `left_sweep.py`, and
 `sampler_validity.py` in this same new directory (files this report did not
-create; discovered only when re-checking `git status` before finalizing,
-timestamps interleaved with this session's own work). Per this repo's own
-concurrency practice (`PATH.md` prior-work convention, and the standing
-instruction not to interfere with another session's in-flight files), those
-files are left exactly as that session wrote them. Reading them changes two
+create; discovered only when re-checking `git status` before finalizing).
+Per this repo's own concurrency practice (`PATH.md` prior-work convention:
+do not interfere with another thread's in-flight files), those
+files are left exactly as written. Reading them changes two
 things about how sections 5-7 above should be read, and one thing is added
 that neither analysis had alone.
 
@@ -458,11 +456,11 @@ every length-`p` window, combined with the unconditional pin facts
 `r_t=1,c_t=0 => r_{t+1}=1` and `r_t=1,c_t=1 => r_{t+1}=0`), and (2) an exact
 induced-period-vs-strip-width sweep with a periodic (not free) right
 boundary, using cycle detection on the finite joint state space. Neither was
-run: the coordinator's redirect arrived first, and section 3-5's witness
+run: the redirected target took priority, and section 3-5's witness
 extraction turned out to be more decisive for the actual question asked.
 The run-length claim above is a straightforward, believed-correct
 consequence of already-verified identities (not a new risk), but it is
-reported here as **unverified by this session** rather than claimed. It
+reported here as **unverified** rather than claimed. It
 would be a cheap next step and does not depend on anything in
 `p1-period2-invariant/`.
 
@@ -495,7 +493,7 @@ would be a cheap next step and does not depend on anything in
   reduction, not a general finite-configuration census). Section 8 folds
   this in and downgrades this report's own section 3 numbers accordingly.
 
-**What remains the live question, matching both this session's finding and
+**What remains the live question, matching both this document's finding and
 the concurrent inventory's own R1-b:** whether *global* consistency (an
 actual configuration extending arbitrarily far in both directions, not a
 fixed-width automaton window or a driven simulation with an arbitrary

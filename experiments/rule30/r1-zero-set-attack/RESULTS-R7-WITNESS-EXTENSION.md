@@ -1,8 +1,7 @@
 # R7/R1 reconciliation: the per-witness extension test is not a valid instrument
 
 Date: 2026-09-05.  Code: `extend_probe.py`, `left_sweep.py`,
-`sampler_validity.py` (this directory).  Modal: $0.  Paid model-provider
-calls: $0.  Nothing committed.
+`sampler_validity.py` (this directory).  Nothing committed.
 
 Status: **clean negative, with the control that establishes it.**  No theorem.
 `Thm(2)` is not proved, not disproved, and not moved.  What is settled is a
@@ -51,7 +50,7 @@ collapsed into that one figure:
   (`BACKLOG.md:216`, verified directly).
 * The `gamma(n)` benchmark: a third object again, now at `n = 28` for `c = 2`.
 
-A concurrent session's agent independently caught the same misquote.  None of
+A parallel investigation independently caught the same misquote.  None of
 this changes section 0's argument, which is about *what kind of statement*
 `|H_r(n)| = 0` is, not how far it reaches.
 
@@ -93,7 +92,7 @@ completes the free cells by random choice, and on the true Rule 30 lone-seed
 word — which extends rightward forever by construction — it reaches only
 `x = R+1` before the pin fails at the next column.  It fails its own control.
 The free space at each column is exponential and random completion does not
-search it.  Recorded so a later session does not read a right-side number out
+search it.  Recorded so a future reader does not read a right-side number out
 of `extend_probe.py` and believe it.
 
 ## 3. Measured: sampled `p = 2` witnesses die at the first unmodelled column
@@ -291,7 +290,7 @@ parameters at all, and that is the problem, not a missing clause.
 * No claim that `|H_r(n)| = 0` and the ladder's NONEMPTY conflict; section 0
   says they do not.
 
-## 8. For the next session
+## 8. Remaining open items and what not to retry
 
 * **Do not re-run the per-witness extension test.**  Section 4 is its kill
   condition, fired.  A better sampler does not repair it: the object needed is a

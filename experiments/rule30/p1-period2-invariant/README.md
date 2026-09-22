@@ -92,7 +92,6 @@ Use this routing table:
 | Moving endpoint-flip cocycle | `RESULTS-ENDPOINT-FLIP-COCYCLE.md`; `endpoint_flip_cocycle.py` |
 | Single-flip pairing on RW survivor levels (killed); block halving and the counting constant `C = 3` | `RESULTS-FLIP-PAIRING.md`; `flip_pairing.py`; `block_halving.py` |
 | Evolutionary rank-zero witness search | `docs/rule30/RESULTS-openevolve-p1-rank-zero.md`; `experiments/openevolve-p1-rank-zero/` |
-| Start a fresh research session without rederiving history | `CONTINUATION-PROMPT.md` |
 | Audit search design before interpreting a result | Matching `PREREGISTRATION*.md` only |
 
 ## Canonical exact map

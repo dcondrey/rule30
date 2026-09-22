@@ -1,7 +1,7 @@
 # Fringe-framework attack on P1/P2/P3: four arms assessed
 
-Executed directly (fork agents cannot spawn subagents).  `deg f_t = 2t-1` was
-accepted as instructed and never re-verified; zero compute spent on it.
+`deg f_t = 2t-1` was
+accepted as given and never re-verified; zero compute spent on it.
 
 ## Verdict up front
 
@@ -142,4 +142,3 @@ the table says so rather than extrapolating.
 
 Reproduce: `uv run --no-project python algebraic_immunity.py 5` (seconds);
 `t=6..8` via `algebraic_immunity(t)` directly.
-Modal: $0.  Paid model-provider calls: $0.

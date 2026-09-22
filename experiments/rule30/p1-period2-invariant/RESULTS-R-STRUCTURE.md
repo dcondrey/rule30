@@ -5,7 +5,7 @@ runs). Scripts `r-structure/r_structure.py` (log `r_structure.log`, record
 `r_structure.json`; S1, S2, S3 and a supplementary null `null_bt`), `r-structure/r_structure_null.py`
 (log `r_structure_null.log`, record `r_structure_null.json`; the count-matched null seeded
 with `R` through length 13). Theory panel `r-structure/theory/attempt-*.md` with one refuter
-each (`refute-*.md`). All exit 0. Item 2 of `NEXT-SESSION-PROMPT-20260916.md`.
+each (`refute-*.md`). All exit 0. Item 2 of the standing task list for this thread.
 
 **`[C]` `h(R) <= log2 lambda_60 = 0.124` bits per symbol: the topological entropy of the trace
 subshift is bounded by the spectral radius of the shift of finite type avoiding the 4,189
@@ -140,9 +140,8 @@ structural signal, the pumpability of 13 percent of its forbidden factors, and n
 its follower-set counts. Nothing here is a mechanism: no rule generates the MFFs, no proof
 bounds `h(R)` below the SFT value or shows it is zero, and no argument decides soficity.
 Together with the margin result (the reconstructed row's zero runs are a fair coin whatever
-the trace measure) this closes item 2 of the prompt with "no mechanism", and the stop rule
-of `NEXT-SESSION-PROMPT-20260916.md` applies: the deliverable is the position paper, not
-item 3.
+the trace measure) this closes item 2 with "no mechanism", and the standing stop rule
+applies: the deliverable is the position paper, not item 3.
 
 ## 6. Scope
 

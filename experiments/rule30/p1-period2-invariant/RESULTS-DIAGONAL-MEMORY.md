@@ -111,7 +111,7 @@ Two honesty notes, both load bearing:
   the whole word.  `RESULTS-RW-LINEAR-SLACK.md` 9.2 measured survival, not a
   single cell, and is not contradicted.
 - **This is not new as an observation.**  It is fact (1) of
-  `uc/r1-entropy/lightcone_check.py` (concurrent session), "`T[u][d]` depends on
+  `uc/r1-entropy/lightcone_check.py` (a parallel investigation), "`T[u][d]` depends on
   `e_j` only if `j >= (u-d-1)/2`", zero failures for `u = 2..12`.  The two
   differ by at most one from index conventions.  What is new here is the exact
   least-`k` form, the proof at all lengths, and the seed statement of section 2.

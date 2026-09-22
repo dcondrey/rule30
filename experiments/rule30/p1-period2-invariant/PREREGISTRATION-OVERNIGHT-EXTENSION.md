@@ -47,9 +47,9 @@ the tested range, not merely fail to support it.
 
 **P3 (extinction margin).** The margin stays `>= 1` (strictly positive) at
 every `n`, and most likely stays near 8. **Kill:** if the margin decreases
-monotonically toward 0 across `n = 17..22`, the concurrent session's
-"bounded below" hope is empirically dying and should be reported as such,
-not smoothed over.
+monotonically toward 0 across `n = 17..22`, the "bounded below" hope of the
+parallel investigation tracking this quantity is empirically dying and
+should be reported as such, not smoothed over.
 
 **P4 (product margin).** The geometric mean of post-departure `D` ratios
 stays below `1/phi = 0.618`. **Kill:** any `n` with geometric mean `>=

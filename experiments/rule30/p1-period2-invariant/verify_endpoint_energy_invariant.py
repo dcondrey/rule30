@@ -9,7 +9,7 @@ unmodified and adds new logging/analysis on top.
 D8-class extraction (step 1): reuses, without modification, the exact
 FIBER_PERMUTATIONS construction already used and already killed as a
 per-step observer in constant_tail_frontier_graph.py ("path_monodromy",
-lines ~162-170) and named in CONTINUATION-PROMPT.md lines 503-521 ("the
+lines ~162-170) and named in prior working notes ("the
 eight D8 prefix actions ... tested as deterministic weighted observers").
 That construction is:
 
@@ -30,7 +30,7 @@ level j, already computed by flip_pairing.census, completely unmodified).
 sigma_j(w) is defined as the accumulated D8 group element after composing
 in cells[w][0..j] in order, mapped to an index 0..7 via the fixed ordering
 of EXPECTED_FIBER_GROUP. This is "the current D8 class of the forced step"
-named in BACKLOG item 4 / CONTINUATION-PROMPT's killed weighted-potential
+named in BACKLOG item 4 and the prior working notes' killed weighted-potential
 paragraph, applied here as a *running-sum* input rather than a per-step
 snapshot bound, per section 3b of the preregistration.
 """

@@ -191,8 +191,8 @@ neither was substituted for the other.
 
 Extinction occurs strictly inside the `n+2` horizon in every cell, minimum
 margin `5` (at `n=12`), and the per-`n` minimum margin grows: `5, 5, 6, 8, 8, 8,
-8, 8, 7, 10, 9, 10`. Reported as measured; `RESULTS-EXTINCTION-MARGIN.md` is
-owned by another session and was not touched.
+8, 8, 7, 10, 9, 10`. Reported as measured; `RESULTS-EXTINCTION-MARGIN.md`
+belongs to a parallel investigation and was not touched.
 
 **Corrected 2026-09-05:** this paragraph originally said "scoring against the
 E1-E5 preregistration is not done here", which implies a preregistration is
@@ -201,14 +201,14 @@ defines E1-E5 as audit/re-derivation tasks with no metric or kill condition. The
 margin table is descriptive, un-preregistered data and must not be reported as a
 passed test. See `RESULTS-EXTINCTION-MARGIN-AUDIT.md`.
 
-## Provenance — every row verified against code this session
+## Provenance — every row verified against code
 
 - `n = 17..24`, both tails: `D` **and** `S` rows read from
   `overnight_c{2,3}_{odd,even}.log`. `overnight_census.py` was opened and
   confirmed to call the real `late_pull_diagonal_sat.literal_extension` at
   `rows = n+4`, with a prefix-consistency control, and to define `D`/`S`
   identically to `verify_distinct_continuations.py`. Not taken from a summary.
-- `n = 10..16`: **recomputed this session**, not transcribed from the table in
+- `n = 10..16`: **recomputed here**, not transcribed from the table in
   `RESULTS-DISTINCT-CONTINUATION-COUNT.md`. `verify_distinct_continuations.py`
   was run over `n = 10,12,14,16`; path A (`literal_extension`) and path B
   (`forced_orbit`, a genuinely different forcing rule) **agree exactly in all 8
@@ -217,7 +217,7 @@ passed test. See `RESULTS-EXTINCTION-MARGIN-AUDIT.md`.
   come from the same function that produced the logs.
 - No new tree walker was written and `domination_test.py` was not extended: its
   walker recomputes what these logs already hold, and the box was carrying
-  another session's 1.32 GB job.
+  a parallel job's 1.32 GB footprint.
 
 ## Status and what this does not license
 
@@ -233,7 +233,7 @@ passed test. See `RESULTS-EXTINCTION-MARGIN-AUDIT.md`.
 ## Note on a stale line in another document
 
 `RESULTS-SPECTRAL-TO-R1-R7-MAPPING.md`, closing section, still reads "the bulk
-is fine, the obstruction is the small-`S_k` tail". That is correction 6 in
-`OVERNIGHT-HANDOFF-20260905.md` — withdrawn, because domination violations reach
-`S_k = 255`. Flagged here rather than by editing that file, which another
-session may hold.
+is fine, the obstruction is the small-`S_k` tail". That framing was already
+withdrawn elsewhere, because domination violations reach `S_k = 255`. Flagged
+here rather than by editing that file, which a parallel investigation may
+hold.

@@ -1,6 +1,6 @@
-# The Fibonacci/fiber decomposition unifies this session's three kills into one obstruction
+# The Fibonacci/fiber decomposition unifies three kills into one obstruction
 
-Session 2026-09-05. This is a **synthesis of results already on record plus one
+Date: 2026-09-05. This is a **synthesis of results already on record plus one
 new exact identification**; it is not a new proof, and the individual kills it
 connects were each established separately (and are cited below). Labelled as
 synthesis so it is not later mis-cited as a discovery.
@@ -62,7 +62,7 @@ model": it is the same transfer matrix with the equidistribution factor set to
 Everything that failed, failed at the *fiber* factor, never at the Fibonacci
 factor:
 
-1. **Width-`w` window relaxation** (this session): drops the fiber factor
+1. **Width-`w` window relaxation**: drops the fiber factor
    entirely -> `phi`. Vacuous at every `w`.
 2. **`Psi_k` equidistribution** (`MEMO-PHI-OVER-4-FIRST-MOMENT.md:64-79`):
    the fiber factor is *false as stated*. Max fiber stabilises at a small
@@ -72,7 +72,7 @@ factor:
 3. **Entrywise domination** (`RESULTS-TRANSFER-DOMINATION-CHECK.md:71-74`):
    asks whether the true weight is entrywise `<= M`. Fails; needs ~1.75x even
    at `N >= 100`, "giving effective eigenvalue ~0.71, not < 1/2".
-4. **Weighted domination** (scored this session,
+4. **Weighted domination** (scored via
    `domination_test_20260905.log`): fails for *every* weight vector, because a
    same-last-symbol `1 -> 1` step has weighted ratio exactly `w_s/w_s = 1`.
 

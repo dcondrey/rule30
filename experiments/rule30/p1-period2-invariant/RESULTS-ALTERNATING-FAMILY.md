@@ -144,7 +144,7 @@ only at `(a, b) = (1, 7)`, that word; the prepend law still fails at every
 
 ## 4. Reading
 
-The question this session posed was whether the reconstruction map has a
+The question posed here was whether the reconstruction map has a
 closed form on the alternating family with one defect, so that an induction
 on defects could carry a finite phase. The answer is: closed form with zero
 defects (section 2), no finite phase with one (section 3). The column does

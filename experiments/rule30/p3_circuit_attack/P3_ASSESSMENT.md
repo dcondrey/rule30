@@ -1,7 +1,7 @@
 # P3 circuit attack: assessment of the three proposed arms
 
-Executed directly (fork agents cannot spawn subagents).  The ANF degree
-theorem was accepted as instructed and **not** re-verified: `deg f_t = 2t-1`
+The ANF degree
+theorem was accepted as given and **not** re-verified: `deg f_t = 2t-1`
 for `t >= 3` with unique top monomial `M_t`, PROVED unconditionally in
 `docs/rule30/overnight/RESULTS-anf.md`.  Zero compute was spent on it.
 
@@ -104,6 +104,4 @@ That is the arm worth building; it was not built in this round.
   refutations are analytic and running searches would have produced numbers
   in support of a false hypothesis.
 * Sensitivity measurement is a five-line exact evolution, reproduced inline
-  in the command recorded in the session log.
-
-Modal: $0.  Paid model-provider calls: $0.
+  in the command recorded in the log.

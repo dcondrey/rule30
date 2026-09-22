@@ -1,12 +1,12 @@
-# Where this session's spectral work lands in the R1..R7 register: R7, not R1
+# Where the spectral work lands in the R1..R7 register: R7, not R1
 
-Session 2026-09-05. Every claim below is quoted from the file named, read this
-session, not carried over from a summary.
+Date: 2026-09-05. Every claim below is quoted from the file named, read
+directly, not carried over from a summary.
 
 ## Short answer
 
 **It maps to R7, tightly, and to R1 only through R7.** The de Bruijn/window
-construction is R7's own machinery, and the vacuity found this session is an
+construction is R7's own machinery, and the vacuity found here is an
 independent rediscovery of R7's already-recorded blocker on a different state
 space. It is **not** a new obstruction, and it says nothing directly about R1.
 
@@ -22,7 +22,7 @@ space. It is **not** a new obstruction, and it says nothing directly about R1.
 So a De Bruijn adjacency matrix over a sliding window is not an alternative to
 R7; it *is* R7's encoding.
 
-**2. The blocker is named, and the second half is exactly what I proved.**
+**2. The blocker is named, and the second half is exactly what is proved here.**
 `PATH.md:587` gives R7's status as STALLED with:
 
 > Blocker is a **state-count wall plus the free-boundary escape**, not compute.
@@ -41,8 +41,8 @@ rather than the ladder's columns).
 
 "Constraint and freedom growing together" is precisely the `w`-independence of
 `lambda_max = phi`: each extra window level adds a constraint *and* an extra
-free boundary cell, and they cancel exactly. R7 measured this; this session
-proved it for the RW window.
+free boundary cell, and they cancel exactly. R7 measured this; the result
+above proves it for the RW window.
 
 ## The number 4 is the same 4 in all four places
 
@@ -62,7 +62,7 @@ Converging to exactly **4**. That is the same 4 as:
 |---|---|
 | R7 ladder automaton | `4^R` states — the state-count wall |
 | Fibonacci/fiber bound | fiber factor `2^n/4^k` |
-| this session's relaxation | the free cell ranges over `4 = \|{(h,F)}\|` values |
+| the window relaxation | the free cell ranges over `4 = \|{(h,F)}\|` values |
 | null transfer matrix | `phi/4` — "uniform over 4 states, subject only to no-11" |
 
 **The state-count wall and the fiber factor are one quantity seen from two
@@ -92,12 +92,12 @@ every verdict stays NONEMPTY.
 So R1 is reachable from here only *through* R7 mode (ii). The Fibonacci/fiber
 apparatus does not touch R1 directly: it lives on the rotated wedge over words
 `{1,2}^n`, whereas R1 is about columns of the genuine lone-seed diagram. This
-session already recorded one instance of exactly that type mismatch —
+document already recorded one instance of exactly that type mismatch —
 `phi/4` (a rotated-wedge per-row survival eigenvalue) versus the zero-set
 density (measured **0.500362** at `T = 200000`) — and asserting a second one
 would repeat it.
 
-**What can honestly be said about R1:** the wall this session hit is the wall
+**What can honestly be said about R1:** the wall hit here is the wall
 mode (ii) would have to climb, since mode (ii) is an inclusion check on the same
 ladder automaton whose states grow `4^R`. That is evidence about the *cost* of
 mechanizing R1, not evidence about R1's truth.
@@ -111,7 +111,7 @@ mechanizing R1, not evidence about R1's truth.
 - **Do not spend compute on R7 mode (i).** Closed by a proved limitation
   theorem.
 - R7 mode (ii) is untouched but inherits the `4^R` wall.
-- The unblocked work remains where the previous handoff put it: **R1 directly**
+- The unblocked work remains where prior analysis put it: **R1 directly**
   (the general-finite-row zero-set obligation, A8), and the split argument
   identified in `RESULTS-FIB-FIBER-UNIFICATION.md`.
 
@@ -131,11 +131,11 @@ mechanizing R1, not evidence about R1's truth.
   slope separation (`log_phi(D_peak) ~ 0.398n` against `m' ~ 0.217n`, fitted
   `n <= 24`).
 
-## Correction to my own framing earlier this session
+## Correction to the earlier framing above
 
 `RESULTS-WINDOW-SPECTRAL-RELAXATION.md` presents the vacuity result as a kill of
 "the naive width-`w` window truncation". That stands, but it understated the
 prior art: the free-boundary escape was **already named as R7's blocker** in
-`PATH.md:587` before this session. The result is a proof of a mechanism that was
+`PATH.md:587` before this result. The result is a proof of a mechanism that was
 already recorded as measured. Logged here rather than by rewriting that file, so
 the sequence stays auditable.

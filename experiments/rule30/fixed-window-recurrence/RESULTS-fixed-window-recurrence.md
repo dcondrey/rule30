@@ -124,9 +124,9 @@ When evaluating affine recurrence $V_{k, j+\ell} \le (1-\eta) V_{k, j} + C 2^{-j
 
 ## 6. Reproduction and Provenance
 
-- Script: [`experiments/rule30/fixed-window-recurrence/verify_fixed_window.py`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/fixed-window-recurrence/verify_fixed_window.py)
-- Machine-checked Audit Record: [`experiments/rule30/fixed-window-recurrence/fixed-window-audit.json`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/fixed-window-recurrence/fixed-window-audit.json)
-- Execution Log: [`experiments/rule30/fixed-window-recurrence/fixed-window-audit.log`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/fixed-window-recurrence/fixed-window-audit.log)
+- Script: [`experiments/rule30/fixed-window-recurrence/verify_fixed_window.py`](../../../experiments/rule30/fixed-window-recurrence/verify_fixed_window.py)
+- Machine-checked Audit Record: [`experiments/rule30/fixed-window-recurrence/fixed-window-audit.json`](../../../experiments/rule30/fixed-window-recurrence/fixed-window-audit.json)
+- Execution Log: [`experiments/rule30/fixed-window-recurrence/fixed-window-audit.log`](../../../experiments/rule30/fixed-window-recurrence/fixed-window-audit.log)
 
 Run command:
 ```bash

@@ -16,36 +16,36 @@ $$\text{TARGET: For every initial length } r, \text{ some finite } B(r) \text{ b
 1. **Mechanism 1: Implication refuted by an explicit periodic or automatic family**  
    - *Test*: Verified explicit family or witness exhibited against a claimed monotonic quantity.  
    - *Audit Verdict*: **FIRES against raw ancestor counting and single-phase potentials.**  
-     - In [`RESULTS-fixed-origin-history-count.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/RESULTS-other/RESULTS-fixed-origin-history-count.md), the claim that ancestor cardinality $|C_r(\alpha)|$ strictly decreases at every repeat is refuted by explicit plateaus: $C_3(0) = C_3(00)$ (cardinality 8) and $C_6(101) = C_6(1011) = C_6(10111) = C_6(101110) = C_6(1011100)$ (cardinality 36; witnesses `wit-492e3375eb592326`, `wit-fc0bcfba0ef8eb08`, `wit-e9cace97f2379bac`, `wit-51a87a153dab3571`).  
-     - In [`RESULTS-repeat-budget-phase-reset.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/RESULTS-other/RESULTS-repeat-budget-phase-reset.md), the phase rank $\rho_q(w) = R - 1 - H_q(w)$ strictly decreases during constant runs, but resets to height 1 or 2 on switches and refills by elapsed time (witnesses `wit-e3fe219e92ed6081`, `wit-80621f30c6ab3db0`).
+     - In [`RESULTS-fixed-origin-history-count.md`](../../../docs/rule30/RESULTS-other/RESULTS-fixed-origin-history-count.md), the claim that ancestor cardinality $|C_r(\alpha)|$ strictly decreases at every repeat is refuted by explicit plateaus: $C_3(0) = C_3(00)$ (cardinality 8) and $C_6(101) = C_6(1011) = C_6(10111) = C_6(101110) = C_6(1011100)$ (cardinality 36; witnesses `wit-492e3375eb592326`, `wit-fc0bcfba0ef8eb08`, `wit-e9cace97f2379bac`, `wit-51a87a153dab3571`).  
+     - In [`RESULTS-repeat-budget-phase-reset.md`](../../../docs/rule30/RESULTS-other/RESULTS-repeat-budget-phase-reset.md), the phase rank $\rho_q(w) = R - 1 - H_q(w)$ strictly decreases during constant runs, but resets to height 1 or 2 on switches and refills by elapsed time (witnesses `wit-e3fe219e92ed6081`, `wit-80621f30c6ab3db0`).
 
 2. **Mechanism 2: Exclusion of a bounded-complexity family only**  
    - *Test*: Result covers only an isolated family with a parameter.  
    - *Audit Verdict*: **FIRES against capacity-restricted transfers.**  
-     - [`RESULTS-capacity17-mortality.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/RESULTS-other/RESULTS-capacity17-mortality.md) proves $B(K) \le 14$ for $Q_2 \le 17$ (13 patterns with $\le 1$ parameter). But for general length $r$, frontiers with $Q_2 \ge 18$ exist, where two-parameter families emerge and witnesses outlive the capacity-17 bound ($N = 35, D = 22$). Restricting to bounded capacity does not bound repeats across all legal frontiers of length $r$.
+     - [`RESULTS-capacity17-mortality.md`](../../../docs/rule30/RESULTS-other/RESULTS-capacity17-mortality.md) proves $B(K) \le 14$ for $Q_2 \le 17$ (13 patterns with $\le 1$ parameter). But for general length $r$, frontiers with $Q_2 \ge 18$ exist, where two-parameter families emerge and witnesses outlive the capacity-17 bound ($N = 35, D = 22$). Restricting to bounded capacity does not bound repeats across all legal frontiers of length $r$.
 
 3. **Mechanism 3: Sharp positive constant blocks a vanishing-rate certificate**  
    - *Test*: Bound is blocked by a strictly positive lower floor.  
    - *Audit Verdict*: **FIRES against contiguous and additive message relaxations.**  
-     - [`RESULTS-coupled-message-depth-audit.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/RESULTS-other/RESULTS-coupled-message-depth-audit.md): Contiguous-window messages of width 1, 2, 3 have global positive floors $5/64, 4^{-6}, 4^{-10}$ across all depths, blocking any $2^{-\epsilon D}$ decay certificate.  
-     - [`RESULTS-additive-message-obstruction.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/RESULTS-other/RESULTS-additive-message-obstruction.md): Any nonnegative additive message majorant has expectation $\ge 2^{-k-2b}$ under stationary mixing (witness `wit-f744af938a76c867`).
+     - [`RESULTS-coupled-message-depth-audit.md`](../../../docs/rule30/RESULTS-other/RESULTS-coupled-message-depth-audit.md): Contiguous-window messages of width 1, 2, 3 have global positive floors $5/64, 4^{-6}, 4^{-10}$ across all depths, blocking any $2^{-\epsilon D}$ decay certificate.  
+     - [`RESULTS-additive-message-obstruction.md`](../../../docs/rule30/RESULTS-other/RESULTS-additive-message-obstruction.md): Any nonnegative additive message majorant has expectation $\ge 2^{-k-2b}$ under stationary mixing (witness `wit-f744af938a76c867`).
 
 4. **Mechanism 4: Counting injection or matching fails to cover**  
    - *Test*: Injection fails to cover or collisions occur.  
    - *Audit Verdict*: **FIRES against hypercube and history-preserving injections.**  
-     - [`RESULTS-split-encoder-obstruction.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/RESULTS-other/RESULTS-split-encoder-obstruction.md): The dimension-$D_{11}$ coordinate cube claim fails at the $r=87$ testbed (dimension is exactly zero; witness `wit-50c12da40e2704ed`).  
-     - [`AUDIT-counting-route-scope.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/AUDIT/AUDIT-counting-route-scope.md) §1: History-preserving encodings $C_r(\alpha) \times \{0,1\}^D \to W_r$ cannot map into $C_r(\alpha)$ because $|C_r(\alpha) \times \{0,1\}^D| = G \cdot 2^D > G$.
+     - [`RESULTS-split-encoder-obstruction.md`](../../../docs/rule30/RESULTS-other/RESULTS-split-encoder-obstruction.md): The dimension-$D_{11}$ coordinate cube claim fails at the $r=87$ testbed (dimension is exactly zero; witness `wit-50c12da40e2704ed`).  
+     - [`AUDIT-counting-route-scope.md`](../../../docs/rule30/AUDIT/AUDIT-counting-route-scope.md) §1: History-preserving encodings $C_r(\alpha) \times \{0,1\}^D \to W_r$ cannot map into $C_r(\alpha)$ because $|C_r(\alpha) \times \{0,1\}^D| = G \cdot 2^D > G$.
 
 5. **Mechanism 5: Claim generalised from one instance fails at another**  
    - *Test*: Statement verified at some $n$ and false at others.  
    - *Audit Verdict*: **FIRES against single-visible-bit bounds.**  
-     - [`RESULTS-sparse-high-history-obstruction.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/RESULTS-other/RESULTS-sparse-high-history-obstruction.md): The conditional 1/8 information bound holds for $k=1$ visible original low bit, but fails at $k=2$ on explicit witness $r = 46735, w = 2^{17197} 0 2^{29537}$, with integer ratio $(|F_a| 2^{D/8}/2^r)^8 = 4 > 1$ (witnesses `wit-edce78fe556ee4ff`, `wit-0633872d899a1756`, `wit-f9660bdca0d15d7b`).
+     - [`RESULTS-sparse-high-history-obstruction.md`](../../../docs/rule30/RESULTS-other/RESULTS-sparse-high-history-obstruction.md): The conditional 1/8 information bound holds for $k=1$ visible original low bit, but fails at $k=2$ on explicit witness $r = 46735, w = 2^{17197} 0 2^{29537}$, with integer ratio $(|F_a| 2^{D/8}/2^r)^8 = 4 > 1$ (witnesses `wit-edce78fe556ee4ff`, `wit-0633872d899a1756`, `wit-f9660bdca0d15d7b`).
 
 ---
 
 ## 1. Machine-Checked Reproduction of Required Controls
 
-The required controls were verified by direct execution of [`verify_repeat_budget.py`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/bound-total-repeats-using-ordered-histor/verify_repeat_budget.py) against `panel/cert33.py`:
+The required controls were verified by direct execution of [`verify_repeat_budget.py`](../../../experiments/rule30/bound-total-repeats-using-ordered-histor/verify_repeat_budget.py) against `panel/cert33.py`:
 
 1. **Control 1 ($r = 3$ Minimal Repeat Plateau):**  
    All 32 legal length-3 starts were tested. Exactly 8 survive tape `0`, and all 8 survive tape `00`:
@@ -67,7 +67,7 @@ The required controls were verified by direct execution of [`verify_repeat_budge
 ## 2. Mathematical Relations and the Doubling Horizon
 
 ### A. The Doubling Inequality
-From [`RESULTS-repeat-budget-lower-bound.md`](file:///Volumes/A/researchpapers/13-rule30/docs/rule30/RESULTS-other/RESULTS-repeat-budget-lower-bound.md), partitioning any successful scalar tape of length $N$ into $D+1$ alternating blocks (each of length at most $a+3$, or $a+1$ after terminal high 1) yields:
+From [`RESULTS-repeat-budget-lower-bound.md`](../../../docs/rule30/RESULTS-other/RESULTS-repeat-budget-lower-bound.md), partitioning any successful scalar tape of length $N$ into $D+1$ alternating blocks (each of length at most $a+3$, or $a+1$ after terminal high 1) yields:
 $$r + N + 1 \le 2^{D+1}(r+2)$$
 and for initial terminal high 1:
 $$r + N + 1 \le 2^{D+1}(r+1)$$
@@ -136,10 +136,10 @@ The census establishes mortality and repeat budgets rigorously for $r \in [1, 10
 
 ## 5. Artifacts and Reproduction
 
-All scripts, certificates, and logs are contained strictly within [`experiments/rule30/bound-total-repeats-using-ordered-histor/`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/bound-total-repeats-using-ordered-histor/):
-- Verifier Script: [`verify_repeat_budget.py`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/bound-total-repeats-using-ordered-histor/verify_repeat_budget.py)
-- Audit Certificate: [`repeat-budget-audit.json`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/bound-total-repeats-using-ordered-histor/repeat-budget-audit.json)
-- Execution Log: [`repeat-budget-audit.log`](file:///Volumes/A/researchpapers/13-rule30/experiments/rule30/bound-total-repeats-using-ordered-histor/repeat-budget-audit.log)
+All scripts, certificates, and logs are contained strictly within [`experiments/rule30/bound-total-repeats-using-ordered-histor/`](../../../experiments/rule30/bound-total-repeats-using-ordered-histor/):
+- Verifier Script: [`verify_repeat_budget.py`](../../../experiments/rule30/bound-total-repeats-using-ordered-histor/verify_repeat_budget.py)
+- Audit Certificate: [`repeat-budget-audit.json`](../../../experiments/rule30/bound-total-repeats-using-ordered-histor/repeat-budget-audit.json)
+- Execution Log: [`repeat-budget-audit.log`](../../../experiments/rule30/bound-total-repeats-using-ordered-histor/repeat-budget-audit.log)
 
 Replay command:
 ```sh

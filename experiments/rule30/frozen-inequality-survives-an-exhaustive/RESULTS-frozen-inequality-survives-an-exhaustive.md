@@ -73,7 +73,7 @@ exists. The unrestricted bound also fails below the threshold (`M_3(5)=8 >= 7`,
 `M_2(6)=9 >= 8`), which is why BWH+ starts at `n=7`. BWH+ has no failing
 instance in `7..30`.
 
-## 4. Reproduction (this session)
+## 4. Reproduction
 
 Unmodified `experiments/rule30/p1-period2-invariant/binary_wedge_census_exhaustive.py`.
 
@@ -123,7 +123,7 @@ passed.
 
 The `n=28` and `n=29` rows in the source doc came from a `--skip-control` run
 attested by a sibling control. They are now recomputed independently, with
-the control in this session's sibling run from the same tree.
+the control in a sibling run from the same tree.
 
 ## 5. What is proved, refuted, open
 

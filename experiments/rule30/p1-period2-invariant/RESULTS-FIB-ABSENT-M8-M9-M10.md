@@ -5,7 +5,7 @@ Date: 2026-09-04
 Status: **SUPERSEDED / retitled after the fact.** m=8 resolved as sampling,
 m=9/10 inconclusive on their own terms (see below) — but "RW forced-symbol
 language" here means `fib_transfer_screen.forced_words`'s language, which a
-concurrent session's correction to `BACKLOG.md` section 17 (same day,
+parallel investigation's correction to `BACKLOG.md` section 17 (same day,
 `RESULTS-MEASURE-SUPPRESSION.md` V3(b)) identified as the `psi_kernel`
 H-bit-forced `(BWH+)`/`Psi_n` object, **not** the `literal_extension`-based
 `H_r(n)`/RW object `PREREGISTRATION-RW-FORCED-TERMINAL-DEFECT.md` section 4

@@ -1,9 +1,8 @@
 # P1 constrained attack: boundary-pin tightening, three arms
 
-Executed directly (fork agents cannot spawn subagents).  All three assigned
-arms were run; two were already-satisfied by the rung-0 machinery and one had
-a soundness trap.  One genuine new constraint came out of arm 2 and is the
-result of this round.
+All three assigned arms were run; two were already-satisfied by the rung-0
+machinery and one had a soundness trap.  One genuine new constraint came out
+of arm 2 and is the result of this round.
 
 ## Verdict up front
 
@@ -152,4 +151,3 @@ transduction, which is a build, not a tweak.
 * This document.
 
 Reproduce: `uv run --no-project python sweep.py 3 4 2000000`.
-Modal: $0.  Paid model-provider calls: $0.

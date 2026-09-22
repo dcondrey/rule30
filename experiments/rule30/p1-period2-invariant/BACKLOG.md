@@ -9,9 +9,8 @@ Sources: `R1-ext` = the 32-entry external LLM backlog of 2026-09-02, triaged
 here; `WF` = the multi-agent workflow `rule30-p1-attack` (`uc/`), merged when
 it reports.  Screening scripts: `backlog_screen_r1.py` and its log.
 
-Standing context: `uc/BRIEF.md` (exact language), `BACKLOG-PROMPT.md`
-(generation prompt), `PROOF-STATE-CAPSULE.md` section 5 and `PATH.md`
-section 7.3 (killed mechanisms and obstructions).
+Standing context: `uc/BRIEF.md` (exact language), `PROOF-STATE-CAPSULE.md`
+section 5 and `PATH.md` section 7.3 (killed mechanisms and obstructions).
 
 ## 1. Live rows, ranked by p_true x value
 
@@ -59,7 +58,7 @@ section 7.3 (killed mechanisms and obstructions).
 ## 4. Rejected-ideas list carried from the generator
 
 Matches the killed-mechanism table and the register; nothing new, nothing
-wrong.  Retained in `BACKLOG-PROMPT.md` section 4.
+wrong.
 
 ## 5. Round log
 
@@ -124,15 +123,6 @@ clusters in low-codimension subcubes with a constant that grows with `k`.
 Both are the diagonal-coordinate form of the no-forgetting and clustering
 results already recorded in `RESULTS-RW-LINEAR-SLACK.md` and
 `PREREG-psi-constraint-counting.md`.
-
-## 9. Workflow status
-
-`rule30-p1-attack` (`wf_1e280a58-776`) died at 59 minutes: 12 of 14 agents
-hit the session usage limit (resets 23:30 PT), and the script's `compact()`
-lacked a null guard on failed screens.  Two route agents (`survivors`,
-`entropy`) completed and proposed lemmas; their screens did not run.  Partial
-artifacts under `uc/r1-*` (4 MB).  Guard fixed in the script file; resumable
-with `resumeFromRunId` after the reset.
 
 ## 10. L10-FIB-TRANSFER, thorough (`fib_transfer_screen.py`, `fib_transfer_screen_20260902.log`)
 
@@ -207,7 +197,7 @@ Three recurring defects, on top of the two from earlier batches:
 | period-trace-q-finite | untestable | finite simulation cannot certify eventual periodicity |
 | tri-inj-forced-suffix, forced-column-prefix-uniformity, survivor-3over4-bound, no-small-period-source, unstopped-language entropy, group-cocycle-4-cycle, affine-translation-nonzero | screening: `backlog_screen_r3.py` | results in section 12 |
 
-## 12. RW by complete SAT to n = 30 (from the dead workflow's skeptic lens)
+## 12. RW by complete SAT to n = 30 (from the `r1-skeptic` lens)
 
 `uc/r1-skeptic/rw_sat.py`, logs `rw_sat_check.log`, `rw_sat_scan.log`,
 `rw_sat_n29_c3.log`, `rw_sat_n30_20260903.log`, `rw_sat_r_grid_20260903.log`,
@@ -281,8 +271,7 @@ consequences of the census, not routes to a proof.  RW itself stands at
 treating `T[u][n] = c` as a function of the diagonal; `(H, E)` on
 forward-diagram bits; statements about the indicator of an empty set;
 forgetting that the hit vector is monotone; forgetting that the next symbol
-is forced.  Add all five to `BACKLOG-PROMPT.md` section 4 before the next
-generation round.
+is forced.
 
 ## 16. Fifth external batch (10 entries, source reading) and round-5 screening (`backlog_screen_r5.py`, log)
 

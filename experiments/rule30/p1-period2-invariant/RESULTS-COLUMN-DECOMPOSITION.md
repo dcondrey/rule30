@@ -128,7 +128,7 @@ say (`1.328^2 = 1.764`).  **There is one growth constant here, not two.**
 ### 5a. Prior record in this repo
 
 The half-slope cone itself is **not new here.**  `uc/r1-entropy/lightcone_check.py`
-(concurrent session, log `lightcone_check.log`) states it as fact (1), "`T[u][d]`
+(a parallel investigation, log `lightcone_check.log`) states it as fact (1), "`T[u][d]`
 depends on `e_j` only if `j >= (u-d-1)/2`", and checks it exhaustively with zero
 failures for `u = 2..12`.  That script indexes by depth into the column and
 covers the diagonal cells too; this one indexes by distance from the end of the

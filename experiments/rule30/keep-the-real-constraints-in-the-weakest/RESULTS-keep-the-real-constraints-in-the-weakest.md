@@ -3,7 +3,7 @@
 Date: 2026-09-18. Target: `O_c ∩ I(HC_ω) = ∅` (SEP) via RW/DLP.
 
 **STATUS: partial. RW/DLP and SEP are still conjectured. No ladder statement
-changed.** This session adds one proved general rewrite lemma, three exact or
+changed.** This document adds one proved general rewrite lemma, three exact or
 certified negative measurements that close the "finite separator retaining the
 ordered suffix action" prescription, and an independent finite census. It
 proves no all-length RW certificate and no reduction theorem.

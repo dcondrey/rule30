@@ -20,7 +20,7 @@ examined, because §4b never looked there.
 | `n=5 -> 6`, `c=3` | 8 -> 6 | `112121` | `112121` | inherited |
 | `n=6 -> 7`, `c=2` | 9 -> 7 | `1111122` | `1111122` | inherited |
 
-Reproduced in this session from
+Reproduced from
 `p1-period2-invariant/binary_wedge_census_exhaustive.py`, cwd that directory:
 
 ```sh

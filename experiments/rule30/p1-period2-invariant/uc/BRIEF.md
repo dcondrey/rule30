@@ -1,25 +1,19 @@
 # Brief for the 2026-09-02 ultracode attack on Rule 30 Problem 1
 
-You are one agent in a multi-agent workflow. Read this file completely before
-anything else. It is the shortest correct statement of where the attack
-stands. Everything in it is verified by code you can run.
+This is the shortest correct statement of where the attack stands.
+Everything in it is verified by code that can be run.
 
-## 0. Hard rules
+## 0. Working rules
 
-- Work directory: `/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant`.
-  Run Python as `cd <that dir> && uv run python <script>`. The kernel modules
-  there (`psi_kernel.py`, `rw_margin.py`, `binary_wedge_high_elimination.py`,
-  `dyadic_periodicity_analyzer.py`, `rank_zero_separator.py`) are importable
-  from that directory.
-- You may write files ONLY inside the output directory named in your prompt.
-  Never edit an existing file anywhere. Never run any `git` command.
-- Every numerical claim you make must name a script you wrote and a log it
-  produced. A claim without a log is discarded by the verifier.
-- No em-dashes anywhere in any file you write. Use commas, semicolons, periods.
+- Kernel modules for this thread: `psi_kernel.py`, `rw_margin.py`,
+  `binary_wedge_high_elimination.py`, `dyadic_periodicity_analyzer.py`,
+  `rank_zero_separator.py`, importable from
+  `experiments/rule30/p1-period2-invariant`.
+- Every numerical claim must name the script and log that produced it.
 - Do not spend a test confirming something this brief already states as
   verified. Test what is OPEN.
-- Do not rename and retry anything in section 6. If your idea is a relabeling
-  of a killed mechanism, say so and stop.
+- Do not rename and retry anything in section 6. An idea that is a
+  relabeling of a killed mechanism should say so and stop.
 
 ## 1. The problem and the target chain
 
@@ -116,7 +110,7 @@ indicators `a' = [T != 0]` and `b = [Lo(T) == 0]`:
     Phi = beta * (1 + alpha') + gamma'
 ```
 
-**ERRATUM (corrected 2026-09-02 after the workflow launched).**  An earlier
+**ERRATUM (corrected 2026-09-02, after this thread began).**  An earlier
 version of this paragraph wrote `a = [T == 0]` here.  That is the indicator
 in the Moore STEP (`h -> h XOR 1 XOR a`), and it is correct there; in `Phi` the
 indicator is `a' = [T != 0] = 1 + a`.  The two forms are related by

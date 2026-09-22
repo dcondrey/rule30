@@ -1,8 +1,8 @@
 # A12 audit — `uc/r1-r1zero/comoving_columns_T32768.log`
 
-Session 2026-09-05. Closes A12, the last unaudited `r1-r1zero` artefact
+Date: 2026-09-05. Closes A12, the last unaudited `r1-r1zero` artefact
 (`TASKLIST-20260904-R1.md:40`). Both the log and `comoving_columns.py` were read
-in full this session.
+in full for this audit.
 
 ## Verdict
 
@@ -12,7 +12,7 @@ artefact, provable from the script's own acceptance rule. No document currently
 draws any conclusion from this log — checked by grep across the repo; the only
 hits are task-list entries recording it as unaudited, plus
 `RESULTS-R1-ZERO-SET-INVENTORY.md:37,261` which explicitly logs it as "not
-re-derived this session". Nothing needs correcting downstream.
+re-derived". Nothing needs correcting downstream.
 
 ## What the log contains
 
@@ -59,7 +59,7 @@ So the transition from `4096` to `None` at `k = 34` is the instrument running
 out, not the sequence becoming aperiodic. The 367 `None` entries carry **zero**
 information about periodicity. Reading them as an aperiodicity result would be
 the same class of error as citing `lhp_lock_search`'s "0 lock candidates" as an
-exclusion (`OVERNIGHT-HANDOFF-20260905.md`).
+exclusion.
 
 ## Disconfirming check
 

@@ -133,7 +133,7 @@ constant `z_0` dropped from `Phi`) fires at the first column with an odd
 
 The lemma is an identity between adjacent columns derived from two finite
 facts; a counterexample at large `n` would contradict a step of section 2,
-each of which I checked.  The families were chosen to stress the places a
+each of which was checked.  The families were chosen to stress the places a
 derivation slip would show:
 
 - deep forced orbits (`u` to `4n`), where `|N|` reaches 260 and the number of

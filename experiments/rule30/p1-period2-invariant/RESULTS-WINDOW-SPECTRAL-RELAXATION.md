@@ -134,11 +134,11 @@ different object from the `M_w` above.
 
 ## CONCURRENT INDEPENDENT REFUTATION, and a threshold correction
 
-The concurrent session wrote `MEMO-SPECTRAL-BOUND-CANNOT-CLOSE.md` the same day,
-refuting the same proposal independently ("Written because the idea was proposed
+A parallel investigation independently wrote `MEMO-SPECTRAL-BOUND-CANNOT-CLOSE.md`
+the same day, refuting the same proposal independently ("Written because the idea was proposed
 again and is seductive [...] Recording the refutation so it is not re-derived a
 fourth time"). Its argument differs from the vacuity proof below and is
-**sharper on one point**, recorded here as a correction to my framing:
+**sharper on one point**, recorded here as a correction to the framing above:
 
 > **`lambda_max < 2` is the wrong threshold.** `phi = 1.618 < 2` already, so the
 > criterion "fires immediately, at every width, and always would. A criterion

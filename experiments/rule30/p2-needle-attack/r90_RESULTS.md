@@ -1,6 +1,6 @@
 # Rule 90 soundness control for the period-2 forced-continuation census: RESULTS
 
-Date: 2026-09-05. Autonomous research-mode session. Method frozen in `r90_PREREG.md`
+Date: 2026-09-05. Method frozen in `r90_PREREG.md`
 before any Rule 90 census number was produced. Self-contained code (`r90_kernel.py`,
 `r90_census.py`), zero imports from `p1-period2-invariant`.
 

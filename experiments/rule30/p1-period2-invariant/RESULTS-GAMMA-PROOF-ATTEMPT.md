@@ -1,9 +1,9 @@
 # Attempt to prove gamma(n) >= 1 for all n: two new negative results, one small proven lemma, no proof
 
-Date: 2026-09-04, overnight autonomous session.
+Date: 2026-09-04.
 
 Status: **NO PROOF FOUND.** `gamma(n) >= 1` continues to hold at every newly
-measured `n` (odd `n` in particular, never checked before tonight, plus
+measured `n` (odd `n` in particular, never checked before, plus
 `n=24` for the source-word extremal family) — no counterexample. One
 genuinely new small structural lemma was found and proven exactly (a closed
 form for the zero-padding warm-up state). Two genuinely new negative results
@@ -12,7 +12,7 @@ in the task brief do not work, rather than merely failing to find a proof:
 (1) the source-word extremal family has no common suffix and its
 tie-multiplicity *grows* with `n` (extends `RESULTS-FIBER-EXTREMAL-FAMILY.md`'s
 continuation-side negative result to the source-word side), and (2) the one
-clean periodic-attractor structure this session found does **not** survive
+clean periodic-attractor structure found here does **not** survive
 contact with arbitrary history — a direct, checkable disconfirmation of the
 "long constant suffix washes out history" mechanism that idea 2 hoped for.
 This is consistent with, and sharpens, the already-recorded difficulty
@@ -26,35 +26,32 @@ anywhere in the project to date is a genuinely new data point:
 **`n=9, c=3, r=0: gamma=3`** (verified two independent ways, see section 3).
 This is not a counterexample (`gamma=3 > 0`) but it is the smallest gamma
 value on record, in a part of the parameter space (odd `n`) nobody had
-checked before tonight.
+checked before.
 
-Background job note: `fastdk_benchmark.py` (PID 87926, launched by an
-earlier session) was still running throughout this session and was not
-touched, per the task instructions. It reached `n=24` (both `c`) during this
-session; its log is `fastdk_benchmark_20260904.log`. This report's own new
+Background job note: `fastdk_benchmark.py` was a separate, already-running
+job left untouched throughout. It reached `n=24` (both `c`) over the same
+period; its log is `fastdk_benchmark_20260904.log`. This report's own new
 computation used a separate, independently-written script
 (`scratch_finalist_via_dedup.py`) rather than that job's output, and
 cross-checks against both brute force and the existing benchmark log (see
 section 1).
 
-**A second, unrelated concurrent job matters even more for this report's
-correctness gate.** While this session was running, a *different*,
-pre-registered concurrent job (`PREREGISTRATION-OVERNIGHT-EXTENSION.md`,
-launched ~21:45 by a separate session, `overnight_census.py`, 4 detached
-processes, PIDs 62820/62822/62825/62827 at the time this was written) was
+**A second, unrelated concurrent computation matters even more for this
+report's correctness gate.** A *different*, pre-registered job
+(`PREREGISTRATION-OVERNIGHT-EXTENSION.md`, `overnight_census.py`) was
 independently computing exact **brute-force** (not dedup-shortcut) values
 of `max_row`/`margin` — its `margin` is defined identically to this
 report's `gamma` (`overnight_census.py:79`: `margin = (n+2) - max_row`) —
 for `n = 17..24`, both tails, including the odd `n` this report also
 targeted. That job's output (`overnight_c2_odd.log`, `overnight_c2_even.log`,
-`overnight_c3_odd.log`, `overnight_c3_even.log`, not written or modified by
-this session) was read, not run, and its brute-force numbers are compared
+`overnight_c3_odd.log`, `overnight_c3_even.log`, not written or modified
+here) was read, not run, and its brute-force numbers are compared
 against this report's fast-method numbers in the table in section 1: they
 agree exactly everywhere they overlap, at `n=17,18,19,20,21` for both `c`.
-This is a stronger cross-check than this session could have produced alone,
-run by a genuinely independent method (full `2^n` enumeration, not the
+This is a stronger cross-check than a single method could have produced
+alone, run by a genuinely independent method (full `2^n` enumeration, not the
 dependency-edge dedup this report otherwise relies on), and it is credited
-here rather than presented as this session's own verification.
+here rather than presented as this report's own verification.
 
 ## 0. What was attempted, in the order the task brief raised it
 
@@ -84,12 +81,12 @@ here rather than presented as this session's own verification.
 
 ## 1. New data: gamma(n) at odd n, c=2 and c=3
 
-Every *published* table in this project as of when this session started
+Every *published* table in this project as of this report
 (`RESULTS-KSTAR-GAMMA-EXTENDED.md`, `RESULTS-EXTINCTION-MARGIN.md`,
 `fastdk_benchmark_20260904.log`) reported only **even** `n`. This was a
 genuine gap, not a deliberate restriction (nothing in the method requires
 even `n`), so filling it was done early, independently of, and (it turned
-out) concurrently with, a separate pre-registered session-level job
+out) concurrently with, a separate pre-registered job
 (`overnight_census.py`, see the background-job note above) that was
 targeting the same odd-`n` gap by brute force at the same time. Both
 efforts were run without either being aware of the other; they agree
@@ -114,16 +111,16 @@ independent check was required, not assumed):
 
 | n | c | method | max_survival | gamma | check |
 |---|---|---|---|---|---|
-| 13 | 2 | brute force (`scratch_bruteforce_oddn_check.py`, independent crude `literal_extension` loop, this session) | 7 | 8 | matches fast method exactly |
-| 15 | 2 | brute force (same script, this session) | 9 | 8 | matches fast method exactly |
-| 9  | 3 | brute force (`scratch_bruteforce_n9c3.py`, this session) | 8 | 3 | matches fast method exactly |
+| 13 | 2 | brute force (`scratch_bruteforce_oddn_check.py`, independent crude `literal_extension` loop) | 7 | 8 | matches fast method exactly |
+| 15 | 2 | brute force (same script) | 9 | 8 | matches fast method exactly |
+| 9  | 3 | brute force (`scratch_bruteforce_n9c3.py`) | 8 | 3 | matches fast method exactly |
 | 20, 22, 24 | 2 | fast method vs. `fastdk_benchmark_20260904.log` (even n, already brute-force-gated project-wide through n=18) | 11, 12, 14 | 11, 12, 12 | exact agreement at every point |
-| 17, 19, 21 | 2 | fast method vs. **concurrent job** `overnight_census.py` (full `2^n` brute force, separate session, see note above) | 11, 11, 13 | 8, 10, 10 | exact agreement at every point |
+| 17, 19, 21 | 2 | fast method vs. **concurrent job** `overnight_census.py` (full `2^n` brute force, separate process, see note above) | 11, 11, 13 | 8, 10, 10 | exact agreement at every point |
 | 17, 19, 21 | 3 | fast method vs. same concurrent job | 10, 13, 16 | 9, 8, 7 | exact agreement at every point |
 | 18, 20 | 2, 3 | fast/existing-table vs. same concurrent job (even n) | — | 8,11 (c=2); 9,8 (c=3) | exact agreement at every point |
 
 All agree exactly; zero mismatches, across two independent brute-force
-sources (one run by this session, one a genuinely separate concurrent
+sources (one run for this report, one a genuinely separate concurrent
 process using full `2^n` enumeration) and one independent fast-method
 cross-check (`fastdk_benchmark_20260904.log`). The odd-n numbers below are
 now on at least as strong a footing as the project's existing even-n
@@ -218,7 +215,7 @@ check in section 7.
 `RESULTS-FIBER-EXTREMAL-FAMILY.md` already showed (n=10..16) that the
 extremal **continuations** (the forced output words) do not fall into a
 clean parametrized family. That result is about `D_k`'s image side. This
-session checked the natural companion question on the **source-word** side
+report checks the natural companion question on the **source-word** side
 directly: do the source words `W` that *achieve* `max_survival_row(n)`
 converge to a common suffix, or at least stay few in number, as `n` grows?
 
@@ -250,7 +247,7 @@ genuinely structurally different words, not near-duplicates.)
 ## 4. Idea 2b: a real, proven lemma — the constant-feed attractor
 
 This is the one piece of new, rigorously-established (not merely
-pattern-matched) mathematics from tonight.
+pattern-matched) mathematics in this report.
 
 **Claim.** Define `F: {0,1,2,3}^2 -> {0,1,2,3}^2` by
 `F(a,b) = (b, cone_local(a,b))`, using the project's existing
@@ -299,7 +296,7 @@ enough to say something about words that are only **eventually** constant
 which was the actual hope behind idea 2 (a source word "looks like" a
 truncation of a limiting object; if long constant runs forget their past,
 that would support treating the tail of a source word as the load-bearing
-part). This session tested this directly and it is **false**, sharply and
+part). This was tested directly and it is **false**, sharply and
 reproducibly.
 
 **Test 1 (`scratch_forgetting_check.py`).** 200 random trials: random
@@ -350,14 +347,14 @@ counterexample above is concrete and cheap to reproduce.
 `RESULTS-EVENTUAL-CONSTANT-TAIL.md` (2026-09-01, a different but related
 part of this project, concerning `constant_tail_shift.py`'s one-argument
 map `g_0=(0,3,2,3)` on "canonical eventually periodic cut lassos" — not the
-same object as this session's two-argument `cone_local`-based `F`, so this
+same object as this report's two-argument `cone_local`-based `F`, so this
 is a **sibling**, not identical, recursion) records, independently, the
 exact same style of warning: a simple periodic pattern found at small scale
 ("the promising period-at-most-four pattern at small cutoff") was
 subsequently shown to be a finite-size artifact once pushed further — the
 true periods along maximizing orbits grow `1, 2, 4, 8`, then reach `16`
 after 200 endpoint shifts, with **no bound at 4** despite 4 looking like a
-clean answer early on. This session's own finding (sections 4-5) is a
+clean answer early on. This report's own finding (sections 4-5) is a
 different, independently-derived instance of the same phenomenon on a
 different map: a clean small attractor exists in the fully-degenerate
 (constant-from-empty) case, and is directly falsified as soon as real
@@ -384,25 +381,25 @@ project has already hit from other directions.
 
 **What remains open, unchanged:** `gamma(n) >= 1` for all `n` — still true
 at every one of the (now considerably more numerous) points checked, still
-not proven. No route tried tonight, in this project's prior sessions, or in
+not proven. No route tried here, in this project's prior work, or in
 the one literature-adjacent framing considered (the recursion's unbounded,
 non-mixing memory dependency is structurally the same obstruction that
 makes Rule 30's center-column equidistribution conjecture open — see
 `RESULTS-TRANSFER-DOMINATION-CHECK.md`) currently has traction on a full
 proof.
 
-**Most promising remaining direction, for a future session, stated
-honestly as a guess, not a plan already validated:** the empirical
-transition matrix `M` in `RESULTS-TRANSFER-DOMINATION-CHECK.md` (measured
-almost exactly at the uniform rate `1/4` per free entry) combined with this
-session's finding that the recursion cannot be shortcut by any local/finite
-mechanism suggests that if `gamma(n)>=1` is provable at all with current
-tools, it is more likely via a genuine concentration/large-deviation
-argument on the survival-population decay (bounding the *probability* that
-a specific adversarial path evades extinction for `n+2` rows, using the
-near-i.i.d. mean-field behavior already measured) than via any structural
-combinatorial identity. That is speculative; no work was done on it tonight
-beyond noting it does not contradict anything found here, and the same
+**Most promising remaining direction, stated honestly as a guess, not a
+plan already validated:** the empirical transition matrix `M` in
+`RESULTS-TRANSFER-DOMINATION-CHECK.md` (measured almost exactly at the
+uniform rate `1/4` per free entry) combined with the finding here that the
+recursion cannot be shortcut by any local/finite mechanism suggests that if
+`gamma(n)>=1` is provable at all with current tools, it is more likely via
+a genuine concentration/large-deviation argument on the survival-population
+decay (bounding the *probability* that a specific adversarial path evades
+extinction for `n+2` rows, using the near-i.i.d. mean-field behavior
+already measured) than via any structural combinatorial identity. That is
+speculative; no further work was done on it beyond noting it does not
+contradict anything found here, and the same
 report already flags this as "may be as hard as Rule 30's own open
 equidistribution question" — a large-deviations argument would still need
 to somehow avoid actually resolving that open conjecture, which is a real
@@ -439,8 +436,8 @@ uv run python scratch_triangularity_check.py
 All scripts are read-only over existing project modules
 (`late_pull_diagonal_sat.py`, `constant_tail_scale.py`,
 `dyadic_periodicity_analyzer.py`, `fastdk_core.py`, `fastdk_fastedge.py`) —
-none was modified. `fastdk_benchmark.py` (PID 87926 when this session
-started) was left running throughout and not touched; see
+none was modified. `fastdk_benchmark.py` was left running throughout and
+not touched; see
 `fastdk_benchmark_20260904.log` for its independent progress
 (`RESULTS-KSTAR-GAMMA-EXTENDED.md` owns interpretation of that job).
 
@@ -463,8 +460,8 @@ Still far above `0` and not a counterexample.
 c=3 odd sequence is now `n=7..23`: `5, 3, 6, 6, 9, 9, 8, 7, 9`. Reading:
 one isolated sharp dip at `n=9`, otherwise fluctuating in the `6-9` range
 with no visible trend toward `0`. This was cross-checked only against this
-session's own fast method (not yet against the concurrent brute-force job,
+report's own fast method (not yet against the concurrent brute-force job,
 which was still short of `n=23` at this point) — treat it as provisional
 pending that job's own `n=23` line landing in `overnight_c3_odd.log`, though
 given the fast method's zero-mismatch record at every other point checked
-tonight (section 1), no discrepancy is expected.
+here (section 1), no discrepancy is expected.

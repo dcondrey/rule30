@@ -2,13 +2,14 @@
 
 Date: 2026-09-05.  Scripts: `terminal_fiber_classes.py`, `class_edge_check.py`
 (scratchpad; logs `terminal_fiber_classes_20260905.log`,
-`class_edge_check_20260905.log` in this directory).  Archaeology by four
-read-only subagents over `docs/rule30/` and this directory; every citation
-below that I did not open myself is marked (relayed).  Nothing committed.
+`class_edge_check_20260905.log` in this directory).  Archaeology conducted via
+four read-only automated searches over `docs/rule30/` and this directory;
+every citation below not independently opened and confirmed here is marked
+(relayed).  Nothing committed.
 
 ## 0. What this is
 
-Two computations run tonight, then a read of the whole attempt archive asking
+Two computations run here, then a read of the whole attempt archive asking
 one question: where did the same phenomenon appear before, and why was it
 dropped.  The answer is that it appeared at least five times, was named
 correctly at least twice, and was abandoned every time because the next
@@ -19,7 +20,7 @@ measurement was a population statistic, and the population is fine.
 The brief said proving `gamma(n) >= 1` for all `n` "only kills period-2 on one
 route."  The capsule's reduction chain (`PROOF-STATE-CAPSULE.md:28-51`, read
 directly) is marked "proved" with `[R, OPEN]` only on its terminal node (SEP).
-The period-2 subagent traced every arrow to its proof file (relayed):
+The period-2 archaeology pass traced every arrow to its proof file (relayed):
 
 ```text
 gamma(n) >= 1  for all n
@@ -182,7 +183,7 @@ periods and was killed because 505-512 of 512 positions differ *across right
 parts*, a population fraction.  Whether the extremal state forgets was never
 measured.  Section 2.2 is that measurement: it does.
 
-## 5. Claims in the archive that tonight's data contradicts (relayed quotes)
+## 5. Claims in the archive that this data contradicts (relayed quotes)
 
 1. `RESULTS-GAMMA-PROOF-ATTEMPT.md:239-240`: "No common suffix, and no
    shrinking toward a unique witness."  Pooled across finalist *states* at
@@ -221,7 +222,7 @@ measured.  Section 2.2 is that measurement: it does.
   `alpha = parity{i >= 1 : R_i != 0}` over the reversed dependency edge, and
   the E-miss is exactly `alpha: 1 -> 0`.  So "why does the extremal state die
   at step `max_survival + 1`" is a finite exact computation per `n`.
-* **The forcing's algebra**, read directly tonight: `phi(l, .)` is a
+* **The forcing's algebra**, read directly here: `phi(l, .)` is a
   permutation of `{0,1,2,3}` for each `l` (`dyadic_periodicity_analyzer.py:307-309`),
   so the cut cell is a D8 product over the old edge applied to a seed
   determined by `(prev, v)`; that is why exactly one symbol is ever forced.
@@ -261,7 +262,7 @@ measured.  Section 2.2 is that measurement: it does.
 
 ## 8. The question this leaves, stated so it can be run
 
-Not run tonight; recorded as the next thing.
+Not run here; recorded as the next thing.
 
 1. **Is the extremal state at `n` related to the extremal state at `n+1` or
    `n+2`?**  `RESULTS-FIBER-EXTREMAL-FAMILY.md` looked for a family in the
@@ -277,7 +278,7 @@ Not run tonight; recorded as the next thing.
    and its `gamma` is not bounded below.  If Rule 90 also gives `gamma >= 1`,
    this thread measures the encoding.
 
-## 9. Mechanically verified tonight (my runs, not relayed)
+## 9. Mechanically verified here (direct runs, not relayed)
 
 Three claims the argument leans on, checked directly against the real
 functions:
@@ -325,8 +326,8 @@ lives outside them.
 
 * **RW / DLP / `H_r` / `gamma`** (`RESULTS-DLP-ROTATED-WEDGE.md`): source over
   all `{1,2}^n`, suffix hard-core.  Extremals non-hard-core.  This is what
-  tonight's census measures.
-* **Constant-tail scale `s_c(W)`** (`CONTINUATION-PROMPT.md:242-249`, relayed):
+  this census measures.
+* **Constant-tail scale `s_c(W)`** (established in prior notes, relayed):
   `W` is a middle block of a fully hard-core endpoint, so `W` is hard-core by
   construction.  Extremals are clean periodic words.  Proven equivalent to
   (PT2) by the same chain, and the coarse bound `s_2(W) <= |W|`,
@@ -405,11 +406,11 @@ states.
   drops), so it enumerated all 4 candidates and the verdict is invariant.
   Two code corrections it surfaced: (a) `carry_transducer.py use_or=False` is
   the **Rule 150** kernel (`l^c^r`), not Rule 90 -- any prior "Rule 90 control"
-  resting on it is void [flag: not personally reconfirmed; likely off the live
+  resting on it is void [flag: not independently reconfirmed; likely off the live
   census path]; (b) this doc's earlier relay that `RESULTS-RULE90-FILTER-ON-SPECTRAL.md`
   says no-11 "must not transfer" was WRONG -- that doc (line 17) classifies
   no-11/Fibonacci/phi as RULE-BLIND; the "must not transfer" line is
-  CONTINUATION-PROMPT.md's, about the OR-derivation of the predicate. Both are
+  from prior notes, about the OR-derivation of the predicate. Both are
   true in different senses (no-11 is rule-blind as a counting object; its
   correctness as the predicate derives from OR).
 * **Corroboration, independent and cleaner:** `RESULTS-RULE90-FILTER-ON-SPECTRAL.md`

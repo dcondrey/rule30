@@ -1,17 +1,15 @@
 # E1-E5 audit: there is no E1-E5 preregistration to score, and one claim in `RESULTS-EXTINCTION-MARGIN.md` is overstated
 
-Date 2026-09-05. Read-only audit. `RESULTS-EXTINCTION-MARGIN.md` belongs to a
-concurrent session and was **not touched**; findings are recorded here per
-`TASKLIST-20260904-R1.md` E2's own instruction.
+Date 2026-09-05. Read-only audit. `RESULTS-EXTINCTION-MARGIN.md` was **not
+modified**; findings are recorded here per `TASKLIST-20260904-R1.md` E2.
 
-## 1. The scoring obligation the handoff carried does not exist
+## 1. The claimed scoring obligation does not exist
 
-The 2026-09-05 handoff listed as open: "Task 4 / E1-E5 extinction margin: data
+A prior status note listed as open: "Task 4 / E1-E5 extinction margin: data
 collected but **NOT scored against the prereg**."
 
 **Verified: there is no E1-E5 preregistration.** `E1-E5` appears in exactly four
-files repo-wide (`OVERNIGHT-HANDOFF-20260904-LATE.md:78`,
-`NEXT-SESSION-PROMPT-20260905.md:72`, `OVERNIGHT-HANDOFF-20260905.md:96`,
+places repo-wide (three prior status notes plus
 `RESULTS-PRODUCT-GEOMETRIC-MEAN.md:194`). Its definition is
 `TASKLIST-20260904-R1.md` lines 74-78, and those five entries are **audit and
 re-derivation tasks**, not a comparative experiment:
@@ -75,8 +73,8 @@ the ledger's `gamma` table):
 - **E5**'s premise — "`c=2` rising, `c=3` flat" — **is not supported** on the
   extended range. Both tails fluctuate: `c=2` runs `7,5,6,8,8,8,10,11,10,12,9,12`
   and `c=3` runs `5,6,8,8,9,9,8,8,7,10,9,10`. The ledger separately retracted a
-  claimed climb in `gamma` as an even-`n` artifact. Do not spend a session
-  explaining a tail asymmetry that the data does not show.
+  claimed climb in `gamma` as an even-`n` artifact. Do not spend further
+  effort explaining a tail asymmetry that the data does not show.
 - **E3/E4: re-verified 2026-09-05 and both are negative.** See
   `RESULTS-E3-MAXSURVIVAL-WORD-STRUCTURE.md`. `RESULTS-FIBER-EXTREMAL-FAMILY.md`
   answers E3 for the forced *continuations* (no parametrized family, `n=10..16`);

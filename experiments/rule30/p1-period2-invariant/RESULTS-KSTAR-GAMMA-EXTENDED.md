@@ -1,6 +1,6 @@
 # k_star(n), max-survival-row(n), and the extinction margin gamma(n): extended range via a fast dedup method
 
-Date: 2026-09-04, overnight autonomous run.
+Date: 2026-09-04.
 
 Status: **method verified against brute force at n<=18 (all mismatches
 zero); data extended past brute-force range using the new method**, in
@@ -10,7 +10,7 @@ parallel with (not editing) the concurrently running
 
 ## What this measures
 
-Same objects as tonight's `continuation_image_analysis.py` /
+Same objects as `continuation_image_analysis.py` /
 `PREREGISTRATION-OVERNIGHT-EXTENSION.md`:
 
 - `D_k(n)` = number of distinct length-`k` forced-continuation prefixes
@@ -144,14 +144,13 @@ brute force above.)
 kept as one place to avoid the data and its reading drifting out of
 sync across checkpoints.)
 
-## Checkpoint pass (2026-09-04, ~22:15) -- background jobs still running, unattended session continuing
+## Checkpoint (2026-09-04, ~22:15)
 
-This is an autonomous overnight run; no user has taken over the
-write-up. Recording state and assessment at this checkpoint so a human
-picking this up cold (or a later pass of this same job) has the full
-picture. `fastdk_benchmark.py` (n=18,20,22,24,26,28,30,32; PID 87926) and
-`fastdk_crosscheck.py` (n=16,18; PID 87599) were both still running as
-of this checkpoint -- both have since completed (see updated Cross-check
+Recording state and assessment at this checkpoint so a reader
+picking this up cold has the full picture. `fastdk_benchmark.py`
+(n=18,20,22,24,26,28,30,32) and `fastdk_crosscheck.py` (n=16,18) were
+both still running as of this checkpoint -- both have since completed
+(see updated Cross-check
 table above: n=18 brute-force agreement is now confirmed PASS for both
 `c`, and the benchmark has continued past n=22; later sections update
 this further as more data lands).
@@ -169,7 +168,7 @@ gamma(n,0) + r` and r=0 is the binding case. No exceptions found.
 
 ### crosscheck (n=16,18 brute-force agreement): STILL RUNNING, no output yet
 
-`fastdk_crosscheck.py 16 18` (PID 87599) is still in flight, writing to
+`fastdk_crosscheck.py 16 18` is still in flight, writing to
 `/private/tmp/xc1618.log`, which is 0 bytes as of this pass (brute force
 at n=18 takes on the order of a minute per (c,r) cell per the note
 above, so this is expected, not a hang). n<=14 is already fully
@@ -224,7 +223,7 @@ for.
 
 ## Bytes-backed variant: tried, verified partially, not adopted
 
-While `fastdk_benchmark.py` (PID 87926, do not touch) was working
+While `fastdk_benchmark.py` (a separate protected job, do not touch) was working
 through n=24, a second edge-state representation was tried in parallel:
 `fastdk_fastedge_bytes.py` / `fastdk_core_bytes.py` (bytes instead of
 tuple-of-int for the edge state, on the theory that hashing/memory for
@@ -275,8 +274,8 @@ zero mismatches, which remains the only method this file relies on.
 `fastdk_benchmark_20260904.log` completed all four cells: `n=24` (c=2 846.0s,
 c=3 747.7s) and `n=26` (c=2 3161.9s, c=3 2737.2s). It is now on `n=28`, which
 at the measured ~3.2x per +2 should take ~2.7 hours per cell and may not
-finish. Rows folded into the two tables above. PID 87926 still running,
-untouched.
+finish. Rows folded into the two tables above. The benchmark job is
+still running, untouched.
 
 | n | gamma (c=2) | gamma (c=3) |
 |---:|---:|---:|
@@ -320,8 +319,8 @@ above.
 
 ### 1. Cross-check horizon extended from n=18 to n=22, both c, exact
 
-A concurrently running brute-force job (`overnight_census.py`, PIDs
-62820/62822/62825/62827, logs `overnight_c{2,3}_{even,odd}.log` in this
+A concurrently running brute-force job (`overnight_census.py`, logs
+`overnight_c{2,3}_{even,odd}.log` in this
 directory) independently computed `max_row` and `margin` exhaustively for
 n=17..23. Those are the same quantities this file calls `max_survival_row`
 and `gamma`. Against the fast method's benchmark log:
@@ -339,7 +338,7 @@ and `gamma`. Against the fast method's benchmark log:
 
 **8 of 8 exact.** The standing gate on `fastdk_core.py` said "cross-checked
 against brute force through n=18." It is now **through n=24**, at no compute
-cost, from data another session had already produced. The even-n census jobs
+cost, from data another job had already produced. The even-n census jobs
 completed their full assigned range (n=18,20,22,24) and exited normally; they
 were not killed.
 

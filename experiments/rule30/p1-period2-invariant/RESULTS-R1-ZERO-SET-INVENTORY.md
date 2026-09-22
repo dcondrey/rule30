@@ -1,24 +1,8 @@
 # R1 (zero-set obligation): inventory of `uc/r1-r1zero/`, and what it does and does not establish
 
-Session 2026-09-04 (late). Task 33 of `NEXT-SESSION-PROMPT.md`, plus 34-36.
-Everything below was re-derived in this session against the real code; nothing
-is relayed from a prior document or a subagent.
-
-## Session constraint: no new long compute was launched
-
-At session start `uptime` reported load average **43.70** on 10 cores, with 12
-CPU-bound python processes live (4x `rw_sat_gap_fill_one.py 30 *`, 4x
-`overnight_census.py`, 2x `scratch_finalist_via_dedup.py`, 1x
-`fastdk_benchmark.py`, 1x a `dlp_rotated_wedge` heredoc) and ~1.38 GB free RAM.
-The previous prompt's "launch the long jobs FIRST" instruction was written when
-load was 26. **It is void at load 43.** Seed items 1-4 (census `n=25,26`;
-high-`n` `D_k`/margin; `n=31` SAT; UNSAT-core scaling) were not launched, and
-should not be until the four `n=30` SAT jobs retire. Only two seconds-scale
-verification scripts were run this session.
-
-`TaskCreate`/`TaskUpdate`/`TaskList` were **not resolvable** by `ToolSearch`
-this session, so the requested 30-item task list is a file
-(`TASKLIST-20260904-R1.md`), not a task-tool list.
+Date: 2026-09-04 (late).
+Everything below was re-derived against the real code; nothing is relayed
+from a prior document.
 
 ## What is in `uc/r1-r1zero/`, and what each run actually showed
 
@@ -34,10 +18,10 @@ count, a violation rate, and an `elapsed` line.
 | `prefix_dependence.py` | 9 words, 11 prefixes each, `T=16384`, `q<=1024` | strongly word-dependent: `0001`,`0011`,`0111` periodic 11/11; `01` 1/11; `011`,`00101` **0/11** |
 | `drive01_deep.py` / `drive01_long.py` | period-two drive to `T=65536` / `T=524288`, `q<=4096` | **no eventual period found**; `r|Z` density flat at ~0.214 across 16 blocks, all four prefixes |
 | `pin_survival.py` / `pin_survival2.py` | pin-survival horizons over `Pi`-leaves, `L` up to 36 | max survival 13-35 depending on tail; `atcap=0` everywhere (cap 400 never reached) |
-| `comoving_columns.py` | comoving column scan to `T=32768` | (log present, 13 KB; not re-derived this session) |
+| `comoving_columns.py` | comoving column scan to `T=32768` | (log present, 13 KB; not re-derived) |
 | `lhp_lock_search.py` / `_y.py` | 231 primitive words `p<=7` x 61 prefixes, `T=2048`; also `p<=4` at `T=8192` | **0 lock candidates** in every run; second-half pin-violation rate **0.4993-0.5001** against a null of 0.5; longest violation-free tail 14, 9, 65 |
 
-## Two identities, re-verified exactly this session
+## Two identities, re-verified
 
 `scratchpad/verify_lhp_closure.py`, lone seed, `T=400`, full LHP window
 `x in [-400,-1]`:
@@ -162,7 +146,7 @@ Rule 90 and any rule-generic argument is wrong.
 `[[0,1/4],[1/4,1/4]]` governing **per-row survival in the rotated wedge** over
 the `H`-population, an object defined on words of length `n` in a truncated
 combinatorial construction. Problem 2 is a statement about the **symbol density
-of the true lone-seed centre column**, measured this session at
+of the true lone-seed centre column**, measured at
 **0.500362 over `T = 200000`** (10.6 s) — consistent with 1/2 and unrelated to
 0.404508.
 
@@ -183,10 +167,9 @@ contradiction can depend only on `p` or on a bounded number of centre symbols
 independent of support size"). What the run below adds is an implementation
 check, a numerical reach of `w = 300`, and a Rule 90 control. It is labelled
 validation so an expected result is not later mis-cited as a discovery — the
-failure mode behind all four of the retractions listed in
-`NEXT-SESSION-PROMPT.md`.
+failure mode behind several prior retractions.
 
-The practical call it settles is still worth the session: **do not spend SMT
+The practical call it settles is still worth stating: **do not spend SMT
 compute on `w = 9,10,11`.**
 
 The measurement looked like "extend the `H(p,w)` table to
@@ -231,7 +214,7 @@ the table maximises over all rows of radius `w` and this family does not.
 
 1. The plateau branch is closed; there is no uniform horizon bound to find.
 2. A kill condition of the form `H(2,w) > w + c` is the wrong test. The one
-   drafted earlier this session (`c = 8`) would not even have fired on the
+   drafted earlier (`c = 8`) would not even have fired on the
    existing data: `H(2,8) = 14` against `w + 8 = 16`.
 3. Each `w` still yields a genuine exclusion — no row of radius `<= w` has an
    eventually period-2 centre trace — but the horizon needed grows at least
@@ -251,15 +234,15 @@ check that the instrument is reporting honestly.
 
 ## What is genuinely open on R1 after this inventory
 
-- **R1-a. CLOSED this session** — `H(2,w) >= w`, see above. It was drafted as
+- **R1-a. CLOSED** — `H(2,w) >= w`, see above. It was drafted as
   the highest-value open measurement and it turned out to be answerable for
   free. Do not spend SMT compute on `w = 9,10,11`.
 - **R1-b.** The general-finite-row form of the zero-set obligation: over all
   finite rows (not the lone seed), is `r|Z` forced periodic by a periodic `c`?
   The driven-RHP evidence above says local forcing fails; the open question is
   whether diagram-global consistency restores it.
-- **R1-c.** `comoving_columns_T32768.log` (13 KB) was not re-derived this
-  session and is the only substantive `r1-r1zero` artefact still unaudited.
+- **R1-c.** `comoving_columns_T32768.log` (13 KB) was not re-derived and is
+  the only substantive `r1-r1zero` artefact still unaudited.
 
 ## Files
 

@@ -1,8 +1,8 @@
 # Pre-registration: the Rule 90 soundness control for the period-2 forced-continuation census
 
 Date: 2026-09-05. Frozen BEFORE any Rule 90 census number was produced.
-Author session: autonomous, research mode. Directory: `experiments/rule30/p2-needle-attack/`,
-files prefixed `r90_`, self-contained (zero imports from `p1-period2-invariant`).
+Directory: `experiments/rule30/p2-needle-attack/`, files prefixed `r90_`,
+self-contained (zero imports from `p1-period2-invariant`).
 
 ## 0. Why this control exists (obstruction B / the filter)
 

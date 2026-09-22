@@ -5,7 +5,6 @@
 the reason below.**
 
 Date 2026-08-30.  Code `discriminator.py`, log `discriminator.log`.
-Modal: $0.  Paid model-provider calls: $0.
 
 ## 1. The lemma that covers all three
 

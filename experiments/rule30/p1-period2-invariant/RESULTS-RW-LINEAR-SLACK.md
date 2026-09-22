@@ -167,9 +167,9 @@ only where the null has not yet been tested against its own clustering.
 What would settle it is a proof that the `E` constraint per column is not
 merely one bit on average but one bit unconditionally, given the state.  That
 is a statement about the ancestry law in `RESULTS-PSI-ANCESTRY-LAW.md` section
-3, and it is the sharpest concrete target this session leaves.
+3, and it is the sharpest concrete open target.
 
-## 9. Three exact facts added while the multi-agent run was in flight
+## 9. Three additional exact facts
 
 **9.1 The hard-core ablation, which doubles as a gate.**  Dropping the
 hard-core condition from RW leaves exactly `(BWH+)` (full Moore state pinned
