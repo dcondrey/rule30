@@ -28,13 +28,10 @@ independent first-round audit in
 The second round received that audit, including exact counterexamples.
 
 The fixed limit was four initial proposals and two refinements, each with
-a separate critique: twelve serialized model calls total. Calls used
-BlindMind's existing `claude-haiku-4-5-20251001` Claude CLI provider through
-the authenticated subscription, with no API-key provider or fallback,
-model tools, automatic retries, GPU work, or seed regeneration. Per-call
-and per-round wall limits were 240 and 1,200 seconds. The bridge omits the
-stock repeated-batch retry loop. These limits were local execution choices,
-not additional user approval requirements.
+a separate critique: twelve serialized model calls total, using BlindMind's
+existing `claude-haiku-4-5-20251001` provider, with no API-key provider or
+fallback, model tools, automatic retries, GPU work, or seed regeneration.
+The bridge omits the stock repeated-batch retry loop.
 
 All prompts, schemas, structured results, raw responses, round records,
 source hashes, and the private concept database are retained under

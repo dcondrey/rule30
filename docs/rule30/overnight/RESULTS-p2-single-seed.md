@@ -143,8 +143,8 @@ arguments nobody has written yet.
 ## Reproduction
 
 - uv run python experiments/overnight-arms/common/ensemble_filter.py  (Rule 90 control)
-- Theorem A and fixed-point checks: see the verification snippet recorded in this session's
-  transcript; regenerate the column with row = 1; row = (row << 2) ^ ((row << 1) | row),
+- Theorem A and fixed-point checks are short direct computations from the recursion:
+  regenerate the column with row = 1; row = (row << 2) ^ ((row << 1) | row),
   a(t) = bit t of row at time t.
 
 ## Spending

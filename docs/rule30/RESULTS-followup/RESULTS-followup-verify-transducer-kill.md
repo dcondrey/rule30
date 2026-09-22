@@ -2,8 +2,8 @@
 
 Date: 2026-08-30. Code:
 `experiments/overnight-arms/roundtable_followup/verify_transducer_kill/verify_transducer.py`.
-Nothing committed. Modal/paid model-provider calls: $0 (pure computation, no
-model calls used to reach the verdict below).
+Nothing committed. Pure computation; no model calls used to reach the verdict
+below.
 
 ## Verdict
 

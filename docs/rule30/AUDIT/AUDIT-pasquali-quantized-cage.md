@@ -19,7 +19,7 @@ reviewed. 3,558 pages; retrieved in full (`the_quantized_cage.pdf`, 27.8 MB,
 and `executive_summary.pdf`, 486 KB) via Zenodo's `/api/records/.../content`
 endpoint with an explicit `Range: bytes=0-<size-1>` header — the plain GET
 returns HTTP 504 for both files regardless of size (486 KB also failed),
-so this session's failure was not the file-size cap noted in
+so this was not the file-size cap noted in
 `REFUTATION-fradkin-rule30-resolved.md`; the range request worked around it
 and both PDFs are byte-complete (`pdftotext`, 3,558 pages). The Rule 30
 material is §76.7, "The three Wolfram Rule 30 Prize Problems in the cage,"
@@ -151,10 +151,10 @@ itself checks out at `D(f) = 2n+1` for `n = 1..4` (consistent with, though not
 a proof of, the paper's conclusion for Rule 30 specifically) — the defect is
 in the general argument, not in whether Rule 30 happens to be evasive.
 
-Reproduction: `dt_complexity.py` in the scratch directory for this session
-(brute-force memoized minimum decision-tree search over the exact truth
-table; not committed to the repository, as it is a one-off check rather than
-a reusable probe — regenerate from the recursion described above if needed).
+Reproduction: `dt_complexity.py` (brute-force memoized minimum decision-tree
+search over the exact truth table; not committed to the repository, as it is
+a one-off check rather than a reusable probe — regenerate from the recursion
+described above if needed).
 
 ## 4. Why the theorem, even repaired, would still not touch Problem 3
 

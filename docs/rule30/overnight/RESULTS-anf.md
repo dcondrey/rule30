@@ -256,4 +256,4 @@ inert.
 
 ## Spending
 
-Local CPU only. Modal $0. Paid model calls $0 beyond this session's own agents.
+Local CPU only. Modal $0.

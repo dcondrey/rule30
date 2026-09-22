@@ -94,5 +94,4 @@ Outputs: runs/overnight/ergodic/{main.json, saturate.json, main.log, sat3.log}.
 
 ## Spending
 
-Local CPU only, exact rational arithmetic, no RNG, no seeds needed. Modal $0. Paid model calls
-$0 beyond this session's own agents.
+Local CPU only, exact rational arithmetic, no RNG, no seeds needed. Modal $0.

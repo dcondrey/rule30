@@ -49,13 +49,6 @@ recompression, axial periodicity, dihedral quotients (ARM7); truncated GF(2)[x]/
 (dies n=5); truncated carry-polynomial matrix (dies n=2); row-parity cancellation; finite 2-kernel
 automaton; left-permutive affine boundary map; inverse-diagonal transfer matrix.
 
-## Off-limits (active elsewhere; entire RESULTS-alt-trace-fiber.md is occupied territory)
-
-Alternating-trace fiber; bounded-left-depth exclusion certificates (Claim(d) through d=24);
-parity-checked survivor map (target A1); {1,4} wallpaper member (7-periodic word 0110010);
-Rowland-style column-band lock proofs (target A2). Also PATH.md route R1 (zero-set obligation)
-is the repo's own stated second target.
-
 ## Notation (use consistently)
 
 - Rule: s(t+1,x) = s(t,x-1) XOR (s(t,x) OR s(t,x+1)); GF(2): l + c + r + c*r, degree 2, left-permutive.

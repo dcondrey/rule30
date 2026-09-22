@@ -3,8 +3,7 @@
 This was a bounded two-generation search with three attempts per generation,
 twelve variation/critic call slots, one orchestration turn, and five previously
 measured structural exclusions. The working models were
-`anthropic/claude-opus-4-6` and `openai/o3-mini` through OpenRouter. The fixed
-run's session ID was `20260828T025902Z`.
+`anthropic/claude-opus-4-6` and `openai/o3-mini` through OpenRouter.
 
 ## Application result
 

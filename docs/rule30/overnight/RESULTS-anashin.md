@@ -98,7 +98,7 @@ in this encoding can reach the center column.
 ## Reproduction
 
 Comoving maps, bijectivity and cycle structure mod 2^k, and the odometer counterexample are all
-short direct computations; the verification snippets are in this session's transcript. Rule 30
+short direct computations from the maps given below; no standalone script is checked in. Rule 30
 right-edge frame: y = x ^ ((x<<1)|(x<<2)); Rule 90: y = x ^ (x<<2); odometer: x -> x+1 with
 diagonal digit bit_t(x_t).
 
