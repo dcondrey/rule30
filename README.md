@@ -6,7 +6,7 @@
 <p align="center">
   <a href=".bestpractices.json"><img src="https://img.shields.io/badge/best%20practices-evidence%20reviewed-6a4c93?style=flat-square&labelColor=20232a" alt="Best Practices Evidence"></a>
   <a href="https://github.com/sponsors/dcondrey"><img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?style=flat-square&labelColor=20232a" alt="GitHub Sponsors"></a>
-  <a href="https://github.com/dcondrey/rule30"><img src="https://img.shields.io/badge/status-active%20research-blue?style=flat-square&labelColor=20232a&color=brightgreen" alt="Research status"></a>
+  <a href="https://github.com/dcondrey/rule30"><img src="https://img.shields.io/badge/status-active%20research-brightgreen?style=flat-square&labelColor=20232a" alt="Research status"></a>
   <a href="https://rule30prize.org/"><img src="https://img.shields.io/badge/prize%20problems%20solved-0%20of%203-red?style=flat-square&labelColor=20232a" alt="Prize problems solved"></a>
   <a href="docs/rule30/REFERENCE/START-HERE.md"><img src="https://img.shields.io/badge/reproducibility-exact%20checks%20%2B%20audit%20logs-green?style=flat-square&labelColor=20232a" alt="Reproducibility"></a>
   <a href="https://orcid.org/0009-0003-1849-2963"><img src="https://img.shields.io/badge/ORCID-0009--0003--1849--2963-green.svg?style=flat-square&labelColor=20232a&color=A6CE39" alt="ORCID"></a>
@@ -52,7 +52,8 @@ The project contains proof-level classifications of the constant-zero and
 constant-one trace fibers for nonzero finite configurations. Combined with the
 same-orbit reduction, these exclude eventually constant center traces. The
 zero-tail argument has a manuscript, independent proof artifacts, figures,
-and a hostile audit under [`docs/rule30/paper/`](docs/rule30/paper/).
+and a hostile audit under
+[`docs/papers/Finite Configurations Cannot Generate a Constant Trace in Rule 30/`](docs/papers/Finite%20Configurations%20Cannot%20Generate%20a%20Constant%20Trace%20in%20Rule%2030/).
 
 This is a genuine rung toward P1, but it does not exclude nonconstant periods.
 
@@ -88,32 +89,32 @@ S_0=c,  S_i=g_(S_(i-1))(R_i).
 ```
 
 The final scan state uniquely emits or rejects the next hard-core endpoint.
-Mortality of every such finite queue would prove the period-two rung.  The
+Mortality of every such finite queue would prove the period-two rung. The
 exact quotient `3 -> 1` reduces its nonleading alphabet to three symbols, and
 every normalized successor avoids `20`, `22`, and `011`; the all-length
-mortality induction remains open.  The exact survival-language morph expands
+mortality induction remains open. The exact survival-language morph expands
 minimal DFA rank, so the remaining target is an amortized proof that its
-shortest accepted queue tends to infinity.  This minimum now has an exact
+shortest accepted queue tends to infinity. This minimum now has an exact
 graph form: at horizon `h`, it is one plus product-graph distance from the
 constant height-`h+1` frontier to the `F_(h+3)` hard-core inverse-cone
-diagonals, with the invariant suffix DFA as the second factor.  The bare
-frontier graph handles arbitrary queues.  Proving either equivalent distance
+diagonals, with the invariant suffix DFA as the second factor. The bare
+frontier graph handles arbitrary queues. Proving either equivalent distance
 divergence would close the period-two rung.
 
 There is now a uniform ordered descent inside each successful queue update.
 After removing the newly appended boundary symbol, the transformed old
 coordinates are strictly smaller in colex order for both `0<2<1` and
-`2<0<1`.  Hence the rightmost decisive input is always a `1`, replaced by
-`0` or `2`.  Finite synchronous products prove this for words of every
-length.  It is not yet mortality: an appended boundary `1` can replace the
+`2<0<1`. Hence the rightmost decisive input is always a `1`, replaced by
+`0` or `2`. Finite synchronous products prove this for words of every
+length. It is not yet mortality: an appended boundary `1` can replace the
 consumed pivot at a newer coordinate, so the remaining task is an ancestry
-bound on those replacements.  Symbol-count, feature-start, and root-coordinate
-budgets are all false.  The last is killed by the targeted family
+bound on those replacements. Symbol-count, feature-start, and root-coordinate
+budgets are all false. The last is killed by the targeted family
 `3001 0^m 2`: at `m=382`, root 3 reaches pull depth 3 despite capacity 2;
-at `m=390` it reaches depth 4.  Long zero runs therefore store dyadic phase
-to the right of the root.  The live ancestry options are to retain those
+at `m=390` it reaches depth 4. Long zero runs therefore store dyadic phase
+to the right of the root. The live ancestry options are to retain those
 gap scales, or to prove a bound only for reversed diagonals derived from a
-hard-core endpoint—the abstract counterfamily is not endpoint-derived.  In
+hard-core endpoint—the abstract counterfamily is not endpoint-derived. In
 that restricted setting an all-length table argument now localizes every
 pull root to the last three initial queue coordinates: a possible time-zero
 pull forces current raw diagonal prefix `203`, and every later pull lies on
@@ -121,8 +122,8 @@ the proved third-last ray.
 
 Conditioning the terminal set on the complete actual Rule 30 right cone
 raises the tail-2 minimum from `18` to `23` at horizon 12 and changes exact
-`D8` phase costs.  The conditioned sets form a uniform inverse subsystem, but
-rank descent may prepend a finite artificial endpoint prefix.  Whole-prefix
+`D8` phase costs. The conditioned sets form a uniform inverse subsystem, but
+rank descent may prepend a finite artificial endpoint prefix. Whole-prefix
 conditioning is therefore too strong for the application; actual-right
 information must be imposed beyond that prefix, as in the scale-block
 reduction.
@@ -220,7 +221,7 @@ and negative certificates they implement; it does not prove P1.
 | `docs/rule30/REFERENCE/PATH.md` | Exhaustive internal and external attempt register |
 | `experiments/README.md` | Executable-artifact directory router |
 | `docs/papers/` | Manuscripts and publication audits, one directory per paper |
-| [Proof Atlas](https://dcondrey.github.io/rule30/) | Every catalog record, the reduction ladder, and the ranked next moves, as a browsable page |
+| [`dcondrey.github.io/rule30`](https://dcondrey.github.io/rule30/) | Proof Atlas: every catalog record, the reduction ladder, and the ranked next moves, as a browsable page |
 | `experiments/rule30/p1-period2-invariant/` | Current P1 derivations and exact certificates |
 | `experiments/rule30-subword-extended/` | P2 center-word and factor-complexity measurements |
 | `experiments/openevolve-p1-cocycle/` | P1 adaptive-rank conjecture search and width-18 falsifier |
@@ -270,7 +271,7 @@ uniform proof and independently checkable artifacts.
 ## Current best next theorem
 
 The cleanest finite-word target is now the **projected diagonal-support
-lemma**.  If
+lemma**. If
 `s_c(W)` is the legal continuation length inside the exact forced block
 `R_c(W)`, it is enough to prove for every nonempty hard-core word `W` that
 
@@ -279,17 +280,17 @@ s_2(W) <= |W|,
 s_3(W) <= |W| + 1.
 ```
 
-Zero the source coordinates successively from left to right.  At survival row
+Zero the source coordinates successively from left to right. At survival row
 `j`, it is enough to prove one adjacent change at some token `k>=j`, using
 only `(alpha,beta)` for tail 2 and `(alpha,gamma)` for tail 3 (the latter only
-through the final nonfinal row).  No matching or greedy history is required.
+through the final nonfinal row). No matching or greedy history is required.
 The claim has zero failures on the complete hard-core corpus through length
 23; its held-out unrestricted tail-2 supplement alone contains 111,899 cases.
-This is a uniform conjecture, not a proof.  An independent one-credit halving
-recurrence also passes through length 23 and would suffice if proved.  Its
+This is a uniform conjecture, not a proof. An independent one-credit halving
+recurrence also passes through length 23 and would suffice if proved. Its
 held-out refinement uses the fixed child `(left half, tail 2)` for both parent
-tails and passes 365,414 cases.  See
-`RESULTS-PROJECTED-DIAGONAL-HALVING.md`.  Pointwise derivative, affine-rank,
+tails and passes 365,414 cases. See
+`RESULTS-PROJECTED-DIAGONAL-HALVING.md`. Pointwise derivative, affine-rank,
 reverse-order, local edge-monotonicity, and literal half-block embeddings have
 exact counterexamples.
 
@@ -307,11 +308,11 @@ Problem 1. See `RESULTS-DYADIC-EXCEPTION-SEPARATOR.md` in the period-two
 directory.
 
 The inverse-terminal and Peel triangles now satisfy the exact rotated law
-`P(I(sigma e))=sigma^2 I(e)`.  Combined with preservation of a finite
+`P(I(sigma e))=sigma^2 I(e)`. Combined with preservation of a finite
 rightmost nonzero cell, it excludes every eventually periodic hard-core
-endpoint from finite Peel rank, including rank zero.  Every remaining
+endpoint from finite Peel rank, including rank zero. Every remaining
 collision must have an aperiodic endpoint; positive tail ranks grow exactly
-as `m,m+1,...`.  See `RESULTS-ROTATED-PEEL-IDENTITY.md` in the same directory.
+as `m,m+1,...`. See `RESULTS-ROTATED-PEEL-IDENTITY.md` in the same directory.
 
 ## Authorship and citation
 
