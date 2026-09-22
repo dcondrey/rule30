@@ -8,7 +8,7 @@
   <a href="https://github.com/sponsors/dcondrey"><img src="https://img.shields.io/badge/GitHub%20Sponsors-Sponsor-EA4AAA?style=flat-square&labelColor=20232a" alt="GitHub Sponsors"></a>
   <a href="https://github.com/dcondrey/rule30"><img src="https://img.shields.io/badge/status-active%20research-blue?style=flat-square&labelColor=20232a&color=brightgreen" alt="Research status"></a>
   <a href="https://rule30prize.org/"><img src="https://img.shields.io/badge/prize%20problems%20solved-0%20of%203-red?style=flat-square&labelColor=20232a" alt="Prize problems solved"></a>
-  <a href="docs/rule30/START-HERE.md"><img src="https://img.shields.io/badge/reproducibility-exact%20checks%20%2B%20audit%20logs-green?style=flat-square&labelColor=20232a" alt="Reproducibility"></a>
+  <a href="docs/rule30/REFERENCE/START-HERE.md"><img src="https://img.shields.io/badge/reproducibility-exact%20checks%20%2B%20audit%20logs-green?style=flat-square&labelColor=20232a" alt="Reproducibility"></a>
   <a href="https://orcid.org/0009-0003-1849-2963"><img src="https://img.shields.io/badge/ORCID-0009--0003--1849--2963-green.svg?style=flat-square&labelColor=20232a&color=A6CE39" alt="ORCID"></a>
 </p>
 <!-- repo-header:end -->
@@ -155,14 +155,14 @@ None of these bounded results closes P2 or P3.
 The project is deliberately layered so that resuming one question does not
 require loading the full research history.
 
-1. Read [`START-HERE.md`](docs/rule30/START-HERE.md) for current status, live
+1. Read [`START-HERE.md`](docs/rule30/REFERENCE/START-HERE.md) for current status, live
    theorem targets, and the compact attempt router.
-2. Use [`EXPERIMENT-ATLAS.md`](docs/rule30/EXPERIMENT-ATLAS.md) to compare
+2. Use [`EXPERIMENT-ATLAS.md`](docs/rule30/REFERENCE/EXPERIMENT-ATLAS.md) to compare
    experiment assumptions, state representations, evidence levels, failure
    modes, and compatible synthesis opportunities.
-3. Consult [`FACT-INDEX.md`](docs/rule30/FACT-INDEX.md) for exact identities,
+3. Consult [`FACT-INDEX.md`](docs/rule30/REFERENCE/FACT-INDEX.md) for exact identities,
    proved facts, controls, and reusable obstructions.
-4. Open [`PATH.md`](docs/rule30/PATH.md) only when auditing the complete attempt
+4. Open [`PATH.md`](docs/rule30/REFERENCE/PATH.md) only when auditing the complete attempt
    register or checking whether an idea has already been tried.
 
 For the active period-two P1 effort, go directly to the
@@ -213,13 +213,14 @@ and negative certificates they implement; it does not prove P1.
 
 | Path | Purpose |
 |---|---|
-| `docs/rule30/START-HERE.md` | Compact status and attempt router |
-| `docs/rule30/EXPERIMENT-ATLAS.md` | Cross-examination matrix, correlations, and synthesis queue |
-| `docs/rule30/RESULTS-cross-route-synthesis-2026-09-02.md` | Corrected cross-route correlations, mashups, and ranked next lemmas |
-| `docs/rule30/FACT-INDEX.md` | Theorem, identity, control, and obstruction index |
-| `docs/rule30/PATH.md` | Exhaustive internal and external attempt register |
+| `docs/rule30/REFERENCE/START-HERE.md` | Compact status and attempt router |
+| `docs/rule30/REFERENCE/EXPERIMENT-ATLAS.md` | Cross-examination matrix, correlations, and synthesis queue |
+| `docs/rule30/RESULTS-other/RESULTS-cross-route-synthesis-2026-09-02.md` | Corrected cross-route correlations, mashups, and ranked next lemmas |
+| `docs/rule30/REFERENCE/FACT-INDEX.md` | Theorem, identity, control, and obstruction index |
+| `docs/rule30/REFERENCE/PATH.md` | Exhaustive internal and external attempt register |
 | `experiments/README.md` | Executable-artifact directory router |
-| `docs/rule30/paper/` | Zero-tail manuscript and publication audit |
+| `docs/papers/` | Manuscripts and publication audits, one directory per paper |
+| [Proof Atlas](https://dcondrey.github.io/rule30/) | Every catalog record, the reduction ladder, and the ranked next moves, as a browsable page |
 | `experiments/rule30/p1-period2-invariant/` | Current P1 derivations and exact certificates |
 | `experiments/rule30-subword-extended/` | P2 center-word and factor-complexity measurements |
 | `experiments/openevolve-p1-cocycle/` | P1 adaptive-rank conjecture search and width-18 falsifier |

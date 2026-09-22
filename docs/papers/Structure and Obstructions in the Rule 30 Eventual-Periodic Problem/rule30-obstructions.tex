@@ -1,0 +1,988 @@
+\documentclass[11pt]{article}
+
+% ============================================================================
+% Structure and Obstructions in the Rule 30 Eventual-Periodicity Problem
+% Comprehensive paper: proven results + period-2 census + obstruction register.
+% Part I is lifted from zero-tail-note.tex (the standalone period-1 note).
+% ============================================================================
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Structure and Obstructions in the Rule 30 Eventual-Periodicity Problem},
+  pdfauthor={David Lee Condrey}
+}
+
+% --- figures, lifted from zero-tail-note.tex along with Part I's proofs ---
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,skip=6pt}
+\definecolor{ruleblue}{RGB}{31,78,121}
+\definecolor{rulegold}{RGB}{191,125,17}
+\definecolor{ruleink}{RGB}{23,33,48}
+\definecolor{ruleband}{RGB}{250,232,199}
+\tikzset{
+  rulecard/.style={draw=ruleblue!70!black, line width=0.7pt,
+    rounded corners=4pt, fill=ruleblue!4, inner sep=7pt, align=center,
+    minimum height=1.38cm},
+  rulecardfill/.style={fill=ruleblue!4, rounded corners=2.4pt},
+  rulecardline/.style={draw=ruleblue!70!black, line width=0.6pt,
+    rounded corners=2.4pt},
+  rulearrow/.style={-{Latex[length=2.8mm]}, very thick, rulegold!90!black},
+}
+\newcommand{\stlabel}[1]{{\small\textcolor{ruleblue!90!black}{\bfseries #1}}}
+\newcommand{\stnote}[1]{{\small\textcolor{rulegold!90!black}{\bfseries #1}}}
+\newcommand{\stpanel}[3]{%
+  \begin{tabular}[t]{@{}c@{}}
+    \stlabel{#1}\\[0.5pt]
+    {\scriptsize #2}\\[3.5pt]
+    #3
+  \end{tabular}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\F}{\mathcal F}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\gm}{\gamma}
+
+\title{\vspace{-2em}Structure and Obstructions in the\\Rule 30 Eventual-Periodicity Problem}
+\author{David Lee Condrey\\WritersLogic, Inc.\\\texttt{david@writerslogic.com}}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Wolfram's Prize Problem~1 asks whether the center column of Rule~30's
+lone-seed orbit is non-periodic. We leave Problems~1, 2 and 3 open. Instead,
+we map the provable/unprovable boundary. First, we fully characterize eventual
+period-one for all nonzero finite configurations: the two constant-trace
+fibers avoid finitely supported configurations off-origin, and the sharp
+constant-prefix horizon is $w+2$. Second, we delimit eventual period-two: a
+mechanized $\omega$-automaton ladder --- proved uniform in right depth, left
+depth, and diagonal bound --- cannot close the case; an exhaustive
+forced-continuation census to $n=24$ and $n=30$ by a verified fast method
+shows exclusion hinges on a bounded set of extremal forcing states. Third, we
+catalog ninety-four failed attempts in nine obstruction classes, unified by
+one fact: Rule~30's nonlinearity is its only difference from additive
+Rule~90, whose center column is eventually periodic, so every
+nonlinearity-free proof must fail. A route-by-route compendium and
+computational archive accompany the paper.
+\end{abstract}
+
+\tableofcontents
+
+% ============================================================================
+\section{Notation}
+\label{sec:notation}
+% ============================================================================
+
+Symbols recurring across Parts~\ref{sec:periodone}--\ref{sec:ladder}, defined
+again at first use in context.
+
+\begin{description}
+\item[$F$] The Rule~30 map, \eqref{eq:rule30}.
+\item[$c_t=\Tr(x)_t=F^t(x)_0$] The center column (trace) at time $t$.
+\item[$R_j,\,L_j$ ($j\ge0$)] The right and left coordinates $x_j,x_{-j}$ of a
+configuration.
+\item[$\F$] The finitely supported configurations.
+\item[$H_r(n)$, $\gm(n)$] Period-two census objects: the residue-$r$ candidate
+sets and the extinction gap (Section~\ref{sec:periodtwo}).
+\item[RW, DLP, SEP, (PT2)] Labels in the period-two reduction chain
+\eqref{eq:chain}.
+\item[$\mathrm{plain}(R)$, $\mathrm{pin}(R)$] Ladder language variants at right
+depth $R$ (Section~\ref{sec:ladder}).
+\item[$k_\star$] The threshold past which the census departs from the spectral
+bound (Section~\ref{sec:periodtwo}).
+\end{description}
+
+% ============================================================================
+\section{Introduction}
+% ============================================================================
+
+Rule~30 is the binary cellular automaton on $\{0,1\}^{\mathbb Z}$ with local rule
+\begin{equation}\label{eq:rule30}
+ F(x)_i=x_{i-1}\oplus(x_i\lor x_{i+1}),
+\end{equation}
+left permutive: fixing $x_i,x_{i+1}$, the value $F(x)_i$ is a bijection of
+$x_{i-1}$.
+
+Wolfram's Rule~30 Prize poses three problems about the center column of the
+lone-seed orbit \cite{wolfram}: whether it is always non-periodic
+(Problem~1), whether each color occurs with equal asymptotic frequency
+(Problem~2), and whether computing its $n$th cell requires $\Omega(n)$
+effort (Problem~3). The column is verified non-periodic only through $10^9$
+steps, and no finite check can settle Problem~1 --- a limit we return to as
+obstruction~H (Section~\ref{sec:register}). We address Problem~1 throughout,
+Problem~2 through the period-two thread, and Problem~3 only in the register.
+
+The finite-configuration version of Problem~1 is open \cite{kopra-thesis}: at
+most one column can be eventually periodic \cite[Thm.~2b]{jen1986}\cite[Prop.~3]{jen},
+and the width-two column is never eventually periodic, though the technique
+does not extend to width one \cite{kopra}.
+
+This paper is organized around one fact that we make load-bearing throughout.
+Rule~90, $F(x)_i = x_{i-1}\oplus x_{i+1}$, is also left permutive, yet its
+lone-seed center column \emph{is} eventually periodic (identically zero off the
+initial step). Hence no argument that uses only left permutivity, additivity, or
+any property Rule~90 shares can decide Problem~1: it would prove a false
+statement about Rule~90. The single property Rule~30 has that Rule~90 lacks is
+the \textsc{or} in \eqref{eq:rule30}, which latches. We call the requirement that
+an argument depend on this latch the \emph{Rule~90 filter}. Every positive
+result below passes it; every failure catalogued in Part~IV either violates it
+or hits one of eight further walls.
+
+\paragraph{What is proved.} Part~I settles eventual period one
+(Section~\ref{sec:periodone}): both constant-trace fibers are computed in closed
+form, the finite configurations meet them only at the origin, and the horizon is
+sharp. Part~III proves three limitation theorems for the period-two ladder
+(Section~\ref{sec:ladder}). These are honest negative results: they say a
+specific, natural, mechanized method cannot close period two, and why.
+
+\paragraph{What is measured, and what is conjectured.} Part~II
+(Section~\ref{sec:periodtwo}) reduces period-two exclusion to a finite-word
+statement, carries the exhaustive census to $n=24$ (and a verified fast method to
+$n=30$), and reports a structural phenomenon: near extinction the surviving
+witnesses collapse onto $O(1)$ extremal forcing states sharing a long common
+suffix and a single failure symbol. We state this as a conjecture with its
+supporting data, never as a theorem.
+
+\paragraph{What fails, and why.} Part~IV (Section~\ref{sec:register}) is the
+register. Nine obstruction classes account for the ninety-four
+routes attempted across this project. We give each class, the routes it kills,
+the kill-reason type, and its Rule~90 status. The exhaustive per-route list is
+the accompanying supplement.
+
+\paragraph{Scope.} Part~V (Section~\ref{sec:scope}) states precisely what is and
+is not reached, against the published state of the art, and lists the concrete
+open leads. We claim no progress on the prize problems themselves.
+
+% ============================================================================
+\section{Part I: Finite configurations cannot generate a constant trace}
+\label{sec:periodone}
+% ============================================================================
+
+This part is lifted, statement and proof, from a companion note carrying the
+full derivation, machine-checked Lean and SMT certificates, and a
+reproducibility appendix; only the two figures and the eight results are
+reproduced here.
+
+We write $c_t:=\Tr(x)_t=F^t(x)_0$, $R_j:=x_j$, $L_j:=x_{-j}$ ($j\ge0$), and let
+$\F$ denote the finitely supported configurations. The trace sees only column
+$0$, but under a left-permutive rule a discrepancy left of the origin
+propagates rightward along a diagonal and must eventually reach it. The
+classification rests on this one fact, which uses only locality and left
+permutivity, not the specific form of \eqref{eq:rule30}.
+
+\begin{lemma}[Triangular uniqueness]\label{lem:unique}
+If two configurations agree at every coordinate $i\ge0$ and have the same
+central trace, then they are equal.
+\end{lemma}
+\begin{proof}
+If $-n$ is their rightmost differing coordinate, locality preserves agreement
+to its right through time $n$. Left permutivity preserves the discrepancy
+along $(-n,0),(-n+1,1),\dots,(0,n)$, contradicting equal traces. In its finite
+form, if the rows agree on $i\ge0$ and their traces agree for $0\le t\le r$,
+the same induction forces agreement at $-r,-r+1,\dots,-1$.
+\end{proof}
+
+Uniqueness alone does not say what the forced left half looks like. The next
+result computes it: the rows with zero trace form one invariant class
+$\mathcal C_m$ for each position $m$ of the first right-hand one, each class is
+carried to its predecessor by $F$, and the left half is a prefix-OR of the
+right. Figure~\ref{fig:panels}(a) is a member of $\mathcal C_3$.
+
+\begin{theorem}[Zero-trace fiber]\label{thm:fiber}
+For a prescribed right half with $R_0=0$, the zero-trace-compatible left half is
+unique. If the positive half is nonzero and $m=\min\{j\ge1:R_j=1\}$, the forced
+left half is $L_j=0\ (j<m)$, $L_m=1$, $L_j=j\bmod2\ (j>m)$, with $R_j$ for
+$j>m$ arbitrary. If instead the positive half is zero, the unique row is zero.
+Equivalently, in prefix-OR form,
+\begin{align}
+ L_{2k+1}&=\bigvee_{j=1}^{2k+1}R_j &&(k\ge0),\\[-2pt]
+ L_{2k}&=R_{2k}\land\neg\!\bigvee_{j=1}^{2k-1}R_j &&(k\ge1).
+\end{align}
+\end{theorem}
+\begin{proof}
+For $m\ge1$, let $\mathcal C_m$ consist of rows satisfying these conditions.
+One Rule~30 step gives
+\begin{equation}\label{eq:updates}
+\begin{aligned}
+ x'_0&=L_1\oplus R_1, &
+ R'_j&=R_{j-1}\oplus(R_j\lor R_{j+1}), &
+ L'_j&=L_{j+1}\oplus(L_j\lor L_{j-1}).
+\end{aligned}
+\end{equation}
+Suppose $m>1$. These identities give $x'_0=0$, $R'_j=L'_j=0\ (j<m-1)$,
+$R'_{m-1}=L'_{m-1}=1$, $L'_m=m\bmod2$. For $j>m$, including $j=m+1$ because
+$L_m=1$, the OR in the last update is one, so $L'_j=(1-(j\bmod2))\oplus1=j\bmod2$.
+Thus $F(\mathcal C_m)\subseteq\mathcal C_{m-1}$. For $m=1$, the alternating left
+half is fixed, $x'_0=1\oplus1=0$, and $R'_1=0\oplus(1\lor R_2)=1$ independently
+of the right tail; hence $F(\mathcal C_1)\subseteq\mathcal C_1$. Every
+$\mathcal C_m$ therefore realizes the zero trace. A nonzero right half selects a
+realization by its first one, and Lemma~\ref{lem:unique} makes it unique; a
+zero right half forces a zero left half by the same lemma against the zero row.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\begin{tabular}{@{}c@{\hspace{7mm}}c@{\hspace{7mm}}c@{}}
+\stpanel{(a) Rule 30}{class $\mathcal C_3$, center zero}{%
+  \begin{tikzpicture}[scale=2.365]\input{figures/fig-fiber}\end{tikzpicture}}
+&
+\stpanel{(b) Rule 90}{$x=\delta_{-1}+\delta_{1}$, center zero}{%
+  \begin{tikzpicture}[scale=2.365]\input{figures/fig-rule90}\end{tikzpicture}}
+&
+\stpanel{(c) Rule 30}{same row, center escapes}{%
+  \begin{tikzpicture}[scale=2.365]\input{figures/fig-rule30}\end{tikzpicture}}
+\end{tabular}
+\\[3mm]
+\stnote{gold band and caret mark column $0$}
+\caption{Time runs downward. In (a) the forced left tail alternates, hence is
+infinite, which is what Corollary~\ref{cor:finite} exploits. Panels (b) and
+(c) run one finite row under both rules; the difference is the OR latch in
+\eqref{eq:rule30}.}
+\label{fig:panels}
+\end{figure}
+
+The other constant trace has a simpler fiber: one row per right half, and the
+left half no longer depends on which right half it is.
+
+\begin{theorem}[All-one fiber]\label{thm:onefiber}
+For a prescribed right half with $R_0=1$, the left half compatible with an
+identically-one trace is unique and independent of the right half:
+$L_j=1\iff j$ is positive and even.
+\end{theorem}
+\begin{proof}
+Write $L_0:=x_0=R_0=1$, so the third identity of \eqref{eq:updates},
+$L'_j=L_{j+1}\oplus(L_j\lor L_{j-1})$, applies at every $j\ge1$. Under the
+checkerboard pattern it gives $0\oplus(1\lor0)=1$ for even $j$ and
+$1\oplus(0\lor1)=0$ for odd $j$, so the left half is fixed by $F$ whatever the
+right half is. At the origin, $F(x)_0=L_1\oplus(L_0\lor R_1)=0\oplus1=1$
+independently of $R_1$, so the trace is identically one and $L_0=1$ is restored
+at every step. Lemma~\ref{lem:unique} makes the left half unique.
+\end{proof}
+
+Every nonzero row in Theorem~\ref{thm:fiber} carries ones arbitrarily far to
+the left, so none of them is finitely supported. That is the whole of the next
+statement, once one checks that a finite orbit cannot become the zero row.
+
+\begin{corollary}\label{cor:finite}
+$\Tr^{-1}(0^{\mathbb N})\cap\F=\{0\}$. Moreover, no column of the orbit of a
+nonzero $x\in\F$ is eventually zero.
+\end{corollary}
+\begin{proof}
+Every nonzero row in Theorem~\ref{thm:fiber} has ones at all sufficiently large
+odd left depths. If a column of a finite orbit were zero from time $T$ onward,
+translation would make $F^T(x)$ a finite zero-trace row. It is nonzero: if
+$[a,b]$ is the support interval of a nonzero finite row, its next row has ones
+at $a-1$ and $b+1$ because Rule~30 maps $001$ and $100$ to one.
+\end{proof}
+
+Corollary~\ref{cor:finite} is not a consequence of left permutivity alone:
+Rule~90 is also left permutive, yet the finite row with ones at $\pm1$ keeps a
+zero center forever (Figure~\ref{fig:panels}(b,c)). The Rule-30-specific step
+is the OR latch $R'_1=1\lor R_2=1$ in the proof of Theorem~\ref{thm:fiber},
+which has no analogue in an additive rule.
+
+The same latch upgrades the corollary from one constant to both, with no
+further machinery. Theorem~\ref{thm:onefiber} proves the second half again and
+independently, since the checkerboard pattern has ones at every positive even
+depth; the argument below is shorter and is the one to quote.
+
+\begin{corollary}\label{cor:constant}
+No column of the orbit of a nonzero $x\in\F$ is eventually constant.
+\end{corollary}
+\begin{proof}
+The eventually-zero case is Corollary~\ref{cor:finite}. Suppose instead some
+column is eventually one; translating, take it to be column $0$, so $c_t=1$
+for all $t\ge T$. Applying \eqref{eq:rule30} at the origin gives
+$l_t=c_{t+1}\oplus(c_t\lor r_t)$, and $c_t=1$ collapses the disjunction, so
+$l_t=1\oplus c_{t+1}$. For $t\ge T$ we also have $c_{t+1}=1$, hence $l_t=0$.
+Column $-1$ is then zero from time $T$ onward, which Corollary~\ref{cor:finite}
+forbids.
+\end{proof}
+
+Corollary~\ref{cor:finite} says a finite row's center cannot stay zero forever.
+How long it can stay zero, as a function of the support radius, is exactly one
+step past the light cone of the first odd depth beyond that radius. For $w\ge1$
+let $\mathcal S_w=\{x\ne0:\supp(x)\subseteq[-w,w],x_0=0\}$, and for
+$x\in\mathcal S_w$ let $H(x)=\max\{h:F^t(x)_0=0\text{ for }0\le t\le h\}$.
+
+\begin{theorem}[Sharp finite horizon]\label{thm:horizon}
+Let $w\ge1$. Then
+\begin{equation}
+ \max_{x\in\mathcal S_w}H(x)=2\left\lceil\frac w2\right\rceil,\qquad
+ \#\!\left\{x\in\mathcal S_w:H(x)=2\left\lceil\frac w2\right\rceil\right\}=2^w-1.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let $q$ be the least odd integer greater than $w$, so $q-1=2\lceil w/2\rceil$.
+If the positive right half is nonzero, a trace zero through time $q$, compared
+with its zero-trace completion, would force by finite-prefix uniqueness and
+the prefix-OR identity $x_{-q}=\bigvee_{j=1}^qR_j=1$, contradicting $q>w$. If
+that half is zero, comparison with the zero row makes every nonzero left cell
+visible by time $w$. Thus $H(x)\le q-1$. Conversely, choose any of the $2^w-1$
+nonzero words $(R_1,\dots,R_w)$, install the prefix-OR pattern through left
+depth $w$, and zero all other cells. This row agrees with its infinite
+zero-trace completion through the light cone of time $q-1$; when $w$ is odd,
+the extra depth $w+1$ is even and forced to zero. The missing odd cell at depth
+$q$ creates a discrepancy at time $q$, and finite-prefix uniqueness excludes
+further extremizers.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\begin{tabular}{@{}c@{\hspace{5mm}}c@{\hspace{5mm}}c@{}}
+\stlabel{$w=1$} & \stlabel{$w=2$} & \stlabel{$w=3$}
+\\[3pt]
+\begin{tikzpicture}[scale=2.8224]\input{figures/fig-horizon-1}\end{tikzpicture} &
+\begin{tikzpicture}[scale=2.8224]\input{figures/fig-horizon-2}\end{tikzpicture} &
+\begin{tikzpicture}[scale=2.8224]\input{figures/fig-horizon-3}\end{tikzpicture}
+\\[3.5mm]
+\stlabel{$w=4$} & \stlabel{$w=5$} & \stlabel{$w=6$}
+\\[3pt]
+\begin{tikzpicture}[scale=2.8224]\input{figures/fig-horizon-4}\end{tikzpicture} &
+\begin{tikzpicture}[scale=2.8224]\input{figures/fig-horizon-5}\end{tikzpicture} &
+\begin{tikzpicture}[scale=2.8224]\input{figures/fig-horizon-6}\end{tikzpicture}
+\end{tabular}
+\\[3mm]
+\stnote{circled cell $=$ first nonzero center, at time $2\lceil w/2\rceil+1$}
+\caption{One extremizer of Theorem~\ref{thm:horizon} per radius, truncated
+from the zero-trace completion at left depth $w$. The horizon is flat across
+each pair $w=2k-1,2k$, which is the parity effect in the statement.}
+\label{fig:horizon}
+\end{figure}
+
+The one-trace horizon is the same computation against the checkerboard fiber,
+and the parities exchange roles: ones sit at even depths, so the binding depth
+is the least \emph{even} one past the radius, and $R_0=1$ already makes the row
+nonzero, which is why no extremizer is lost here.
+
+\begin{theorem}[Sharp finite horizon, one]\label{thm:onehorizon}
+Let $w\ge1$, let $\mathcal T_w=\{x:\supp(x)\subseteq[-w,w],x_0=1\}$, and for
+$x\in\mathcal T_w$ let $H_1(x)=\max\{h:F^t(x)_0=1\text{ for }0\le t\le h\}$. Let
+$q$ be the least even integer greater than $w$. Then
+$\max_{x\in\mathcal T_w}H_1(x)=q-1$ and
+$\#\{x\in\mathcal T_w:H_1(x)=q-1\}=2^w$.
+\end{theorem}
+\begin{proof}
+A trace one through time $q$, compared with the all-one completion of
+Theorem~\ref{thm:onefiber}, would force by finite-prefix uniqueness
+$x_{-q}=1$, contradicting $q>w$; thus $H_1(x)\le q-1$. Conversely, choose any of
+the $2^w$ words $(R_1,\dots,R_w)$, install the checkerboard pattern through
+left depth $w$, and zero all other cells. This row agrees with its all-one
+completion through the light cone of time $q-1$; when $w$ is even, the extra
+depth $w+1$ is odd and forced to zero. The missing even cell at depth $q$
+creates a discrepancy at time $q$, and finite-prefix uniqueness excludes
+further extremizers.
+\end{proof}
+
+Combining the two horizons, the sharp law over both constants is flat in the
+parity that splits each one separately.
+
+\begin{corollary}\label{cor:bothhorizon}
+Let $w\ge1$ and let $x\ne0$ have $\supp(x)\subseteq[-w,w]$. The longest
+constant prefix of the central trace of $x$ has length at most $w+2$, and
+exactly $2^w$ configurations attain length $w+2$ when $w$ is even, while
+exactly $2^w-1$ attain it when $w$ is odd.
+\end{corollary}
+\begin{proof}
+For $x_0=0$ Theorem~\ref{thm:horizon} gives $2\lceil w/2\rceil$, which is $w$
+for even $w$ and $w+1$ for odd $w$; for $x_0=1$ Theorem~\ref{thm:onehorizon}
+gives $q-1$, which is $w+1$ for even $w$ and $w$ for odd $w$. Hence the maximum
+horizon index is $w+1$, so the maximum prefix length is $w+2$. It is attained
+in the one case when $w$ is even and in the zero case when $w$ is odd, with the
+corresponding counts $2^w$ and $2^w-1$.
+\end{proof}
+
+The Rule-30-specific step is the \textsc{or} latch in the proof of
+Theorem~\ref{thm:fiber}: the same finite row under Rule~90 keeps a zero center
+forever, so Corollary~\ref{cor:constant} is not a consequence of left
+permutivity. This is the Rule~90 filter passing on a proven result, and the
+template for reading every later obstruction.
+
+% ============================================================================
+\section{Part II: The period-two problem --- reduction, census, and a lead}
+\label{sec:periodtwo}
+% ============================================================================
+
+\subsection{The reduction chain}
+
+By Corollary~\ref{cor:constant} the constant traces are already excluded, so
+the only remaining candidate counterexample is the alternating phase
+$0101\ldots$; period-two exclusion reduces, through a chain of proved uniform
+implications, to a single open separator. Writing (PT2) for ``no nonzero finite configuration has
+$\Tr_0(y)=\Tr_0(F^2 y)$,'' the chain is
+\begin{equation}\label{eq:chain}
+ \gm(n)\ge1\ \forall n\ \Rightarrow\ H_r(n)=\emptyset\ \Rightarrow\
+ \mathrm{RW}\ \Leftrightarrow\ \mathrm{DLP}\ \Rightarrow\ \mathrm{SEP}\
+ \Rightarrow\ \mathrm{(PT2)},
+\end{equation}
+in which every arrow is proved and only the terminal separator SEP is open.
+Consequently a proof of $\gm(n)\ge1$ for all $n$ would yield the first
+per-period exclusion theorem for the Rule~30 center column; the finite range is
+already discharged (below).
+
+\subsection{The forced-continuation census}
+
+A source word $W\in\{1,2\}^n$ is extended by a deterministic forcing to a
+continuation that must remain hard-core; $\mathrm{max\text{-}surv}(n)$ is the
+most forced rows any $W$ survives and $\gm(n)=(n+2)-\mathrm{max\text{-}surv}(n)$.
+The exhaustive range is pushed past brute force's practical $n\sim20$--$22$
+ceiling by a dependency-edge dedup method: two source words reaching the same
+forcing state are provably indistinguishable to every later step, so the
+$2^n$ enumeration collapses to a walk over distinct states. The method is
+verified bit-for-bit against the original recursion and cross-checked exactly
+against brute force at every $n\le24$ with zero mismatches, a $\sim17\times$
+speedup already at $n=18$.
+
+\begin{proposition}[Census, exhaustive and verified]\label{prop:census}
+$|H_r(n)|=0$ exhaustively for $n=1,\dots,24$, all residues and both constants;
+the rotated-wedge SAT encoding is UNSAT to $n=30$; and $\gm(n)$, computed by a
+fast dedup method cross-checked against brute force through $n=24$ with zero
+mismatches, satisfies $\gm(n)\in[7,14]$ for $17\le n\le30$ with no monotone
+trend.
+\end{proposition}
+
+\begin{remark}
+The apparent ``climbing'' trend in the even-$n$ subsequence is an artifact of
+sampling only even $n$; the interleaved series shows no trend. One outlying
+cell ($n=28$, $c=2$) is bracketed by its neighbors as a statistical spike, not
+a signal, and is excluded below.
+\end{remark}
+
+\subsection{A structural lead: extinction is a needle, not a fog}
+
+\begin{observation}[Terminal-class collapse; exhaustive $n\le18$]\label{obs:needle}
+The words attaining $\mathrm{max\text{-}surv}(n)$ number between two and
+eighteen, fall into one to four continuation classes, and within a class share a
+common suffix of length $n-O(1)$, produce the identical forced continuation, and
+fail on the identical symbol. The forcing's live state is identical across a
+class (or differs only in the newest one or two cells). The phenomenon persists
+under restriction to hard-core sources, where the extremal words are exactly the
+clean periodic adversaries.
+\end{observation}
+
+The extremal continuations are concrete and recognizable: hard-core words
+heavy in $2$s and nearly periodic, e.g.\ $22222122222$ and $2(221)^4$ ---
+the forcing sits in a periodic orbit of the local map until a single phase
+slip lands. Two supporting facts are proved: a suffix lemma (words agreeing on a suffix from
+index $m$ and on the first $2m$ forced symbols share their continuation forever;
+verified with zero exceptions) and that the sole Rule-30-specific ingredient of
+the forcing is the collapse $\Phi(2,\cdot)=\Phi(3,\cdot)$ of two left-actions,
+which is vacuous for Rule~90.
+
+\begin{conjecture}\label{conj:needle}
+For all $n$, $\gm(n)\ge1$; equivalently, no reachable forcing state at source
+length $n$ survives $n+2$ forced rows. The extremal states, $O(1)$ per length,
+are the whole content.
+\end{conjecture}
+
+The last clause of Observation~\ref{obs:needle} --- that under restriction to
+hard-core sources the extremal words are the clean periodic adversaries --- was
+the paper's one untried comparison, and it has since been tested and does not
+survive. Enumerating every word attaining $\mathrm{max\text{-}surv}(n)$ for
+$8\le n\le18$, with the per-tail maxima agreeing exactly with the project's
+registered table, the genuinely short source periods $(1,3,4,5,6,7)$ occur only
+through $n=11$; from $n=12$ the smallest period present in the extremal set
+climbs with $n$, and a period of $n-1$ or $n-2$ on a length-$n$ word is not
+periodicity but the tautology that a suffix matches a prefix. The single-defect
+shape $2^a12^b$ accounts for four of the eleven extremal words at $n=8$, one at
+$n=9$, one at $n=11$, and \emph{none} for $n\ge12$. The counting claim of the
+observation is unaffected: the number attaining the maximum stays inside
+$[2,18]$ throughout.
+
+The consequence is that the extremal sources are not a bounded-period family,
+so extinction on a finite list of periodic rays --- the shape that would have
+carried a finite automaton or a one-dimensional recurrence --- is not available.
+Extremal \emph{continuations} behave better, keeping small periods with only
+occasional aperiodic cases, but that is a materially weaker statement and is not
+what the finite-ray argument required. Conjecture~\ref{conj:needle} itself is
+untouched; what is removed is the route to it that Observation~\ref{obs:needle}
+appeared to offer.
+
+\subsection{Why first-moment and spectral bounds cannot close it}
+
+\begin{proposition}\label{prop:spectral}
+The hard-core transfer matrix has spectral radius exactly $\varphi=1.618\ldots$,
+so the induced bound $\lambda<2$ holds vacuously at every width and cannot
+witness extinction (which needs $\lambda<1$). The bound is tight for $k<k_\star$
+and off by a factor $\approx300$ at extinction, so no finite-width transfer or
+first-moment argument closes the census; the departure past $k_\star$ is the
+whole phenomenon.
+\end{proposition}
+
+The natural first-moment repair also fails, for a structural reason rather than
+a computational one. The measured per-row survival rate $\varphi/4\approx0.4045$
+is exact, not fitted: $\varphi^k$ counts the hard-core (Fibonacci) language a
+surviving continuation must land in, and $4^k$ is the codomain of the
+forced-symbol map. If that map were equidistributed, fiber-counting alone would
+force $\gm(n)\to\infty$ with no pseudorandomness assumption; it is not
+equidistributed, since the map's image saturates at a fixed fraction of $2^n$
+well below $4^k$ and its fibers stabilize at a small constant rather than
+shrinking, so past $k\sim n/2$ the argument would need a fiber smaller than
+one, which is impossible for a nonempty fiber. Both bounds fail for the same
+underlying reason: the forcing recursion has genuinely unbounded memory (every
+new symbol rewrites the entire stored state), and no bounded-memory model,
+spectral or first-moment, can represent an unbounded one at any finite width.
+
+% ============================================================================
+\section{Part III: The periodicity ladder and its limits}
+\label{sec:ladder}
+% ============================================================================
+
+The ladder encodes ``the center column is eventually $p$-periodic'' as
+$\omega$-automaton emptiness over column pairs, with the inverse transduction, a
+light-cone wedge, and a Buchi periodicity condition. An EMPTY verdict at some
+finite depth would deliver $\mathrm{Thm}(p)$ directly: together with the
+classical fact that two adjacent columns cannot both be eventually periodic
+\cite[Prop.~3]{jen}\cite{kopra}, no admissible lasso would mean no lone-seed
+diagram has an eventually $p$-periodic center column, for any transient
+length. Calibration mechanically reproduces Part~I's period-one theorems at
+the depths where they apply, and separately passes the Rule~90 soundness
+control, which stays NONEMPTY throughout since Rule~90's center column is
+genuinely eventually periodic. For $p=2$ the language is nonempty at every
+decided depth, and we prove this is not a computational limit but a structural
+one: three independent levers of the encoding are each shown incapable of
+forcing emptiness, by proof rather than by exhausting compute.
+
+\begin{theorem}[Three inert levers]\label{thm:ladder}
+For the $p=2$ ladder: (i) the accepting verdict is uniform in the right depth
+$R$ over a range of raw sizes exceeding $5000\times$; (ii) the boundary pin is
+sandwiched, $\mathrm{plain}(R+1)\subseteq\mathrm{pin}(R)\subseteq\mathrm{plain}(R)$,
+so it decides nothing depth does not; and (iii) the accepting tail system's
+bisimulation-class count is \emph{exactly constant} in the left depth $k$
+($15$, $20$, $32$ in the three encodings, over a $3068\times$ range of raw
+states), because every accepting state lies in the saturated region where the
+left-depth constraints are inert. No lever of the ladder can force emptiness.
+\end{theorem}
+
+Each lever closes by an exact argument, not only by measurement. The sandwich
+$\mathrm{plain}(R+1)\subseteq\mathrm{pin}(R)\subseteq\mathrm{plain}(R)$ holds
+because the boundary pin is exactly the solvability condition for the one
+column the strip does not model, and is therefore entailed by any genuine
+extension one column further out: it can only find, one column early, an
+emptiness that depth would find anyway. The left-depth invariance holds
+because the ladder's own saturation rule stops checking the light-cone wedge
+once the letter count passes a fixed threshold, so every column added beyond
+that threshold affects neither of the two values the automaton returns; the
+accepting tail therefore lives entirely in a region where left depth is
+provably inert, not merely observed to be flat. Both closures apply equally to
+the Rule~90 control, which is what keeps the soundness check alive: Rule~90's
+own extendability condition is vacuous, so its ladder is the plain language and
+never inherits Rule~30's pin.
+
+\begin{proposition}[The witness-extension test is invalid]\label{prop:witness}
+Extracting a ladder witness and testing whether it extends to a genuine
+lone-seed diagram cannot decide anything: on the Rule~90 control, where a genuine
+witness provably exists, the sampler misses it by a factor of four in depth. The
+nonemptiness is attributable to the free boundary of the truncated strip
+(obstruction~F).
+\end{proposition}
+
+The Rule~90 control is what condemns the test, not a property of the Rule~30
+sample. A genuine, fully realizable Rule~90 witness exists at onset one and
+extends to the probe limit, yet randomized sampling of the accepting
+component never finds anything within a factor of four of it, at every tested
+depth. Since the sampler already fails on an object known to be genuine, its
+failure on the Rule~30 candidates carries no information about whether those
+candidates are spurious.
+
+% ============================================================================
+\section{Part IV: The register of obstructions}
+\label{sec:register}
+% ============================================================================
+
+Ninety-four distinct routes have been attempted against
+Problems~1--3 in this project.\footnote{Seventy-six from the primary tracking
+log, eighteen merged from a second, independently numbered log. One row
+number, 76, was assigned to an unrelated route in each (S-adic subword
+complexity in the first; the $d$-uniform survivor invariant in the second);
+both are retained under that number and distinguished by stream in the
+supplement.} Nine obstruction classes account for essentially
+all of them. We state each as the reason a route dies, name the kill-reason type,
+and give its Rule~90 status. The exhaustive per-route register is the supplement.
+
+\begin{description}
+\item[A. The $O(\log t)$ propagation wall.] Trace-anchored analysis determines a
+  region of depth only $O(\log t)$, from one-bit-per-step information loss; three
+  independent representations hit it. \emph{Type:} depth. Does not bind the
+  period-two counting question, which uses the periodicity hypothesis globally.
+  The rate is a statement about the \emph{right} light cone, where the local
+  rule reduces to a running parity and the diagonal periods double. The left
+  cone reaches far deeper for the same period budget and A should not be quoted
+  there with this rate; see Remark~\ref{rem:wedge}.
+\item[B. The Rule~90 filter.] Any argument using only left permutivity,
+  additivity, or expansivity proves a false statement about Rule~90.
+  \emph{Type:} rule-generic. The organizing obstruction of the whole paper.
+\item[C. Single-column blindness.] Entropy- and complexity-boundary framings
+  measure a two-dimensional field insensitive to any one column. \emph{Type:}
+  population/observable. Kills the Kolmogorov and block-entropy routes.
+\item[D. The missing composition law.] Every proposed Problem~3 shortcut needs a
+  composition law it never supplies. \emph{Type:} composition.
+\item[E. The measure-zero single-orbit gap.] Rule~30 is ergodic for Bernoulli
+  measure, so almost-everywhere density results never see the lone seed.
+  \emph{Type:} measure. Kills the density routes to Problem~2.
+\item[F. The free boundary of a fixed-depth strip.] Any fixed-depth column window
+  leaves its outermost column unconstrained, and the phase slip relocates there.
+  \emph{Type:} boundary. The ladder's wall (Part~III).
+\item[G. Arbitrary-input measures versus a fixed point.] Circuit size, decision
+  depth, sensitivity and the like are identically zero on one fixed input.
+  \emph{Type:} object-mismatch. Kills the Problem~3 complexity routes.
+\item[H. Finite certificates are complexity lower bounds, never more.] Any
+  bounded exclusion or census bounds a complexity function and cannot become an
+  all-length theorem. \emph{Type:} intrinsic. Why no census closes a theorem.
+\item[I. The pinned light-cone CNF.] With $n$ fixed, the circuit CNF refutes only
+  that instance. \emph{Type:} object-mismatch. Kills the pinned Problem~3 SAT.
+\end{description}
+
+\begin{remark}[A named gap: non-invertibility]
+Two routes (rows 60, 62) die by a mechanism none of A--I names: Rule~30 has no
+inverse, so it admits no unitary evolution operator and its defect world lines
+merge and annihilate rather than braid. This is a real, distinct kill reason,
+not a restatement of the Rule~90 filter (B) --- it is a structural fact about
+Rule~30 itself, not an argument that also proves something false about
+Rule~90. We record it here rather than retrofit a tenth letter, since no other
+row in the register was found to die by it.
+\end{remark}
+
+\begin{remark}[The ordered wedge, and why obstruction~A has two faces]
+\label{rem:wedge}
+Write the local rule in each light-cone frame. With $R_j[t]=s(t,t-j)$ one gets
+$R_j[t]=R_j[t-1]\oplus(R_{j-1}[t-1]\vee R_{j-2}[t-1])$, in which $R_j$ is the
+running parity of a function of strictly smaller indices; this is the induction
+behind the power-of-two right-diagonal periods, and behind obstruction~A. With
+$L_j[t]=s(t,-t+j)$ one gets instead
+\[
+  L_j[t]\;=\;L_{j-2}[t-1]\;\oplus\;\bigl(L_{j-1}[t-1]\vee L_j[t-1]\bigr),
+\]
+where the \textsc{or} is self-referential and absorbing: when $L_j[t-1]=1$ the
+update collapses to $L_j[t]=\neg L_{j-2}[t-1]$ and the middle argument is
+discarded. The two frames behave oppositely, and the left one is the tame side.
+
+That the left region is ordered is not new: \cite[p.~871]{nks} records that
+$L_j$ is eventually periodic with the first occurrence of period
+$2,4,8,16,32,64$ at depth $3,\,8,\,29,\,400,\,87\,867$ and $2\,107\,985\,255$ or
+more. We reproduce that table independently, to the unit, and it is what pins
+the identification of $L_j$ with Wolfram's diagonal $j$ cells in from the left
+edge. What the frame adds is the recurrence above, which makes the asymmetry
+mechanical rather than pictorial, and the observation that left-frame
+periodicity of period $g$ to depth $D$ is exactly the spacetime isometry
+\[
+  s(t+g,\,x-g)=s(t,x)\qquad\text{on } -t\le x\le -t+D,
+\]
+verified directly in $(t,x)$ coordinates on $5.5\times10^{6}$ cells with no
+exception, for $g$ a multiple of $16$ and for no other $g$ tested. In that form
+the ordered region is the same kind of object as the periodic tori censused in
+Part~III, which is the only structural bridge between them we know.
+
+Two consequences for the register. First, obstruction~A is a statement about the
+\emph{right} cone. With period at most $P$ the right frame reaches depth
+$\approx 2.4\log_2 P$, while the left reaches $3,8,29,400,87\,867,\ldots$ ---
+super-exponential in $\log P$. A's verdict survives, since both still demand
+unbounded period at depth $\Theta(t)$, but its rate is wrong on the left and
+should not be quoted there. Second, and this is why the remark belongs in a
+paper whose unifying fact is the Rule~90 filter: replacing $\vee$ by $\oplus$
+destroys the phenomenon outright. The Rule~90 left frame is a running parity
+like its right one, its measured period is exactly $j$, and it has no ordered
+region and no order/disorder boundary. In this frame the \textsc{or} is what
+creates order rather than what destroys it.
+
+We record two cautions with it, both learned the hard way here. The measured
+region is ordered in \emph{time} and aperiodic in \emph{space} --- its rows
+carry no spatial period up to $2048$ on bands of width $2737$ --- so it is
+invisible in a plot. And a scan of it stopping at $j=65\,536$ shows an unbroken
+period-$16$ plateau, which is not a law: the plateau ends at $j=87\,867$. This
+is obstruction~H in the form that is easiest to miss, since a plateau, unlike a
+certificate, looks like a theorem and costs nothing to state.
+\end{remark}
+
+\begin{remark}[The five sightings of the needle]
+The collapse of Observation~\ref{obs:needle} was recorded five times before,
+under five names, and dropped each time for a kill reason of type~C or E --- a
+population statistic --- when the deciding object was never the population but the
+$O(1)$ extremal states. This is the methodological lesson of the register.
+\end{remark}
+
+Table~\ref{tab:register} is the compact register: all ninety-four routes, one
+line each. Rows marked $\dagger$ come from the second tracking log described
+above; row 76's collision is kept under its original number in both. Full paragraphs, with exact
+quantities, are the accompanying supplement.
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}>{\raggedleft\arraybackslash}p{0.62cm} >{\raggedright\arraybackslash}p{5.4cm} >{\centering\arraybackslash}p{1.0cm} >{\centering\arraybackslash}p{0.7cm} >{\raggedright\arraybackslash}p{8.15cm}@{}}
+\caption{The obstruction register: ninety-four routes.}\label{tab:register}\\
+\toprule
+\# & Route & P & St. & Kill reason \\
+\midrule
+\endfirsthead
+\toprule
+\# & Route & P & St. & Kill reason \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & R1: zero-set obligation ($c$ eventually periodic $\Rightarrow$ $r$ eventually periodic on $\{c_t=0\}$) & 1 & Opn & Best route; kill condition not fired. \\
+2 & R2: cascade descent from the pin & 1 & Kil & Own kill condition fired: 1.14\% of cells determined, density halves leftward, zero at $x\ge1$. \\
+3 & R3: bounded-depth pin bootstrap (run-of-ones wedge) & 1 & Kil & Proved dead before remeasurement: bounded one-runs give only a bounded wedge, not a descent. \\
+4 & R4: right-boundary-anchored arguments & 1 & Kil & Right-boundary regularity reaches only $\sim2.4\log_2 t$ diagonals against a target at diagonal $t$. \\
+5 & R5: left permutivity / expansivity alone & 1 & Kil & Rule 90 filter: left permutive, lone-seed centre column eventually periodic (Kopra). \\
+6 & R6: complexity/entropy boundary framings & 1,2,3 & Kil & Literal version false in two lines; statistical rescue fails three ways; 2D entropy is column-blind. \\
+7 & R7: periodicity ladder, per-period exclusion & 1 & Opn & Depth, the boundary pin, and $Q$ are all proved unable to close it (Cor.~2/3); blocked on one named ingredient, an aperiodic tail construction, which is obstruction F in its sharpest known form. Row 77 retired the other of the ladder's two modes outright, which is why only this one ingredient remains. \\
+8 & R8: invariant-measure classification of orbit closure & 2 & Opn & Consistent with unique ergodicity at every cell; not killed, not advanced. Conditional on row 79: if the checkerboard temporal fixed point lies in the orbit closure $Y$, this route's target fails outright; unbounded patch growth (row 79's open condition) is what keeps it alive. \\
+9 & R9: proof-complexity lower bound for $c_n$ & 3 & Opn & Precondition probe ran (GMUS near-constant fraction); inverted outcome did not fire; bound unattempted. \\
+10 & Arm 1: Lean/evolutionary search for a P1 proof & 1 & NR & Declined: ``find a lemma'' is not pre-registerable. \\
+11 & Arm 2: search for the density-1/2 invariant measure & 2 & NR & Declined: pathway lands one measure-zero step short of the lone seed. \\
+12 & Arm 3: WASM tournament for sub-quadratic centre algorithm & 3 & Kil & Sealed LLM tournament never reached its decision band; a local follow-up extended the known-algorithm calibration to $n=1{,}000{,}031$ instead, past the pre-registered threshold: exponent $1.98$--$2.03$, no improvement found. \\
+13 & Arm 3 iter.\,2: GF(2) seed grammar + Z3 rewrite & 3 & NR & Design only; peephole rewrites cannot connect $\Theta(n^2)$ composition to sub-quadratic. \\
+14 & Arm 4: AIR / frequency-domain shortcut & 3 & Kil & Pre-registered kill fired on first run: maximal linear complexity, exact ANF degree, plateauing density. \\
+15 & Arm 4 iter.\,2: additive-FFT over $GF(2^k)$ & 3 & NR & Design only; no root-of-unity structure in a binary field; no FiniteField sort in the SMT solver used. \\
+16 & Arm 5: Rule 150 kernel + sparse-error superposition & 3 & Kil & $N_{\mathrm{eff}}\sim n^{1.68}$, decisively superlinear; escape hatch (row/block parity) also measured shut. \\
+17 & Arm 6: finite 2-kernel / bounded-rank digit query & 3 & Kil & Both pre-registered kills fired: $\ge8191$ residual sequences, GF(2) rank 512 at depth 9. \\
+18 & Arm 7: exact dyadic spacetime tile grammar & 3 & Kil & Diagnostic structure only; tile perimeters carry $\Theta(\text{scale})$ bits. Its own acceptance gate was already run through Crosstalk and closed as row 19, same files, same criteria verbatim. \\
+19 & Exclusion-guided search: dyadic tile composition algebra & 3 & Kil & Zero surviving candidates across six critic rejections; synthesis over-reached. \\
+20 & Arm 8: ROBDD of the arbitrary-input transfer function & 3 & Kil & Exponential growth ($\sim1.88\times$/step) in all five tested variable orders. \\
+21 & Exclusion-guided search: single-seed transfer monoid algebra & 3 & Kil & Truncated $GF(2)[x]/(x^k)$ candidate falsified: first mismatch at step 5. \\
+22 & Exclusion-guided search, run 1 & 3 & Kil & Zero surviving candidates; four of five depend on a parity cancellation already measured false. \\
+23 & Exclusion-guided search, run 2, typed exclusions & 3 & Kil & Empty frontier; three rejections each needing an unproved or undefined lemma. \\
+24 & Exclusion-guided search, run 3: carry-polynomial transfer & 3 & Kil & Deterministic probe found scalar wrong at $n=2$: candidate 1, ground truth 0. \\
+25 & Zero-trace fiber classification & 1 & Prv & No nonzero finite configuration has an identically-zero centre trace; sharp horizon $2\lceil w/2\rceil$; false for Rule 90. \\
+26 & All-one trace fiber & 1 & Prv & All-one trace forces the checkerboard left half; with row 25, excludes every eventually-constant centre. The eventually-one special case was already Jen 1986 Thm.~7a (row 84); novelty here is componentwise, not this exclusion itself. \\
+27 & Phase-labelled generalization of the OR-latch & 1 & Kil & Falsified at radius one: centre-one phase removes rather than preserves the right-neighbor latch. \\
+28 & Inverse-trace continuation & 1 & Kil & Produces only per-case contradictions, never period-independent; a follow-on evolutionary search aimed at the missing uniform-tail step returned nothing (0/72 claims verified). \\
+29 & Periodic-mask contraction & 1 & Kil & Falsified for every period word containing a zero: discrepancy moves earlier, never erased. \\
+30 & Exclusion-guided search: period-uniform inverse-trace obstruction & 1 & Kil & Zero of 72 claims verified; synthesis empty; two Lean artifacts contained \texttt{sorry}. \\
+31 & Same-forward-orbit collision reduction & 1 & Opn & Equivalence proved; remaining obligation (no collision at any period) still needed, starting at $p=2$. \\
+32 & Incremental SMT exhaustion of nonconstant periods & 1 & Opn & Exact horizon table plus three proved partial results; period-two reduces to a stroboscopic $F^2$ problem with two one-sided cases excluded, mixed support open --- likely the same separator as the (PT2)/needle conjecture. \\
+33 & Right-cone bit-parallel reconstruction + support certificate & 1 & Kil & 1824 sweeps show no descent; the prescribed follow-on (row 34) closes the line via obstruction A. \\
+34 & Right-cone diagonal periodicity & 1 & Kil & Periodic region reachable from the boundary is $\sim2.4\log_2 t$ diagonals wide; centre is at diagonal $t$. \\
+35 & Extending the constant-trace mechanism to nonconstant periods & 1 & Kil & Falsified by direct measurement: forced bit still differs at depth 512 for four period words. \\
+36 & Periodicity bridge: Kopra's width-two theorem to nonlinear class & 1 & Kil & Of eight quiescent left-permutive ECAs, the nonlinear ones with full support reduce to Rule 30 itself. \\
+37 & Periodicity bridge: finite-delay reconstruction & 1 & Kil & Explicit counterexamples at $p=148,t=1855$ and $p=110,t=13219$ with persistent adjacent-column defects. \\
+38 & Periodicity bridge: centre-trace injectivity & 1 & Kil & $\{0\}$ and $\{0,1\}$ share a centre trace at every checked step; defect escapes rightward. \\
+39 & Periodicity bridge: doubling separation & 1 & Kil & First fails at $p=4$, where both values are one. \\
+40 & Exclusion-guided search: period-independent contradiction & 1 & Kil & Zero candidates survived; ten rejects reduce to six recurring reasoning errors. \\
+41 & Alternating-trace fiber: bounded-depth exclusion certificates & 1 & Opn & Closed-form survivor automaton found, but certificate levels grow with $d$ and cannot reach uniformity alone. \\
+42 & Overnight literature-novelty triage (ten techniques) & infra & Inf & Verdict table gating the overnight arms: 5 closed, 5 known-adjacent, 0 novel-open. \\
+43 & ANF/Walsh analysis of the iterated centre-bit function & --- & Prv & $\deg f_t=2t-1$ for all $t\ge3$; implies nothing for P1/P2, provably inert for P3. \\
+44 & Classification of jointly invariant Markov measures, memory $\le3$ & 2 & Stl & Decisive at $m=1,2$; Gr\"obner basis kill condition fired at $m=3$ (110 min, no termination). \\
+45 & Anashin 2-adic ergodicity & 2 & Kil & Four fatal reasons, including: Rule 90 has identical structure, so the object does not separate the rules. \\
+46 & Ore-relation ladder toward non-2-automaticity & 1 & Opn & Reduced, not killed: each rung one-sidedly proved; stopped at one lemma needing a polynomial bound. \\
+47 & Single-seed density arm (martingale/counting/invariance) & 2 & Kil & Original mechanisms structurally invalid (no probability space on a deterministic orbit); two weak byproducts survive. \\
+48 & Persistent homology / TDA on the spacetime point cloud & 1,2 & Kil & Time-filtered $H_1$ bars biject with known white triangles; column periodicity constrains no neighborhood. \\
+49 & Quantum circuit mapping, entanglement entropy & 1,3 & Kil & Single-seed basis-state entropy across the centre cut is identically zero. \\
+50 & Hydrodynamic / coarse-grained PDE limit & 2 & Kil & Coarse-grained density is a spatial-average object; P2 is about one measure-zero orbit. \\
+51 & Non-standard analysis / hyperfinite rows & 2 & Kil & Conservative: needs the standard equidistribution lemma already, and applies verbatim to Rule 90. \\
+52 & Homotopy type theory / loop-space framing & 1 & Kil & All types are hSets; the statement 0-truncates to the plain first-order sentence. \\
+53 & Latent-space geometry to conserved window functions & 1,2 & Kil & Obstruction C (single-column blindness) at step 0, width-independently, over $\mathbb{Z}/2,\mathbb{Z}/3$ to $w=12$; ML half was the candidate generator for a class killed wholesale, so no generator can rescue it. \\
+54 & Ladder tightening: right-wedge constraint & 1 & Kil & Constraint already imposed in the code; every verdict NONEMPTY with or without it. \\
+55 & Ladder tightening: boundary pin & 1 & Kil & Genuine constraint, prunes 39--58\%, but rung 1 proved $\mathrm{plain}(R{+}1)\subseteq\mathrm{pin}(R)\subseteq\mathrm{plain}(R)$: buys less than one column. \\
+56 & Ladder tightening: bounded-universal $Q$ & 1 & Kil & NONEMPTY to $Q=14$; constraint and available freedom both grow as $2^Q$. \\
+57 & Hyperbolic lightcone geodesic embedding & 1 & Kil & Column-blind: overwriting column 0 moves the statistic by $10^{-4}$--$10^{-7}$ against a 96\% positive control. \\
+58 & Curvature of a multilinear relaxation & 1,2 & Kil & Column-blind to machine epsilon; also a category error (no Riemannian metric on a max-plus semiring). \\
+59 & Spectral dimension of a Dirac operator on the shift algebra & 1 & Kil & Column-blind, $O(1/W)$ to three digits; Rule 90 induces the same algebra with the opposite P1 answer. \\
+60 & OTOC / spectral form factor & 1 & Kil & Premise false: Rule 30 is non-invertible, so no unitary evolution operator or RMT ensemble exists. \\
+61 & 2-adic/Mahler expansion, unique ergodicity under Haar measure & 2 & Kil & Hypothesis false in one line: $\delta_0$ and uniform Bernoulli are both invariant. \\
+62 & Braid-group word length of defect world lines & 1 & Kil & No braid word exists: Rule 30 defects merge and annihilate (forced by non-invertibility). \\
+63 & Algebraic immunity of $f_t$ as an AC0 lower bound & 3 & Kil & AC0 claim false: $\mathrm{AND}_n$ has maximal degree, algebraic immunity 1, and a depth-2 AC0 circuit. \\
+64 & AC0/Smolensky size bound from the ANF degree of $f_t$ & 3 & Kil & Refuted by the same $\mathrm{AND}_n$ counterexample; also the trivial regime ($n=2t+1$ variables). \\
+65 & Straight-line-program length along the single-seed line & 3 & Kil & Category error: on one fixed point every measure of this kind is identically zero. \\
+66 & Sensitivity $s(f_t)\ge t$ along the single-seed path & 3 & Kil & Numerically false: measured sensitivity sits below $t$ and below the random-input maximum throughout. \\
+67 & Ground-truth centre-column generator and OEIS gate & infra & Inf & Bit-parallel generator matched against OEIS A051023; gates every arm's pipeline. \\
+68 & Modal compute charter and admission guard & infra & Inf & \$200 ceiling, fail-closed guard; never entered (every result records \$0). \\
+69 & Exclusion-guided search runbook & infra & Inf & An LLM-driven candidate search in which every rejected candidate becomes a typed exclusion later candidates must differ from, keeping the space auditable rather than repeating known-dead structures. \\
+70 & Overnight autonomous run: prompt and fences & infra & Inf & Fenced session producing rows 42--47; compliance verified by mtime, one disclosed exception. \\
+71 & Settled-knowledge digest for downstream sessions & infra & Inf & Read-only survey of what is proved, dead, and off-limits. \\
+72 & Zero-tail note: manuscript, figures, Lean/SMT certificates & infra & Inf & Packaging for row 25 plus a hostile proof audit; novelty over Jen 1986 confirmed componentwise. \\
+\mbox{73$^\dagger$} & Preimage-tree / backward-dynamics descent & 1 & Kil & Column-blind at step 0; premise was a boundary confusion; object is the pin restated. \\
+\mbox{74$^\dagger$} & Ore ladder uniformity by induction on rungs & 1 & Kil & Explicit family has strict Ore order at every level; only the induction sub-route dies (row 46 stays open). \\
+\mbox{75$^\dagger$} & Stroboscopic descent for $p=2$ & 1 & Opn & Support grows exactly 2 per side under $F^2$; no width-shaped quantity can decrease. \\
+76 & S-adic decomposition + Morse-Hedlund complexity & 1 & Kil & Killed by obstruction H; bound corrected upward $\sim$3{,}100$\times$ on remerge (linear in prefix length, not $n_{\max}$). \\
+\mbox{76$^\dagger$} & Row 41 $d$-uniform survivor invariant (second stream) & 1 & Opn & Time-reindexed recurrence found, but natural truncation is vacuous by a light-cone argument. \\
+\mbox{77$^\dagger$} & Ladder realizability / half-plane slip & 1 & Prv & Slip extends to a full half-plane; row 7's ladder mode (i) can never return EMPTY at any depth, retiring it entirely. \\
+\mbox{78$^\dagger$} & P2 nontrivial density bounds & 2 & Kil & Gap bound is linear in $t$; already implied by row 47's Theorem A. \\
+\mbox{79$^\dagger$} & Orbit-closure patch census & 2 & Ref & Checkerboard is a Rule 30 temporal fixed point; R8's target fails if it lies in $Y$ (measured to $K=6$). \\
+\mbox{80$^\dagger$} & Rowland-Yassawi nonlinear analog & 2 & Neg & Only arrow of the R-Y chain that avoids linearity delivers just a simplex. \\
+\mbox{81$^\dagger$} & Resolution lower bound for $c_n$ & 3 & Kil & Metric mis-specified (obstruction I). \\
+\mbox{82$^\dagger$} & Trace subshift soficness & 1,2 & Neg & Width-1 object is the full shift by construction (obstruction B); width-2 reduction gives only a lower bound. \\
+\mbox{83$^\dagger$} & Conserved non-additive window functions & 1,2 & Kil & Column-blind width-independently; exhaustive absence to $w=12$; Rule 90 gives identical answers. \\
+\mbox{84$^\dagger$} & Jen 1986 provenance & infra & Prv & Full text obtained and read (JSP 43:219--242); clause (ii) is Thm.~7a (p.~236), Rule~30 fails every condition; Thm.~2b's citation above independently confirmed. \\
+\mbox{85$^\dagger$} & Sub-quadratic derivation family for $c_n$ & 3 & Kil & R9's inverted kill did not fire; best family is exact $\Theta(n^2)$, 2.95--3.88$\times$ under baseline (obstruction I). \\
+\mbox{86$^\dagger$} & Nonabelian conserved transfer invariant & 1,2 & Kil & 1{,}988 apparent invariants passed an initially too-loose filter; corrected, then closed generally: any monoid-valued transfer is $\le\log_2|M|$ bits about the orbit. \\
+\mbox{87$^\dagger$} & Polynomial Calculus degree for $c_n$ & 3 & Kil & Degree exactly 2 (Rule 30) vs.\ 1 (Rule 90), both constant in $n$; fails the Rule 90 filter honestly (obstruction I). \\
+\mbox{88$^\dagger$} & 2-adic Newton-polygon / valuation argument & 1 & Kil & No closed functional equation exists (the pin's nonlinear term is a Hadamard product, not a ring operation). \\
+\mbox{89$^\dagger$} & Cryptanalytic bias detection on the lone-seed trace & --- & NBF & BM complexity, correlation attack, NIST STS, autocorrelation to $2^{21}$; smallest corrected $p=0.627$. \\
+\mbox{90$^\dagger$} & ML-guided conjecture mining & 1 & Ref & Trained to depth 20000: all 30 surviving candidates break within 38 steps of the training boundary; only the known OR-latch pin survives. \\
+91 & OpenEvolve LLM-driven search for sub-quadratic $c(n)$ & 3 & NR & Sanity gate failed on re-verification: wall-clock instrument credited the baseline with beating itself. Instrument rebuilt and validated as row 92; the search itself has still not been run with it. \\
+92 & Deterministic fuel-counter evaluator (fixes row 91's instrument) & 3 & Prv & Row 12's WASM fuel meter was read and rejected for reuse (WASM ops are genuinely $O(1)$; Python bignum ops are not). Word-RAM AST counter recovers exponent 1.99946 at $r^2=0.9999999$; publication claim withdrawn as prior art: counter-beats-clock fitness \cite{bouras2026fitness}, proportional-width bignum charging \cite{eip2565}, and deterministic counters replacing wall-clock timing in general \cite{nethercote2007valgrind} are each already owned. \\
+93 & Bounded exact circuit synthesis for $n\to c(n)$ & 3 & Prb & $k_{\min}(4)=5$ unconditional; $k_{\min}(5)\ge7$ conditional; strong outcome did not fire; P3 untouched. \\
+\end{longtable}
+}
+
+% ============================================================================
+\section{Part V: Scope, the unifying fact, and open problems}
+\label{sec:scope}
+% ============================================================================
+
+Problems~1, 2 and 3 are open and nothing here changes that. Part~I settles
+eventual period one completely, for a class strictly larger than the lone seed,
+and is the paper's one unconditional advance on the center-column question.
+Part~III's limitation theorems close a specific mechanized route to period two.
+Part~II's census and lead delimit period two without deciding it. The unifying
+fact is the Rule~90 filter: the \textsc{or} nonlinearity is the entire
+difference, every proven result routes through it, and every failed route does
+not.
+
+Remark~\ref{rem:wedge} sharpens that statement. The \textsc{or} has two branches
+and they are not two aspects of one behaviour: in the right light-cone frame it
+feeds a running parity and the diagonal periods double every $2.4$ steps of
+depth, while in the left frame it is self-referential and absorbing and the
+period doubles only at depths $3,8,29,400,87\,867,\ldots$, giving an ordered
+region Rule~90 does not have. So the unifying fact is better stated as: the
+\textsc{or} makes Rule~30 \emph{two-phased}, and the center column is the one
+place the prize question asks about that lies in the disordered phase. We record
+this as a reorientation, not a result. No proof of the glide identity is offered;
+the ordered region's period is unbounded, only very slowly so; and we know of no
+argument that carries a left-region theorem rightward across the interface --- and
+no measured centre-only propagation has bridged the gap from the other
+side.\footnote{A run of ones is sufficient but \emph{not} necessary for
+centre-only forcing: $c(t)=\cdots=c(t+k-1)=1$ forces
+$\mathrm{col}_{-k}(t)=c(t+k)\oplus(k\bmod 2)$, but of the $256$ length-$8$
+centre words, $116$ force a cell deeper than their run-of-ones prefix. The
+shortest witness is $01010$, which forces $\mathrm{col}_{-4}=0$ while leaving
+depths $1,2,3$ free; the mechanism is the relation $b\,d=0$ between two
+\emph{unknown} right-column cells $b=\mathrm{col}_1(t)$, $d=\mathrm{col}_1(t+2)$,
+which a known/unknown propagation cannot see. Rule~90 leaves
+$\mathrm{col}_{-4}$ free on the same word, so this is not generic left
+permutivity. Exact reach at a fixed depth $k$ is decided by enumerating the
+$2^k$ initial right rows; on the lone seed the maxima are $15,27,27,31,31$ over
+horizons $t<100,500,1000,2000,4096$ with depths tested through $63$, attained at
+times whose run length is $0$ or $1$. Two earlier drafts are retracted: a
+``one-column reach'' that saturated the wrong argument of the \textsc{or}, and
+an ``exactly when'' whose $O(\log t)$ consequence does not follow. We claim no
+asymptotic reach bound here; the finite tables are evidence, not a growth law.}
+
+The concrete open leads are three, one fewer than when this paper was first
+drafted: the comparison asking whether the extremal forcing states of
+Observation~\ref{obs:needle} form a bounded-period family across $n$ has been
+run and is negative, as recorded after Conjecture~\ref{conj:needle}, so the
+fixed-family cocycle argument it would have enabled is not in range. What
+remains is a
+Rule~90 carry-kernel census as the missing soundness control on the period-two
+thread; the separator SEP itself, the one open arrow of \eqref{eq:chain}; and
+a second, independent route to SEP via mortality of an exact reversed-diagonal
+queue construction. On that route, every fixed-radius end window is proved
+nonclosed as a transition congruence, however it is augmented by queue
+length, endpoint/event data, or the exact total dihedral action of the
+interior symbols: two interior blocks collapsing to the same group element
+are not dynamically interchangeable, and no bounded summary of that kind can
+tell them apart. The one candidate escape that specifically avoids this
+obstruction, a finer congruence retaining the full intermediate scan trace
+rather than its group-collapsed summary, turns out to close the family rather
+than escape it: beyond an exhaustive census of $3{,}015{,}168$ words showing no
+class merges, it is injective at every length, since each symbol acts on the
+scan states as a permutation and distinct normalized symbols act differently
+somewhere. The induced right congruence is therefore the identity and the block
+monoid is free, so no bounded lossless summary of an interior block exists at
+any radius, of any shape.
+Two further candidate escapes (a paired/relative invariant over synchronized
+copies; a monotone potential not built from any finite quotient) were tested
+and fail.
+
+The same route's remaining lemma has since been reduced twice and then closed as
+a mechanism. The lemma needed is the pair of bounds $s_2(W)\le n$,
+$s_3(W)\le n+1$ on the forced continuation length of a hard-core source of
+length $n$. A deterministic greedy matching certifies it through length~22; the
+greedy construction can be weakened to a per-row sensitivity claim, and that in
+turn holds after quotienting the newest-cut group by its centre, which for this
+$D_8$ coincides with the commutator subgroup. The resulting two-bit invariant is
+exactly the $(\alpha,\beta)$ pair of the existing affine coordinates, with the
+quadratic coordinate $\gamma$ the kernel and never required; neither bit alone
+suffices, so two is the exact size. That strengthened claim holds on $72{,}351$
+legal rows through source length~21, clearing the length at which an earlier
+pointwise-derivative certificate broke, and is tight on exactly two words.
+Nevertheless the reachability form of the claim does not localize. The set of
+suffix configurations whose invariant freezes along the nested chain is
+nonempty, sparse, and never legal, but the freeze is independent of the prefix
+--- every scenario in the chain zeroes it --- while the continuation length
+depends on the prefix and its first forced symbol is almost entirely a function
+of it. Ten candidate local mechanisms relating the two were refuted by explicit
+witnesses, and on the restricted class the bound required is strictly stronger
+than the target itself. This is a further instance of obstruction~D, the missing
+composition law: there is no composition law for the continuation length, so
+concatenation cannot be made to lower it. This route is reported for
+completeness and is not otherwise used above.
+
+% ============================================================================
+\section{Reproducibility}
+\label{sec:repro}
+% ============================================================================
+
+All computational claims are reproduced by scripts in the accompanying archive,
+seeded and cross-checked; the exhaustive audits and SMT certificates supplement
+but do not replace the unbounded proofs of Part~I. The census
+(\texttt{fastdk\_core.py}) and ladder (\texttt{run\_rung0.py},
+\texttt{rung1.py}) ship with their own cross-checks against brute force or an
+independent implementation; the needle analysis is cross-checked the same way
+and detailed in its result document. The measurements of Remark~\ref{rem:wedge}
+are produced by \texttt{ordered\_wedge.py}, which computes the same object twice
+--- once by the plain update in $(t,x)$ and once by each moving-frame recurrence
+--- and whose test module asserts that the two agree cell by cell, that no glide
+length outside the multiples of $16$ has a wedge, and that the Rule~90 control
+fails the bounded-period claim. The full
+corpus --- scripts, logs, and the result documents underlying the register ---
+is deposited separately (Zenodo DOI: \texttt{[to mint]}), and the exhaustive
+per-route register is the supplement.
+
+\begin{thebibliography}{9}\footnotesize
+\bibitem{bouras2026fitness} D.~S. Bouras, C. Hanna, and J. Petke, Optimised
+fitness functions for automated improvement of software's execution time, in
+\emph{Search-Based Software Engineering (SSBSE 2025)}, LNCS 16228 (Springer,
+2026), 50--65.
+\bibitem{eip2565} K. Olson, S. Gulley, S. Peffers, J. Drake, and D. Feist,
+EIP-2565: ModExp gas cost, \emph{Ethereum Improvement Proposals}, no.\ 2565
+(2020). \url{https://eips.ethereum.org/EIPS/eip-2565}.
+\bibitem{jen} E. Jen, Aperiodicity in one-dimensional cellular automata,
+\emph{Physica D} 45(1--3) (1990), 3--18.
+\bibitem{jen1986} E. Jen, Global properties of cellular automata,
+\emph{J. Stat. Phys.} 43(1--2) (1986), 219--242.
+\bibitem{kopra} J. Kopra, Rapid left expansivity\ldots, \emph{Theoret. Comput.
+Sci.} 946 (2023), 113668.
+\bibitem{kopra-thesis} J. Kopra, \emph{Cellular Automata with Complicated
+Dynamics}, PhD thesis, Univ.\ Turku (2019).
+\bibitem{nethercote2007valgrind} N. Nethercote and J. Seward, Valgrind: a
+framework for heavyweight dynamic binary instrumentation, in \emph{Proc.\ ACM
+SIGPLAN Conf.\ on Programming Language Design and Implementation (PLDI 2007)},
+89--100.
+\bibitem{nks} S. Wolfram, \emph{A New Kind of Science}, Wolfram Media,
+Champaign, IL, 2002.
+\bibitem{rowland} E. S. Rowland, Local nested structure in Rule 30,
+\emph{Complex Systems} 16(3) (2006), 239--258.
+\bibitem{voorhees} B. Voorhees, Predecessor states for certain cellular automata
+evolutions, \emph{Comm. Math. Phys.} 117(3) (1988), 431--439.
+\bibitem{wolfram} S. Wolfram, Announcing the Rule 30 Prizes,
+\emph{Stephen Wolfram Writings}, October 1, 2019.
+\url{https://writings.stephenwolfram.com/2019/10/announcing-the-rule-30-prizes/}.
+Official rules: \emph{Wolfram Rule 30 Prizes}, The Wolfram Foundation,
+\url{https://rule30prize.org/}.
+\end{thebibliography}
+
+\end{document}
