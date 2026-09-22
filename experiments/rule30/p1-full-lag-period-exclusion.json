@@ -1,0 +1,69 @@
+{
+  "schema": "rule30.p1-full-lag-period-exclusion.v1",
+  "preregistration": "PREREGISTRATION-p1-full-lag-period-exclusion.md",
+  "trace": "experiments/rule30-subword-extended/rule30_center_8388608.bin",
+  "bit_order": "little",
+  "validated_against_recomputed_centre_column_bits": 4096,
+  "T": 8388608,
+  "lags_tested": 4194304,
+  "bonferroni_threshold": 5.70085316130292,
+  "expected_null_max_abs_z": 5.646660101844052,
+  "threshold_note": "thr_bonf and the expected null maximum agree to within one percent at this N, so a maximum near 5.65 is the sample size and not a finding.",
+  "fft_vs_direct_max_abs_error_in_z": 1.2212453270876722e-15,
+  "fft_gate_probe_lags": 24,
+  "max_z": 5.521645634593456,
+  "argmax_lag": 1656153,
+  "min_z": -5.270346125555664,
+  "n_lags_at_or_above_threshold": 0,
+  "empirical_null_max_z_over_20_seeds": 5.715731350768637,
+  "empirical_null_max_abs_z_over_20_seeds": 6.048506938459673,
+  "exceeds_empirical_null": false,
+  "controls": {
+    "period_1048573": {
+      "z_at_period": 2709.2498961889805,
+      "must_exceed": 1000.0,
+      "fires": true
+    },
+    "rule90_lag1": {
+      "z": 2896.308512572596,
+      "must_exceed": 1000.0,
+      "fires": true,
+      "saturation_at_this_T": 2896.309203106602,
+      "note": "z(1) = (T-3)/sqrt(T-1), so the statistic saturates near sqrt(T); at the 2^18 used in the first run that ceiling is 512 and the registered bar of 1000 could not be met at any signal strength."
+    },
+    "sturmian_structure_positive": {
+      "max_z": 1022.0745138931434,
+      "lags": 524288,
+      "registered_as": "negative control (mis-cast)",
+      "fires": true
+    }
+  },
+  "registration_defects_disclosed": [
+    "Q3 set the rule90 bar at z > 1000; the statistic saturates near sqrt(n), so at the 2^18 length used in the first run the bar was unreachable. First run therefore reported INCONCLUSIVE by its own rule, which was honoured; the control is re-run here at the registered depth T rather than substituted.",
+    "Q3 cast the Sturmian word as a NEGATIVE control. It is highly structured and fires hard; it is recorded here as a positive control for structure detection. The 20 i.i.d. seeds are the negative control."
+  ],
+  "verdict": "NO POSITIVE AUTOCORRELATION",
+  "excluded_band": [
+    {
+      "period_at_most": 100000,
+      "preperiod_excluded_below": 4136097,
+      "p_plus_q": 4236097
+    },
+    {
+      "period_at_most": 1048576,
+      "preperiod_excluded_below": 3662293,
+      "p_plus_q": 4710869
+    },
+    {
+      "period_at_most": 2097152,
+      "preperiod_excluded_below": 3138578,
+      "p_plus_q": 5235730
+    },
+    {
+      "period_at_most": 4194304,
+      "preperiod_excluded_below": 2091314,
+      "p_plus_q": 6285618
+    }
+  ],
+  "scope": "A band trading period against preperiod, not a bound in one variable. Says nothing about p > T/2 at any q, does not prove P1, does not touch P2. Same argument as r30-a18-autocorrelation-excludes-period-band at larger T and L, so it supersedes those numbers rather than independently confirming them."
+}
