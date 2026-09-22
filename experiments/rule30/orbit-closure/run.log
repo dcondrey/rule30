@@ -1,5 +1,4 @@
-generated rule 30 column, T=1100000, 183.2s
-generated rule 90 column, T=1100000, 168.8s
-null seeds: 8.5s
+$ uv run python orbit_closure_diagnostic.py --steps 2000000 --out results.json
+null seeds: 6.3s
 wrote results.json
 EXIT=0

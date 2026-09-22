@@ -23,6 +23,14 @@ Output: |R_m| per length, the growth ratio, every new minimal forbidden
 factor (unrealizable word whose two length-(m-1) factors are realizable),
 and a JSON file with the complete forbidden-factor list and the words of the
 last length, for use by hf_lang_survival.py.
+
+The JSON is rewritten after every length (--no-checkpoint to write it once at
+the end), and --resume JSON continues from the length a previous JSON reached;
+--workers N shards each length's candidates over N processes, one solver each.
+
+    uv run --no-project --with python-sat python r_exact_sat.py \\
+        --resume r_exact_language.json --max-length 48 --workers 6 \\
+        --out r_exact_language_m48.json
 """
 
 from __future__ import annotations
@@ -31,6 +39,7 @@ import argparse
 import json
 import sys
 import time
+from multiprocessing import Pool
 
 sys.path.insert(0, "/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant")
 from pysat.solvers import Solver  # noqa: E402
@@ -98,8 +107,36 @@ class Cone:
         self.solver.delete()
 
 
-def has_forbidden_suffix(word: str, forbidden: list[str]) -> bool:
-    return any(word.endswith(f) for f in forbidden)
+def forbidden_by_length(forbidden: list[str]) -> dict[int, set[str]]:
+    table: dict[int, set[str]] = {}
+    for f in forbidden:
+        table.setdefault(len(f), set()).add(f)
+    return table
+
+
+def has_forbidden_suffix(word: str, table: dict[int, set[str]]) -> bool:
+    return any(word[-length:] in words for length, words in table.items() if length <= len(word))
+
+
+def evaluate_shard(job: tuple[int, list[str]]) -> list[tuple[str, bool]]:
+    m, candidates = job
+    cone = Cone(m)
+    verdicts = [(cand, cone.realizable(cand)) for cand in candidates]
+    cone.close()
+    return verdicts
+
+
+def write_record(path: str, max_length: int, counts: list[int], forbidden: list[str], language: set[str]) -> None:
+    with open(path, "w") as fh:
+        json.dump(
+            {
+                "max_length": max_length,
+                "counts": counts,
+                "forbidden": forbidden,
+                "words_last_length": sorted(language),
+            },
+            fh,
+        )
 
 
 def main() -> None:
@@ -107,34 +144,41 @@ def main() -> None:
     ap.add_argument("--max-length", type=int, default=30)
     ap.add_argument("--gate", type=int, default=10)
     ap.add_argument("--out", default="/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-hardcore/r_exact_language.json")
+    ap.add_argument("--resume", default="", help="JSON written by an earlier run; continue from its max_length + 1")
+    ap.add_argument("--workers", type=int, default=1)
+    ap.add_argument("--no-checkpoint", action="store_true", help="write --out once at the end instead of after every length")
     args = ap.parse_args()
 
     recorded = [2, 3, 5, 8, 12, 17, 25, 36, 50, 68, 91, 119, 156]
     forbidden: list[str] = []
     language = {""}
-    counts = []
+    counts: list[int] = []
+    start = 1
+    if args.resume:
+        with open(args.resume) as fh:
+            prior = json.load(fh)
+        forbidden = list(prior["forbidden"])
+        counts = list(prior["counts"])
+        language = set(prior["words_last_length"])
+        start = prior["max_length"] + 1
+        assert len(counts) == prior["max_length"] and len(language) == counts[-1], (len(counts), len(language))
+        print(f"resumed from {args.resume}: |R_{start - 1}| = {len(language)}, {len(forbidden)} forbidden factors")
+    table = forbidden_by_length(forbidden)
+    pool = Pool(args.workers) if args.workers > 1 else None
     print(" m   |R_m|   ratio   sat-calls  new minimal forbidden factors   (time)")
-    for m in range(1, args.max_length + 1):
+    for m in range(start, args.max_length + 1):
         t0 = time.time()
-        cone = Cone(m)
-        new_language = set()
-        new_forbidden = []
-        calls = 0
-        for w in language:
-            for b in "01":
-                cand = w + b
-                if has_forbidden_suffix(cand, forbidden):
-                    continue
-                calls += 1
-                if cone.realizable(cand):
-                    new_language.add(cand)
-                else:
-                    # w = cand[:-1] is realizable by construction; cand[1:] is
-                    # a minimal forbidden factor test: minimal iff cand[1:]
-                    # realizable (it is a word of length m-1).
-                    if cand[1:] in language:
-                        new_forbidden.append(cand)
-        cone.close()
+        candidates = [w + b for w in language for b in "01" if not has_forbidden_suffix(w + b, table)]
+        calls = len(candidates)
+        if pool is None:
+            verdicts = evaluate_shard((m, candidates))
+        else:
+            shards = [candidates[i :: 2 * args.workers] for i in range(2 * args.workers)]
+            verdicts = [v for part in pool.map(evaluate_shard, [(m, s) for s in shards if s]) for v in part]
+        new_language = {cand for cand, ok in verdicts if ok}
+        # w = cand[:-1] is realizable by construction; cand is a minimal
+        # forbidden factor iff cand[1:] is realizable (a word of length m-1).
+        new_forbidden = sorted(cand for cand, ok in verdicts if not ok and cand[1:] in language)
         if m <= args.gate:
             exact = realized_language(m)
             assert exact == new_language, (m, len(exact), len(new_language))
@@ -146,24 +190,24 @@ def main() -> None:
             gate_note += " recorded=PASS"
         ratio = len(new_language) / len(language) if language and m > 1 else float("nan")
         counts.append(len(new_language))
-        forbidden.extend(sorted(new_forbidden))
+        forbidden.extend(new_forbidden)
+        for f in new_forbidden:
+            table.setdefault(len(f), set()).add(f)
         language = new_language
         print(
             f"{m:2d} {len(language):7d}  {ratio:6.3f}  {calls:9d}  "
-            f"{','.join(sorted(new_forbidden)) or '-'}   ({time.time() - t0:.1f}s){gate_note}"
+            f"{','.join(new_forbidden) or '-'}   ({time.time() - t0:.1f}s){gate_note}"
         )
         sys.stdout.flush()
-    with open(args.out, "w") as fh:
-        json.dump(
-            {
-                "max_length": args.max_length,
-                "counts": counts,
-                "forbidden": forbidden,
-                "words_last_length": sorted(language),
-            },
-            fh,
-        )
-    print(f"wrote {args.out}: {len(forbidden)} minimal forbidden factors through length {args.max_length}")
+        if not args.no_checkpoint:
+            write_record(args.out, m, counts, forbidden, language)
+    if pool is not None:
+        pool.close()
+        pool.join()
+    reached = len(counts)
+    if args.no_checkpoint:
+        write_record(args.out, reached, counts, forbidden, language)
+    print(f"wrote {args.out}: {len(forbidden)} minimal forbidden factors through length {reached}")
     print("counts:", counts)
 
 

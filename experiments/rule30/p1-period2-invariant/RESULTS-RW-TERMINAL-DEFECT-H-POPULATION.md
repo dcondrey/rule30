@@ -22,6 +22,8 @@ own `surviving`/`terminal_pull` booleans), asserting agreement on every
 word — this is control #1 from the prereg's section 5. No disagreement
 occurred.
 
+**Scope note, 2026-09-17: this document's `n <= 16` is the range THIS run measured, and is no longer the horizon.** The overnight census extended it to `n = 1..24`, all three `r`, both `c`, log-attested in `overnight_c2_odd.log`, `overnight_c3_odd.log`, `overnight_c2_even.log` and `overnight_c3_even.log` (e.g. `RESULT n=24 c=2 H0=0 H1=0 H2=0 max_row=14 margin=12 secs=17345.2`), and recorded at `docs/rule30/overnight/LEDGER-20260905.md` finding 3b, which states that anywhere in the repo citing `n <= 16` as this horizon is stale.  Cite the log lines plus that ledger entry, not this document, for the horizon.  Note the same ledger's finding 5 says `n = 1..16` in passing; it was written against a misquoted brief and is superseded by finding 3b in the same file.
+
 ## Result
 
 | r | c | n=1..16 |

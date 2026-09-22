@@ -183,3 +183,39 @@ PYTHONDONTWRITEBYTECODE=1 python3 \
 
 The loop over windows is a regression check for the formulas, not the source
 of the all-window quantifier; that quantifier is supplied by (2)--(6).
+
+## 7. Follow-up: four escapes tried against the exact mechanism (2026-09-06)
+
+The theorem's mechanism is the collapse of `00`/`11` to the same `D8` group
+element. Four escapes were tried, each judged by whether it specifically
+avoids asking a group-collapsed summary to predict the future:
+
+- **A finer congruence that keeps the whole intermediate scan trace, not
+  just its final `D8` element.** Resolved 2026-09-06, and it closes the
+  family rather than escaping it. Zero class merges through `L=18`
+  (3,015,168 exhaustive legal words, `RESULTS-SYNTACTIC-MONOID-QUOTIENT.md`),
+  and then proved injective for **every** length in two finite checks on the
+  action table (`RESULTS-SYNTACTIC-MONOID-INJECTIVITY-PROOF.md`). This is
+  the escape the theorem's own final paragraph anticipates ("an unrelated
+  interior statistic that explicitly distinguishes the two neutral blocks"),
+  and the proof shows the only statistic of this shape that distinguishes
+  them is the literal block: the right congruence is the identity, so the
+  block monoid is free and admits no finite quotient at any radius. The
+  no-go's `D8` collapse is the `sig_B` special case of that fact.
+- **A paired/relative invariant over two synchronized copies.** Killed for
+  both tested constructions — divergence width grows without saturation
+  under tail 3, and tail-2 pairs die before divergence develops. See
+  `RESULTS-PAIRED-DIVERGENCE-INVARIANT.md`.
+- **A monotone Lyapunov potential not built from a finite quotient at all.**
+  Killed for every tested candidate; all were artifacts of the queue's
+  fixed +1-symbol-per-step growth rather than real dynamical signal. See
+  `RESULTS-LYAPUNOV-POTENTIAL-SEARCH.md`.
+- **The existing zero-prefix greedy counting lemma** (`s_2(W)<=n`,
+  `s_3(W)<=n+1`, `RESULTS-SCALE-TELESCOPING.md`), which is a monotone count
+  over the whole word rather than a bounded transition congruence and so
+  was never in this theorem's scope: extended empirically (length 23
+  exhaustive, length 2000 adversarial/random, zero counterexamples), still
+  unproved. See `RESULTS-ZERO-PREFIX-LEADING-TERM-EXTEND.md`.
+
+The syntactic-trace quotient is the one live structurally-new lead; it is
+not proved for all `L`, only verified exhaustively to `L=18`.

@@ -40,14 +40,18 @@ D = 400  # truncation depth; a discrepancy at depth d cannot reach column 0
          # before time d, so claims are read only for t well under D.
 
 
-def evolve(cells: dict[int, int], T: int) -> list[int]:
-    """Central trace c_0..c_T of the row `cells`, by equation (1)."""
+def evolve(cells: dict[int, int], T: int, d: int = D) -> list[int]:
+    """Central trace c_0..c_T of the row `cells`, by equation (1).
+
+    `d` bounds the working window.  Cells at distance `d` reach the centre only
+    at time `d`, so any `T < d` is read off an exact computation.
+    """
     cur = dict(cells)
     trace = []
     for t in range(T + 1):
         trace.append(cur.get(0, 0))
         cur = {x: cur.get(x - 1, 0) ^ (cur.get(x, 0) | cur.get(x + 1, 0))
-               for x in range(-D + t + 1, D - t)}
+               for x in range(-d + t + 1, d - t)}
     return trace
 
 
@@ -89,18 +93,30 @@ def audit(wmax: int = 7, seed: int = 1) -> list[str]:
     rng = random.Random(seed)
     fails: list[str] = []
 
-    # -- Lemma 1, finite form
-    agree = 0
+    # -- Lemma 1, finite form.  c_0..c_r depends only on cells in [-r,r], so for
+    # a fixed right half the map (L_1..L_r) -> (c_1..c_r) is a map between two
+    # sets of size 2^r.  Triangular uniqueness says it is injective, hence a
+    # bijection.  Enumerated exhaustively; a collision would refute the lemma.
+    cases = 0
     for r in range(1, 9):
-        for _ in range(400):
-            right = {x: rng.randint(0, 1) for x in range(-r, D)}
-            a = {**{-j: rng.randint(0, 1) for j in range(r + 1, D)}, **right}
-            b = {**{-j: rng.randint(0, 1) for j in range(r + 1, D)}, **right}
-            if evolve(a, r) == evolve(b, r):
-                agree += 1
-                if any(a.get(-j) != b.get(-j) for j in range(1, r + 1)):
-                    fails.append("Lemma 1 finite form violated")
-    print(f"Lemma 1  {agree} trace-agreeing pairs, 0 disagreements on [-r,-1]")
+        for _ in range(20):
+            right = {x: rng.randint(0, 1) for x in range(0, r + 3)}
+            seen: dict[tuple[int, ...], tuple[int, ...]] = {}
+            for assignment in itertools.product([0, 1], repeat=r):
+                left = {-j: assignment[j - 1] for j in range(1, r + 1)}
+                trace = tuple(evolve({**left, **right}, r, d=r + 2)[1:])
+                if trace in seen:
+                    fails.append(
+                        f"Lemma 1 violated at r={r}: left halves {seen[trace]} "
+                        f"and {assignment} share the trace {trace}")
+                seen[trace] = assignment
+            if len(seen) != 1 << r:
+                fails.append(
+                    f"Lemma 1 at r={r}: {len(seen)} traces for {1 << r} left "
+                    f"halves, so the map is not injective")
+            cases += 1
+    print(f"Lemma 1  {cases} right halves, left halves through depth 8 "
+          f"separated by their traces, 0 collisions")
 
     # -- Theorem 2
     n = 0

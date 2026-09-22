@@ -1,5 +1,11 @@
 # Proof of lemma `driven-lhp-column-minus-one-aperiodic`, structural-inductive form
 
+**Scope correction, 2026-09-15:** the aperiodicity theorem below is
+unaffected, but the later discussion calling the literal PIN-Pi horn
+open is superseded. The boundary `c=110^infinity` passes every pin test
+in the zero-initial LHP and is eventually constant. Its full centre glue
+fails. See [the exact counterexample and repaired scope](../../../../../docs/rule30/RESULTS-r1-periodic-realization-scope.md).
+
 Date: 2026-09-03.  Output directory:
 `/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-r1zero-prove-driven-lhp-column-minus-one-aperiodic-structural/`.
 Finite checks: `verify_driven_lhp.py`, log `verify_driven_lhp.log` (same directory), all

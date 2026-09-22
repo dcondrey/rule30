@@ -2,9 +2,12 @@
 
 STATUS: REDUCED — a ladder of statements S(0) <= S(1) <= S(2) <= ... is established, with
 S(0) EXACTLY equivalent to Wolfram P1 and the conjunction of all S(n) exactly equivalent to
-non-2-automaticity of the center column. Each rung is one-sidedly provable by a single finite
-GF(2) rank computation. Certificates computed and independently reproduced. The remaining
-obligation is named precisely below (Lemma L).
+non-2-automaticity of the center column. A finite GF(2) rank computation certifies only a
+bounded-height S(n,d), not an all-height rung S(n). Certificates were independently reproduced.
+**Correction integrated 2026-09-15:** the generic Lemma L below was already refuted in
+`frontier_attack/a20_bridy_verification/bridy_verification.md`. It is not an open obligation.
+See [the scope audit](../AUDIT-automaticity-route-scope.md) for that source and the surviving
+possibility of an independently proved, sequence-specific conditional bound.
 
 All four leads passed adversarial verification with verdict "holds" — the only workflow this
 session in which nothing broke.
@@ -92,7 +95,11 @@ periodicity checks and have no elementary restatement.
    eventually constant, therefore the 2-kernel is infinite" is FALSE. Thue-Morse is an explicit
    counterexample: finite 2-kernel, no eventually constant residual.
 
-## Remaining obligation — Lemma L, stated as a referee would
+## Historical proposed obligation — Lemma L (refuted)
+
+The following proposal is retained as history, not a live target. Both its order and height
+bounds are false in general; see the correction above. The exponential generic bound does
+not prove that a special bound for the Rule 30 center is impossible.
 
 The ladder converts non-automaticity into infinitely many finite computations, but the
 conversion rate is unproved. Needed:

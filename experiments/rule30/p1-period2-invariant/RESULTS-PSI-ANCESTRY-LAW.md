@@ -275,3 +275,28 @@ seam law.  It does not rule out a proof by other means: an ordered-ancestry or
 injection argument of the kind capsule section 6.4 describes is not a
 bounded-degree object and is untouched by this measurement.  The closed form
 in section 3 remains the right vehicle for one.
+
+## 11. Sequential-state scope correction, 2026-09-09
+
+Section 10's sentence claiming that every recursion must carry unbounded
+state does not follow from algebraic degree, even if unbounded degree
+were proved at all lengths. Sequential AND already has degree n and only
+two states. The degree measurements here also stop at finite n. They
+exclude the corresponding attained bounded-degree budgets, not every
+bounded-state sequential mechanism. The fixed column transducer in §4
+remains valid; its source-level composite still requires a separate
+argument. The same distinction is explicit in the C3 degree audit §6 and
+is tested in
+[the C3 sequential report](../../../docs/rule30/RESULTS-c3-sequential-structure.md).
+
+## 12. Provenance of the section 10 table, 2026-09-21
+
+The table is the output of `psi_degree.py`, whose default range is `n = 4`
+to `15`. The saved log `psi_degree_20260902.log` holds `n = 4` through `13`,
+including the odd `n` the table omits; at `n = 5` and `n = 7` the minimum
+`Psi` coordinate degree there is `n-2` (3 and 5), which is the exception the
+hedge "essentially every coordinate" in section 10 covers, and which the
+table never shows. The rows `n = 14` and `15` had no saved log; the run
+`uv run --no-project python -B psi_degree.py --min-source 14 --max-source 15`
+on 2026-09-21 reproduced both rows and is saved as
+`psi_degree_20260921_n14_15.log`.

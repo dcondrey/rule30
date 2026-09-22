@@ -311,3 +311,112 @@ The [defect-frequency audit](RESULTS-defect-frequency-polytope.md) proves
 the exact stationary maximum P(11)=2/5, derives a cumulative defect-count
 bound for the finite seed, and explains why these count bounds do not
 control the residual's mask-intersection parities.
+
+## A measurement of the residual that establishes nothing, and the reason
+
+Pre-registered in `experiments/rule30/PREREGISTRATION-p1-thue-morse-residual.md`.
+**Its headline is withdrawn.** The section is kept because the reason it failed
+is a reusable no-go, and because two of its three defects were already
+anticipated in this document.
+
+**What was measured.** `R_t = c_t XOR theta(t)` over `t` in `[1, 2^23)`, with
+every lag to `n/2` swept. Residual density `0.5002161` (+1.25 null sd) against
+the column's `0.5002196` (+1.27 sd); residual `max abs z = 5.2244` against the
+column's `5.5220`, a gap of `0.2976` against a registered kill at `1.0`. No
+kill fired.
+
+**Why that null is empty.** XOR-ing a mask `m` into `c` multiplies the sign
+sequence by `(-1)^(m_t)`, so the signed uncentered lag correlation becomes
+`A'(l) = sum_t x_t x_(t+l) (-1)^(m_t XOR m_(t+l))`. The multiplier factors out
+of the sum exactly when `m_t XOR m_(t+l)` is constant in `t`. For the period-2
+mask `m_t = t mod 2`,
+
+```text
+x'_t x'_(t+l) = x_t x_(t+l) (-1)^t (-1)^(t+l) = x_t x_(t+l) (-1)^l,
+```
+
+so `corr'(l) = (-1)^l corr(l)` and **`abs z(l)` is preserved exactly at every
+lag.** Checked over all `4194303` lags, not just the maximum: the two `abs z`
+arrays differ by `0.0e+00` and share the argmax lag `1656153`.
+
+**Which comparison that kills, and which it does not.** Imposing
+`m_t XOR m_(t+l)` constant in `t` at `l = 1` forces `m` constant or
+alternating, so the exactly invariant family is `{0, 1, t mod 2, 1 + t mod 2}`
+and nothing else. Theta is not in it: `theta(0) XOR theta(1) = 1` while
+`theta(1) XOR theta(2) = 0`, and the multiplier was measured to vary with `t`
+at every lag tried. The invariance therefore forces
+
+```text
+abs z(c)  =  abs z(c XOR (t mod 2)),
+abs z(R)  =  abs z(R XOR (t mod 2)),
+```
+
+and **not** `abs z(c) = abs z(R)`, which is the pair this run compared.
+Section 9's worked example `theta XOR (t mod 2) = theta(floor(t/2))` is the
+second line, not the third, and it is visible in the ensemble: masking `c` by
+`theta(floor(t/2))` reproduces theta's own gap `-0.29763259112134577` and its
+pointwise figure `4.976789967164454` to every digit. So the run was not blind
+by mathematical invariance. It was blind empirically, which is weaker and is
+the next paragraph.
+
+**Calibration over 53 masks rather than seven.** For 48 i.i.d. balanced masks
+the signed gap `max abs z(c XOR m) - max abs z(c)` has mean `-0.327`, sd
+`0.219`, range `-0.655` to `+0.443`; none reached `1.0`. Five structured
+deterministic masks (Rudin-Shapiro, period 3, period 4, `theta(floor(t/2))`,
+`theta(t+5)`) fall inside that range. A Gumbel fitted to the ensemble has
+scale `0.171` against the asserted `1/sqrt(2 ln 2N) = 0.177`, so the noise
+model holds, but `0.18` is that SCALE and the sd is `0.219`: the registered
+kill at `1.0` is `4.6` sd of the statistic's own noise, not `5.6`, with fitted
+upper-tail probability `2.3e-4`. Theta's `-0.2976` sits at the 63rd percentile
+of the random draws.
+
+**The bar is unreachable for this mask family, not unreachable.** A mask
+carrying real structure moves the statistic enormously: the Rule 90 residual
+`R_t = theta(t)` reaches `max abs z = 485.72`, a gap of `480`, and an
+unrestricted choice such as `m_t = c_t` drives the masked trace constant. The
+defensible statement is about power, not possibility. Against a mask that
+leaves the sequence noise-like a `1.0` gap is a `4.6` sd event, so the kill had
+almost no power against the alternative it was aimed at; it was not incapable
+of firing.
+
+One exact case does survive as blindness rather than weakness. A mask that is
+`l`-periodic at the argmax lag leaves that lag's correlation untouched: the
+column's argmax `1656153` is divisible by `3`, so the period-3 mask moves
+`max abs z` by `8.9e-16` while moving individual lags by up to `4.34`.
+
+**The correct scope of the run** is a statement about the instrument: at
+`T = 2^23`, `max abs z` does not separate the centre column from its
+Thue-Morse mask, and the separation it failed to find is smaller than its own
+sampling noise. That supports no claim about whether the Thue-Morse
+decomposition simplifies anything.
+
+**Two of the three defects were already in this document.** Section 7 above
+already measures the residual (`R` ones `4147/8192`, pair-disagreements
+`2007`), so the registration's claim that the catalog held no measurement of
+`R_t` is false against its own source. Section 9 already pre-registers the
+counter-argument, that a marginal count "establishes a marginal count, not
+independence from theta", and gives `theta XOR (t mod 2) = theta(floor(t/2))`
+as the worked counterexample: the same period-2 mask that is shown above to
+leave the statistic exactly invariant. A catalog grep for "mutual information",
+"row weight" and "column entropy" returned zero and was taken as novelty; the
+document that the identity record points at contained both the measurement and
+its refutation.
+
+The Walsh relation `4cdee047bcdb8c0d` is also already proved and already gives
+the absolute Walsh multiset, its maximum and every absolute spectral moment as
+unchanged under theta-masking. "No simplification" was in the catalog in exact
+proved form before this run.
+
+**The Rule 90 control was vacuous.** For Rule 90 the centre column is `0` for
+every `t >= 1`, so `(0 XOR theta)[1:] == theta[1:]` is the XOR identity and
+passes for any array whatsoever; substituting a deliberately wrong `theta`
+still passes it. It establishes only that the Rule 90 column is all-zero after
+`t = 0`, not that the residual is formed correctly, which is what the
+registration gated INCONCLUSIVE on. The registration's Q4 also required the
+control's autocorrelation to exceed the threshold and that half never ran; it
+would have passed, at `max abs z = 485.72`.
+
+```sh
+uv run python experiments/rule30/p1_thue_morse_residual.py
+uv run python experiments/rule30/p1_thue_morse_mask_calibration.py
+```

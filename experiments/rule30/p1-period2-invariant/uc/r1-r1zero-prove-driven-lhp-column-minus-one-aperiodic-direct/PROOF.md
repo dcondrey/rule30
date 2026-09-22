@@ -1,5 +1,11 @@
 # Proof: driven-lhp-column-minus-one-aperiodic (direct)
 
+**Correction, 2026-09-15:** the driven-LHP aperiodicity proof stands, but
+the literal PIN-Pi statement in section 5(b3) is false, witnessed by
+`c=110^infinity`. Only the pin tests at times zero and one are nonvacuous,
+and both pass. The full zero-initial right/left glue fails at time two.
+See [the scope audit](../../../../../docs/rule30/RESULTS-r1-periodic-realization-scope.md).
+
 Date: 2026-09-03.  Style: direct.  Status: **PROVED**, with two precision
 corrections to the lemma text (section 0) and no gaps.
 
@@ -311,14 +317,12 @@ statement; its text is not on disk, and this is the reading its screen
   those constraints alone and must use `r*` itself, i.e. the zero-time
   coupling of (b4).  In this horn the lemma's sentence is true.
 
-So the lemma's sentence is exactly "not (PIN-Pi)", which is open.  The
-sibling screen found no pin-consistent periodic drive
-(`../r1-r1zero-screen-pin-pi-no-periodic/lock_search_T32768_p8.log`:
-"CONFIRMED LOCKS (violation-free to 8T): 0";
-`pin_tree_L48.log`: `atcap=0` on every tail); that is finite evidence
-(obstruction H) pointing toward (PIN-Pi), i.e. toward the first horn.  I
-therefore do not assert the sentence; (b1), (b2), (b3), (b4) are what is
-proved.
+The literal statement is now settled in the second horn by
+`c=110^infinity`: `l_0=0`, `l_1=1`, and no later pin test has a true
+antecedent. The old finite screen therefore did not cover this eventually
+constant counterexample. A repaired target restricted to nonconstant
+eventual tails remains open; existing constant-tail exclusions concern
+the full Rule 30 diagram and are not pin-only results.
 
 ## 6. What the lemma implies in the BRIEF chain
 

@@ -3,14 +3,19 @@
 For every primitive word w of period 1..pmax in every phase, and for prefixes = the lone-seed centre column
 prefix of length 8 plus N random prefixes of length 24 (random.Random(7919*s + p), matching the earlier
 scripts), simulate the left half-plane driven by c = prefix + w^inf from initial data y and count pin
-violations in [T/2, T).  Zero violations there = lock candidate; a candidate is extended to 8T.
-FAILURE (kills the lemma) = a candidate that stays violation-free to 8T.
+violations in [T/2, T). A candidate with zero violations there is extended to 8T;
+the follow-up checks [4T, 8T). These are late-window candidates, not all-time
+pin-compatible witnesses or counterexamples to an infinite-time statement.
 Also with random finite left data y (width ywidth, K per word) when --ywidth > 0.
 
 The earlier lhp_lock_search.py (logs lhp_lock_search_T2048.log, lhp_lock_search_T8192_p4.log) has an operator
 precedence bug in its update (`a ^ b & ~1` parses as `a ^ (b & ~1)`), so its bit 0 was s(t,-1) OR c_(t+1)
 instead of c_(t+1); those two logs simulate a different drive than the one the pin was checked against.
 This script uses lhp_lib.lhp_step, gated in gate.py.
+
+Coverage correction 2026-09-15: the zero-initial random-prefix branch formerly recreated
+Random(seed) for every bit, producing only constant prefixes. Historical ywidth=0 logs
+retain their actual narrow coverage; they are not results of the corrected sampler.
 
 usage: lock_search.py T N pmax [ywidth K]
 """
@@ -19,6 +24,11 @@ sys.path.insert(0, '/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-pe
 sys.path.insert(0, '/Volumes/A/researchpapers/13-rule30/experiments/rule30/p1-period2-invariant/uc/r1-r1zero-screen-pin-pi-no-periodic')
 from r1zero_lib import lone_seed_columns
 from lhp_lib import lhp_step, primitive_words, wstr
+
+def random_prefix(sample, period, length=24):
+    """A reproducible word from one generator advanced across all its bits."""
+    rng = random.Random(7919 * sample + period)
+    return [rng.getrandbits(1) for _ in range(length)]
 
 def lhp_run(row, c, T):
     """Return (violations in [T/2,T), one-times in [T/2,T), time of last violation, longest violation-free
@@ -69,7 +79,7 @@ def main():
     for w in words:
         p = len(w)
         if ywidth == 0:
-            cases = [(1, true_c[:8])] + [(1, [random.Random(7919 * s + p).getrandbits(1) for _ in range(24)]) for s in range(N)]
+            cases = [(1, true_c[:8])] + [(1, random_prefix(s, p)) for s in range(N)]
         else:
             cases = []
             for s in range(K):
@@ -103,7 +113,7 @@ def main():
     for tag, last, r8 in candidates:
         out.append(f"   candidate {tag}: last violation t={last} at T; at 8T violations in second half={r8[0]}, last violation t={r8[2]}")
     confirmed = [c for c in candidates if c[2][0] == 0]
-    out.append(f"CONFIRMED LOCKS (violation-free to 8T): {len(confirmed)}")
+    out.append(f"LATE-WINDOW SURVIVORS (no violations in [4T,8T); finite candidates only): {len(confirmed)}")
     out.append(f"elapsed {time.time()-t0:.1f}s")
     print("\n".join(out))
 

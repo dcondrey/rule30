@@ -170,6 +170,21 @@ row.
 This statement is the current load-bearing gap.  It is supported through
 length 22 but is not proved.
 
+**Weakened 2026-09-06.**  The greedy statement is more than (1) needs.  It
+implies, and can be replaced by, the per-row claim `max S_j >= j` on legal rows
+(`RESULTS-ZERO-PREFIX-GREEDY-REDUCTION.md`), which yields `s_2 <= n` and
+`s_3 <= n+1` in two lines with no frontier and no cross-row induction, and which
+holds on all 44,205 legal rows through length 20.  Equivalently: among the
+suffixes of `W` of length at most `n-j`, at least one moves the row-`j` affine
+off its all-zero value.  The greedy construction remains the finite certificate;
+it is no longer the thing that has to be proved.
+
+**Route disposition 2026-09-07.**  C3 and its strengthening C3ab hold
+through `n=20`/`n=21` but do not localize; the mechanism class "prove (1) by
+localizing the zero-prefix sensitivity claim" is closed with witnesses in
+`RESULTS-C3-LOCALIZATION-NO-GO.md`.  `(1)` returns to being the target, and this
+section is again the statement of record.
+
 ## 6. Proof leads and negative probes
 
 The chain (4) has a useful algebraic interpretation.  For any Boolean function

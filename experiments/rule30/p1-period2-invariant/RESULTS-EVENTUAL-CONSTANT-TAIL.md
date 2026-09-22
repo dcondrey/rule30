@@ -312,7 +312,10 @@ most `|W|+1<2|W|` for `|W|>=2`, with length one checked directly.  For tail 3
 it is at most `|W|+3<2|W|` for `|W|>=4`, with the three smaller lengths checked
 directly.  The first inequality is sharp at (11); the second is sharp at
 `W=121`, length three.  Random, nonexhaustive controls at lengths 24, 32, 48,
-and 64 also found no violation.
+and 64 also found no violation.  Exhaustive through length 30 as of
+2026-09-16 (`seam_history_hc_charge.py`, `RESULTS-HC-COMPOSITION-CHARGE.md`):
+no violation, minimum slack 4 to 11 at lengths 23 to 30, no further sharp
+case after (11).
 
 The exact incremental dependency diagonal
 

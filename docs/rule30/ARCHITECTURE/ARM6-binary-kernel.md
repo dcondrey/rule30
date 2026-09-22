@@ -89,3 +89,58 @@ Finite data cannot establish that the 2-kernel or its rank is unbounded. This
 arm is not a proof of non-automaticity and says nothing about algorithms outside
 the fixed-kernel/linear-representation classes. A proof route would need a
 family of residuals that can be shown distinct for arbitrarily large depth.
+
+## 5. The negative control, added later, and what it removes
+
+This arm shipped with a positive control and no negative one. Adding the
+negative control retracts the reading of section 4, though not its numbers.
+
+`Bernoulli(1/2)` under identical measurement code, eight seeds, at this arm's
+own settings (`--identity-prefix 128 --rank-prefix 1024`, depths 0 to 12),
+reproduces the whole table of section 3 exactly: cumulative distinct residuals
+`1, 3, 7, ..., 8191` and GF(2) ranks `1, 2, 4, ..., 512, 512, 256, 128`,
+including the rank rollover above depth 9. Standard deviation is `0.0` at every
+depth on both statistics. Every seed gives Rule 30's numbers.
+
+So **both pre-registered kill conditions of section 2 fire on pure noise.** They
+cannot distinguish the centre column from a coin. What section 4 calls "the
+maximal possible number of distinct sampled residuals at every measured depth"
+is the generic case, not a property of Rule 30.
+
+This is not a surprise once the quantity is named. Truncate at `s_n`, form the
+2-kernel from the terms up to `s_n`, count maximal elements under the prefix
+ordering: that is `A^k_s(n)`, the k-automaticity of a sequence, in Shallit and
+Breitbart, *Automaticity I: Properties of a Measure of Descriptional
+Complexity*, J. Comput. System Sci. **53** (1996), 10-25, section 11. Their
+Theorem 27, for any sequence over a finite alphabet:
+
+1. `s` is `k`-automatic if and only if `A^k_s(n) = O(1)`;
+2. `A^k_s(n) = O(n)`;
+3. `A^k_s(n) = O(n / log n)`;
+4. `A^k_s(n) = Omega(n / log n)` **for almost all sequences** `s`.
+
+Part 4 is the theorem the control measures. Part 3 is a ceiling on every future
+run of this probe, so running it deeper cannot change the class of the answer.
+Part 1 is this arm's proof obligation restated exactly: non-automaticity is
+unboundedness of `A^2_s`, so no value at any finite `n` can establish it. Part 1
+is Cobham's kernel criterion (*Uniform tag sequences*, Math. Systems Theory
+**6** (1972), 164-192), which that section gives as Theorem 26.
+
+What survives is what the statements actually say. "Any exact 2-kernel has at
+least 8191 distinct residual sequences" and "any exact GF(2)-linear
+representation needs dimension at least 512" remain true lower bounds, and they
+do close the small fixed-state and small bounded-rank explanations. They are
+simply not evidence that the centre column is unlike a random sequence, and
+section 4 should not be read as offering any.
+
+Reading direction is also not a detail. Shallit and Breitbart fix
+least-significant-digit-first and say why: there exist languages with low
+automaticity whose reversal has high automaticity (their reference is Glaister
+and Shallit, *Automaticity III*). `residual_prefix` pins low bits and strides,
+so every number here is the LSD-first count. A most-significant-digit-first
+count bounds a different automaton and does not compare with these.
+
+```bash
+uv run python experiments/rule30/automaticity_probe.py \
+  --identity-prefix 128 --rank-prefix 1024 --null-seeds 8
+```

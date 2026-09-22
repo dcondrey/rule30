@@ -19,11 +19,17 @@ def decode(value: int) -> Carry:
     return value >> 1, value & 1
 
 
-def carry_step(carry: Carry, symbol: int, use_or: bool = True) -> tuple[Carry, int]:
+# IMPORTANT: the combining operation IS the rule, l^(c|r) being Rule 30 and
+# l^c^r Rule 150. Keyed by rule number so the label cannot drift from the
+# semantics, as it did while this was a `use_or` boolean printed as Rule 90.
+COMBINE = {30: lambda x, y: x | y, 150: lambda x, y: x ^ y}
+
+
+def carry_step(carry: Carry, symbol: int, rule: int = 30) -> tuple[Carry, int]:
     """Read q=(a,b); emit (d',c'), encoded as 2*d'+c'."""
     c, d = carry
     a, b = symbol >> 1, symbol & 1
-    combine = (lambda x, y: x | y) if use_or else (lambda x, y: x ^ y)
+    combine = COMBINE[rule]
     c_new = c ^ combine(a, b)
     d_new = d ^ combine(c, a)
     return (c_new, d_new), 2 * d_new + c_new
@@ -35,9 +41,9 @@ def terminal(carry: Carry) -> int:
     return 2 * (c ^ d) + 1
 
 
-def input_transform(symbol: int, use_or: bool = True) -> Transform:
+def input_transform(symbol: int, rule: int = 30) -> Transform:
     return tuple(
-        encode(carry_step(decode(state), symbol, use_or)[0]) for state in range(4)
+        encode(carry_step(decode(state), symbol, rule)[0]) for state in range(4)
     )
 
 
@@ -46,8 +52,8 @@ def compose(after: Transform, before: Transform) -> Transform:
     return tuple(after[before[state]] for state in range(4))
 
 
-def generated_monoid(use_or: bool = True) -> set[Transform]:
-    generators = [input_transform(symbol, use_or) for symbol in range(4)]
+def generated_monoid(rule: int = 30) -> set[Transform]:
+    generators = [input_transform(symbol, rule) for symbol in range(4)]
     identity: Transform = (0, 1, 2, 3)
     found = {identity, *generators}
     changed = True
@@ -264,8 +270,8 @@ def main() -> None:
     for symbol in range(4):
         print(f'  {symbol}: {input_transform(symbol)}')
 
-    rule30_group = generated_monoid(True)
-    rule90_group = generated_monoid(False)
+    rule30_group = generated_monoid(30)
+    rule150_group = generated_monoid(150)
     assert all(len(set(transform)) == 4 for transform in rule30_group)
     rotation = input_transform(1)
     reflection = input_transform(0)
@@ -282,13 +288,13 @@ def main() -> None:
         print(f'  {transform} order={transform_order(transform)}')
     print('presentation check: r=input 1 has order 4, s=input 0 has order 2, srs=r^-1')
     print(
-        f'Rule 90 XOR-control monoid size={len(rule90_group)}; '
-        f'all permutations={all(len(set(t)) == 4 for t in rule90_group)}; '
-        f'orbits={permutation_orbits(rule90_group)}'
+        f'Rule 150 XOR-control monoid size={len(rule150_group)}; '
+        f'all permutations={all(len(set(t)) == 4 for t in rule150_group)}; '
+        f'orbits={permutation_orbits(rule150_group)}'
     )
-    print('Rule 90 XOR-control input transformations:')
+    print('Rule 150 XOR-control input transformations:')
     for symbol in range(4):
-        print(f'  {symbol}: {input_transform(symbol, False)}')
+        print(f'  {symbol}: {input_transform(symbol, 150)}')
     checks = exhaustive_word_crosscheck()
     print(f'word-transducer crosscheck: {checks} exact frontiers PASS')
 

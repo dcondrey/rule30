@@ -20,11 +20,21 @@ Pre-registered disconfirmation:
 
 Thue--Morse is included as a positive control: its 2-kernel should saturate at
 two residual sequences and rank two.
+
+Bernoulli(1/2) is the negative control, and it is the one that says what a
+saturated count is worth.  Shallit and Breitbart, "Automaticity I", JCSS 53
+(1996), section 11, Theorem 27, prove that this count -- the k-automaticity
+A^k_s(n) of a sequence -- is O(n / log n) for every sequence over a finite
+alphabet and Omega(n / log n) for ALMOST ALL of them.  Saturation is therefore
+the generic behaviour, so a saturated Rule 30 count separates the centre column
+from nothing unless it is read against a matched null.
 """
 
 from __future__ import annotations
 
 import argparse
+import random
+import statistics
 from collections.abc import Callable
 
 from center_column import center_column
@@ -51,6 +61,14 @@ def naive_center_column(steps: int) -> bytes:
 
 def thue_morse(length: int) -> bytes:
     return bytes(index.bit_count() & 1 for index in range(length))
+
+
+def bernoulli(seed: int) -> Callable[[int], bytes]:
+    def make(length: int) -> bytes:
+        bits = random.Random(seed).getrandbits(length)
+        return bytes((bits >> index) & 1 for index in range(length))
+
+    return make
 
 
 def residual_prefix(sequence: bytes, depth: int, residue: int, length: int) -> bytes:
@@ -136,9 +154,12 @@ def main() -> None:
     parser.add_argument("--max-depth", type=int, default=12)
     parser.add_argument("--identity-prefix", type=int, default=64)
     parser.add_argument("--rank-prefix", type=int, default=1024)
+    parser.add_argument("--null-seeds", type=int, default=8)
     args = parser.parse_args()
     if args.max_depth < 0 or args.identity_prefix < 1 or args.rank_prefix < 1:
         parser.error("depth must be non-negative and prefix lengths must be positive")
+    if args.null_seeds < 0 or args.null_seeds == 1:
+        parser.error("--null-seeds must be 0 or at least 2, since it reports a sample sd")
 
     rule30 = probe(
         "rule30",
@@ -157,6 +178,38 @@ def main() -> None:
     print_report("rule30", rule30)
     print()
     print_report("thue-morse control", control)
+    if not args.null_seeds:
+        return
+
+    nulls = [
+        probe(
+            f"bernoulli-{seed}",
+            bernoulli(seed),
+            args.max_depth,
+            args.identity_prefix,
+            args.rank_prefix,
+        )
+        for seed in range(args.null_seeds)
+    ]
+    print()
+    print(f"## bernoulli(1/2) negative control, {args.null_seeds} seeds")
+    print("depth  r30_cum null_cum_mean sd  r30_rank null_rank_mean sd  separates")
+    for index, row in enumerate(rule30):
+        cum = [null[index][4] for null in nulls]
+        rank = [null[index][5] for null in nulls]
+        cum_mean, cum_sd = statistics.fmean(cum), statistics.stdev(cum)
+        rank_mean, rank_sd = statistics.fmean(rank), statistics.stdev(rank)
+        apart = (abs(row[4] - cum_mean) > 3 * cum_sd if cum_sd else row[4] != cum_mean) or (
+            abs(row[5] - rank_mean) > 3 * rank_sd if rank_sd else row[5] != rank_mean
+        )
+        print(
+            f"{row[0]:5d} {row[4]:8d} {cum_mean:13.1f} {cum_sd:4.1f}"
+            f" {row[5]:9d} {rank_mean:14.1f} {rank_sd:4.1f}  {'YES' if apart else 'no'}"
+        )
+    print(
+        "A saturated count is the generic case (Shallit and Breitbart 1996, Thm 27.4),"
+        " so a depth only carries evidence about Rule 30 where this column reads YES."
+    )
 
 
 if __name__ == "__main__":
