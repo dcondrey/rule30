@@ -1,0 +1,1515 @@
+{
+  "schema": "rule30.cap18-four-sheet-propagation.v1",
+  "preregistration": "PREREGISTRATION-cap18-four-sheet-propagation.md",
+  "source_sha256": "cdb6792f2a3f871a7e178f9af8b090172e6942b99dbf9961d0d379dc7a7ec075",
+  "statistics_module_sha256": "0ac43ac8e82d2864d273a618ff5e3c89fe9bd059fc6c92b1dbf19703ea126029",
+  "primary_sha256": "b5b2c631880031c42c8663223deb4791deb9f959dc377fde4527a58e8c1d1c84",
+  "statistics_sha256": "6cbc8331af8599e821355de2fe41ab26c3fad75d1a84c3110b50ab2dd00c3fda",
+  "preconditions": "manifest hashes, live-state join, from-scratch guard, balanced guard and saved histograms all checked",
+  "generations": [
+    {
+      "parent_old_depth": 12,
+      "child_old_depth": 13,
+      "parents": 125,
+      "children": 216,
+      "four_sheet_invariant": {
+        "parents_tested": 73,
+        "failures": 17,
+        "child_layer_base_rate": 0.5648148148148148,
+        "expected_failures_if_independent": 13.825188614540453,
+        "probability_of_zero_failures_if_independent": 2.2050762980247667e-07
+      },
+      "four_sheet_failures": [
+        {
+          "parent_state": 2783555,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 36337987,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 69892419,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 2882379,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 2882379,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 36436811,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 3314083,
+          "parent_cycle_order": 4,
+          "children": [
+            {
+              "state": 36868515,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 70422947,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 4886851,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 4886851,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 105550147,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 6689611,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 6689611,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 107352907,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 9302987,
+          "parent_cycle_order": 4,
+          "children": [
+            {
+              "state": 9302987,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 42857419,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 11170763,
+          "parent_cycle_order": 4,
+          "children": [
+            {
+              "state": 44725195,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 78279627,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 11172163,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 44726595,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 78281027,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 11178315,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 44732747,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 78287179,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 11538763,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 78647627,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 112202059,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 13594947,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 80703811,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 114258243,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 15602083,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 15602083,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 116265379,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 19763307,
+          "parent_cycle_order": 4,
+          "children": [
+            {
+              "state": 19763307,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 53317739,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 19788747,
+          "parent_cycle_order": 4,
+          "children": [
+            {
+              "state": 19788747,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 53343179,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 23419811,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 23419811,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 56974243,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 29618499,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 63172931,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 96727363,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 30142883,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 30142883,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 63697315,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        }
+      ],
+      "exploratory_three_or_more_sheet_invariant": {
+        "parents_tested": 102,
+        "failures": 18,
+        "child_layer_base_rate": 0.6898148148148148,
+        "expected_failures_if_independent": 13.023469650205753,
+        "probability_of_zero_failures_if_independent": 5.736675721969441e-07
+      },
+      "exploratory_order4_cycle_invariant": {
+        "parents_tested": 13,
+        "failures": 13,
+        "child_layer_base_rate": 0.05092592592592592,
+        "expected_failures_if_independent": 11.709640775034293,
+        "probability_of_zero_failures_if_independent": 9.077674853140561e-14,
+        "note": "Every failure is forced by the lift lemma (RESULTS-guarded-two-block-lift.md section 7), so the independence expectation does not apply to this row."
+      },
+      "exploratory_children_sheets_by_parent_sheets": {
+        "2": {
+          "2": 3,
+          "2,4": 3,
+          "3": 2,
+          "3,4": 2,
+          "4": 8,
+          "4,4": 2,
+          "none": 3
+        },
+        "3": {
+          "2": 5,
+          "2,4": 4,
+          "3": 5,
+          "3,3": 1,
+          "3,4": 4,
+          "4": 5,
+          "4,4": 5
+        },
+        "4": {
+          "2,2": 13,
+          "2,4": 26,
+          "3,3": 4,
+          "3,4": 4,
+          "4,4": 26
+        }
+      },
+      "post_hoc_lift_lemma_check": {
+        "child_cycles": 82,
+        "violations": 0,
+        "transitions": {
+          "center/2->center": 3,
+          "center/2->free_reflection": 12,
+          "center/2->identity": 3,
+          "fixing_reflection/1->free_reflection": 2,
+          "fixing_reflection/2->free_reflection": 1,
+          "fixing_reflection/2->identity": 2,
+          "free_reflection/2->center": 4,
+          "free_reflection/2->fixing_reflection": 2,
+          "free_reflection/2->free_reflection": 10,
+          "free_reflection/2->identity": 8,
+          "identity/1->center": 2,
+          "identity/1->fixing_reflection": 7,
+          "identity/1->free_reflection": 9,
+          "identity/1->identity": 5,
+          "identity/1->rotation": 8,
+          "rotation/4->center": 1,
+          "rotation/4->identity": 3
+        }
+      }
+    },
+    {
+      "parent_old_depth": 13,
+      "child_old_depth": 14,
+      "parents": 216,
+      "children": 351,
+      "four_sheet_invariant": {
+        "parents_tested": 122,
+        "failures": 54,
+        "child_layer_base_rate": 0.4672364672364672,
+        "expected_failures_if_independent": 34.62811178480691,
+        "probability_of_zero_failures_if_independent": 2.048569372616583e-18
+      },
+      "four_sheet_failures": [
+        {
+          "parent_state": 5247083,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 273682539,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 407900267,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 6020003,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 274455459,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 408673187,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 8917963,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 8917963,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 143135691,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 11934115,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 280369571,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 414587299,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 14717771,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 283153227,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 417370955,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 19927147,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 154144875,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 288362603,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 21232547,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 289668003,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 423885731,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 23507787,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 23507787,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 157725515,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 23507875,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 23507875,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 157725603,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 23598027,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 157815755,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 292033483,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 24687435,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 293122891,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 427340619,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 30806987,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 30806987,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 165024715,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 31896395,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 166114123,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 300331851,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 36909899,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 36909899,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 439563083,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 39367499,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 173585227,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 307802955,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 42472395,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 42472395,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 445125579,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 42595787,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 42595787,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 445248971,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 45298507,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 45298507,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 447951691,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 46397771,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 46397771,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 449050955,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 46398371,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 46398371,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 449051555,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 52647747,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 186865475,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 321083203,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 53481579,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 53481579,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 187699307,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 53523275,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 187741003,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 321958731,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 54656035,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 323091491,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 457309219,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 54970915,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 323406371,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 457624099,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 57062219,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 57062219,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 459715403,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 57178531,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 325613987,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 459831715,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 58061771,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 326497227,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 460714955,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 63044643,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 63044643,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 197262371,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 63352003,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 63352003,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 197569731,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 63697867,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 197915595,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 332133323,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 72086475,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 72086475,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 206304203,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 72921931,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 72921931,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 475575115,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 82317419,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 82317419,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 216535147,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 82344355,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 82344355,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 216562083,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 87077707,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 355513163,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 489730891,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 89519051,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 357954507,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 492172235,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 89527243,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 357962699,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 492180427,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 91616203,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 360051659,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 494269387,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 92803179,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 92803179,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 227020907,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 94590787,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 228808515,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 363026243,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 97252299,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 365687755,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 499905483,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 105296803,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 373732259,
+              "sheets": 3,
+              "cycle_order": 2
+            },
+            {
+              "state": 507949987,
+              "sheets": 3,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 105366723,
+          "parent_cycle_order": 4,
+          "children": [
+            {
+              "state": 373802179,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 508019907,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 105910379,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 105910379,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 240128107,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 115381067,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 383816523,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 518034251,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 115871851,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 384307307,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 518525035,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 122032971,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 122032971,
+              "sheets": 2,
+              "cycle_order": 2
+            },
+            {
+              "state": 256250699,
+              "sheets": 2,
+              "cycle_order": 2
+            }
+          ]
+        },
+        {
+          "parent_state": 123073483,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 257291211,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 391508939,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 124261323,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 392696779,
+              "sheets": 3,
+              "cycle_order": 1
+            },
+            {
+              "state": 526914507,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 125350731,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 259568459,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 393786187,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 126357611,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 394793067,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 529010795,
+              "sheets": 3,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 131470283,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 399905739,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 534123467,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        },
+        {
+          "parent_state": 132559691,
+          "parent_cycle_order": 2,
+          "children": [
+            {
+              "state": 132559691,
+              "sheets": 2,
+              "cycle_order": 1
+            },
+            {
+              "state": 535212875,
+              "sheets": 2,
+              "cycle_order": 1
+            }
+          ]
+        }
+      ],
+      "exploratory_three_or_more_sheet_invariant": {
+        "parents_tested": 149,
+        "failures": 31,
+        "child_layer_base_rate": 0.6324786324786325,
+        "expected_failures_if_independent": 23.147563737307358,
+        "probability_of_zero_failures_if_independent": 6.964232851387968e-12
+      },
+      "exploratory_order4_cycle_invariant": {
+        "parents_tested": 11,
+        "failures": 11,
+        "child_layer_base_rate": 0.05698005698005698,
+        "expected_failures_if_independent": 9.782152742266701,
+        "probability_of_zero_failures_if_independent": 3.063384504777229e-11,
+        "note": "Every failure is forced by the lift lemma (RESULTS-guarded-two-block-lift.md section 7), so the independence expectation does not apply to this row."
+      },
+      "exploratory_children_sheets_by_parent_sheets": {
+        "2": {
+          "2": 12,
+          "2,2": 4,
+          "2,4": 3,
+          "3": 6,
+          "3,4": 2,
+          "4": 14,
+          "4,4": 8,
+          "none": 18
+        },
+        "3": {
+          "2": 2,
+          "2,2": 1,
+          "2,4": 2,
+          "3": 2,
+          "3,3": 6,
+          "3,4": 2,
+          "4": 9,
+          "4,4": 3
+        },
+        "4": {
+          "2,2": 28,
+          "2,3": 18,
+          "2,4": 26,
+          "3,3": 8,
+          "4,4": 42
+        }
+      },
+      "post_hoc_lift_lemma_check": {
+        "child_cycles": 134,
+        "violations": 0,
+        "transitions": {
+          "center/2->center": 6,
+          "center/2->free_reflection": 6,
+          "center/2->identity": 8,
+          "fixing_reflection/1->center": 1,
+          "fixing_reflection/1->fixing_reflection": 1,
+          "fixing_reflection/1->free_reflection": 1,
+          "fixing_reflection/1->identity": 1,
+          "fixing_reflection/1->rotation": 1,
+          "fixing_reflection/2->center": 4,
+          "fixing_reflection/2->free_reflection": 3,
+          "fixing_reflection/2->identity": 2,
+          "free_reflection/2->center": 9,
+          "free_reflection/2->fixing_reflection": 7,
+          "free_reflection/2->free_reflection": 22,
+          "free_reflection/2->identity": 13,
+          "identity/1->center": 4,
+          "identity/1->fixing_reflection": 8,
+          "identity/1->free_reflection": 10,
+          "identity/1->identity": 7,
+          "identity/1->rotation": 12,
+          "rotation/4->center": 2,
+          "rotation/4->identity": 6
+        }
+      }
+    }
+  ],
+  "post_hoc_two_layer_algebra": {
+    "reachable_states": 8192,
+    "violations": 0,
+    "transitions": {
+      "even": {
+        "center/2->center": 256,
+        "center/2->free_reflection": 512,
+        "center/2->identity": 256,
+        "fixing_reflection/1->center": 256,
+        "fixing_reflection/1->fixing_reflection": 512,
+        "fixing_reflection/1->free_reflection": 512,
+        "fixing_reflection/1->identity": 256,
+        "fixing_reflection/1->rotation": 512,
+        "fixing_reflection/2->center": 256,
+        "fixing_reflection/2->free_reflection": 512,
+        "fixing_reflection/2->identity": 256,
+        "free_reflection/2->center": 256,
+        "free_reflection/2->fixing_reflection": 512,
+        "free_reflection/2->free_reflection": 512,
+        "free_reflection/2->identity": 256,
+        "free_reflection/2->rotation": 512,
+        "identity/1->center": 256,
+        "identity/1->fixing_reflection": 512,
+        "identity/1->free_reflection": 512,
+        "identity/1->identity": 256,
+        "identity/1->rotation": 512,
+        "rotation/4->center": 512,
+        "rotation/4->identity": 512
+      },
+      "odd": {
+        "center/2->fixing_reflection": 512,
+        "center/2->rotation": 512,
+        "fixing_reflection/1->center": 256,
+        "fixing_reflection/1->fixing_reflection": 512,
+        "fixing_reflection/1->free_reflection": 512,
+        "fixing_reflection/1->identity": 256,
+        "fixing_reflection/1->rotation": 512,
+        "fixing_reflection/2->fixing_reflection": 512,
+        "fixing_reflection/2->rotation": 512,
+        "free_reflection/2->center": 256,
+        "free_reflection/2->fixing_reflection": 512,
+        "free_reflection/2->free_reflection": 512,
+        "free_reflection/2->identity": 256,
+        "free_reflection/2->rotation": 512,
+        "identity/1->center": 256,
+        "identity/1->fixing_reflection": 512,
+        "identity/1->free_reflection": 512,
+        "identity/1->identity": 256,
+        "identity/1->rotation": 512,
+        "rotation/4->free_reflection": 1024
+      }
+    }
+  },
+  "post_hoc_block13_all_columns": {
+    "depths": {
+      "1": {
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/1->rotation": 1,
+        "fixing_reflection/2->free_reflection": 1,
+        "free_reflection/2->rotation": 4,
+        "rotation/4->center": 1
+      },
+      "2": {
+        "center/2->free_reflection": 8,
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/1->rotation": 1,
+        "fixing_reflection/2->free_reflection": 1,
+        "free_reflection/2->rotation": 4,
+        "rotation/4->center": 5,
+        "rotation/4->identity": 4
+      },
+      "3": {
+        "center/2->free_reflection": 8,
+        "center/2->identity": 32,
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/1->rotation": 1,
+        "fixing_reflection/2->free_reflection": 1,
+        "free_reflection/2->free_reflection": 16,
+        "free_reflection/2->identity": 16,
+        "free_reflection/2->rotation": 4,
+        "identity/1->center": 32,
+        "identity/1->identity": 32,
+        "rotation/4->center": 5,
+        "rotation/4->identity": 4
+      },
+      "4": {
+        "center/2->free_reflection": 72,
+        "center/2->identity": 32,
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/1->rotation": 1,
+        "fixing_reflection/2->free_reflection": 1,
+        "free_reflection/2->center": 48,
+        "free_reflection/2->free_reflection": 16,
+        "free_reflection/2->identity": 32,
+        "free_reflection/2->rotation": 4,
+        "identity/1->center": 32,
+        "identity/1->fixing_reflection": 192,
+        "identity/1->identity": 32,
+        "identity/1->rotation": 320,
+        "rotation/4->center": 5,
+        "rotation/4->identity": 4
+      },
+      "5": {
+        "center/2->free_reflection": 264,
+        "center/2->identity": 32,
+        "fixing_reflection/1->center": 48,
+        "fixing_reflection/1->fixing_reflection": 129,
+        "fixing_reflection/1->free_reflection": 48,
+        "fixing_reflection/1->identity": 32,
+        "fixing_reflection/1->rotation": 129,
+        "fixing_reflection/2->center": 16,
+        "fixing_reflection/2->free_reflection": 177,
+        "free_reflection/2->center": 80,
+        "free_reflection/2->free_reflection": 208,
+        "free_reflection/2->identity": 64,
+        "free_reflection/2->rotation": 4,
+        "identity/1->center": 32,
+        "identity/1->fixing_reflection": 256,
+        "identity/1->identity": 32,
+        "identity/1->rotation": 384,
+        "rotation/4->center": 213,
+        "rotation/4->identity": 116
+      },
+      "6": {
+        "center/2->center": 1040,
+        "center/2->free_reflection": 520,
+        "center/2->identity": 688,
+        "fixing_reflection/1->center": 112,
+        "fixing_reflection/1->fixing_reflection": 209,
+        "fixing_reflection/1->free_reflection": 160,
+        "fixing_reflection/1->identity": 48,
+        "fixing_reflection/1->rotation": 241,
+        "fixing_reflection/2->center": 32,
+        "fixing_reflection/2->free_reflection": 305,
+        "fixing_reflection/2->identity": 48,
+        "free_reflection/2->center": 400,
+        "free_reflection/2->free_reflection": 1840,
+        "free_reflection/2->identity": 416,
+        "free_reflection/2->rotation": 36,
+        "identity/1->center": 704,
+        "identity/1->fixing_reflection": 384,
+        "identity/1->free_reflection": 448,
+        "identity/1->identity": 800,
+        "identity/1->rotation": 544,
+        "rotation/4->center": 309,
+        "rotation/4->identity": 212
+      },
+      "7": {
+        "center/2->center": 5600,
+        "center/2->free_reflection": 776,
+        "center/2->identity": 3616,
+        "fixing_reflection/1->center": 176,
+        "fixing_reflection/1->fixing_reflection": 273,
+        "fixing_reflection/1->free_reflection": 224,
+        "fixing_reflection/1->identity": 272,
+        "fixing_reflection/1->rotation": 241,
+        "fixing_reflection/2->center": 128,
+        "fixing_reflection/2->free_reflection": 337,
+        "fixing_reflection/2->identity": 128,
+        "free_reflection/2->center": 2384,
+        "free_reflection/2->fixing_reflection": 448,
+        "free_reflection/2->free_reflection": 6672,
+        "free_reflection/2->identity": 2048,
+        "free_reflection/2->rotation": 324,
+        "identity/1->center": 2016,
+        "identity/1->fixing_reflection": 3264,
+        "identity/1->free_reflection": 4224,
+        "identity/1->identity": 2176,
+        "identity/1->rotation": 4320,
+        "rotation/4->center": 357,
+        "rotation/4->identity": 500
+      },
+      "8": {
+        "center/2->center": 15328,
+        "center/2->free_reflection": 9928,
+        "center/2->identity": 14432,
+        "fixing_reflection/1->center": 720,
+        "fixing_reflection/1->fixing_reflection": 3921,
+        "fixing_reflection/1->free_reflection": 2208,
+        "fixing_reflection/1->identity": 1072,
+        "fixing_reflection/1->rotation": 945,
+        "fixing_reflection/2->center": 2112,
+        "fixing_reflection/2->free_reflection": 1297,
+        "fixing_reflection/2->identity": 1024,
+        "free_reflection/2->center": 8992,
+        "free_reflection/2->fixing_reflection": 2528,
+        "free_reflection/2->free_reflection": 19120,
+        "free_reflection/2->identity": 7440,
+        "free_reflection/2->rotation": 1956,
+        "identity/1->center": 7040,
+        "identity/1->fixing_reflection": 14208,
+        "identity/1->free_reflection": 18048,
+        "identity/1->identity": 8288,
+        "identity/1->rotation": 16544,
+        "rotation/4->center": 2693,
+        "rotation/4->identity": 2516
+      }
+    },
+    "violations": 0
+  },
+  "scope": "Two finite generations of the index-15 guarded lift. A failure refutes the stated invariant; no failure is a screen, not a proof, and neither decides uniform or individual mortality. The lift-lemma checks are post hoc validation of a proved lemma."
+}

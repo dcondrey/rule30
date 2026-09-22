@@ -1,0 +1,634 @@
+{
+ "schema": "rule30.cap18-class-flow.v1",
+ "status": "exploratory_not_preregistered_no_claim",
+ "source_sha256": {
+  "cap18_class_flow.py": "448d3662826dcf0d1866d4c3faa4202ace3f528843a0f17ee0f9a9fd6cfb1464",
+  "cap18_survivor_mass.py": "d8b8263846f76cc4d33d421292fe2d42a7878422e5785428675e57281c738ce5",
+  "cap18_entry_supply.py": "aa767f37b3b04886a524e0490e1ec876772b96aca4e502ed49f5d79ddf6cb0fb"
+ },
+ "inputs_sha256": {
+  "capacity18-guarded-base4.json": "627fa4ddf56db9cb3234c763b11a6ee1f3fe4cefee2e3889321a91703ffe4bd1",
+  "capacity18-guarded-16.json": "4d5d791a34a15467819b9d2049798d18318d2451c451441905f75b96596b71a7",
+  "cap18-entry-supply.json": "bc772cd4746f648af5e1c7fa0de7d4b29459cd4bc17bfbc89ae0ad0a0a53e81a",
+  "cap18-entry-supply-16.json": "a38668d7c14fb462f935e3bb81a0563bdceeca4be7fec557d679715b66c78dfa"
+ },
+ "summary": {
+  "depths": [
+   4,
+   14
+  ],
+  "classes_that_ever_feed_self_sufficient": [
+   "center",
+   "fixing_reflection",
+   "free_reflection",
+   "identity",
+   "rotation"
+  ],
+  "fewest_feeding_classes_at_any_depth": 1,
+  "share_into_self_sufficient_range": [
+   0.17647058823529413,
+   0.5
+  ],
+  "largest_single_feeder_share_range": [
+   0.3333,
+   1.0
+  ],
+  "feeding_of_present_classes_by_depth": {
+   "4": [
+    1,
+    2
+   ],
+   "5": [
+    1,
+    3
+   ],
+   "6": [
+    2,
+    4
+   ],
+   "7": [
+    2,
+    3
+   ],
+   "8": [
+    4,
+    5
+   ],
+   "9": [
+    3,
+    5
+   ],
+   "10": [
+    4,
+    5
+   ],
+   "11": [
+    3,
+    5
+   ],
+   "12": [
+    4,
+    5
+   ],
+   "13": [
+    5,
+    5
+   ],
+   "14": [
+    5,
+    5
+   ]
+  },
+  "weakest_class_share_by_depth": {
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.1556,
+   "14": 0.2985
+  },
+  "control_children_of_center_and_rotation_inside_section_7_lemma": true,
+  "control_flow_equals_next_depth_column_masses": true
+ },
+ "flows": [
+  {
+   "depth": 4,
+   "child_depth": 5,
+   "mass_into_self_sufficient": "7/512",
+   "share_of_kept_mass_into_self_sufficient": 0.5,
+   "parent_classes_feeding_self_sufficient": [
+    "identity"
+   ],
+   "parent_classes_present": [
+    "center",
+    "identity"
+   ],
+   "share_by_parent_class": {
+    "center": 0.0,
+    "identity": 0.7778
+   },
+   "largest_single_feeder_share": 1.0,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "center": {
+     "free_reflection": 1.0
+    },
+    "identity": {
+     "fixing_reflection": 0.2222,
+     "rotation": 0.7778
+    }
+   }
+  },
+  {
+   "depth": 5,
+   "child_depth": 6,
+   "mass_into_self_sufficient": "3/1024",
+   "share_of_kept_mass_into_self_sufficient": 0.20689655172413793,
+   "parent_classes_feeding_self_sufficient": [
+    "rotation"
+   ],
+   "parent_classes_present": [
+    "fixing_reflection",
+    "free_reflection",
+    "rotation"
+   ],
+   "share_by_parent_class": {
+    "fixing_reflection": 0.0,
+    "free_reflection": 0.0,
+    "rotation": 0.4286
+   },
+   "largest_single_feeder_share": 1.0,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "fixing_reflection": {
+     "fixing_reflection": 0.6667,
+     "free_reflection": 0.3333
+    },
+    "free_reflection": {
+     "free_reflection": 0.7778,
+     "identity": 0.2222
+    },
+    "rotation": {
+     "center": 0.4286,
+     "identity": 0.5714
+    }
+   }
+  },
+  {
+   "depth": 6,
+   "child_depth": 7,
+   "mass_into_self_sufficient": "3/2048",
+   "share_of_kept_mass_into_self_sufficient": 0.17647058823529413,
+   "parent_classes_feeding_self_sufficient": [
+    "free_reflection",
+    "identity"
+   ],
+   "parent_classes_present": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity"
+   ],
+   "share_by_parent_class": {
+    "center": 0.0,
+    "fixing_reflection": 0.0,
+    "free_reflection": 0.2727,
+    "identity": 0.2308
+   },
+   "largest_single_feeder_share": 0.5,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "center": {
+     "identity": 1.0
+    },
+    "fixing_reflection": {
+     "free_reflection": 1.0
+    },
+    "free_reflection": {
+     "center": 0.2727,
+     "free_reflection": 0.7273
+    },
+    "identity": {
+     "center": 0.2308,
+     "free_reflection": 0.3077,
+     "identity": 0.4615
+    }
+   }
+  },
+  {
+   "depth": 7,
+   "child_depth": 8,
+   "mass_into_self_sufficient": "11/8192",
+   "share_of_kept_mass_into_self_sufficient": 0.3235294117647059,
+   "parent_classes_feeding_self_sufficient": [
+    "center",
+    "identity"
+   ],
+   "parent_classes_present": [
+    "center",
+    "free_reflection",
+    "identity"
+   ],
+   "share_by_parent_class": {
+    "center": 0.5,
+    "free_reflection": 0.0,
+    "identity": 0.6667
+   },
+   "largest_single_feeder_share": 0.7273,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "center": {
+     "center": 0.5,
+     "identity": 0.5
+    },
+    "free_reflection": {
+     "free_reflection": 0.6875,
+     "identity": 0.3125
+    },
+    "identity": {
+     "fixing_reflection": 0.3333,
+     "rotation": 0.6667
+    }
+   }
+  },
+  {
+   "depth": 8,
+   "child_depth": 9,
+   "mass_into_self_sufficient": "11/16384",
+   "share_of_kept_mass_into_self_sufficient": 0.3283582089552239,
+   "parent_classes_feeding_self_sufficient": [
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "parent_classes_present": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "share_by_parent_class": {
+    "center": 0.0,
+    "fixing_reflection": 0.7273,
+    "free_reflection": 0.1562,
+    "identity": 0.1667,
+    "rotation": 0.5312
+   },
+   "largest_single_feeder_share": 0.3864,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "center": {
+     "free_reflection": 1.0
+    },
+    "fixing_reflection": {
+     "center": 0.7273,
+     "fixing_reflection": 0.1818,
+     "identity": 0.0909
+    },
+    "free_reflection": {
+     "center": 0.1562,
+     "free_reflection": 0.5625,
+     "identity": 0.2812
+    },
+    "identity": {
+     "center": 0.1111,
+     "fixing_reflection": 0.2222,
+     "free_reflection": 0.3889,
+     "identity": 0.2222,
+     "rotation": 0.0556
+    },
+    "rotation": {
+     "center": 0.5312,
+     "identity": 0.4688
+    }
+   }
+  },
+  {
+   "depth": 9,
+   "child_depth": 10,
+   "mass_into_self_sufficient": "53/131072",
+   "share_of_kept_mass_into_self_sufficient": 0.34868421052631576,
+   "parent_classes_feeding_self_sufficient": [
+    "center",
+    "free_reflection",
+    "identity"
+   ],
+   "parent_classes_present": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "share_by_parent_class": {
+    "center": 0.4762,
+    "fixing_reflection": 0.0,
+    "free_reflection": 0.1923,
+    "identity": 0.5227,
+    "rotation": 0.0
+   },
+   "largest_single_feeder_share": 0.434,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "center": {
+     "center": 0.4762,
+     "free_reflection": 0.0952,
+     "identity": 0.4286
+    },
+    "fixing_reflection": {
+     "free_reflection": 0.3333,
+     "identity": 0.6667
+    },
+    "free_reflection": {
+     "fixing_reflection": 0.2308,
+     "free_reflection": 0.4231,
+     "identity": 0.1538,
+     "rotation": 0.1923
+    },
+    "identity": {
+     "center": 0.3864,
+     "fixing_reflection": 0.1818,
+     "identity": 0.2955,
+     "rotation": 0.1364
+    },
+    "rotation": {
+     "identity": 1.0
+    }
+   }
+  },
+  {
+   "depth": 10,
+   "child_depth": 11,
+   "mass_into_self_sufficient": "27/131072",
+   "share_of_kept_mass_into_self_sufficient": 0.33962264150943394,
+   "parent_classes_feeding_self_sufficient": [
+    "center",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "parent_classes_present": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "share_by_parent_class": {
+    "center": 0.2703,
+    "fixing_reflection": 0.0,
+    "free_reflection": 0.1714,
+    "identity": 0.6792,
+    "rotation": 0.125
+   },
+   "largest_single_feeder_share": 0.6667,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "center": {
+     "center": 0.2703,
+     "free_reflection": 0.4595,
+     "identity": 0.2703
+    },
+    "fixing_reflection": {
+     "free_reflection": 0.8889,
+     "identity": 0.1111
+    },
+    "free_reflection": {
+     "center": 0.0571,
+     "fixing_reflection": 0.2286,
+     "free_reflection": 0.3143,
+     "identity": 0.2857,
+     "rotation": 0.1143
+    },
+    "identity": {
+     "center": 0.1509,
+     "fixing_reflection": 0.0755,
+     "free_reflection": 0.2264,
+     "identity": 0.0189,
+     "rotation": 0.5283
+    },
+    "rotation": {
+     "center": 0.125,
+     "identity": 0.875
+    }
+   }
+  },
+  {
+   "depth": 11,
+   "child_depth": 12,
+   "mass_into_self_sufficient": "99/1048576",
+   "share_of_kept_mass_into_self_sufficient": 0.3113207547169811,
+   "parent_classes_feeding_self_sufficient": [
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "parent_classes_present": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "share_by_parent_class": {
+    "center": 0.0,
+    "fixing_reflection": 0.0,
+    "free_reflection": 0.3304,
+    "identity": 0.4054,
+    "rotation": 0.5
+   },
+   "largest_single_feeder_share": 0.3737,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "center": {
+     "free_reflection": 0.8182,
+     "identity": 0.1818
+    },
+    "fixing_reflection": {
+     "identity": 1.0
+    },
+    "free_reflection": {
+     "center": 0.3304,
+     "free_reflection": 0.3036,
+     "identity": 0.3661
+    },
+    "identity": {
+     "center": 0.0541,
+     "fixing_reflection": 0.1351,
+     "free_reflection": 0.4054,
+     "identity": 0.0541,
+     "rotation": 0.3514
+    },
+    "rotation": {
+     "center": 0.5,
+     "identity": 0.5
+    }
+   }
+  },
+  {
+   "depth": 12,
+   "child_depth": 13,
+   "mass_into_self_sufficient": "159/4194304",
+   "share_of_kept_mass_into_self_sufficient": 0.23873873873873874,
+   "parent_classes_feeding_self_sufficient": [
+    "center",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "parent_classes_present": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "share_by_parent_class": {
+    "center": 0.2534,
+    "fixing_reflection": 0.0,
+    "free_reflection": 0.1038,
+    "identity": 0.2906,
+    "rotation": 0.6154
+   },
+   "largest_single_feeder_share": 0.4277,
+   "weakest_class_share": 0.0,
+   "matrix": {
+    "center": {
+     "center": 0.2534,
+     "free_reflection": 0.4932,
+     "identity": 0.2534
+    },
+    "fixing_reflection": {
+     "free_reflection": 0.6364,
+     "identity": 0.3636
+    },
+    "free_reflection": {
+     "center": 0.1038,
+     "fixing_reflection": 0.0566,
+     "free_reflection": 0.3019,
+     "identity": 0.5377
+    },
+    "identity": {
+     "center": 0.0684,
+     "fixing_reflection": 0.188,
+     "free_reflection": 0.3504,
+     "identity": 0.1709,
+     "rotation": 0.2222
+    },
+    "rotation": {
+     "center": 0.6154,
+     "identity": 0.3846
+    }
+   }
+  },
+  {
+   "depth": 13,
+   "child_depth": 14,
+   "mass_into_self_sufficient": "385/16777216",
+   "share_of_kept_mass_into_self_sufficient": 0.2916666666666667,
+   "parent_classes_feeding_self_sufficient": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "parent_classes_present": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "share_by_parent_class": {
+    "center": 0.1822,
+    "fixing_reflection": 0.4783,
+    "free_reflection": 0.1556,
+    "identity": 0.4,
+    "rotation": 0.4615
+   },
+   "largest_single_feeder_share": 0.4779,
+   "weakest_class_share": 0.1556,
+   "matrix": {
+    "center": {
+     "center": 0.1822,
+     "free_reflection": 0.1682,
+     "identity": 0.6495
+    },
+    "fixing_reflection": {
+     "center": 0.4348,
+     "fixing_reflection": 0.1739,
+     "free_reflection": 0.2391,
+     "identity": 0.1087,
+     "rotation": 0.0435
+    },
+    "free_reflection": {
+     "center": 0.1556,
+     "fixing_reflection": 0.1733,
+     "free_reflection": 0.4267,
+     "identity": 0.2444
+    },
+    "identity": {
+     "center": 0.0522,
+     "fixing_reflection": 0.2696,
+     "free_reflection": 0.1391,
+     "identity": 0.1913,
+     "rotation": 0.3478
+    },
+    "rotation": {
+     "center": 0.4615,
+     "identity": 0.5385
+    }
+   }
+  },
+  {
+   "depth": 14,
+   "child_depth": 15,
+   "mass_into_self_sufficient": "267/16777216",
+   "share_of_kept_mass_into_self_sufficient": 0.40888208269525267,
+   "parent_classes_feeding_self_sufficient": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "parent_classes_present": [
+    "center",
+    "fixing_reflection",
+    "free_reflection",
+    "identity",
+    "rotation"
+   ],
+   "share_by_parent_class": {
+    "center": 0.4208,
+    "fixing_reflection": 0.2985,
+    "free_reflection": 0.4193,
+    "identity": 0.4352,
+    "rotation": 0.439
+   },
+   "largest_single_feeder_share": 0.3333,
+   "weakest_class_share": 0.2985,
+   "matrix": {
+    "center": {
+     "center": 0.4208,
+     "free_reflection": 0.3394,
+     "identity": 0.2398
+    },
+    "fixing_reflection": {
+     "center": 0.2372,
+     "fixing_reflection": 0.0102,
+     "free_reflection": 0.5153,
+     "identity": 0.176,
+     "rotation": 0.0612
+    },
+    "free_reflection": {
+     "center": 0.1788,
+     "fixing_reflection": 0.0443,
+     "free_reflection": 0.2753,
+     "identity": 0.2611,
+     "rotation": 0.2405
+    },
+    "identity": {
+     "center": 0.0587,
+     "fixing_reflection": 0.3252,
+     "free_reflection": 0.1247,
+     "identity": 0.1149,
+     "rotation": 0.3765
+    },
+    "rotation": {
+     "center": 0.439,
+     "identity": 0.561
+    }
+   }
+  }
+ ],
+ "scope": "Index 15, depths 4-15, guarded survivors only. A mass share here is of the kept mass at that depth, so it is what the guard actually passed, not what the two-layer algebra permits. Nothing here bounds any depth past 15."
+}

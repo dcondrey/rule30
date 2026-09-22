@@ -1,0 +1,280 @@
+{
+  "schema": "rule30.two-block-guarded-lift.v1",
+  "base_manifest": "/Volumes/A/researchpapers/13-rule30/experiments/rule30/capacity18-joint-15.data/depth-12.json",
+  "config": {
+    "base_depth": 12,
+    "max_depth": 31,
+    "prefix": "213",
+    "body1": "13",
+    "seam": "1213",
+    "body2": "13",
+    "suffix": "03",
+    "initial_tape": "00",
+    "max_states": 2000000,
+    "max_block_steps": 50000000,
+    "seconds": 60
+  },
+  "base": {
+    "first_count": 256,
+    "joint_count": 441088,
+    "survivors": 125
+  },
+  "layers": [
+    {
+      "depth": 13,
+      "old_depth": 12,
+      "complete": true,
+      "first_count": 512,
+      "old_survivors": 125,
+      "cover_count": 425,
+      "survivors": 216,
+      "route_count": 107008,
+      "entry_count": 512,
+      "files": {
+        "first": {
+          "path": "capacity18-guarded-15.depth-13.first.bin",
+          "format": "uint64_le",
+          "records": 512,
+          "columns": [
+            "state",
+            "a",
+            "b"
+          ]
+        },
+        "routes": {
+          "path": "capacity18-guarded-15.depth-13.routes.bin",
+          "format": "uint64_le",
+          "records": 107008,
+          "columns": [
+            "state",
+            "target_state",
+            "distance",
+            "packed_perm",
+            "next_state",
+            "local_perm"
+          ]
+        },
+        "cover": {
+          "path": "capacity18-guarded-15.depth-13.cover.bin",
+          "format": "uint64_le",
+          "records": 425,
+          "columns": [
+            "state",
+            "a",
+            "b",
+            "next_state",
+            "body2_length",
+            "tape_code",
+            "successful_steps",
+            "total_repeats"
+          ]
+        },
+        "entries": {
+          "path": "capacity18-guarded-15.depth-13.entries.bin",
+          "format": "uint64_le",
+          "records": 512,
+          "columns": [
+            "a",
+            "old_a",
+            "seed_state",
+            "entry_state",
+            "entry_b"
+          ]
+        }
+      },
+      "observed_max_further_successes": 13,
+      "observed_max_total_repeats": 11,
+      "ordered_block_steps_total": 107008,
+      "seconds_total": 0.0884276,
+      "data_sha256": {
+        "first": "88a68b8bfb9973acf179e06ee7478ef12492f15d0ccd53d94d520e876a38e893",
+        "routes": "2c38960af52bc6ed6d36cda7f2fa7a7e31d63c4150c06b9275fc7df86a7f951b",
+        "cover": "15e6a111735692ee1480927d7243469aee2f1e7006c6bfe562a6643231da59b0",
+        "entries": "04d6eae62c0c664d624943015fce8b1b0d58a23d6bd79d62fdbf966120f2b8e9"
+      }
+    },
+    {
+      "depth": 14,
+      "old_depth": 13,
+      "complete": true,
+      "first_count": 1024,
+      "old_survivors": 216,
+      "cover_count": 703,
+      "survivors": 351,
+      "route_count": 340480,
+      "entry_count": 1024,
+      "files": {
+        "first": {
+          "path": "capacity18-guarded-15.depth-14.first.bin",
+          "format": "uint64_le",
+          "records": 1024,
+          "columns": [
+            "state",
+            "a",
+            "b"
+          ]
+        },
+        "routes": {
+          "path": "capacity18-guarded-15.depth-14.routes.bin",
+          "format": "uint64_le",
+          "records": 340480,
+          "columns": [
+            "state",
+            "target_state",
+            "distance",
+            "packed_perm",
+            "next_state",
+            "local_perm"
+          ]
+        },
+        "cover": {
+          "path": "capacity18-guarded-15.depth-14.cover.bin",
+          "format": "uint64_le",
+          "records": 703,
+          "columns": [
+            "state",
+            "a",
+            "b",
+            "next_state",
+            "body2_length",
+            "tape_code",
+            "successful_steps",
+            "total_repeats"
+          ]
+        },
+        "entries": {
+          "path": "capacity18-guarded-15.depth-14.entries.bin",
+          "format": "uint64_le",
+          "records": 1024,
+          "columns": [
+            "a",
+            "old_a",
+            "seed_state",
+            "entry_state",
+            "entry_b"
+          ]
+        }
+      },
+      "observed_max_further_successes": 14,
+      "observed_max_total_repeats": 12,
+      "ordered_block_steps_total": 447488,
+      "seconds_total": 0.199838,
+      "data_sha256": {
+        "first": "10fd79ab00286aa61f8781f5831d06e8c2c4e2588339e8d96486358da7f88697",
+        "routes": "f5c7a8bf17b69e2db5a05a8676466695d16ba3cc9b929821eaca7fbc0e38d081",
+        "cover": "e6b8ae2effdd57e2e936014ac3f90c1a4384b7c7f7bb1532951876ef7ae3c646",
+        "entries": "edb5e51c04af6a6c20ecf1dc5f0a2a057bb4617c11576f42c44dda536778afe2"
+      }
+    },
+    {
+      "depth": 15,
+      "old_depth": 14,
+      "complete": true,
+      "first_count": 2048,
+      "old_survivors": 351,
+      "cover_count": 1088,
+      "survivors": 545,
+      "route_count": 1003008,
+      "entry_count": 2048,
+      "files": {
+        "first": {
+          "path": "capacity18-guarded-15.depth-15.first.bin",
+          "format": "uint64_le",
+          "records": 2048,
+          "columns": [
+            "state",
+            "a",
+            "b"
+          ]
+        },
+        "routes": {
+          "path": "capacity18-guarded-15.depth-15.routes.bin",
+          "format": "uint64_le",
+          "records": 1003008,
+          "columns": [
+            "state",
+            "target_state",
+            "distance",
+            "packed_perm",
+            "next_state",
+            "local_perm"
+          ]
+        },
+        "cover": {
+          "path": "capacity18-guarded-15.depth-15.cover.bin",
+          "format": "uint64_le",
+          "records": 1088,
+          "columns": [
+            "state",
+            "a",
+            "b",
+            "next_state",
+            "body2_length",
+            "tape_code",
+            "successful_steps",
+            "total_repeats"
+          ]
+        },
+        "entries": {
+          "path": "capacity18-guarded-15.depth-15.entries.bin",
+          "format": "uint64_le",
+          "records": 2048,
+          "columns": [
+            "a",
+            "old_a",
+            "seed_state",
+            "entry_state",
+            "entry_b"
+          ]
+        }
+      },
+      "observed_max_further_successes": 15,
+      "observed_max_total_repeats": 13,
+      "ordered_block_steps_total": 1450496,
+      "seconds_total": 0.865561,
+      "data_sha256": {
+        "first": "6432f602d7827896c42eec15db579e98365705074a73e04c386eae2635f286d4",
+        "routes": "ac19d9bf1f60a48e99cedba3c2f1e61dade0fcfc550706bc9d6ad7b8331b0a82",
+        "cover": "960460a8e5d50c47cc5567e291df626b88e866fc48f0c43e2c9f2fd04a8c8a24",
+        "entries": "4b30ff756489168955b004b22263bd823870e4b747328568ca4e33059f542aad"
+      }
+    }
+  ],
+  "last_completed_depth": 15,
+  "uniform_family_mortality_proved": false,
+  "stop_reason": "route_cache_state_cap",
+  "observed_max_original_successes": 17,
+  "observed_max_original_repeats": 13,
+  "max_success_witness": {
+    "state": "996586315",
+    "a": 0,
+    "b": 1476,
+    "final_state": "2103914375",
+    "further_tape": "110011000110111",
+    "total_tape": "00110011000110111",
+    "further_successes": 15,
+    "total_successes": 17,
+    "total_repeats": 9,
+    "survives_depth": true
+  },
+  "max_repeat_witness": {
+    "state": "1717965643",
+    "a": 1248,
+    "b": 260,
+    "final_state": "1717981063",
+    "further_tape": "110011111111111",
+    "total_tape": "00110011111111111",
+    "further_successes": 15,
+    "total_successes": 17,
+    "total_repeats": 13,
+    "survives_depth": true
+  },
+  "ordered_block_steps": 3450496,
+  "seconds": 2.58952,
+  "scope": "All correlated parameter lifts, with actual ordered body2 paths and every guard. A capped continuation remains incomplete.",
+  "sources": {
+    "two_block_guarded_lift.cpp": "6658c14e812d27de3f3cfff673c861330e0e67700589534fbc471aadbb2ea1a0",
+    "two_block_column_orbit.cpp": "a198df6f2c14cef3d6fb13238c96a445eea014fc6977cd68ac8b7a6b44d55bdd"
+  },
+  "base_manifest_sha256": "fa37a01e0e4211c8ad8d1a8baed1d60f67ef5851edccb3d602d8713eb1d12a50"
+}

@@ -1,0 +1,352 @@
+{
+  "schema": "rule30.p3-observable-rewrite-pairs.v1",
+  "pair_equivalence_classes_by_residue_mod8": {
+    "0": [
+      [
+        "AA"
+      ],
+      [
+        "AB"
+      ],
+      [
+        "AC"
+      ],
+      [
+        "BA"
+      ],
+      [
+        "BB",
+        "BC"
+      ],
+      [
+        "CA"
+      ],
+      [
+        "CB",
+        "CC"
+      ]
+    ],
+    "1": [
+      [
+        "AA",
+        "BC",
+        "CC"
+      ],
+      [
+        "AB",
+        "AC"
+      ],
+      [
+        "BA",
+        "CA"
+      ],
+      [
+        "BB",
+        "CB"
+      ]
+    ],
+    "2": [
+      [
+        "AA",
+        "CB",
+        "CC"
+      ],
+      [
+        "AB",
+        "CA"
+      ],
+      [
+        "AC",
+        "BA"
+      ],
+      [
+        "BB",
+        "BC"
+      ]
+    ],
+    "3": [
+      [
+        "AA"
+      ],
+      [
+        "AB",
+        "AC"
+      ],
+      [
+        "BA",
+        "CA"
+      ],
+      [
+        "BB",
+        "CB"
+      ],
+      [
+        "BC",
+        "CC"
+      ]
+    ],
+    "4": [
+      [
+        "AA"
+      ],
+      [
+        "AB"
+      ],
+      [
+        "AC"
+      ],
+      [
+        "BA"
+      ],
+      [
+        "BB",
+        "BC"
+      ],
+      [
+        "CA"
+      ],
+      [
+        "CB",
+        "CC"
+      ]
+    ],
+    "5": [
+      [
+        "AA",
+        "BC",
+        "CC"
+      ],
+      [
+        "AB",
+        "AC"
+      ],
+      [
+        "BA",
+        "CA"
+      ],
+      [
+        "BB",
+        "CB"
+      ]
+    ],
+    "6": [
+      [
+        "AA"
+      ],
+      [
+        "AB"
+      ],
+      [
+        "AC",
+        "BA"
+      ],
+      [
+        "BB",
+        "BC"
+      ],
+      [
+        "CA"
+      ],
+      [
+        "CB",
+        "CC"
+      ]
+    ],
+    "7": [
+      [
+        "AA"
+      ],
+      [
+        "AB",
+        "AC"
+      ],
+      [
+        "BA",
+        "CA"
+      ],
+      [
+        "BB",
+        "CB"
+      ],
+      [
+        "BC",
+        "CC"
+      ]
+    ]
+  },
+  "table_construction_word_evaluations": 144,
+  "independent_raw_memory_controls": 144,
+  "conditional_tail_controls": 288,
+  "slp_transduction_controls": 1936,
+  "actual_seed_section_example": {
+    "original": "ABCCABCC",
+    "rewritten": "ABAAABCB",
+    "zero_value": 6428,
+    "normalizer": {
+      "normalizations": 1,
+      "transduction_requests": 15,
+      "distinct_transduction_subqueries": 15,
+      "leaf_transductions": 8,
+      "changed_pair_occurrences": 2,
+      "genuine_pair_occurrences_beyond_single_C_to_B": 1,
+      "changed_unpaired_final_letters": 0
+    }
+  },
+  "unguarded_rewrite_falsifiers": [
+    {
+      "first": "AC",
+      "second": "BA",
+      "input": 0,
+      "first_output": 3,
+      "second_output": 7
+    },
+    {
+      "first": "BC",
+      "second": "AA",
+      "input": 0,
+      "first_output": 6,
+      "second_output": 0
+    },
+    {
+      "first": "CB",
+      "second": "AA",
+      "input": 0,
+      "first_output": 12,
+      "second_output": 0
+    }
+  ],
+  "paid_query_comparisons": [
+    {
+      "baseline": {
+        "n": 8,
+        "rewrite": false,
+        "center": 1,
+        "section_advances": 8,
+        "constructed_grammar_nodes": 32,
+        "concat_requests": 34,
+        "section_requests": 68,
+        "distinct_section_subqueries": 36,
+        "normalizer": {
+          "normalizations": 0,
+          "transduction_requests": 0,
+          "distinct_transduction_subqueries": 0,
+          "leaf_transductions": 0,
+          "changed_pair_occurrences": 0,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+          "changed_unpaired_final_letters": 0
+        },
+        "paid_distinct_section_and_transduction_subqueries": 36
+      },
+      "rewritten": {
+        "n": 8,
+        "rewrite": true,
+        "center": 1,
+        "section_advances": 8,
+        "constructed_grammar_nodes": 50,
+        "concat_requests": 88,
+        "section_requests": 62,
+        "distinct_section_subqueries": 32,
+        "normalizer": {
+          "normalizations": 8,
+          "transduction_requests": 88,
+          "distinct_transduction_subqueries": 69,
+          "leaf_transductions": 29,
+          "changed_pair_occurrences": 19,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 2,
+          "changed_unpaired_final_letters": 0
+        },
+        "paid_distinct_section_and_transduction_subqueries": 101
+      }
+    },
+    {
+      "baseline": {
+        "n": 17,
+        "rewrite": false,
+        "center": 0,
+        "section_advances": 17,
+        "constructed_grammar_nodes": 99,
+        "concat_requests": 113,
+        "section_requests": 231,
+        "distinct_section_subqueries": 113,
+        "normalizer": {
+          "normalizations": 0,
+          "transduction_requests": 0,
+          "distinct_transduction_subqueries": 0,
+          "leaf_transductions": 0,
+          "changed_pair_occurrences": 0,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+          "changed_unpaired_final_letters": 0
+        },
+        "paid_distinct_section_and_transduction_subqueries": 113
+      },
+      "rewritten": {
+        "n": 17,
+        "rewrite": true,
+        "center": 0,
+        "section_advances": 17,
+        "constructed_grammar_nodes": 179,
+        "concat_requests": 302,
+        "section_requests": 217,
+        "distinct_section_subqueries": 105,
+        "normalizer": {
+          "normalizations": 17,
+          "transduction_requests": 301,
+          "distinct_transduction_subqueries": 201,
+          "leaf_transductions": 59,
+          "changed_pair_occurrences": 75,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 7,
+          "changed_unpaired_final_letters": 3
+        },
+        "paid_distinct_section_and_transduction_subqueries": 306
+      }
+    },
+    {
+      "baseline": {
+        "n": 32,
+        "rewrite": false,
+        "center": 0,
+        "section_advances": 32,
+        "constructed_grammar_nodes": 205,
+        "concat_requests": 246,
+        "section_requests": 512,
+        "distinct_section_subqueries": 246,
+        "normalizer": {
+          "normalizations": 0,
+          "transduction_requests": 0,
+          "distinct_transduction_subqueries": 0,
+          "leaf_transductions": 0,
+          "changed_pair_occurrences": 0,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+          "changed_unpaired_final_letters": 0
+        },
+        "paid_distinct_section_and_transduction_subqueries": 246
+      },
+      "rewritten": {
+        "n": 32,
+        "rewrite": true,
+        "center": 0,
+        "section_advances": 32,
+        "constructed_grammar_nodes": 401,
+        "concat_requests": 625,
+        "section_requests": 490,
+        "distinct_section_subqueries": 234,
+        "normalizer": {
+          "normalizations": 32,
+          "transduction_requests": 712,
+          "distinct_transduction_subqueries": 412,
+          "leaf_transductions": 72,
+          "changed_pair_occurrences": 266,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 28,
+          "changed_unpaired_final_letters": 0
+        },
+        "paid_distinct_section_and_transduction_subqueries": 646
+      }
+    }
+  ],
+  "source_sha256": {
+    "p3_observable_rewrite_pairs.py": "5e2456b9ed5277346f345418e79d525c13540d216bcf097fba1b052800d0ef34",
+    "p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29"
+  },
+  "seconds": 0.005780750012490898,
+  "scope": "Exact conditional all-tail pair identities and bounded-state SLP rewriting. All construction charged; no sublinear query algorithm follows."
+}

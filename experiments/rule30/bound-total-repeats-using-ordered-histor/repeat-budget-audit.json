@@ -1,0 +1,301 @@
+{
+  "schema": "rule30.repeat-budget-audit.v1",
+  "timestamp_iso": "2026-09-19T01:15:00Z",
+  "task": "Bound total repeats using ordered history (P1, ladder statement 'A repeat budget at every length')",
+  "target": "For every initial length r, some finite B(r) bounds D on every successful legal Z-frontier history.",
+  "status": "CONJECTURED (finite check proved for r <= 10; general statement remains open)",
+  "witness_bank_matches_count": 14,
+  "witnesses": [
+    {
+      "id": "wit-e3fe219e92ed6081",
+      "object_type": "e",
+      "source": "docs/rule30/RESULTS-repeat-budget-phase-reset.md:132",
+      "kills": [
+        "b2d3cce57d7f715c"
+      ]
+    },
+    {
+      "id": "wit-a2aa0680efb63bbd",
+      "object_type": "j",
+      "source": "docs/rule30/RESULTS-repeat-budget-phase-reset.md:132",
+      "kills": [
+        "b2d3cce57d7f715c"
+      ]
+    },
+    {
+      "id": "wit-edce78fe556ee4ff",
+      "object_type": "k",
+      "source": "docs/rule30/RESULTS-sparse-high-history-obstruction.md:51",
+      "kills": [
+        "9602de606a72643e"
+      ]
+    },
+    {
+      "id": "wit-7a4b5873cf7b89bc",
+      "object_type": "p",
+      "source": "docs/rule30/RESULTS-repeat-budget-phase-reset.md:250",
+      "kills": [
+        "a617753e8f1db024"
+      ]
+    },
+    {
+      "id": "wit-0633872d899a1756",
+      "object_type": "r",
+      "source": "docs/rule30/RESULTS-sparse-high-history-obstruction.md:51",
+      "kills": [
+        "9602de606a72643e"
+      ]
+    },
+    {
+      "id": "wit-f744af938a76c867",
+      "object_type": "r_r",
+      "source": "docs/rule30/RESULTS-additive-message-obstruction.md:124",
+      "kills": [
+        "0795486201788ec4"
+      ]
+    },
+    {
+      "id": "wit-80621f30c6ab3db0",
+      "object_type": "rho_n",
+      "source": "docs/rule30/RESULTS-repeat-budget-phase-reset.md:132",
+      "kills": [
+        "b2d3cce57d7f715c"
+      ]
+    },
+    {
+      "id": "wit-f9660bdca0d15d7b",
+      "object_type": "w",
+      "source": "docs/rule30/RESULTS-sparse-high-history-obstruction.md:51",
+      "kills": [
+        "9602de606a72643e"
+      ]
+    },
+    {
+      "id": "wit-50c12da40e2704ed",
+      "object_type": "w",
+      "source": "docs/rule30/RESULTS-split-encoder-obstruction.md:97",
+      "kills": [
+        "98ca6437e4f4f70f"
+      ]
+    },
+    {
+      "id": "wit-492e3375eb592326",
+      "object_type": "word",
+      "source": "docs/rule30/RESULTS-fixed-origin-history-count.md:63",
+      "kills": [
+        "6abd607d44158977"
+      ]
+    },
+    {
+      "id": "wit-fc0bcfba0ef8eb08",
+      "object_type": "word",
+      "source": "docs/rule30/RESULTS-fixed-origin-history-count.md:63",
+      "kills": [
+        "6abd607d44158977"
+      ]
+    },
+    {
+      "id": "wit-e9cace97f2379bac",
+      "object_type": "word",
+      "source": "docs/rule30/RESULTS-fixed-origin-history-count.md:63",
+      "kills": [
+        "6abd607d44158977"
+      ]
+    },
+    {
+      "id": "wit-51a87a153dab3571",
+      "object_type": "word",
+      "source": "docs/rule30/RESULTS-fixed-origin-history-count.md:63",
+      "kills": [
+        "6abd607d44158977"
+      ]
+    },
+    {
+      "id": "wit-813efa2f01f45ba3",
+      "object_type": "word",
+      "source": "docs/rule30/RESULTS-repeat-budget-phase-reset.md:250",
+      "kills": [
+        "a617753e8f1db024"
+      ]
+    }
+  ],
+  "controls": {
+    "c3_control": {
+      "initial_length": 3,
+      "tape_0_ancestors": [
+        "201",
+        "211",
+        "220",
+        "221",
+        "230",
+        "231",
+        "302",
+        "312"
+      ],
+      "tape_00_ancestors": [
+        "201",
+        "211",
+        "220",
+        "221",
+        "230",
+        "231",
+        "302",
+        "312"
+      ],
+      "count": 8,
+      "verified": true
+    },
+    "c6_control": {
+      "initial_length": 6,
+      "count_101": 36,
+      "count_1011": 36,
+      "count_10111": 36,
+      "count_101110": 36,
+      "count_1011100": 36,
+      "three_repeat_plateau_verified": true
+    }
+  },
+  "exhaustive_census_r_1_to_10": {
+    "1": {
+      "legal_starts": 2,
+      "max_N": 2,
+      "max_D": 0,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.0
+    },
+    "2": {
+      "legal_starts": 8,
+      "max_N": 1,
+      "max_D": 0,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.0
+    },
+    "3": {
+      "legal_starts": 32,
+      "max_N": 3,
+      "max_D": 1,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.0001
+    },
+    "4": {
+      "legal_starts": 128,
+      "max_N": 3,
+      "max_D": 1,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.0004
+    },
+    "5": {
+      "legal_starts": 512,
+      "max_N": 7,
+      "max_D": 2,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.0017
+    },
+    "6": {
+      "legal_starts": 2048,
+      "max_N": 7,
+      "max_D": 3,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.009
+    },
+    "7": {
+      "legal_starts": 8192,
+      "max_N": 10,
+      "max_D": 4,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.0448
+    },
+    "8": {
+      "legal_starts": 32768,
+      "max_N": 9,
+      "max_D": 3,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.2037
+    },
+    "9": {
+      "legal_starts": 131072,
+      "max_N": 13,
+      "max_D": 6,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 0.7898
+    },
+    "10": {
+      "legal_starts": 524288,
+      "max_N": 12,
+      "max_D": 7,
+      "D_le_r_minus_1": true,
+      "doubling_horizon_respected": true,
+      "seconds": 3.4964
+    }
+  },
+  "total_legal_starts_checked": 699050,
+  "mechanisms_audit": {
+    "periodic_or_automatic_refutation": {
+      "fired": true,
+      "finding": "Raw ancestor count is not monotone decreasing; plateau witnesses at r=3 (cardinality 8) and r=6 (cardinality 36) exhibit 1, 2, and 3 consecutive repeats with zero ancestor loss.",
+      "witnesses": [
+        "wit-492e3375eb592326",
+        "wit-fc0bcfba0ef8eb08"
+      ]
+    },
+    "exclusion_of_bounded_complexity_family_only": {
+      "fired": true,
+      "finding": "Capacity Q_2<=17 gives B(17)=14, but this is a restricted class; at Q_2=18, two-parameter families emerge with lifetimes up to N=35, D=22, exceeding the capacity-17 bound.",
+      "witnesses": [
+        "wit-ad7a3f028a0a7fcb"
+      ]
+    },
+    "sharp_positive_constant_blocks_vanishing_rate": {
+      "fired": true,
+      "finding": "Contiguous-window upper messages have positive floors (5/64, 4^-6, 4^-10), and additive messages have expectation >= 2^(-k-2b), blocking exponential decay certificates 2^(-eps D).",
+      "witnesses": [
+        "wit-f744af938a76c867"
+      ]
+    },
+    "counting_injection_or_matching_fails_to_cover": {
+      "fired": true,
+      "finding": "Original-high coordinate hypercubes fail (dimension 0 at r=87), and toggled born terminal highs have no successful predecessor.",
+      "witnesses": [
+        "wit-50c12da40e2704ed"
+      ]
+    },
+    "claim_generalised_from_one_instance_fails_at_another": {
+      "fired": true,
+      "finding": "The conditional 1/8 information bound holds for k=1 visible low bit, but fails at k=2 (explicit witness r=46735 with ratio 4 > 1).",
+      "witnesses": [
+        "wit-edce78fe556ee4ff",
+        "wit-0633872d899a1756",
+        "wit-f9660bdca0d15d7b"
+      ]
+    }
+  },
+  "summary": {
+    "proved_for_r_le_10": {
+      "max_D_by_r": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 1,
+        "5": 2,
+        "6": 3,
+        "7": 4,
+        "8": 3,
+        "9": 6,
+        "10": 7
+      },
+      "conjecture_D_le_r_minus_1_verified": true,
+      "doubling_horizon_respected": true
+    },
+    "open_for_general_r": "No uniform B(r) is proved for all r. Raw ancestor counts exhibit plateaus (controls verified), phase ranks refill on switches, and contiguous/additive message relaxations hit information floors."
+  },
+  "elapsed_seconds": 4.561
+}

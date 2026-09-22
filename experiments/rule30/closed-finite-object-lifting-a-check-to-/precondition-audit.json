@@ -1,0 +1,123 @@
+{
+  "schema": "rule30.precondition-audit.closed-finite-object-lift.v1",
+  "timestamp_iso": "2026-09-19T01:08:00Z",
+  "method": "Closed finite object lifting a check to all lengths or continuations",
+  "method_id": "closed-finite-object-lift",
+  "target_statement": "For every K, some finite B(K) bounds repeats uniformly over all originals with Q_2 <= K.",
+  "target_ladder_statement": "A bound at every capacity",
+  "target_ladder_node": "capacity",
+  "preconditions": {
+    "precondition_1_fixed_finite_state_space_for_universal_quantifier": {
+      "holds": false,
+      "reason": "The target statement quantifies universally over K in N. The capped-count language recognizer state space grows strictly with K (74 product states at K=17, 147 product states at K=32), and no finite automaton or transducer can represent the union of all capacity classes."
+    },
+    "precondition_2_bounded_parameter_dimension": {
+      "holds": false,
+      "reason": "The second bulk output families have an unbounded number of free repetition parameters (1 parameter at K<=17, 2 parameters at K=18, m parameters at length 5+5m). A closed finite object only lifts over 1-dimensional length/continuation at fixed width/family."
+    },
+    "precondition_3_closure_at_next_step_k18": {
+      "holds": false,
+      "reason": "Even if restricted to individual K, at the first open capacity K=18, the closed finite object method failed: joint column state sets hit the 2,000,000-state memory cap at depths 12-16 without closing. Witnesses live to depth N=35, D=22, requiring certificate depth d >= 34, which is beyond finite tractability (~10^14 states)."
+    }
+  },
+  "controls": {
+    "negative_control_1_cap17_bound_exceeded_at_cap18": {
+      "passed": true,
+      "witness_index": 8,
+      "witness_Q2": 18,
+      "witness_D": 22,
+      "cap17_D_max": 14,
+      "violation": "D(w) = 22 > 14 = B(17)"
+    },
+    "negative_control_2_single_parameter_insufficient_at_cap18": {
+      "passed": true,
+      "two_parameter_patterns_at_cap18": 7,
+      "cap17_max_parameters": 1,
+      "cap32_max_parameters": 2
+    },
+    "negative_control_3_unbounded_fiber_dimension_binary_blocks": {
+      "passed": true,
+      "fibers_at_m2": 4,
+      "formula": "2^m distinct fibers at length 5+5m"
+    }
+  },
+  "reproduced_values": {
+    "cap17": {
+      "product_states": 74,
+      "product_edges": 296,
+      "N_max": 24,
+      "D_max": 14,
+      "both_bounds_sharp": true,
+      "attaining_witness": {
+        "original": "20001 0^1633864",
+        "r": 1633869,
+        "tape": "001000001101001100000111",
+        "Q2": 6,
+        "N": 24,
+        "D": 14
+      }
+    },
+    "cap32": {
+      "product_states": 147,
+      "product_edges": 588,
+      "capacities_present": [
+        1,
+        2,
+        6,
+        12,
+        18,
+        20,
+        24
+      ],
+      "two_parameter_patterns_count": 7
+    },
+    "cap18_witnesses": [
+      {
+        "index": 8,
+        "a": 753,
+        "b": 12291,
+        "Q2": 18,
+        "N": 35,
+        "D": 22
+      },
+      {
+        "index": 15,
+        "a": 0,
+        "b": 11630084,
+        "Q2": 18,
+        "N": 32,
+        "D": 20
+      },
+      {
+        "index": 15,
+        "a": 1534,
+        "b": 15247338,
+        "Q2": 18,
+        "N": 33,
+        "D": 15
+      },
+      {
+        "index": 23,
+        "a": 533,
+        "b": 2533308,
+        "Q2": 18,
+        "N": 33,
+        "D": 16
+      },
+      {
+        "index": 34,
+        "a": 20,
+        "b": 8964344,
+        "Q2": 18,
+        "N": 30,
+        "D": 15
+      }
+    ]
+  },
+  "verdict": {
+    "method_preconditions_hold": false,
+    "failing_precondition": "Precondition 1 (fixed finite state space for the universally quantified scope) and Precondition 2 (bounded parameter dimension of boundary families) both fail. The target quantifies over all K in N, while a closed finite object only lifts over length at a fixed width or family.",
+    "recommendation": "Stop per instruction: do not adapt the method until it stops being the method."
+  },
+  "elapsed_seconds": 0.03962283401051536
+}

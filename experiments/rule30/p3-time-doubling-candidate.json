@@ -1,0 +1,102 @@
+{
+  "schema": "rule30.p3-time-doubling-candidate.v1",
+  "oracle_validated_against": [
+    "RESULTS-p3-rise-chain-transparency.md#4 (four saved B-power rays + site-1 collision)",
+    "RESULTS-p3-session-limits-supplement.md#2 (Y_r rise/fall identity)"
+  ],
+  "yr_identity_reproduced": true,
+  "candidate": "digit_i(B^(2t)(0)) as a function of digit_(i//2)(B^t(0)) alone",
+  "scan": [
+    {
+      "t": 1,
+      "classes": 1,
+      "mixed": 0
+    },
+    {
+      "t": 2,
+      "classes": 1,
+      "mixed": 1
+    },
+    {
+      "t": 3,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "t": 4,
+      "classes": 2,
+      "mixed": 1
+    },
+    {
+      "t": 5,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "t": 6,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "t": 7,
+      "classes": 3,
+      "mixed": 3
+    },
+    {
+      "t": 8,
+      "classes": 3,
+      "mixed": 3
+    },
+    {
+      "t": 9,
+      "classes": 4,
+      "mixed": 4
+    },
+    {
+      "t": 10,
+      "classes": 4,
+      "mixed": 4
+    },
+    {
+      "t": 11,
+      "classes": 4,
+      "mixed": 4
+    },
+    {
+      "t": 12,
+      "classes": 4,
+      "mixed": 4
+    },
+    {
+      "t": 13,
+      "classes": 4,
+      "mixed": 4
+    },
+    {
+      "t": 14,
+      "classes": 4,
+      "mixed": 4
+    },
+    {
+      "t": 15,
+      "classes": 4,
+      "mixed": 4
+    },
+    {
+      "t": 16,
+      "classes": 4,
+      "mixed": 3
+    },
+    {
+      "t": 17,
+      "classes": 4,
+      "mixed": 4
+    },
+    {
+      "t": 18,
+      "classes": 4,
+      "mixed": 4
+    }
+  ],
+  "verdict": "KILL"
+}

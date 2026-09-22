@@ -1,0 +1,18 @@
+{
+ "base": 7,
+ "N": 2,
+ "H_sharp": 1,
+ "P_sharp": 14,
+ "tested": 32256,
+ "exhaustive": true,
+ "periodic": 16258,
+ "problems": 0,
+ "max_onset": 1,
+ "periods": [
+  1,
+  2,
+  7
+ ],
+ "lcm_periods": 14,
+ "examples": []
+}

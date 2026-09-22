@@ -1,0 +1,754 @@
+{
+  "schema": "rule30.cap18-survivor-mass.v1",
+  "source_sha256": {
+    "cap18_survivor_mass.py": "d8b8263846f76cc4d33d421292fe2d42a7878422e5785428675e57281c738ce5",
+    "first_star_schedule.cpp": "841e06000e54f5e4711f71c284d24bed296f00ae298b5d37c88713636f8f4535",
+    "cap18_entry_supply.py": "aa767f37b3b04886a524e0490e1ec876772b96aca4e502ed49f5d79ddf6cb0fb",
+    "cap18_four_sheet_propagation.py": "cdb6792f2a3f871a7e178f9af8b090172e6942b99dbf9961d0d379dc7a7ec075",
+    "guarded_two_block_lift_statistics.py": "0ac43ac8e82d2864d273a618ff5e3c89fe9bd059fc6c92b1dbf19703ea126029"
+  },
+  "inputs_sha256": {
+    "cap18-lifetime-census.json": "57df1950306054a2517788cb23004638f30877dee4356d53c6201429e1e6abc6",
+    "cap18-first-star-schedule.txt": "4d8ca0029f8fb98e2af9f4df4e2c587507f5b5e9dc6825222ff343a4c0349820",
+    "capacity18-guarded-base4.json": "627fa4ddf56db9cb3234c763b11a6ee1f3fe4cefee2e3889321a91703ffe4bd1",
+    "capacity18-guarded-16.json": "4d5d791a34a15467819b9d2049798d18318d2451c451441905f75b96596b71a7",
+    "cap18-entry-supply.json": "bc772cd4746f648af5e1c7fa0de7d4b29459cd4bc17bfbc89ae0ad0a0a53e81a",
+    "cap18-entry-supply-16.json": "a38668d7c14fb462f935e3bb81a0563bdceeca4be7fec557d679715b66c78dfa"
+  },
+  "sidecars_match_sha256_recorded_in": [
+    "cap18-entry-supply.json",
+    "cap18-entry-supply-16.json"
+  ],
+  "validation": {
+    "survivor_mass_lemma": "every old phase at every column of layers 5-16",
+    "fixing_reflection_guard_line_quarters": "every old phase",
+    "mass_support_equals_lift_reach_and_children": "every column",
+    "consecutive_layers_agree": true,
+    "control_phase_columns_not_halved_at_guard_line_and_point_layers": 942,
+    "census_box_exact_through_depth": 16,
+    "census_equals_lift_mass_depths": [
+      4,
+      16
+    ],
+    "schedule_matches_first_star_schedule_through": 24
+  },
+  "mass_by_depth": {
+    "1": "1/2",
+    "2": "1/4",
+    "3": "1/8",
+    "4": "7/128",
+    "5": "7/256",
+    "6": "29/2048",
+    "7": "17/2048",
+    "8": "17/4096",
+    "9": "67/32768",
+    "10": "19/16384",
+    "11": "159/262144",
+    "12": "159/524288",
+    "13": "333/2097152",
+    "14": "165/2097152",
+    "15": "653/16777216",
+    "16": "2513/134217728"
+  },
+  "mass_times_2^n_by_depth": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 0.875,
+    "5": 0.875,
+    "6": 0.90625,
+    "7": 1.0625,
+    "8": 1.0625,
+    "9": 1.046875,
+    "10": 1.1875,
+    "11": 1.2421875,
+    "12": 1.2421875,
+    "13": 1.30078125,
+    "14": 1.2890625,
+    "15": 1.275390625,
+    "16": 1.22705078125
+  },
+  "first_star_schedule": {
+    "1": {
+      "period": 1,
+      "ratio": 1,
+      "type": "point"
+    },
+    "2": {
+      "period": 4,
+      "ratio": 4,
+      "type": "fibre"
+    },
+    "3": {
+      "period": 8,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "4": {
+      "period": 16,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "5": {
+      "period": 32,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "6": {
+      "period": 32,
+      "ratio": 1,
+      "type": "point"
+    },
+    "7": {
+      "period": 32,
+      "ratio": 1,
+      "type": "point"
+    },
+    "8": {
+      "period": 128,
+      "ratio": 4,
+      "type": "fibre"
+    },
+    "9": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "10": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "11": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "12": {
+      "period": 256,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "13": {
+      "period": 512,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "14": {
+      "period": 1024,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "15": {
+      "period": 2048,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "16": {
+      "period": 2048,
+      "ratio": 1,
+      "type": "point"
+    },
+    "17": {
+      "period": 4096,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "18": {
+      "period": 8192,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "19": {
+      "period": 16384,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "20": {
+      "period": 32768,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "21": {
+      "period": 65536,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "22": {
+      "period": 131072,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "23": {
+      "period": 131072,
+      "ratio": 1,
+      "type": "point"
+    },
+    "24": {
+      "period": 262144,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "25": {
+      "period": 524288,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "26": {
+      "period": 1048576,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "27": {
+      "period": 2097152,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "28": {
+      "period": 4194304,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "29": {
+      "period": 8388608,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "30": {
+      "period": 16777216,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "31": {
+      "period": 16777216,
+      "ratio": 1,
+      "type": "point"
+    },
+    "32": {
+      "period": 67108864,
+      "ratio": 4,
+      "type": "fibre"
+    },
+    "33": {
+      "period": 134217728,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "34": {
+      "period": 134217728,
+      "ratio": 1,
+      "type": "point"
+    },
+    "35": {
+      "period": 536870912,
+      "ratio": 4,
+      "type": "fibre"
+    },
+    "36": {
+      "period": 1073741824,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "37": {
+      "period": 2147483648,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "38": {
+      "period": 2147483648,
+      "ratio": 1,
+      "type": "point"
+    }
+  },
+  "exact_halving_layers_from_schedule": [
+    2,
+    3,
+    8,
+    12,
+    17,
+    18,
+    24,
+    27,
+    29,
+    30,
+    32,
+    33,
+    35,
+    36,
+    37
+  ],
+  "exploratory_layers": [
+    {
+      "layer": 5,
+      "entry_type": "guard_line",
+      "old_survivors": 8,
+      "mass_old": "7/128",
+      "mass_new": "7/256",
+      "mass_old_times_2^n": 0.875,
+      "kept_fraction": 0.5,
+      "self_sufficient_mass_fraction": 0.35714285714285715,
+      "mass_fraction_by_class": {
+        "center": 0.3571,
+        "identity": 0.6429
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "identity": 0.5
+      },
+      "longest_new_orbit": 32,
+      "first_star_period": 32,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 3,
+        "1": 4,
+        "1/2": 15
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 0,
+        "sum_c_mod_2": 0,
+        "cycles_by_tc": {
+          "00": 5
+        }
+      }
+    },
+    {
+      "layer": 6,
+      "entry_type": "point",
+      "old_survivors": 14,
+      "mass_old": "7/256",
+      "mass_new": "29/2048",
+      "mass_old_times_2^n": 0.875,
+      "kept_fraction": 0.5178571428571429,
+      "self_sufficient_mass_fraction": 0.5,
+      "mass_fraction_by_class": {
+        "fixing_reflection": 0.1429,
+        "free_reflection": 0.3571,
+        "rotation": 0.5
+      },
+      "kept_fraction_by_class": {
+        "fixing_reflection": 0.75,
+        "free_reflection": 0.45,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 128,
+      "first_star_period": 32,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 2,
+        "1": 3,
+        "1/2": 23
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 0,
+        "sum_c_mod_2": 1,
+        "cycles_by_tc": {
+          "01": 4,
+          "10": 1,
+          "11": 3
+        }
+      }
+    },
+    {
+      "layer": 7,
+      "entry_type": "point",
+      "old_survivors": 24,
+      "mass_old": "29/2048",
+      "mass_new": "17/2048",
+      "mass_old_times_2^n": 0.90625,
+      "kept_fraction": 0.5862068965517241,
+      "self_sufficient_mass_fraction": 0.20689655172413793,
+      "mass_fraction_by_class": {
+        "center": 0.2069,
+        "fixing_reflection": 0.1379,
+        "free_reflection": 0.3103,
+        "identity": 0.3448
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.5,
+        "free_reflection": 0.6111,
+        "identity": 0.65
+      },
+      "longest_new_orbit": 256,
+      "first_star_period": 32,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 8,
+        "1": 14,
+        "1/2": 19
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 1,
+        "sum_c_mod_2": 1,
+        "cycles_by_tc": {
+          "00": 4,
+          "01": 5,
+          "10": 1
+        }
+      }
+    },
+    {
+      "layer": 8,
+      "entry_type": "fibre",
+      "old_survivors": 31,
+      "mass_old": "17/2048",
+      "mass_new": "17/4096",
+      "mass_old_times_2^n": 1.0625,
+      "kept_fraction": 0.5,
+      "self_sufficient_mass_fraction": 0.17647058823529413,
+      "mass_fraction_by_class": {
+        "center": 0.1765,
+        "free_reflection": 0.4706,
+        "identity": 0.3529
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "free_reflection": 0.5,
+        "identity": 0.5
+      },
+      "longest_new_orbit": 256,
+      "first_star_period": 128,
+      "kept_fraction_per_old_phase_and_column": {
+        "1/2": 36
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 0,
+        "sum_c_mod_2": 0,
+        "cycles_by_tc": {
+          "00": 6,
+          "01": 6
+        }
+      }
+    },
+    {
+      "layer": 9,
+      "entry_type": "point",
+      "old_survivors": 62,
+      "mass_old": "17/4096",
+      "mass_new": "67/32768",
+      "mass_old_times_2^n": 1.0625,
+      "kept_fraction": 0.49264705882352944,
+      "self_sufficient_mass_fraction": 0.3235294117647059,
+      "mass_fraction_by_class": {
+        "center": 0.0882,
+        "fixing_reflection": 0.1176,
+        "free_reflection": 0.3235,
+        "identity": 0.2353,
+        "rotation": 0.2353
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.6875,
+        "free_reflection": 0.3636,
+        "identity": 0.5625,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 1024,
+      "first_star_period": 128,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 24,
+        "1": 22,
+        "1/2": 62
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 0,
+        "sum_c_mod_2": 1,
+        "cycles_by_tc": {
+          "00": 7,
+          "01": 8,
+          "10": 5,
+          "11": 9
+        }
+      }
+    },
+    {
+      "layer": 10,
+      "entry_type": "point",
+      "old_survivors": 90,
+      "mass_old": "67/32768",
+      "mass_new": "19/16384",
+      "mass_old_times_2^n": 1.046875,
+      "kept_fraction": 0.5671641791044776,
+      "self_sufficient_mass_fraction": 0.3283582089552239,
+      "mass_fraction_by_class": {
+        "center": 0.3134,
+        "fixing_reflection": 0.0896,
+        "free_reflection": 0.3284,
+        "identity": 0.2537,
+        "rotation": 0.0149
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.5,
+        "free_reflection": 0.5909,
+        "identity": 0.6471,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 2048,
+      "first_star_period": 128,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 18,
+        "1": 36,
+        "1/2": 62
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 1,
+        "sum_c_mod_2": 1,
+        "cycles_by_tc": {
+          "00": 20,
+          "01": 10,
+          "10": 2,
+          "11": 1
+        }
+      }
+    },
+    {
+      "layer": 11,
+      "entry_type": "point",
+      "old_survivors": 95,
+      "mass_old": "19/16384",
+      "mass_new": "159/262144",
+      "mass_old_times_2^n": 1.1875,
+      "kept_fraction": 0.5230263157894737,
+      "self_sufficient_mass_fraction": 0.34868421052631576,
+      "mass_fraction_by_class": {
+        "center": 0.2434,
+        "fixing_reflection": 0.1316,
+        "free_reflection": 0.1974,
+        "identity": 0.3224,
+        "rotation": 0.1053
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.45,
+        "free_reflection": 0.5833,
+        "identity": 0.5408,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 2048,
+      "first_star_period": 128,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 31,
+        "1": 30,
+        "1/2": 47
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 1,
+        "sum_c_mod_2": 1,
+        "cycles_by_tc": {
+          "00": 21,
+          "01": 8,
+          "10": 4,
+          "11": 3
+        }
+      }
+    },
+    {
+      "layer": 12,
+      "entry_type": "z_pair",
+      "old_survivors": 85,
+      "mass_old": "159/262144",
+      "mass_new": "159/524288",
+      "mass_old_times_2^n": 1.2421875,
+      "kept_fraction": 0.5,
+      "self_sufficient_mass_fraction": 0.33962264150943394,
+      "mass_fraction_by_class": {
+        "center": 0.1384,
+        "fixing_reflection": 0.0755,
+        "free_reflection": 0.3522,
+        "identity": 0.2327,
+        "rotation": 0.2013
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.5,
+        "free_reflection": 0.5,
+        "identity": 0.5,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 8192,
+      "first_star_period": 256,
+      "kept_fraction_per_old_phase_and_column": {
+        "1/2": 93
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 1,
+        "sum_c_mod_2": 0,
+        "cycles_by_tc": {
+          "00": 16,
+          "01": 10,
+          "10": 3,
+          "11": 4
+        }
+      }
+    },
+    {
+      "layer": 13,
+      "entry_type": "guard_line",
+      "old_survivors": 125,
+      "mass_old": "159/524288",
+      "mass_new": "333/2097152",
+      "mass_old_times_2^n": 1.2421875,
+      "kept_fraction": 0.5235849056603774,
+      "self_sufficient_mass_fraction": 0.3113207547169811,
+      "mass_fraction_by_class": {
+        "center": 0.2296,
+        "fixing_reflection": 0.0314,
+        "free_reflection": 0.3145,
+        "identity": 0.3428,
+        "rotation": 0.0818
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.55,
+        "free_reflection": 0.53,
+        "identity": 0.5367,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 8192,
+      "first_star_period": 512,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 23,
+        "1": 26,
+        "1/2": 125,
+        "1/4": 2,
+        "3/4": 3
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 1,
+        "sum_c_mod_2": 1,
+        "cycles_by_tc": {
+          "00": 23,
+          "01": 15,
+          "10": 3,
+          "11": 4
+        }
+      }
+    },
+    {
+      "layer": 14,
+      "entry_type": "guard_line",
+      "old_survivors": 216,
+      "mass_old": "333/2097152",
+      "mass_new": "165/2097152",
+      "mass_old_times_2^n": 1.30078125,
+      "kept_fraction": 0.4954954954954955,
+      "self_sufficient_mass_fraction": 0.23873873873873874,
+      "mass_fraction_by_class": {
+        "center": 0.1607,
+        "fixing_reflection": 0.0841,
+        "free_reflection": 0.3483,
+        "identity": 0.3288,
+        "rotation": 0.0781
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.4107,
+        "free_reflection": 0.4849,
+        "identity": 0.5251,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 16384,
+      "first_star_period": 1024,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 37,
+        "1": 42,
+        "1/2": 208,
+        "1/4": 8,
+        "3/4": 6
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 1,
+        "sum_c_mod_2": 0,
+        "cycles_by_tc": {
+          "00": 31,
+          "01": 34,
+          "10": 9,
+          "11": 8
+        }
+      }
+    },
+    {
+      "layer": 15,
+      "entry_type": "guard_line",
+      "old_survivors": 351,
+      "mass_old": "165/2097152",
+      "mass_new": "653/16777216",
+      "mass_old_times_2^n": 1.2890625,
+      "kept_fraction": 0.4946969696969697,
+      "self_sufficient_mass_fraction": 0.2916666666666667,
+      "mass_fraction_by_class": {
+        "center": 0.1674,
+        "fixing_reflection": 0.1652,
+        "free_reflection": 0.2379,
+        "identity": 0.3053,
+        "rotation": 0.1242
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.4495,
+        "free_reflection": 0.5032,
+        "identity": 0.5074,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 32768,
+      "first_star_period": 2048,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 65,
+        "1": 69,
+        "1/2": 319,
+        "1/4": 39,
+        "3/4": 36
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 1,
+        "sum_c_mod_2": 1,
+        "cycles_by_tc": {
+          "00": 63,
+          "01": 42,
+          "10": 16,
+          "11": 13
+        }
+      }
+    },
+    {
+      "layer": 16,
+      "entry_type": "point",
+      "old_survivors": 545,
+      "mass_old": "653/16777216",
+      "mass_new": "2513/134217728",
+      "mass_old_times_2^n": 1.275390625,
+      "kept_fraction": 0.4810490045941807,
+      "self_sufficient_mass_fraction": 0.40888208269525267,
+      "mass_fraction_by_class": {
+        "center": 0.2236,
+        "fixing_reflection": 0.1141,
+        "free_reflection": 0.2404,
+        "identity": 0.2366,
+        "rotation": 0.1853
+      },
+      "kept_fraction_by_class": {
+        "center": 0.5,
+        "fixing_reflection": 0.453,
+        "free_reflection": 0.4674,
+        "identity": 0.4757,
+        "rotation": 0.5
+      },
+      "longest_new_orbit": 65536,
+      "first_star_period": 2048,
+      "kept_fraction_per_old_phase_and_column": {
+        "0": 205,
+        "1": 186,
+        "1/2": 465
+      },
+      "exploratory_cycle_parities": {
+        "sum_t_mod_2": 1,
+        "sum_c_mod_2": 0,
+        "cycles_by_tc": {
+          "00": 102,
+          "01": 67,
+          "10": 26,
+          "11": 37
+        }
+      }
+    }
+  ],
+  "scope": "Index 15 through depth 16 for the mass; the schedule is exact to its last layer. The lemma says where the survivor mass must halve; it does not bound the mass below at guard-line or point layers and decides neither uniform nor individual mortality."
+}

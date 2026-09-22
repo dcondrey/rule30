@@ -1,0 +1,2495 @@
+{
+  "schema": "rule30.cap18-entry-supply.v1",
+  "preregistration": "PREREGISTRATION-cap18-entry-supply.md",
+  "source_sha256": {
+    "cap18_entry_supply.py": "aa767f37b3b04886a524e0490e1ec876772b96aca4e502ed49f5d79ddf6cb0fb",
+    "cap18_four_sheet_propagation.py": "cdb6792f2a3f871a7e178f9af8b090172e6942b99dbf9961d0d379dc7a7ec075",
+    "guarded_two_block_lift_statistics.py": "0ac43ac8e82d2864d273a618ff5e3c89fe9bd059fc6c92b1dbf19703ea126029",
+    "two_block_guarded_lift.cpp": "6658c14e812d27de3f3cfff673c861330e0e67700589534fbc471aadbb2ea1a0",
+    "two_block_column_orbit.cpp": "a198df6f2c14cef3d6fb13238c96a445eea014fc6977cd68ac8b7a6b44d55bdd"
+  },
+  "primary_sha256": "627fa4ddf56db9cb3234c763b11a6ee1f3fe4cefee2e3889321a91703ffe4bd1",
+  "base_manifest_sha256": "06425e573f9688e7e6673192aa1796a1efd476c62bd89b92ec20511b321c35d3",
+  "data_sha256": {
+    "capacity18-guarded-base4.depth-5.first.bin": "107519933a6da103fa86c242646051af85e1c32e6a337380689a265c98a30956",
+    "capacity18-guarded-base4.depth-5.routes.bin": "59ac36635ac874f89dbd7a614514ce6aa8d32020ef4520709d5074508b21b070",
+    "capacity18-guarded-base4.depth-5.cover.bin": "7294f9f46ef4675c1d80300f4cecba986eac6ab6e28ad84ad642dde8f48c5584",
+    "capacity18-guarded-base4.depth-5.entries.bin": "746f58218ca4880d04f47684aee1ff9d6e8892c10d8ae9c2efc2c1a04583bcc7",
+    "capacity18-guarded-base4.depth-6.first.bin": "957b0e8ba66e155f797fc692e49fc47366972c4c8417661c20794eb3a2b66da2",
+    "capacity18-guarded-base4.depth-6.routes.bin": "0a8baf7d63cd88aeca6e5f0c27adcb26b9b2738f9e2a76e66b972a8eabad573b",
+    "capacity18-guarded-base4.depth-6.cover.bin": "ccd3a5fd620bb683ad440f9d5cfb7038eb3ed41d6b92ef71e25cb0076ae1d329",
+    "capacity18-guarded-base4.depth-6.entries.bin": "c35415492160f145820680c60803fc19fae776729fae414907bfa0534a94dd79",
+    "capacity18-guarded-base4.depth-7.first.bin": "b6de7a3e59c8337a14736fe3614a2316a30d00a97e7af3ca46f483f05adf45aa",
+    "capacity18-guarded-base4.depth-7.routes.bin": "29acd6c7b7e02c36d64dfa12bcf81d3484f995d0b9de4ad0df3dc4796214f53d",
+    "capacity18-guarded-base4.depth-7.cover.bin": "3e8ad980e34ccc2ebdcc269409b89b3013af1783ce4d978366f98cccab4003e4",
+    "capacity18-guarded-base4.depth-7.entries.bin": "32c4bb5c8cb851cd88ba3f556041f64d4c67147988dce5cf14d4fee83c656126",
+    "capacity18-guarded-base4.depth-8.first.bin": "fef4e99f6755189c72c97ca19b5254f285f2c70665340f733e222fb033012b59",
+    "capacity18-guarded-base4.depth-8.routes.bin": "95c32e04d3c0320261c919e02e59a2be365fa6df017a19a661e7279d636977b7",
+    "capacity18-guarded-base4.depth-8.cover.bin": "c460a1577626251cb187fff976c74e22203fa70a605c2ef3012b58e897fea8ee",
+    "capacity18-guarded-base4.depth-8.entries.bin": "7f2ef3f1314378c678f41d7c33434b90970bb5d7adf1c8ffb138b507c6aa0598",
+    "capacity18-guarded-base4.depth-9.first.bin": "88db40dc06dcdf165469a20bc1660083a4311a9a277f5336bcacfe885bdecca9",
+    "capacity18-guarded-base4.depth-9.routes.bin": "844781380f3f378181b375004e58695fd71f2cf679e16141b38e1132185fb170",
+    "capacity18-guarded-base4.depth-9.cover.bin": "cee9d642930a2c805f2d57f9837b4f5cb78fe3a449e0fabf8dd44a648bfa7066",
+    "capacity18-guarded-base4.depth-9.entries.bin": "999afb63009631509936e3f61ff6b8e3772aa0d27230940688ac0f7235e1baf6",
+    "capacity18-guarded-base4.depth-10.first.bin": "e2535e631d0d4487a54a6d198723e0bf1d08f6ecc9ef81520e2444473c40fe42",
+    "capacity18-guarded-base4.depth-10.routes.bin": "edd9693886e8194f440a67abc70c96ce7b766b901a6e71e851a174d97327a185",
+    "capacity18-guarded-base4.depth-10.cover.bin": "d98804d1b02c37ae9e99466a5f1d58ff3ed22cad70e6bc257906cc2b649f05d5",
+    "capacity18-guarded-base4.depth-10.entries.bin": "ea1f4945ea865a86c755d6d2e0477b7cec242345777e416ad8323921d8d459d0",
+    "capacity18-guarded-base4.depth-11.first.bin": "3f3ec10b419e5656fa3f8140e494d69c7bf5175520a488a08a869a3fa547b92d",
+    "capacity18-guarded-base4.depth-11.routes.bin": "644f2a8d8d3b71c2f7a43f3a9f3444df1ff3d1e6b7229eacc910a5fd957b2094",
+    "capacity18-guarded-base4.depth-11.cover.bin": "45efb5165b0f35fb12c3eebb2a7f261c18fdde101bfd5d5b6a7d1a762d8032ed",
+    "capacity18-guarded-base4.depth-11.entries.bin": "a348ebc4a7799ef9cbc91bf8a5a9b071c8eb36571ca17789a20cd16344a314fb",
+    "capacity18-guarded-base4.depth-12.first.bin": "db38dc6341f0bd3d786ff520a0fe4e72a151f485b01b7580fc081ded3fa5d7f7",
+    "capacity18-guarded-base4.depth-12.routes.bin": "e3585ecd4f23062ea78560687b3a46fd8a5b3e97f9a3134910001f0411690de6",
+    "capacity18-guarded-base4.depth-12.cover.bin": "0d8f43a4ec9c06252c8c992295b6b18b8be33f27d0587bb09be46e7804474d24",
+    "capacity18-guarded-base4.depth-12.entries.bin": "b59fd38fae9c7f060307bdc935173ea1437a3dfe424c92e2c0a84286f1fc69c6",
+    "capacity18-guarded-base4.depth-13.first.bin": "88a68b8bfb9973acf179e06ee7478ef12492f15d0ccd53d94d520e876a38e893",
+    "capacity18-guarded-base4.depth-13.routes.bin": "2c38960af52bc6ed6d36cda7f2fa7a7e31d63c4150c06b9275fc7df86a7f951b",
+    "capacity18-guarded-base4.depth-13.cover.bin": "15e6a111735692ee1480927d7243469aee2f1e7006c6bfe562a6643231da59b0",
+    "capacity18-guarded-base4.depth-13.entries.bin": "04d6eae62c0c664d624943015fce8b1b0d58a23d6bd79d62fdbf966120f2b8e9",
+    "capacity18-guarded-base4.depth-14.first.bin": "10fd79ab00286aa61f8781f5831d06e8c2c4e2588339e8d96486358da7f88697",
+    "capacity18-guarded-base4.depth-14.routes.bin": "f5c7a8bf17b69e2db5a05a8676466695d16ba3cc9b929821eaca7fbc0e38d081",
+    "capacity18-guarded-base4.depth-14.cover.bin": "e6b8ae2effdd57e2e936014ac3f90c1a4384b7c7f7bb1532951876ef7ae3c646",
+    "capacity18-guarded-base4.depth-14.entries.bin": "edb5e51c04af6a6c20ecf1dc5f0a2a057bb4617c11576f42c44dda536778afe2",
+    "capacity18-guarded-base4.depth-15.first.bin": "6432f602d7827896c42eec15db579e98365705074a73e04c386eae2635f286d4",
+    "capacity18-guarded-base4.depth-15.routes.bin": "ac19d9bf1f60a48e99cedba3c2f1e61dade0fcfc550706bc9d6ad7b8331b0a82",
+    "capacity18-guarded-base4.depth-15.cover.bin": "960460a8e5d50c47cc5567e291df626b88e866fc48f0c43e2c9f2fd04a8c8a24",
+    "capacity18-guarded-base4.depth-15.entries.bin": "4b30ff756489168955b004b22263bd823870e4b747328568ca4e33059f542aad"
+  },
+  "validation": {
+    "run": "layers 5-15 complete, stop_reason depth_cap",
+    "exhaustive_survivor_sets_matched": {
+      "4": 8,
+      "8": 62,
+      "12": 125
+    },
+    "committed_layers_byte_identical": {
+      "13.cover": true,
+      "13.entries": true,
+      "14.cover": true,
+      "14.entries": true,
+      "15.cover": true,
+      "15.entries": true
+    },
+    "entry_sets_of_layer_type": "all live old phases, every layer",
+    "reachable_pairs_equal_entry_closure": "every cycle, every layer",
+    "every_cycle_has_an_entry": true,
+    "deaths_at_fibre_and_z_pair_layers": 0,
+    "no_death_on_z_or_rotation_cycles": true,
+    "lift_lemma_violations": 0,
+    "schedule_matches_lifted_layers_and_exhaustive_first_periods": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "first_star_schedule": {
+    "1": {
+      "period": 1,
+      "ratio": 1,
+      "type": "point"
+    },
+    "2": {
+      "period": 4,
+      "ratio": 4,
+      "type": "fibre"
+    },
+    "3": {
+      "period": 8,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "4": {
+      "period": 16,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "5": {
+      "period": 32,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "6": {
+      "period": 32,
+      "ratio": 1,
+      "type": "point"
+    },
+    "7": {
+      "period": 32,
+      "ratio": 1,
+      "type": "point"
+    },
+    "8": {
+      "period": 128,
+      "ratio": 4,
+      "type": "fibre"
+    },
+    "9": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "10": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "11": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "12": {
+      "period": 256,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "13": {
+      "period": 512,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "14": {
+      "period": 1024,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "15": {
+      "period": 2048,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "16": {
+      "period": 2048,
+      "ratio": 1,
+      "type": "point"
+    },
+    "17": {
+      "period": 4096,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "18": {
+      "period": 8192,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "19": {
+      "period": 16384,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "20": {
+      "period": 32768,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "21": {
+      "period": 65536,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "22": {
+      "period": 131072,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "23": {
+      "period": 131072,
+      "ratio": 1,
+      "type": "point"
+    },
+    "24": {
+      "period": 262144,
+      "ratio": 2,
+      "type": "z_pair"
+    }
+  },
+  "H1_self_sufficient_inheritance": {
+    "generations": [
+      {
+        "generation": "G_4 -> G_5",
+        "registered": true,
+        "out_of_sample": true,
+        "parents_tested": 3,
+        "failures": 3,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.0,
+          "expected_failures_if_independent": 3.0,
+          "probability_of_zero_failures_if_independent": 0.0
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.0,
+            "center": 0.0
+          },
+          "expected_failures_if_independent": 3.0,
+          "probability_of_zero_failures_if_independent": 0.0
+        },
+        "failing_parents": [
+          {
+            "parent_state": 107,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 331,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 459,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "free_reflection": 6
+          },
+          "identity": {
+            "fixing_reflection": 2,
+            "none": 1,
+            "rotation": 6
+          }
+        }
+      },
+      {
+        "generation": "G_5 -> G_6",
+        "registered": true,
+        "out_of_sample": true,
+        "parents_tested": 6,
+        "failures": 4,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.2857142857142857,
+          "expected_failures_if_independent": 3.061224489795918,
+          "probability_of_zero_failures_if_independent": 0.013806734390006244
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.2857142857142857,
+            "center": 0.18181818181818182
+          },
+          "expected_failures_if_independent": 3.061224489795918,
+          "probability_of_zero_failures_if_independent": 0.013806734390006244
+        },
+        "failing_parents": [
+          {
+            "parent_state": 547,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 707,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 931,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 1859,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "fixing_reflection": {
+            "fixing_reflection": 2,
+            "free_reflection": 2
+          },
+          "free_reflection": {
+            "free_reflection": 6,
+            "identity": 2
+          },
+          "rotation": {
+            "center": 4,
+            "identity": 8
+          }
+        }
+      },
+      {
+        "generation": "G_6 -> G_7",
+        "registered": true,
+        "out_of_sample": true,
+        "parents_tested": 4,
+        "failures": 4,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.3,
+          "expected_failures_if_independent": 1.9599999999999997,
+          "probability_of_zero_failures_if_independent": 0.06765201
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.3,
+            "center": 0.1935483870967742
+          },
+          "expected_failures_if_independent": 2.601456815816857,
+          "probability_of_zero_failures_if_independent": 0.014943886447958726
+        },
+        "failing_parents": [
+          {
+            "parent_state": 4419,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 4515,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 6467,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 6563,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "identity": 8
+          },
+          "fixing_reflection": {
+            "free_reflection": 2
+          },
+          "free_reflection": {
+            "center": 3,
+            "free_reflection": 7,
+            "none": 1
+          },
+          "identity": {
+            "center": 3,
+            "free_reflection": 2,
+            "identity": 6,
+            "none": 1
+          }
+        }
+      },
+      {
+        "generation": "G_7 -> G_8",
+        "registered": true,
+        "out_of_sample": true,
+        "parents_tested": 6,
+        "failures": 0,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.3333333333333333,
+          "expected_failures_if_independent": 2.6666666666666674,
+          "probability_of_zero_failures_if_independent": 0.029401194111858108
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.3333333333333333,
+            "center": 0.17647058823529413
+          },
+          "expected_failures_if_independent": 4.069204152249134,
+          "probability_of_zero_failures_if_independent": 0.0011104797278684295
+        },
+        "failing_parents": [],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "center": 6,
+            "identity": 6
+          },
+          "free_reflection": {
+            "free_reflection": 16,
+            "identity": 6
+          },
+          "identity": {
+            "fixing_reflection": 10,
+            "rotation": 18
+          }
+        }
+      },
+      {
+        "generation": "G_8 -> G_9",
+        "registered": true,
+        "out_of_sample": true,
+        "parents_tested": 24,
+        "failures": 14,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.5357142857142857,
+          "expected_failures_if_independent": 5.1734693877551,
+          "probability_of_zero_failures_if_independent": 0.0029472520210440047
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.5357142857142857,
+            "center": 0.35294117647058826
+          },
+          "expected_failures_if_independent": 6.392212767459923,
+          "probability_of_zero_failures_if_independent": 0.000488125604946019
+        },
+        "failing_parents": [
+          {
+            "parent_state": 4515,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 29643,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 31043,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 31139,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 36675,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 37187,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 45987,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 51747,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 87875,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 102507,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 103371,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 121763,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 127299,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 129955,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "free_reflection": 12
+          },
+          "fixing_reflection": {
+            "center": 6,
+            "fixing_reflection": 2,
+            "identity": 2
+          },
+          "free_reflection": {
+            "center": 2,
+            "free_reflection": 12,
+            "identity": 6,
+            "none": 3
+          },
+          "identity": {
+            "center": 2,
+            "fixing_reflection": 2,
+            "free_reflection": 5,
+            "identity": 2,
+            "none": 4,
+            "rotation": 1
+          },
+          "rotation": {
+            "center": 20,
+            "identity": 16
+          }
+        }
+      },
+      {
+        "generation": "G_9 -> G_10",
+        "registered": true,
+        "out_of_sample": true,
+        "parents_tested": 31,
+        "failures": 20,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.3898305084745763,
+          "expected_failures_if_independent": 18.439528871014073,
+          "probability_of_zero_failures_if_independent": 5.381381023434226e-13
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.3898305084745763,
+            "center": 0.2911392405063291
+          },
+          "expected_failures_if_independent": 21.4317524100548,
+          "probability_of_zero_failures_if_independent": 8.984138471604129e-17
+        },
+        "failing_parents": [
+          {
+            "parent_state": 4419,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 37283,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 104771,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 104867,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 160291,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 168355,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 215587,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 219843,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 235843,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 235939,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 260419,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 260515,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 351139,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 356771,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 391491,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 391587,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 397635,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 398155,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 487843,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 509123,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "center": 11,
+            "free_reflection": 2,
+            "identity": 18
+          },
+          "fixing_reflection": {
+            "free_reflection": 1,
+            "identity": 2,
+            "none": 1
+          },
+          "free_reflection": {
+            "fixing_reflection": 3,
+            "free_reflection": 17,
+            "identity": 8,
+            "none": 4,
+            "rotation": 5
+          },
+          "identity": {
+            "center": 12,
+            "fixing_reflection": 5,
+            "identity": 6,
+            "none": 5,
+            "rotation": 3
+          },
+          "rotation": {
+            "identity": 2
+          }
+        }
+      },
+      {
+        "generation": "G_10 -> G_11",
+        "registered": true,
+        "out_of_sample": true,
+        "parents_tested": 31,
+        "failures": 26,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.225,
+          "expected_failures_if_independent": 22.455625,
+          "probability_of_zero_failures_if_independent": 1.446915862985717e-18
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.225,
+            "center": 0.1267605633802817
+          },
+          "expected_failures_if_independent": 24.77881471930174,
+          "probability_of_zero_failures_if_independent": 2.8331919087331897e-24
+        },
+        "failing_parents": [
+          {
+            "parent_state": 258379,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 260427,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 429891,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 528491,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 529355,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 686403,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 686499,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 692547,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 782755,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 782883,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 783307,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 785227,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 842435,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 913955,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 914379,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 922019,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 973507,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 1012035,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 1052779,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 1053003,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 1053091,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 1079715,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 1438667,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 1446859,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 1610051,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 1825699,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "center": 4,
+            "free_reflection": 12,
+            "identity": 8
+          },
+          "fixing_reflection": {
+            "free_reflection": 5,
+            "identity": 1,
+            "none": 2
+          },
+          "free_reflection": {
+            "center": 1,
+            "fixing_reflection": 2,
+            "free_reflection": 11,
+            "identity": 7,
+            "none": 4,
+            "rotation": 2
+          },
+          "identity": {
+            "center": 2,
+            "fixing_reflection": 3,
+            "free_reflection": 3,
+            "identity": 1,
+            "none": 20,
+            "rotation": 7
+          },
+          "rotation": {
+            "center": 2,
+            "identity": 14
+          }
+        }
+      },
+      {
+        "generation": "G_11 -> G_12",
+        "registered": true,
+        "out_of_sample": true,
+        "parents_tested": 18,
+        "failures": 17,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.3582089552238806,
+          "expected_failures_if_independent": 9.483181109378481,
+          "probability_of_zero_failures_if_independent": 8.171783353685531e-07
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.3582089552238806,
+            "center": 0.22429906542056074
+          },
+          "expected_failures_if_independent": 10.688370117608361,
+          "probability_of_zero_failures_if_independent": 1.2093056152083231e-08
+        },
+        "failing_parents": [
+          {
+            "parent_state": 652747,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 2953027,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 3012931,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 3150147,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 3275595,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 4354595,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 4414147,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 4454819,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 4703427,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 4979011,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 5372747,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 5634467,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 6329251,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 6460323,
+            "parent_class": "center",
+            "children": [
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 6642595,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 6689699,
+            "parent_class": "center",
+            "children": [
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 6944203,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "free_reflection": 5,
+            "identity": 4
+          },
+          "fixing_reflection": {
+            "identity": 5
+          },
+          "free_reflection": {
+            "center": 21,
+            "free_reflection": 24,
+            "identity": 17
+          },
+          "identity": {
+            "center": 1,
+            "fixing_reflection": 5,
+            "free_reflection": 11,
+            "identity": 1,
+            "rotation": 13
+          },
+          "rotation": {
+            "center": 2,
+            "identity": 16
+          }
+        }
+      },
+      {
+        "generation": "G_12 -> G_13",
+        "registered": true,
+        "out_of_sample": false,
+        "parents_tested": 37,
+        "failures": 23,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.39080459770114945,
+          "expected_failures_if_independent": 13.731404412736167,
+          "probability_of_zero_failures_if_independent": 3.5239728751062866e-08
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.39080459770114945,
+            "center": 0.17708333333333334
+          },
+          "expected_failures_if_independent": 21.077151663033437,
+          "probability_of_zero_failures_if_independent": 3.945099062490205e-15
+        },
+        "failing_parents": [
+          {
+            "parent_state": 3314083,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 3355467,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 5813067,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 6028323,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 9302987,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 11170763,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 11580235,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 11744075,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 14201675,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 14717771,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 15235491,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 16298827,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 19672259,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 19763307,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 19788747,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 19968843,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 23106379,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 23507787,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 23624099,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 24687435,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 29618499,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 29797571,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 31896395,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "center": 6,
+            "free_reflection": 36,
+            "identity": 6
+          },
+          "fixing_reflection": {
+            "free_reflection": 4,
+            "identity": 4
+          },
+          "free_reflection": {
+            "center": 10,
+            "fixing_reflection": 4,
+            "free_reflection": 42,
+            "identity": 20,
+            "none": 1
+          },
+          "identity": {
+            "center": 2,
+            "fixing_reflection": 9,
+            "free_reflection": 23,
+            "identity": 13,
+            "none": 2,
+            "rotation": 11
+          },
+          "rotation": {
+            "center": 16,
+            "identity": 10
+          }
+        }
+      },
+      {
+        "generation": "G_13 -> G_14",
+        "registered": true,
+        "out_of_sample": false,
+        "parents_tested": 45,
+        "failures": 32,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.2727272727272727,
+          "expected_failures_if_independent": 23.80165289256196,
+          "probability_of_zero_failures_if_independent": 1.9454803158605764e-15
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.2727272727272727,
+            "center": 0.17586206896551723
+          },
+          "expected_failures_if_independent": 28.91109501675495,
+          "probability_of_zero_failures_if_independent": 4.128566823407293e-21
+        },
+        "failing_parents": [
+          {
+            "parent_state": 5247083,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 8917963,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 19927147,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 21754275,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 23598027,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 30052683,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 31626059,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 42472395,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 53481579,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 54656035,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 54970915,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 58061771,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 63044643,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 63423683,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 64450891,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 71812291,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 82317419,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 89519051,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 89527243,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 91015715,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 91616203,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 92803179,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 96978115,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 105366723,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 105869635,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 105910379,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 115871851,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 122417571,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 123073483,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 123769763,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 124261323,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 126357611,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "center": 11,
+            "free_reflection": 12,
+            "identity": 45
+          },
+          "fixing_reflection": {
+            "center": 7,
+            "fixing_reflection": 1,
+            "free_reflection": 6,
+            "identity": 3,
+            "rotation": 1
+          },
+          "free_reflection": {
+            "center": 19,
+            "fixing_reflection": 25,
+            "free_reflection": 70,
+            "identity": 58,
+            "none": 10
+          },
+          "identity": {
+            "center": 6,
+            "fixing_reflection": 15,
+            "free_reflection": 15,
+            "identity": 16,
+            "none": 8,
+            "rotation": 19
+          },
+          "rotation": {
+            "center": 8,
+            "identity": 14
+          }
+        }
+      }
+    ],
+    "failures_registered_out_of_sample": 88,
+    "failures_registered_in_sample": 55,
+    "killed": true
+  },
+  "H2_point_layer_slowdown": {
+    "offspring_means": {
+      "9": 1.4516129032258065,
+      "10": 1.0555555555555556,
+      "11": 0.8947368421052632
+    },
+    "threshold": 1.553,
+    "killed": false
+  },
+  "exploratory_layers": [
+    {
+      "depth": 5,
+      "supply_type": "guard_line",
+      "first_star_monodromy_class": "free_reflection",
+      "period_ratio": 2,
+      "old_phases_live_dead": [
+        13,
+        3
+      ],
+      "old_survivors": 8,
+      "survivors": 14,
+      "offspring_mean": 1.75,
+      "deaths_by_monodromy_class": {
+        "identity": 1
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 3,
+        "identity": 5
+      },
+      "cycles_by_monodromy_class": {
+        "center": 2,
+        "identity": 3
+      },
+      "reachable_pair_count_histogram": {
+        "2": 1,
+        "4": 7
+      },
+      "children_histogram": {
+        "0": 1,
+        "2": 7
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 2,
+        "3": 1,
+        "4": 2
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      }
+    },
+    {
+      "depth": 6,
+      "supply_type": "point",
+      "first_star_monodromy_class": "identity",
+      "period_ratio": 1,
+      "old_phases_live_dead": [
+        17,
+        15
+      ],
+      "old_survivors": 14,
+      "survivors": 24,
+      "offspring_mean": 1.7142857142857142,
+      "deaths_by_monodromy_class": {},
+      "old_survivors_by_monodromy_class": {
+        "fixing_reflection": 2,
+        "free_reflection": 6,
+        "rotation": 6
+      },
+      "cycles_by_monodromy_class": {
+        "fixing_reflection": 1,
+        "free_reflection": 4,
+        "rotation": 3
+      },
+      "reachable_pair_count_histogram": {
+        "2": 4,
+        "3": 2,
+        "4": 8
+      },
+      "children_histogram": {
+        "1": 4,
+        "2": 10
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 2,
+        "2": 3,
+        "3": 3
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 2,
+        "2": 5,
+        "3": 1
+      }
+    },
+    {
+      "depth": 7,
+      "supply_type": "point",
+      "first_star_monodromy_class": "fixing_reflection",
+      "period_ratio": 1,
+      "old_phases_live_dead": [
+        15,
+        17
+      ],
+      "old_survivors": 24,
+      "survivors": 31,
+      "offspring_mean": 1.2916666666666667,
+      "deaths_by_monodromy_class": {
+        "free_reflection": 1,
+        "identity": 1
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 4,
+        "fixing_reflection": 2,
+        "free_reflection": 8,
+        "identity": 10
+      },
+      "cycles_by_monodromy_class": {
+        "center": 1,
+        "fixing_reflection": 1,
+        "free_reflection": 5,
+        "identity": 3
+      },
+      "reachable_pair_count_histogram": {
+        "1": 2,
+        "2": 18,
+        "4": 4
+      },
+      "children_histogram": {
+        "0": 2,
+        "1": 13,
+        "2": 9
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 6,
+        "2": 3,
+        "3": 1
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 6,
+        "2": 3,
+        "3": 1
+      }
+    },
+    {
+      "depth": 8,
+      "supply_type": "fibre",
+      "first_star_monodromy_class": "rotation",
+      "period_ratio": 4,
+      "old_phases_live_dead": [
+        14,
+        18
+      ],
+      "old_survivors": 31,
+      "survivors": 62,
+      "offspring_mean": 2.0,
+      "deaths_by_monodromy_class": {},
+      "old_survivors_by_monodromy_class": {
+        "center": 6,
+        "free_reflection": 11,
+        "identity": 14
+      },
+      "cycles_by_monodromy_class": {
+        "center": 2,
+        "free_reflection": 6,
+        "identity": 4
+      },
+      "reachable_pair_count_histogram": {
+        "4": 31
+      },
+      "children_histogram": {
+        "2": 31
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 10,
+        "2": 2
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 12
+      }
+    },
+    {
+      "depth": 9,
+      "supply_type": "point",
+      "first_star_monodromy_class": "identity",
+      "period_ratio": 1,
+      "old_phases_live_dead": [
+        51,
+        77
+      ],
+      "old_survivors": 62,
+      "survivors": 90,
+      "offspring_mean": 1.4516129032258065,
+      "deaths_by_monodromy_class": {
+        "free_reflection": 3,
+        "identity": 4
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 6,
+        "fixing_reflection": 10,
+        "free_reflection": 16,
+        "identity": 12,
+        "rotation": 18
+      },
+      "cycles_by_monodromy_class": {
+        "center": 2,
+        "fixing_reflection": 5,
+        "free_reflection": 8,
+        "identity": 5,
+        "rotation": 9
+      },
+      "reachable_pair_count_histogram": {
+        "1": 7,
+        "2": 25,
+        "4": 30
+      },
+      "children_histogram": {
+        "0": 7,
+        "1": 20,
+        "2": 35
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 11,
+        "2": 16,
+        "4": 2
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 15,
+        "2": 13,
+        "3": 1
+      }
+    },
+    {
+      "depth": 10,
+      "supply_type": "point",
+      "first_star_monodromy_class": "identity",
+      "period_ratio": 1,
+      "old_phases_live_dead": [
+        41,
+        87
+      ],
+      "old_survivors": 90,
+      "survivors": 95,
+      "offspring_mean": 1.0555555555555556,
+      "deaths_by_monodromy_class": {
+        "fixing_reflection": 1,
+        "free_reflection": 4,
+        "identity": 5
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 30,
+        "fixing_reflection": 4,
+        "free_reflection": 29,
+        "identity": 26,
+        "rotation": 1
+      },
+      "cycles_by_monodromy_class": {
+        "center": 11,
+        "fixing_reflection": 2,
+        "free_reflection": 10,
+        "identity": 9,
+        "rotation": 1
+      },
+      "reachable_pair_count_histogram": {
+        "1": 17,
+        "2": 71,
+        "4": 2
+      },
+      "children_histogram": {
+        "0": 10,
+        "1": 65,
+        "2": 15
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 26,
+        "2": 6,
+        "3": 1
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 26,
+        "2": 6,
+        "3": 1
+      }
+    },
+    {
+      "depth": 11,
+      "supply_type": "point",
+      "first_star_monodromy_class": "fixing_reflection",
+      "period_ratio": 1,
+      "old_phases_live_dead": [
+        41,
+        87
+      ],
+      "old_survivors": 95,
+      "survivors": 85,
+      "offspring_mean": 0.8947368421052632,
+      "deaths_by_monodromy_class": {
+        "fixing_reflection": 2,
+        "free_reflection": 4,
+        "identity": 20
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 23,
+        "fixing_reflection": 8,
+        "free_reflection": 20,
+        "identity": 36,
+        "rotation": 8
+      },
+      "cycles_by_monodromy_class": {
+        "center": 9,
+        "fixing_reflection": 4,
+        "free_reflection": 8,
+        "identity": 12,
+        "rotation": 3
+      },
+      "reachable_pair_count_histogram": {
+        "1": 37,
+        "2": 48,
+        "4": 10
+      },
+      "children_histogram": {
+        "0": 26,
+        "1": 53,
+        "2": 16
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 31,
+        "2": 5
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 33,
+        "2": 3
+      }
+    },
+    {
+      "depth": 12,
+      "supply_type": "z_pair",
+      "first_star_monodromy_class": "center",
+      "period_ratio": 2,
+      "old_phases_live_dead": [
+        35,
+        93
+      ],
+      "old_survivors": 85,
+      "survivors": 125,
+      "offspring_mean": 1.4705882352941178,
+      "deaths_by_monodromy_class": {},
+      "old_survivors_by_monodromy_class": {
+        "center": 9,
+        "fixing_reflection": 5,
+        "free_reflection": 31,
+        "identity": 31,
+        "rotation": 9
+      },
+      "cycles_by_monodromy_class": {
+        "center": 5,
+        "fixing_reflection": 3,
+        "free_reflection": 10,
+        "identity": 11,
+        "rotation": 4
+      },
+      "reachable_pair_count_histogram": {
+        "2": 45,
+        "4": 40
+      },
+      "children_histogram": {
+        "1": 45,
+        "2": 40
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 31,
+        "2": 2
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 33
+      }
+    },
+    {
+      "depth": 13,
+      "supply_type": "guard_line",
+      "first_star_monodromy_class": "free_reflection",
+      "period_ratio": 2,
+      "old_phases_live_dead": [
+        59,
+        197
+      ],
+      "old_survivors": 125,
+      "survivors": 216,
+      "offspring_mean": 1.728,
+      "deaths_by_monodromy_class": {
+        "free_reflection": 1,
+        "identity": 2
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 24,
+        "fixing_reflection": 5,
+        "free_reflection": 40,
+        "identity": 43,
+        "rotation": 13
+      },
+      "cycles_by_monodromy_class": {
+        "center": 9,
+        "fixing_reflection": 3,
+        "free_reflection": 15,
+        "identity": 14,
+        "rotation": 4
+      },
+      "reachable_pair_count_histogram": {
+        "2": 23,
+        "3": 29,
+        "4": 73
+      },
+      "children_histogram": {
+        "0": 3,
+        "1": 28,
+        "2": 94
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 33,
+        "2": 11,
+        "4": 1
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 35,
+        "2": 10
+      }
+    },
+    {
+      "depth": 14,
+      "supply_type": "guard_line",
+      "first_star_monodromy_class": "free_reflection",
+      "period_ratio": 2,
+      "old_phases_live_dead": [
+        108,
+        404
+      ],
+      "old_survivors": 216,
+      "survivors": 351,
+      "offspring_mean": 1.625,
+      "deaths_by_monodromy_class": {
+        "free_reflection": 10,
+        "identity": 8
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 34,
+        "fixing_reflection": 13,
+        "free_reflection": 105,
+        "identity": 53,
+        "rotation": 11
+      },
+      "cycles_by_monodromy_class": {
+        "center": 10,
+        "fixing_reflection": 9,
+        "free_reflection": 34,
+        "identity": 21,
+        "rotation": 8
+      },
+      "reachable_pair_count_histogram": {
+        "2": 67,
+        "3": 27,
+        "4": 122
+      },
+      "children_histogram": {
+        "0": 18,
+        "1": 45,
+        "2": 153
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 63,
+        "2": 14,
+        "3": 3,
+        "4": 2
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 66,
+        "2": 13,
+        "3": 3
+      }
+    },
+    {
+      "depth": 15,
+      "supply_type": "guard_line",
+      "first_star_monodromy_class": "free_reflection",
+      "period_ratio": 2,
+      "old_phases_live_dead": [
+        192,
+        832
+      ],
+      "old_survivors": 351,
+      "survivors": 545,
+      "offspring_mean": 1.5527065527065527,
+      "deaths_by_monodromy_class": {
+        "free_reflection": 4,
+        "identity": 26
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 51,
+        "fixing_reflection": 41,
+        "free_reflection": 103,
+        "identity": 136,
+        "rotation": 20
+      },
+      "cycles_by_monodromy_class": {
+        "center": 26,
+        "fixing_reflection": 16,
+        "free_reflection": 42,
+        "identity": 37,
+        "rotation": 13
+      },
+      "reachable_pair_count_histogram": {
+        "2": 129,
+        "3": 58,
+        "4": 164
+      },
+      "children_histogram": {
+        "0": 30,
+        "1": 97,
+        "2": 224
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 87,
+        "2": 40,
+        "3": 4,
+        "4": 2,
+        "5": 1
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 97,
+        "2": 33,
+        "3": 4
+      }
+    }
+  ],
+  "exploratory_lift_transitions": [
+    {
+      "generation": "G_4 -> G_5",
+      "child_cycles": 8,
+      "violations": 0,
+      "transitions": {
+        "center/2->free_reflection": 4,
+        "identity/1->fixing_reflection": 1,
+        "identity/1->rotation": 3
+      }
+    },
+    {
+      "generation": "G_5 -> G_6",
+      "child_cycles": 10,
+      "violations": 0,
+      "transitions": {
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/2->free_reflection": 1,
+        "free_reflection/2->free_reflection": 4,
+        "free_reflection/2->identity": 1,
+        "rotation/4->center": 1,
+        "rotation/4->identity": 2
+      }
+    },
+    {
+      "generation": "G_6 -> G_7",
+      "child_cycles": 12,
+      "violations": 0,
+      "transitions": {
+        "center/2->identity": 2,
+        "fixing_reflection/2->free_reflection": 1,
+        "free_reflection/2->center": 1,
+        "free_reflection/2->free_reflection": 4,
+        "identity/1->center": 1,
+        "identity/1->free_reflection": 1,
+        "identity/1->identity": 2
+      }
+    },
+    {
+      "generation": "G_7 -> G_8",
+      "child_cycles": 29,
+      "violations": 0,
+      "transitions": {
+        "center/2->center": 2,
+        "center/2->identity": 2,
+        "free_reflection/2->free_reflection": 8,
+        "free_reflection/2->identity": 3,
+        "identity/1->fixing_reflection": 5,
+        "identity/1->rotation": 9
+      }
+    },
+    {
+      "generation": "G_8 -> G_9",
+      "child_cycles": 33,
+      "violations": 0,
+      "transitions": {
+        "center/2->free_reflection": 4,
+        "fixing_reflection/1->center": 1,
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/2->center": 2,
+        "fixing_reflection/2->identity": 1,
+        "free_reflection/2->center": 2,
+        "free_reflection/2->free_reflection": 4,
+        "free_reflection/2->identity": 3,
+        "identity/1->center": 1,
+        "identity/1->fixing_reflection": 1,
+        "identity/1->free_reflection": 2,
+        "identity/1->identity": 1,
+        "identity/1->rotation": 1,
+        "rotation/4->center": 5,
+        "rotation/4->identity": 4
+      }
+    },
+    {
+      "generation": "G_9 -> G_10",
+      "child_cycles": 36,
+      "violations": 0,
+      "transitions": {
+        "center/2->center": 5,
+        "center/2->free_reflection": 2,
+        "center/2->identity": 5,
+        "fixing_reflection/1->free_reflection": 1,
+        "fixing_reflection/2->identity": 1,
+        "free_reflection/2->fixing_reflection": 1,
+        "free_reflection/2->free_reflection": 5,
+        "free_reflection/2->identity": 3,
+        "free_reflection/2->rotation": 1,
+        "identity/1->center": 4,
+        "identity/1->fixing_reflection": 3,
+        "identity/1->identity": 2,
+        "identity/1->rotation": 2,
+        "rotation/4->identity": 1
+      }
+    },
+    {
+      "generation": "G_10 -> G_11",
+      "child_cycles": 33,
+      "violations": 0,
+      "transitions": {
+        "center/2->center": 2,
+        "center/2->free_reflection": 4,
+        "center/2->identity": 4,
+        "fixing_reflection/1->identity": 1,
+        "fixing_reflection/2->free_reflection": 2,
+        "free_reflection/2->center": 1,
+        "free_reflection/2->fixing_reflection": 1,
+        "free_reflection/2->free_reflection": 2,
+        "free_reflection/2->identity": 3,
+        "free_reflection/2->rotation": 1,
+        "identity/1->center": 1,
+        "identity/1->fixing_reflection": 2,
+        "identity/1->free_reflection": 2,
+        "identity/1->identity": 1,
+        "identity/1->rotation": 3,
+        "rotation/4->center": 1,
+        "rotation/4->identity": 2
+      }
+    },
+    {
+      "generation": "G_11 -> G_12",
+      "child_cycles": 45,
+      "violations": 0,
+      "transitions": {
+        "center/2->free_reflection": 3,
+        "center/2->identity": 2,
+        "fixing_reflection/1->identity": 1,
+        "fixing_reflection/2->identity": 2,
+        "free_reflection/2->center": 7,
+        "free_reflection/2->free_reflection": 7,
+        "free_reflection/2->identity": 5,
+        "identity/1->center": 1,
+        "identity/1->fixing_reflection": 3,
+        "identity/1->free_reflection": 5,
+        "identity/1->identity": 1,
+        "identity/1->rotation": 4,
+        "rotation/4->center": 1,
+        "rotation/4->identity": 3
+      }
+    },
+    {
+      "generation": "G_12 -> G_13",
+      "child_cycles": 82,
+      "violations": 0,
+      "transitions": {
+        "center/2->center": 3,
+        "center/2->free_reflection": 12,
+        "center/2->identity": 3,
+        "fixing_reflection/1->free_reflection": 2,
+        "fixing_reflection/2->free_reflection": 1,
+        "fixing_reflection/2->identity": 2,
+        "free_reflection/2->center": 4,
+        "free_reflection/2->fixing_reflection": 2,
+        "free_reflection/2->free_reflection": 10,
+        "free_reflection/2->identity": 8,
+        "identity/1->center": 2,
+        "identity/1->fixing_reflection": 7,
+        "identity/1->free_reflection": 9,
+        "identity/1->identity": 5,
+        "identity/1->rotation": 8,
+        "rotation/4->center": 1,
+        "rotation/4->identity": 3
+      }
+    },
+    {
+      "generation": "G_13 -> G_14",
+      "child_cycles": 134,
+      "violations": 0,
+      "transitions": {
+        "center/2->center": 6,
+        "center/2->free_reflection": 6,
+        "center/2->identity": 8,
+        "fixing_reflection/1->center": 1,
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/1->free_reflection": 1,
+        "fixing_reflection/1->identity": 1,
+        "fixing_reflection/1->rotation": 1,
+        "fixing_reflection/2->center": 4,
+        "fixing_reflection/2->free_reflection": 3,
+        "fixing_reflection/2->identity": 2,
+        "free_reflection/2->center": 9,
+        "free_reflection/2->fixing_reflection": 7,
+        "free_reflection/2->free_reflection": 22,
+        "free_reflection/2->identity": 13,
+        "identity/1->center": 4,
+        "identity/1->fixing_reflection": 8,
+        "identity/1->free_reflection": 10,
+        "identity/1->identity": 7,
+        "identity/1->rotation": 12,
+        "rotation/4->center": 2,
+        "rotation/4->identity": 6
+      }
+    }
+  ],
+  "scope": "Layers 5-15 of the index-15 guarded lift from the exhaustive depth-4 base. The hypotheses are finite screens; none decides uniform or individual mortality, and a common-depth certificate needs depth at least 32."
+}

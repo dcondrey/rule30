@@ -1,0 +1,35 @@
+{
+  "schema": "rule30.cap18-lifetime-replay.v1",
+  "family_index": 15,
+  "step_cap": 96,
+  "pairs": [
+    {
+      "a": 31051,
+      "b": 1202824,
+      "role": "control: lifetime-36 record, replayed in cap18-mass-census-20",
+      "word_length": 2467759,
+      "expected": 36,
+      "ell": 36,
+      "censored": false,
+      "further_tape": "101001000100010010011001000100110101",
+      "seconds": 7.8
+    },
+    {
+      "a": 81664,
+      "b": 16385540,
+      "role": "cap18-mass-census-23 record pair",
+      "word_length": 32934417,
+      "expected": 46,
+      "ell": 46,
+      "censored": false,
+      "further_tape": "1100111011101101001101111001001111011110111110",
+      "seconds": 115.2
+    }
+  ],
+  "source_sha256": {
+    "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+    "cap18_lifetime_census.py": "46978e969f2d2c6c4ef9cf911d5c390bcd4529ae151d4c122a2d86f8110adc48",
+    "capacity18-joint-15.json": "6e3805809b18a4b82a5e783d202df265aa5f6d0fe1f6d2aa0a3acc2d2d087c65",
+    "replay_cap18_lifetime46.py": "877f256c513c2b0636ec0de02adbcb44e01e1e0729383b77084cb8f310d4f1d5"
+  }
+}

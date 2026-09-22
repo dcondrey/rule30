@@ -1,0 +1,179 @@
+{
+  "schema": "rule30.p3-zero-corridor-jump.v1",
+  "source_sha256": "c13775a616553640997bab5c51c9ab892ee4f517e035506e2764353c7907cf2d",
+  "complete_local_certificates": [
+    {
+      "steps": 2,
+      "input_width": 5,
+      "all_local_inputs_checked": 32,
+      "zero_corridor_inputs": 8
+    },
+    {
+      "steps": 4,
+      "input_width": 9,
+      "all_local_inputs_checked": 512,
+      "zero_corridor_inputs": 32
+    }
+  ],
+  "actual_core_four_step_residual": {
+    "core": "C^5",
+    "input": 891,
+    "target_column": 1,
+    "zero_driver_column": 2,
+    "rows": [
+      891,
+      801,
+      889,
+      803,
+      891
+    ],
+    "predicted_without_residual": 0,
+    "residual": 1,
+    "actual_output": 1,
+    "permanent_zero_driver_cycle_verified": true
+  },
+  "no_finite_corridor_length_bound": {
+    "actual_core": "C^2",
+    "cycle": [
+      12,
+      13,
+      12
+    ],
+    "width_bits": 4,
+    "permanently_zero_driver_column": 1
+  },
+  "dyadic_staircase_controls": [
+    {
+      "input": 12,
+      "column": 0,
+      "dyadic_exponent": 1,
+      "time_steps": 2,
+      "guard_cells": 2,
+      "all_guards_zero": true,
+      "actual_bit": 0,
+      "jump_prediction": 0
+    },
+    {
+      "input": 12,
+      "column": 0,
+      "dyadic_exponent": 2,
+      "time_steps": 4,
+      "guard_cells": 6,
+      "all_guards_zero": true,
+      "actual_bit": 0,
+      "jump_prediction": 0
+    },
+    {
+      "input": 12,
+      "column": 0,
+      "dyadic_exponent": 3,
+      "time_steps": 8,
+      "guard_cells": 20,
+      "all_guards_zero": true,
+      "actual_bit": 0,
+      "jump_prediction": 0
+    },
+    {
+      "input": 12,
+      "column": 0,
+      "dyadic_exponent": 4,
+      "time_steps": 16,
+      "guard_cells": 72,
+      "all_guards_zero": true,
+      "actual_bit": 0,
+      "jump_prediction": 0
+    },
+    {
+      "input": 13,
+      "column": 0,
+      "dyadic_exponent": 1,
+      "time_steps": 2,
+      "guard_cells": 2,
+      "all_guards_zero": true,
+      "actual_bit": 1,
+      "jump_prediction": 1
+    },
+    {
+      "input": 13,
+      "column": 0,
+      "dyadic_exponent": 2,
+      "time_steps": 4,
+      "guard_cells": 6,
+      "all_guards_zero": true,
+      "actual_bit": 1,
+      "jump_prediction": 1
+    },
+    {
+      "input": 13,
+      "column": 0,
+      "dyadic_exponent": 3,
+      "time_steps": 8,
+      "guard_cells": 20,
+      "all_guards_zero": true,
+      "actual_bit": 1,
+      "jump_prediction": 1
+    },
+    {
+      "input": 13,
+      "column": 0,
+      "dyadic_exponent": 4,
+      "time_steps": 16,
+      "guard_cells": 72,
+      "all_guards_zero": true,
+      "actual_bit": 1,
+      "jump_prediction": 1
+    },
+    {
+      "input": 891,
+      "column": 1,
+      "dyadic_exponent": 1,
+      "time_steps": 2,
+      "guard_cells": 2,
+      "all_guards_zero": true,
+      "actual_bit": 0,
+      "jump_prediction": 0
+    },
+    {
+      "input": 891,
+      "column": 1,
+      "dyadic_exponent": 2,
+      "time_steps": 4,
+      "guard_cells": 6,
+      "all_guards_zero": false,
+      "actual_bit": 1,
+      "jump_prediction": 0
+    },
+    {
+      "input": 891,
+      "column": 1,
+      "dyadic_exponent": 3,
+      "time_steps": 8,
+      "guard_cells": 20,
+      "all_guards_zero": false,
+      "actual_bit": 1,
+      "jump_prediction": 1
+    },
+    {
+      "input": 891,
+      "column": 1,
+      "dyadic_exponent": 4,
+      "time_steps": 16,
+      "guard_cells": 72,
+      "all_guards_zero": false,
+      "actual_bit": 1,
+      "jump_prediction": 1
+    }
+  ],
+  "initial_only_guard_falsifier": {
+    "input": 9,
+    "rows": [
+      9,
+      15,
+      12
+    ]
+  },
+  "all_length_dyadic_statement": "For M=2^(s-1), zero guards at (t+2b+e,j+1+4a), a+b<=M-1 and e=0,1, imply x_j(t+2M)=x_j(t) XOR x_(j+4M)(t).",
+  "explicit_guard_count": "M(M+1), excluding the cost of obtaining the cells",
+  "scope": "Exact guarded jumps and actual-core counterexamples; no compact general guard certificate or sublinear singleton query is supplied.",
+  "seconds": 0.00041325000347569585
+}

@@ -1,0 +1,3545 @@
+{
+  "schema": "rule30.seam15-suffix-quotient-probe.v1",
+  "preregistration": "PREREGISTRATION-seam15-suffix-quotient.md",
+  "primary": "capacity18-guarded-15.json",
+  "primary_sha256": "b5b2c631880031c42c8663223deb4791deb9f959dc377fde4527a58e8c1d1c84",
+  "source_sha256": "f176d3302221287be6a53dabf9027179ffa163f9a87fc01762a8b391ddd4ff05",
+  "seed": 0,
+  "permutations": 1000,
+  "layers": [
+    {
+      "new_depth": 13,
+      "old_depth": 12,
+      "old_survivors": 125,
+      "distinct_outcomes": 30,
+      "families": {
+        "newest-k": {
+          "k_min": 11,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 2,
+              "classes": 16,
+              "non_singleton": 15,
+              "mixed": 15
+            },
+            {
+              "k": 3,
+              "classes": 45,
+              "non_singleton": 24,
+              "mixed": 22
+            },
+            {
+              "k": 4,
+              "classes": 68,
+              "non_singleton": 27,
+              "mixed": 26
+            },
+            {
+              "k": 5,
+              "classes": 91,
+              "non_singleton": 23,
+              "mixed": 19
+            },
+            {
+              "k": 6,
+              "classes": 101,
+              "non_singleton": 17,
+              "mixed": 14
+            },
+            {
+              "k": 7,
+              "classes": 108,
+              "non_singleton": 13,
+              "mixed": 9
+            },
+            {
+              "k": 8,
+              "classes": 113,
+              "non_singleton": 12,
+              "mixed": 8
+            },
+            {
+              "k": 9,
+              "classes": 123,
+              "non_singleton": 2,
+              "mixed": 1
+            },
+            {
+              "k": 10,
+              "classes": 123,
+              "non_singleton": 2,
+              "mixed": 1
+            },
+            {
+              "k": 11,
+              "classes": 125,
+              "non_singleton": 0,
+              "mixed": 0
+            },
+            {
+              "k": 12,
+              "classes": 125,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 11,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 17,
+            "permutation_zero_mixed_rate": 0.0
+          },
+          "proposed_width_witnesses": [
+            {
+              "columns": [
+                4977611,
+                4979011
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                11538755,
+                11538763
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                12843339,
+                12843427
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                19788747,
+                19790147
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                19927147,
+                19927363
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                21231947,
+                21232035
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                22410187,
+                22411683
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                23106379,
+                23106467
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                23507787,
+                23507875
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                29797571,
+                29799331
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                30142883,
+                30143011
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                30806987,
+                30808483
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                31626059,
+                31626147
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    0
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                31896395,
+                31896483
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": []
+                }
+              ]
+            }
+          ]
+        },
+        "newest-k+p": {
+          "k_min": 11,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 2,
+              "classes": 16,
+              "non_singleton": 15,
+              "mixed": 15
+            },
+            {
+              "k": 3,
+              "classes": 45,
+              "non_singleton": 24,
+              "mixed": 22
+            },
+            {
+              "k": 4,
+              "classes": 68,
+              "non_singleton": 27,
+              "mixed": 26
+            },
+            {
+              "k": 5,
+              "classes": 91,
+              "non_singleton": 23,
+              "mixed": 19
+            },
+            {
+              "k": 6,
+              "classes": 101,
+              "non_singleton": 17,
+              "mixed": 14
+            },
+            {
+              "k": 7,
+              "classes": 108,
+              "non_singleton": 13,
+              "mixed": 9
+            },
+            {
+              "k": 8,
+              "classes": 113,
+              "non_singleton": 12,
+              "mixed": 8
+            },
+            {
+              "k": 9,
+              "classes": 123,
+              "non_singleton": 2,
+              "mixed": 1
+            },
+            {
+              "k": 10,
+              "classes": 123,
+              "non_singleton": 2,
+              "mixed": 1
+            },
+            {
+              "k": 11,
+              "classes": 125,
+              "non_singleton": 0,
+              "mixed": 0
+            },
+            {
+              "k": 12,
+              "classes": 125,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 11,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 17,
+            "permutation_zero_mixed_rate": 0.0
+          }
+        },
+        "oldest-k": {
+          "k_min": 12,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 2,
+              "classes": 2,
+              "non_singleton": 2,
+              "mixed": 2
+            },
+            {
+              "k": 3,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 4,
+              "classes": 7,
+              "non_singleton": 7,
+              "mixed": 7
+            },
+            {
+              "k": 5,
+              "classes": 13,
+              "non_singleton": 13,
+              "mixed": 13
+            },
+            {
+              "k": 6,
+              "classes": 21,
+              "non_singleton": 21,
+              "mixed": 21
+            },
+            {
+              "k": 7,
+              "classes": 29,
+              "non_singleton": 29,
+              "mixed": 29
+            },
+            {
+              "k": 8,
+              "classes": 48,
+              "non_singleton": 34,
+              "mixed": 31
+            },
+            {
+              "k": 9,
+              "classes": 63,
+              "non_singleton": 42,
+              "mixed": 37
+            },
+            {
+              "k": 10,
+              "classes": 69,
+              "non_singleton": 48,
+              "mixed": 41
+            },
+            {
+              "k": 11,
+              "classes": 85,
+              "non_singleton": 40,
+              "mixed": 36
+            },
+            {
+              "k": 12,
+              "classes": 125,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 12,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 21,
+            "permutation_zero_mixed_rate": 0.0
+          }
+        }
+      }
+    },
+    {
+      "new_depth": 14,
+      "old_depth": 13,
+      "old_survivors": 216,
+      "distinct_outcomes": 34,
+      "families": {
+        "newest-k": {
+          "k_min": 12,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 2,
+              "classes": 16,
+              "non_singleton": 16,
+              "mixed": 16
+            },
+            {
+              "k": 3,
+              "classes": 55,
+              "non_singleton": 43,
+              "mixed": 41
+            },
+            {
+              "k": 4,
+              "classes": 111,
+              "non_singleton": 53,
+              "mixed": 45
+            },
+            {
+              "k": 5,
+              "classes": 143,
+              "non_singleton": 41,
+              "mixed": 32
+            },
+            {
+              "k": 6,
+              "classes": 173,
+              "non_singleton": 32,
+              "mixed": 22
+            },
+            {
+              "k": 7,
+              "classes": 186,
+              "non_singleton": 23,
+              "mixed": 16
+            },
+            {
+              "k": 8,
+              "classes": 195,
+              "non_singleton": 19,
+              "mixed": 13
+            },
+            {
+              "k": 9,
+              "classes": 199,
+              "non_singleton": 17,
+              "mixed": 10
+            },
+            {
+              "k": 10,
+              "classes": 212,
+              "non_singleton": 4,
+              "mixed": 2
+            },
+            {
+              "k": 11,
+              "classes": 212,
+              "non_singleton": 4,
+              "mixed": 2
+            },
+            {
+              "k": 12,
+              "classes": 216,
+              "non_singleton": 0,
+              "mixed": 0
+            },
+            {
+              "k": 13,
+              "classes": 216,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 12,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 32,
+            "permutation_zero_mixed_rate": 0.0
+          },
+          "proposed_width_witnesses": [
+            {
+              "columns": [
+                2857379,
+                2882379
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                6020003,
+                6028323
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                23498563,
+                23507787
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                36337987,
+                36338083
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": []
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                44725195,
+                44726595
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    0
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                46397771,
+                46397859
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                53317739,
+                53343179
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": []
+                }
+              ]
+            },
+            {
+              "columns": [
+                53481579,
+                53481795
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                63352003,
+                63353763
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": []
+                }
+              ]
+            },
+            {
+              "columns": [
+                63607107,
+                63607115
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                63697315,
+                63697443
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": []
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                69892419,
+                69892515
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": []
+                },
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                71733059,
+                71742371
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": []
+                },
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                78279627,
+                78281027
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": []
+                }
+              ]
+            },
+            {
+              "columns": [
+                88340811,
+                88340899
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                90215243,
+                90215331
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                105640907,
+                105642307
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                106683299,
+                106691619
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                112202051,
+                112202059
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                115871851,
+                115898787
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                121895243,
+                121895843
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                123769675,
+                123769763
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "newest-k+p": {
+          "k_min": 12,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 2,
+              "classes": 16,
+              "non_singleton": 16,
+              "mixed": 16
+            },
+            {
+              "k": 3,
+              "classes": 55,
+              "non_singleton": 43,
+              "mixed": 41
+            },
+            {
+              "k": 4,
+              "classes": 111,
+              "non_singleton": 53,
+              "mixed": 45
+            },
+            {
+              "k": 5,
+              "classes": 143,
+              "non_singleton": 41,
+              "mixed": 32
+            },
+            {
+              "k": 6,
+              "classes": 173,
+              "non_singleton": 32,
+              "mixed": 22
+            },
+            {
+              "k": 7,
+              "classes": 186,
+              "non_singleton": 23,
+              "mixed": 16
+            },
+            {
+              "k": 8,
+              "classes": 195,
+              "non_singleton": 19,
+              "mixed": 13
+            },
+            {
+              "k": 9,
+              "classes": 199,
+              "non_singleton": 17,
+              "mixed": 10
+            },
+            {
+              "k": 10,
+              "classes": 212,
+              "non_singleton": 4,
+              "mixed": 2
+            },
+            {
+              "k": 11,
+              "classes": 212,
+              "non_singleton": 4,
+              "mixed": 2
+            },
+            {
+              "k": 12,
+              "classes": 216,
+              "non_singleton": 0,
+              "mixed": 0
+            },
+            {
+              "k": 13,
+              "classes": 216,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 12,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 32,
+            "permutation_zero_mixed_rate": 0.0
+          }
+        },
+        "oldest-k": {
+          "k_min": 13,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 2,
+              "classes": 2,
+              "non_singleton": 2,
+              "mixed": 2
+            },
+            {
+              "k": 3,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 4,
+              "classes": 7,
+              "non_singleton": 7,
+              "mixed": 7
+            },
+            {
+              "k": 5,
+              "classes": 13,
+              "non_singleton": 13,
+              "mixed": 13
+            },
+            {
+              "k": 6,
+              "classes": 21,
+              "non_singleton": 21,
+              "mixed": 21
+            },
+            {
+              "k": 7,
+              "classes": 29,
+              "non_singleton": 29,
+              "mixed": 29
+            },
+            {
+              "k": 8,
+              "classes": 47,
+              "non_singleton": 45,
+              "mixed": 45
+            },
+            {
+              "k": 9,
+              "classes": 62,
+              "non_singleton": 58,
+              "mixed": 58
+            },
+            {
+              "k": 10,
+              "classes": 68,
+              "non_singleton": 64,
+              "mixed": 64
+            },
+            {
+              "k": 11,
+              "classes": 84,
+              "non_singleton": 74,
+              "mixed": 73
+            },
+            {
+              "k": 12,
+              "classes": 122,
+              "non_singleton": 94,
+              "mixed": 92
+            },
+            {
+              "k": 13,
+              "classes": 216,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 13,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 21,
+            "permutation_zero_mixed_rate": 0.0
+          }
+        }
+      }
+    },
+    {
+      "new_depth": 15,
+      "old_depth": 14,
+      "old_survivors": 351,
+      "distinct_outcomes": 36,
+      "families": {
+        "newest-k": {
+          "k_min": 13,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 2,
+              "classes": 16,
+              "non_singleton": 16,
+              "mixed": 16
+            },
+            {
+              "k": 3,
+              "classes": 63,
+              "non_singleton": 58,
+              "mixed": 58
+            },
+            {
+              "k": 4,
+              "classes": 148,
+              "non_singleton": 89,
+              "mixed": 82
+            },
+            {
+              "k": 5,
+              "classes": 234,
+              "non_singleton": 83,
+              "mixed": 74
+            },
+            {
+              "k": 6,
+              "classes": 270,
+              "non_singleton": 63,
+              "mixed": 54
+            },
+            {
+              "k": 7,
+              "classes": 297,
+              "non_singleton": 45,
+              "mixed": 37
+            },
+            {
+              "k": 8,
+              "classes": 315,
+              "non_singleton": 29,
+              "mixed": 23
+            },
+            {
+              "k": 9,
+              "classes": 325,
+              "non_singleton": 24,
+              "mixed": 19
+            },
+            {
+              "k": 10,
+              "classes": 330,
+              "non_singleton": 21,
+              "mixed": 16
+            },
+            {
+              "k": 11,
+              "classes": 346,
+              "non_singleton": 5,
+              "mixed": 2
+            },
+            {
+              "k": 12,
+              "classes": 346,
+              "non_singleton": 5,
+              "mixed": 2
+            },
+            {
+              "k": 13,
+              "classes": 351,
+              "non_singleton": 0,
+              "mixed": 0
+            },
+            {
+              "k": 14,
+              "classes": 351,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 13,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 63,
+            "permutation_zero_mixed_rate": 0.0
+          },
+          "proposed_width_witnesses": [
+            {
+              "columns": [
+                2857379,
+                2882379
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": []
+                },
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                8917963,
+                9041355
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                19672259,
+                19730243
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                23498563,
+                23507787
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    0
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                30806987,
+                30808483
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                36868515,
+                36909899
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                42472395,
+                42595787
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                46397771,
+                46397859
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                53481579,
+                53508515
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                63352003,
+                63359523
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                71742371,
+                71812291
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                78647619,
+                78647627
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                82317419,
+                82441675
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": []
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                88340811,
+                88340899
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                143135691,
+                143259083
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                154144875,
+                154171811
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                157716291,
+                157725515
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                165024715,
+                165026211
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                187535467,
+                187562307
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": []
+                },
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                187699307,
+                187699523
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                197569731,
+                197577251
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                197915171,
+                197915595
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": []
+                }
+              ]
+            },
+            {
+              "columns": [
+                216535147,
+                216562083
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                229387459,
+                229505347
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                256072387,
+                256112971
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": []
+                }
+              ]
+            },
+            {
+              "columns": [
+                257291211,
+                257292707
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                288362603,
+                288389539
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                298488131,
+                298578339
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                300290979,
+                300331851
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": []
+                }
+              ]
+            },
+            {
+              "columns": [
+                321917251,
+                321958731
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                332132899,
+                332133323
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": []
+                }
+              ]
+            },
+            {
+              "columns": [
+                355471683,
+                355513163
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                365343651,
+                365413571
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                365687331,
+                365687755
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                373722947,
+                373732259
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                374077763,
+                374078283
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                384307307,
+                384334243
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                390330699,
+                390331299
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                391508939,
+                391510435
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                408673187,
+                408681507
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                415496523,
+                415496611
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    1,
+                    2
+                  ],
+                  "live": [
+                    1
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                422325443,
+                422383427
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                438991267,
+                439089995
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                445125579,
+                445248971
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    0
+                  ]
+                },
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                447379779,
+                447379875
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                449050955,
+                449051043
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                466260291,
+                466260299
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                489689411,
+                489730891
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": []
+                }
+              ]
+            },
+            {
+              "columns": [
+                490993995,
+                490994083
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    2
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                499905059,
+                499905483
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1
+                  ],
+                  "live": [
+                    1
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                507940675,
+                507949987
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    0
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                508294091,
+                508295491
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                518525035,
+                518551971
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "live": [
+                    2
+                  ]
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    2,
+                    3
+                  ]
+                }
+              ]
+            },
+            {
+              "columns": [
+                526422859,
+                526422947
+              ],
+              "outcomes": [
+                {
+                  "reachable": [
+                    2,
+                    3
+                  ],
+                  "live": []
+                },
+                {
+                  "reachable": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "live": [
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "newest-k+p": {
+          "k_min": 13,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 2,
+              "classes": 16,
+              "non_singleton": 16,
+              "mixed": 16
+            },
+            {
+              "k": 3,
+              "classes": 63,
+              "non_singleton": 58,
+              "mixed": 58
+            },
+            {
+              "k": 4,
+              "classes": 148,
+              "non_singleton": 89,
+              "mixed": 82
+            },
+            {
+              "k": 5,
+              "classes": 234,
+              "non_singleton": 83,
+              "mixed": 74
+            },
+            {
+              "k": 6,
+              "classes": 270,
+              "non_singleton": 63,
+              "mixed": 54
+            },
+            {
+              "k": 7,
+              "classes": 297,
+              "non_singleton": 45,
+              "mixed": 37
+            },
+            {
+              "k": 8,
+              "classes": 315,
+              "non_singleton": 29,
+              "mixed": 23
+            },
+            {
+              "k": 9,
+              "classes": 325,
+              "non_singleton": 24,
+              "mixed": 19
+            },
+            {
+              "k": 10,
+              "classes": 330,
+              "non_singleton": 21,
+              "mixed": 16
+            },
+            {
+              "k": 11,
+              "classes": 346,
+              "non_singleton": 5,
+              "mixed": 2
+            },
+            {
+              "k": 12,
+              "classes": 346,
+              "non_singleton": 5,
+              "mixed": 2
+            },
+            {
+              "k": 13,
+              "classes": 351,
+              "non_singleton": 0,
+              "mixed": 0
+            },
+            {
+              "k": 14,
+              "classes": 351,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 13,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 63,
+            "permutation_zero_mixed_rate": 0.0
+          }
+        },
+        "oldest-k": {
+          "k_min": 14,
+          "sweep": [
+            {
+              "k": 0,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 1,
+              "classes": 1,
+              "non_singleton": 1,
+              "mixed": 1
+            },
+            {
+              "k": 2,
+              "classes": 2,
+              "non_singleton": 2,
+              "mixed": 2
+            },
+            {
+              "k": 3,
+              "classes": 4,
+              "non_singleton": 4,
+              "mixed": 4
+            },
+            {
+              "k": 4,
+              "classes": 7,
+              "non_singleton": 7,
+              "mixed": 7
+            },
+            {
+              "k": 5,
+              "classes": 13,
+              "non_singleton": 13,
+              "mixed": 13
+            },
+            {
+              "k": 6,
+              "classes": 21,
+              "non_singleton": 21,
+              "mixed": 21
+            },
+            {
+              "k": 7,
+              "classes": 29,
+              "non_singleton": 29,
+              "mixed": 29
+            },
+            {
+              "k": 8,
+              "classes": 47,
+              "non_singleton": 46,
+              "mixed": 46
+            },
+            {
+              "k": 9,
+              "classes": 62,
+              "non_singleton": 61,
+              "mixed": 61
+            },
+            {
+              "k": 10,
+              "classes": 68,
+              "non_singleton": 67,
+              "mixed": 67
+            },
+            {
+              "k": 11,
+              "classes": 83,
+              "non_singleton": 81,
+              "mixed": 79
+            },
+            {
+              "k": 12,
+              "classes": 118,
+              "non_singleton": 112,
+              "mixed": 108
+            },
+            {
+              "k": 13,
+              "classes": 198,
+              "non_singleton": 153,
+              "mixed": 139
+            },
+            {
+              "k": 14,
+              "classes": 351,
+              "non_singleton": 0,
+              "mixed": 0
+            }
+          ],
+          "at_k_min": {
+            "k": 14,
+            "non_singleton": 0,
+            "permutation_zero_mixed_rate": 1.0
+          },
+          "at_proposed": {
+            "k": 6,
+            "non_singleton": 21,
+            "permutation_zero_mixed_rate": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "verdict": {
+    "primary_k_min": [
+      11,
+      12,
+      13
+    ],
+    "old_depths": [
+      12,
+      13,
+      14
+    ],
+    "K1_width6_kill": true,
+    "K2_no_fixed_width": true,
+    "P_positive": false
+  },
+  "scope": "One-step outcome consistency on three saved complete layers. Necessary, not sufficient, for a bisimulation quotient. No mortality or all-depth claim."
+}

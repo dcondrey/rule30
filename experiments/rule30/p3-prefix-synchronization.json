@@ -1,0 +1,649 @@
+{
+  "status": "PASS",
+  "scope": "All-length sufficient uniform-prefix erasure and marked-readout certificate; no general minimum-time or P3 algorithm",
+  "local_induction_controls": 10,
+  "complete_two_bit_section_controls": [
+    {
+      "initial_state": 0,
+      "two_bit_digit": 0,
+      "section_state": 0
+    },
+    {
+      "initial_state": 0,
+      "two_bit_digit": 1,
+      "section_state": 1
+    },
+    {
+      "initial_state": 0,
+      "two_bit_digit": 2,
+      "section_state": 2
+    },
+    {
+      "initial_state": 0,
+      "two_bit_digit": 3,
+      "section_state": 2
+    },
+    {
+      "initial_state": 1,
+      "two_bit_digit": 0,
+      "section_state": 0
+    },
+    {
+      "initial_state": 1,
+      "two_bit_digit": 1,
+      "section_state": 1
+    },
+    {
+      "initial_state": 1,
+      "two_bit_digit": 2,
+      "section_state": 2
+    },
+    {
+      "initial_state": 1,
+      "two_bit_digit": 3,
+      "section_state": 2
+    },
+    {
+      "initial_state": 2,
+      "two_bit_digit": 0,
+      "section_state": 0
+    },
+    {
+      "initial_state": 2,
+      "two_bit_digit": 1,
+      "section_state": 1
+    },
+    {
+      "initial_state": 2,
+      "two_bit_digit": 2,
+      "section_state": 2
+    },
+    {
+      "initial_state": 2,
+      "two_bit_digit": 3,
+      "section_state": 2
+    }
+  ],
+  "complete_low_digit_power_residue_cases": 16,
+  "directed_complete_output_controls": 84,
+  "guarded_prefix_controls": [
+    {
+      "width": 1,
+      "last_driver": 0,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1
+      ],
+      "common_complete_output": 3,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 1,
+        "input_tail_starts_at_bit": 2,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        1
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 1,
+      "guard_bits_read": 1,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 1,
+      "last_driver": 0,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1
+      ],
+      "common_complete_output": 53,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 1,
+        "input_tail_starts_at_bit": 2,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        0
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 1,
+      "guard_bits_read": 1,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 1,
+      "last_driver": 1,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1
+      ],
+      "common_complete_output": 6,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 1,
+        "input_tail_starts_at_bit": 2,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        1
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 1,
+      "guard_bits_read": 1,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 1,
+      "last_driver": 1,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1
+      ],
+      "common_complete_output": 52,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 1,
+        "input_tail_starts_at_bit": 2,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        0
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 1,
+      "guard_bits_read": 1,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 2,
+      "last_driver": 0,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "common_complete_output": 6,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 2,
+        "input_tail_starts_at_bit": 4,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        1
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 2,
+      "guard_bits_read": 2,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 2,
+      "last_driver": 0,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "common_complete_output": 200,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 2,
+        "input_tail_starts_at_bit": 4,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        0
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 2,
+      "guard_bits_read": 2,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 2,
+      "last_driver": 1,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "common_complete_output": 25,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 2,
+        "input_tail_starts_at_bit": 4,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        0
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 2,
+      "guard_bits_read": 2,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 2,
+      "last_driver": 1,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "common_complete_output": 207,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 2,
+        "input_tail_starts_at_bit": 4,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        1
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 2,
+      "guard_bits_read": 2,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 3,
+      "last_driver": 0,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1,
+        4,
+        5,
+        7
+      ],
+      "common_complete_output": 55,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 3,
+        "input_tail_starts_at_bit": 6,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        1
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 3,
+      "guard_bits_read": 3,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 3,
+      "last_driver": 0,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1,
+        4,
+        5,
+        7
+      ],
+      "common_complete_output": 885,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 3,
+        "input_tail_starts_at_bit": 6,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        0
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 3,
+      "guard_bits_read": 3,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 3,
+      "last_driver": 1,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1,
+        4,
+        5,
+        7
+      ],
+      "common_complete_output": 100,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 3,
+        "input_tail_starts_at_bit": 6,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        0
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 3,
+      "guard_bits_read": 3,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 3,
+      "last_driver": 1,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1,
+        4,
+        5,
+        7
+      ],
+      "common_complete_output": 882,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 3,
+        "input_tail_starts_at_bit": 6,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        1
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 3,
+      "guard_bits_read": 3,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 5,
+      "last_driver": 0,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1,
+        16,
+        21,
+        31
+      ],
+      "common_complete_output": 891,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 5,
+        "input_tail_starts_at_bit": 10,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        1
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 5,
+      "guard_bits_read": 5,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 5,
+      "last_driver": 0,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1,
+        16,
+        21,
+        31
+      ],
+      "common_complete_output": 14261,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 5,
+        "input_tail_starts_at_bit": 10,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        0
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 5,
+      "guard_bits_read": 5,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 5,
+      "last_driver": 1,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1,
+        16,
+        21,
+        31
+      ],
+      "common_complete_output": 1602,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 5,
+        "input_tail_starts_at_bit": 10,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        1
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 5,
+      "guard_bits_read": 5,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 5,
+      "last_driver": 1,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1,
+        16,
+        21,
+        31
+      ],
+      "common_complete_output": 14304,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 5,
+        "input_tail_starts_at_bit": 10,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        0
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 5,
+      "guard_bits_read": 5,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 8,
+      "last_driver": 0,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1,
+        85,
+        128,
+        255
+      ],
+      "common_complete_output": 25712,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 8,
+        "input_tail_starts_at_bit": 16,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        0
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 8,
+      "guard_bits_read": 8,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 8,
+      "last_driver": 0,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1,
+        85,
+        128,
+        255
+      ],
+      "common_complete_output": 822906,
+      "tail_action_descriptor": {
+        "original_binary_generator": "B",
+        "exponent": 8,
+        "input_tail_starts_at_bit": 16,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        0,
+        1
+      ],
+      "marked_bit": 0,
+      "erasure_steps": 8,
+      "guard_bits_read": 8,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 8,
+      "last_driver": 1,
+      "common_high_tail": 0,
+      "directed_lower_inputs": [
+        0,
+        1,
+        85,
+        128,
+        255
+      ],
+      "common_complete_output": 102849,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 8,
+        "input_tail_starts_at_bit": 16,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        0
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 8,
+      "guard_bits_read": 8,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    },
+    {
+      "width": 8,
+      "last_driver": 1,
+      "common_high_tail": 5,
+      "directed_lower_inputs": [
+        0,
+        1,
+        85,
+        128,
+        255
+      ],
+      "common_complete_output": 821355,
+      "tail_action_descriptor": {
+        "original_binary_generator": "C",
+        "exponent": 8,
+        "input_tail_starts_at_bit": 16,
+        "power_evaluation_cost_retained": true
+      },
+      "closed_low_digit": [
+        1,
+        1
+      ],
+      "marked_bit": 1,
+      "erasure_steps": 8,
+      "guard_bits_read": 8,
+      "lower_prefixes_enumerated": 0,
+      "extra_marked_driver_bits": 1
+    }
+  ],
+  "joint_reset_controls": [
+    {
+      "common_tail_above4": 0,
+      "four_low_prefix_outputs": [
+        12,
+        12,
+        12,
+        12
+      ]
+    },
+    {
+      "common_tail_above4": 1,
+      "four_low_prefix_outputs": [
+        50,
+        50,
+        50,
+        50
+      ]
+    },
+    {
+      "common_tail_above4": 5,
+      "four_low_prefix_outputs": [
+        202,
+        202,
+        202,
+        202
+      ]
+    }
+  ],
+  "corrupted_guards_rejected": 4,
+  "source_sha256": {
+    "experiments/rule30/p3_prefix_synchronization.py": "a4210a101b40bf9c637abd9c5d57aeda03b50e369e018e81dcdc5170ed6f1d80",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-actual-norm-block-pruning.md": "f3971d9b69c67c4c9c3fb6cecf25cb06e3639b0359e58938e62c44dd8a16b3a8"
+  }
+}

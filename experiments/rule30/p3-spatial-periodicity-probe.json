@@ -1,0 +1,42 @@
+{
+  "schema": "rule30.p3-spatial-periodicity-probe.v1",
+  "interpretation": "B^N(0) is spatially eventually periodic (light-cone effect of constant-zero input past the information front), but onset scales linearly with N at a ratio greater than 1, so the periodic tail never reaches the query site (~N), and this real structure gives no shortcut for the singleton query.",
+  "scan": [
+    {
+      "N": 100,
+      "period": 8,
+      "onset": 155,
+      "onset_over_N": 1.55
+    },
+    {
+      "N": 300,
+      "period": 16,
+      "onset": 455,
+      "onset_over_N": 1.5166666666666666
+    },
+    {
+      "N": 600,
+      "period": 16,
+      "onset": 956,
+      "onset_over_N": 1.5933333333333333
+    },
+    {
+      "N": 1000,
+      "period": 16,
+      "onset": 1617,
+      "onset_over_N": 1.617
+    },
+    {
+      "N": 1500,
+      "period": 16,
+      "onset": 2417,
+      "onset_over_N": 1.6113333333333333
+    },
+    {
+      "N": 2000,
+      "period": 16,
+      "onset": 3291,
+      "onset_over_N": 1.6455
+    }
+  ]
+}

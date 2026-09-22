@@ -1,0 +1,78 @@
+{
+ "K1": {
+  "lone_seed": {
+   "T": 1024,
+   "centre_column_zero_for_t_ge_1": true,
+   "centre_column_eventually_periodic": true,
+   "neighbour_equals_formula": true,
+   "machine_equals_formula": true,
+   "msb_verdict_periodic": false,
+   "witness": 31,
+   "witness_values": [
+    1,
+    0
+   ],
+   "lsd_verdict_periodic": false
+  },
+  "seed_minus1_plus1": {
+   "T": 1024,
+   "centre_column_zero_for_t_ge_1": true,
+   "centre_column_eventually_periodic": true,
+   "neighbour_equals_formula": true,
+   "machine_equals_formula": true,
+   "msb_verdict_periodic": false,
+   "witness": 30,
+   "witness_values": [
+    1,
+    0
+   ],
+   "lsd_verdict_periodic": false
+  }
+ },
+ "K2": {
+  "thue_morse": {
+   "states": 2,
+   "msb_periodic": false,
+   "lsd_periodic": false,
+   "witness": 4,
+   "scalar_differs": true
+  },
+  "rudin_shapiro": {
+   "states": 4,
+   "msb_periodic": false,
+   "lsd_periodic": false,
+   "witness": 16,
+   "scalar_differs": true
+  },
+  "power_of_two_indicator": {
+   "states": 3,
+   "msb_periodic": false,
+   "lsd_periodic": false,
+   "witness": 8,
+   "scalar_differs": true
+  }
+ },
+ "K3": [
+  {
+   "states": 2,
+   "subsequences": 96,
+   "periodic": 80,
+   "aperiodic": 16,
+   "classification_disagreements": 0
+  },
+  {
+   "states": 3,
+   "subsequences": 2160,
+   "periodic": 1368,
+   "aperiodic": 792,
+   "classification_disagreements": 0
+  },
+  {
+   "states": 4,
+   "subsequences": 78336,
+   "periodic": 34352,
+   "aperiodic": 43984,
+   "classification_disagreements": 0
+  }
+ ]
+}

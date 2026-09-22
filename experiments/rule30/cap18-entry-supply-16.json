@@ -1,0 +1,1391 @@
+{
+  "schema": "rule30.cap18-entry-supply.v1",
+  "preregistration": "PREREGISTRATION-cap18-entry-supply.md",
+  "source_sha256": {
+    "cap18_entry_supply.py": "aa767f37b3b04886a524e0490e1ec876772b96aca4e502ed49f5d79ddf6cb0fb",
+    "cap18_four_sheet_propagation.py": "cdb6792f2a3f871a7e178f9af8b090172e6942b99dbf9961d0d379dc7a7ec075",
+    "guarded_two_block_lift_statistics.py": "0ac43ac8e82d2864d273a618ff5e3c89fe9bd059fc6c92b1dbf19703ea126029",
+    "two_block_guarded_lift.cpp": "6658c14e812d27de3f3cfff673c861330e0e67700589534fbc471aadbb2ea1a0",
+    "two_block_column_orbit.cpp": "a198df6f2c14cef3d6fb13238c96a445eea014fc6977cd68ac8b7a6b44d55bdd"
+  },
+  "primary_sha256": "4d5d791a34a15467819b9d2049798d18318d2451c451441905f75b96596b71a7",
+  "base_manifest_sha256": "fa37a01e0e4211c8ad8d1a8baed1d60f67ef5851edccb3d602d8713eb1d12a50",
+  "data_sha256": {
+    "capacity18-guarded-16.depth-13.first.bin": "88a68b8bfb9973acf179e06ee7478ef12492f15d0ccd53d94d520e876a38e893",
+    "capacity18-guarded-16.depth-13.routes.bin": "2c38960af52bc6ed6d36cda7f2fa7a7e31d63c4150c06b9275fc7df86a7f951b",
+    "capacity18-guarded-16.depth-13.cover.bin": "15e6a111735692ee1480927d7243469aee2f1e7006c6bfe562a6643231da59b0",
+    "capacity18-guarded-16.depth-13.entries.bin": "04d6eae62c0c664d624943015fce8b1b0d58a23d6bd79d62fdbf966120f2b8e9",
+    "capacity18-guarded-16.depth-14.first.bin": "10fd79ab00286aa61f8781f5831d06e8c2c4e2588339e8d96486358da7f88697",
+    "capacity18-guarded-16.depth-14.routes.bin": "f5c7a8bf17b69e2db5a05a8676466695d16ba3cc9b929821eaca7fbc0e38d081",
+    "capacity18-guarded-16.depth-14.cover.bin": "e6b8ae2effdd57e2e936014ac3f90c1a4384b7c7f7bb1532951876ef7ae3c646",
+    "capacity18-guarded-16.depth-14.entries.bin": "edb5e51c04af6a6c20ecf1dc5f0a2a057bb4617c11576f42c44dda536778afe2",
+    "capacity18-guarded-16.depth-15.first.bin": "6432f602d7827896c42eec15db579e98365705074a73e04c386eae2635f286d4",
+    "capacity18-guarded-16.depth-15.routes.bin": "ac19d9bf1f60a48e99cedba3c2f1e61dade0fcfc550706bc9d6ad7b8331b0a82",
+    "capacity18-guarded-16.depth-15.cover.bin": "960460a8e5d50c47cc5567e291df626b88e866fc48f0c43e2c9f2fd04a8c8a24",
+    "capacity18-guarded-16.depth-15.entries.bin": "4b30ff756489168955b004b22263bd823870e4b747328568ca4e33059f542aad",
+    "capacity18-guarded-16.depth-16.first.bin": "de91cacd27fea994447942bbf9fe475cd881937c06ff634c8ed619daa9fdf5c2",
+    "capacity18-guarded-16.depth-16.routes.bin": "b6d2cc586e64d51d87323ecf0f6682ec60b87c1f6ec4023776e657c0664bce93",
+    "capacity18-guarded-16.depth-16.cover.bin": "d4d9ee18e377c129071cabf5d62464587583b7261f069751960704369b5ab163",
+    "capacity18-guarded-16.depth-16.entries.bin": "f0e6f2693feeb9babae03e12ebc30bf98f337b673863242b46fc6ab40c1abf35"
+  },
+  "validation": {
+    "run": "layers 13-16 complete, stop_reason depth_cap",
+    "exhaustive_survivor_sets_matched": {
+      "12": 125
+    },
+    "committed_layers_byte_identical": {
+      "13.cover": true,
+      "13.entries": true,
+      "14.cover": true,
+      "14.entries": true,
+      "15.cover": true,
+      "15.entries": true
+    },
+    "entry_sets_of_layer_type": "all live old phases, every layer",
+    "reachable_pairs_equal_entry_closure": "every cycle, every layer",
+    "every_cycle_has_an_entry": true,
+    "deaths_at_fibre_and_z_pair_layers": 0,
+    "no_death_on_z_or_rotation_cycles": true,
+    "lift_lemma_violations": 0,
+    "schedule_matches_lifted_layers_and_exhaustive_first_periods": [
+      4,
+      8,
+      12,
+      16
+    ]
+  },
+  "first_star_schedule": {
+    "1": {
+      "period": 1,
+      "ratio": 1,
+      "type": "point"
+    },
+    "2": {
+      "period": 4,
+      "ratio": 4,
+      "type": "fibre"
+    },
+    "3": {
+      "period": 8,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "4": {
+      "period": 16,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "5": {
+      "period": 32,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "6": {
+      "period": 32,
+      "ratio": 1,
+      "type": "point"
+    },
+    "7": {
+      "period": 32,
+      "ratio": 1,
+      "type": "point"
+    },
+    "8": {
+      "period": 128,
+      "ratio": 4,
+      "type": "fibre"
+    },
+    "9": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "10": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "11": {
+      "period": 128,
+      "ratio": 1,
+      "type": "point"
+    },
+    "12": {
+      "period": 256,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "13": {
+      "period": 512,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "14": {
+      "period": 1024,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "15": {
+      "period": 2048,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "16": {
+      "period": 2048,
+      "ratio": 1,
+      "type": "point"
+    },
+    "17": {
+      "period": 4096,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "18": {
+      "period": 8192,
+      "ratio": 2,
+      "type": "z_pair"
+    },
+    "19": {
+      "period": 16384,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "20": {
+      "period": 32768,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "21": {
+      "period": 65536,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "22": {
+      "period": 131072,
+      "ratio": 2,
+      "type": "guard_line"
+    },
+    "23": {
+      "period": 131072,
+      "ratio": 1,
+      "type": "point"
+    },
+    "24": {
+      "period": 262144,
+      "ratio": 2,
+      "type": "z_pair"
+    }
+  },
+  "H1_self_sufficient_inheritance": {
+    "generations": [
+      {
+        "generation": "G_12 -> G_13",
+        "registered": true,
+        "out_of_sample": false,
+        "parents_tested": 37,
+        "failures": 23,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.39080459770114945,
+          "expected_failures_if_independent": 13.731404412736167,
+          "probability_of_zero_failures_if_independent": 3.5239728751062866e-08
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.39080459770114945,
+            "center": 0.17708333333333334
+          },
+          "expected_failures_if_independent": 21.077151663033437,
+          "probability_of_zero_failures_if_independent": 3.945099062490205e-15
+        },
+        "failing_parents": [
+          {
+            "parent_state": 3314083,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 3355467,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 5813067,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 6028323,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 9302987,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 11170763,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 11580235,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 11744075,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 14201675,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 14717771,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 15235491,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 16298827,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 19672259,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 19763307,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 19788747,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 19968843,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 23106379,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 23507787,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 23624099,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 24687435,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 29618499,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 29797571,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 31896395,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "center": 6,
+            "free_reflection": 36,
+            "identity": 6
+          },
+          "fixing_reflection": {
+            "free_reflection": 4,
+            "identity": 4
+          },
+          "free_reflection": {
+            "center": 10,
+            "fixing_reflection": 4,
+            "free_reflection": 42,
+            "identity": 20,
+            "none": 1
+          },
+          "identity": {
+            "center": 2,
+            "fixing_reflection": 9,
+            "free_reflection": 23,
+            "identity": 13,
+            "none": 2,
+            "rotation": 11
+          },
+          "rotation": {
+            "center": 16,
+            "identity": 10
+          }
+        }
+      },
+      {
+        "generation": "G_13 -> G_14",
+        "registered": true,
+        "out_of_sample": false,
+        "parents_tested": 45,
+        "failures": 32,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.2727272727272727,
+          "expected_failures_if_independent": 23.80165289256196,
+          "probability_of_zero_failures_if_independent": 1.9454803158605764e-15
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.2727272727272727,
+            "center": 0.17586206896551723
+          },
+          "expected_failures_if_independent": 28.91109501675495,
+          "probability_of_zero_failures_if_independent": 4.128566823407293e-21
+        },
+        "failing_parents": [
+          {
+            "parent_state": 5247083,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 8917963,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 19927147,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 21754275,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 23598027,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 30052683,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 31626059,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 42472395,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 53481579,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 54656035,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 54970915,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 58061771,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 63044643,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 63423683,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 64450891,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 71812291,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 82317419,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 89519051,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 89527243,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 91015715,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 91616203,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 92803179,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 96978115,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 105366723,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 105869635,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 105910379,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 115871851,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 122417571,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 123073483,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 123769763,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 124261323,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 126357611,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "center": 11,
+            "free_reflection": 12,
+            "identity": 45
+          },
+          "fixing_reflection": {
+            "center": 7,
+            "fixing_reflection": 1,
+            "free_reflection": 6,
+            "identity": 3,
+            "rotation": 1
+          },
+          "free_reflection": {
+            "center": 19,
+            "fixing_reflection": 25,
+            "free_reflection": 70,
+            "identity": 58,
+            "none": 10
+          },
+          "identity": {
+            "center": 6,
+            "fixing_reflection": 15,
+            "free_reflection": 15,
+            "identity": 16,
+            "none": 8,
+            "rotation": 19
+          },
+          "rotation": {
+            "center": 8,
+            "identity": 14
+          }
+        }
+      },
+      {
+        "generation": "G_14 -> G_15",
+        "registered": false,
+        "out_of_sample": false,
+        "parents_tested": 71,
+        "failures": 37,
+        "floor_registered": {
+          "child_z_share_among_identity_or_z": 0.4838709677419355,
+          "expected_failures_if_independent": 18.91363163371487,
+          "probability_of_zero_failures_if_independent": 2.8058650656241043e-10
+        },
+        "floor_corrected": {
+          "child_z_share_by_parent_class": {
+            "rotation": 0.4838709677419355,
+            "center": 0.2777777777777778
+          },
+          "expected_failures_if_independent": 31.929635410644764,
+          "probability_of_zero_failures_if_independent": 9.515588934355592e-20
+        },
+        "failing_parents": [
+          {
+            "parent_state": 61615299,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 121854659,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 132289443,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 135827779,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 143520715,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 157716291,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 164756299,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 165411875,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 204110243,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 240909347,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 256072387,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 257292707,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 265681315,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 277043011,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 281278795,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 289537059,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 298974027,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 304773539,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 309203363,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 321780035,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 321917251,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 348388387,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 365034531,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 365162819,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 375127075,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 384334243,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 390330699,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 407540035,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 419649347,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 437817667,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 439089995,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 445510603,
+            "parent_class": "rotation",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 492868515,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 499561379,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          },
+          {
+            "parent_state": 518551971,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 522449227,
+            "parent_class": "center",
+            "children": [
+              "identity",
+              "identity"
+            ]
+          },
+          {
+            "parent_state": 534942627,
+            "parent_class": "center",
+            "children": [
+              "free_reflection",
+              "free_reflection"
+            ]
+          }
+        ],
+        "exploratory_parent_class_to_child_classes": {
+          "center": {
+            "center": 37,
+            "free_reflection": 42,
+            "identity": 23
+          },
+          "fixing_reflection": {
+            "center": 12,
+            "fixing_reflection": 1,
+            "free_reflection": 37,
+            "identity": 12,
+            "rotation": 5
+          },
+          "free_reflection": {
+            "center": 29,
+            "fixing_reflection": 12,
+            "free_reflection": 62,
+            "identity": 36,
+            "none": 4,
+            "rotation": 38
+          },
+          "identity": {
+            "center": 13,
+            "fixing_reflection": 40,
+            "free_reflection": 20,
+            "identity": 15,
+            "none": 26,
+            "rotation": 71
+          },
+          "rotation": {
+            "center": 14,
+            "identity": 26
+          }
+        }
+      }
+    ],
+    "failures_registered_out_of_sample": 0,
+    "failures_registered_in_sample": 55,
+    "killed": true
+  },
+  "H3_depth16_point_layer": {
+    "offspring_means": {
+      "16": 1.234862385321101
+    },
+    "threshold": 1.553,
+    "killed": false
+  },
+  "exploratory_layers": [
+    {
+      "depth": 13,
+      "supply_type": "guard_line",
+      "first_star_monodromy_class": "free_reflection",
+      "period_ratio": 2,
+      "old_phases_live_dead": [
+        59,
+        197
+      ],
+      "old_survivors": 125,
+      "survivors": 216,
+      "offspring_mean": 1.728,
+      "deaths_by_monodromy_class": {
+        "free_reflection": 1,
+        "identity": 2
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 24,
+        "fixing_reflection": 5,
+        "free_reflection": 40,
+        "identity": 43,
+        "rotation": 13
+      },
+      "cycles_by_monodromy_class": {
+        "center": 9,
+        "fixing_reflection": 3,
+        "free_reflection": 15,
+        "identity": 14,
+        "rotation": 4
+      },
+      "reachable_pair_count_histogram": {
+        "2": 23,
+        "3": 29,
+        "4": 73
+      },
+      "children_histogram": {
+        "0": 3,
+        "1": 28,
+        "2": 94
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 33,
+        "2": 11,
+        "4": 1
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 35,
+        "2": 10
+      }
+    },
+    {
+      "depth": 14,
+      "supply_type": "guard_line",
+      "first_star_monodromy_class": "free_reflection",
+      "period_ratio": 2,
+      "old_phases_live_dead": [
+        108,
+        404
+      ],
+      "old_survivors": 216,
+      "survivors": 351,
+      "offspring_mean": 1.625,
+      "deaths_by_monodromy_class": {
+        "free_reflection": 10,
+        "identity": 8
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 34,
+        "fixing_reflection": 13,
+        "free_reflection": 105,
+        "identity": 53,
+        "rotation": 11
+      },
+      "cycles_by_monodromy_class": {
+        "center": 10,
+        "fixing_reflection": 9,
+        "free_reflection": 34,
+        "identity": 21,
+        "rotation": 8
+      },
+      "reachable_pair_count_histogram": {
+        "2": 67,
+        "3": 27,
+        "4": 122
+      },
+      "children_histogram": {
+        "0": 18,
+        "1": 45,
+        "2": 153
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 63,
+        "2": 14,
+        "3": 3,
+        "4": 2
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 66,
+        "2": 13,
+        "3": 3
+      }
+    },
+    {
+      "depth": 15,
+      "supply_type": "guard_line",
+      "first_star_monodromy_class": "free_reflection",
+      "period_ratio": 2,
+      "old_phases_live_dead": [
+        192,
+        832
+      ],
+      "old_survivors": 351,
+      "survivors": 545,
+      "offspring_mean": 1.5527065527065527,
+      "deaths_by_monodromy_class": {
+        "free_reflection": 4,
+        "identity": 26
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 51,
+        "fixing_reflection": 41,
+        "free_reflection": 103,
+        "identity": 136,
+        "rotation": 20
+      },
+      "cycles_by_monodromy_class": {
+        "center": 26,
+        "fixing_reflection": 16,
+        "free_reflection": 42,
+        "identity": 37,
+        "rotation": 13
+      },
+      "reachable_pair_count_histogram": {
+        "2": 129,
+        "3": 58,
+        "4": 164
+      },
+      "children_histogram": {
+        "0": 30,
+        "1": 97,
+        "2": 224
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 87,
+        "2": 40,
+        "3": 4,
+        "4": 2,
+        "5": 1
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 97,
+        "2": 33,
+        "3": 4
+      }
+    },
+    {
+      "depth": 16,
+      "supply_type": "point",
+      "first_star_monodromy_class": "identity",
+      "period_ratio": 1,
+      "old_phases_live_dead": [
+        348,
+        1700
+      ],
+      "old_survivors": 545,
+      "survivors": 673,
+      "offspring_mean": 1.234862385321101,
+      "deaths_by_monodromy_class": {
+        "fixing_reflection": 10,
+        "free_reflection": 40,
+        "identity": 38
+      },
+      "old_survivors_by_monodromy_class": {
+        "center": 105,
+        "fixing_reflection": 53,
+        "free_reflection": 161,
+        "identity": 112,
+        "rotation": 114
+      },
+      "cycles_by_monodromy_class": {
+        "center": 49,
+        "fixing_reflection": 26,
+        "free_reflection": 67,
+        "identity": 53,
+        "rotation": 37
+      },
+      "reachable_pair_count_histogram": {
+        "1": 68,
+        "2": 295,
+        "3": 16,
+        "4": 166
+      },
+      "children_histogram": {
+        "0": 88,
+        "1": 241,
+        "2": 216
+      },
+      "entry_sets_per_cycle_histogram": {
+        "1": 147,
+        "2": 63,
+        "3": 16,
+        "4": 4,
+        "5": 1,
+        "6": 1
+      },
+      "distinct_entry_sets_per_cycle_histogram": {
+        "1": 162,
+        "2": 60,
+        "3": 10
+      }
+    }
+  ],
+  "exploratory_lift_transitions": [
+    {
+      "generation": "G_12 -> G_13",
+      "child_cycles": 82,
+      "violations": 0,
+      "transitions": {
+        "center/2->center": 3,
+        "center/2->free_reflection": 12,
+        "center/2->identity": 3,
+        "fixing_reflection/1->free_reflection": 2,
+        "fixing_reflection/2->free_reflection": 1,
+        "fixing_reflection/2->identity": 2,
+        "free_reflection/2->center": 4,
+        "free_reflection/2->fixing_reflection": 2,
+        "free_reflection/2->free_reflection": 10,
+        "free_reflection/2->identity": 8,
+        "identity/1->center": 2,
+        "identity/1->fixing_reflection": 7,
+        "identity/1->free_reflection": 9,
+        "identity/1->identity": 5,
+        "identity/1->rotation": 8,
+        "rotation/4->center": 1,
+        "rotation/4->identity": 3
+      }
+    },
+    {
+      "generation": "G_13 -> G_14",
+      "child_cycles": 134,
+      "violations": 0,
+      "transitions": {
+        "center/2->center": 6,
+        "center/2->free_reflection": 6,
+        "center/2->identity": 8,
+        "fixing_reflection/1->center": 1,
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/1->free_reflection": 1,
+        "fixing_reflection/1->identity": 1,
+        "fixing_reflection/1->rotation": 1,
+        "fixing_reflection/2->center": 4,
+        "fixing_reflection/2->free_reflection": 3,
+        "fixing_reflection/2->identity": 2,
+        "free_reflection/2->center": 9,
+        "free_reflection/2->fixing_reflection": 7,
+        "free_reflection/2->free_reflection": 22,
+        "free_reflection/2->identity": 13,
+        "identity/1->center": 4,
+        "identity/1->fixing_reflection": 8,
+        "identity/1->free_reflection": 10,
+        "identity/1->identity": 7,
+        "identity/1->rotation": 12,
+        "rotation/4->center": 2,
+        "rotation/4->identity": 6
+      }
+    },
+    {
+      "generation": "G_14 -> G_15",
+      "child_cycles": 232,
+      "violations": 0,
+      "transitions": {
+        "center/2->center": 17,
+        "center/2->free_reflection": 22,
+        "center/2->identity": 13,
+        "fixing_reflection/1->center": 3,
+        "fixing_reflection/1->fixing_reflection": 1,
+        "fixing_reflection/1->free_reflection": 7,
+        "fixing_reflection/1->identity": 2,
+        "fixing_reflection/1->rotation": 2,
+        "fixing_reflection/2->center": 7,
+        "fixing_reflection/2->free_reflection": 6,
+        "fixing_reflection/2->identity": 3,
+        "free_reflection/2->center": 12,
+        "free_reflection/2->fixing_reflection": 7,
+        "free_reflection/2->free_reflection": 21,
+        "free_reflection/2->identity": 15,
+        "free_reflection/2->rotation": 10,
+        "identity/1->center": 6,
+        "identity/1->fixing_reflection": 18,
+        "identity/1->free_reflection": 11,
+        "identity/1->identity": 11,
+        "identity/1->rotation": 25,
+        "rotation/4->center": 4,
+        "rotation/4->identity": 9
+      }
+    }
+  ],
+  "scope": "Layers 13-16 of the index-15 guarded lift from the exhaustive depth-12 base. The hypotheses are finite screens; none decides uniform or individual mortality, and a common-depth certificate needs depth at least 32."
+}

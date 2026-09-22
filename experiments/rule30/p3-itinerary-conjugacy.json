@@ -1,0 +1,1054 @@
+{
+  "schema": "rule30.p3-itinerary-conjugacy.v1",
+  "verification": {
+    "complete_three_digit_prefix_map": [
+      0,
+      21,
+      62,
+      63,
+      44,
+      41,
+      42,
+      43,
+      8,
+      13,
+      6,
+      7,
+      4,
+      17,
+      18,
+      19,
+      16,
+      5,
+      14,
+      15,
+      28,
+      25,
+      26,
+      27,
+      24,
+      29,
+      54,
+      55,
+      52,
+      33,
+      34,
+      35,
+      32,
+      53,
+      30,
+      31,
+      12,
+      9,
+      10,
+      11,
+      40,
+      45,
+      38,
+      39,
+      36,
+      49,
+      50,
+      51,
+      48,
+      37,
+      46,
+      47,
+      60,
+      57,
+      58,
+      59,
+      56,
+      61,
+      22,
+      23,
+      20,
+      1,
+      2,
+      3
+    ],
+    "complete_three_digit_pair_isometry_controls": 2016,
+    "generator_conjugacy_controls": [
+      {
+        "digits": 1,
+        "input": 0,
+        "state": "A",
+        "encoded_input": 0,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 0,
+        "state": "B",
+        "encoded_input": 0,
+        "encoded_output": 1
+      },
+      {
+        "digits": 1,
+        "input": 0,
+        "state": "C",
+        "encoded_input": 0,
+        "encoded_output": 3
+      },
+      {
+        "digits": 1,
+        "input": 1,
+        "state": "A",
+        "encoded_input": 1,
+        "encoded_output": 3
+      },
+      {
+        "digits": 1,
+        "input": 1,
+        "state": "B",
+        "encoded_input": 1,
+        "encoded_output": 2
+      },
+      {
+        "digits": 1,
+        "input": 1,
+        "state": "C",
+        "encoded_input": 1,
+        "encoded_output": 2
+      },
+      {
+        "digits": 1,
+        "input": 2,
+        "state": "A",
+        "encoded_input": 2,
+        "encoded_output": 2
+      },
+      {
+        "digits": 1,
+        "input": 2,
+        "state": "B",
+        "encoded_input": 2,
+        "encoded_output": 3
+      },
+      {
+        "digits": 1,
+        "input": 2,
+        "state": "C",
+        "encoded_input": 2,
+        "encoded_output": 1
+      },
+      {
+        "digits": 1,
+        "input": 3,
+        "state": "A",
+        "encoded_input": 3,
+        "encoded_output": 1
+      },
+      {
+        "digits": 1,
+        "input": 3,
+        "state": "B",
+        "encoded_input": 3,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 3,
+        "state": "C",
+        "encoded_input": 3,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 12,
+        "state": "A",
+        "encoded_input": 0,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 12,
+        "state": "B",
+        "encoded_input": 0,
+        "encoded_output": 1
+      },
+      {
+        "digits": 1,
+        "input": 12,
+        "state": "C",
+        "encoded_input": 0,
+        "encoded_output": 3
+      },
+      {
+        "digits": 1,
+        "input": 55,
+        "state": "A",
+        "encoded_input": 3,
+        "encoded_output": 1
+      },
+      {
+        "digits": 1,
+        "input": 55,
+        "state": "B",
+        "encoded_input": 3,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 55,
+        "state": "C",
+        "encoded_input": 3,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 200,
+        "state": "A",
+        "encoded_input": 0,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 200,
+        "state": "B",
+        "encoded_input": 0,
+        "encoded_output": 1
+      },
+      {
+        "digits": 1,
+        "input": 200,
+        "state": "C",
+        "encoded_input": 0,
+        "encoded_output": 3
+      },
+      {
+        "digits": 1,
+        "input": 891,
+        "state": "A",
+        "encoded_input": 3,
+        "encoded_output": 1
+      },
+      {
+        "digits": 1,
+        "input": 891,
+        "state": "B",
+        "encoded_input": 3,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 891,
+        "state": "C",
+        "encoded_input": 3,
+        "encoded_output": 0
+      },
+      {
+        "digits": 1,
+        "input": 1099511627781,
+        "state": "A",
+        "encoded_input": 1,
+        "encoded_output": 3
+      },
+      {
+        "digits": 1,
+        "input": 1099511627781,
+        "state": "B",
+        "encoded_input": 1,
+        "encoded_output": 2
+      },
+      {
+        "digits": 1,
+        "input": 1099511627781,
+        "state": "C",
+        "encoded_input": 1,
+        "encoded_output": 2
+      },
+      {
+        "digits": 2,
+        "input": 0,
+        "state": "A",
+        "encoded_input": 0,
+        "encoded_output": 0
+      },
+      {
+        "digits": 2,
+        "input": 0,
+        "state": "B",
+        "encoded_input": 0,
+        "encoded_output": 5
+      },
+      {
+        "digits": 2,
+        "input": 0,
+        "state": "C",
+        "encoded_input": 0,
+        "encoded_output": 15
+      },
+      {
+        "digits": 2,
+        "input": 1,
+        "state": "A",
+        "encoded_input": 5,
+        "encoded_output": 11
+      },
+      {
+        "digits": 2,
+        "input": 1,
+        "state": "B",
+        "encoded_input": 5,
+        "encoded_output": 10
+      },
+      {
+        "digits": 2,
+        "input": 1,
+        "state": "C",
+        "encoded_input": 5,
+        "encoded_output": 10
+      },
+      {
+        "digits": 2,
+        "input": 2,
+        "state": "A",
+        "encoded_input": 14,
+        "encoded_output": 2
+      },
+      {
+        "digits": 2,
+        "input": 2,
+        "state": "B",
+        "encoded_input": 14,
+        "encoded_output": 3
+      },
+      {
+        "digits": 2,
+        "input": 2,
+        "state": "C",
+        "encoded_input": 14,
+        "encoded_output": 1
+      },
+      {
+        "digits": 2,
+        "input": 3,
+        "state": "A",
+        "encoded_input": 15,
+        "encoded_output": 1
+      },
+      {
+        "digits": 2,
+        "input": 3,
+        "state": "B",
+        "encoded_input": 15,
+        "encoded_output": 4
+      },
+      {
+        "digits": 2,
+        "input": 3,
+        "state": "C",
+        "encoded_input": 15,
+        "encoded_output": 4
+      },
+      {
+        "digits": 2,
+        "input": 12,
+        "state": "A",
+        "encoded_input": 4,
+        "encoded_output": 12
+      },
+      {
+        "digits": 2,
+        "input": 12,
+        "state": "B",
+        "encoded_input": 4,
+        "encoded_output": 9
+      },
+      {
+        "digits": 2,
+        "input": 12,
+        "state": "C",
+        "encoded_input": 4,
+        "encoded_output": 11
+      },
+      {
+        "digits": 2,
+        "input": 55,
+        "state": "A",
+        "encoded_input": 11,
+        "encoded_output": 13
+      },
+      {
+        "digits": 2,
+        "input": 55,
+        "state": "B",
+        "encoded_input": 11,
+        "encoded_output": 8
+      },
+      {
+        "digits": 2,
+        "input": 55,
+        "state": "C",
+        "encoded_input": 11,
+        "encoded_output": 8
+      },
+      {
+        "digits": 2,
+        "input": 200,
+        "state": "A",
+        "encoded_input": 8,
+        "encoded_output": 8
+      },
+      {
+        "digits": 2,
+        "input": 200,
+        "state": "B",
+        "encoded_input": 8,
+        "encoded_output": 13
+      },
+      {
+        "digits": 2,
+        "input": 200,
+        "state": "C",
+        "encoded_input": 8,
+        "encoded_output": 7
+      },
+      {
+        "digits": 2,
+        "input": 891,
+        "state": "A",
+        "encoded_input": 7,
+        "encoded_output": 9
+      },
+      {
+        "digits": 2,
+        "input": 891,
+        "state": "B",
+        "encoded_input": 7,
+        "encoded_output": 12
+      },
+      {
+        "digits": 2,
+        "input": 891,
+        "state": "C",
+        "encoded_input": 7,
+        "encoded_output": 12
+      },
+      {
+        "digits": 2,
+        "input": 1099511627781,
+        "state": "A",
+        "encoded_input": 9,
+        "encoded_output": 7
+      },
+      {
+        "digits": 2,
+        "input": 1099511627781,
+        "state": "B",
+        "encoded_input": 9,
+        "encoded_output": 6
+      },
+      {
+        "digits": 2,
+        "input": 1099511627781,
+        "state": "C",
+        "encoded_input": 9,
+        "encoded_output": 6
+      },
+      {
+        "digits": 3,
+        "input": 0,
+        "state": "A",
+        "encoded_input": 0,
+        "encoded_output": 0
+      },
+      {
+        "digits": 3,
+        "input": 0,
+        "state": "B",
+        "encoded_input": 0,
+        "encoded_output": 21
+      },
+      {
+        "digits": 3,
+        "input": 0,
+        "state": "C",
+        "encoded_input": 0,
+        "encoded_output": 63
+      },
+      {
+        "digits": 3,
+        "input": 1,
+        "state": "A",
+        "encoded_input": 21,
+        "encoded_output": 43
+      },
+      {
+        "digits": 3,
+        "input": 1,
+        "state": "B",
+        "encoded_input": 21,
+        "encoded_output": 42
+      },
+      {
+        "digits": 3,
+        "input": 1,
+        "state": "C",
+        "encoded_input": 21,
+        "encoded_output": 42
+      },
+      {
+        "digits": 3,
+        "input": 2,
+        "state": "A",
+        "encoded_input": 62,
+        "encoded_output": 18
+      },
+      {
+        "digits": 3,
+        "input": 2,
+        "state": "B",
+        "encoded_input": 62,
+        "encoded_output": 19
+      },
+      {
+        "digits": 3,
+        "input": 2,
+        "state": "C",
+        "encoded_input": 62,
+        "encoded_output": 17
+      },
+      {
+        "digits": 3,
+        "input": 3,
+        "state": "A",
+        "encoded_input": 63,
+        "encoded_output": 17
+      },
+      {
+        "digits": 3,
+        "input": 3,
+        "state": "B",
+        "encoded_input": 63,
+        "encoded_output": 4
+      },
+      {
+        "digits": 3,
+        "input": 3,
+        "state": "C",
+        "encoded_input": 63,
+        "encoded_output": 4
+      },
+      {
+        "digits": 3,
+        "input": 12,
+        "state": "A",
+        "encoded_input": 4,
+        "encoded_output": 60
+      },
+      {
+        "digits": 3,
+        "input": 12,
+        "state": "B",
+        "encoded_input": 4,
+        "encoded_output": 57
+      },
+      {
+        "digits": 3,
+        "input": 12,
+        "state": "C",
+        "encoded_input": 4,
+        "encoded_output": 59
+      },
+      {
+        "digits": 3,
+        "input": 55,
+        "state": "A",
+        "encoded_input": 59,
+        "encoded_output": 13
+      },
+      {
+        "digits": 3,
+        "input": 55,
+        "state": "B",
+        "encoded_input": 59,
+        "encoded_output": 8
+      },
+      {
+        "digits": 3,
+        "input": 55,
+        "state": "C",
+        "encoded_input": 59,
+        "encoded_output": 8
+      },
+      {
+        "digits": 3,
+        "input": 200,
+        "state": "A",
+        "encoded_input": 8,
+        "encoded_output": 56
+      },
+      {
+        "digits": 3,
+        "input": 200,
+        "state": "B",
+        "encoded_input": 8,
+        "encoded_output": 61
+      },
+      {
+        "digits": 3,
+        "input": 200,
+        "state": "C",
+        "encoded_input": 8,
+        "encoded_output": 23
+      },
+      {
+        "digits": 3,
+        "input": 891,
+        "state": "A",
+        "encoded_input": 23,
+        "encoded_output": 41
+      },
+      {
+        "digits": 3,
+        "input": 891,
+        "state": "B",
+        "encoded_input": 23,
+        "encoded_output": 44
+      },
+      {
+        "digits": 3,
+        "input": 891,
+        "state": "C",
+        "encoded_input": 23,
+        "encoded_output": 44
+      },
+      {
+        "digits": 3,
+        "input": 1099511627781,
+        "state": "A",
+        "encoded_input": 41,
+        "encoded_output": 55
+      },
+      {
+        "digits": 3,
+        "input": 1099511627781,
+        "state": "B",
+        "encoded_input": 41,
+        "encoded_output": 54
+      },
+      {
+        "digits": 3,
+        "input": 1099511627781,
+        "state": "C",
+        "encoded_input": 41,
+        "encoded_output": 54
+      },
+      {
+        "digits": 5,
+        "input": 0,
+        "state": "A",
+        "encoded_input": 0,
+        "encoded_output": 0
+      },
+      {
+        "digits": 5,
+        "input": 0,
+        "state": "B",
+        "encoded_input": 0,
+        "encoded_output": 341
+      },
+      {
+        "digits": 5,
+        "input": 0,
+        "state": "C",
+        "encoded_input": 0,
+        "encoded_output": 1023
+      },
+      {
+        "digits": 5,
+        "input": 1,
+        "state": "A",
+        "encoded_input": 341,
+        "encoded_output": 683
+      },
+      {
+        "digits": 5,
+        "input": 1,
+        "state": "B",
+        "encoded_input": 341,
+        "encoded_output": 682
+      },
+      {
+        "digits": 5,
+        "input": 1,
+        "state": "C",
+        "encoded_input": 341,
+        "encoded_output": 682
+      },
+      {
+        "digits": 5,
+        "input": 2,
+        "state": "A",
+        "encoded_input": 1022,
+        "encoded_output": 274
+      },
+      {
+        "digits": 5,
+        "input": 2,
+        "state": "B",
+        "encoded_input": 1022,
+        "encoded_output": 275
+      },
+      {
+        "digits": 5,
+        "input": 2,
+        "state": "C",
+        "encoded_input": 1022,
+        "encoded_output": 273
+      },
+      {
+        "digits": 5,
+        "input": 3,
+        "state": "A",
+        "encoded_input": 1023,
+        "encoded_output": 273
+      },
+      {
+        "digits": 5,
+        "input": 3,
+        "state": "B",
+        "encoded_input": 1023,
+        "encoded_output": 68
+      },
+      {
+        "digits": 5,
+        "input": 3,
+        "state": "C",
+        "encoded_input": 1023,
+        "encoded_output": 68
+      },
+      {
+        "digits": 5,
+        "input": 12,
+        "state": "A",
+        "encoded_input": 68,
+        "encoded_output": 956
+      },
+      {
+        "digits": 5,
+        "input": 12,
+        "state": "B",
+        "encoded_input": 68,
+        "encoded_output": 953
+      },
+      {
+        "digits": 5,
+        "input": 12,
+        "state": "C",
+        "encoded_input": 68,
+        "encoded_output": 955
+      },
+      {
+        "digits": 5,
+        "input": 55,
+        "state": "A",
+        "encoded_input": 955,
+        "encoded_output": 141
+      },
+      {
+        "digits": 5,
+        "input": 55,
+        "state": "B",
+        "encoded_input": 955,
+        "encoded_output": 136
+      },
+      {
+        "digits": 5,
+        "input": 55,
+        "state": "C",
+        "encoded_input": 955,
+        "encoded_output": 136
+      },
+      {
+        "digits": 5,
+        "input": 200,
+        "state": "A",
+        "encoded_input": 136,
+        "encoded_output": 376
+      },
+      {
+        "digits": 5,
+        "input": 200,
+        "state": "B",
+        "encoded_input": 136,
+        "encoded_output": 381
+      },
+      {
+        "digits": 5,
+        "input": 200,
+        "state": "C",
+        "encoded_input": 136,
+        "encoded_output": 983
+      },
+      {
+        "digits": 5,
+        "input": 891,
+        "state": "A",
+        "encoded_input": 983,
+        "encoded_output": 297
+      },
+      {
+        "digits": 5,
+        "input": 891,
+        "state": "B",
+        "encoded_input": 983,
+        "encoded_output": 300
+      },
+      {
+        "digits": 5,
+        "input": 891,
+        "state": "C",
+        "encoded_input": 983,
+        "encoded_output": 300
+      },
+      {
+        "digits": 5,
+        "input": 1099511627781,
+        "state": "A",
+        "encoded_input": 681,
+        "encoded_output": 887
+      },
+      {
+        "digits": 5,
+        "input": 1099511627781,
+        "state": "B",
+        "encoded_input": 681,
+        "encoded_output": 886
+      },
+      {
+        "digits": 5,
+        "input": 1099511627781,
+        "state": "C",
+        "encoded_input": 681,
+        "encoded_output": 886
+      }
+    ],
+    "word_section_Q_identity_controls": [
+      {
+        "word": "A",
+        "zero_digit_section": "A",
+        "emitted_digit": 0
+      },
+      {
+        "word": "B",
+        "zero_digit_section": "B",
+        "emitted_digit": 1
+      },
+      {
+        "word": "C",
+        "zero_digit_section": "C",
+        "emitted_digit": 3
+      },
+      {
+        "word": "CA",
+        "zero_digit_section": "CB",
+        "emitted_digit": 1
+      },
+      {
+        "word": "BC",
+        "zero_digit_section": "BC",
+        "emitted_digit": 2
+      },
+      {
+        "word": "ABC",
+        "zero_digit_section": "ABC",
+        "emitted_digit": 2
+      },
+      {
+        "word": "CACAB",
+        "zero_digit_section": "CBCCC",
+        "emitted_digit": 3
+      }
+    ],
+    "actual_C_ray_digit_controls": [
+      {
+        "C_exponent": 1,
+        "itinerary_position": 0,
+        "actual_source": 3,
+        "itinerary_digit": 3,
+        "literal_K_digit_transitions": 1
+      },
+      {
+        "C_exponent": 2,
+        "itinerary_position": 0,
+        "actual_source": 12,
+        "itinerary_digit": 0,
+        "literal_K_digit_transitions": 2
+      },
+      {
+        "C_exponent": 2,
+        "itinerary_position": 1,
+        "actual_source": 12,
+        "itinerary_digit": 1,
+        "literal_K_digit_transitions": 4
+      },
+      {
+        "C_exponent": 3,
+        "itinerary_position": 0,
+        "actual_source": 55,
+        "itinerary_digit": 3,
+        "literal_K_digit_transitions": 3
+      },
+      {
+        "C_exponent": 3,
+        "itinerary_position": 1,
+        "actual_source": 55,
+        "itinerary_digit": 2,
+        "literal_K_digit_transitions": 6
+      },
+      {
+        "C_exponent": 3,
+        "itinerary_position": 2,
+        "actual_source": 55,
+        "itinerary_digit": 3,
+        "literal_K_digit_transitions": 9
+      },
+      {
+        "C_exponent": 5,
+        "itinerary_position": 0,
+        "actual_source": 891,
+        "itinerary_digit": 3,
+        "literal_K_digit_transitions": 5
+      },
+      {
+        "C_exponent": 5,
+        "itinerary_position": 2,
+        "actual_source": 891,
+        "itinerary_digit": 1,
+        "literal_K_digit_transitions": 15
+      },
+      {
+        "C_exponent": 5,
+        "itinerary_position": 4,
+        "actual_source": 891,
+        "itinerary_digit": 3,
+        "literal_K_digit_transitions": 25
+      },
+      {
+        "C_exponent": 8,
+        "itinerary_position": 0,
+        "actual_source": 51424,
+        "itinerary_digit": 0,
+        "literal_K_digit_transitions": 8
+      },
+      {
+        "C_exponent": 8,
+        "itinerary_position": 4,
+        "actual_source": 51424,
+        "itinerary_digit": 2,
+        "literal_K_digit_transitions": 40
+      },
+      {
+        "C_exponent": 8,
+        "itinerary_position": 7,
+        "actual_source": 51424,
+        "itinerary_digit": 1,
+        "literal_K_digit_transitions": 64
+      }
+    ],
+    "constant_run_controls": 156,
+    "huge_constant_run_controls": [
+      {
+        "initial_state": "C",
+        "input_digit": 0,
+        "input_count": 1099511627783,
+        "output_prefix": [],
+        "output_period": [
+          3
+        ],
+        "period_repetitions": 1099511627783,
+        "output_suffix": [],
+        "final_state": "C",
+        "local_state_transitions": 1
+      },
+      {
+        "initial_state": "C",
+        "input_digit": 2,
+        "input_count": 1099511627783,
+        "output_prefix": [],
+        "output_period": [
+          1,
+          3
+        ],
+        "period_repetitions": 549755813891,
+        "output_suffix": [
+          1
+        ],
+        "final_state": "B",
+        "local_state_transitions": 2
+      },
+      {
+        "initial_state": "C",
+        "input_digit": 3,
+        "input_count": 1099511627783,
+        "output_prefix": [
+          0
+        ],
+        "output_period": [
+          1,
+          0
+        ],
+        "period_repetitions": 549755813891,
+        "output_suffix": [],
+        "final_state": "A",
+        "local_state_transitions": 3
+      }
+    ],
+    "cocycle_controls": 28,
+    "actual_diagonal_cocycle_controls": [
+      {
+        "h": 0,
+        "source_C_exponent": 0,
+        "commutator_low2": 0
+      },
+      {
+        "h": 1,
+        "source_C_exponent": 1,
+        "commutator_low2": 1
+      },
+      {
+        "h": 2,
+        "source_C_exponent": 2,
+        "commutator_low2": 0
+      },
+      {
+        "h": 3,
+        "source_C_exponent": 3,
+        "commutator_low2": 3
+      },
+      {
+        "h": 4,
+        "source_C_exponent": 4,
+        "commutator_low2": 0
+      },
+      {
+        "h": 7,
+        "source_C_exponent": 7,
+        "commutator_low2": 1
+      },
+      {
+        "h": 8,
+        "source_C_exponent": 8,
+        "commutator_low2": 0
+      }
+    ],
+    "largest_actual_C_exponent": 8
+  },
+  "proved": [
+    "Phi is a compatible2-adic isometry and bijection, with Phi(Hx)=Phi(x)>>2.",
+    "Phi conjugates each originalABC generator to the output-driven base4 state with the same root permutation.",
+    "One base4 zero section of a chronological generator word is literallyQ(word).",
+    "The exact two-bit HC cocycle has the displayed four-state recurrence."
+  ],
+  "prefix_construction_cost": "Forward and inverse of an m-digit prefix each use m(m-1) Boolean local updates, with O(m) output/conversion work in explicit bit/digit-array representation.",
+  "scope": "Explicit realization of standard permutative itinerary coding. The one-pass run compiler does not assert a cheap K-power or growing-index singleton query.",
+  "source_sha256": {
+    "p3_itinerary_conjugacy.py": "b2fa5b5697a9664f01325d695a6bfc1d6183dedcacafa0adf24d8bc9abdaa273",
+    "p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29",
+    "p3_itinerary_inverse.py": "45d9508c2afc6563a2bd65a56cf2df463cfe0968085a9cbfffa635d04361e3a8",
+    "p3_query_cone_rewrite.py": "b77990ef8a3a223a44e1d61c498832fdfe52c65bd6d7931b8058a5f4a41fbca2"
+  }
+}

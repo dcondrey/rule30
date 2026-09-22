@@ -1,0 +1,499 @@
+{
+  "schema": "rule30.p3-query-balanced-slp.v1",
+  "canonical_shape": "At length L>=2, left child length is the largest power of2 strictly below L.",
+  "structure_controls": {
+    "fixed_word_controls": [
+      {
+        "word": "A",
+        "all_splits": 2,
+        "opposite_parenthesizations_have_identical_node": true
+      },
+      {
+        "word": "ABC",
+        "all_splits": 4,
+        "opposite_parenthesizations_have_identical_node": true
+      },
+      {
+        "word": "ABCABCBAACBBCC",
+        "all_splits": 15,
+        "opposite_parenthesizations_have_identical_node": true
+      },
+      {
+        "word": "CCCCCCCCCA",
+        "all_splits": 11,
+        "opposite_parenthesizations_have_identical_node": true
+      },
+      {
+        "word": "BACAABBCCABACBA",
+        "all_splits": 16,
+        "opposite_parenthesizations_have_identical_node": true
+      }
+    ],
+    "all_grammar_nodes_checked": 138,
+    "canonical_concat_requests": 527,
+    "distinct_canonical_concat_subqueries": 294,
+    "canonical_split_requests": 441,
+    "distinct_canonical_split_subqueries": 270,
+    "canonical_intern_requests": 294
+  },
+  "directed_queries": [
+    {
+      "n": 8,
+      "variants": [
+        {
+          "n": 8,
+          "center": 1,
+          "seed_input_bits_consumed": 9,
+          "section_advances": 8,
+          "initial_grammar_nodes": 7,
+          "constructed_grammar_nodes": 32,
+          "concat_requests": 34,
+          "section_requests": 68,
+          "distinct_section_subqueries": 36,
+          "leaf_section_evaluations": 6,
+          "precomputed_spacetime_or_table": false,
+          "mode": "original",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": false,
+          "recorded_operation_requests": 102
+        },
+        {
+          "n": 8,
+          "center": 1,
+          "seed_input_bits_consumed": 9,
+          "section_advances": 8,
+          "initial_grammar_nodes": 7,
+          "constructed_grammar_nodes": 32,
+          "concat_requests": 34,
+          "section_requests": 68,
+          "distinct_section_subqueries": 36,
+          "leaf_section_evaluations": 6,
+          "precomputed_spacetime_or_table": false,
+          "mode": "original",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": false,
+          "balancing": {
+            "canonical_concat_requests": 34,
+            "distinct_canonical_concat_subqueries": 28,
+            "canonical_split_requests": 0,
+            "distinct_canonical_split_subqueries": 0,
+            "canonical_intern_requests": 28
+          },
+          "recorded_operation_requests": 130
+        },
+        {
+          "n": 8,
+          "center": 1,
+          "active_word_length": 5,
+          "initial_grammar_nodes": 7,
+          "constructed_grammar_nodes": 35,
+          "section_requests": 53,
+          "distinct_section_subqueries": 29,
+          "concat_requests": 37,
+          "zero_bit_section_advances": 7,
+          "core_steps": 3,
+          "drop_first_node_visits": 10,
+          "normalizer_calls": 0,
+          "mode": "cone",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": false,
+          "recorded_operation_requests": 100
+        },
+        {
+          "n": 8,
+          "center": 1,
+          "active_word_length": 5,
+          "initial_grammar_nodes": 8,
+          "constructed_grammar_nodes": 29,
+          "section_requests": 41,
+          "distinct_section_subqueries": 23,
+          "concat_requests": 41,
+          "zero_bit_section_advances": 7,
+          "core_steps": 3,
+          "drop_first_node_visits": 12,
+          "normalizer_calls": 0,
+          "mode": "cone",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": false,
+          "balancing": {
+            "canonical_concat_requests": 41,
+            "distinct_canonical_concat_subqueries": 26,
+            "canonical_split_requests": 8,
+            "distinct_canonical_split_subqueries": 7,
+            "canonical_intern_requests": 26
+          },
+          "recorded_operation_requests": 128
+        },
+        {
+          "n": 8,
+          "center": 1,
+          "active_word_length": 5,
+          "initial_grammar_nodes": 7,
+          "constructed_grammar_nodes": 35,
+          "section_requests": 37,
+          "distinct_section_subqueries": 21,
+          "concat_requests": 53,
+          "zero_bit_section_advances": 7,
+          "core_steps": 3,
+          "drop_first_node_visits": 12,
+          "normalizer_calls": 4,
+          "mode": "cone",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": true,
+          "pair_normalizer": {
+            "normalizations": 4,
+            "transduction_requests": 30,
+            "distinct_transduction_subqueries": 24,
+            "leaf_transductions": 11,
+            "changed_pair_occurrences": 5,
+            "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+            "changed_unpaired_final_letters": 0
+          },
+          "recorded_operation_requests": 132
+        },
+        {
+          "n": 8,
+          "center": 1,
+          "active_word_length": 5,
+          "initial_grammar_nodes": 8,
+          "constructed_grammar_nodes": 36,
+          "section_requests": 37,
+          "distinct_section_subqueries": 21,
+          "concat_requests": 60,
+          "zero_bit_section_advances": 7,
+          "core_steps": 3,
+          "drop_first_node_visits": 12,
+          "normalizer_calls": 4,
+          "mode": "cone",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": true,
+          "balancing": {
+            "canonical_concat_requests": 60,
+            "distinct_canonical_concat_subqueries": 33,
+            "canonical_split_requests": 8,
+            "distinct_canonical_split_subqueries": 7,
+            "canonical_intern_requests": 33
+          },
+          "pair_normalizer": {
+            "normalizations": 4,
+            "transduction_requests": 28,
+            "distinct_transduction_subqueries": 23,
+            "leaf_transductions": 11,
+            "changed_pair_occurrences": 5,
+            "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+            "changed_unpaired_final_letters": 0
+          },
+          "recorded_operation_requests": 178
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "variants": [
+        {
+          "n": 17,
+          "center": 0,
+          "seed_input_bits_consumed": 18,
+          "section_advances": 17,
+          "initial_grammar_nodes": 9,
+          "constructed_grammar_nodes": 99,
+          "concat_requests": 113,
+          "section_requests": 231,
+          "distinct_section_subqueries": 113,
+          "leaf_section_evaluations": 6,
+          "precomputed_spacetime_or_table": false,
+          "mode": "original",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": false,
+          "recorded_operation_requests": 344
+        },
+        {
+          "n": 17,
+          "center": 0,
+          "seed_input_bits_consumed": 18,
+          "section_advances": 17,
+          "initial_grammar_nodes": 12,
+          "constructed_grammar_nodes": 101,
+          "concat_requests": 122,
+          "section_requests": 229,
+          "distinct_section_subqueries": 112,
+          "leaf_section_evaluations": 6,
+          "precomputed_spacetime_or_table": false,
+          "mode": "original",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": false,
+          "balancing": {
+            "canonical_concat_requests": 122,
+            "distinct_canonical_concat_subqueries": 100,
+            "canonical_split_requests": 10,
+            "distinct_canonical_split_subqueries": 7,
+            "canonical_intern_requests": 100
+          },
+          "recorded_operation_requests": 461
+        },
+        {
+          "n": 17,
+          "center": 0,
+          "active_word_length": 9,
+          "initial_grammar_nodes": 8,
+          "constructed_grammar_nodes": 129,
+          "section_requests": 190,
+          "distinct_section_subqueries": 93,
+          "concat_requests": 141,
+          "zero_bit_section_advances": 16,
+          "core_steps": 8,
+          "drop_first_node_visits": 49,
+          "normalizer_calls": 0,
+          "mode": "cone",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": false,
+          "recorded_operation_requests": 380
+        },
+        {
+          "n": 17,
+          "center": 0,
+          "active_word_length": 9,
+          "initial_grammar_nodes": 10,
+          "constructed_grammar_nodes": 86,
+          "section_requests": 122,
+          "distinct_section_subqueries": 59,
+          "concat_requests": 137,
+          "zero_bit_section_advances": 16,
+          "core_steps": 8,
+          "drop_first_node_visits": 40,
+          "normalizer_calls": 0,
+          "mode": "cone",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": false,
+          "balancing": {
+            "canonical_concat_requests": 137,
+            "distinct_canonical_concat_subqueries": 86,
+            "canonical_split_requests": 39,
+            "distinct_canonical_split_subqueries": 27,
+            "canonical_intern_requests": 86
+          },
+          "recorded_operation_requests": 424
+        },
+        {
+          "n": 17,
+          "center": 0,
+          "active_word_length": 9,
+          "initial_grammar_nodes": 8,
+          "constructed_grammar_nodes": 116,
+          "section_requests": 132,
+          "distinct_section_subqueries": 64,
+          "concat_requests": 178,
+          "zero_bit_section_advances": 16,
+          "core_steps": 8,
+          "drop_first_node_visits": 46,
+          "normalizer_calls": 9,
+          "mode": "cone",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": true,
+          "pair_normalizer": {
+            "normalizations": 9,
+            "transduction_requests": 101,
+            "distinct_transduction_subqueries": 70,
+            "leaf_transductions": 24,
+            "changed_pair_occurrences": 22,
+            "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+            "changed_unpaired_final_letters": 1
+          },
+          "recorded_operation_requests": 457
+        },
+        {
+          "n": 17,
+          "center": 0,
+          "active_word_length": 9,
+          "initial_grammar_nodes": 10,
+          "constructed_grammar_nodes": 112,
+          "section_requests": 126,
+          "distinct_section_subqueries": 61,
+          "concat_requests": 204,
+          "zero_bit_section_advances": 16,
+          "core_steps": 8,
+          "drop_first_node_visits": 40,
+          "normalizer_calls": 9,
+          "mode": "cone",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": true,
+          "balancing": {
+            "canonical_concat_requests": 204,
+            "distinct_canonical_concat_subqueries": 112,
+            "canonical_split_requests": 39,
+            "distinct_canonical_split_subqueries": 27,
+            "canonical_intern_requests": 112
+          },
+          "pair_normalizer": {
+            "normalizations": 9,
+            "transduction_requests": 93,
+            "distinct_transduction_subqueries": 66,
+            "leaf_transductions": 24,
+            "changed_pair_occurrences": 22,
+            "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+            "changed_unpaired_final_letters": 1
+          },
+          "recorded_operation_requests": 614
+        }
+      ]
+    },
+    {
+      "n": 32,
+      "variants": [
+        {
+          "n": 32,
+          "center": 0,
+          "seed_input_bits_consumed": 33,
+          "section_advances": 32,
+          "initial_grammar_nodes": 9,
+          "constructed_grammar_nodes": 205,
+          "concat_requests": 246,
+          "section_requests": 512,
+          "distinct_section_subqueries": 246,
+          "leaf_section_evaluations": 6,
+          "precomputed_spacetime_or_table": false,
+          "mode": "original",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": false,
+          "recorded_operation_requests": 758
+        },
+        {
+          "n": 32,
+          "center": 0,
+          "seed_input_bits_consumed": 33,
+          "section_advances": 32,
+          "initial_grammar_nodes": 9,
+          "constructed_grammar_nodes": 205,
+          "concat_requests": 246,
+          "section_requests": 512,
+          "distinct_section_subqueries": 246,
+          "leaf_section_evaluations": 6,
+          "precomputed_spacetime_or_table": false,
+          "mode": "original",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": false,
+          "balancing": {
+            "canonical_concat_requests": 246,
+            "distinct_canonical_concat_subqueries": 201,
+            "canonical_split_requests": 0,
+            "distinct_canonical_split_subqueries": 0,
+            "canonical_intern_requests": 201
+          },
+          "recorded_operation_requests": 959
+        },
+        {
+          "n": 32,
+          "center": 0,
+          "active_word_length": 17,
+          "initial_grammar_nodes": 9,
+          "constructed_grammar_nodes": 437,
+          "section_requests": 653,
+          "distinct_section_subqueries": 317,
+          "concat_requests": 469,
+          "zero_bit_section_advances": 31,
+          "core_steps": 15,
+          "drop_first_node_visits": 152,
+          "normalizer_calls": 0,
+          "mode": "cone",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": false,
+          "recorded_operation_requests": 1274
+        },
+        {
+          "n": 32,
+          "center": 0,
+          "active_word_length": 17,
+          "initial_grammar_nodes": 12,
+          "constructed_grammar_nodes": 244,
+          "section_requests": 347,
+          "distinct_section_subqueries": 164,
+          "concat_requests": 405,
+          "zero_bit_section_advances": 31,
+          "core_steps": 15,
+          "drop_first_node_visits": 90,
+          "normalizer_calls": 0,
+          "mode": "cone",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": false,
+          "balancing": {
+            "canonical_concat_requests": 405,
+            "distinct_canonical_concat_subqueries": 262,
+            "canonical_split_requests": 151,
+            "distinct_canonical_split_subqueries": 96,
+            "canonical_intern_requests": 262
+          },
+          "recorded_operation_requests": 1255
+        },
+        {
+          "n": 32,
+          "center": 0,
+          "active_word_length": 17,
+          "initial_grammar_nodes": 9,
+          "constructed_grammar_nodes": 385,
+          "section_requests": 437,
+          "distinct_section_subqueries": 209,
+          "concat_requests": 559,
+          "zero_bit_section_advances": 31,
+          "core_steps": 15,
+          "drop_first_node_visits": 134,
+          "normalizer_calls": 16,
+          "mode": "cone",
+          "canonical_balancing": false,
+          "contextual_pair_rewrite": true,
+          "pair_normalizer": {
+            "normalizations": 16,
+            "transduction_requests": 336,
+            "distinct_transduction_subqueries": 222,
+            "leaf_transductions": 62,
+            "changed_pair_occurrences": 78,
+            "genuine_pair_occurrences_beyond_single_C_to_B": 5,
+            "changed_unpaired_final_letters": 4
+          },
+          "recorded_operation_requests": 1466
+        },
+        {
+          "n": 32,
+          "center": 0,
+          "active_word_length": 17,
+          "initial_grammar_nodes": 12,
+          "constructed_grammar_nodes": 322,
+          "section_requests": 377,
+          "distinct_section_subqueries": 179,
+          "concat_requests": 606,
+          "zero_bit_section_advances": 31,
+          "core_steps": 15,
+          "drop_first_node_visits": 90,
+          "normalizer_calls": 16,
+          "mode": "cone",
+          "canonical_balancing": true,
+          "contextual_pair_rewrite": true,
+          "balancing": {
+            "canonical_concat_requests": 606,
+            "distinct_canonical_concat_subqueries": 342,
+            "canonical_split_requests": 151,
+            "distinct_canonical_split_subqueries": 96,
+            "canonical_intern_requests": 342
+          },
+          "pair_normalizer": {
+            "normalizations": 16,
+            "transduction_requests": 276,
+            "distinct_transduction_subqueries": 192,
+            "leaf_transductions": 62,
+            "changed_pair_occurrences": 78,
+            "genuine_pair_occurrences_beyond_single_C_to_B": 5,
+            "changed_unpaired_final_letters": 4
+          },
+          "recorded_operation_requests": 1842
+        }
+      ]
+    }
+  ],
+  "scope": "Three fixed implementation discriminators; no larger census, asymptotic fit, or new query identity. Canonical concatenation/splitting preserve the exact generator word.",
+  "proof": "Induct on word length. A canonical root split is unique. The concat/split cases divide only into shorter words, preserve chronological order, and intern precisely that unique split. Thus all parenthesizations of an equal generator word return the same node. The inherited exact section identities and contextual normalizer remain valid.",
+  "source_sha256": {
+    "p3_query_balanced_slp.py": "4d229a47c77f85bb576c0c0ea69cc3b8eaa2953a54e1b3cae37c305fcf7f26c4",
+    "p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29",
+    "p3_query_cone_rewrite.py": "b77990ef8a3a223a44e1d61c498832fdfe52c65bd6d7931b8058a5f4a41fbca2",
+    "p3_observable_rewrite_pairs.py": "5e2456b9ed5277346f345418e79d525c13540d216bcf097fba1b052800d0ef34"
+  }
+}

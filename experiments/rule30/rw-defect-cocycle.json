@@ -1,0 +1,973 @@
+{
+  "correction": {
+    "left_J_prefix": [
+      2,
+      2,
+      1,
+      0,
+      1
+    ],
+    "left_suffix_action": "BCCCC",
+    "right_J_prefix": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "right_suffix_action": "CCCCC",
+    "all_suffix_F3": [
+      "02 R2^3(v)",
+      "22 R2^3(v)"
+    ],
+    "all_suffix_F4": [
+      "1 R2^4(v)",
+      "2 R2^4(v)"
+    ],
+    "all_suffix_F5": [
+      "R1 R2^4(v)",
+      "R2^5(v)"
+    ]
+  },
+  "run_erasure": {
+    "closed_states": 7,
+    "single_state_222_flushes": [
+      {
+        "state": "A",
+        "output_on_222": [
+          1,
+          3,
+          0
+        ],
+        "section": "C"
+      },
+      {
+        "state": "B",
+        "output_on_222": [
+          3,
+          0,
+          2
+        ],
+        "section": "C"
+      },
+      {
+        "state": "C",
+        "output_on_222": [
+          2,
+          2,
+          2
+        ],
+        "section": "C"
+      },
+      {
+        "state": "D",
+        "output_on_222": [
+          2,
+          2,
+          2
+        ],
+        "section": "C"
+      },
+      {
+        "state": "E",
+        "output_on_222": [
+          0,
+          2,
+          2
+        ],
+        "section": "C"
+      },
+      {
+        "state": "F",
+        "output_on_222": [
+          0,
+          2,
+          2
+        ],
+        "section": "C"
+      },
+      {
+        "state": "G",
+        "output_on_222": [
+          2,
+          2,
+          2
+        ],
+        "section": "C"
+      }
+    ],
+    "composition_flush_all_k": true,
+    "general_safe_rule": "2^k 1 2^(3k+2) -> 2^(4k+3), k>=0",
+    "iterations_sufficient": "4k+3",
+    "guard_requirement": "W begins with the displayed block, which must lie entirely inside W; no arbitrary left-context substitution.",
+    "shorter_depth2_rule": "2212222 -> 2222222, at F^7",
+    "bounded_symbolic_controls": [
+      {
+        "leading_twos": 0,
+        "source_length": 3,
+        "residual": "",
+        "final_suffix_action": "CCC"
+      },
+      {
+        "leading_twos": 1,
+        "source_length": 7,
+        "residual": "C",
+        "final_suffix_action": "CCCCCCC"
+      },
+      {
+        "leading_twos": 2,
+        "source_length": 11,
+        "residual": "BC",
+        "final_suffix_action": "CCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 3,
+        "source_length": 15,
+        "residual": "ABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 4,
+        "source_length": 19,
+        "residual": "DABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 5,
+        "source_length": 23,
+        "residual": "BDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 6,
+        "source_length": 27,
+        "residual": "EBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 7,
+        "source_length": 31,
+        "residual": "EEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 8,
+        "source_length": 35,
+        "residual": "BEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 9,
+        "source_length": 39,
+        "residual": "EBEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 10,
+        "source_length": 43,
+        "residual": "AEBEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 11,
+        "source_length": 47,
+        "residual": "BAEBEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 12,
+        "source_length": 51,
+        "residual": "GBAEBEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 13,
+        "source_length": 55,
+        "residual": "AGBAEBEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 14,
+        "source_length": 59,
+        "residual": "CAGBAEBEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 15,
+        "source_length": 63,
+        "residual": "CCAGBAEBEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      },
+      {
+        "leading_twos": 16,
+        "source_length": 67,
+        "residual": "CCCAGBAEBEEBDABC",
+        "final_suffix_action": "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC"
+      }
+    ],
+    "all_length_proof": "Induction on composition length from the seven closed states and their common section after222; not extrapolation from these17 controls."
+  },
+  "ordered_cocycle": {
+    "point": [
+      1,
+      3,
+      0
+    ],
+    "exact_point_period": 16,
+    "ordered_orbit": [
+      {
+        "phase": 0,
+        "input": [
+          1,
+          3,
+          0
+        ],
+        "output": [
+          0,
+          0,
+          2
+        ],
+        "single_state_section": "C"
+      },
+      {
+        "phase": 1,
+        "input": [
+          0,
+          0,
+          2
+        ],
+        "output": [
+          1,
+          0,
+          1
+        ],
+        "single_state_section": "B"
+      },
+      {
+        "phase": 2,
+        "input": [
+          1,
+          0,
+          1
+        ],
+        "output": [
+          0,
+          2,
+          0
+        ],
+        "single_state_section": "A"
+      },
+      {
+        "phase": 3,
+        "input": [
+          0,
+          2,
+          0
+        ],
+        "output": [
+          1,
+          3,
+          2
+        ],
+        "single_state_section": "D"
+      },
+      {
+        "phase": 4,
+        "input": [
+          1,
+          3,
+          2
+        ],
+        "output": [
+          0,
+          0,
+          1
+        ],
+        "single_state_section": "B"
+      },
+      {
+        "phase": 5,
+        "input": [
+          0,
+          0,
+          1
+        ],
+        "output": [
+          1,
+          0,
+          3
+        ],
+        "single_state_section": "E"
+      },
+      {
+        "phase": 6,
+        "input": [
+          1,
+          0,
+          3
+        ],
+        "output": [
+          0,
+          2,
+          3
+        ],
+        "single_state_section": "E"
+      },
+      {
+        "phase": 7,
+        "input": [
+          0,
+          2,
+          3
+        ],
+        "output": [
+          1,
+          3,
+          1
+        ],
+        "single_state_section": "B"
+      },
+      {
+        "phase": 8,
+        "input": [
+          1,
+          3,
+          1
+        ],
+        "output": [
+          0,
+          0,
+          3
+        ],
+        "single_state_section": "E"
+      },
+      {
+        "phase": 9,
+        "input": [
+          0,
+          0,
+          3
+        ],
+        "output": [
+          1,
+          0,
+          0
+        ],
+        "single_state_section": "A"
+      },
+      {
+        "phase": 10,
+        "input": [
+          1,
+          0,
+          0
+        ],
+        "output": [
+          0,
+          2,
+          1
+        ],
+        "single_state_section": "B"
+      },
+      {
+        "phase": 11,
+        "input": [
+          0,
+          2,
+          1
+        ],
+        "output": [
+          1,
+          3,
+          3
+        ],
+        "single_state_section": "G"
+      },
+      {
+        "phase": 12,
+        "input": [
+          1,
+          3,
+          3
+        ],
+        "output": [
+          0,
+          0,
+          0
+        ],
+        "single_state_section": "A"
+      },
+      {
+        "phase": 13,
+        "input": [
+          0,
+          0,
+          0
+        ],
+        "output": [
+          1,
+          0,
+          2
+        ],
+        "single_state_section": "C"
+      },
+      {
+        "phase": 14,
+        "input": [
+          1,
+          0,
+          2
+        ],
+        "output": [
+          0,
+          2,
+          2
+        ],
+        "single_state_section": "C"
+      },
+      {
+        "phase": 15,
+        "input": [
+          0,
+          2,
+          2
+        ],
+        "output": [
+          1,
+          3,
+          0
+        ],
+        "single_state_section": "C"
+      }
+    ],
+    "phase_residuals_T_b": [
+      "",
+      "C",
+      "BC",
+      "ABC",
+      "DABC",
+      "BDABC",
+      "EBDABC",
+      "EEBDABC",
+      "BEEBDABC",
+      "EBEEBDABC",
+      "AEBEEBDABC",
+      "BAEBEEBDABC",
+      "GBAEBEEBDABC",
+      "AGBAEBEEBDABC",
+      "CAGBAEBEEBDABC",
+      "CCAGBAEBEEBDABC"
+    ],
+    "return_section_L": "CCCAGBAEBEEBDABC",
+    "all_k_ordered_formula": "T_(16a+b)=T_b L^a, a>=0, 0<=b<16",
+    "relative_defect": "Delta_(16a+b)=T_b L^a C^(-(16a+b))",
+    "one_step_cocycle": "Delta_(k+1)=s_(k mod16) Delta_k C^(-1)",
+    "scope": "Ordered actions on the complete suffix. A periodic point orbit does not make the residual action finite or periodic."
+  },
+  "sharp_padding": {
+    "padding_is_minimum_for_all_suffix_identity": true,
+    "minimum_definition": "Least extra j>=0 such that F^(k+3+j)(2^k122 2^j v)=F^(k+3+j)(2^(k+3+j)v) for every finite suffix v. This does not concern later coalescence of one fixed short guarded instance.",
+    "minimum_padding_f_k": "0 for k=0,1; 2 for k=2,3; 3k-8 for k>=4",
+    "safe_rule": "2^k1 2^(f(k)+2) -> 2^(k+3+f(k)), at F^(k+3+f(k))",
+    "new_short_rule": "22212222 -> 22222222, at F^8",
+    "base_C4_on_130_2infinity": {
+      "finite_part": [
+        1,
+        3,
+        2,
+        0,
+        1,
+        3,
+        0
+      ],
+      "remaining_section": "CCCC",
+      "C_section_before_final_130": "A"
+    },
+    "marker_expansions": [
+      {
+        "state": "A",
+        "output_on_130222": [
+          3,
+          1,
+          0,
+          1,
+          3,
+          0
+        ],
+        "prefix_H": [
+          3,
+          1,
+          0
+        ],
+        "section": "C"
+      },
+      {
+        "state": "B",
+        "output_on_130222": [
+          1,
+          2,
+          0,
+          1,
+          3,
+          0
+        ],
+        "prefix_H": [
+          1,
+          2,
+          0
+        ],
+        "section": "C"
+      },
+      {
+        "state": "D",
+        "output_on_130222": [
+          1,
+          2,
+          0,
+          1,
+          3,
+          0
+        ],
+        "prefix_H": [
+          1,
+          2,
+          0
+        ],
+        "section": "C"
+      },
+      {
+        "state": "G",
+        "output_on_130222": [
+          1,
+          2,
+          0,
+          1,
+          3,
+          0
+        ],
+        "prefix_H": [
+          1,
+          2,
+          0
+        ],
+        "section": "C"
+      }
+    ],
+    "closure_after_H": [
+      {
+        "state": "A",
+        "input": [
+          1,
+          2,
+          0
+        ],
+        "section": "B"
+      },
+      {
+        "state": "A",
+        "input": [
+          3,
+          1,
+          0
+        ],
+        "section": "G"
+      },
+      {
+        "state": "B",
+        "input": [
+          1,
+          2,
+          0
+        ],
+        "section": "D"
+      },
+      {
+        "state": "B",
+        "input": [
+          3,
+          1,
+          0
+        ],
+        "section": "A"
+      },
+      {
+        "state": "C",
+        "input": [
+          1,
+          2,
+          0
+        ],
+        "section": "A"
+      },
+      {
+        "state": "C",
+        "input": [
+          3,
+          1,
+          0
+        ],
+        "section": "A"
+      },
+      {
+        "state": "D",
+        "input": [
+          1,
+          2,
+          0
+        ],
+        "section": "D"
+      },
+      {
+        "state": "D",
+        "input": [
+          3,
+          1,
+          0
+        ],
+        "section": "A"
+      },
+      {
+        "state": "E",
+        "input": [
+          1,
+          2,
+          0
+        ],
+        "section": "B"
+      },
+      {
+        "state": "E",
+        "input": [
+          3,
+          1,
+          0
+        ],
+        "section": "A"
+      },
+      {
+        "state": "F",
+        "input": [
+          1,
+          2,
+          0
+        ],
+        "section": "A"
+      },
+      {
+        "state": "F",
+        "input": [
+          3,
+          1,
+          0
+        ],
+        "section": "A"
+      },
+      {
+        "state": "G",
+        "input": [
+          1,
+          2,
+          0
+        ],
+        "section": "D"
+      },
+      {
+        "state": "G",
+        "input": [
+          3,
+          1,
+          0
+        ],
+        "section": "A"
+      }
+    ],
+    "small_exact_minima": [
+      {
+        "k": 0,
+        "T_k": "",
+        "minimum_padding": 0,
+        "smaller_padding_root_obstructions": []
+      },
+      {
+        "k": 1,
+        "T_k": "C",
+        "minimum_padding": 0,
+        "smaller_padding_root_obstructions": []
+      },
+      {
+        "k": 2,
+        "T_k": "BC",
+        "minimum_padding": 2,
+        "smaller_padding_root_obstructions": [
+          {
+            "padding": 0,
+            "section": "BC",
+            "first_distinguishing_symbol": 0
+          },
+          {
+            "padding": 1,
+            "section": "FC",
+            "first_distinguishing_symbol": 0
+          }
+        ]
+      },
+      {
+        "k": 3,
+        "T_k": "ABC",
+        "minimum_padding": 2,
+        "smaller_padding_root_obstructions": [
+          {
+            "padding": 0,
+            "section": "ABC",
+            "first_distinguishing_symbol": 0
+          },
+          {
+            "padding": 1,
+            "section": "AFC",
+            "first_distinguishing_symbol": 0
+          }
+        ]
+      },
+      {
+        "k": 4,
+        "T_k": "DABC",
+        "minimum_padding": 4,
+        "smaller_padding_root_obstructions": [
+          {
+            "padding": 0,
+            "section": "DABC",
+            "first_distinguishing_symbol": 0
+          },
+          {
+            "padding": 1,
+            "section": "AAFC",
+            "first_distinguishing_symbol": 0
+          },
+          {
+            "padding": 2,
+            "section": "BCCC",
+            "first_distinguishing_symbol": 0
+          },
+          {
+            "padding": 3,
+            "section": "FCCC",
+            "first_distinguishing_symbol": 0
+          }
+        ]
+      }
+    ],
+    "bounded_symbolic_controls": [
+      {
+        "k": 0,
+        "minimum_padding": 0,
+        "source_length": 3
+      },
+      {
+        "k": 1,
+        "minimum_padding": 0,
+        "source_length": 4
+      },
+      {
+        "k": 2,
+        "minimum_padding": 2,
+        "source_length": 7
+      },
+      {
+        "k": 3,
+        "minimum_padding": 2,
+        "source_length": 8
+      },
+      {
+        "k": 4,
+        "minimum_padding": 4,
+        "source_length": 11
+      },
+      {
+        "k": 5,
+        "minimum_padding": 7,
+        "source_length": 15
+      },
+      {
+        "k": 6,
+        "minimum_padding": 10,
+        "source_length": 19
+      },
+      {
+        "k": 7,
+        "minimum_padding": 13,
+        "source_length": 23
+      },
+      {
+        "k": 8,
+        "minimum_padding": 16,
+        "source_length": 27
+      },
+      {
+        "k": 9,
+        "minimum_padding": 19,
+        "source_length": 31
+      },
+      {
+        "k": 10,
+        "minimum_padding": 22,
+        "source_length": 35
+      },
+      {
+        "k": 11,
+        "minimum_padding": 25,
+        "source_length": 39
+      },
+      {
+        "k": 12,
+        "minimum_padding": 28,
+        "source_length": 43
+      },
+      {
+        "k": 13,
+        "minimum_padding": 31,
+        "source_length": 47
+      },
+      {
+        "k": 14,
+        "minimum_padding": 34,
+        "source_length": 51
+      },
+      {
+        "k": 15,
+        "minimum_padding": 37,
+        "source_length": 55
+      },
+      {
+        "k": 16,
+        "minimum_padding": 40,
+        "source_length": 59
+      }
+    ],
+    "one_cell_lower_witness_formula": "For k>=4: F^(4k-6)(2^k1 2^(3k-6))=0, whereas F^(4k-6)(2^(4k-5))=2.",
+    "direct_finite_lower_witness_controls": [
+      {
+        "k": 4,
+        "input_length": 11,
+        "cutoff": 10,
+        "left_output": "0",
+        "right_output": "2"
+      },
+      {
+        "k": 5,
+        "input_length": 15,
+        "cutoff": 14,
+        "left_output": "0",
+        "right_output": "2"
+      },
+      {
+        "k": 6,
+        "input_length": 19,
+        "cutoff": 18,
+        "left_output": "0",
+        "right_output": "2"
+      }
+    ],
+    "all_k_upper_proof": "Bootstrap exact T4 padding4; each of k-4 further outer states needs at most3 more twos from any section.",
+    "all_k_lower_proof": "Invariant P130 2^infinity with C|P in{A,B,D,G}; each C application moves its final non2 three positions right. Base k4 and the four expansions plus14 closure checks prove this for every k>=4.",
+    "guard_scope": "Only anchored prefixes wholly inside W. Minimality is for uniform identities on every four-state suffix, not restricted actual RW continuations."
+  },
+  "nonuniform_erasure": {
+    "for_every_h_ge_0_some_suffix_differs_after_5_plus_h": true,
+    "h_ge_2_symbolic_witness": "y=21 3^(h-2)0; v=J^-1 C^-4(y)",
+    "scope": "Arbitrary four-state suffixes. The construction does not prove an RW hard-core suffix or terminal12a witness for every h.",
+    "bounded_independent_endpoint_controls": [
+      {
+        "further_deletions": 0,
+        "input_to_B_C": "0",
+        "suffix": "0",
+        "left": "0",
+        "right": "1"
+      },
+      {
+        "further_deletions": 1,
+        "input_to_B_C": "20",
+        "suffix": "21",
+        "left": "2",
+        "right": "1"
+      },
+      {
+        "further_deletions": 2,
+        "input_to_B_C": "210",
+        "suffix": "203",
+        "left": "0",
+        "right": "2"
+      },
+      {
+        "further_deletions": 3,
+        "input_to_B_C": "2130",
+        "suffix": "2003",
+        "left": "0",
+        "right": "2"
+      },
+      {
+        "further_deletions": 4,
+        "input_to_B_C": "21330",
+        "suffix": "20011",
+        "left": "0",
+        "right": "2"
+      },
+      {
+        "further_deletions": 5,
+        "input_to_B_C": "213330",
+        "suffix": "200131",
+        "left": "0",
+        "right": "2"
+      },
+      {
+        "further_deletions": 6,
+        "input_to_B_C": "2133330",
+        "suffix": "2001320",
+        "left": "0",
+        "right": "2"
+      }
+    ]
+  },
+  "finite_controls": {
+    "guarded_short_controls": [
+      {
+        "left": "22122",
+        "right": "22222",
+        "suffix": "1212121",
+        "depth": 4,
+        "left_output": "11230303",
+        "right_output": "21230303",
+        "hard_core_junction_and_terminal_121_preserved": true
+      },
+      {
+        "left": "222122",
+        "right": "222222",
+        "suffix": "1212121",
+        "depth": 5,
+        "left_output": "01333210",
+        "right_output": "20333210",
+        "hard_core_junction_and_terminal_121_preserved": true
+      }
+    ],
+    "safe_rule_endpoint_controls": 21,
+    "correction_identity_endpoint_controls": 42,
+    "all_two_tail_first_five_cut_states": [
+      "12303",
+      "11321",
+      "20121",
+      "31121",
+      "22121",
+      "02121",
+      "32121",
+      "12121"
+    ],
+    "all_two_tail_coalesces_after": 7
+  },
+  "scope": "All-length source-prefix identities and a sufficient run-dependent guarded reduction. No complete source normalization, RW separator, frontier mortality, or period-two exclusion is proved.",
+  "source_sha256": {
+    "rw_defect_cocycle.py": "549eb66783fc2757f7d67b4b377ff33458b1512e76019fd01cf622bf013be49c",
+    "p1-period2-invariant/endpoint_section_machine.py": "078875602105fa438ab42bb11812dd00e936b6871d0e77adb61bb6c91312b9b0",
+    "p1-period2-invariant/core_craig_morph.py": "53974cbd6e5f6d568ed9291a457fa4f1d4cabc12367ab673786cc110cb2660ab",
+    "p1-period2-invariant/dyadic_periodicity_analyzer.py": "09c28d575f8067ddea73bf3591b8669318df6159a1edb36259a91d4c5a73a1d9",
+    "rw_homogeneous_source_exclusion.py": "8dd075532508e066af8edf5d3fda577d2a47a8a9ee4cb65bb03afe7e9f9eaf5a"
+  }
+}

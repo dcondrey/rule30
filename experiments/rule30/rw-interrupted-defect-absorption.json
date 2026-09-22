@@ -1,0 +1,103 @@
+{
+  "threshold": {
+    "g_0": 5,
+    "g_1": 1,
+    "zero_padding_confirmed_for_k": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "k_ge_2_needs_no_trailing_padding": true
+  },
+  "arbitrary_suffix": {
+    "k_values_checked": [
+      2,
+      3,
+      5,
+      8,
+      13
+    ],
+    "suffix_sizes_checked": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "four_state_suffix_symbols_checked": 425,
+    "claim": "F^(k+2)(1 2^k 1 v) = F^(k+2)(2^(k+1) 1 v) for every four-state v, k>=2"
+  },
+  "chaining": {
+    "three_defect_words_checked": 16,
+    "claim": "The leftmost defect-gap-defect pattern reduces regardless of what follows, since the lemma holds for arbitrary suffix v."
+  },
+  "pure_run_closed_form": {
+    "boundary_2": 1,
+    "phi_2_1": 2,
+    "phi_1_2": 1,
+    "closed_form": "inverse_terminal(2^n)_j = 1 if j even else 2",
+    "consequence": "morph(2^n) = 2^(n-1) for every n>=1",
+    "checked_n": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  "all_k_induction": {
+    "fixed_point_of_2_is_state_C": true,
+    "B_and_C_sync_to_C_after_two_2s": true,
+    "locality_agree_except_last_checked_k": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "proved": "J(2^k 1) begins (2,2) for every k>=2, hence the absorption lemma at zero padding holds for every k>=2, not only the checked range."
+  },
+  "scope": "U for k>=2 at zero padding: proved for every k, not a tested range, via pure_run_closed_form + all_k_induction (locality of inverse_terminal/peel/terminal, plus the pure-2 background being a fixed point). C (exact finite certificates) for the boundary cases k=0 (needs padding 5) and k=1 (needs padding 1) and for arbitrary_suffix/chaining, which are checked over a finite range as controls on the k>=2 proof, not proofs themselves. Says nothing about defects separated by more than one intervening defect at once, or about the full RW/DLP hard-core source language.",
+  "source_sha256": {
+    "rw_interrupted_defect_absorption.py": "9c40495abc4d5e275957e33e68721087f3c7329c7b1a486beedc564dd1538d75",
+    "p1-period2-invariant/endpoint_section_machine.py": "078875602105fa438ab42bb11812dd00e936b6871d0e77adb61bb6c91312b9b0",
+    "p1-period2-invariant/core_craig_morph.py": "53974cbd6e5f6d568ed9291a457fa4f1d4cabc12367ab673786cc110cb2660ab",
+    "p1-period2-invariant/dyadic_periodicity_analyzer.py": "09c28d575f8067ddea73bf3591b8669318df6159a1edb36259a91d4c5a73a1d9",
+    "rw_homogeneous_source_exclusion.py": "8dd075532508e066af8edf5d3fda577d2a47a8a9ee4cb65bb03afe7e9f9eaf5a"
+  }
+}

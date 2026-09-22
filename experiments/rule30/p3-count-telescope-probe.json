@@ -1,0 +1,409 @@
+{
+  "schema": "rule30.p3-count-telescope-probe.v1",
+  "low_bit_identity_checked": 159200,
+  "low_bit_identity_mismatches": 0,
+  "candidate": "running nonzero-count parity at site i as a function of the parity at site i-2 alone",
+  "sites_tested": [
+    {
+      "site": 2,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 7,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 12,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 17,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 22,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 27,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 32,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 37,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 42,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 47,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 52,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 57,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 62,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 67,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 72,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 77,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 82,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 87,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 92,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 97,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 102,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 107,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 112,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 117,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 122,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 127,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 132,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 137,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 142,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 147,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 152,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 157,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 162,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 167,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 172,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 177,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 182,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 187,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 192,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 197,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 202,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 207,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 212,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 217,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 222,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 227,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 232,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 237,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 242,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 247,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 252,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 257,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 262,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 267,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 272,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 277,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 282,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 287,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 292,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 297,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 302,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 307,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 312,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 317,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 322,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 327,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 332,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 337,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 342,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 347,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 352,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 357,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 362,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 367,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 372,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 377,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 382,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 387,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 392,
+      "classes": 2,
+      "mixed": 2
+    },
+    {
+      "site": 397,
+      "classes": 2,
+      "mixed": 2
+    }
+  ],
+  "verdict": "KILL"
+}

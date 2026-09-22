@@ -1,0 +1,701 @@
+{
+  "schema": "rule30.p3-triangular-core-power.v1",
+  "status": "All-length cycle bounds and exact paid normal form; no sublinear singleton algorithm",
+  "verification": {
+    "local_certificates": {
+      "unary_maps": [
+        {
+          "u": 0,
+          "v": 0,
+          "outputs": [
+            0,
+            1
+          ]
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "outputs": [
+            1,
+            1
+          ]
+        },
+        {
+          "u": 1,
+          "v": 0,
+          "outputs": [
+            1,
+            0
+          ]
+        },
+        {
+          "u": 1,
+          "v": 1,
+          "outputs": [
+            0,
+            0
+          ]
+        }
+      ],
+      "seven_spacing_boolean_identity": [
+        {
+          "f": 0,
+          "g": 0,
+          "agrees": false
+        },
+        {
+          "f": 0,
+          "g": 1,
+          "agrees": false
+        },
+        {
+          "f": 1,
+          "g": 0,
+          "agrees": false
+        },
+        {
+          "f": 1,
+          "g": 1,
+          "agrees": true
+        }
+      ],
+      "periodic_column_inversions": 84
+    },
+    "all_time_column_certificates": [
+      {
+        "initial_integer": "0",
+        "width": 0,
+        "columns_high_first": [],
+        "certified_start": 0,
+        "primitive_period": 1,
+        "period_bound": 1,
+        "stored_bits": 0,
+        "construction_work": {
+          "unary_monodromy_steps": 0,
+          "literal_column_steps": 0
+        },
+        "example_large_time": "1000000000000000000000000000000",
+        "certified_value_at_large_time": "0",
+        "uniform_power_large_time_control": {
+          "uniform_start": 0,
+          "uniform_period": 1,
+          "H_updates": 0
+        }
+      },
+      {
+        "initial_integer": "1",
+        "width": 1,
+        "columns_high_first": [
+          {
+            "coordinate": 0,
+            "initial": 1,
+            "start": 0,
+            "period": 1,
+            "monodromy": [
+              0,
+              1
+            ],
+            "bits": "1"
+          }
+        ],
+        "certified_start": 0,
+        "primitive_period": 1,
+        "period_bound": 1,
+        "stored_bits": 1,
+        "construction_work": {
+          "unary_monodromy_steps": 2,
+          "literal_column_steps": 1
+        },
+        "example_large_time": "1000000000000000000000000000000",
+        "certified_value_at_large_time": "1",
+        "uniform_power_large_time_control": {
+          "uniform_start": 0,
+          "uniform_period": 1,
+          "H_updates": 0
+        }
+      },
+      {
+        "initial_integer": "222",
+        "width": 8,
+        "columns_high_first": [
+          {
+            "coordinate": 7,
+            "initial": 1,
+            "start": 0,
+            "period": 1,
+            "monodromy": [
+              0,
+              1
+            ],
+            "bits": "1"
+          },
+          {
+            "coordinate": 6,
+            "initial": 1,
+            "start": 1,
+            "period": 1,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "11"
+          },
+          {
+            "coordinate": 5,
+            "initial": 0,
+            "start": 2,
+            "period": 1,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "000"
+          },
+          {
+            "coordinate": 4,
+            "initial": 1,
+            "start": 2,
+            "period": 2,
+            "monodromy": [
+              1,
+              0
+            ],
+            "bits": "1010"
+          },
+          {
+            "coordinate": 3,
+            "initial": 1,
+            "start": 4,
+            "period": 2,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "111111"
+          },
+          {
+            "coordinate": 2,
+            "initial": 1,
+            "start": 6,
+            "period": 2,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "10101010"
+          },
+          {
+            "coordinate": 1,
+            "initial": 1,
+            "start": 8,
+            "period": 2,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "1010101010"
+          },
+          {
+            "coordinate": 0,
+            "initial": 0,
+            "start": 10,
+            "period": 2,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "000000000000"
+          }
+        ],
+        "certified_start": 10,
+        "primitive_period": 2,
+        "period_bound": 2,
+        "stored_bits": 46,
+        "construction_work": {
+          "unary_monodromy_steps": 24,
+          "literal_column_steps": 46
+        },
+        "example_large_time": "1000000000000000000000000000000",
+        "certified_value_at_large_time": "222",
+        "uniform_power_large_time_control": {
+          "uniform_start": 14,
+          "uniform_period": 2,
+          "H_updates": 14
+        }
+      },
+      {
+        "initial_integer": "3204",
+        "width": 12,
+        "columns_high_first": [
+          {
+            "coordinate": 11,
+            "initial": 1,
+            "start": 0,
+            "period": 1,
+            "monodromy": [
+              0,
+              1
+            ],
+            "bits": "1"
+          },
+          {
+            "coordinate": 10,
+            "initial": 1,
+            "start": 1,
+            "period": 1,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "11"
+          },
+          {
+            "coordinate": 9,
+            "initial": 0,
+            "start": 2,
+            "period": 1,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "000"
+          },
+          {
+            "coordinate": 8,
+            "initial": 0,
+            "start": 2,
+            "period": 2,
+            "monodromy": [
+              1,
+              0
+            ],
+            "bits": "0101"
+          },
+          {
+            "coordinate": 7,
+            "initial": 1,
+            "start": 4,
+            "period": 2,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "111111"
+          },
+          {
+            "coordinate": 6,
+            "initial": 0,
+            "start": 6,
+            "period": 2,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "01010101"
+          },
+          {
+            "coordinate": 5,
+            "initial": 0,
+            "start": 8,
+            "period": 2,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "0101010101"
+          },
+          {
+            "coordinate": 4,
+            "initial": 0,
+            "start": 10,
+            "period": 2,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "000000000000"
+          },
+          {
+            "coordinate": 3,
+            "initial": 0,
+            "start": 10,
+            "period": 4,
+            "monodromy": [
+              1,
+              0
+            ],
+            "bits": "00110011001100"
+          },
+          {
+            "coordinate": 2,
+            "initial": 1,
+            "start": 14,
+            "period": 4,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "111111111111111111"
+          },
+          {
+            "coordinate": 1,
+            "initial": 0,
+            "start": 18,
+            "period": 4,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "0110011001100110011001"
+          },
+          {
+            "coordinate": 0,
+            "initial": 0,
+            "start": 22,
+            "period": 4,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "01001000100010001000100010"
+          }
+        ],
+        "certified_start": 22,
+        "primitive_period": 4,
+        "period_bound": 4,
+        "stored_bits": 126,
+        "construction_work": {
+          "unary_monodromy_steps": 52,
+          "literal_column_steps": 126
+        },
+        "example_large_time": "1000000000000000000000000000000",
+        "certified_value_at_large_time": "3205",
+        "uniform_power_large_time_control": {
+          "uniform_start": 44,
+          "uniform_period": 4,
+          "H_updates": 44
+        }
+      },
+      {
+        "initial_integer": "820716",
+        "width": 20,
+        "columns_high_first": [
+          {
+            "coordinate": 19,
+            "initial": 1,
+            "start": 0,
+            "period": 1,
+            "monodromy": [
+              0,
+              1
+            ],
+            "bits": "1"
+          },
+          {
+            "coordinate": 18,
+            "initial": 1,
+            "start": 1,
+            "period": 1,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "11"
+          },
+          {
+            "coordinate": 17,
+            "initial": 0,
+            "start": 2,
+            "period": 1,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "000"
+          },
+          {
+            "coordinate": 16,
+            "initial": 0,
+            "start": 2,
+            "period": 2,
+            "monodromy": [
+              1,
+              0
+            ],
+            "bits": "0101"
+          },
+          {
+            "coordinate": 15,
+            "initial": 1,
+            "start": 4,
+            "period": 2,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "111111"
+          },
+          {
+            "coordinate": 14,
+            "initial": 0,
+            "start": 6,
+            "period": 2,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "01010101"
+          },
+          {
+            "coordinate": 13,
+            "initial": 0,
+            "start": 8,
+            "period": 2,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "0101010101"
+          },
+          {
+            "coordinate": 12,
+            "initial": 0,
+            "start": 10,
+            "period": 2,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "000000000000"
+          },
+          {
+            "coordinate": 11,
+            "initial": 0,
+            "start": 10,
+            "period": 4,
+            "monodromy": [
+              1,
+              0
+            ],
+            "bits": "00110011001100"
+          },
+          {
+            "coordinate": 10,
+            "initial": 1,
+            "start": 14,
+            "period": 4,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "111111111111111111"
+          },
+          {
+            "coordinate": 9,
+            "initial": 0,
+            "start": 18,
+            "period": 4,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "0110011001100110011001"
+          },
+          {
+            "coordinate": 8,
+            "initial": 1,
+            "start": 22,
+            "period": 4,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "10001000100010001000100010"
+          },
+          {
+            "coordinate": 7,
+            "initial": 1,
+            "start": 26,
+            "period": 4,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "110111011101110111011101110111"
+          },
+          {
+            "coordinate": 6,
+            "initial": 1,
+            "start": 30,
+            "period": 4,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "1011101110111011101110111011101110"
+          },
+          {
+            "coordinate": 5,
+            "initial": 1,
+            "start": 34,
+            "period": 4,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "10110011001100110011001100110011001100"
+          },
+          {
+            "coordinate": 4,
+            "initial": 0,
+            "start": 38,
+            "period": 4,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "000001100110011001100110011001100110011001"
+          },
+          {
+            "coordinate": 3,
+            "initial": 1,
+            "start": 42,
+            "period": 4,
+            "monodromy": [
+              1,
+              1
+            ],
+            "bits": "1001001011101110111011101110111011101110111011"
+          },
+          {
+            "coordinate": 2,
+            "initial": 1,
+            "start": 46,
+            "period": 4,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "11111100010001000100010001000100010001000100010001"
+          },
+          {
+            "coordinate": 1,
+            "initial": 0,
+            "start": 50,
+            "period": 4,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "001101100101100110011001100110011001100110011001100110"
+          },
+          {
+            "coordinate": 0,
+            "initial": 0,
+            "start": 54,
+            "period": 4,
+            "monodromy": [
+              0,
+              0
+            ],
+            "bits": "0100010111001100110011001100110011001100110011001100110011"
+          }
+        ],
+        "certified_start": 54,
+        "primitive_period": 4,
+        "period_bound": 8,
+        "stored_bits": 478,
+        "construction_work": {
+          "unary_monodromy_steps": 116,
+          "literal_column_steps": 478
+        },
+        "example_large_time": "1000000000000000000000000000000",
+        "certified_value_at_large_time": "820683",
+        "uniform_power_large_time_control": {
+          "uniform_start": 152,
+          "uniform_period": 8,
+          "H_updates": 152
+        }
+      }
+    ],
+    "checked_local_time_edges": 651,
+    "direct_integer_controls": 165,
+    "actual_core_shortcut_counterexamples": [
+      {
+        "C_power": 6,
+        "initial_integer": "3204",
+        "width": 12,
+        "exact_orbit": {
+          "states": [
+            3204,
+            3559,
+            3214,
+            3564,
+            3205,
+            3558
+          ],
+          "transient": 2,
+          "period": 4
+        },
+        "actual_center_query": 11,
+        "H_steps": 5,
+        "requested_bit": 0,
+        "incorrect_shortcut": "discard transient and replace k by k mod P",
+        "incorrect_time_index": 1,
+        "correct_integer": 3558,
+        "incorrect_integer": 3559,
+        "correct_center_bit": 0,
+        "incorrect_bit": 1
+      },
+      {
+        "C_power": 10,
+        "initial_integer": "820716",
+        "width": 20,
+        "exact_orbit": {
+          "states": [
+            820716,
+            910981,
+            822886,
+            912622,
+            820676,
+            910999,
+            822906,
+            912609,
+            820681,
+            911007,
+            822904,
+            912610,
+            820683,
+            911005
+          ],
+          "transient": 10,
+          "period": 4
+        },
+        "actual_center_query": 18,
+        "H_steps": 8,
+        "requested_bit": 1,
+        "incorrect_shortcut": "extend the eventual cycle backward before its certified start",
+        "incorrect_time_index": 12,
+        "correct_integer": 820681,
+        "incorrect_integer": 820683,
+        "correct_center_bit": 0,
+        "incorrect_bit": 1
+      }
+    ],
+    "rejected_corruptions": [
+      "initial",
+      "period",
+      "bits"
+    ],
+    "elapsed_seconds": 0.001695084007224068
+  },
+  "source_sha256": {
+    "experiments/rule30/p3_triangular_core_power.py": "616674d7c2cda6b616fc0402e7271b712e2b9f2cc2702238b5ff4c03a50f7288",
+    "experiments/rule30/p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-triangular-core-power.md": "ee022144c60ad159a6eda5e2b6a7e54c2c02cc6dbc0321a63d5b38dfc0f457b3"
+  },
+  "uniform_polynomial_transient_proved": false,
+  "uniform_polynomial_period_proved": false,
+  "sublinear_singleton_algorithm_proved": false,
+  "period_exclusion_proved": false
+}

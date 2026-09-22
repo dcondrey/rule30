@@ -1,0 +1,84 @@
+{
+ "instance": {
+  "N": 6,
+  "q": 3,
+  "r": 0,
+  "mode": "onset",
+  "L": 14,
+  "p": 480
+ },
+ "iterations_per_scope": 3,
+ "seed": 999,
+ "scan_limit": 300000,
+ "sequential_not_parallel": true,
+ "runs": [
+  {
+   "scope": "tov",
+   "seed": 999,
+   "status": "completed",
+   "iterations": 3,
+   "phase_literals": 558,
+   "solve_seconds": [
+    78.93,
+    5.36,
+    172.54
+   ],
+   "total_seconds": 256.83,
+   "seconds_per_solve": 85.6,
+   "n_breaks": [
+    24278,
+    20637,
+    24278
+   ],
+   "distinct_n_break": 2,
+   "distinct_core_signatures": 3,
+   "repeated_break_on_new_core": 1
+  },
+  {
+   "scope": "to",
+   "seed": 999,
+   "status": "completed",
+   "iterations": 3,
+   "phase_literals": 78,
+   "solve_seconds": [
+    56.98,
+    27.68,
+    33.58
+   ],
+   "total_seconds": 118.24,
+   "seconds_per_solve": 39.4,
+   "n_breaks": [
+    49036,
+    11899,
+    168457
+   ],
+   "distinct_n_break": 3,
+   "distinct_core_signatures": 3,
+   "repeated_break_on_new_core": 0
+  },
+  {
+   "scope": "none",
+   "seed": 999,
+   "status": "completed",
+   "iterations": 3,
+   "phase_literals": 0,
+   "solve_seconds": [
+    13.79,
+    0.03,
+    0.04
+   ],
+   "total_seconds": 13.86,
+   "seconds_per_solve": 4.6,
+   "n_breaks": [
+    168457,
+    168457,
+    41754
+   ],
+   "distinct_n_break": 2,
+   "distinct_core_signatures": 3,
+   "repeated_break_on_new_core": 1
+  }
+ ],
+ "cost_ratio_tov_over_to": 2.2,
+ "conclusion": "phases over the machine only: `none` is cheapest but repeats a break on a new core signature, and `tov` buys no extra distinct break for its cost"
+}

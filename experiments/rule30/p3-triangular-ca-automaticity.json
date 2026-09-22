@@ -1,0 +1,264 @@
+{
+  "status": "PASS",
+  "scope": "Autonomous four-track triangular affine CA counterexample; not Rule 30 or actual Newton",
+  "all_length_proof": "Report: exact bouncing itinerary and irrational accepted-length density",
+  "local_routing_truth_cases": 16,
+  "routing_table_columns": [
+    "o",
+    "b",
+    "R",
+    "L",
+    "right_departure",
+    "left_departure"
+  ],
+  "routing_table": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "upper_linearity_cases": 64,
+  "symbolic_itinerary": {
+    "collision_time_affine_in_T": [
+      2,
+      1
+    ],
+    "next_origin_time_affine_in_T": [
+      3,
+      2
+    ],
+    "both_leg_durations": [
+      1,
+      1
+    ],
+    "collision_position": [
+      2,
+      2
+    ],
+    "outbound_gap_formula": "t - 2*T - 1",
+    "T_k": "3^k - 1"
+  },
+  "finite_controls": {
+    "horizon": 82,
+    "complete_rows": 83,
+    "independent_step_comparisons": 82,
+    "origin_visits": [
+      0,
+      2,
+      8,
+      26,
+      80
+    ],
+    "wall_collisions": [
+      {
+        "time": 1,
+        "position": 2
+      },
+      {
+        "time": 5,
+        "position": 6
+      },
+      {
+        "time": 17,
+        "position": 18
+      },
+      {
+        "time": 53,
+        "position": 54
+      }
+    ]
+  },
+  "large_index_arithmetic_controls": [
+    {
+      "exponent": 0,
+      "time_bit_length": 0,
+      "visit": 1,
+      "neighbors": null,
+      "validation": "integer query only; no trajectory generation"
+    },
+    {
+      "exponent": 1,
+      "time_bit_length": 2,
+      "visit": 1,
+      "neighbors": [
+        0,
+        0
+      ],
+      "validation": "integer query only; no trajectory generation"
+    },
+    {
+      "exponent": 2,
+      "time_bit_length": 4,
+      "visit": 1,
+      "neighbors": [
+        0,
+        0
+      ],
+      "validation": "integer query only; no trajectory generation"
+    },
+    {
+      "exponent": 5,
+      "time_bit_length": 8,
+      "visit": 1,
+      "neighbors": [
+        0,
+        0
+      ],
+      "validation": "integer query only; no trajectory generation"
+    },
+    {
+      "exponent": 20,
+      "time_bit_length": 32,
+      "visit": 1,
+      "neighbors": [
+        0,
+        0
+      ],
+      "validation": "integer query only; no trajectory generation"
+    },
+    {
+      "exponent": 1000,
+      "time_bit_length": 1585,
+      "visit": 1,
+      "neighbors": [
+        0,
+        0
+      ],
+      "validation": "integer query only; no trajectory generation"
+    }
+  ],
+  "nonautomaticity": {
+    "binary_lengths": "ceil(k*log_2(3)), k>=1; plus the finite t=0 exception",
+    "length_set_density": "1/log_2(3), irrational",
+    "external_nonautomaticity_theorem_required": false
+  },
+  "query_complexity": "O(log^2(t+2)) conservative bit work; O(log(t+2)) space",
+  "sources": {
+    "experiments/rule30/p3_triangular_ca_automaticity.py": "46f17cfa1b402017cfed49a23ce142c765cd7ba2dc5560e14ae3c812aa0c9591",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-triangular-ca-automaticity.md": "364dc56b5a1ee08ed8903a457d6be763c46154d012584765b368dc4e8b0dc544"
+  }
+}

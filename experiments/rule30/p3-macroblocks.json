@@ -1,0 +1,396 @@
+{
+  "verification": {
+    "complete_microtable_entries_checked": 4368,
+    "microtable_scalar_rule_evaluations": 100896,
+    "macro_center_controls": [
+      {
+        "n": 0,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 0,
+        "residual_steps": 0
+      },
+      {
+        "n": 1,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 1,
+        "residual_steps": 0
+      },
+      {
+        "n": 2,
+        "t": 1,
+        "bit": 0,
+        "macro_lookups": 3,
+        "residual_steps": 0
+      },
+      {
+        "n": 3,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 5,
+        "residual_steps": 0
+      },
+      {
+        "n": 5,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 11,
+        "residual_steps": 0
+      },
+      {
+        "n": 7,
+        "t": 1,
+        "bit": 0,
+        "macro_lookups": 19,
+        "residual_steps": 0
+      },
+      {
+        "n": 8,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 24,
+        "residual_steps": 0
+      },
+      {
+        "n": 9,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 29,
+        "residual_steps": 0
+      },
+      {
+        "n": 11,
+        "t": 1,
+        "bit": 0,
+        "macro_lookups": 41,
+        "residual_steps": 0
+      },
+      {
+        "n": 12,
+        "t": 1,
+        "bit": 0,
+        "macro_lookups": 48,
+        "residual_steps": 0
+      },
+      {
+        "n": 15,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 71,
+        "residual_steps": 0
+      },
+      {
+        "n": 16,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 80,
+        "residual_steps": 0
+      },
+      {
+        "n": 17,
+        "t": 1,
+        "bit": 0,
+        "macro_lookups": 89,
+        "residual_steps": 0
+      },
+      {
+        "n": 23,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 155,
+        "residual_steps": 0
+      },
+      {
+        "n": 31,
+        "t": 1,
+        "bit": 0,
+        "macro_lookups": 271,
+        "residual_steps": 0
+      },
+      {
+        "n": 47,
+        "t": 1,
+        "bit": 1,
+        "macro_lookups": 599,
+        "residual_steps": 0
+      },
+      {
+        "n": 0,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 0,
+        "residual_steps": 0
+      },
+      {
+        "n": 1,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 0,
+        "residual_steps": 1
+      },
+      {
+        "n": 2,
+        "t": 2,
+        "bit": 0,
+        "macro_lookups": 1,
+        "residual_steps": 0
+      },
+      {
+        "n": 3,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 2,
+        "residual_steps": 1
+      },
+      {
+        "n": 5,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 4,
+        "residual_steps": 1
+      },
+      {
+        "n": 7,
+        "t": 2,
+        "bit": 0,
+        "macro_lookups": 6,
+        "residual_steps": 1
+      },
+      {
+        "n": 8,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 8,
+        "residual_steps": 0
+      },
+      {
+        "n": 9,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 9,
+        "residual_steps": 1
+      },
+      {
+        "n": 11,
+        "t": 2,
+        "bit": 0,
+        "macro_lookups": 13,
+        "residual_steps": 1
+      },
+      {
+        "n": 12,
+        "t": 2,
+        "bit": 0,
+        "macro_lookups": 15,
+        "residual_steps": 0
+      },
+      {
+        "n": 15,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 21,
+        "residual_steps": 1
+      },
+      {
+        "n": 16,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 24,
+        "residual_steps": 0
+      },
+      {
+        "n": 17,
+        "t": 2,
+        "bit": 0,
+        "macro_lookups": 26,
+        "residual_steps": 1
+      },
+      {
+        "n": 23,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 44,
+        "residual_steps": 1
+      },
+      {
+        "n": 31,
+        "t": 2,
+        "bit": 0,
+        "macro_lookups": 75,
+        "residual_steps": 1
+      },
+      {
+        "n": 47,
+        "t": 2,
+        "bit": 1,
+        "macro_lookups": 161,
+        "residual_steps": 1
+      },
+      {
+        "n": 0,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 0,
+        "residual_steps": 0
+      },
+      {
+        "n": 1,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 0,
+        "residual_steps": 1
+      },
+      {
+        "n": 2,
+        "t": 3,
+        "bit": 0,
+        "macro_lookups": 0,
+        "residual_steps": 2
+      },
+      {
+        "n": 3,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 1,
+        "residual_steps": 0
+      },
+      {
+        "n": 5,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 2,
+        "residual_steps": 2
+      },
+      {
+        "n": 7,
+        "t": 3,
+        "bit": 0,
+        "macro_lookups": 4,
+        "residual_steps": 1
+      },
+      {
+        "n": 8,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 4,
+        "residual_steps": 2
+      },
+      {
+        "n": 9,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 5,
+        "residual_steps": 0
+      },
+      {
+        "n": 11,
+        "t": 3,
+        "bit": 0,
+        "macro_lookups": 6,
+        "residual_steps": 2
+      },
+      {
+        "n": 12,
+        "t": 3,
+        "bit": 0,
+        "macro_lookups": 8,
+        "residual_steps": 0
+      },
+      {
+        "n": 15,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 11,
+        "residual_steps": 0
+      },
+      {
+        "n": 16,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 13,
+        "residual_steps": 1
+      },
+      {
+        "n": 17,
+        "t": 3,
+        "bit": 0,
+        "macro_lookups": 13,
+        "residual_steps": 2
+      },
+      {
+        "n": 23,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 21,
+        "residual_steps": 2
+      },
+      {
+        "n": 31,
+        "t": 3,
+        "bit": 0,
+        "macro_lookups": 38,
+        "residual_steps": 1
+      },
+      {
+        "n": 47,
+        "t": 3,
+        "bit": 1,
+        "macro_lookups": 75,
+        "residual_steps": 2
+      }
+    ],
+    "paid_wrapper_controls": [
+      {
+        "n": 0,
+        "table_entries": 0,
+        "table_rule_evaluations": 0,
+        "macro_lookups": 0
+      },
+      {
+        "n": 1,
+        "table_entries": 16,
+        "table_rule_evaluations": 32,
+        "macro_lookups": 1
+      },
+      {
+        "n": 16,
+        "table_entries": 16,
+        "table_rule_evaluations": 32,
+        "macro_lookups": 80
+      },
+      {
+        "n": 17,
+        "table_entries": 16,
+        "table_rule_evaluations": 32,
+        "macro_lookups": 89
+      },
+      {
+        "n": 31,
+        "table_entries": 16,
+        "table_rule_evaluations": 32,
+        "macro_lookups": 271
+      }
+    ],
+    "exact_geometry_controls": 1032,
+    "aspect_ratio_identity_controls": 1024,
+    "largest_control_time": 47,
+    "table_checks_use_independent_rule_forms": "Literal numbered-rule truth bits versus packed XOR/OR recurrence.",
+    "scope": "Small implementation controls, not an orbit-prefix dataset or empirical complexity fit. Asymptotic statements are proved in the report."
+  },
+  "uniform_word_RAM_upper_bound": "O(n^2/log^2(n+2)) time and O(n) words, including fresh table construction.",
+  "exact_table_entries": "2^(4t)",
+  "exact_scalar_evaluations_per_entry": "3t^2-t",
+  "exact_lookup_count": "floor(q^2/4)+q+1_(delta>0)*ceil(q/4), n=qt+delta, 0<=delta<t",
+  "uniform_parameter": "t=max(1,floor(log2(n)/4)), output width b=2t",
+  "restricted_model_lower_bound": "Omega(n^2/log^2 n) only for exhaustive fixed-size macrotable tiling that explicitly materializes every block intersecting each retained cone cut.",
+  "not_claimed": [
+    "Turing-machine time improvement",
+    "sublinear P3 algorithm",
+    "lower bound for arbitrary algorithms",
+    "novelty of block-table simulation"
+  ],
+  "source_sha256": {
+    "p3_macroblocks.py": "99a247a3ecc7d05d967478a9a85c8a9ee4c831d18a88d64cb4802b80fa0ca509"
+  }
+}

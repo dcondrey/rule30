@@ -1,0 +1,111 @@
+{
+ "schema": "rule30.cap18-witness-fibers.v1",
+ "brute_force_endpoint_scalar_pairs_checked": 68,
+ "brute_force_original_lengths": [
+  1,
+  7
+ ],
+ "fiber_of_30322_2k_121032_for_k_0_to_7": [
+  18,
+  18,
+  18,
+  18,
+  18,
+  18,
+  18,
+  18
+ ],
+ "witnesses": [
+  {
+   "index": 8,
+   "a": 753,
+   "b": 12291,
+   "initial_tape": "00",
+   "Q2": 18
+  },
+  {
+   "index": 15,
+   "a": 0,
+   "b": 11630084,
+   "initial_tape": "00",
+   "Q2": 18
+  },
+  {
+   "index": 15,
+   "a": 30,
+   "b": 479146,
+   "initial_tape": "00",
+   "Q2": 18
+  },
+  {
+   "index": 15,
+   "a": 1534,
+   "b": 42986,
+   "initial_tape": "00",
+   "Q2": 18
+  },
+  {
+   "index": 15,
+   "a": 1534,
+   "b": 15247338,
+   "initial_tape": "00",
+   "Q2": 18
+  },
+  {
+   "index": 23,
+   "a": 533,
+   "b": 25052,
+   "initial_tape": "00",
+   "Q2": 18
+  },
+  {
+   "index": 23,
+   "a": 533,
+   "b": 2533308,
+   "initial_tape": "00",
+   "Q2": 18
+  },
+  {
+   "index": 34,
+   "a": 20,
+   "b": 1144,
+   "initial_tape": "01",
+   "Q2": 18
+  },
+  {
+   "index": 34,
+   "a": 20,
+   "b": 8964344,
+   "initial_tape": "01",
+   "Q2": 18
+  }
+ ],
+ "fiber_values_over_a_b_below_8": {
+  "5": [
+   18
+  ],
+  "8": [
+   18
+  ],
+  "12": [
+   18
+  ],
+  "15": [
+   18
+  ],
+  "23": [
+   18
+  ],
+  "27": [
+   18
+  ],
+  "34": [
+   18
+  ]
+ },
+ "source_sha256": {
+  "cap18_witness_fibers.py": "97d2fb37c7a49d759b8351280a13ba12226850011ccbcd91cdb0835902db110c",
+  "cap18_lifetime_census.py": "46978e969f2d2c6c4ef9cf911d5c390bcd4529ae151d4c122a2d86f8110adc48",
+  "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f"
+ }
+}

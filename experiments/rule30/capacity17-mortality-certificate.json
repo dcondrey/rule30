@@ -1,0 +1,668 @@
+{
+  "uniform_capacity_bound_proved": true,
+  "capacity_cap": 17,
+  "N_max": 24,
+  "D_max": 14,
+  "both_bounds_sharp": true,
+  "classification": {
+    "closed_product_states": 74,
+    "closed_product_edges": 296,
+    "all_lengths": true,
+    "labels_include_both_guards_and_exact_capacity": true
+  },
+  "family_proofs": [
+    {
+      "kind": "singleton",
+      "endpoint": "2121032",
+      "tape": "01",
+      "N_max": 2,
+      "D_max": 0,
+      "independent_oracle": true,
+      "pattern_index": 0,
+      "initial_scalars": "01",
+      "capacity": 6
+    },
+    {
+      "kind": "periodic_family",
+      "prefix": "21213",
+      "body": "13",
+      "suffix": "03",
+      "N_max": 24,
+      "D_max": 14,
+      "attaining_k": 816932,
+      "attaining_tape": "001000001101001100000111",
+      "primary_certificate": "capacity17-family-01.json",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "21213(13)^k03, all integers k>=0",
+        "max_original_successful_updates": 24,
+        "max_original_repeats": 14,
+        "attained_at_k": 816932,
+        "sharp_tape": "001000001101001100000111",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 1048576,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 524288,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 262144,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 16,
+            "surviving_global_residues": 131072,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 4,
+            "period": 32,
+            "surviving_global_residues": 65536,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 5,
+            "period": 32,
+            "surviving_global_residues": 65536,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 6,
+            "period": 128,
+            "surviving_global_residues": 32768,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 7,
+            "period": 256,
+            "surviving_global_residues": 16384,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 8,
+            "period": 256,
+            "surviving_global_residues": 16384,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 9,
+            "period": 1024,
+            "surviving_global_residues": 8192,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 10,
+            "period": 1024,
+            "surviving_global_residues": 7168,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 11,
+            "period": 2048,
+            "surviving_global_residues": 3584,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 12,
+            "period": 4096,
+            "surviving_global_residues": 1024,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 13,
+            "period": 8192,
+            "surviving_global_residues": 512,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 14,
+            "period": 8192,
+            "surviving_global_residues": 256,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 15,
+            "period": 16384,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 16,
+            "period": 32768,
+            "surviving_global_residues": 64,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 17,
+            "period": 32768,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 18,
+            "period": 131072,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 19,
+            "period": 262144,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 20,
+            "period": 524288,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 21,
+            "period": 524288,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 22,
+            "period": 1048576,
+            "surviving_global_residues": 1,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 23,
+            "period": 1048576,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity17-family-01.json": "df0cf3e1d6a6f6962491f2f00642ea16228903e0e86245f50375059f533bf246"
+        },
+        "seconds": 7.802250665990869,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      },
+      "pattern_index": 1,
+      "initial_scalars": "00",
+      "capacity": 6
+    },
+    {
+      "kind": "periodic_family",
+      "prefix": "21213",
+      "body": "13",
+      "suffix": "032",
+      "N_max": 3,
+      "D_max": 1,
+      "attaining_k": 0,
+      "attaining_tape": "110",
+      "primary_certificate": "capacity17-family-02.json",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "21213(13)^k032, all integers k>=0",
+        "max_original_successful_updates": 3,
+        "max_original_repeats": 1,
+        "attained_at_k": 0,
+        "sharp_tape": "110",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 4,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity17-family-02.json": "46f5221c6e9df9538bb36e71f492e2c7fc0be80abb88bcff2f64ec3fc0b0aa95"
+        },
+        "seconds": 0.0005514579825103283,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      },
+      "pattern_index": 2,
+      "initial_scalars": "11",
+      "capacity": 12
+    },
+    {
+      "kind": "periodic_family",
+      "prefix": "213",
+      "body": "13",
+      "suffix": "03",
+      "N_max": 2,
+      "D_max": 1,
+      "attaining_k": 0,
+      "attaining_tape": "00",
+      "primary_certificate": "capacity17-family-03.json",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "213(13)^k03, all integers k>=0",
+        "max_original_successful_updates": 2,
+        "max_original_repeats": 1,
+        "attained_at_k": 0,
+        "sharp_tape": "00",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 1,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 1,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity17-family-03.json": "4e46112f7041879191d5a0ef3ecbd18993b35774bea1a92fd882c07ef082c6ce"
+        },
+        "seconds": 0.0005275419971439987,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      },
+      "pattern_index": 3,
+      "initial_scalars": "00",
+      "capacity": 6
+    },
+    {
+      "kind": "periodic_family",
+      "prefix": "213",
+      "body": "13",
+      "suffix": "032",
+      "N_max": 2,
+      "D_max": 1,
+      "attaining_k": 0,
+      "attaining_tape": "11",
+      "primary_certificate": "capacity17-family-04.json",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "213(13)^k032, all integers k>=0",
+        "max_original_successful_updates": 2,
+        "max_original_repeats": 1,
+        "attained_at_k": 0,
+        "sharp_tape": "11",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 1,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 1,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity17-family-04.json": "e1330d23179479f3ece9ac755e58cd91fc9ebb7ace51cdccd8a92672a5781285"
+        },
+        "seconds": 0.0005251250113360584,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      },
+      "pattern_index": 4,
+      "initial_scalars": "11",
+      "capacity": 12
+    },
+    {
+      "kind": "singleton",
+      "endpoint": "303",
+      "tape": "10",
+      "N_max": 2,
+      "D_max": 0,
+      "independent_oracle": true,
+      "pattern_index": 5,
+      "initial_scalars": "10",
+      "capacity": 1
+    },
+    {
+      "kind": "singleton",
+      "endpoint": "30303",
+      "tape": "001",
+      "N_max": 3,
+      "D_max": 1,
+      "independent_oracle": true,
+      "pattern_index": 6,
+      "initial_scalars": "00",
+      "capacity": 2
+    },
+    {
+      "kind": "singleton",
+      "endpoint": "303032",
+      "tape": "110",
+      "N_max": 3,
+      "D_max": 1,
+      "independent_oracle": true,
+      "pattern_index": 7,
+      "initial_scalars": "11",
+      "capacity": 12
+    },
+    {
+      "kind": "periodic_family",
+      "prefix": "3031",
+      "body": "31",
+      "suffix": "303",
+      "N_max": 17,
+      "D_max": 9,
+      "attaining_k": 2025,
+      "attaining_tape": "00100111100000101",
+      "primary_certificate": "capacity17-family-08.json",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "3031(31)^k303, all integers k>=0",
+        "max_original_successful_updates": 17,
+        "max_original_repeats": 9,
+        "attained_at_k": 2025,
+        "sharp_tape": "00100111100000101",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 2048,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 1024,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 512,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 16,
+            "surviving_global_residues": 256,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 4,
+            "period": 32,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 5,
+            "period": 32,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 6,
+            "period": 32,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 7,
+            "period": 64,
+            "surviving_global_residues": 64,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 8,
+            "period": 128,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 9,
+            "period": 128,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 10,
+            "period": 128,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 11,
+            "period": 128,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 12,
+            "period": 512,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 13,
+            "period": 1024,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 14,
+            "period": 2048,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 15,
+            "period": 2048,
+            "surviving_global_residues": 1,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 16,
+            "period": 2048,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity17-family-08.json": "14f8d6d3b996ec62174c6105db36ea852f70f86fa57b22bc6f0165b6661b5a12"
+        },
+        "seconds": 0.011427833000198007,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      },
+      "pattern_index": 8,
+      "initial_scalars": "00",
+      "capacity": 6
+    },
+    {
+      "kind": "periodic_family",
+      "prefix": "3031",
+      "body": "31",
+      "suffix": "3032",
+      "N_max": 3,
+      "D_max": 1,
+      "attaining_k": 1,
+      "attaining_tape": "110",
+      "primary_certificate": "capacity17-family-09.json",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "3031(31)^k3032, all integers k>=0",
+        "max_original_successful_updates": 3,
+        "max_original_repeats": 1,
+        "attained_at_k": 1,
+        "sharp_tape": "110",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 4,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity17-family-09.json": "abdc885fb47ed6b020957f3d09a89e6896b82f3837b33bb8b3150c15070d1544"
+        },
+        "seconds": 0.0005358329799491912,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      },
+      "pattern_index": 9,
+      "initial_scalars": "11",
+      "capacity": 12
+    },
+    {
+      "kind": "singleton",
+      "endpoint": "321032",
+      "tape": "01",
+      "N_max": 2,
+      "D_max": 0,
+      "independent_oracle": true,
+      "pattern_index": 10,
+      "initial_scalars": "01",
+      "capacity": 12
+    },
+    {
+      "kind": "periodic_family",
+      "prefix": "32100",
+      "body": "0",
+      "suffix": "32",
+      "N_max": 4,
+      "D_max": 1,
+      "attaining_k": 2,
+      "attaining_tape": "0110",
+      "primary_certificate": "capacity17-family-11.json",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "32100(0)^k32, all integers k>=0",
+        "max_original_successful_updates": 4,
+        "max_original_repeats": 1,
+        "attained_at_k": 2,
+        "sharp_tape": "0110",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 8,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 8,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity17-family-11.json": "93e59877aba76ae13fe2e510eabd26a68351a18513f1989538be6680b7ca74aa"
+        },
+        "seconds": 0.0005605420155916363,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      },
+      "pattern_index": 11,
+      "initial_scalars": "01",
+      "capacity": 12
+    },
+    {
+      "kind": "singleton",
+      "endpoint": "32121032",
+      "tape": "010",
+      "N_max": 3,
+      "D_max": 0,
+      "independent_oracle": true,
+      "pattern_index": 12,
+      "initial_scalars": "01",
+      "capacity": 12
+    }
+  ],
+  "small_originals": {
+    "max_original_length": 7,
+    "originals": 10922,
+    "exact_nonempty_fibers_checked": 68,
+    "frozen_forward_vs_counted_inverse": true
+  },
+  "scope": "Every legal original surviving its first two guards with exact original two-step fiber Q_2<=17, at every original length. No unrestricted mortality or prize conclusion.",
+  "source_sha256": {
+    "capacity17_mortality.py": "2e8758e12ecfdf6c0f05402e0e93fa8ceacc1ed483003a41feef1cf64c887af9",
+    "capacity-17-language.json": "177987dda9b6b6968325561b0051591656b541491a3d96715efb528be0aa65d5",
+    "capacity_language_decomposition.py": "babd3d1771e579452b0c5ca5a14012500e9ced147caffe73f5a8af3496cf6882",
+    "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+    "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+    "bounded_capacity_language.py": "c26120ef4f300972868a5163fa6f05f3021b0bf4426dd61d51cf42b7043c93c6",
+    "aperiodic_mortality_audit.py": "957317a0548dbcae9f55ed4a033cda0044be4d654517027019316ce634d2d5e4",
+    "six_ancestor_family_orbit.cpp": "49bbef2fb000084b55a34d3584754df05bcea4d81be40d41c239961e3222e950",
+    "six_ancestor_family_certificate.py": "6bce30653c725accdea92a3c999da066ba70d859265e86cdcc8bb8897e48b307",
+    "cumulative_history_transfer.py": "63fbc2090b863a47feca1f8e995ea2d2e88ebfd0b4029434f8b8cf1199edb1c2"
+  },
+  "seconds": 10.660825833008857
+}

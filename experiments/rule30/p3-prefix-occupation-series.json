@@ -1,0 +1,430 @@
+{
+  "schema": "rule30.p3-prefix-occupation-series.v1",
+  "source_sha256": {
+    "docs/rule30/RESULTS-p3/RESULTS-p3-prefix-occupation-series.md": "30cdf9964fc90a087f5f6a303e298762cc2859289ec983162b895598d62fcf34",
+    "experiments/rule30/p3-autonomous-profile-bound.json": "aa27a1fb1a01b7cd7f63bf6d71028b96f8af577ef388ee40846a038cd928d3ce",
+    "experiments/rule30/p3_prefix_occupation_series.py": "f792d549e9e04ec15ba684087fcc8e1092439008930ab4bcc5f1cae1df07e09c"
+  },
+  "verification": {
+    "Cartier_paired_selector_positions": 69,
+    "Cartier_query_work_by_supplied_word": [
+      {
+        "group_compositions": 0,
+        "leaf_labels": 0,
+        "length": 0,
+        "maximum_pair_level": 0,
+        "prefix_recursion_calls": 1,
+        "selector_coefficient_calls": 0
+      },
+      {
+        "group_compositions": 1,
+        "leaf_labels": 1,
+        "length": 1,
+        "maximum_pair_level": 0,
+        "prefix_recursion_calls": 2,
+        "selector_coefficient_calls": 8
+      },
+      {
+        "group_compositions": 2,
+        "leaf_labels": 2,
+        "length": 2,
+        "maximum_pair_level": 1,
+        "prefix_recursion_calls": 3,
+        "selector_coefficient_calls": 16
+      },
+      {
+        "group_compositions": 2,
+        "leaf_labels": 2,
+        "length": 2,
+        "maximum_pair_level": 1,
+        "prefix_recursion_calls": 3,
+        "selector_coefficient_calls": 16
+      },
+      {
+        "group_compositions": 3,
+        "leaf_labels": 3,
+        "length": 3,
+        "maximum_pair_level": 1,
+        "prefix_recursion_calls": 3,
+        "selector_coefficient_calls": 24
+      },
+      {
+        "group_compositions": 5,
+        "leaf_labels": 5,
+        "length": 5,
+        "maximum_pair_level": 2,
+        "prefix_recursion_calls": 4,
+        "selector_coefficient_calls": 40
+      },
+      {
+        "group_compositions": 32,
+        "leaf_labels": 32,
+        "length": 32,
+        "maximum_pair_level": 5,
+        "prefix_recursion_calls": 7,
+        "selector_coefficient_calls": 256
+      },
+      {
+        "group_compositions": 32,
+        "leaf_labels": 32,
+        "length": 32,
+        "maximum_pair_level": 5,
+        "prefix_recursion_calls": 7,
+        "selector_coefficient_calls": 256
+      },
+      {
+        "group_compositions": 32,
+        "leaf_labels": 32,
+        "length": 32,
+        "maximum_pair_level": 5,
+        "prefix_recursion_calls": 7,
+        "selector_coefficient_calls": 256
+      },
+      {
+        "group_compositions": 32,
+        "leaf_labels": 32,
+        "length": 32,
+        "maximum_pair_level": 5,
+        "prefix_recursion_calls": 7,
+        "selector_coefficient_calls": 256
+      }
+    ],
+    "D8_complete_multiplication_cases": 64,
+    "all_incoming_Hadamard_equation_cases": 40,
+    "all_length_scope": {
+      "Cartier_halves_supplied_prefix_length_exactly": true,
+      "new_across_column_compressed_construction_proved": false,
+      "ordered_polynomial_closure_exact": true,
+      "plain_coefficient_oracle_query_uses_N_leaves": true,
+      "sublinear_marked_query_proved": false
+    },
+    "concatenation_cut_cases": 151,
+    "huge_supplied_period_query": {
+      "division_by_supplied_period_length": true,
+      "integer_input_bits": 81,
+      "period": [
+        1
+      ],
+      "prefix_length": "1208925819614629174706299",
+      "preparation_group_compositions": 1,
+      "query_group_compositions": 4,
+      "result": [
+        1,
+        3
+      ]
+    },
+    "integer_occupation_closure_failure": {
+      "common_complete_integer_occupation_matrix": [
+        [
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          8
+        ],
+        [
+          8,
+          8,
+          8,
+          8
+        ]
+      ],
+      "common_endpoint_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "common_incoming_digit": 0,
+      "common_length": 32,
+      "common_time_phase": "time1 is odd",
+      "does_not_cover_additional_input_histograms_or_richer_annotations": true,
+      "input_words": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          3,
+          0,
+          3,
+          0,
+          0,
+          1,
+          2,
+          1,
+          3,
+          0,
+          3,
+          0,
+          0,
+          1,
+          2,
+          1,
+          3,
+          0,
+          3,
+          0,
+          0,
+          1,
+          2,
+          1,
+          3,
+          0,
+          3,
+          0,
+          0
+        ]
+      ],
+      "output_words": [
+        [
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3,
+          0,
+          1,
+          2,
+          3,
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          0,
+          0,
+          3,
+          1,
+          3,
+          0,
+          3,
+          0,
+          3,
+          1,
+          2,
+          2,
+          2,
+          3,
+          0,
+          1,
+          2,
+          2,
+          1,
+          3,
+          1,
+          2,
+          1,
+          2,
+          1,
+          3,
+          0,
+          0,
+          0
+        ]
+      ],
+      "unequal_output_endpoint_permutations": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ]
+      ],
+      "unequal_output_occupation_matrices": [
+        [
+          [
+            12,
+            4,
+            4,
+            12
+          ],
+          [
+            8,
+            8,
+            8,
+            8
+          ],
+          [
+            4,
+            12,
+            12,
+            4
+          ],
+          [
+            8,
+            8,
+            8,
+            8
+          ]
+        ],
+        [
+          [
+            6,
+            6,
+            10,
+            10
+          ],
+          [
+            8,
+            10,
+            8,
+            6
+          ],
+          [
+            10,
+            10,
+            6,
+            6
+          ],
+          [
+            8,
+            6,
+            8,
+            10
+          ]
+        ]
+      ],
+      "virtual_input_is_boundary_not_interior_column": true
+    },
+    "ordinary_rational_inverse_failure": {
+      "actual_next_column_word": [
+        1,
+        2
+      ],
+      "correct_second_coefficient_C_times_B": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "minimal_positive_prefix_length": 2,
+      "virtual_driver": [
+        1,
+        1
+      ],
+      "wrong_second_coefficient_B_squared_plus_C": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    "paid_Cartier_prefix_queries": 151,
+    "supplied_period_prefix_controls": 63,
+    "supplied_series_cases": 10
+  }
+}

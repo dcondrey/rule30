@@ -1,0 +1,205 @@
+{
+  "schema": "rule30.two-block-family-certificate.v1",
+  "family": {
+    "prefix": "213",
+    "body1": "13",
+    "seam": "031",
+    "body2": "31",
+    "suffix": "303",
+    "initial_tape": "00",
+    "quantifiers": "Every independent pair of integers a,b>=0"
+  },
+  "uniform_family_mortality_proved": true,
+  "trials": [
+    {
+      "depth": 4,
+      "primary": "capacity18-joint-12.data/depth-04.json",
+      "primary_sha256": "c9f0f7fff5a2d97e2467f13c0917a8ab7fbf1be593342dad229705bce5b68123",
+      "complete": true,
+      "stop_reason": "exact_joint_closure",
+      "first_orbit": {
+        "closed": true,
+        "states": 16,
+        "preperiod": 0,
+        "period": 16,
+        "initial_state": "477",
+        "repeat_state": "477"
+      },
+      "joint": {
+        "all_seeds_included": true,
+        "closed": true,
+        "states": 16,
+        "seeds": 16,
+        "successors_checked": 16
+      },
+      "evaluation": {
+        "complete": true,
+        "states_checked": 16,
+        "survivors": 0,
+        "distinct_tapes": 1,
+        "max_further_successes": 0,
+        "max_total_repeats": 1,
+        "max_success_witness": {
+          "state": "250",
+          "a": 0,
+          "b": 0,
+          "final_state": "21",
+          "further_tape": "",
+          "total_tape": "00",
+          "further_successes": 0,
+          "total_successes": 2,
+          "total_repeats": 1,
+          "survives_depth": false
+        },
+        "max_repeat_witness": {
+          "state": "250",
+          "a": 0,
+          "b": 0,
+          "final_state": "21",
+          "further_tape": "",
+          "total_tape": "00",
+          "further_successes": 0,
+          "total_successes": 2,
+          "total_repeats": 1,
+          "survives_depth": false
+        }
+      },
+      "uniform_family_mortality_proved": true
+    }
+  ],
+  "independent": {
+    "schema": "rule30.two-block-family-independent.v1",
+    "uniform_family_mortality_verified": true,
+    "family": "213(13)^a031(31)^b303",
+    "parameter_domain": "ALL independent integers a,b>=0",
+    "initial_scalar_tape": "00",
+    "depth": 4,
+    "first_orbit_states": 16,
+    "first_preperiod": 0,
+    "first_period": 16,
+    "transported_seeds_with_multiplicity": 16,
+    "joint_reachable_states": 16,
+    "all_representatives_verified": true,
+    "all_chronological_guards_and_births_verified": true,
+    "max_original_successful_updates": 2,
+    "max_original_repeats": 1,
+    "N_witness": {
+      "a": 13,
+      "b": 0,
+      "tape": "00",
+      "N": 2,
+      "D": 1,
+      "full_endpoint_length": 35,
+      "original_length_under_initial_history_label": 33
+    },
+    "D_witness": {
+      "a": 13,
+      "b": 0,
+      "tape": "00",
+      "N": 2,
+      "D": 1,
+      "full_endpoint_length": 35,
+      "original_length_under_initial_history_label": 33
+    },
+    "complete_histories": [
+      {
+        "tape": "00",
+        "N": 2,
+        "D": 1,
+        "joint_column_states": 16,
+        "representative": {
+          "a": 0,
+          "b": 0
+        }
+      }
+    ],
+    "guard_counts": [
+      {
+        "depth": 1,
+        "successful_joint_states": 0,
+        "newly_failed_joint_states": 16
+      },
+      {
+        "depth": 2,
+        "successful_joint_states": 0,
+        "newly_failed_joint_states": 0
+      },
+      {
+        "depth": 3,
+        "successful_joint_states": 0,
+        "newly_failed_joint_states": 0
+      },
+      {
+        "depth": 4,
+        "successful_joint_states": 0,
+        "newly_failed_joint_states": 0
+      }
+    ],
+    "frozen_forward_oracle_controls": [
+      {
+        "a": 0,
+        "b": 0,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 1,
+        "b": 0,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 7,
+        "b": 5,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      }
+    ],
+    "sources": {
+      "/Volumes/A/researchpapers/13-rule30/experiments/rule30/verify_two_block_family.py": "cbc054ef480c034456f4739bbb2e2483cc13d3711eb9e32110085a656ef95a99",
+      "/Volumes/A/researchpapers/13-rule30/experiments/rule30/panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+      "/Volumes/A/researchpapers/13-rule30/experiments/rule30/capacity18-joint-12.data/depth-04.json": "c9f0f7fff5a2d97e2467f13c0917a8ab7fbf1be593342dad229705bce5b68123"
+    },
+    "data_sha256": {
+      "first": "2065d48488c15d9906f0a23567acbd611480741032386ab4d7da042af3afb26f",
+      "seeds": "210d81bf4cd40fd5d758544bbc806f8fa5a4a0a1801d6fc47a258002aa12496c",
+      "joint": "210d81bf4cd40fd5d758544bbc806f8fa5a4a0a1801d6fc47a258002aa12496c",
+      "survivors": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tapes": "6f7b5bc66d702ffb03f9faf7b04683bda35ed5d2889a73c2da630562fd62fbc8"
+    },
+    "seconds": 0.08578500000294298,
+    "scope": "Uniform mortality for this displayed endpoint family with its supplied initial-history label; no unrestricted mortality or period-two conclusion"
+  },
+  "final_primary": "capacity18-joint-12.data/depth-04.json",
+  "limits": {
+    "depth": 31,
+    "max_states": 2000000,
+    "seconds": 120
+  },
+  "source_sha256": {
+    "two_block_family_certificate.py": "08a321c55b9a32ac58cb348061afe1f643ad490f544c4e77df49ffefd43f2fa2",
+    "two_block_column_orbit.cpp": "a198df6f2c14cef3d6fb13238c96a445eea014fc6977cd68ac8b7a6b44d55bdd",
+    "verify_two_block_family.py": "cbc054ef480c034456f4739bbb2e2483cc13d3711eb9e32110085a656ef95a99",
+    "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f"
+  },
+  "seconds": 0.8295289580128156,
+  "scope": "This exact endpoint family with its supplied initial tape. General auxiliary mortality and period-two exclusion remain open."
+}

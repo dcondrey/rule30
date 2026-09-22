@@ -1,0 +1,359 @@
+{
+  "actual_B9_ray": {
+    "P_period": [
+      3,
+      2
+    ],
+    "P_prefix": [
+      2,
+      0,
+      0
+    ],
+    "closed_B_state": 2,
+    "fine_period": [
+      3,
+      0,
+      1,
+      3
+    ],
+    "fine_prefix": [
+      1,
+      1,
+      0,
+      0,
+      1,
+      0,
+      2
+    ],
+    "first_affine_carry_coefficients": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "not_refuted_by_this_witness": "at most one consecutive nonreset carry step",
+    "refuted": "all-spatial avoidance of 00 in P of odd B powers",
+    "source": "previously certified B8=003(0332)^infinity"
+  },
+  "actual_initial_staggered_pair": [
+    0,
+    2
+  ],
+  "complete_affine_carry_cases": 64,
+  "complete_factorization_local_cases": 64,
+  "complete_local_inverse_cases": 64,
+  "date": "2026-09-14",
+  "directed_word_controls": 3,
+  "huge_repeat_control": {
+    "compiled_contexts": 3,
+    "count": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007",
+    "expanded_word_materialized": false,
+    "input_nodes": 2,
+    "marked_queries": [
+      {
+        "digit": 3,
+        "index": "0",
+        "index_operand_bits": 2,
+        "node_visits": 2
+      },
+      {
+        "digit": 3,
+        "index": "1",
+        "index_operand_bits": 3,
+        "node_visits": 3
+      },
+      {
+        "digit": 3,
+        "index": "5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003",
+        "index_operand_bits": 665,
+        "node_visits": 3
+      },
+      {
+        "digit": 3,
+        "index": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006",
+        "index_operand_bits": 667,
+        "node_visits": 3
+      }
+    ],
+    "output_nodes": 4,
+    "query_counter_scope": "partial: node visits and index operand widths; length operands, memory access, and arithmetic implementation remain charged",
+    "repeat_operand_bits_charged": 666
+  },
+  "marked_index_algebra_controls": [
+    {
+      "B_exponent": 2,
+      "center_index": 2,
+      "decoded": [
+        "U",
+        1,
+        0,
+        0
+      ],
+      "fine_index": 0
+    },
+    {
+      "B_exponent": 3,
+      "center_index": 3,
+      "decoded": [
+        "R",
+        1,
+        0,
+        0
+      ],
+      "fine_index": 0
+    },
+    {
+      "B_exponent": 3,
+      "center_index": 4,
+      "decoded": [
+        "R",
+        1,
+        0,
+        1
+      ],
+      "fine_index": 1
+    },
+    {
+      "B_exponent": 4,
+      "center_index": 5,
+      "decoded": [
+        "U",
+        2,
+        0,
+        1
+      ],
+      "fine_index": 1
+    },
+    {
+      "B_exponent": 4,
+      "center_index": 6,
+      "decoded": [
+        "U",
+        2,
+        1,
+        0
+      ],
+      "fine_index": 2
+    },
+    {
+      "B_exponent": 5,
+      "center_index": 7,
+      "decoded": [
+        "R",
+        2,
+        1,
+        0
+      ],
+      "fine_index": 2
+    },
+    {
+      "B_exponent": 5,
+      "center_index": 8,
+      "decoded": [
+        "R",
+        2,
+        1,
+        1
+      ],
+      "fine_index": 3
+    },
+    {
+      "B_exponent": 6,
+      "center_index": 9,
+      "decoded": [
+        "U",
+        3,
+        1,
+        1
+      ],
+      "fine_index": 3
+    },
+    {
+      "B_exponent": 6,
+      "center_index": 10,
+      "decoded": [
+        "U",
+        3,
+        2,
+        0
+      ],
+      "fine_index": 4
+    },
+    {
+      "B_exponent": 7,
+      "center_index": 11,
+      "decoded": [
+        "R",
+        3,
+        2,
+        0
+      ],
+      "fine_index": 4
+    },
+    {
+      "B_exponent": 7,
+      "center_index": 12,
+      "decoded": [
+        "R",
+        3,
+        2,
+        1
+      ],
+      "fine_index": 5
+    },
+    {
+      "B_exponent": 8,
+      "center_index": 13,
+      "decoded": [
+        "U",
+        4,
+        2,
+        1
+      ],
+      "fine_index": 5
+    },
+    {
+      "B_exponent": 8,
+      "center_index": 14,
+      "decoded": [
+        "U",
+        4,
+        3,
+        0
+      ],
+      "fine_index": 6
+    },
+    {
+      "B_exponent": 9,
+      "center_index": 15,
+      "decoded": [
+        "R",
+        4,
+        3,
+        0
+      ],
+      "fine_index": 6
+    },
+    {
+      "B_exponent": 9,
+      "center_index": 16,
+      "decoded": [
+        "R",
+        4,
+        3,
+        1
+      ],
+      "fine_index": 7
+    },
+    {
+      "B_exponent": 10,
+      "center_index": 17,
+      "decoded": [
+        "U",
+        5,
+        3,
+        1
+      ],
+      "fine_index": 7
+    }
+  ],
+  "nonaffine_M_zero_Q": {
+    "affine_rectangle_xor": 4,
+    "ancestry": "arbitrary-input control, not an actual orbit claim",
+    "outputs": [
+      10,
+      15,
+      12,
+      13
+    ]
+  },
+  "positive_finite_zero_P_ray": {
+    "H_cycle": [
+      13,
+      12
+    ],
+    "P_period": [
+      0
+    ],
+    "itinerary_period": [
+      1,
+      0
+    ]
+  },
+  "scope": "Exact staggered factorization and conditional supplied-pair-grammar compilation; no fast actual B-power query",
+  "source_sha256": {
+    "docs/rule30/RESULTS-p3/RESULTS-p3-actual-b-query.md": "f3392d88edf726456f6adef4f4dcad02660942543671d8cfa25f2b19b8731933",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-b-two-channel-block.md": "3ee36823c8a8483f2f211690ae9019777f91615e0895671df6593f441dc07102",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-staggered-affine-field.md": "c3414049af10871e16ea7ed391ff3142076aef89838da575e999672fa0161363",
+    "experiments/rule30/p3-b-two-channel-block.json": "f65630422920bf82fd74d717d82370583a863b1d8a24baad08e120d538ac5399",
+    "experiments/rule30/p3_staggered_affine_field.py": "f1a031cca986ccea243e28df1bc64857f1d0d77dd8e44126fb974358391f7b5f"
+  },
+  "status": "PASS",
+  "supplied_grammar_controls": [
+    {
+      "compiled_contexts": 12,
+      "input_nodes": 6,
+      "output_nodes": 3,
+      "repeat_count": 0
+    },
+    {
+      "compiled_contexts": 20,
+      "input_nodes": 6,
+      "output_nodes": 9,
+      "repeat_count": 1
+    },
+    {
+      "compiled_contexts": 19,
+      "input_nodes": 6,
+      "output_nodes": 13,
+      "repeat_count": 2
+    },
+    {
+      "compiled_contexts": 19,
+      "input_nodes": 6,
+      "output_nodes": 16,
+      "repeat_count": 5
+    }
+  ],
+  "zero_Q_one_carry_controls": [
+    {
+      "M_zero_Q": [
+        2,
+        3,
+        1,
+        0
+      ],
+      "P": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "M_zero_Q": [
+        1,
+        3,
+        1
+      ],
+      "P": [
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "M_zero_Q": [
+        3,
+        2,
+        2
+      ],
+      "P": [
+        1,
+        1,
+        0
+      ]
+    }
+  ]
+}

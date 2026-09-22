@@ -1,0 +1,1284 @@
+{
+  "capacity": 18,
+  "selected_new_patterns": 12,
+  "all_new_patterns": 19,
+  "patterns_completed": 12,
+  "patterns_proved": 12,
+  "all_12_simple_patterns_proved": true,
+  "uniform_capacity18_mortality_proved_by_this_artifact": false,
+  "max_N_over_proved_patterns": 25,
+  "max_D_over_proved_patterns": 14,
+  "family_proofs": [
+    {
+      "cap32_pattern_index": 1,
+      "pattern": {
+        "parts": [
+          "212100",
+          {
+            "repeat": "0"
+          }
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 1
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-01.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 2,
+      "D_max": 0,
+      "attaining_k": 0,
+      "attaining_tape": "01",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "212100(0)^k32, all integers k>=0",
+        "max_original_successful_updates": 2,
+        "max_original_repeats": 0,
+        "attained_at_k": 0,
+        "sharp_tape": "01",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 1,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 1,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-01.json": "cc257f862672692eb95bd51377dbf22c5d5da6751830c77f335ce3020f7a4080"
+        },
+        "seconds": 0.009545291977701709,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      }
+    },
+    {
+      "cap32_pattern_index": 4,
+      "pattern": {
+        "parts": [
+          "21213",
+          {
+            "repeat": "13"
+          },
+          "03"
+        ],
+        "scalars": "00",
+        "capacity": 18,
+        "birth_suffix": "03",
+        "cap32_pattern_index": 4
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-04.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 24,
+      "D_max": 14,
+      "attaining_k": 816931,
+      "attaining_tape": "001000001101001100000111",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "21213(13)^k0303, all integers k>=0",
+        "max_original_successful_updates": 24,
+        "max_original_repeats": 14,
+        "attained_at_k": 816931,
+        "sharp_tape": "001000001101001100000111",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 1048576,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 524288,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 262144,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 16,
+            "surviving_global_residues": 131072,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 4,
+            "period": 32,
+            "surviving_global_residues": 65536,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 5,
+            "period": 32,
+            "surviving_global_residues": 65536,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 6,
+            "period": 128,
+            "surviving_global_residues": 32768,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 7,
+            "period": 256,
+            "surviving_global_residues": 16384,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 8,
+            "period": 256,
+            "surviving_global_residues": 16384,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 9,
+            "period": 1024,
+            "surviving_global_residues": 8192,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 10,
+            "period": 1024,
+            "surviving_global_residues": 7168,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 11,
+            "period": 2048,
+            "surviving_global_residues": 3584,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 12,
+            "period": 4096,
+            "surviving_global_residues": 1024,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 13,
+            "period": 8192,
+            "surviving_global_residues": 512,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 14,
+            "period": 8192,
+            "surviving_global_residues": 256,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 15,
+            "period": 16384,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 16,
+            "period": 32768,
+            "surviving_global_residues": 64,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 17,
+            "period": 32768,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 18,
+            "period": 131072,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 19,
+            "period": 262144,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 20,
+            "period": 524288,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 21,
+            "period": 524288,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 22,
+            "period": 1048576,
+            "surviving_global_residues": 1,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 23,
+            "period": 1048576,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-04.json": "9e8431e3732551a2a334be8749bd3588579493d2d9f99a6d304ca3fa6985102b"
+        },
+        "seconds": 7.946327375015244,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      }
+    },
+    {
+      "cap32_pattern_index": 7,
+      "pattern": {
+        "parts": [
+          "21213",
+          {
+            "repeat": "13"
+          },
+          "1210"
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 7
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-07.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 22,
+      "D_max": 10,
+      "attaining_k": 307138,
+      "attaining_tape": "0110010001001100001001",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "21213(13)^k121032, all integers k>=0",
+        "max_original_successful_updates": 22,
+        "max_original_repeats": 10,
+        "attained_at_k": 307138,
+        "sharp_tape": "0110010001001100001001",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 524288,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 262144,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 131072,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 16,
+            "surviving_global_residues": 65536,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 4,
+            "period": 32,
+            "surviving_global_residues": 32768,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 5,
+            "period": 32,
+            "surviving_global_residues": 16384,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 6,
+            "period": 128,
+            "surviving_global_residues": 8192,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 7,
+            "period": 256,
+            "surviving_global_residues": 4096,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 8,
+            "period": 256,
+            "surviving_global_residues": 2048,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 9,
+            "period": 1024,
+            "surviving_global_residues": 1024,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 10,
+            "period": 1024,
+            "surviving_global_residues": 1024,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 11,
+            "period": 2048,
+            "surviving_global_residues": 512,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 12,
+            "period": 4096,
+            "surviving_global_residues": 256,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 13,
+            "period": 8192,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 14,
+            "period": 8192,
+            "surviving_global_residues": 64,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 15,
+            "period": 16384,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 16,
+            "period": 32768,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 17,
+            "period": 32768,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 18,
+            "period": 131072,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 19,
+            "period": 262144,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 20,
+            "period": 524288,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 21,
+            "period": 524288,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-07.json": "2cb8dc4b1a82b873be39003a9d118581cda64f2c573d22081d03840f8b54ae62"
+        },
+        "seconds": 3.6474944170040544,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      }
+    },
+    {
+      "cap32_pattern_index": 11,
+      "pattern": {
+        "parts": [
+          "213",
+          {
+            "repeat": "13"
+          },
+          "03"
+        ],
+        "scalars": "00",
+        "capacity": 18,
+        "birth_suffix": "03",
+        "cap32_pattern_index": 11
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-11.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 2,
+      "D_max": 1,
+      "attaining_k": 0,
+      "attaining_tape": "00",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "213(13)^k0303, all integers k>=0",
+        "max_original_successful_updates": 2,
+        "max_original_repeats": 1,
+        "attained_at_k": 0,
+        "sharp_tape": "00",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 1,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 1,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-11.json": "f3aeecccbd0351b746ee61db26bac496a6844bb35a93f0098d98554793f84b1c"
+        },
+        "seconds": 0.00048820898518897593,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      }
+    },
+    {
+      "cap32_pattern_index": 14,
+      "pattern": {
+        "parts": [
+          "213",
+          {
+            "repeat": "13"
+          },
+          "1210"
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 14
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-14.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 2,
+      "D_max": 0,
+      "attaining_k": 0,
+      "attaining_tape": "01",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "213(13)^k121032, all integers k>=0",
+        "max_original_successful_updates": 2,
+        "max_original_repeats": 0,
+        "attained_at_k": 0,
+        "sharp_tape": "01",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 1,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 1,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-14.json": "0587a7aba06e6e49ca8ba64cc851c291127a5341681e5f2994b3a261cc08996a"
+        },
+        "seconds": 0.0004953750176355243,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      }
+    },
+    {
+      "cap32_pattern_index": 22,
+      "pattern": {
+        "parts": [
+          "3031",
+          {
+            "repeat": "31"
+          },
+          "210"
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 22
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-22.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 11,
+      "D_max": 6,
+      "attaining_k": 104,
+      "attaining_tape": "01100010000",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "3031(31)^k21032, all integers k>=0",
+        "max_original_successful_updates": 11,
+        "max_original_repeats": 6,
+        "attained_at_k": 104,
+        "sharp_tape": "01100010000",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 128,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 64,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 16,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 4,
+            "period": 32,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 5,
+            "period": 32,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 6,
+            "period": 32,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 7,
+            "period": 64,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 8,
+            "period": 128,
+            "surviving_global_residues": 3,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 9,
+            "period": 128,
+            "surviving_global_residues": 1,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 10,
+            "period": 128,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-22.json": "64d011fd413c83d61970bf0978596bec4a5a75e860cb0671fd19e7820e90b4f6"
+        },
+        "seconds": 0.0012161670019850135,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      }
+    },
+    {
+      "cap32_pattern_index": 26,
+      "pattern": {
+        "parts": [
+          "3031",
+          {
+            "repeat": "31"
+          },
+          "303"
+        ],
+        "scalars": "00",
+        "capacity": 18,
+        "birth_suffix": "03",
+        "cap32_pattern_index": 26
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-26.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 17,
+      "D_max": 9,
+      "attaining_k": 2024,
+      "attaining_tape": "00100111100000101",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "3031(31)^k30303, all integers k>=0",
+        "max_original_successful_updates": 17,
+        "max_original_repeats": 9,
+        "attained_at_k": 2024,
+        "sharp_tape": "00100111100000101",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 2048,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 1024,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 512,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 16,
+            "surviving_global_residues": 256,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 4,
+            "period": 32,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 5,
+            "period": 32,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 6,
+            "period": 32,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 7,
+            "period": 64,
+            "surviving_global_residues": 64,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 8,
+            "period": 128,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 9,
+            "period": 128,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 10,
+            "period": 128,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 11,
+            "period": 128,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 12,
+            "period": 512,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 13,
+            "period": 1024,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 14,
+            "period": 2048,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 15,
+            "period": 2048,
+            "surviving_global_residues": 1,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 16,
+            "period": 2048,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-26.json": "fa882ff9aa95b1c913e81c23092e1b186ec43da6dfca3bf35b5406b32bd872ff"
+        },
+        "seconds": 0.011398708011256531,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      }
+    },
+    {
+      "cap32_pattern_index": 29,
+      "pattern": {
+        "parts": [
+          "303210"
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 29
+      },
+      "kind": "finite",
+      "uniform_family_mortality_proved": true,
+      "endpoint": "30321032",
+      "N_max": 3,
+      "D_max": 1,
+      "attaining_tape": "011",
+      "frozen_oracle": true
+    },
+    {
+      "cap32_pattern_index": 30,
+      "pattern": {
+        "parts": [
+          "3032100",
+          {
+            "repeat": "0"
+          }
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 30
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-30.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 4,
+      "D_max": 1,
+      "attaining_k": 1,
+      "attaining_tape": "0110",
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "family": "3032100(0)^k32, all integers k>=0",
+        "max_original_successful_updates": 4,
+        "max_original_repeats": 1,
+        "attained_at_k": 1,
+        "sharp_tape": "0110",
+        "independent_engine": "frozen panel/cert33.py full spatial bulk rows + explicit birth suffixes",
+        "global_spatial_period": 8,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 4,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 8,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "source_sha256": {
+          "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-30.json": "a8c28f0ef1a03e4eb910d1d9142a0db67c36ca8a1e5c29e1a53a005c93e30f79"
+        },
+        "seconds": 0.0005793750169686973,
+        "scope": "Uniform theorem for this family, not general mortality or P1."
+      }
+    },
+    {
+      "cap32_pattern_index": 31,
+      "pattern": {
+        "parts": [
+          "30321210"
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 31
+      },
+      "kind": "finite",
+      "uniform_family_mortality_proved": true,
+      "endpoint": "3032121032",
+      "N_max": 2,
+      "D_max": 0,
+      "attaining_tape": "01",
+      "frozen_oracle": true
+    },
+    {
+      "cap32_pattern_index": 33,
+      "pattern": {
+        "parts": [
+          "30322",
+          {
+            "repeat": "2"
+          },
+          "10"
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 33
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-33.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 12,
+      "D_max": 4,
+      "N_attainment": {
+        "k": 740,
+        "tape": "010101110100"
+      },
+      "D_attainment": {
+        "k": 484,
+        "tape": "01010111000"
+      },
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "max_original_successful_updates": 12,
+        "max_original_repeats": 4,
+        "N_attainment": {
+          "k": 740,
+          "tape": "010101110100"
+        },
+        "D_attainment": {
+          "k": 484,
+          "tape": "01010111000"
+        },
+        "global_spatial_period": 2048,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 2048,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 8,
+            "surviving_global_residues": 1024,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 16,
+            "surviving_global_residues": 512,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 4,
+            "period": 32,
+            "surviving_global_residues": 256,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 5,
+            "period": 64,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 6,
+            "period": 128,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 7,
+            "period": 256,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 8,
+            "period": 512,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 9,
+            "period": 1024,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 10,
+            "period": 2048,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 11,
+            "period": 2048,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "independent_engine": "Frozen panel/cert33.py full rows, explicit suffix birth, every chronological guard.",
+        "source_sha256": {
+          "capacity18_simple_family_independent.py": "10125542593d2a8177c04863196ede40c04855639e1dbdb63af96d13ded59012",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-33.json": "8df9ad6532588aaf1f74caf9cd162dfc5dbaf9c0e175e6061077151259715a17"
+        },
+        "seconds": 0.014505875005852431
+      }
+    },
+    {
+      "cap32_pattern_index": 35,
+      "pattern": {
+        "parts": [
+          "30322",
+          {
+            "repeat": "2"
+          },
+          "1210"
+        ],
+        "scalars": "01",
+        "capacity": 18,
+        "birth_suffix": "32",
+        "cap32_pattern_index": 35
+      },
+      "kind": "one_star",
+      "primary_certificate": "capacity18-simple-family-35.json",
+      "uniform_family_mortality_proved": true,
+      "N_max": 25,
+      "D_max": 14,
+      "N_attainment": {
+        "k": 1692508,
+        "tape": "0111100011010111101111000"
+      },
+      "D_attainment": {
+        "k": 1692508,
+        "tape": "0111100011010111101111000"
+      },
+      "independent": {
+        "uniform_family_mortality_verified": true,
+        "max_original_successful_updates": 25,
+        "max_original_repeats": 14,
+        "N_attainment": {
+          "k": 1692508,
+          "tape": "0111100011010111101111000"
+        },
+        "D_attainment": {
+          "k": 1692508,
+          "tape": "0111100011010111101111000"
+        },
+        "global_spatial_period": 2097152,
+        "rows": [
+          {
+            "depth": 1,
+            "period": 2,
+            "surviving_global_residues": 1048576,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 2,
+            "period": 8,
+            "surviving_global_residues": 524288,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 3,
+            "period": 16,
+            "surviving_global_residues": 262144,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 4,
+            "period": 32,
+            "surviving_global_residues": 262144,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 5,
+            "period": 64,
+            "surviving_global_residues": 131072,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 6,
+            "period": 128,
+            "surviving_global_residues": 65536,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 7,
+            "period": 256,
+            "surviving_global_residues": 24576,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 8,
+            "period": 512,
+            "surviving_global_residues": 12288,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 9,
+            "period": 1024,
+            "surviving_global_residues": 6144,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 10,
+            "period": 2048,
+            "surviving_global_residues": 4096,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 11,
+            "period": 2048,
+            "surviving_global_residues": 2048,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 12,
+            "period": 8192,
+            "surviving_global_residues": 1024,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 13,
+            "period": 16384,
+            "surviving_global_residues": 512,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 14,
+            "period": 16384,
+            "surviving_global_residues": 256,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 15,
+            "period": 16384,
+            "surviving_global_residues": 128,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 16,
+            "period": 32768,
+            "surviving_global_residues": 64,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 17,
+            "period": 65536,
+            "surviving_global_residues": 32,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 18,
+            "period": 131072,
+            "surviving_global_residues": 16,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 19,
+            "period": 262144,
+            "surviving_global_residues": 8,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 20,
+            "period": 524288,
+            "surviving_global_residues": 4,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 21,
+            "period": 1048576,
+            "surviving_global_residues": 2,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 22,
+            "period": 2097152,
+            "surviving_global_residues": 1,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 23,
+            "period": 2097152,
+            "surviving_global_residues": 1,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          },
+          {
+            "depth": 24,
+            "period": 2097152,
+            "surviving_global_residues": 0,
+            "two_complete_bulk_periods_verified": true,
+            "all_guards_verified": true
+          }
+        ],
+        "independent_engine": "Frozen panel/cert33.py full rows, explicit suffix birth, every chronological guard.",
+        "source_sha256": {
+          "capacity18_simple_family_independent.py": "10125542593d2a8177c04863196ede40c04855639e1dbdb63af96d13ded59012",
+          "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+          "capacity18-simple-family-35.json": "0faa6c90e956b015598ea62a04af87e32b8befbbca84267664932c6d4aae3c2f"
+        },
+        "seconds": 8.703517624991946
+      }
+    }
+  ],
+  "limits_per_periodic_family": {
+    "depth": 31,
+    "period_cap": 2097152,
+    "seconds": 60
+  },
+  "scope": "Only the 10 new one-star and 2 new finite exact-Q2=18 patterns, all lengths and all repetition parameters in each closed family. Seven two-star additions and the old Q2<=17 families are outside this artifact.",
+  "seconds": 0.03584633400896564,
+  "source_sha256": {
+    "capacity18_simple_families.py": "fcadc082557b304ce92cb04d81ab32f7e742aad9b0f170df6da5a388977bb954",
+    "capacity18-language-audit.json": "1dc5e754e7707f3532f0f4cf1d28bed0cf826485e6d9af15fc89b59a82a174d8",
+    "six_ancestor_family_certificate.py": "6bce30653c725accdea92a3c999da066ba70d859265e86cdcc8bb8897e48b307",
+    "six_ancestor_family_orbit.cpp": "49bbef2fb000084b55a34d3584754df05bcea4d81be40d41c239961e3222e950",
+    "verify_six_ancestor_family.py": "c33ae094c12ea2300ee0fae988e20b54b55554f557f5a4dce1f237e2a7a3f96d",
+    "capacity18_simple_family_independent.py": "10125542593d2a8177c04863196ede40c04855639e1dbdb63af96d13ded59012",
+    "cumulative_history_transfer.py": "63fbc2090b863a47feca1f8e995ea2d2e88ebfd0b4029434f8b8cf1199edb1c2",
+    "aperiodic_mortality_audit.py": "957317a0548dbcae9f55ed4a033cda0044be4d654517027019316ce634d2d5e4",
+    "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f"
+  }
+}

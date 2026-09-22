@@ -1,0 +1,27 @@
+{
+  "schema": "rule30.seam15-free-group-invariant-probe.v1",
+  "layers": [
+    {
+      "depth": 13,
+      "old_depth": 12,
+      "columns": 125,
+      "classes": 22,
+      "mixed": 17
+    },
+    {
+      "depth": 14,
+      "old_depth": 13,
+      "columns": 216,
+      "classes": 22,
+      "mixed": 22
+    },
+    {
+      "depth": 15,
+      "old_depth": 14,
+      "columns": 351,
+      "classes": 24,
+      "mixed": 23
+    }
+  ],
+  "verdict": "KILL"
+}

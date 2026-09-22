@@ -1,0 +1,16 @@
+{
+ "identity_1_k_0_40": true,
+ "f_k_equality_at_f(k)_k_0_20": true,
+ "f_k_smaller_padding_fails_k_1_20_(string_inequality; distinguishing word searched k<=9)": true,
+ "leading_flip_lemma_all_binary_t_len_2_14_with_J(t)[:2]==(2,2)": {
+  "cases": 8191,
+  "all_equal": true
+ },
+ "bridge_J(t)[:2]==(2,2)_iff_t[:2]==(2,2)_len2_14": true,
+ "J(t)[:2]_depends_only_on_t[:2]_random_extensions": true,
+ "k_ge_2_absorption_k_2_60": true,
+ "ria_threshold_certificate": {
+  "g_0": 5,
+  "g_1": 1
+ }
+}

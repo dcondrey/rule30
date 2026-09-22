@@ -1,0 +1,1366 @@
+{
+  "verification": {
+    "directed_query_controls": [
+      {
+        "n": 0,
+        "center": 1,
+        "zero_section_advances": 0,
+        "constructed_grammar_nodes": 4,
+        "deleted_A_letters": 0,
+        "unpruned_constructed_grammar_nodes": 4,
+        "unpruned_section_subqueries": 0
+      },
+      {
+        "n": 1,
+        "center": 1,
+        "zero_section_advances": 0,
+        "initial_grammar_nodes": 4,
+        "constructed_grammar_nodes": 4,
+        "distinct_section_subqueries": 0,
+        "section_requests": 0,
+        "concat_requests": 1,
+        "prefix_cut_requests": 0,
+        "distinct_nontrivial_prefix_cuts": 0,
+        "deleted_A_letters": 0,
+        "final_canonical_length": 1,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 1,
+            "head": "C",
+            "current_zero_output_bit": 1
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 4,
+        "unpruned_section_subqueries": 1
+      },
+      {
+        "n": 2,
+        "center": 0,
+        "zero_section_advances": 1,
+        "initial_grammar_nodes": 5,
+        "constructed_grammar_nodes": 6,
+        "distinct_section_subqueries": 3,
+        "section_requests": 3,
+        "concat_requests": 3,
+        "prefix_cut_requests": 1,
+        "distinct_nontrivial_prefix_cuts": 0,
+        "deleted_A_letters": 0,
+        "final_canonical_length": 2,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 2,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 2,
+            "head": "B",
+            "current_zero_output_bit": 0
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 7,
+        "unpruned_section_subqueries": 5
+      },
+      {
+        "n": 3,
+        "center": 1,
+        "zero_section_advances": 2,
+        "initial_grammar_nodes": 6,
+        "constructed_grammar_nodes": 10,
+        "distinct_section_subqueries": 7,
+        "section_requests": 10,
+        "concat_requests": 7,
+        "prefix_cut_requests": 3,
+        "distinct_nontrivial_prefix_cuts": 1,
+        "deleted_A_letters": 1,
+        "final_canonical_length": 2,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 3,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 3,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 2,
+            "head": "C",
+            "current_zero_output_bit": 1
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 12,
+        "unpruned_section_subqueries": 10
+      },
+      {
+        "n": 4,
+        "center": 1,
+        "zero_section_advances": 3,
+        "initial_grammar_nodes": 6,
+        "constructed_grammar_nodes": 12,
+        "distinct_section_subqueries": 10,
+        "section_requests": 15,
+        "concat_requests": 10,
+        "prefix_cut_requests": 5,
+        "distinct_nontrivial_prefix_cuts": 2,
+        "deleted_A_letters": 1,
+        "final_canonical_length": 3,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 4,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 4,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 3,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 4,
+            "canonical_length": 3,
+            "head": "B",
+            "current_zero_output_bit": 1
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 14,
+        "unpruned_section_subqueries": 14
+      },
+      {
+        "n": 7,
+        "center": 0,
+        "zero_section_advances": 6,
+        "initial_grammar_nodes": 8,
+        "constructed_grammar_nodes": 27,
+        "distinct_section_subqueries": 26,
+        "section_requests": 46,
+        "concat_requests": 27,
+        "prefix_cut_requests": 11,
+        "distinct_nontrivial_prefix_cuts": 5,
+        "deleted_A_letters": 3,
+        "final_canonical_length": 4,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 7,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 7,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 6,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 4,
+            "canonical_length": 6,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 5,
+            "canonical_length": 5,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 6,
+            "canonical_length": 5,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 7,
+            "canonical_length": 4,
+            "head": "C",
+            "current_zero_output_bit": 0
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 33,
+        "unpruned_section_subqueries": 36
+      },
+      {
+        "n": 8,
+        "center": 1,
+        "zero_section_advances": 7,
+        "initial_grammar_nodes": 7,
+        "constructed_grammar_nodes": 32,
+        "distinct_section_subqueries": 30,
+        "section_requests": 55,
+        "concat_requests": 32,
+        "prefix_cut_requests": 13,
+        "distinct_nontrivial_prefix_cuts": 6,
+        "deleted_A_letters": 3,
+        "final_canonical_length": 5,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 8,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 8,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 7,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 4,
+            "canonical_length": 7,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 5,
+            "canonical_length": 6,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 6,
+            "canonical_length": 6,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 7,
+            "canonical_length": 5,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 8,
+            "canonical_length": 5,
+            "head": "B",
+            "current_zero_output_bit": 1
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 32,
+        "unpruned_section_subqueries": 36
+      },
+      {
+        "n": 9,
+        "center": 1,
+        "zero_section_advances": 8,
+        "initial_grammar_nodes": 8,
+        "constructed_grammar_nodes": 36,
+        "distinct_section_subqueries": 34,
+        "section_requests": 64,
+        "concat_requests": 37,
+        "prefix_cut_requests": 15,
+        "distinct_nontrivial_prefix_cuts": 7,
+        "deleted_A_letters": 4,
+        "final_canonical_length": 5,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 9,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 9,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 8,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 4,
+            "canonical_length": 8,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 5,
+            "canonical_length": 7,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 6,
+            "canonical_length": 7,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 7,
+            "canonical_length": 6,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 8,
+            "canonical_length": 6,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 9,
+            "canonical_length": 5,
+            "head": "C",
+            "current_zero_output_bit": 1
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 45,
+        "unpruned_section_subqueries": 49
+      },
+      {
+        "n": 17,
+        "center": 0,
+        "zero_section_advances": 16,
+        "initial_grammar_nodes": 9,
+        "constructed_grammar_nodes": 85,
+        "distinct_section_subqueries": 85,
+        "section_requests": 174,
+        "concat_requests": 96,
+        "prefix_cut_requests": 31,
+        "distinct_nontrivial_prefix_cuts": 15,
+        "deleted_A_letters": 8,
+        "final_canonical_length": 9,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 17,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 17,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 16,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 4,
+            "canonical_length": 16,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 5,
+            "canonical_length": 15,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 6,
+            "canonical_length": 15,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 7,
+            "canonical_length": 14,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 8,
+            "canonical_length": 14,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 9,
+            "canonical_length": 13,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 10,
+            "canonical_length": 13,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 11,
+            "canonical_length": 12,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 12,
+            "canonical_length": 12,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 13,
+            "canonical_length": 11,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 14,
+            "canonical_length": 11,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 15,
+            "canonical_length": 10,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 16,
+            "canonical_length": 10,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 17,
+            "canonical_length": 9,
+            "head": "C",
+            "current_zero_output_bit": 0
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 99,
+        "unpruned_section_subqueries": 113
+      },
+      {
+        "n": 31,
+        "center": 0,
+        "zero_section_advances": 30,
+        "initial_grammar_nodes": 12,
+        "constructed_grammar_nodes": 211,
+        "distinct_section_subqueries": 216,
+        "section_requests": 450,
+        "concat_requests": 244,
+        "prefix_cut_requests": 60,
+        "distinct_nontrivial_prefix_cuts": 30,
+        "deleted_A_letters": 15,
+        "final_canonical_length": 16,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 31,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 31,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 30,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 4,
+            "canonical_length": 30,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 5,
+            "canonical_length": 29,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 6,
+            "canonical_length": 29,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 7,
+            "canonical_length": 28,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 8,
+            "canonical_length": 28,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 9,
+            "canonical_length": 27,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 10,
+            "canonical_length": 27,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 11,
+            "canonical_length": 26,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 12,
+            "canonical_length": 26,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 13,
+            "canonical_length": 25,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 14,
+            "canonical_length": 25,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 15,
+            "canonical_length": 24,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 16,
+            "canonical_length": 24,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 17,
+            "canonical_length": 23,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 18,
+            "canonical_length": 23,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 19,
+            "canonical_length": 22,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 20,
+            "canonical_length": 22,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 21,
+            "canonical_length": 21,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 22,
+            "canonical_length": 21,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 23,
+            "canonical_length": 20,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 24,
+            "canonical_length": 20,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 25,
+            "canonical_length": 19,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 26,
+            "canonical_length": 19,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 27,
+            "canonical_length": 18,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 28,
+            "canonical_length": 18,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 29,
+            "canonical_length": 17,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 30,
+            "canonical_length": 17,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 31,
+            "canonical_length": 16,
+            "head": "C",
+            "current_zero_output_bit": 0
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 233,
+        "unpruned_section_subqueries": 269
+      },
+      {
+        "n": 32,
+        "center": 0,
+        "zero_section_advances": 31,
+        "initial_grammar_nodes": 9,
+        "constructed_grammar_nodes": 215,
+        "distinct_section_subqueries": 225,
+        "section_requests": 469,
+        "concat_requests": 252,
+        "prefix_cut_requests": 62,
+        "distinct_nontrivial_prefix_cuts": 31,
+        "deleted_A_letters": 15,
+        "final_canonical_length": 17,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 32,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 32,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 31,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 4,
+            "canonical_length": 31,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 5,
+            "canonical_length": 30,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 6,
+            "canonical_length": 30,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 7,
+            "canonical_length": 29,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 8,
+            "canonical_length": 29,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 9,
+            "canonical_length": 28,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 10,
+            "canonical_length": 28,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 11,
+            "canonical_length": 27,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 12,
+            "canonical_length": 27,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 13,
+            "canonical_length": 26,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 14,
+            "canonical_length": 26,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 15,
+            "canonical_length": 25,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 16,
+            "canonical_length": 25,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 17,
+            "canonical_length": 24,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 18,
+            "canonical_length": 24,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 19,
+            "canonical_length": 23,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 20,
+            "canonical_length": 23,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 21,
+            "canonical_length": 22,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 22,
+            "canonical_length": 22,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 23,
+            "canonical_length": 21,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 24,
+            "canonical_length": 21,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 25,
+            "canonical_length": 20,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 26,
+            "canonical_length": 20,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 27,
+            "canonical_length": 19,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 28,
+            "canonical_length": 19,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 29,
+            "canonical_length": 18,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 30,
+            "canonical_length": 18,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 31,
+            "canonical_length": 17,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 32,
+            "canonical_length": 17,
+            "head": "B",
+            "current_zero_output_bit": 0
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 205,
+        "unpruned_section_subqueries": 246
+      },
+      {
+        "n": 33,
+        "center": 1,
+        "zero_section_advances": 32,
+        "initial_grammar_nodes": 10,
+        "constructed_grammar_nodes": 219,
+        "distinct_section_subqueries": 222,
+        "section_requests": 464,
+        "concat_requests": 250,
+        "prefix_cut_requests": 64,
+        "distinct_nontrivial_prefix_cuts": 32,
+        "deleted_A_letters": 16,
+        "final_canonical_length": 17,
+        "trace": [
+          {
+            "seed_bits_consumed": 1,
+            "canonical_length": 33,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 2,
+            "canonical_length": 33,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 3,
+            "canonical_length": 32,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 4,
+            "canonical_length": 32,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 5,
+            "canonical_length": 31,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 6,
+            "canonical_length": 31,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 7,
+            "canonical_length": 30,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 8,
+            "canonical_length": 30,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 9,
+            "canonical_length": 29,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 10,
+            "canonical_length": 29,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 11,
+            "canonical_length": 28,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 12,
+            "canonical_length": 28,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 13,
+            "canonical_length": 27,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 14,
+            "canonical_length": 27,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 15,
+            "canonical_length": 26,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 16,
+            "canonical_length": 26,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 17,
+            "canonical_length": 25,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 18,
+            "canonical_length": 25,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 19,
+            "canonical_length": 24,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 20,
+            "canonical_length": 24,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 21,
+            "canonical_length": 23,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 22,
+            "canonical_length": 23,
+            "head": "B",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 23,
+            "canonical_length": 22,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 24,
+            "canonical_length": 22,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 25,
+            "canonical_length": 21,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 26,
+            "canonical_length": 21,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 27,
+            "canonical_length": 20,
+            "head": "C",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 28,
+            "canonical_length": 20,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 29,
+            "canonical_length": 19,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 30,
+            "canonical_length": 19,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 31,
+            "canonical_length": 18,
+            "head": "C",
+            "current_zero_output_bit": 0
+          },
+          {
+            "seed_bits_consumed": 32,
+            "canonical_length": 18,
+            "head": "B",
+            "current_zero_output_bit": 1
+          },
+          {
+            "seed_bits_consumed": 33,
+            "canonical_length": 17,
+            "head": "C",
+            "current_zero_output_bit": 1
+          }
+        ],
+        "unpruned_constructed_grammar_nodes": 244,
+        "unpruned_section_subqueries": 278
+      }
+    ],
+    "complete_small_seed_sections": [
+      {
+        "n": 1,
+        "j": 1,
+        "word": "C",
+        "leading_A": 0,
+        "canonical": "C"
+      },
+      {
+        "n": 1,
+        "j": 2,
+        "word": "B",
+        "leading_A": 0,
+        "canonical": "B"
+      },
+      {
+        "n": 1,
+        "j": 3,
+        "word": "A",
+        "leading_A": 1,
+        "canonical": ""
+      },
+      {
+        "n": 2,
+        "j": 1,
+        "word": "CC",
+        "leading_A": 0,
+        "canonical": "CC"
+      },
+      {
+        "n": 2,
+        "j": 2,
+        "word": "BC",
+        "leading_A": 0,
+        "canonical": "BC"
+      },
+      {
+        "n": 2,
+        "j": 3,
+        "word": "AC",
+        "leading_A": 1,
+        "canonical": "C"
+      },
+      {
+        "n": 2,
+        "j": 4,
+        "word": "AB",
+        "leading_A": 1,
+        "canonical": "B"
+      },
+      {
+        "n": 2,
+        "j": 5,
+        "word": "AA",
+        "leading_A": 2,
+        "canonical": ""
+      },
+      {
+        "n": 3,
+        "j": 1,
+        "word": "CCC",
+        "leading_A": 0,
+        "canonical": "CCC"
+      },
+      {
+        "n": 3,
+        "j": 2,
+        "word": "BCB",
+        "leading_A": 0,
+        "canonical": "BCB"
+      },
+      {
+        "n": 3,
+        "j": 3,
+        "word": "ACA",
+        "leading_A": 1,
+        "canonical": "CA"
+      },
+      {
+        "n": 3,
+        "j": 4,
+        "word": "ABC",
+        "leading_A": 1,
+        "canonical": "BC"
+      },
+      {
+        "n": 3,
+        "j": 5,
+        "word": "AAC",
+        "leading_A": 2,
+        "canonical": "C"
+      },
+      {
+        "n": 3,
+        "j": 6,
+        "word": "AAB",
+        "leading_A": 2,
+        "canonical": "B"
+      },
+      {
+        "n": 3,
+        "j": 7,
+        "word": "AAA",
+        "leading_A": 3,
+        "canonical": ""
+      },
+      {
+        "n": 7,
+        "j": 1,
+        "word": "CCCCCCC",
+        "leading_A": 0,
+        "canonical": "CCCCCCC"
+      },
+      {
+        "n": 7,
+        "j": 2,
+        "word": "BCBCBCB",
+        "leading_A": 0,
+        "canonical": "BCBCBCB"
+      },
+      {
+        "n": 7,
+        "j": 3,
+        "word": "ACACACA",
+        "leading_A": 1,
+        "canonical": "CACACA"
+      },
+      {
+        "n": 7,
+        "j": 4,
+        "word": "ABCCABC",
+        "leading_A": 1,
+        "canonical": "BCCABC"
+      },
+      {
+        "n": 7,
+        "j": 5,
+        "word": "AACBCCB",
+        "leading_A": 2,
+        "canonical": "CBCCB"
+      },
+      {
+        "n": 7,
+        "j": 6,
+        "word": "AABCBCA",
+        "leading_A": 2,
+        "canonical": "BCBCA"
+      },
+      {
+        "n": 7,
+        "j": 7,
+        "word": "AAACACA",
+        "leading_A": 3,
+        "canonical": "CACA"
+      },
+      {
+        "n": 7,
+        "j": 8,
+        "word": "AAABCCA",
+        "leading_A": 3,
+        "canonical": "BCCA"
+      },
+      {
+        "n": 7,
+        "j": 9,
+        "word": "AAAACBC",
+        "leading_A": 4,
+        "canonical": "CBC"
+      },
+      {
+        "n": 7,
+        "j": 10,
+        "word": "AAAABCB",
+        "leading_A": 4,
+        "canonical": "BCB"
+      },
+      {
+        "n": 7,
+        "j": 11,
+        "word": "AAAAACA",
+        "leading_A": 5,
+        "canonical": "CA"
+      },
+      {
+        "n": 7,
+        "j": 12,
+        "word": "AAAAABC",
+        "leading_A": 5,
+        "canonical": "BC"
+      },
+      {
+        "n": 7,
+        "j": 13,
+        "word": "AAAAAAC",
+        "leading_A": 6,
+        "canonical": "C"
+      },
+      {
+        "n": 7,
+        "j": 14,
+        "word": "AAAAAAB",
+        "leading_A": 6,
+        "canonical": "B"
+      },
+      {
+        "n": 7,
+        "j": 15,
+        "word": "AAAAAAA",
+        "leading_A": 7,
+        "canonical": ""
+      }
+    ],
+    "large_compressed_prefix_deletion": {
+      "leading_A_exponent": 1125899906842631,
+      "nodes_constructed_before_deletion": 61,
+      "nodes_constructed_after_deletion": 61,
+      "prefix_cut_requests": 2,
+      "suffix": "CBCA",
+      "zero_image": 201,
+      "expanded_prefix_letters": 0
+    },
+    "zero_context_noncongruence_witness": {
+      "words": [
+        "BA",
+        "B"
+      ],
+      "zero_images": [
+        7,
+        1
+      ],
+      "distinguishing_query_bit": 1
+    },
+    "first_actual_center_interior_deletion_failure": {
+      "n": 4,
+      "seed_prefix": "100",
+      "full_section": "ACAC",
+      "safe_canonical": "CAC",
+      "unsafe_interior_deletion": "CC",
+      "remaining_query_bit": 1,
+      "safe_zero_image": 50,
+      "unsafe_zero_image": 12,
+      "correct_center": 1,
+      "incorrect_center": 0,
+      "smaller_queries_exhaustively_checked": [
+        1,
+        2,
+        3
+      ],
+      "smaller_queries_offered_deletions": [
+        {
+          "n": 3,
+          "j": 3,
+          "word": "CA",
+          "position": 1,
+          "remaining_bit": 0,
+          "unchanged_answer": 1
+        }
+      ]
+    },
+    "largest_center_control": 33,
+    "scope": "Exact query rewrite and bounded implementation controls. No census or empirical asymptotic fit."
+  },
+  "proved": [
+    "Initial A^q may be deleted under an actual zero input, at all output precisions.",
+    "The actual seed section after j bits has exactly min(n,floor((j-1)/2)) initial As; before termination its next letter is C for odd j and B for even j.",
+    "The pruned evaluator is correct for every n, with all construction and cuts charged."
+  ],
+  "cost_scope": "It still uses n-1 sequential zero-section advances and retains n-floor((n-1)/2) letters at the center. No sublinear bound is established.",
+  "source_sha256": {
+    "p3_query_pruning_zero_prefix.py": "2b5a815faba7b697c86882eb7cdc2db5a4f6f2d3988205d88668be1d67463f10",
+    "p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29"
+  }
+}

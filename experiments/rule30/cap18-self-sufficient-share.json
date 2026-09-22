@@ -1,0 +1,3212 @@
+{
+  "schema": "rule30.cap18-self-sufficient-share.v1",
+  "preregistration": "PREREGISTRATION-cap18-self-sufficient-share-depth19.md",
+  "source_sha256": {
+    "cap18_self_sufficient_share.py": "619ad03058018fb909227bad1d82510ac76847f014454e859a28dce67b3e6cb1",
+    "cap18_survivor_mass.py": "d8b8263846f76cc4d33d421292fe2d42a7878422e5785428675e57281c738ce5",
+    "cap18_entry_supply.py": "aa767f37b3b04886a524e0490e1ec876772b96aca4e502ed49f5d79ddf6cb0fb",
+    "cap18_four_sheet_propagation.py": "cdb6792f2a3f871a7e178f9af8b090172e6942b99dbf9961d0d379dc7a7ec075",
+    "guarded_two_block_lift_statistics.py": "0ac43ac8e82d2864d273a618ff5e3c89fe9bd059fc6c92b1dbf19703ea126029",
+    "two_block_guarded_lift.cpp": "6658c14e812d27de3f3cfff673c861330e0e67700589534fbc471aadbb2ea1a0"
+  },
+  "definition": "s_n is the share of the depth-n survivor mass on columns whose cycle monodromy is the central translation z or a four-cycle; it is layer_record's self_sufficient_mass_fraction at depth n+1, so computing s_n needs the layer n+1 route table.",
+  "validation": {
+    "survivor_mass_lemma": "asserted by the imported column_masses on every old phase at every column of every layer listed here, including the index 5 control",
+    "mass_support_equals_lift_reach_and_children": "every column",
+    "consecutive_layers_agree": true,
+    "exact_halving_asserted_at": {
+      "capacity18-guarded-19.json": [
+        17,
+        18
+      ],
+      "capacity18-guarded-i05b4.json": [
+        6,
+        7,
+        9,
+        11,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "capacity18-guarded-i27.json": [
+        7,
+        12,
+        13,
+        14
+      ],
+      "capacity18-guarded-i08.json": [
+        9,
+        11,
+        15,
+        16,
+        18
+      ]
+    },
+    "lifetime_census_agrees_at": {
+      "capacity18-guarded-19.json": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "capacity18-guarded-i05b4.json": [],
+      "capacity18-guarded-i27.json": [],
+      "capacity18-guarded-i08.json": []
+    },
+    "layer_type_matches_first_star_schedule": "every layer"
+  },
+  "families": [
+    {
+      "manifest": "capacity18-guarded-19.json",
+      "manifest_sha256": "926ac2c60801f1999d200278191136a1a4674185cbfb61aa428c97fc8388f119",
+      "word": "213(13)^a1213(13)^b03",
+      "initial_tape": "00",
+      "base_depth": 12,
+      "last_completed_depth": 19,
+      "stop_reason": "depth_cap",
+      "uniform_family_mortality_proved": false,
+      "sidecars_certified_against": [
+        "cap18-entry-supply-19.json"
+      ],
+      "checked": {
+        "census_layers": [
+          13,
+          14,
+          15,
+          16
+        ],
+        "halving_layers": [
+          17,
+          18
+        ]
+      },
+      "survivors_by_depth": {
+        "12": 125,
+        "13": 216,
+        "14": 351,
+        "15": 545,
+        "16": 673,
+        "17": 946,
+        "18": 1487,
+        "19": 2560
+      },
+      "s_n": {
+        "12": 0.311321,
+        "13": 0.238739,
+        "14": 0.291667,
+        "15": 0.408882,
+        "16": 0.427378,
+        "17": 0.419419,
+        "18": 0.362316
+      },
+      "kept_fraction": {
+        "13": 0.523585,
+        "14": 0.495495,
+        "15": 0.494697,
+        "16": 0.481049,
+        "17": 0.5,
+        "18": 0.5,
+        "19": 0.504228
+      },
+      "entry_type": {
+        "13": "guard_line",
+        "14": "guard_line",
+        "15": "guard_line",
+        "16": "point",
+        "17": "z_pair",
+        "18": "z_pair",
+        "19": "guard_line"
+      },
+      "mass_times_2^n": {
+        "12": 1.242188,
+        "13": 1.300781,
+        "14": 1.289062,
+        "15": 1.275391,
+        "16": 1.227051,
+        "17": 1.227051,
+        "18": 1.227051
+      },
+      "mass_fraction_by_class": {
+        "12": {
+          "center": 0.2296,
+          "fixing_reflection": 0.0314,
+          "free_reflection": 0.3145,
+          "identity": 0.3428,
+          "rotation": 0.0818
+        },
+        "13": {
+          "center": 0.1607,
+          "fixing_reflection": 0.0841,
+          "free_reflection": 0.3483,
+          "identity": 0.3288,
+          "rotation": 0.0781
+        },
+        "14": {
+          "center": 0.1674,
+          "fixing_reflection": 0.1652,
+          "free_reflection": 0.2379,
+          "identity": 0.3053,
+          "rotation": 0.1242
+        },
+        "15": {
+          "center": 0.2236,
+          "fixing_reflection": 0.1141,
+          "free_reflection": 0.2404,
+          "identity": 0.2366,
+          "rotation": 0.1853
+        },
+        "16": {
+          "center": 0.3112,
+          "fixing_reflection": 0.0923,
+          "free_reflection": 0.2212,
+          "identity": 0.2591,
+          "rotation": 0.1162
+        },
+        "17": {
+          "center": 0.2841,
+          "fixing_reflection": 0.1051,
+          "free_reflection": 0.1934,
+          "identity": 0.2821,
+          "rotation": 0.1353
+        },
+        "18": {
+          "center": 0.2276,
+          "fixing_reflection": 0.1295,
+          "free_reflection": 0.2292,
+          "identity": 0.2789,
+          "rotation": 0.1347
+        }
+      },
+      "cycles_by_monodromy_class": {
+        "12": {
+          "center": 9,
+          "fixing_reflection": 3,
+          "free_reflection": 15,
+          "identity": 14,
+          "rotation": 4
+        },
+        "13": {
+          "center": 10,
+          "fixing_reflection": 9,
+          "free_reflection": 34,
+          "identity": 21,
+          "rotation": 8
+        },
+        "14": {
+          "center": 26,
+          "fixing_reflection": 16,
+          "free_reflection": 42,
+          "identity": 37,
+          "rotation": 13
+        },
+        "15": {
+          "center": 49,
+          "fixing_reflection": 26,
+          "free_reflection": 67,
+          "identity": 53,
+          "rotation": 37
+        },
+        "16": {
+          "center": 63,
+          "fixing_reflection": 25,
+          "free_reflection": 73,
+          "identity": 60,
+          "rotation": 16
+        },
+        "17": {
+          "center": 71,
+          "fixing_reflection": 51,
+          "free_reflection": 93,
+          "identity": 83,
+          "rotation": 51
+        },
+        "18": {
+          "center": 115,
+          "fixing_reflection": 85,
+          "free_reflection": 156,
+          "identity": 115,
+          "rotation": 72
+        }
+      },
+      "old_survivors_by_monodromy_class": {
+        "12": {
+          "center": 24,
+          "fixing_reflection": 5,
+          "free_reflection": 40,
+          "identity": 43,
+          "rotation": 13
+        },
+        "13": {
+          "center": 34,
+          "fixing_reflection": 13,
+          "free_reflection": 105,
+          "identity": 53,
+          "rotation": 11
+        },
+        "14": {
+          "center": 51,
+          "fixing_reflection": 41,
+          "free_reflection": 103,
+          "identity": 136,
+          "rotation": 20
+        },
+        "15": {
+          "center": 105,
+          "fixing_reflection": 53,
+          "free_reflection": 161,
+          "identity": 112,
+          "rotation": 114
+        },
+        "16": {
+          "center": 191,
+          "fixing_reflection": 56,
+          "free_reflection": 176,
+          "identity": 220,
+          "rotation": 30
+        },
+        "17": {
+          "center": 263,
+          "fixing_reflection": 99,
+          "free_reflection": 238,
+          "identity": 221,
+          "rotation": 125
+        },
+        "18": {
+          "center": 381,
+          "fixing_reflection": 149,
+          "free_reflection": 403,
+          "identity": 436,
+          "rotation": 118
+        }
+      },
+      "good_survivor_count": {
+        "12": 37,
+        "13": 45,
+        "14": 71,
+        "15": 219,
+        "16": 221,
+        "17": 388,
+        "18": 499
+      },
+      "layers": [
+        {
+          "layer": 13,
+          "entry_type": "guard_line",
+          "old_survivors": 125,
+          "mass_old": "159/524288",
+          "mass_new": "333/2097152",
+          "mass_old_times_2^n": 1.2421875,
+          "kept_fraction": 0.5235849056603774,
+          "self_sufficient_mass_fraction": 0.3113207547169811,
+          "mass_fraction_by_class": {
+            "center": 0.2296,
+            "fixing_reflection": 0.0314,
+            "free_reflection": 0.3145,
+            "identity": 0.3428,
+            "rotation": 0.0818
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.55,
+            "free_reflection": 0.53,
+            "identity": 0.5367,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 8192,
+          "first_star_period": 512,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 23,
+            "1": 26,
+            "1/2": 125,
+            "1/4": 2,
+            "3/4": 3
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "00": 23,
+              "01": 15,
+              "10": 3,
+              "11": 4
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 9,
+            "fixing_reflection": 3,
+            "free_reflection": 15,
+            "identity": 14,
+            "rotation": 4
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 24,
+            "fixing_reflection": 5,
+            "free_reflection": 40,
+            "identity": 43,
+            "rotation": 13
+          },
+          "seconds": 0.03
+        },
+        {
+          "layer": 14,
+          "entry_type": "guard_line",
+          "old_survivors": 216,
+          "mass_old": "333/2097152",
+          "mass_new": "165/2097152",
+          "mass_old_times_2^n": 1.30078125,
+          "kept_fraction": 0.4954954954954955,
+          "self_sufficient_mass_fraction": 0.23873873873873874,
+          "mass_fraction_by_class": {
+            "center": 0.1607,
+            "fixing_reflection": 0.0841,
+            "free_reflection": 0.3483,
+            "identity": 0.3288,
+            "rotation": 0.0781
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.4107,
+            "free_reflection": 0.4849,
+            "identity": 0.5251,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 16384,
+          "first_star_period": 1024,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 37,
+            "1": 42,
+            "1/2": 208,
+            "1/4": 8,
+            "3/4": 6
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 31,
+              "01": 34,
+              "10": 9,
+              "11": 8
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 10,
+            "fixing_reflection": 9,
+            "free_reflection": 34,
+            "identity": 21,
+            "rotation": 8
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 34,
+            "fixing_reflection": 13,
+            "free_reflection": 105,
+            "identity": 53,
+            "rotation": 11
+          },
+          "seconds": 0.07
+        },
+        {
+          "layer": 15,
+          "entry_type": "guard_line",
+          "old_survivors": 351,
+          "mass_old": "165/2097152",
+          "mass_new": "653/16777216",
+          "mass_old_times_2^n": 1.2890625,
+          "kept_fraction": 0.4946969696969697,
+          "self_sufficient_mass_fraction": 0.2916666666666667,
+          "mass_fraction_by_class": {
+            "center": 0.1674,
+            "fixing_reflection": 0.1652,
+            "free_reflection": 0.2379,
+            "identity": 0.3053,
+            "rotation": 0.1242
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.4495,
+            "free_reflection": 0.5032,
+            "identity": 0.5074,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 32768,
+          "first_star_period": 2048,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 65,
+            "1": 69,
+            "1/2": 319,
+            "1/4": 39,
+            "3/4": 36
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "00": 63,
+              "01": 42,
+              "10": 16,
+              "11": 13
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 26,
+            "fixing_reflection": 16,
+            "free_reflection": 42,
+            "identity": 37,
+            "rotation": 13
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 51,
+            "fixing_reflection": 41,
+            "free_reflection": 103,
+            "identity": 136,
+            "rotation": 20
+          },
+          "seconds": 0.17
+        },
+        {
+          "layer": 16,
+          "entry_type": "point",
+          "old_survivors": 545,
+          "mass_old": "653/16777216",
+          "mass_new": "2513/134217728",
+          "mass_old_times_2^n": 1.275390625,
+          "kept_fraction": 0.4810490045941807,
+          "self_sufficient_mass_fraction": 0.40888208269525267,
+          "mass_fraction_by_class": {
+            "center": 0.2236,
+            "fixing_reflection": 0.1141,
+            "free_reflection": 0.2404,
+            "identity": 0.2366,
+            "rotation": 0.1853
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.453,
+            "free_reflection": 0.4674,
+            "identity": 0.4757,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 65536,
+          "first_star_period": 2048,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 205,
+            "1": 186,
+            "1/2": 465
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 102,
+              "01": 67,
+              "10": 26,
+              "11": 37
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 49,
+            "fixing_reflection": 26,
+            "free_reflection": 67,
+            "identity": 53,
+            "rotation": 37
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 105,
+            "fixing_reflection": 53,
+            "free_reflection": 161,
+            "identity": 112,
+            "rotation": 114
+          },
+          "seconds": 1.1
+        },
+        {
+          "layer": 17,
+          "entry_type": "z_pair",
+          "old_survivors": 673,
+          "mass_old": "2513/134217728",
+          "mass_new": "2513/268435456",
+          "mass_old_times_2^n": 1.22705078125,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.42737763629128533,
+          "mass_fraction_by_class": {
+            "center": 0.3112,
+            "fixing_reflection": 0.0923,
+            "free_reflection": 0.2212,
+            "identity": 0.2591,
+            "rotation": 0.1162
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.5,
+            "free_reflection": 0.5,
+            "identity": 0.5,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 131072,
+          "first_star_period": 4096,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 852
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "00": 123,
+              "01": 73,
+              "10": 25,
+              "11": 16
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 63,
+            "fixing_reflection": 25,
+            "free_reflection": 73,
+            "identity": 60,
+            "rotation": 16
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 191,
+            "fixing_reflection": 56,
+            "free_reflection": 176,
+            "identity": 220,
+            "rotation": 30
+          },
+          "seconds": 1.81
+        },
+        {
+          "layer": 18,
+          "entry_type": "z_pair",
+          "old_survivors": 946,
+          "mass_old": "2513/268435456",
+          "mass_new": "2513/536870912",
+          "mass_old_times_2^n": 1.22705078125,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.4194190210903303,
+          "mass_fraction_by_class": {
+            "center": 0.2841,
+            "fixing_reflection": 0.1051,
+            "free_reflection": 0.1934,
+            "identity": 0.2821,
+            "rotation": 0.1353
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.5,
+            "free_reflection": 0.5,
+            "identity": 0.5,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 262144,
+          "first_star_period": 8192,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 1488
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 154,
+              "01": 93,
+              "10": 51,
+              "11": 51
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 71,
+            "fixing_reflection": 51,
+            "free_reflection": 93,
+            "identity": 83,
+            "rotation": 51
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 263,
+            "fixing_reflection": 99,
+            "free_reflection": 238,
+            "identity": 221,
+            "rotation": 125
+          },
+          "seconds": 0.98
+        },
+        {
+          "layer": 19,
+          "entry_type": "guard_line",
+          "old_survivors": 1487,
+          "mass_old": "2513/536870912",
+          "mass_new": "10137/4294967296",
+          "mass_old_times_2^n": 1.22705078125,
+          "kept_fraction": 0.5042280143255073,
+          "self_sufficient_mass_fraction": 0.3623159570234779,
+          "mass_fraction_by_class": {
+            "center": 0.2276,
+            "fixing_reflection": 0.1295,
+            "free_reflection": 0.2292,
+            "identity": 0.2789,
+            "rotation": 0.1347
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.4996,
+            "free_reflection": 0.4933,
+            "identity": 0.5209,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 524288,
+          "first_star_period": 16384,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 327,
+            "1": 355,
+            "1/2": 1883,
+            "1/4": 98,
+            "3/4": 104
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 230,
+              "01": 156,
+              "10": 85,
+              "11": 72
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 115,
+            "fixing_reflection": 85,
+            "free_reflection": 156,
+            "identity": 115,
+            "rotation": 72
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 381,
+            "fixing_reflection": 149,
+            "free_reflection": 403,
+            "identity": 436,
+            "rotation": 118
+          },
+          "seconds": 2.34
+        }
+      ]
+    },
+    {
+      "manifest": "capacity18-guarded-i05b4.json",
+      "manifest_sha256": "fbfd0cd3d8fb44449e351143dc461d73885547075a107086b51273de5e98c133",
+      "word": "21213(13)^a031(31)^b303",
+      "initial_tape": "00",
+      "base_depth": 4,
+      "last_completed_depth": 23,
+      "stop_reason": "closed_empty_guarded_cover",
+      "uniform_family_mortality_proved": true,
+      "sidecars_certified_against": [
+        "cap18-entry-supply-19.json"
+      ],
+      "checked": {
+        "census_layers": [],
+        "halving_layers": [
+          6,
+          7,
+          9,
+          11,
+          15,
+          16,
+          18,
+          19,
+          20
+        ]
+      },
+      "survivors_by_depth": {
+        "4": 2,
+        "5": 2,
+        "6": 4,
+        "7": 4,
+        "8": 4,
+        "9": 8,
+        "10": 7,
+        "11": 7,
+        "12": 4,
+        "13": 4,
+        "14": 2,
+        "15": 2,
+        "16": 2,
+        "17": 1,
+        "18": 2,
+        "19": 2,
+        "20": 2,
+        "21": 1,
+        "22": 1,
+        "23": 0
+      },
+      "s_n": {
+        "4": 0.0,
+        "5": 1.0,
+        "6": 1.0,
+        "7": 0.0,
+        "8": 1.0,
+        "9": 0.0,
+        "10": 1.0,
+        "11": 0.0,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 1.0,
+        "15": 1.0,
+        "16": 0.0,
+        "17": 1.0,
+        "18": 1.0,
+        "19": 1.0,
+        "20": 0.0,
+        "21": 0.0,
+        "22": 0.0
+      },
+      "kept_fraction": {
+        "5": 1.0,
+        "6": 0.5,
+        "7": 0.5,
+        "8": 1.0,
+        "9": 0.5,
+        "10": 0.875,
+        "11": 0.5,
+        "12": 0.285714,
+        "13": 0.5,
+        "14": 0.5,
+        "15": 0.5,
+        "16": 0.5,
+        "17": 0.5,
+        "18": 0.5,
+        "19": 0.5,
+        "20": 0.5,
+        "21": 0.5,
+        "22": 0.5,
+        "23": 0.0
+      },
+      "entry_type": {
+        "5": "point",
+        "6": "fibre",
+        "7": "z_pair",
+        "8": "point",
+        "9": "fibre",
+        "10": "point",
+        "11": "z_pair",
+        "12": "guard_line",
+        "13": "guard_line",
+        "14": "point",
+        "15": "z_pair",
+        "16": "z_pair",
+        "17": "point",
+        "18": "fibre",
+        "19": "z_pair",
+        "20": "z_pair",
+        "21": "point",
+        "22": "guard_line",
+        "23": "point"
+      },
+      "mass_times_2^n": {
+        "4": 1.0,
+        "5": 2.0,
+        "6": 2.0,
+        "7": 2.0,
+        "8": 4.0,
+        "9": 4.0,
+        "10": 7.0,
+        "11": 7.0,
+        "12": 4.0,
+        "13": 4.0,
+        "14": 4.0,
+        "15": 4.0,
+        "16": 4.0,
+        "17": 4.0,
+        "18": 4.0,
+        "19": 4.0,
+        "20": 4.0,
+        "21": 4.0,
+        "22": 4.0
+      },
+      "mass_fraction_by_class": {
+        "4": {
+          "identity": 1.0
+        },
+        "5": {
+          "rotation": 1.0
+        },
+        "6": {
+          "center": 1.0
+        },
+        "7": {
+          "identity": 1.0
+        },
+        "8": {
+          "rotation": 1.0
+        },
+        "9": {
+          "identity": 1.0
+        },
+        "10": {
+          "center": 1.0
+        },
+        "11": {
+          "free_reflection": 1.0
+        },
+        "12": {
+          "free_reflection": 1.0
+        },
+        "13": {
+          "identity": 1.0
+        },
+        "14": {
+          "center": 1.0
+        },
+        "15": {
+          "center": 1.0
+        },
+        "16": {
+          "identity": 1.0
+        },
+        "17": {
+          "rotation": 1.0
+        },
+        "18": {
+          "center": 1.0
+        },
+        "19": {
+          "center": 1.0
+        },
+        "20": {
+          "identity": 1.0
+        },
+        "21": {
+          "free_reflection": 1.0
+        },
+        "22": {
+          "identity": 1.0
+        }
+      },
+      "cycles_by_monodromy_class": {
+        "4": {
+          "identity": 1
+        },
+        "5": {
+          "rotation": 1
+        },
+        "6": {
+          "center": 1
+        },
+        "7": {
+          "identity": 1
+        },
+        "8": {
+          "rotation": 1
+        },
+        "9": {
+          "identity": 1
+        },
+        "10": {
+          "center": 1
+        },
+        "11": {
+          "free_reflection": 1
+        },
+        "12": {
+          "free_reflection": 1
+        },
+        "13": {
+          "identity": 1
+        },
+        "14": {
+          "center": 1
+        },
+        "15": {
+          "center": 1
+        },
+        "16": {
+          "identity": 1
+        },
+        "17": {
+          "rotation": 1
+        },
+        "18": {
+          "center": 1
+        },
+        "19": {
+          "center": 1
+        },
+        "20": {
+          "identity": 1
+        },
+        "21": {
+          "free_reflection": 1
+        },
+        "22": {
+          "identity": 1
+        }
+      },
+      "old_survivors_by_monodromy_class": {
+        "4": {
+          "identity": 2
+        },
+        "5": {
+          "rotation": 2
+        },
+        "6": {
+          "center": 4
+        },
+        "7": {
+          "identity": 4
+        },
+        "8": {
+          "rotation": 4
+        },
+        "9": {
+          "identity": 8
+        },
+        "10": {
+          "center": 7
+        },
+        "11": {
+          "free_reflection": 7
+        },
+        "12": {
+          "free_reflection": 4
+        },
+        "13": {
+          "identity": 4
+        },
+        "14": {
+          "center": 2
+        },
+        "15": {
+          "center": 2
+        },
+        "16": {
+          "identity": 2
+        },
+        "17": {
+          "rotation": 1
+        },
+        "18": {
+          "center": 2
+        },
+        "19": {
+          "center": 2
+        },
+        "20": {
+          "identity": 2
+        },
+        "21": {
+          "free_reflection": 1
+        },
+        "22": {
+          "identity": 1
+        }
+      },
+      "good_survivor_count": {
+        "4": 0,
+        "5": 2,
+        "6": 4,
+        "7": 0,
+        "8": 4,
+        "9": 0,
+        "10": 7,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 2,
+        "15": 2,
+        "16": 0,
+        "17": 1,
+        "18": 2,
+        "19": 2,
+        "20": 0,
+        "21": 0,
+        "22": 0
+      },
+      "layers": [
+        {
+          "layer": 5,
+          "entry_type": "point",
+          "old_survivors": 2,
+          "mass_old": "1/16",
+          "mass_new": "1/16",
+          "mass_old_times_2^n": 1.0,
+          "kept_fraction": 1.0,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 1.0
+          },
+          "longest_new_orbit": 32,
+          "first_star_period": 32,
+          "kept_fraction_per_old_phase_and_column": {
+            "1": 64
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "seconds": 0.0
+        },
+        {
+          "layer": 6,
+          "entry_type": "fibre",
+          "old_survivors": 2,
+          "mass_old": "1/16",
+          "mass_new": "1/32",
+          "mass_old_times_2^n": 2.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "rotation": 1.0
+          },
+          "kept_fraction_by_class": {
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 128,
+          "first_star_period": 128,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 64
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "11": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "rotation": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "rotation": 2
+          },
+          "seconds": 0.0
+        },
+        {
+          "layer": 7,
+          "entry_type": "z_pair",
+          "old_survivors": 4,
+          "mass_old": "1/32",
+          "mass_new": "1/64",
+          "mass_old_times_2^n": 2.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "center": 1.0
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5
+          },
+          "longest_new_orbit": 256,
+          "first_star_period": 256,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 512
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 4
+          },
+          "seconds": 0.01
+        },
+        {
+          "layer": 8,
+          "entry_type": "point",
+          "old_survivors": 4,
+          "mass_old": "1/64",
+          "mass_new": "1/64",
+          "mass_old_times_2^n": 2.0,
+          "kept_fraction": 1.0,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 1.0
+          },
+          "longest_new_orbit": 256,
+          "first_star_period": 256,
+          "kept_fraction_per_old_phase_and_column": {
+            "1": 1024
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 4
+          },
+          "seconds": 0.03
+        },
+        {
+          "layer": 9,
+          "entry_type": "fibre",
+          "old_survivors": 4,
+          "mass_old": "1/64",
+          "mass_new": "1/128",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "rotation": 1.0
+          },
+          "kept_fraction_by_class": {
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 1024,
+          "first_star_period": 1024,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 1024
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "11": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "rotation": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "rotation": 4
+          },
+          "seconds": 0.05
+        },
+        {
+          "layer": 10,
+          "entry_type": "point",
+          "old_survivors": 8,
+          "mass_old": "1/128",
+          "mass_new": "7/1024",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.875,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 0.875
+          },
+          "longest_new_orbit": 1024,
+          "first_star_period": 1024,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 1024,
+            "1": 7168
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 8
+          },
+          "seconds": 0.14
+        },
+        {
+          "layer": 11,
+          "entry_type": "z_pair",
+          "old_survivors": 7,
+          "mass_old": "7/1024",
+          "mass_new": "7/2048",
+          "mass_old_times_2^n": 7.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "center": 1.0
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5
+          },
+          "longest_new_orbit": 2048,
+          "first_star_period": 2048,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 7168
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 7
+          },
+          "seconds": 0.17
+        },
+        {
+          "layer": 12,
+          "entry_type": "guard_line",
+          "old_survivors": 7,
+          "mass_old": "7/2048",
+          "mass_new": "1/1024",
+          "mass_old_times_2^n": 7.0,
+          "kept_fraction": 0.2857142857142857,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "free_reflection": 1.0
+          },
+          "kept_fraction_by_class": {
+            "free_reflection": 0.2857
+          },
+          "longest_new_orbit": 4096,
+          "first_star_period": 4096,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 6144,
+            "1/2": 8192
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "01": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "free_reflection": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "free_reflection": 7
+          },
+          "seconds": 0.34
+        },
+        {
+          "layer": 13,
+          "entry_type": "guard_line",
+          "old_survivors": 4,
+          "mass_old": "1/1024",
+          "mass_new": "1/2048",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "free_reflection": 1.0
+          },
+          "kept_fraction_by_class": {
+            "free_reflection": 0.5
+          },
+          "longest_new_orbit": 8192,
+          "first_star_period": 8192,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 4096,
+            "1": 4096,
+            "1/2": 8192
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "01": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "free_reflection": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "free_reflection": 4
+          },
+          "seconds": 0.57
+        },
+        {
+          "layer": 14,
+          "entry_type": "point",
+          "old_survivors": 4,
+          "mass_old": "1/2048",
+          "mass_new": "1/4096",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 0.5
+          },
+          "longest_new_orbit": 8192,
+          "first_star_period": 8192,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 16384,
+            "1": 16384
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 4
+          },
+          "seconds": 1.07
+        },
+        {
+          "layer": 15,
+          "entry_type": "z_pair",
+          "old_survivors": 2,
+          "mass_old": "1/4096",
+          "mass_new": "1/8192",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "center": 1.0
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5
+          },
+          "longest_new_orbit": 16384,
+          "first_star_period": 16384,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 16384
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "seconds": 1.11
+        },
+        {
+          "layer": 16,
+          "entry_type": "z_pair",
+          "old_survivors": 2,
+          "mass_old": "1/8192",
+          "mass_new": "1/16384",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "center": 1.0
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5
+          },
+          "longest_new_orbit": 32768,
+          "first_star_period": 32768,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 32768
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "seconds": 2.34
+        },
+        {
+          "layer": 17,
+          "entry_type": "point",
+          "old_survivors": 2,
+          "mass_old": "1/16384",
+          "mass_new": "1/32768",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 0.5
+          },
+          "longest_new_orbit": 32768,
+          "first_star_period": 32768,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 32768,
+            "1": 32768
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "seconds": 4.48
+        },
+        {
+          "layer": 18,
+          "entry_type": "fibre",
+          "old_survivors": 1,
+          "mass_old": "1/32768",
+          "mass_new": "1/65536",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "rotation": 1.0
+          },
+          "kept_fraction_by_class": {
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 131072,
+          "first_star_period": 131072,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 32768
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "11": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "rotation": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "rotation": 1
+          },
+          "seconds": 5.07
+        },
+        {
+          "layer": 19,
+          "entry_type": "z_pair",
+          "old_survivors": 2,
+          "mass_old": "1/65536",
+          "mass_new": "1/131072",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "center": 1.0
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5
+          },
+          "longest_new_orbit": 262144,
+          "first_star_period": 262144,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 262144
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "seconds": 20.54
+        },
+        {
+          "layer": 20,
+          "entry_type": "z_pair",
+          "old_survivors": 2,
+          "mass_old": "1/131072",
+          "mass_new": "1/262144",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "center": 1.0
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5
+          },
+          "longest_new_orbit": 524288,
+          "first_star_period": 524288,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 524288
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "seconds": 41.3
+        },
+        {
+          "layer": 21,
+          "entry_type": "point",
+          "old_survivors": 2,
+          "mass_old": "1/262144",
+          "mass_new": "1/524288",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 0.5
+          },
+          "longest_new_orbit": 524288,
+          "first_star_period": 524288,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 524288,
+            "1": 524288
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "seconds": 77.44
+        },
+        {
+          "layer": 22,
+          "entry_type": "guard_line",
+          "old_survivors": 1,
+          "mass_old": "1/524288",
+          "mass_new": "1/1048576",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "free_reflection": 1.0
+          },
+          "kept_fraction_by_class": {
+            "free_reflection": 0.5
+          },
+          "longest_new_orbit": 1048576,
+          "first_star_period": 1048576,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 524288
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "01": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "free_reflection": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "free_reflection": 1
+          },
+          "seconds": 79.4
+        },
+        {
+          "layer": 23,
+          "entry_type": "point",
+          "old_survivors": 1,
+          "mass_old": "1/1048576",
+          "mass_new": "0",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.0,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 0.0
+          },
+          "longest_new_orbit": 1048576,
+          "first_star_period": 1048576,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 1048576
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 1
+          },
+          "seconds": 158.54
+        }
+      ]
+    },
+    {
+      "manifest": "capacity18-guarded-i27.json",
+      "manifest_sha256": "9a44c0182a83a38e6115351b185c67dff1d410543fe77b87851033aadc501021",
+      "word": "3031(31)^a3031(31)^b303",
+      "initial_tape": "00",
+      "base_depth": 4,
+      "last_completed_depth": 16,
+      "stop_reason": "closed_empty_guarded_cover",
+      "uniform_family_mortality_proved": true,
+      "sidecars_certified_against": [
+        "cap18-entry-supply-19.json"
+      ],
+      "checked": {
+        "census_layers": [],
+        "halving_layers": [
+          7,
+          12,
+          13,
+          14
+        ]
+      },
+      "survivors_by_depth": {
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2,
+        "10": 1,
+        "11": 1,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "15": 1,
+        "16": 0
+      },
+      "s_n": {
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": 0.0,
+        "8": 0.0,
+        "9": 0.0,
+        "10": 0.0,
+        "11": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "14": 0.0,
+        "15": 0.0
+      },
+      "kept_fraction": {
+        "5": 1.0,
+        "6": 1.0,
+        "7": 0.5,
+        "8": 0.5,
+        "9": 1.0,
+        "10": 0.5,
+        "11": 1.0,
+        "12": 0.5,
+        "13": 0.5,
+        "14": 0.5,
+        "15": 0.5,
+        "16": 0.0
+      },
+      "entry_type": {
+        "5": "point",
+        "6": "point",
+        "7": "z_pair",
+        "8": "guard_line",
+        "9": "point",
+        "10": "point",
+        "11": "point",
+        "12": "fibre",
+        "13": "z_pair",
+        "14": "z_pair",
+        "15": "point",
+        "16": "point"
+      },
+      "mass_times_2^n": {
+        "4": 1.0,
+        "5": 2.0,
+        "6": 4.0,
+        "7": 4.0,
+        "8": 4.0,
+        "9": 8.0,
+        "10": 8.0,
+        "11": 16.0,
+        "12": 16.0,
+        "13": 16.0,
+        "14": 16.0,
+        "15": 16.0
+      },
+      "mass_fraction_by_class": {
+        "4": {
+          "identity": 1.0
+        },
+        "5": {
+          "fixing_reflection": 1.0
+        },
+        "6": {
+          "fixing_reflection": 1.0
+        },
+        "7": {
+          "free_reflection": 1.0
+        },
+        "8": {
+          "identity": 1.0
+        },
+        "9": {
+          "identity": 1.0
+        },
+        "10": {
+          "identity": 1.0
+        },
+        "11": {
+          "rotation": 1.0
+        },
+        "12": {
+          "center": 1.0
+        },
+        "13": {
+          "center": 1.0
+        },
+        "14": {
+          "identity": 1.0
+        },
+        "15": {
+          "fixing_reflection": 1.0
+        }
+      },
+      "cycles_by_monodromy_class": {
+        "4": {
+          "identity": 1
+        },
+        "5": {
+          "fixing_reflection": 1
+        },
+        "6": {
+          "fixing_reflection": 1
+        },
+        "7": {
+          "free_reflection": 1
+        },
+        "8": {
+          "identity": 1
+        },
+        "9": {
+          "identity": 1
+        },
+        "10": {
+          "identity": 1
+        },
+        "11": {
+          "rotation": 1
+        },
+        "12": {
+          "center": 1
+        },
+        "13": {
+          "center": 1
+        },
+        "14": {
+          "identity": 1
+        },
+        "15": {
+          "fixing_reflection": 1
+        }
+      },
+      "old_survivors_by_monodromy_class": {
+        "4": {
+          "identity": 2
+        },
+        "5": {
+          "fixing_reflection": 2
+        },
+        "6": {
+          "fixing_reflection": 2
+        },
+        "7": {
+          "free_reflection": 2
+        },
+        "8": {
+          "identity": 2
+        },
+        "9": {
+          "identity": 2
+        },
+        "10": {
+          "identity": 1
+        },
+        "11": {
+          "rotation": 1
+        },
+        "12": {
+          "center": 2
+        },
+        "13": {
+          "center": 2
+        },
+        "14": {
+          "identity": 2
+        },
+        "15": {
+          "fixing_reflection": 1
+        }
+      },
+      "good_survivor_count": {
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 1,
+        "12": 2,
+        "13": 2,
+        "14": 0,
+        "15": 0
+      },
+      "layers": [
+        {
+          "layer": 5,
+          "entry_type": "point",
+          "old_survivors": 2,
+          "mass_old": "1/16",
+          "mass_new": "1/16",
+          "mass_old_times_2^n": 1.0,
+          "kept_fraction": 1.0,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 1.0
+          },
+          "longest_new_orbit": 32,
+          "first_star_period": 32,
+          "kept_fraction_per_old_phase_and_column": {
+            "1": 64
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "seconds": 0.0
+        },
+        {
+          "layer": 6,
+          "entry_type": "point",
+          "old_survivors": 2,
+          "mass_old": "1/16",
+          "mass_new": "1/16",
+          "mass_old_times_2^n": 2.0,
+          "kept_fraction": 1.0,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "fixing_reflection": 1.0
+          },
+          "kept_fraction_by_class": {
+            "fixing_reflection": 1.0
+          },
+          "longest_new_orbit": 32,
+          "first_star_period": 32,
+          "kept_fraction_per_old_phase_and_column": {
+            "1": 64
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "10": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "fixing_reflection": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "fixing_reflection": 2
+          },
+          "seconds": 0.0
+        },
+        {
+          "layer": 7,
+          "entry_type": "z_pair",
+          "old_survivors": 2,
+          "mass_old": "1/16",
+          "mass_new": "1/32",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "fixing_reflection": 1.0
+          },
+          "kept_fraction_by_class": {
+            "fixing_reflection": 0.5
+          },
+          "longest_new_orbit": 64,
+          "first_star_period": 64,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 64
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "10": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "fixing_reflection": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "fixing_reflection": 2
+          },
+          "seconds": 0.0
+        },
+        {
+          "layer": 8,
+          "entry_type": "guard_line",
+          "old_survivors": 2,
+          "mass_old": "1/32",
+          "mass_new": "1/64",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "free_reflection": 1.0
+          },
+          "kept_fraction_by_class": {
+            "free_reflection": 0.5
+          },
+          "longest_new_orbit": 128,
+          "first_star_period": 128,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 128
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "01": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "free_reflection": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "free_reflection": 2
+          },
+          "seconds": 0.0
+        },
+        {
+          "layer": 9,
+          "entry_type": "point",
+          "old_survivors": 2,
+          "mass_old": "1/64",
+          "mass_new": "1/64",
+          "mass_old_times_2^n": 4.0,
+          "kept_fraction": 1.0,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 1.0
+          },
+          "longest_new_orbit": 128,
+          "first_star_period": 128,
+          "kept_fraction_per_old_phase_and_column": {
+            "1": 256
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "seconds": 0.01
+        },
+        {
+          "layer": 10,
+          "entry_type": "point",
+          "old_survivors": 2,
+          "mass_old": "1/64",
+          "mass_new": "1/128",
+          "mass_old_times_2^n": 8.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 0.5
+          },
+          "longest_new_orbit": 128,
+          "first_star_period": 128,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 128,
+            "1": 128
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "seconds": 0.01
+        },
+        {
+          "layer": 11,
+          "entry_type": "point",
+          "old_survivors": 1,
+          "mass_old": "1/128",
+          "mass_new": "1/128",
+          "mass_old_times_2^n": 8.0,
+          "kept_fraction": 1.0,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 1.0
+          },
+          "longest_new_orbit": 128,
+          "first_star_period": 128,
+          "kept_fraction_per_old_phase_and_column": {
+            "1": 128
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 1
+          },
+          "seconds": 0.01
+        },
+        {
+          "layer": 12,
+          "entry_type": "fibre",
+          "old_survivors": 1,
+          "mass_old": "1/128",
+          "mass_new": "1/256",
+          "mass_old_times_2^n": 16.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "rotation": 1.0
+          },
+          "kept_fraction_by_class": {
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 512,
+          "first_star_period": 512,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 128
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "11": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "rotation": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "rotation": 1
+          },
+          "seconds": 0.01
+        },
+        {
+          "layer": 13,
+          "entry_type": "z_pair",
+          "old_survivors": 2,
+          "mass_old": "1/256",
+          "mass_new": "1/512",
+          "mass_old_times_2^n": 16.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "center": 1.0
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5
+          },
+          "longest_new_orbit": 1024,
+          "first_star_period": 1024,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 1024
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "seconds": 0.05
+        },
+        {
+          "layer": 14,
+          "entry_type": "z_pair",
+          "old_survivors": 2,
+          "mass_old": "1/512",
+          "mass_new": "1/1024",
+          "mass_old_times_2^n": 16.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 1.0,
+          "mass_fraction_by_class": {
+            "center": 1.0
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5
+          },
+          "longest_new_orbit": 2048,
+          "first_star_period": 2048,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 2048
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "seconds": 0.11
+        },
+        {
+          "layer": 15,
+          "entry_type": "point",
+          "old_survivors": 2,
+          "mass_old": "1/1024",
+          "mass_new": "1/2048",
+          "mass_old_times_2^n": 16.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "identity": 1.0
+          },
+          "kept_fraction_by_class": {
+            "identity": 0.5
+          },
+          "longest_new_orbit": 2048,
+          "first_star_period": 2048,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 2048,
+            "1": 2048
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "identity": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "seconds": 0.22
+        },
+        {
+          "layer": 16,
+          "entry_type": "point",
+          "old_survivors": 1,
+          "mass_old": "1/2048",
+          "mass_new": "0",
+          "mass_old_times_2^n": 16.0,
+          "kept_fraction": 0.0,
+          "self_sufficient_mass_fraction": 0.0,
+          "mass_fraction_by_class": {
+            "fixing_reflection": 1.0
+          },
+          "kept_fraction_by_class": {
+            "fixing_reflection": 0.0
+          },
+          "longest_new_orbit": 2048,
+          "first_star_period": 2048,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 2048
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "10": 1
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "fixing_reflection": 1
+          },
+          "old_survivors_by_monodromy_class": {
+            "fixing_reflection": 1
+          },
+          "seconds": 0.22
+        }
+      ]
+    },
+    {
+      "manifest": "capacity18-guarded-i08.json",
+      "manifest_sha256": "581ae93658a0ee47bc56aed7eb71b494a8192991ac67f231c3d55207d14d9386",
+      "word": "21213(13)^a1213(13)^b03",
+      "initial_tape": "00",
+      "base_depth": 8,
+      "last_completed_depth": 18,
+      "stop_reason": "route_cache_state_cap",
+      "uniform_family_mortality_proved": false,
+      "sidecars_certified_against": [
+        "cap18-entry-supply-19.json"
+      ],
+      "checked": {
+        "census_layers": [],
+        "halving_layers": [
+          9,
+          11,
+          15,
+          16,
+          18
+        ]
+      },
+      "survivors_by_depth": {
+        "8": 63,
+        "9": 126,
+        "10": 196,
+        "11": 329,
+        "12": 555,
+        "13": 948,
+        "14": 1181,
+        "15": 1699,
+        "16": 2766,
+        "17": 3570,
+        "18": 7140
+      },
+      "s_n": {
+        "8": 0.5,
+        "9": 0.386719,
+        "10": 0.488536,
+        "11": 0.29806,
+        "12": 0.208866,
+        "13": 0.390466,
+        "14": 0.360648,
+        "15": 0.293692,
+        "16": 0.324566,
+        "17": 0.369407
+      },
+      "kept_fraction": {
+        "9": 0.5,
+        "10": 0.553711,
+        "11": 0.5,
+        "12": 0.49978,
+        "13": 0.477724,
+        "14": 0.498615,
+        "15": 0.5,
+        "16": 0.5,
+        "17": 0.491435,
+        "18": 0.5
+      },
+      "entry_type": {
+        "9": "fibre",
+        "10": "point",
+        "11": "z_pair",
+        "12": "guard_line",
+        "13": "guard_line",
+        "14": "point",
+        "15": "z_pair",
+        "16": "z_pair",
+        "17": "point",
+        "18": "fibre"
+      },
+      "mass_times_2^n": {
+        "8": 2.0,
+        "9": 2.0,
+        "10": 2.214844,
+        "11": 2.214844,
+        "12": 2.213867,
+        "13": 2.115234,
+        "14": 2.109375,
+        "15": 2.109375,
+        "16": 2.109375,
+        "17": 2.073242
+      },
+      "mass_fraction_by_class": {
+        "8": {
+          "center": 0.25,
+          "fixing_reflection": 0.0312,
+          "free_reflection": 0.1172,
+          "identity": 0.3516,
+          "rotation": 0.25
+        },
+        "9": {
+          "center": 0.3301,
+          "fixing_reflection": 0.041,
+          "free_reflection": 0.1816,
+          "identity": 0.3906,
+          "rotation": 0.0566
+        },
+        "10": {
+          "center": 0.2981,
+          "fixing_reflection": 0.1041,
+          "free_reflection": 0.194,
+          "identity": 0.2134,
+          "rotation": 0.1905
+        },
+        "11": {
+          "center": 0.1526,
+          "fixing_reflection": 0.0538,
+          "free_reflection": 0.3827,
+          "identity": 0.2654,
+          "rotation": 0.1455
+        },
+        "12": {
+          "center": 0.1511,
+          "fixing_reflection": 0.0626,
+          "free_reflection": 0.4376,
+          "identity": 0.2909,
+          "rotation": 0.0578
+        },
+        "13": {
+          "center": 0.3023,
+          "fixing_reflection": 0.0739,
+          "free_reflection": 0.3661,
+          "identity": 0.1696,
+          "rotation": 0.0882
+        },
+        "14": {
+          "center": 0.3176,
+          "fixing_reflection": 0.0944,
+          "free_reflection": 0.308,
+          "identity": 0.2369,
+          "rotation": 0.0431
+        },
+        "15": {
+          "center": 0.2248,
+          "fixing_reflection": 0.0966,
+          "free_reflection": 0.4098,
+          "identity": 0.1998,
+          "rotation": 0.0689
+        },
+        "16": {
+          "center": 0.2291,
+          "fixing_reflection": 0.0628,
+          "free_reflection": 0.3395,
+          "identity": 0.2731,
+          "rotation": 0.0955
+        },
+        "17": {
+          "center": 0.247,
+          "fixing_reflection": 0.0871,
+          "free_reflection": 0.2868,
+          "identity": 0.2567,
+          "rotation": 0.1224
+        }
+      },
+      "cycles_by_monodromy_class": {
+        "8": {
+          "center": 7,
+          "fixing_reflection": 1,
+          "free_reflection": 10,
+          "identity": 9,
+          "rotation": 2
+        },
+        "9": {
+          "center": 14,
+          "fixing_reflection": 5,
+          "free_reflection": 22,
+          "identity": 15,
+          "rotation": 9
+        },
+        "10": {
+          "center": 29,
+          "fixing_reflection": 12,
+          "free_reflection": 30,
+          "identity": 19,
+          "rotation": 10
+        },
+        "11": {
+          "center": 33,
+          "fixing_reflection": 18,
+          "free_reflection": 45,
+          "identity": 40,
+          "rotation": 16
+        },
+        "12": {
+          "center": 52,
+          "fixing_reflection": 29,
+          "free_reflection": 87,
+          "identity": 69,
+          "rotation": 27
+        },
+        "13": {
+          "center": 114,
+          "fixing_reflection": 46,
+          "free_reflection": 147,
+          "identity": 99,
+          "rotation": 45
+        },
+        "14": {
+          "center": 126,
+          "fixing_reflection": 50,
+          "free_reflection": 169,
+          "identity": 142,
+          "rotation": 43
+        },
+        "15": {
+          "center": 163,
+          "fixing_reflection": 98,
+          "free_reflection": 253,
+          "identity": 180,
+          "rotation": 93
+        },
+        "16": {
+          "center": 278,
+          "fixing_reflection": 106,
+          "free_reflection": 375,
+          "identity": 298,
+          "rotation": 161
+        },
+        "17": {
+          "center": 357,
+          "fixing_reflection": 134,
+          "free_reflection": 451,
+          "identity": 369,
+          "rotation": 158
+        }
+      },
+      "old_survivors_by_monodromy_class": {
+        "8": {
+          "center": 20,
+          "fixing_reflection": 1,
+          "free_reflection": 14,
+          "identity": 26,
+          "rotation": 2
+        },
+        "9": {
+          "center": 34,
+          "fixing_reflection": 9,
+          "free_reflection": 31,
+          "identity": 35,
+          "rotation": 17
+        },
+        "10": {
+          "center": 66,
+          "fixing_reflection": 20,
+          "free_reflection": 50,
+          "identity": 41,
+          "rotation": 19
+        },
+        "11": {
+          "center": 74,
+          "fixing_reflection": 28,
+          "free_reflection": 98,
+          "identity": 104,
+          "rotation": 25
+        },
+        "12": {
+          "center": 101,
+          "fixing_reflection": 50,
+          "free_reflection": 196,
+          "identity": 162,
+          "rotation": 46
+        },
+        "13": {
+          "center": 242,
+          "fixing_reflection": 73,
+          "free_reflection": 311,
+          "identity": 246,
+          "rotation": 76
+        },
+        "14": {
+          "center": 337,
+          "fixing_reflection": 86,
+          "free_reflection": 337,
+          "identity": 357,
+          "rotation": 64
+        },
+        "15": {
+          "center": 387,
+          "fixing_reflection": 178,
+          "free_reflection": 528,
+          "identity": 432,
+          "rotation": 174
+        },
+        "16": {
+          "center": 667,
+          "fixing_reflection": 195,
+          "free_reflection": 831,
+          "identity": 747,
+          "rotation": 326
+        },
+        "17": {
+          "center": 1048,
+          "fixing_reflection": 231,
+          "free_reflection": 979,
+          "identity": 1038,
+          "rotation": 274
+        }
+      },
+      "good_survivor_count": {
+        "8": 22,
+        "9": 51,
+        "10": 85,
+        "11": 99,
+        "12": 147,
+        "13": 318,
+        "14": 401,
+        "15": 561,
+        "16": 993,
+        "17": 1322
+      },
+      "layers": [
+        {
+          "layer": 9,
+          "entry_type": "fibre",
+          "old_survivors": 63,
+          "mass_old": "1/128",
+          "mass_new": "1/256",
+          "mass_old_times_2^n": 2.0,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.5,
+          "mass_fraction_by_class": {
+            "center": 0.25,
+            "fixing_reflection": 0.0312,
+            "free_reflection": 0.1172,
+            "identity": 0.3516,
+            "rotation": 0.25
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.5,
+            "free_reflection": 0.5,
+            "identity": 0.5,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 256,
+          "first_star_period": 1024,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 122
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 16,
+              "01": 10,
+              "10": 1,
+              "11": 2
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 7,
+            "fixing_reflection": 1,
+            "free_reflection": 10,
+            "identity": 9,
+            "rotation": 2
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 20,
+            "fixing_reflection": 1,
+            "free_reflection": 14,
+            "identity": 26,
+            "rotation": 2
+          },
+          "seconds": 0.02
+        },
+        {
+          "layer": 10,
+          "entry_type": "point",
+          "old_survivors": 126,
+          "mass_old": "1/256",
+          "mass_new": "567/262144",
+          "mass_old_times_2^n": 2.0,
+          "kept_fraction": 0.5537109375,
+          "self_sufficient_mass_fraction": 0.38671875,
+          "mass_fraction_by_class": {
+            "center": 0.3301,
+            "fixing_reflection": 0.041,
+            "free_reflection": 0.1816,
+            "identity": 0.3906,
+            "rotation": 0.0566
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.5,
+            "free_reflection": 0.4516,
+            "identity": 0.66,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 1024,
+          "first_star_period": 1024,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 58,
+            "1": 86,
+            "1/2": 211
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "00": 29,
+              "01": 22,
+              "10": 5,
+              "11": 9
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 14,
+            "fixing_reflection": 5,
+            "free_reflection": 22,
+            "identity": 15,
+            "rotation": 9
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 34,
+            "fixing_reflection": 9,
+            "free_reflection": 31,
+            "identity": 35,
+            "rotation": 17
+          },
+          "seconds": 0.07
+        },
+        {
+          "layer": 11,
+          "entry_type": "z_pair",
+          "old_survivors": 196,
+          "mass_old": "567/262144",
+          "mass_new": "567/524288",
+          "mass_old_times_2^n": 2.21484375,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.48853615520282184,
+          "mass_fraction_by_class": {
+            "center": 0.2981,
+            "fixing_reflection": 0.1041,
+            "free_reflection": 0.194,
+            "identity": 0.2134,
+            "rotation": 0.1905
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.5,
+            "free_reflection": 0.5,
+            "identity": 0.5,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 2048,
+          "first_star_period": 2048,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 348
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 48,
+              "01": 30,
+              "10": 12,
+              "11": 10
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 29,
+            "fixing_reflection": 12,
+            "free_reflection": 30,
+            "identity": 19,
+            "rotation": 10
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 66,
+            "fixing_reflection": 20,
+            "free_reflection": 50,
+            "identity": 41,
+            "rotation": 19
+          },
+          "seconds": 0.08
+        },
+        {
+          "layer": 12,
+          "entry_type": "guard_line",
+          "old_survivors": 329,
+          "mass_old": "567/524288",
+          "mass_new": "2267/4194304",
+          "mass_old_times_2^n": 2.21484375,
+          "kept_fraction": 0.4997795414462081,
+          "self_sufficient_mass_fraction": 0.2980599647266314,
+          "mass_fraction_by_class": {
+            "center": 0.1526,
+            "fixing_reflection": 0.0538,
+            "free_reflection": 0.3827,
+            "identity": 0.2654,
+            "rotation": 0.1455
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.4918,
+            "free_reflection": 0.5063,
+            "identity": 0.4917,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 4096,
+          "first_star_period": 4096,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 92,
+            "1": 81,
+            "1/2": 447,
+            "1/4": 20,
+            "3/4": 16
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "00": 73,
+              "01": 45,
+              "10": 18,
+              "11": 16
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 33,
+            "fixing_reflection": 18,
+            "free_reflection": 45,
+            "identity": 40,
+            "rotation": 16
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 74,
+            "fixing_reflection": 28,
+            "free_reflection": 98,
+            "identity": 104,
+            "rotation": 25
+          },
+          "seconds": 0.18
+        },
+        {
+          "layer": 13,
+          "entry_type": "guard_line",
+          "old_survivors": 555,
+          "mass_old": "2267/4194304",
+          "mass_new": "1083/4194304",
+          "mass_old_times_2^n": 2.2138671875,
+          "kept_fraction": 0.4777238641376268,
+          "self_sufficient_mass_fraction": 0.20886634318482575,
+          "mass_fraction_by_class": {
+            "center": 0.1511,
+            "fixing_reflection": 0.0626,
+            "free_reflection": 0.4376,
+            "identity": 0.2909,
+            "rotation": 0.0578
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.4894,
+            "free_reflection": 0.4887,
+            "identity": 0.4428,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 8192,
+          "first_star_period": 8192,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 131,
+            "1": 121,
+            "1/2": 722,
+            "1/4": 56,
+            "3/4": 46
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 121,
+              "01": 87,
+              "10": 29,
+              "11": 27
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 52,
+            "fixing_reflection": 29,
+            "free_reflection": 87,
+            "identity": 69,
+            "rotation": 27
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 101,
+            "fixing_reflection": 50,
+            "free_reflection": 196,
+            "identity": 162,
+            "rotation": 46
+          },
+          "seconds": 0.38
+        },
+        {
+          "layer": 14,
+          "entry_type": "point",
+          "old_survivors": 948,
+          "mass_old": "1083/4194304",
+          "mass_new": "135/1048576",
+          "mass_old_times_2^n": 2.115234375,
+          "kept_fraction": 0.4986149584487535,
+          "self_sufficient_mass_fraction": 0.390466297322253,
+          "mass_fraction_by_class": {
+            "center": 0.3023,
+            "fixing_reflection": 0.0739,
+            "free_reflection": 0.3661,
+            "identity": 0.1696,
+            "rotation": 0.0882
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.4555,
+            "free_reflection": 0.4849,
+            "identity": 0.5439,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 16384,
+          "first_star_period": 8192,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 432,
+            "1": 438,
+            "1/2": 994
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 213,
+              "01": 147,
+              "10": 46,
+              "11": 45
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 114,
+            "fixing_reflection": 46,
+            "free_reflection": 147,
+            "identity": 99,
+            "rotation": 45
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 242,
+            "fixing_reflection": 73,
+            "free_reflection": 311,
+            "identity": 246,
+            "rotation": 76
+          },
+          "seconds": 0.8
+        },
+        {
+          "layer": 15,
+          "entry_type": "z_pair",
+          "old_survivors": 1181,
+          "mass_old": "135/1048576",
+          "mass_new": "135/2097152",
+          "mass_old_times_2^n": 2.109375,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.36064814814814816,
+          "mass_fraction_by_class": {
+            "center": 0.3176,
+            "fixing_reflection": 0.0944,
+            "free_reflection": 0.308,
+            "identity": 0.2369,
+            "rotation": 0.0431
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.5,
+            "free_reflection": 0.5,
+            "identity": 0.5,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 32768,
+          "first_star_period": 16384,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 1700
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 268,
+              "01": 169,
+              "10": 50,
+              "11": 43
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 126,
+            "fixing_reflection": 50,
+            "free_reflection": 169,
+            "identity": 142,
+            "rotation": 43
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 337,
+            "fixing_reflection": 86,
+            "free_reflection": 337,
+            "identity": 357,
+            "rotation": 64
+          },
+          "seconds": 0.92
+        },
+        {
+          "layer": 16,
+          "entry_type": "z_pair",
+          "old_survivors": 1699,
+          "mass_old": "135/2097152",
+          "mass_new": "135/4194304",
+          "mass_old_times_2^n": 2.109375,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.29369212962962965,
+          "mass_fraction_by_class": {
+            "center": 0.2248,
+            "fixing_reflection": 0.0966,
+            "free_reflection": 0.4098,
+            "identity": 0.1998,
+            "rotation": 0.0689
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.5,
+            "free_reflection": 0.5,
+            "identity": 0.5,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 65536,
+          "first_star_period": 32768,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 2939
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 343,
+              "01": 253,
+              "10": 98,
+              "11": 93
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 163,
+            "fixing_reflection": 98,
+            "free_reflection": 253,
+            "identity": 180,
+            "rotation": 93
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 387,
+            "fixing_reflection": 178,
+            "free_reflection": 528,
+            "identity": 432,
+            "rotation": 174
+          },
+          "seconds": 1.9
+        },
+        {
+          "layer": 17,
+          "entry_type": "point",
+          "old_survivors": 2766,
+          "mass_old": "135/4194304",
+          "mass_new": "2123/134217728",
+          "mass_old_times_2^n": 2.109375,
+          "kept_fraction": 0.4914351851851852,
+          "self_sufficient_mass_fraction": 0.3245659722222222,
+          "mass_fraction_by_class": {
+            "center": 0.2291,
+            "fixing_reflection": 0.0628,
+            "free_reflection": 0.3395,
+            "identity": 0.2731,
+            "rotation": 0.0955
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.4572,
+            "free_reflection": 0.4946,
+            "identity": 0.4852,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 131072,
+          "first_star_period": 32768,
+          "kept_fraction_per_old_phase_and_column": {
+            "0": 1233,
+            "1": 1272,
+            "1/2": 2847
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 1,
+            "sum_c_mod_2": 0,
+            "cycles_by_tc": {
+              "00": 576,
+              "01": 375,
+              "10": 106,
+              "11": 161
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 278,
+            "fixing_reflection": 106,
+            "free_reflection": 375,
+            "identity": 298,
+            "rotation": 161
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 667,
+            "fixing_reflection": 195,
+            "free_reflection": 831,
+            "identity": 747,
+            "rotation": 326
+          },
+          "seconds": 4.07
+        },
+        {
+          "layer": 18,
+          "entry_type": "fibre",
+          "old_survivors": 3570,
+          "mass_old": "2123/134217728",
+          "mass_new": "2123/268435456",
+          "mass_old_times_2^n": 2.0732421875,
+          "kept_fraction": 0.5,
+          "self_sufficient_mass_fraction": 0.3694065002355158,
+          "mass_fraction_by_class": {
+            "center": 0.247,
+            "fixing_reflection": 0.0871,
+            "free_reflection": 0.2868,
+            "identity": 0.2567,
+            "rotation": 0.1224
+          },
+          "kept_fraction_by_class": {
+            "center": 0.5,
+            "fixing_reflection": 0.5,
+            "free_reflection": 0.5,
+            "identity": 0.5,
+            "rotation": 0.5
+          },
+          "longest_new_orbit": 262144,
+          "first_star_period": 131072,
+          "kept_fraction_per_old_phase_and_column": {
+            "1/2": 4989
+          },
+          "exploratory_cycle_parities": {
+            "sum_t_mod_2": 0,
+            "sum_c_mod_2": 1,
+            "cycles_by_tc": {
+              "00": 726,
+              "01": 451,
+              "10": 134,
+              "11": 158
+            }
+          },
+          "cycles_by_monodromy_class": {
+            "center": 357,
+            "fixing_reflection": 134,
+            "free_reflection": 451,
+            "identity": 369,
+            "rotation": 158
+          },
+          "old_survivors_by_monodromy_class": {
+            "center": 1048,
+            "fixing_reflection": 231,
+            "free_reflection": 979,
+            "identity": 1038,
+            "rotation": 274
+          },
+          "seconds": 4.83
+        }
+      ]
+    }
+  ],
+  "scope": "Finite observations on the layers listed. A positive s_n at finitely many layers is not a lower bound on s_n and decides neither uniform nor individual mortality. The index 5 rows are the known-answer control: that family has a complete uniform mortality certificate."
+}

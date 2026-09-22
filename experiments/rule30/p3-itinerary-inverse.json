@@ -1,0 +1,936 @@
+{
+  "schema": "rule30.p3-itinerary-inverse.v1",
+  "status": "Exact quadratic itinerary inverse and local K inverse; no fast power claim",
+  "verification": {
+    "local_inverse_table": [
+      {
+        "previous_output_digit": 0,
+        "current_output_digit": 0,
+        "original_digit": 0
+      },
+      {
+        "previous_output_digit": 0,
+        "current_output_digit": 1,
+        "original_digit": 3
+      },
+      {
+        "previous_output_digit": 0,
+        "current_output_digit": 2,
+        "original_digit": 2
+      },
+      {
+        "previous_output_digit": 0,
+        "current_output_digit": 3,
+        "original_digit": 1
+      },
+      {
+        "previous_output_digit": 1,
+        "current_output_digit": 0,
+        "original_digit": 3
+      },
+      {
+        "previous_output_digit": 1,
+        "current_output_digit": 1,
+        "original_digit": 0
+      },
+      {
+        "previous_output_digit": 1,
+        "current_output_digit": 2,
+        "original_digit": 1
+      },
+      {
+        "previous_output_digit": 1,
+        "current_output_digit": 3,
+        "original_digit": 2
+      },
+      {
+        "previous_output_digit": 2,
+        "current_output_digit": 0,
+        "original_digit": 3
+      },
+      {
+        "previous_output_digit": 2,
+        "current_output_digit": 1,
+        "original_digit": 2
+      },
+      {
+        "previous_output_digit": 2,
+        "current_output_digit": 2,
+        "original_digit": 1
+      },
+      {
+        "previous_output_digit": 2,
+        "current_output_digit": 3,
+        "original_digit": 0
+      },
+      {
+        "previous_output_digit": 3,
+        "current_output_digit": 0,
+        "original_digit": 3
+      },
+      {
+        "previous_output_digit": 3,
+        "current_output_digit": 1,
+        "original_digit": 2
+      },
+      {
+        "previous_output_digit": 3,
+        "current_output_digit": 2,
+        "original_digit": 1
+      },
+      {
+        "previous_output_digit": 3,
+        "current_output_digit": 3,
+        "original_digit": 0
+      }
+    ],
+    "local_semiconjugacy_table": [
+      {
+        "state": "A",
+        "low_input": 0,
+        "output_digit": 0,
+        "following_state": "A"
+      },
+      {
+        "state": "A",
+        "low_input": 1,
+        "output_digit": 3,
+        "following_state": "C"
+      },
+      {
+        "state": "A",
+        "low_input": 2,
+        "output_digit": 2,
+        "following_state": "C"
+      },
+      {
+        "state": "A",
+        "low_input": 3,
+        "output_digit": 1,
+        "following_state": "B"
+      },
+      {
+        "state": "A",
+        "low_input": 4,
+        "output_digit": 0,
+        "following_state": "A"
+      },
+      {
+        "state": "A",
+        "low_input": 5,
+        "output_digit": 3,
+        "following_state": "C"
+      },
+      {
+        "state": "A",
+        "low_input": 6,
+        "output_digit": 2,
+        "following_state": "C"
+      },
+      {
+        "state": "A",
+        "low_input": 7,
+        "output_digit": 1,
+        "following_state": "B"
+      },
+      {
+        "state": "B",
+        "low_input": 0,
+        "output_digit": 1,
+        "following_state": "B"
+      },
+      {
+        "state": "B",
+        "low_input": 1,
+        "output_digit": 2,
+        "following_state": "C"
+      },
+      {
+        "state": "B",
+        "low_input": 2,
+        "output_digit": 3,
+        "following_state": "C"
+      },
+      {
+        "state": "B",
+        "low_input": 3,
+        "output_digit": 0,
+        "following_state": "A"
+      },
+      {
+        "state": "B",
+        "low_input": 4,
+        "output_digit": 1,
+        "following_state": "B"
+      },
+      {
+        "state": "B",
+        "low_input": 5,
+        "output_digit": 2,
+        "following_state": "C"
+      },
+      {
+        "state": "B",
+        "low_input": 6,
+        "output_digit": 3,
+        "following_state": "C"
+      },
+      {
+        "state": "B",
+        "low_input": 7,
+        "output_digit": 0,
+        "following_state": "A"
+      },
+      {
+        "state": "C",
+        "low_input": 0,
+        "output_digit": 3,
+        "following_state": "C"
+      },
+      {
+        "state": "C",
+        "low_input": 1,
+        "output_digit": 2,
+        "following_state": "C"
+      },
+      {
+        "state": "C",
+        "low_input": 2,
+        "output_digit": 1,
+        "following_state": "B"
+      },
+      {
+        "state": "C",
+        "low_input": 3,
+        "output_digit": 0,
+        "following_state": "A"
+      },
+      {
+        "state": "C",
+        "low_input": 4,
+        "output_digit": 3,
+        "following_state": "C"
+      },
+      {
+        "state": "C",
+        "low_input": 5,
+        "output_digit": 2,
+        "following_state": "C"
+      },
+      {
+        "state": "C",
+        "low_input": 6,
+        "output_digit": 1,
+        "following_state": "B"
+      },
+      {
+        "state": "C",
+        "low_input": 7,
+        "output_digit": 0,
+        "following_state": "A"
+      }
+    ],
+    "directed_round_trips": [
+      {
+        "digits": 0,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 0,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 0
+        }
+      },
+      {
+        "digits": 0,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 0,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 0
+        }
+      },
+      {
+        "digits": 0,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 0,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 0
+        }
+      },
+      {
+        "digits": 0,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 0,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 0
+        }
+      },
+      {
+        "digits": 0,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 0,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 0
+        }
+      },
+      {
+        "digits": 0,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 0,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 0
+        }
+      },
+      {
+        "digits": 0,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 0,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 0
+        }
+      },
+      {
+        "digits": 1,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 1,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 2
+        }
+      },
+      {
+        "digits": 1,
+        "input": 1,
+        "itinerary": 1,
+        "reconstructed": 1,
+        "work": {
+          "digits": 1,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 2
+        }
+      },
+      {
+        "digits": 1,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 1,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 2
+        }
+      },
+      {
+        "digits": 1,
+        "input": 2,
+        "itinerary": 2,
+        "reconstructed": 2,
+        "work": {
+          "digits": 1,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 2
+        }
+      },
+      {
+        "digits": 1,
+        "input": 3,
+        "itinerary": 3,
+        "reconstructed": 3,
+        "work": {
+          "digits": 1,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 2
+        }
+      },
+      {
+        "digits": 1,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 1,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 2
+        }
+      },
+      {
+        "digits": 1,
+        "input": 1,
+        "itinerary": 1,
+        "reconstructed": 1,
+        "work": {
+          "digits": 1,
+          "boolean_updates": 0,
+          "reconstructed_column_lengths": [],
+          "output_bits": 2
+        }
+      },
+      {
+        "digits": 2,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 2,
+          "boolean_updates": 2,
+          "reconstructed_column_lengths": [
+            1,
+            1
+          ],
+          "output_bits": 4
+        }
+      },
+      {
+        "digits": 2,
+        "input": 1,
+        "itinerary": 5,
+        "reconstructed": 1,
+        "work": {
+          "digits": 2,
+          "boolean_updates": 2,
+          "reconstructed_column_lengths": [
+            1,
+            1
+          ],
+          "output_bits": 4
+        }
+      },
+      {
+        "digits": 2,
+        "input": 12,
+        "itinerary": 4,
+        "reconstructed": 12,
+        "work": {
+          "digits": 2,
+          "boolean_updates": 2,
+          "reconstructed_column_lengths": [
+            1,
+            1
+          ],
+          "output_bits": 4
+        }
+      },
+      {
+        "digits": 2,
+        "input": 14,
+        "itinerary": 2,
+        "reconstructed": 14,
+        "work": {
+          "digits": 2,
+          "boolean_updates": 2,
+          "reconstructed_column_lengths": [
+            1,
+            1
+          ],
+          "output_bits": 4
+        }
+      },
+      {
+        "digits": 2,
+        "input": 11,
+        "itinerary": 7,
+        "reconstructed": 11,
+        "work": {
+          "digits": 2,
+          "boolean_updates": 2,
+          "reconstructed_column_lengths": [
+            1,
+            1
+          ],
+          "output_bits": 4
+        }
+      },
+      {
+        "digits": 2,
+        "input": 4,
+        "itinerary": 12,
+        "reconstructed": 4,
+        "work": {
+          "digits": 2,
+          "boolean_updates": 2,
+          "reconstructed_column_lengths": [
+            1,
+            1
+          ],
+          "output_bits": 4
+        }
+      },
+      {
+        "digits": 2,
+        "input": 5,
+        "itinerary": 9,
+        "reconstructed": 5,
+        "work": {
+          "digits": 2,
+          "boolean_updates": 2,
+          "reconstructed_column_lengths": [
+            1,
+            1
+          ],
+          "output_bits": 4
+        }
+      },
+      {
+        "digits": 5,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 5,
+          "boolean_updates": 20,
+          "reconstructed_column_lengths": [
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 10
+        }
+      },
+      {
+        "digits": 5,
+        "input": 1,
+        "itinerary": 341,
+        "reconstructed": 1,
+        "work": {
+          "digits": 5,
+          "boolean_updates": 20,
+          "reconstructed_column_lengths": [
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 10
+        }
+      },
+      {
+        "digits": 5,
+        "input": 12,
+        "itinerary": 68,
+        "reconstructed": 12,
+        "work": {
+          "digits": 5,
+          "boolean_updates": 20,
+          "reconstructed_column_lengths": [
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 10
+        }
+      },
+      {
+        "digits": 5,
+        "input": 222,
+        "itinerary": 546,
+        "reconstructed": 222,
+        "work": {
+          "digits": 5,
+          "boolean_updates": 20,
+          "reconstructed_column_lengths": [
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 10
+        }
+      },
+      {
+        "digits": 5,
+        "input": 891,
+        "itinerary": 983,
+        "reconstructed": 891,
+        "work": {
+          "digits": 5,
+          "boolean_updates": 20,
+          "reconstructed_column_lengths": [
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 10
+        }
+      },
+      {
+        "digits": 5,
+        "input": 132,
+        "itinerary": 300,
+        "reconstructed": 132,
+        "work": {
+          "digits": 5,
+          "boolean_updates": 20,
+          "reconstructed_column_lengths": [
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 10
+        }
+      },
+      {
+        "digits": 5,
+        "input": 277,
+        "itinerary": 217,
+        "reconstructed": 277,
+        "work": {
+          "digits": 5,
+          "boolean_updates": 20,
+          "reconstructed_column_lengths": [
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 10
+        }
+      },
+      {
+        "digits": 9,
+        "input": 0,
+        "itinerary": 0,
+        "reconstructed": 0,
+        "work": {
+          "digits": 9,
+          "boolean_updates": 72,
+          "reconstructed_column_lengths": [
+            8,
+            8,
+            7,
+            7,
+            6,
+            6,
+            5,
+            5,
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 18
+        }
+      },
+      {
+        "digits": 9,
+        "input": 1,
+        "itinerary": 87381,
+        "reconstructed": 1,
+        "work": {
+          "digits": 9,
+          "boolean_updates": 72,
+          "reconstructed_column_lengths": [
+            8,
+            8,
+            7,
+            7,
+            6,
+            6,
+            5,
+            5,
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 18
+        }
+      },
+      {
+        "digits": 9,
+        "input": 12,
+        "itinerary": 17476,
+        "reconstructed": 12,
+        "work": {
+          "digits": 9,
+          "boolean_updates": 72,
+          "reconstructed_column_lengths": [
+            8,
+            8,
+            7,
+            7,
+            6,
+            6,
+            5,
+            5,
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 18
+        }
+      },
+      {
+        "digits": 9,
+        "input": 222,
+        "itinerary": 139810,
+        "reconstructed": 222,
+        "work": {
+          "digits": 9,
+          "boolean_updates": 72,
+          "reconstructed_column_lengths": [
+            8,
+            8,
+            7,
+            7,
+            6,
+            6,
+            5,
+            5,
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 18
+        }
+      },
+      {
+        "digits": 9,
+        "input": 891,
+        "itinerary": 251863,
+        "reconstructed": 891,
+        "work": {
+          "digits": 9,
+          "boolean_updates": 72,
+          "reconstructed_column_lengths": [
+            8,
+            8,
+            7,
+            7,
+            6,
+            6,
+            5,
+            5,
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 18
+        }
+      },
+      {
+        "digits": 9,
+        "input": 3204,
+        "itinerary": 76076,
+        "reconstructed": 3204,
+        "work": {
+          "digits": 9,
+          "boolean_updates": 72,
+          "reconstructed_column_lengths": [
+            8,
+            8,
+            7,
+            7,
+            6,
+            6,
+            5,
+            5,
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 18
+        }
+      },
+      {
+        "digits": 9,
+        "input": 249109,
+        "itinerary": 178393,
+        "reconstructed": 249109,
+        "work": {
+          "digits": 9,
+          "boolean_updates": 72,
+          "reconstructed_column_lengths": [
+            8,
+            8,
+            7,
+            7,
+            6,
+            6,
+            5,
+            5,
+            4,
+            4,
+            3,
+            3,
+            2,
+            2,
+            1,
+            1
+          ],
+          "output_bits": 18
+        }
+      }
+    ],
+    "affine_mod16_counterexample": [
+      15,
+      14,
+      5
+    ],
+    "bilateral_bulk_constant_images": [
+      0,
+      0,
+      1,
+      0
+    ],
+    "fixed_boundary_constant_ray_controls": [
+      {
+        "constant_digit": 0,
+        "controls": [
+          {
+            "digits": 1,
+            "inverse_integer": 3
+          },
+          {
+            "digits": 2,
+            "inverse_integer": 3
+          },
+          {
+            "digits": 5,
+            "inverse_integer": 3
+          }
+        ]
+      },
+      {
+        "constant_digit": 1,
+        "controls": [
+          {
+            "digits": 1,
+            "inverse_integer": 2
+          },
+          {
+            "digits": 2,
+            "inverse_integer": 2
+          },
+          {
+            "digits": 5,
+            "inverse_integer": 2
+          }
+        ]
+      },
+      {
+        "constant_digit": 3,
+        "controls": [
+          {
+            "digits": 1,
+            "inverse_integer": 0
+          },
+          {
+            "digits": 2,
+            "inverse_integer": 0
+          },
+          {
+            "digits": 5,
+            "inverse_integer": 0
+          }
+        ]
+      }
+    ],
+    "elapsed_seconds": 0.000781084003392607
+  },
+  "source_sha256": {
+    "experiments/rule30/p3_itinerary_inverse.py": "45d9508c2afc6563a2bd65a56cf2df463cfe0968085a9cbfffa635d04361e3a8"
+  },
+  "itinerary_inverse_boolean_updates": "m*(m-1)",
+  "inverse_K_local_rule_proved": true,
+  "RCA54_comparison": {
+    "primary_definition": "https://arxiv.org/pdf/2103.16543",
+    "location": "Section2, equations1-2; staggered even/odd OR-controlled flips",
+    "proved": "The bilateral bulk inverse-K extension is not injective, so admits no bijective full-shift conjugacy to reversible RCA54.",
+    "scope": "The fixed-boundary one-sided inverse-K map remains bijective; constrained or nonlocal recodings are not excluded."
+  },
+  "sublinear_singleton_algorithm_proved": false
+}

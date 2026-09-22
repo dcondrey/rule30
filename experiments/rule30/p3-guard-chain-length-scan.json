@@ -1,0 +1,153 @@
+{
+  "schema": "rule30.p3-guard-chain-length-scan.v1",
+  "measures": "max_a max_K such that high(gen^{a+2K}(0))_i == high(gen^a(0))_i, for each site i",
+  "interpretation": "Upper bound on what the rise-chain guard certificate could ever exploit at that site; empirical, not a proof for all n. Compared against an i.i.d. random-bit-column control of the same shape to distinguish real correlation from sampling artifact.",
+  "generators": {
+    "B": {
+      "sites_scanned": 2198,
+      "time_depth": 2200,
+      "overall_max_K": 38,
+      "buckets": [
+        {
+          "site_lo": 1,
+          "site_hi": 10,
+          "max_K": 13,
+          "mean_K": 7.555555555555555
+        },
+        {
+          "site_lo": 10,
+          "site_hi": 50,
+          "max_K": 26,
+          "mean_K": 16.85
+        },
+        {
+          "site_lo": 50,
+          "site_hi": 200,
+          "max_K": 31,
+          "mean_K": 16.906666666666666
+        },
+        {
+          "site_lo": 200,
+          "site_hi": 600,
+          "max_K": 29,
+          "mean_K": 17.135
+        },
+        {
+          "site_lo": 600,
+          "site_hi": 1200,
+          "max_K": 38,
+          "mean_K": 16.8
+        },
+        {
+          "site_lo": 1200,
+          "site_hi": 2000,
+          "max_K": 30,
+          "mean_K": 16.64
+        },
+        {
+          "site_lo": 2000,
+          "site_hi": 2198,
+          "max_K": 27,
+          "mean_K": 16.661616161616163
+        }
+      ]
+    },
+    "C": {
+      "sites_scanned": 2198,
+      "time_depth": 2200,
+      "overall_max_K": 37,
+      "buckets": [
+        {
+          "site_lo": 1,
+          "site_hi": 10,
+          "max_K": 15,
+          "mean_K": 6.666666666666667
+        },
+        {
+          "site_lo": 10,
+          "site_hi": 50,
+          "max_K": 33,
+          "mean_K": 17.3
+        },
+        {
+          "site_lo": 50,
+          "site_hi": 200,
+          "max_K": 28,
+          "mean_K": 17.046666666666667
+        },
+        {
+          "site_lo": 200,
+          "site_hi": 600,
+          "max_K": 31,
+          "mean_K": 17.635
+        },
+        {
+          "site_lo": 600,
+          "site_hi": 1200,
+          "max_K": 37,
+          "mean_K": 17.336666666666666
+        },
+        {
+          "site_lo": 1200,
+          "site_hi": 2000,
+          "max_K": 31,
+          "mean_K": 17.285
+        },
+        {
+          "site_lo": 2000,
+          "site_hi": 2198,
+          "max_K": 28,
+          "mean_K": 17.272727272727273
+        }
+      ]
+    }
+  },
+  "random_control": {
+    "overall_max_K": 20,
+    "overall_mean_K": 9.476342129208371,
+    "buckets": [
+      {
+        "site_lo": 1,
+        "site_hi": 10,
+        "max_K": 10,
+        "mean_K": 8.777777777777779
+      },
+      {
+        "site_lo": 10,
+        "site_hi": 50,
+        "max_K": 15,
+        "mean_K": 9.2
+      },
+      {
+        "site_lo": 50,
+        "site_hi": 200,
+        "max_K": 14,
+        "mean_K": 9.34
+      },
+      {
+        "site_lo": 200,
+        "site_hi": 600,
+        "max_K": 19,
+        "mean_K": 9.4775
+      },
+      {
+        "site_lo": 600,
+        "site_hi": 1200,
+        "max_K": 20,
+        "mean_K": 9.585
+      },
+      {
+        "site_lo": 1200,
+        "site_hi": 2000,
+        "max_K": 18,
+        "mean_K": 9.4675
+      },
+      {
+        "site_lo": 2000,
+        "site_hi": 2198,
+        "max_K": 17,
+        "mean_K": 9.373737373737374
+      }
+    ]
+  }
+}

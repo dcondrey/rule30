@@ -1,0 +1,1072 @@
+{
+  "schema": "rule30.guarded-two-block-lift-independent.v1",
+  "all_saved_layers_verified": true,
+  "uniform_family_mortality_verified": false,
+  "continuation_complete": false,
+  "last_completed_depth": 18,
+  "remaining_surviving_columns": 7140,
+  "producer_stop_reason": "route_cache_state_cap",
+  "family": {
+    "prefix": "21213",
+    "body1": "13",
+    "seam": "1213",
+    "body2": "13",
+    "suffix": "03",
+    "initial_tape": "00"
+  },
+  "parameter_domain": "All independent integers a,b>=0 at every verified temporal depth",
+  "base": {
+    "depth": 8,
+    "first_phases": 256,
+    "joint_columns": 16888,
+    "survivors": 63,
+    "all_guards_and_births_verified": true,
+    "data_sha256": {
+      "first": "324964d5944a8c3a29c5bcde190a4e944537c6791ff3a9d621adc27fe63b9e67",
+      "seeds": "6375fea2f0cd451ad759d2967ad0459b7c50b1263c2e59be1cbc4d1f7b5dc4cf",
+      "joint": "7b75733256cad502fea6ceb5827f722193976c50ebf5b5c1ddf701f650ec33a2",
+      "survivors": "86ff1af213d23d4044d7f0d51b6d96cc86c5ae99038536d4ce9803a4799d4363",
+      "tapes": "7d3e633e826c972f02be2bc25bfc634a100facd8cbef36d9aeacd080f0777d1d"
+    }
+  },
+  "layers": [
+    {
+      "depth": 9,
+      "first_phases": 1024,
+      "routes_verified": 2712,
+      "four_sheet_local_maps_verified": 10848,
+      "cover_vertices": 252,
+      "survivors": 126,
+      "dead_first_phases_after_filter": 846,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 252,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 252,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 252,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 252,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 252,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 252,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 252,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 252,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 126,
+          "newly_failed_joint_states": 126
+        }
+      ],
+      "max_further_successes": 9,
+      "max_total_repeats": 9,
+      "data_sha256": {
+        "first": "6b6978df729edc9dba25f74914d6315a33425ca280d5f15a0e2fb44991c125f8",
+        "routes": "6cbe65cb9887eafcc615449c3304babe89d73c635a0059af6906e1a3005efe1f",
+        "cover": "33ec9ccb112f6223ec78f75eee72e36d16786cf702c115cd8c8bc367fc666f6e",
+        "entries": "2d5ee40959578c13a616332864914515b0591f031e2dbcd2761526a3be0559f5"
+      },
+      "N_witness": {
+        "a": 329,
+        "b": 10,
+        "tape": "00001001000",
+        "further_successes": 9,
+        "D": 6,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 805,
+        "b": 1,
+        "tape": "00000000111",
+        "further_successes": 9,
+        "D": 9,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 10,
+      "first_phases": 1024,
+      "routes_verified": 9792,
+      "four_sheet_local_maps_verified": 39168,
+      "cover_vertices": 379,
+      "survivors": 196,
+      "dead_first_phases_after_filter": 864,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 379,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 196,
+          "newly_failed_joint_states": 183
+        }
+      ],
+      "max_further_successes": 10,
+      "max_total_repeats": 10,
+      "data_sha256": {
+        "first": "17a8f224f0305b94c27cdd6ed054925ad826d017fc7d09fdf94c51e2aae91957",
+        "routes": "ab67db91816bd6d1f2d91afd0da71761d0f8de7f7513211c9d2a3c22606aa120",
+        "cover": "f5ba84011ce7f49cf4b308274ddeb149735384531b3a0b59bfa9bd5e17c1507a",
+        "entries": "90b61076fab252ef90ce3ec20ab81cbc7aa028d3c47cbcc9e6c0de4ea70f3adc"
+      },
+      "N_witness": {
+        "a": 531,
+        "b": 240,
+        "tape": "000101010100",
+        "further_successes": 10,
+        "D": 3,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 17,
+        "b": 83,
+        "tape": "000011111111",
+        "further_successes": 10,
+        "D": 10,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 11,
+      "first_phases": 2048,
+      "routes_verified": 28960,
+      "four_sheet_local_maps_verified": 115840,
+      "cover_vertices": 658,
+      "survivors": 329,
+      "dead_first_phases_after_filter": 1773,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 658,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 11,
+          "successful_joint_states": 329,
+          "newly_failed_joint_states": 329
+        }
+      ],
+      "max_further_successes": 11,
+      "max_total_repeats": 11,
+      "data_sha256": {
+        "first": "ee28ae338358af8f7d227b22defd59df6d7ea01a2a070cf1fe09896812d52f1b",
+        "routes": "ec292e21eff973e38ea3c74a222d82279de20d538cb1f931b49ab07acc9ad9e9",
+        "cover": "369314b63683f9761d0b0d879498dfecd632799e0af28b24f66787865072cca0",
+        "entries": "b512501865b519dea167ceb1257674c35d174a7e9c3e95b6cbc7a2dbfd828f12"
+      },
+      "N_witness": {
+        "a": 23,
+        "b": 166,
+        "tape": "0001001010100",
+        "further_successes": 11,
+        "D": 4,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 1041,
+        "b": 83,
+        "tape": "0000111111111",
+        "further_successes": 11,
+        "D": 11,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 12,
+      "first_phases": 4096,
+      "routes_verified": 86560,
+      "four_sheet_local_maps_verified": 346240,
+      "cover_vertices": 1128,
+      "survivors": 555,
+      "dead_first_phases_after_filter": 3619,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 11,
+          "successful_joint_states": 1128,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 12,
+          "successful_joint_states": 555,
+          "newly_failed_joint_states": 573
+        }
+      ],
+      "max_further_successes": 12,
+      "max_total_repeats": 12,
+      "data_sha256": {
+        "first": "8e0202e2fa3087fce5d80ca72474a598d9fc20a32c3c51fdaf46c6c48c6fff15",
+        "routes": "ed06287a1cd27da1ce864c7205fb96d47b03e31e6bf38e6142867719939316d5",
+        "cover": "baac54e5106b6a8ec08a1d13bd6e8aab02e6656ed89358e94fcb98cce9b4457f",
+        "entries": "5134a42b1143c4e73eecf2cc1cb5bba6e018d030aaa45b923ff6466d6ae80985"
+      },
+      "N_witness": {
+        "a": 3235,
+        "b": 860,
+        "tape": "00010000010110",
+        "further_successes": 12,
+        "D": 7,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 3089,
+        "b": 83,
+        "tape": "00001111111111",
+        "further_successes": 12,
+        "D": 12,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 13,
+      "first_phases": 8192,
+      "routes_verified": 265920,
+      "four_sheet_local_maps_verified": 1063680,
+      "cover_vertices": 1880,
+      "survivors": 948,
+      "dead_first_phases_after_filter": 7353,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 11,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 12,
+          "successful_joint_states": 1880,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 13,
+          "successful_joint_states": 948,
+          "newly_failed_joint_states": 932
+        }
+      ],
+      "max_further_successes": 13,
+      "max_total_repeats": 13,
+      "data_sha256": {
+        "first": "6219374a1c52e32edf4c51dd393f16088e1cf973c1fffdf5f67bec217aad5931",
+        "routes": "6f8113d0f246b2587ac3f15c16e9a5e8e5ff6668c2a2e7243bd21bf12c975ac9",
+        "cover": "150ec3bc763f6f7f43c6567ebe31a6307cdd892d3ca14734cd29761cf2abc634",
+        "entries": "563fa1391a1702d776a9b5f8fe0f2e6512665684dfe3c9e1a0c12b73759b00d6"
+      },
+      "N_witness": {
+        "a": 3235,
+        "b": 860,
+        "tape": "000100000101101",
+        "further_successes": 13,
+        "D": 7,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 3089,
+        "b": 83,
+        "tape": "000011111111111",
+        "further_successes": 13,
+        "D": 13,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 14,
+      "first_phases": 8192,
+      "routes_verified": 796032,
+      "four_sheet_local_maps_verified": 3184128,
+      "cover_vertices": 2369,
+      "survivors": 1181,
+      "dead_first_phases_after_filter": 7462,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 11,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 12,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 13,
+          "successful_joint_states": 2369,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 14,
+          "successful_joint_states": 1181,
+          "newly_failed_joint_states": 1188
+        }
+      ],
+      "max_further_successes": 14,
+      "max_total_repeats": 14,
+      "data_sha256": {
+        "first": "6ff020f62f2f7ca0f0a3fe1cf9d8a983ea6afc3b5c20b5daf72175941e4c8d45",
+        "routes": "74babc5161f12682baa37c240afa8725fed65fe7ae3daa70421be8b5fafe9897",
+        "cover": "9d46b3acb41cf117075fb2ba7120e0d429200fc373c61e706e31cb66152930f6",
+        "entries": "ad2531e7bd10092d4227283494fae07c7ce6299095005ede4eaca7b2004d8f58"
+      },
+      "N_witness": {
+        "a": 3235,
+        "b": 860,
+        "tape": "0001000001011011",
+        "further_successes": 14,
+        "D": 8,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 1055,
+        "b": 5204,
+        "tape": "0001111111111111",
+        "further_successes": 14,
+        "D": 14,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 15,
+      "first_phases": 16384,
+      "routes_verified": 1788032,
+      "four_sheet_local_maps_verified": 7152128,
+      "cover_vertices": 3398,
+      "survivors": 1699,
+      "dead_first_phases_after_filter": 15129,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 11,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 12,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 13,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 14,
+          "successful_joint_states": 3398,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 15,
+          "successful_joint_states": 1699,
+          "newly_failed_joint_states": 1699
+        }
+      ],
+      "max_further_successes": 15,
+      "max_total_repeats": 15,
+      "data_sha256": {
+        "first": "ca9df5bbcc319f9c36b8e1d3d548bd3b8a2e6ec66463b36c4d3043ab7a4cffcf",
+        "routes": "a145e80e4ff2c2ac5257730d5fcaae4bbf152f5bb436127ccc07a191ce6eb387",
+        "cover": "9840f595638fc22114efd20de311fd880e2e2d46a8b46fc88658b4d96b5aed53",
+        "entries": "45c65d9fe9851ddebc2f9ad1002b2fcc286b8708274d3dc336c5263499828423"
+      },
+      "N_witness": {
+        "a": 3235,
+        "b": 9052,
+        "tape": "00010000010110110",
+        "further_successes": 15,
+        "D": 8,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 6367,
+        "b": 6884,
+        "tape": "00011111111111111",
+        "further_successes": 15,
+        "D": 15,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 16,
+      "first_phases": 32768,
+      "routes_verified": 4667136,
+      "four_sheet_local_maps_verified": 18668544,
+      "cover_vertices": 5532,
+      "survivors": 2766,
+      "dead_first_phases_after_filter": 30589,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 11,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 12,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 13,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 14,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 15,
+          "successful_joint_states": 5532,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 16,
+          "successful_joint_states": 2766,
+          "newly_failed_joint_states": 2766
+        }
+      ],
+      "max_further_successes": 16,
+      "max_total_repeats": 16,
+      "data_sha256": {
+        "first": "b27a63c0211c4abff38875b1c6cab86ccb7c5a475dca9103e25d633396542563",
+        "routes": "e0f01ad6aa8ae5c9efbed6c736742475170a1dbf7fc9c50b8692b7341cce066c",
+        "cover": "f3d4f6c02be1e2d2e6ce91f8bcd04157804a8411ba8946032396bcdffc5a173b",
+        "entries": "88ca102edfef6b93de729ed520b4e2950f5d75c33e41efc6a7ca86f8da9ea837"
+      },
+      "N_witness": {
+        "a": 3235,
+        "b": 25436,
+        "tape": "000100000101101101",
+        "further_successes": 16,
+        "D": 8,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 6367,
+        "b": 6884,
+        "tape": "000111111111111111",
+        "further_successes": 16,
+        "D": 16,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 17,
+      "first_phases": 32768,
+      "routes_verified": 13459840,
+      "four_sheet_local_maps_verified": 53839360,
+      "cover_vertices": 7090,
+      "survivors": 3570,
+      "dead_first_phases_after_filter": 30809,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 11,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 12,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 13,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 14,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 15,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 16,
+          "successful_joint_states": 7090,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 17,
+          "successful_joint_states": 3570,
+          "newly_failed_joint_states": 3520
+        }
+      ],
+      "max_further_successes": 17,
+      "max_total_repeats": 17,
+      "data_sha256": {
+        "first": "6c0ad30e57c35882e486f4c9e031a578b5b617b156339c780412095da814e556",
+        "routes": "a86c7aa2f4513f0ccda642b9a8adb4222e25363544f5f4ec498155eb5015547b",
+        "cover": "538ece471d2fcf79e8d88452b85f04560b85bf33c29680abd95542fed7d7aeaf",
+        "entries": "e1d54bc76147c13d58acfec52498a0a68d897f6f5ebf3fc3b9a33eeb03713374"
+      },
+      "N_witness": {
+        "a": 6527,
+        "b": 56864,
+        "tape": "0001101001011011010",
+        "further_successes": 17,
+        "D": 6,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 22751,
+        "b": 15076,
+        "tape": "0001111111111111111",
+        "further_successes": 17,
+        "D": 17,
+        "survives_certified_depth": true
+      }
+    },
+    {
+      "depth": 18,
+      "first_phases": 131072,
+      "routes_verified": 32611584,
+      "four_sheet_local_maps_verified": 130446336,
+      "cover_vertices": 14280,
+      "survivors": 7140,
+      "dead_first_phases_after_filter": 124157,
+      "guard_counts": [
+        {
+          "depth": 1,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 2,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 3,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 4,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 5,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 6,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 7,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 8,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 9,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 10,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 11,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 12,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 13,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 14,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 15,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 16,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 17,
+          "successful_joint_states": 14280,
+          "newly_failed_joint_states": 0
+        },
+        {
+          "depth": 18,
+          "successful_joint_states": 7140,
+          "newly_failed_joint_states": 7140
+        }
+      ],
+      "max_further_successes": 18,
+      "max_total_repeats": 18,
+      "data_sha256": {
+        "first": "c76389231dafe3eb75f4a2d2b5ccf28f7f0f8d5340d1132541a8e11c13777a8a",
+        "routes": "eda6a26520ae1822288f5ca002eadb651044fe0044d593355270eaf606717d43",
+        "cover": "b449a8b37542a234aeb4c85ffa8a42d62461051868cd0fac834156a381f3e98b",
+        "entries": "d09bcd821ad8c16176bbc8d2d8ac7a407fea713dd88c5d0eac45691f6e3a2e96"
+      },
+      "N_witness": {
+        "a": 6527,
+        "b": 56864,
+        "tape": "00011010010110110101",
+        "further_successes": 18,
+        "D": 6,
+        "survives_certified_depth": true
+      },
+      "D_witness": {
+        "a": 55519,
+        "b": 15076,
+        "tape": "00011111111111111111",
+        "further_successes": 18,
+        "D": 18,
+        "survives_certified_depth": true
+      }
+    }
+  ],
+  "observed_max_original_successes": 20,
+  "observed_max_original_repeats": 18,
+  "source_sha256": {
+    "/Volumes/A/researchpapers/13-rule30/experiments/rule30/verify_guarded_two_block_lift.py": "f0a854b1bf18ef486429415dff7e0db891cbec50153fa2a2081e85b01a15443a",
+    "/Volumes/A/researchpapers/13-rule30/experiments/rule30/verify_two_block_family.py": "cbc054ef480c034456f4739bbb2e2483cc13d3711eb9e32110085a656ef95a99",
+    "/Volumes/A/researchpapers/13-rule30/experiments/rule30/panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+    "/Volumes/A/researchpapers/13-rule30/experiments/rule30/two_block_guarded_lift.cpp": "6658c14e812d27de3f3cfff673c861330e0e67700589534fbc471aadbb2ea1a0",
+    "/Volumes/A/researchpapers/13-rule30/experiments/rule30/two_block_column_orbit.cpp": "a198df6f2c14cef3d6fb13238c96a445eea014fc6977cd68ac8b7a6b44d55bdd",
+    "/Volumes/A/researchpapers/13-rule30/experiments/rule30/capacity18-guarded-i08.json": "581ae93658a0ee47bc56aed7eb71b494a8192991ac67f231c3d55207d14d9386",
+    "/Volumes/A/researchpapers/13-rule30/experiments/rule30/capacity18-joint-08.data/depth-08.json": "b3cecb52a2cf48980c19a37ec763d84cf0ff341a947312725cc4740c14e1275a"
+  },
+  "seconds": 61.19607066689059,
+  "scope": "Exact full-family survivor sets through the last verified depth. A capped continuation gives no mortality conclusion or global N/D bound. Initial-history ancestry is supplied by the capacity-language theorem; joint columns are not ancestor counts."
+}

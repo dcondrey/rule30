@@ -1,0 +1,242 @@
+{
+ "runs": [
+  {
+   "run": "N6-q3-r0-onset-L14",
+   "status": "cap_seconds",
+   "iterations": 47,
+   "spurious_cores": 47,
+   "distinct_spurious_cores": 47,
+   "unresolved_breaks": 0,
+   "n_break": {
+    "min": 11899,
+    "median": 24278,
+    "max": 220886,
+    "mean": 68061.6
+   },
+   "L_needed": {
+    "median": 17,
+    "max": 20,
+    "min": 16
+   },
+   "gap": {
+    "median": 18816,
+    "max": 215424,
+    "min": 6437
+   },
+   "core_distance": {
+    "median": 4,
+    "min": 1,
+    "max": 9
+   },
+   "signature_repeats": [],
+   "witness": null,
+   "predictions": {
+    "Q1_witness": "held: no mask was exactly eventually periodic",
+    "Q2_floor": "held: all 47 resolved breaks sit above the last fully constrained index",
+    "Q3_termination": "held: stopped at cap_seconds, no UNSAT, so nothing here excludes anything",
+    "Q4_lever": "KILL: median L_needed 17 >= 17, windowed onset exclusion is retired",
+    "Q5_treadmill": "FIRED: only 0/47 = 0.00 have gap <= 960, the family does not cluster at the window edge",
+    "Q6a_no_repeat": "held: 47 cores, no signature repeated under relabelling",
+    "Q6b_diversity": "held: median pairwise core distance 4 >= 4 of 18",
+    "Q7_unresolved": "held: 0 of 47 spurious cores have no break below the scan limit"
+   },
+   "N": 6,
+   "q": 3,
+   "r": 0,
+   "p": 480,
+   "mode": "onset",
+   "L": 14,
+   "seed": 30,
+   "scan_limit": 2097152,
+   "max_iterations": 100,
+   "max_seconds": 2700.0,
+   "conflict_budget": 2000000,
+   "conflicts": 6923637,
+   "H": 16,
+   "n0": 64,
+   "base_vars": 98910,
+   "base_clauses": 658220,
+   "blocking_clauses": 5640,
+   "final_clauses": 663860,
+   "encoder_fixtures_checked": [
+    "sat-mask-results.log:1",
+    "sat-controls.log:8"
+   ],
+   "fixture_breaks_replayed": [
+    {
+     "r": 0,
+     "n_break": 168457
+    },
+    {
+     "r": 1,
+     "n_break": 5345
+    },
+    {
+     "r": 2,
+     "n_break": 19908
+    }
+   ],
+   "wall_seconds": 2708.9,
+   "solve_seconds": 2705.3
+  },
+  {
+   "run": "N6-q3-r1-onset-L14",
+   "status": "cap_seconds",
+   "iterations": 44,
+   "spurious_cores": 44,
+   "distinct_spurious_cores": 44,
+   "unresolved_breaks": 0,
+   "n_break": {
+    "min": 5345,
+    "median": 54861,
+    "max": 255838,
+    "mean": 78228.9
+   },
+   "L_needed": {
+    "median": 18.0,
+    "max": 20,
+    "min": 15
+   },
+   "gap": {
+    "median": 49400.0,
+    "max": 250377,
+    "min": -116
+   },
+   "core_distance": {
+    "median": 5.0,
+    "min": 1,
+    "max": 9
+   },
+   "signature_repeats": [],
+   "witness": null,
+   "predictions": {
+    "Q1_witness": "held: no mask was exactly eventually periodic",
+    "Q2_floor": "held: all 44 resolved breaks sit above the last fully constrained index",
+    "Q3_termination": "held: stopped at cap_seconds, no UNSAT, so nothing here excludes anything",
+    "Q4_lever": "KILL: median L_needed 18.0 >= 17, windowed onset exclusion is retired",
+    "Q5_treadmill": "FIRED: only 8/44 = 0.18 have gap <= 960, the family does not cluster at the window edge",
+    "Q6a_no_repeat": "held: 44 cores, no signature repeated under relabelling",
+    "Q6b_diversity": "held: median pairwise core distance 5.0 >= 4 of 18",
+    "Q7_unresolved": "held: 0 of 44 spurious cores have no break below the scan limit"
+   },
+   "N": 6,
+   "q": 3,
+   "r": 1,
+   "p": 480,
+   "mode": "onset",
+   "L": 14,
+   "seed": 30,
+   "scan_limit": 2097152,
+   "max_iterations": 100,
+   "max_seconds": 2700.0,
+   "conflict_budget": 2000000,
+   "conflicts": 7206670,
+   "H": 16,
+   "n0": 64,
+   "base_vars": 98910,
+   "base_clauses": 658208,
+   "blocking_clauses": 5280,
+   "final_clauses": 663488,
+   "encoder_fixtures_checked": [
+    "sat-mask-results.log:1",
+    "sat-controls.log:8"
+   ],
+   "fixture_breaks_replayed": [
+    {
+     "r": 0,
+     "n_break": 168457
+    },
+    {
+     "r": 1,
+     "n_break": 5345
+    },
+    {
+     "r": 2,
+     "n_break": 19908
+    }
+   ],
+   "wall_seconds": 2720.1,
+   "solve_seconds": 2715.8
+  },
+  {
+   "run": "N6-q3-r2-onset-L14",
+   "status": "cap_seconds",
+   "iterations": 61,
+   "spurious_cores": 61,
+   "distinct_spurious_cores": 61,
+   "unresolved_breaks": 0,
+   "n_break": {
+    "min": 6801,
+    "median": 40297,
+    "max": 232536,
+    "mean": 60638.3
+   },
+   "L_needed": {
+    "median": 17,
+    "max": 20,
+    "min": 15
+   },
+   "gap": {
+    "median": 34836,
+    "max": 227075,
+    "min": 1340
+   },
+   "core_distance": {
+    "median": 5.0,
+    "min": 1,
+    "max": 9
+   },
+   "signature_repeats": [],
+   "witness": null,
+   "predictions": {
+    "Q1_witness": "held: no mask was exactly eventually periodic",
+    "Q2_floor": "held: all 61 resolved breaks sit above the last fully constrained index",
+    "Q3_termination": "held: stopped at cap_seconds, no UNSAT, so nothing here excludes anything",
+    "Q4_lever": "KILL: median L_needed 17 >= 17, windowed onset exclusion is retired",
+    "Q5_treadmill": "FIRED: only 0/61 = 0.00 have gap <= 960, the family does not cluster at the window edge",
+    "Q6a_no_repeat": "held: 61 cores, no signature repeated under relabelling",
+    "Q6b_diversity": "held: median pairwise core distance 5.0 >= 4 of 18",
+    "Q7_unresolved": "held: 0 of 61 spurious cores have no break below the scan limit"
+   },
+   "N": 6,
+   "q": 3,
+   "r": 2,
+   "p": 480,
+   "mode": "onset",
+   "L": 14,
+   "seed": 30,
+   "scan_limit": 2097152,
+   "max_iterations": 100,
+   "max_seconds": 2700.0,
+   "conflict_budget": 2000000,
+   "conflicts": 7574579,
+   "H": 16,
+   "n0": 64,
+   "base_vars": 98910,
+   "base_clauses": 658208,
+   "blocking_clauses": 7320,
+   "final_clauses": 665528,
+   "encoder_fixtures_checked": [
+    "sat-mask-results.log:1",
+    "sat-controls.log:8"
+   ],
+   "fixture_breaks_replayed": [
+    {
+     "r": 0,
+     "n_break": 168457
+    },
+    {
+     "r": 1,
+     "n_break": 5345
+    },
+    {
+     "r": 2,
+     "n_break": 19908
+    }
+   ],
+   "wall_seconds": 2726.6,
+   "solve_seconds": 2722.0
+  }
+ ],
+ "jsonl_sha256": "513be623cfaaa75617ce10957debe5fcc48731170d81fed79f66a3915d200937"
+}

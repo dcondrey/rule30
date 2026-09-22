@@ -1,0 +1,1481 @@
+{
+  "schema": "rule30.cap18-safe-set.v1",
+  "preregistration": "PREREGISTRATION-cap18-safe-set-and-seam-23.md",
+  "source_sha256": {
+    "cap18_safe_set.py": "502d243bf0e6153c07ba15ef29b5242f7129f416e2452ecaf285a7ae08f6b2cc",
+    "cap18_entry_supply.py": "aa767f37b3b04886a524e0490e1ec876772b96aca4e502ed49f5d79ddf6cb0fb",
+    "cap18_survivor_mass.py": "d8b8263846f76cc4d33d421292fe2d42a7878422e5785428675e57281c738ce5",
+    "cap18_four_sheet_propagation.py": "cdb6792f2a3f871a7e178f9af8b090172e6942b99dbf9961d0d379dc7a7ec075",
+    "guarded_two_block_lift_statistics.py": "0ac43ac8e82d2864d273a618ff5e3c89fe9bd059fc6c92b1dbf19703ea126029",
+    "two_block_guarded_lift.cpp": "6658c14e812d27de3f3cfff673c861330e0e67700589534fbc471aadbb2ea1a0"
+  },
+  "definition": "SAFE_n counts the depth-n columns whose reachable set lies in no guard line, so no accepted set can miss it and the column has a child whatever its guard turns out to be. It contains the GOOD set (columns on a z or four-cycle cycle), asserted here at every layer of every family, and SAFE_n > 0 forces G_(n+1) nonempty.",
+  "validation": {
+    "balanced_guard_lemma": "every column's accepted set is a guard line, asserted by the imported load_layer on every layer listed here",
+    "layer_type_matches_first_star_schedule": "every layer",
+    "no_death_on_z_or_rotation_cycles": "every layer",
+    "good_inside_safe": "every layer",
+    "lift_lemma_violations": {
+      "capacity18-guarded-19.json": 0,
+      "capacity18-guarded-i05b4.json": 0,
+      "capacity18-guarded-i27.json": 0,
+      "capacity18-guarded-i08.json": 0,
+      "capacity18-guarded-i23.json": 0,
+      "capacity18-guarded-i34.json": 0
+    }
+  },
+  "families": [
+    {
+      "manifest": "capacity18-guarded-19.json",
+      "manifest_sha256": "926ac2c60801f1999d200278191136a1a4674185cbfb61aa428c97fc8388f119",
+      "word": "213(13)^a1213(13)^b03",
+      "initial_tape": "00",
+      "body1_equals_body2": true,
+      "base_depth": 12,
+      "last_completed_depth": 19,
+      "stop_reason": "depth_cap",
+      "uniform_family_mortality_proved": false,
+      "lift_lemma_violations": 0,
+      "last_layer_survivors": 2560,
+      "layers": [
+        {
+          "n": 12,
+          "entry_type": "guard_line",
+          "G_n": 125,
+          "SAFE_n": 102,
+          "GOOD_n": 37,
+          "safe_over_good": 2.7568,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 23,
+            "3": 29,
+            "4": 73
+          },
+          "survivors_by_monodromy_class": {
+            "center": 24,
+            "fixing_reflection": 5,
+            "free_reflection": 40,
+            "identity": 43,
+            "rotation": 13
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 1,
+            "identity": 2
+          },
+          "children": 216
+        },
+        {
+          "n": 13,
+          "entry_type": "guard_line",
+          "G_n": 216,
+          "SAFE_n": 149,
+          "GOOD_n": 45,
+          "safe_over_good": 3.3111,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 67,
+            "3": 27,
+            "4": 122
+          },
+          "survivors_by_monodromy_class": {
+            "center": 34,
+            "fixing_reflection": 13,
+            "free_reflection": 105,
+            "identity": 53,
+            "rotation": 11
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 10,
+            "identity": 8
+          },
+          "children": 351
+        },
+        {
+          "n": 14,
+          "entry_type": "guard_line",
+          "G_n": 351,
+          "SAFE_n": 222,
+          "GOOD_n": 71,
+          "safe_over_good": 3.1268,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 129,
+            "3": 58,
+            "4": 164
+          },
+          "survivors_by_monodromy_class": {
+            "center": 51,
+            "fixing_reflection": 41,
+            "free_reflection": 103,
+            "identity": 136,
+            "rotation": 20
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 4,
+            "identity": 26
+          },
+          "children": 545
+        },
+        {
+          "n": 15,
+          "entry_type": "point",
+          "G_n": 545,
+          "SAFE_n": 289,
+          "GOOD_n": 219,
+          "safe_over_good": 1.3196,
+          "safe_by_z_pair_alone": 107,
+          "reachable_size_histogram": {
+            "1": 68,
+            "2": 295,
+            "3": 16,
+            "4": 166
+          },
+          "survivors_by_monodromy_class": {
+            "center": 105,
+            "fixing_reflection": 53,
+            "free_reflection": 161,
+            "identity": 112,
+            "rotation": 114
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 10,
+            "free_reflection": 40,
+            "identity": 38
+          },
+          "children": 673
+        },
+        {
+          "n": 16,
+          "entry_type": "z_pair",
+          "G_n": 673,
+          "SAFE_n": 673,
+          "GOOD_n": 221,
+          "safe_over_good": 3.0452,
+          "safe_by_z_pair_alone": 400,
+          "reachable_size_histogram": {
+            "2": 400,
+            "4": 273
+          },
+          "survivors_by_monodromy_class": {
+            "center": 191,
+            "fixing_reflection": 56,
+            "free_reflection": 176,
+            "identity": 220,
+            "rotation": 30
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 946
+        },
+        {
+          "n": 17,
+          "entry_type": "z_pair",
+          "G_n": 946,
+          "SAFE_n": 946,
+          "GOOD_n": 388,
+          "safe_over_good": 2.4381,
+          "safe_by_z_pair_alone": 405,
+          "reachable_size_histogram": {
+            "2": 405,
+            "4": 541
+          },
+          "survivors_by_monodromy_class": {
+            "center": 263,
+            "fixing_reflection": 99,
+            "free_reflection": 238,
+            "identity": 221,
+            "rotation": 125
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 1487
+        },
+        {
+          "n": 18,
+          "entry_type": "guard_line",
+          "G_n": 1487,
+          "SAFE_n": 1194,
+          "GOOD_n": 499,
+          "safe_over_good": 2.3928,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 293,
+            "3": 283,
+            "4": 911
+          },
+          "survivors_by_monodromy_class": {
+            "center": 381,
+            "fixing_reflection": 149,
+            "free_reflection": 403,
+            "identity": 436,
+            "rotation": 118
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 39,
+            "identity": 34
+          },
+          "children": 2560
+        }
+      ]
+    },
+    {
+      "manifest": "capacity18-guarded-i05b4.json",
+      "manifest_sha256": "fbfd0cd3d8fb44449e351143dc461d73885547075a107086b51273de5e98c133",
+      "word": "21213(13)^a031(31)^b303",
+      "initial_tape": "00",
+      "body1_equals_body2": false,
+      "base_depth": 4,
+      "last_completed_depth": 23,
+      "stop_reason": "closed_empty_guarded_cover",
+      "uniform_family_mortality_proved": true,
+      "lift_lemma_violations": 0,
+      "last_layer_survivors": 0,
+      "layers": [
+        {
+          "n": 4,
+          "entry_type": "point",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 2
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 5,
+          "entry_type": "fibre",
+          "G_n": 2,
+          "SAFE_n": 2,
+          "GOOD_n": 2,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "4": 2
+          },
+          "survivors_by_monodromy_class": {
+            "rotation": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 4
+        },
+        {
+          "n": 6,
+          "entry_type": "z_pair",
+          "G_n": 4,
+          "SAFE_n": 4,
+          "GOOD_n": 4,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 4,
+          "reachable_size_histogram": {
+            "2": 4
+          },
+          "survivors_by_monodromy_class": {
+            "center": 4
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 4
+        },
+        {
+          "n": 7,
+          "entry_type": "point",
+          "G_n": 4,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 4
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 4
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 4
+        },
+        {
+          "n": 8,
+          "entry_type": "fibre",
+          "G_n": 4,
+          "SAFE_n": 4,
+          "GOOD_n": 4,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "4": 4
+          },
+          "survivors_by_monodromy_class": {
+            "rotation": 4
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 8
+        },
+        {
+          "n": 9,
+          "entry_type": "point",
+          "G_n": 8,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 8
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 8
+          },
+          "deaths_by_monodromy_class": {
+            "identity": 1
+          },
+          "children": 7
+        },
+        {
+          "n": 10,
+          "entry_type": "z_pair",
+          "G_n": 7,
+          "SAFE_n": 7,
+          "GOOD_n": 7,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 7,
+          "reachable_size_histogram": {
+            "2": 7
+          },
+          "survivors_by_monodromy_class": {
+            "center": 7
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 7
+        },
+        {
+          "n": 11,
+          "entry_type": "guard_line",
+          "G_n": 7,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 7
+          },
+          "survivors_by_monodromy_class": {
+            "free_reflection": 7
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 3
+          },
+          "children": 4
+        },
+        {
+          "n": 12,
+          "entry_type": "guard_line",
+          "G_n": 4,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 4
+          },
+          "survivors_by_monodromy_class": {
+            "free_reflection": 4
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 1
+          },
+          "children": 4
+        },
+        {
+          "n": 13,
+          "entry_type": "point",
+          "G_n": 4,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 4
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 4
+          },
+          "deaths_by_monodromy_class": {
+            "identity": 2
+          },
+          "children": 2
+        },
+        {
+          "n": 14,
+          "entry_type": "z_pair",
+          "G_n": 2,
+          "SAFE_n": 2,
+          "GOOD_n": 2,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 2,
+          "reachable_size_histogram": {
+            "2": 2
+          },
+          "survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 15,
+          "entry_type": "z_pair",
+          "G_n": 2,
+          "SAFE_n": 2,
+          "GOOD_n": 2,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 2,
+          "reachable_size_histogram": {
+            "2": 2
+          },
+          "survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 16,
+          "entry_type": "point",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 2
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "deaths_by_monodromy_class": {
+            "identity": 1
+          },
+          "children": 1
+        },
+        {
+          "n": 17,
+          "entry_type": "fibre",
+          "G_n": 1,
+          "SAFE_n": 1,
+          "GOOD_n": 1,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "4": 1
+          },
+          "survivors_by_monodromy_class": {
+            "rotation": 1
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 18,
+          "entry_type": "z_pair",
+          "G_n": 2,
+          "SAFE_n": 2,
+          "GOOD_n": 2,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 2,
+          "reachable_size_histogram": {
+            "2": 2
+          },
+          "survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 19,
+          "entry_type": "z_pair",
+          "G_n": 2,
+          "SAFE_n": 2,
+          "GOOD_n": 2,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 2,
+          "reachable_size_histogram": {
+            "2": 2
+          },
+          "survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 20,
+          "entry_type": "point",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 2
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "deaths_by_monodromy_class": {
+            "identity": 1
+          },
+          "children": 1
+        },
+        {
+          "n": 21,
+          "entry_type": "guard_line",
+          "G_n": 1,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 1
+          },
+          "survivors_by_monodromy_class": {
+            "free_reflection": 1
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 1
+        },
+        {
+          "n": 22,
+          "entry_type": "point",
+          "G_n": 1,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 1
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 1
+          },
+          "deaths_by_monodromy_class": {
+            "identity": 1
+          },
+          "children": 0
+        }
+      ]
+    },
+    {
+      "manifest": "capacity18-guarded-i27.json",
+      "manifest_sha256": "9a44c0182a83a38e6115351b185c67dff1d410543fe77b87851033aadc501021",
+      "word": "3031(31)^a3031(31)^b303",
+      "initial_tape": "00",
+      "body1_equals_body2": true,
+      "base_depth": 4,
+      "last_completed_depth": 16,
+      "stop_reason": "closed_empty_guarded_cover",
+      "uniform_family_mortality_proved": true,
+      "lift_lemma_violations": 0,
+      "last_layer_survivors": 0,
+      "layers": [
+        {
+          "n": 4,
+          "entry_type": "point",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 2
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 5,
+          "entry_type": "point",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 2
+          },
+          "survivors_by_monodromy_class": {
+            "fixing_reflection": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 6,
+          "entry_type": "z_pair",
+          "G_n": 2,
+          "SAFE_n": 2,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 2,
+          "reachable_size_histogram": {
+            "2": 2
+          },
+          "survivors_by_monodromy_class": {
+            "fixing_reflection": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 7,
+          "entry_type": "guard_line",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 2
+          },
+          "survivors_by_monodromy_class": {
+            "free_reflection": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 8,
+          "entry_type": "point",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 2
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 9,
+          "entry_type": "point",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 2
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "deaths_by_monodromy_class": {
+            "identity": 1
+          },
+          "children": 1
+        },
+        {
+          "n": 10,
+          "entry_type": "point",
+          "G_n": 1,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 1
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 1
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 1
+        },
+        {
+          "n": 11,
+          "entry_type": "fibre",
+          "G_n": 1,
+          "SAFE_n": 1,
+          "GOOD_n": 1,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "4": 1
+          },
+          "survivors_by_monodromy_class": {
+            "rotation": 1
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 12,
+          "entry_type": "z_pair",
+          "G_n": 2,
+          "SAFE_n": 2,
+          "GOOD_n": 2,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 2,
+          "reachable_size_histogram": {
+            "2": 2
+          },
+          "survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 13,
+          "entry_type": "z_pair",
+          "G_n": 2,
+          "SAFE_n": 2,
+          "GOOD_n": 2,
+          "safe_over_good": 1.0,
+          "safe_by_z_pair_alone": 2,
+          "reachable_size_histogram": {
+            "2": 2
+          },
+          "survivors_by_monodromy_class": {
+            "center": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2
+        },
+        {
+          "n": 14,
+          "entry_type": "point",
+          "G_n": 2,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 2
+          },
+          "survivors_by_monodromy_class": {
+            "identity": 2
+          },
+          "deaths_by_monodromy_class": {
+            "identity": 1
+          },
+          "children": 1
+        },
+        {
+          "n": 15,
+          "entry_type": "point",
+          "G_n": 1,
+          "SAFE_n": 0,
+          "GOOD_n": 0,
+          "safe_over_good": null,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "1": 1
+          },
+          "survivors_by_monodromy_class": {
+            "fixing_reflection": 1
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 1
+          },
+          "children": 0
+        }
+      ]
+    },
+    {
+      "manifest": "capacity18-guarded-i08.json",
+      "manifest_sha256": "581ae93658a0ee47bc56aed7eb71b494a8192991ac67f231c3d55207d14d9386",
+      "word": "21213(13)^a1213(13)^b03",
+      "initial_tape": "00",
+      "body1_equals_body2": true,
+      "base_depth": 8,
+      "last_completed_depth": 18,
+      "stop_reason": "route_cache_state_cap",
+      "uniform_family_mortality_proved": false,
+      "lift_lemma_violations": 0,
+      "last_layer_survivors": 7140,
+      "layers": [
+        {
+          "n": 8,
+          "entry_type": "fibre",
+          "G_n": 63,
+          "SAFE_n": 63,
+          "GOOD_n": 22,
+          "safe_over_good": 2.8636,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "4": 63
+          },
+          "survivors_by_monodromy_class": {
+            "center": 20,
+            "fixing_reflection": 1,
+            "free_reflection": 14,
+            "identity": 26,
+            "rotation": 2
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 126
+        },
+        {
+          "n": 9,
+          "entry_type": "point",
+          "G_n": 126,
+          "SAFE_n": 92,
+          "GOOD_n": 51,
+          "safe_over_good": 1.8039,
+          "safe_by_z_pair_alone": 21,
+          "reachable_size_histogram": {
+            "1": 7,
+            "2": 48,
+            "3": 8,
+            "4": 63
+          },
+          "survivors_by_monodromy_class": {
+            "center": 34,
+            "fixing_reflection": 9,
+            "free_reflection": 31,
+            "identity": 35,
+            "rotation": 17
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 4,
+            "identity": 3
+          },
+          "children": 196
+        },
+        {
+          "n": 10,
+          "entry_type": "z_pair",
+          "G_n": 196,
+          "SAFE_n": 196,
+          "GOOD_n": 85,
+          "safe_over_good": 2.3059,
+          "safe_by_z_pair_alone": 63,
+          "reachable_size_histogram": {
+            "2": 63,
+            "4": 133
+          },
+          "survivors_by_monodromy_class": {
+            "center": 66,
+            "fixing_reflection": 20,
+            "free_reflection": 50,
+            "identity": 41,
+            "rotation": 19
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 329
+        },
+        {
+          "n": 11,
+          "entry_type": "guard_line",
+          "G_n": 329,
+          "SAFE_n": 266,
+          "GOOD_n": 99,
+          "safe_over_good": 2.6869,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 63,
+            "3": 62,
+            "4": 204
+          },
+          "survivors_by_monodromy_class": {
+            "center": 74,
+            "fixing_reflection": 28,
+            "free_reflection": 98,
+            "identity": 104,
+            "rotation": 25
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 9,
+            "identity": 6
+          },
+          "children": 555
+        },
+        {
+          "n": 12,
+          "entry_type": "guard_line",
+          "G_n": 555,
+          "SAFE_n": 423,
+          "GOOD_n": 147,
+          "safe_over_good": 2.8776,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 132,
+            "3": 76,
+            "4": 347
+          },
+          "survivors_by_monodromy_class": {
+            "center": 101,
+            "fixing_reflection": 50,
+            "free_reflection": 196,
+            "identity": 162,
+            "rotation": 46
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 10,
+            "identity": 17
+          },
+          "children": 948
+        },
+        {
+          "n": 13,
+          "entry_type": "point",
+          "G_n": 948,
+          "SAFE_n": 535,
+          "GOOD_n": 318,
+          "safe_over_good": 1.6824,
+          "safe_by_z_pair_alone": 216,
+          "reachable_size_histogram": {
+            "1": 120,
+            "2": 509,
+            "3": 45,
+            "4": 274
+          },
+          "survivors_by_monodromy_class": {
+            "center": 242,
+            "fixing_reflection": 73,
+            "free_reflection": 311,
+            "identity": 246,
+            "rotation": 76
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 13,
+            "free_reflection": 54,
+            "identity": 69
+          },
+          "children": 1181
+        },
+        {
+          "n": 14,
+          "entry_type": "z_pair",
+          "G_n": 1181,
+          "SAFE_n": 1181,
+          "GOOD_n": 401,
+          "safe_over_good": 2.9451,
+          "safe_by_z_pair_alone": 663,
+          "reachable_size_histogram": {
+            "2": 663,
+            "4": 518
+          },
+          "survivors_by_monodromy_class": {
+            "center": 337,
+            "fixing_reflection": 86,
+            "free_reflection": 337,
+            "identity": 357,
+            "rotation": 64
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 1699
+        },
+        {
+          "n": 15,
+          "entry_type": "z_pair",
+          "G_n": 1699,
+          "SAFE_n": 1699,
+          "GOOD_n": 561,
+          "safe_over_good": 3.0285,
+          "safe_by_z_pair_alone": 632,
+          "reachable_size_histogram": {
+            "2": 632,
+            "4": 1067
+          },
+          "survivors_by_monodromy_class": {
+            "center": 387,
+            "fixing_reflection": 178,
+            "free_reflection": 528,
+            "identity": 432,
+            "rotation": 174
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 2766
+        },
+        {
+          "n": 16,
+          "entry_type": "point",
+          "G_n": 2766,
+          "SAFE_n": 1617,
+          "GOOD_n": 993,
+          "safe_over_good": 1.6284,
+          "safe_by_z_pair_alone": 602,
+          "reachable_size_histogram": {
+            "1": 400,
+            "2": 1351,
+            "3": 72,
+            "4": 943
+          },
+          "survivors_by_monodromy_class": {
+            "center": 667,
+            "fixing_reflection": 195,
+            "free_reflection": 831,
+            "identity": 747,
+            "rotation": 326
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 35,
+            "free_reflection": 131,
+            "identity": 213
+          },
+          "children": 3570
+        },
+        {
+          "n": 17,
+          "entry_type": "fibre",
+          "G_n": 3570,
+          "SAFE_n": 3570,
+          "GOOD_n": 1322,
+          "safe_over_good": 2.7005,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "4": 3570
+          },
+          "survivors_by_monodromy_class": {
+            "center": 1048,
+            "fixing_reflection": 231,
+            "free_reflection": 979,
+            "identity": 1038,
+            "rotation": 274
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 7140
+        }
+      ]
+    },
+    {
+      "manifest": "capacity18-guarded-i23.json",
+      "manifest_sha256": "cfffc1b2b5cf73b9dd1f80ea52d4214571bded0529a19584b3813ade86d2185a",
+      "word": "3031(31)^a213(13)^b03",
+      "initial_tape": "00",
+      "body1_equals_body2": false,
+      "base_depth": 12,
+      "last_completed_depth": 19,
+      "stop_reason": "route_cache_state_cap",
+      "uniform_family_mortality_proved": false,
+      "lift_lemma_violations": 0,
+      "last_layer_survivors": 1724,
+      "layers": [
+        {
+          "n": 12,
+          "entry_type": "z_pair",
+          "G_n": 74,
+          "SAFE_n": 74,
+          "GOOD_n": 29,
+          "safe_over_good": 2.5517,
+          "safe_by_z_pair_alone": 32,
+          "reachable_size_histogram": {
+            "2": 32,
+            "4": 42
+          },
+          "survivors_by_monodromy_class": {
+            "center": 18,
+            "fixing_reflection": 8,
+            "free_reflection": 19,
+            "identity": 18,
+            "rotation": 11
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 116
+        },
+        {
+          "n": 13,
+          "entry_type": "z_pair",
+          "G_n": 116,
+          "SAFE_n": 116,
+          "GOOD_n": 60,
+          "safe_over_good": 1.9333,
+          "safe_by_z_pair_alone": 47,
+          "reachable_size_histogram": {
+            "2": 47,
+            "4": 69
+          },
+          "survivors_by_monodromy_class": {
+            "center": 31,
+            "fixing_reflection": 18,
+            "free_reflection": 14,
+            "identity": 24,
+            "rotation": 29
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 185
+        },
+        {
+          "n": 14,
+          "entry_type": "point",
+          "G_n": 185,
+          "SAFE_n": 127,
+          "GOOD_n": 91,
+          "safe_over_good": 1.3956,
+          "safe_by_z_pair_alone": 34,
+          "reachable_size_histogram": {
+            "1": 25,
+            "2": 67,
+            "3": 15,
+            "4": 78
+          },
+          "survivors_by_monodromy_class": {
+            "center": 63,
+            "fixing_reflection": 18,
+            "free_reflection": 24,
+            "identity": 52,
+            "rotation": 28
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 7,
+            "free_reflection": 3,
+            "identity": 11
+          },
+          "children": 261
+        },
+        {
+          "n": 15,
+          "entry_type": "point",
+          "G_n": 261,
+          "SAFE_n": 136,
+          "GOOD_n": 110,
+          "safe_over_good": 1.2364,
+          "safe_by_z_pair_alone": 75,
+          "reachable_size_histogram": {
+            "1": 48,
+            "2": 152,
+            "3": 9,
+            "4": 52
+          },
+          "survivors_by_monodromy_class": {
+            "center": 83,
+            "fixing_reflection": 25,
+            "free_reflection": 53,
+            "identity": 73,
+            "rotation": 27
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 5,
+            "free_reflection": 11,
+            "identity": 24
+          },
+          "children": 303
+        },
+        {
+          "n": 16,
+          "entry_type": "guard_line",
+          "G_n": 303,
+          "SAFE_n": 200,
+          "GOOD_n": 127,
+          "safe_over_good": 1.5748,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 103,
+            "3": 22,
+            "4": 178
+          },
+          "survivors_by_monodromy_class": {
+            "center": 105,
+            "fixing_reflection": 14,
+            "free_reflection": 81,
+            "identity": 81,
+            "rotation": 22
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 13,
+            "identity": 9
+          },
+          "children": 507
+        },
+        {
+          "n": 17,
+          "entry_type": "fibre",
+          "G_n": 507,
+          "SAFE_n": 507,
+          "GOOD_n": 171,
+          "safe_over_good": 2.9649,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "4": 507
+          },
+          "survivors_by_monodromy_class": {
+            "center": 123,
+            "fixing_reflection": 28,
+            "free_reflection": 135,
+            "identity": 173,
+            "rotation": 48
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 1014
+        },
+        {
+          "n": 18,
+          "entry_type": "z_pair",
+          "G_n": 1014,
+          "SAFE_n": 1014,
+          "GOOD_n": 423,
+          "safe_over_good": 2.3972,
+          "safe_by_z_pair_alone": 304,
+          "reachable_size_histogram": {
+            "2": 304,
+            "4": 710
+          },
+          "survivors_by_monodromy_class": {
+            "center": 296,
+            "fixing_reflection": 136,
+            "free_reflection": 252,
+            "identity": 203,
+            "rotation": 127
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 1724
+        }
+      ]
+    },
+    {
+      "manifest": "capacity18-guarded-i34.json",
+      "manifest_sha256": "49f57db34c95176f8114cfe263b50fdbca656ddc614cbf0df4d284ef7bdd2800",
+      "word": "30322(2)^a100(0)^b32",
+      "initial_tape": "01",
+      "body1_equals_body2": false,
+      "base_depth": 8,
+      "last_completed_depth": 17,
+      "stop_reason": "route_cache_state_cap",
+      "uniform_family_mortality_proved": false,
+      "lift_lemma_violations": 0,
+      "last_layer_survivors": 14098,
+      "layers": [
+        {
+          "n": 8,
+          "entry_type": "z_pair",
+          "G_n": 161,
+          "SAFE_n": 161,
+          "GOOD_n": 36,
+          "safe_over_good": 4.4722,
+          "safe_by_z_pair_alone": 10,
+          "reachable_size_histogram": {
+            "2": 10,
+            "4": 151
+          },
+          "survivors_by_monodromy_class": {
+            "center": 25,
+            "fixing_reflection": 4,
+            "free_reflection": 101,
+            "identity": 20,
+            "rotation": 11
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 312
+        },
+        {
+          "n": 9,
+          "entry_type": "guard_line",
+          "G_n": 312,
+          "SAFE_n": 294,
+          "GOOD_n": 105,
+          "safe_over_good": 2.8,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 18,
+            "3": 28,
+            "4": 266
+          },
+          "survivors_by_monodromy_class": {
+            "center": 84,
+            "fixing_reflection": 12,
+            "free_reflection": 137,
+            "identity": 58,
+            "rotation": 21
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 2
+          },
+          "children": 602
+        },
+        {
+          "n": 10,
+          "entry_type": "point",
+          "G_n": 602,
+          "SAFE_n": 423,
+          "GOOD_n": 219,
+          "safe_over_good": 1.9315,
+          "safe_by_z_pair_alone": 136,
+          "reachable_size_histogram": {
+            "1": 43,
+            "2": 272,
+            "3": 44,
+            "4": 243
+          },
+          "survivors_by_monodromy_class": {
+            "center": 204,
+            "fixing_reflection": 19,
+            "free_reflection": 192,
+            "identity": 172,
+            "rotation": 15
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 3,
+            "free_reflection": 19,
+            "identity": 27
+          },
+          "children": 845
+        },
+        {
+          "n": 11,
+          "entry_type": "fibre",
+          "G_n": 845,
+          "SAFE_n": 845,
+          "GOOD_n": 270,
+          "safe_over_good": 3.1296,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "4": 845
+          },
+          "survivors_by_monodromy_class": {
+            "center": 226,
+            "fixing_reflection": 49,
+            "free_reflection": 309,
+            "identity": 217,
+            "rotation": 44
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 1690
+        },
+        {
+          "n": 12,
+          "entry_type": "z_pair",
+          "G_n": 1690,
+          "SAFE_n": 1690,
+          "GOOD_n": 518,
+          "safe_over_good": 3.2625,
+          "safe_by_z_pair_alone": 338,
+          "reachable_size_histogram": {
+            "2": 338,
+            "4": 1352
+          },
+          "survivors_by_monodromy_class": {
+            "center": 343,
+            "fixing_reflection": 169,
+            "free_reflection": 589,
+            "identity": 414,
+            "rotation": 175
+          },
+          "deaths_by_monodromy_class": {},
+          "children": 3042
+        },
+        {
+          "n": 13,
+          "entry_type": "point",
+          "G_n": 3042,
+          "SAFE_n": 2148,
+          "GOOD_n": 960,
+          "safe_over_good": 2.2375,
+          "safe_by_z_pair_alone": 473,
+          "reachable_size_histogram": {
+            "1": 229,
+            "2": 1138,
+            "3": 225,
+            "4": 1450
+          },
+          "survivors_by_monodromy_class": {
+            "center": 653,
+            "fixing_reflection": 306,
+            "free_reflection": 1088,
+            "identity": 688,
+            "rotation": 307
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 40,
+            "free_reflection": 112,
+            "identity": 128
+          },
+          "children": 4482
+        },
+        {
+          "n": 14,
+          "entry_type": "point",
+          "G_n": 4482,
+          "SAFE_n": 2469,
+          "GOOD_n": 1581,
+          "safe_over_good": 1.5617,
+          "safe_by_z_pair_alone": 1127,
+          "reachable_size_histogram": {
+            "1": 813,
+            "2": 2327,
+            "3": 120,
+            "4": 1222
+          },
+          "survivors_by_monodromy_class": {
+            "center": 1168,
+            "fixing_reflection": 311,
+            "free_reflection": 1388,
+            "identity": 1202,
+            "rotation": 413
+          },
+          "deaths_by_monodromy_class": {
+            "fixing_reflection": 75,
+            "free_reflection": 243,
+            "identity": 363
+          },
+          "children": 5406
+        },
+        {
+          "n": 15,
+          "entry_type": "guard_line",
+          "G_n": 5406,
+          "SAFE_n": 3477,
+          "GOOD_n": 1847,
+          "safe_over_good": 1.8825,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 1929,
+            "3": 460,
+            "4": 3017
+          },
+          "survivors_by_monodromy_class": {
+            "center": 1515,
+            "fixing_reflection": 334,
+            "free_reflection": 1581,
+            "identity": 1644,
+            "rotation": 332
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 170,
+            "identity": 349
+          },
+          "children": 8562
+        },
+        {
+          "n": 16,
+          "entry_type": "guard_line",
+          "G_n": 8562,
+          "SAFE_n": 6084,
+          "GOOD_n": 3023,
+          "safe_over_good": 2.0126,
+          "safe_by_z_pair_alone": 0,
+          "reachable_size_histogram": {
+            "2": 2478,
+            "3": 1092,
+            "4": 4992
+          },
+          "survivors_by_monodromy_class": {
+            "center": 2385,
+            "fixing_reflection": 689,
+            "free_reflection": 2578,
+            "identity": 2272,
+            "rotation": 638
+          },
+          "deaths_by_monodromy_class": {
+            "free_reflection": 251,
+            "identity": 388
+          },
+          "children": 14098
+        }
+      ]
+    }
+  ],
+  "scope": "Finite observations on the layers listed. SAFE_n positive at finitely many layers bounds nothing and decides neither uniform nor individual mortality; what it can settle is whether SAFE is correctly derived and how much larger than GOOD it is."
+}

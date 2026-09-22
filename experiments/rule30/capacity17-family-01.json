@@ -1,0 +1,914 @@
+{
+  "prefix": "21213",
+  "body": "13",
+  "suffix": "03",
+  "initial_scalar_tape": "00",
+  "uniform_family_mortality_proved": true,
+  "rows": [
+    {
+      "depth": 1,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 2,
+      "initial_column": 3,
+      "final_column": 3,
+      "candidates": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "seconds": 5.417e-06,
+      "accepted_residues": {
+        "0": "1"
+      },
+      "max_total_repeats": 1
+    },
+    {
+      "depth": 2,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 4,
+      "initial_column": 3,
+      "final_column": 3,
+      "candidates": [
+        [
+          0,
+          30
+        ],
+        [
+          2,
+          22
+        ]
+      ],
+      "seconds": 5.083e-06,
+      "accepted_residues": {
+        "0": "10"
+      },
+      "max_total_repeats": 1
+    },
+    {
+      "depth": 3,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 16,
+      "initial_column": 67,
+      "final_column": 67,
+      "candidates": [
+        [
+          0,
+          62
+        ],
+        [
+          4,
+          30
+        ],
+        [
+          8,
+          126
+        ],
+        [
+          12,
+          94
+        ]
+      ],
+      "seconds": 4.625e-06,
+      "accepted_residues": {
+        "0": "101",
+        "4": "100"
+      },
+      "max_total_repeats": 2
+    },
+    {
+      "depth": 4,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 32,
+      "initial_column": 323,
+      "final_column": 323,
+      "candidates": [
+        [
+          0,
+          62
+        ],
+        [
+          4,
+          414
+        ],
+        [
+          16,
+          318
+        ],
+        [
+          20,
+          158
+        ]
+      ],
+      "seconds": 4.5e-06,
+      "accepted_residues": {
+        "0": "1010",
+        "4": "1000"
+      },
+      "max_total_repeats": 3
+    },
+    {
+      "depth": 5,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 32,
+      "initial_column": 323,
+      "final_column": 323,
+      "candidates": [
+        [
+          0,
+          574
+        ],
+        [
+          4,
+          414
+        ]
+      ],
+      "seconds": 4.708e-06,
+      "accepted_residues": {
+        "0": "10100",
+        "4": "10000"
+      },
+      "max_total_repeats": 4
+    },
+    {
+      "depth": 6,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 128,
+      "initial_column": 323,
+      "final_column": 323,
+      "candidates": [
+        [
+          0,
+          4670
+        ],
+        [
+          4,
+          4510
+        ],
+        [
+          32,
+          6718
+        ],
+        [
+          36,
+          6558
+        ],
+        [
+          64,
+          574
+        ],
+        [
+          68,
+          414
+        ],
+        [
+          96,
+          2622
+        ],
+        [
+          100,
+          2462
+        ]
+      ],
+      "seconds": 6.208e-06,
+      "accepted_residues": {
+        "32": "101000",
+        "36": "100000",
+        "64": "101001",
+        "68": "100001"
+      },
+      "max_total_repeats": 5
+    },
+    {
+      "depth": 7,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 256,
+      "initial_column": 16707,
+      "final_column": 16707,
+      "candidates": [
+        [
+          32,
+          14910
+        ],
+        [
+          36,
+          14750
+        ],
+        [
+          64,
+          25150
+        ],
+        [
+          68,
+          24990
+        ],
+        [
+          160,
+          31294
+        ],
+        [
+          164,
+          31134
+        ],
+        [
+          192,
+          8766
+        ],
+        [
+          196,
+          8606
+        ]
+      ],
+      "seconds": 8.375e-06,
+      "accepted_residues": {
+        "32": "1010001",
+        "36": "1000001",
+        "192": "1010010",
+        "196": "1000010"
+      },
+      "max_total_repeats": 5
+    },
+    {
+      "depth": 8,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 256,
+      "initial_column": 82243,
+      "final_column": 82243,
+      "candidates": [
+        [
+          32,
+          80446
+        ],
+        [
+          36,
+          80286
+        ],
+        [
+          192,
+          41534
+        ],
+        [
+          196,
+          74142
+        ]
+      ],
+      "seconds": 7.375e-06,
+      "accepted_residues": {
+        "32": "10100011",
+        "36": "10000011",
+        "192": "10100101",
+        "196": "10000100"
+      },
+      "max_total_repeats": 6
+    },
+    {
+      "depth": 9,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 1024,
+      "initial_column": 82243,
+      "final_column": 82243,
+      "candidates": [
+        [
+          32,
+          473662
+        ],
+        [
+          36,
+          342430
+        ],
+        [
+          192,
+          303678
+        ],
+        [
+          196,
+          467358
+        ],
+        [
+          288,
+          80446
+        ],
+        [
+          292,
+          473502
+        ],
+        [
+          448,
+          434750
+        ],
+        [
+          452,
+          336286
+        ],
+        [
+          544,
+          211518
+        ],
+        [
+          548,
+          80286
+        ],
+        [
+          704,
+          41534
+        ],
+        [
+          708,
+          205214
+        ],
+        [
+          800,
+          342590
+        ],
+        [
+          804,
+          211358
+        ],
+        [
+          960,
+          172606
+        ],
+        [
+          964,
+          74142
+        ]
+      ],
+      "seconds": 2.0583e-05,
+      "accepted_residues": {
+        "192": "101001011",
+        "196": "100001001",
+        "288": "101000111",
+        "544": "101000110",
+        "548": "100000111",
+        "804": "100000110",
+        "960": "101001010",
+        "964": "100001000"
+      },
+      "max_total_repeats": 7
+    },
+    {
+      "depth": 10,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 1024,
+      "initial_column": 82243,
+      "final_column": 82243,
+      "candidates": [
+        [
+          192,
+          827966
+        ],
+        [
+          196,
+          2040222
+        ],
+        [
+          288,
+          1129022
+        ],
+        [
+          544,
+          1260094
+        ],
+        [
+          548,
+          80286
+        ],
+        [
+          804,
+          1259934
+        ],
+        [
+          960,
+          172606
+        ],
+        [
+          964,
+          74142
+        ]
+      ],
+      "seconds": 2.0625e-05,
+      "accepted_residues": {
+        "192": "1010010110",
+        "196": "1000010010",
+        "544": "1010001101",
+        "548": "1000001111",
+        "804": "1000001101",
+        "960": "1010010101",
+        "964": "1000010001"
+      },
+      "max_total_repeats": 8
+    },
+    {
+      "depth": 11,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 2048,
+      "initial_column": 4276547,
+      "final_column": 4276547,
+      "candidates": [
+        [
+          192,
+          7119422
+        ],
+        [
+          196,
+          2040222
+        ],
+        [
+          544,
+          3357246
+        ],
+        [
+          548,
+          80286
+        ],
+        [
+          804,
+          7551390
+        ],
+        [
+          960,
+          6464062
+        ],
+        [
+          964,
+          2171294
+        ],
+        [
+          1216,
+          2925118
+        ],
+        [
+          1220,
+          6234526
+        ],
+        [
+          1568,
+          7551550
+        ],
+        [
+          1572,
+          4274590
+        ],
+        [
+          1828,
+          3357086
+        ],
+        [
+          1984,
+          2269758
+        ],
+        [
+          1988,
+          6365598
+        ]
+      ],
+      "seconds": 3.9416e-05,
+      "accepted_residues": {
+        "192": "10100101100",
+        "544": "10100011010",
+        "548": "10000011110",
+        "1220": "10000100101",
+        "1828": "10000011010",
+        "1984": "10100101011",
+        "1988": "10000100011"
+      },
+      "max_total_repeats": 8
+    },
+    {
+      "depth": 12,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 4096,
+      "initial_column": 21053763,
+      "final_column": 21053763,
+      "candidates": [
+        [
+          192,
+          7119422
+        ],
+        [
+          544,
+          28523070
+        ],
+        [
+          548,
+          8468894
+        ],
+        [
+          1220,
+          14623134
+        ],
+        [
+          1828,
+          11745694
+        ],
+        [
+          1984,
+          27435582
+        ],
+        [
+          1988,
+          31531422
+        ],
+        [
+          2240,
+          32285246
+        ],
+        [
+          2592,
+          3357246
+        ],
+        [
+          2596,
+          80286
+        ],
+        [
+          3268,
+          6234526
+        ],
+        [
+          3876,
+          3357086
+        ],
+        [
+          4032,
+          19046974
+        ],
+        [
+          4036,
+          6365598
+        ]
+      ],
+      "seconds": 8.2708e-05,
+      "accepted_residues": {
+        "192": "101001011000",
+        "1220": "100001001010",
+        "1828": "100000110100",
+        "4032": "101001010111"
+      },
+      "max_total_repeats": 7
+    },
+    {
+      "depth": 13,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 8192,
+      "initial_column": 21053763,
+      "final_column": 21053763,
+      "candidates": [
+        [
+          192,
+          107782718
+        ],
+        [
+          1220,
+          115286430
+        ],
+        [
+          1828,
+          11745694
+        ],
+        [
+          4032,
+          86155838
+        ],
+        [
+          4288,
+          74228286
+        ],
+        [
+          5316,
+          14623134
+        ],
+        [
+          5924,
+          112408990
+        ],
+        [
+          8128,
+          119710270
+        ]
+      ],
+      "seconds": 0.000167667,
+      "accepted_residues": {
+        "192": "1010010110001",
+        "4288": "1010010110000",
+        "5316": "1000010010100",
+        "5924": "1000001101001"
+      },
+      "max_total_repeats": 7
+    },
+    {
+      "depth": 14,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 8192,
+      "initial_column": 21053763,
+      "final_column": 21053763,
+      "candidates": [
+        [
+          192,
+          107782718
+        ],
+        [
+          4288,
+          74228286
+        ],
+        [
+          5316,
+          14623134
+        ],
+        [
+          5924,
+          112408990
+        ]
+      ],
+      "seconds": 0.000187375,
+      "accepted_residues": {
+        "192": "10100101100011",
+        "5924": "10000011010011"
+      },
+      "max_total_repeats": 8
+    },
+    {
+      "depth": 15,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 16384,
+      "initial_column": 1094795587,
+      "final_column": 1094795587,
+      "candidates": [
+        [
+          192,
+          107782718
+        ],
+        [
+          5924,
+          1723021726
+        ],
+        [
+          8384,
+          1181524542
+        ],
+        [
+          14116,
+          649279902
+        ]
+      ],
+      "seconds": 0.000335958,
+      "accepted_residues": {
+        "192": "101001011000111",
+        "14116": "100000110100110"
+      },
+      "max_total_repeats": 8
+    },
+    {
+      "depth": 16,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 32768,
+      "initial_column": 5389762883,
+      "final_column": 5389762883,
+      "candidates": [
+        [
+          192,
+          2255266366
+        ],
+        [
+          14116,
+          649279902
+        ],
+        [
+          16576,
+          6550233662
+        ],
+        [
+          30500,
+          4944247198
+        ]
+      ],
+      "seconds": 0.000721459,
+      "accepted_residues": {
+        "16576": "1010010110001111",
+        "30500": "1000001101001100"
+      },
+      "max_total_repeats": 9
+    },
+    {
+      "depth": 17,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 32768,
+      "initial_column": 5389762883,
+      "final_column": 5389762883,
+      "candidates": [
+        [
+          16576,
+          6550233662
+        ],
+        [
+          30500,
+          13534181790
+        ]
+      ],
+      "seconds": 0.000797084,
+      "accepted_residues": {
+        "30500": "10000011010011000"
+      },
+      "max_total_repeats": 10
+    },
+    {
+      "depth": 18,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 131072,
+      "initial_column": 5389762883,
+      "final_column": 5389762883,
+      "candidates": [
+        [
+          30500,
+          13534181790
+        ],
+        [
+          63268,
+          47893920158
+        ],
+        [
+          96036,
+          82253658526
+        ],
+        [
+          128804,
+          116613396894
+        ]
+      ],
+      "seconds": 0.00336688,
+      "accepted_residues": {
+        "30500": "100000110100110000",
+        "63268": "100000110100110001"
+      },
+      "max_total_repeats": 11
+    },
+    {
+      "depth": 19,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 262144,
+      "initial_column": 280267669827,
+      "final_column": 280267669827,
+      "candidates": [
+        [
+          30500,
+          13534181790
+        ],
+        [
+          63268,
+          185332873630
+        ],
+        [
+          161572,
+          288412088734
+        ],
+        [
+          194340,
+          460210780574
+        ]
+      ],
+      "seconds": 0.00705608,
+      "accepted_residues": {
+        "30500": "1000001101001100000",
+        "194340": "1000001101001100011"
+      },
+      "max_total_repeats": 12
+    },
+    {
+      "depth": 20,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 524288,
+      "initial_column": 1379779297603,
+      "final_column": 1379779297603,
+      "candidates": [
+        [
+          30500,
+          1113045809566
+        ],
+        [
+          194340,
+          1009966594462
+        ],
+        [
+          292644,
+          13534181790
+        ],
+        [
+          456484,
+          2109478222238
+        ]
+      ],
+      "seconds": 0.0147814,
+      "accepted_residues": {
+        "194340": "10000011010011000111",
+        "292644": "10000011010011000001"
+      },
+      "max_total_repeats": 12
+    },
+    {
+      "depth": 21,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 524288,
+      "initial_column": 1379779297603,
+      "final_column": 1379779297603,
+      "candidates": [
+        [
+          194340,
+          1009966594462
+        ],
+        [
+          292644,
+          4411580692894
+        ]
+      ],
+      "seconds": 0.0164847,
+      "accepted_residues": {
+        "292644": "100000110100110000011"
+      },
+      "max_total_repeats": 13
+    },
+    {
+      "depth": 22,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 1048576,
+      "initial_column": 1379779297603,
+      "final_column": 1379779297603,
+      "candidates": [
+        [
+          292644,
+          22003766737310
+        ],
+        [
+          816932,
+          30799859759518
+        ]
+      ],
+      "seconds": 0.0322663,
+      "accepted_residues": {
+        "816932": "1000001101001100000111"
+      },
+      "max_total_repeats": 14
+    },
+    {
+      "depth": 23,
+      "closed": true,
+      "reason": "exact_return",
+      "period_or_steps": 1048576,
+      "initial_column": 71748523475267,
+      "final_column": 71748523475267,
+      "candidates": [
+        [
+          816932,
+          30799859759518
+        ]
+      ],
+      "seconds": 0.0336198,
+      "accepted_residues": {},
+      "max_total_repeats": null
+    }
+  ],
+  "max_original_successful_updates": 24,
+  "max_original_repeats": 14,
+  "scope": "All k>=0 in this spatial family; not general Z mortality or P1.",
+  "limits": {
+    "depth": 28,
+    "period_cap": 16777216,
+    "seconds": 120,
+    "prefix": "21213",
+    "body": "13",
+    "suffix": "03",
+    "initial_tape": "00",
+    "output": "/Volumes/A/researchpapers/13-rule30/experiments/rule30/capacity17-family-01.json"
+  },
+  "sources": {
+    "six_ancestor_family_certificate.py": "6bce30653c725accdea92a3c999da066ba70d859265e86cdcc8bb8897e48b307",
+    "six_ancestor_family_orbit.cpp": "49bbef2fb000084b55a34d3584754df05bcea4d81be40d41c239961e3222e950",
+    "cumulative_history_transfer.py": "63fbc2090b863a47feca1f8e995ea2d2e88ebfd0b4029434f8b8cf1199edb1c2"
+  },
+  "seconds": 0.47914245800348
+}

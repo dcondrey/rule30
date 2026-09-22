@@ -1,0 +1,1050 @@
+{
+  "schema": "rule30.two-block-family-certificate.v1",
+  "family": {
+    "prefix": "21213",
+    "body1": "13",
+    "seam": "031",
+    "body2": "31",
+    "suffix": "303",
+    "initial_tape": "00",
+    "quantifiers": "Every independent pair of integers a,b>=0"
+  },
+  "uniform_family_mortality_proved": true,
+  "trials": [
+    {
+      "depth": 4,
+      "primary": "capacity18-joint-05.data/depth-04.json",
+      "primary_sha256": "78943936ae27781bd9840346b00f9b29beae9e1adf6e3acd0b13901487fb93bd",
+      "complete": true,
+      "stop_reason": "exact_joint_closure",
+      "first_orbit": {
+        "closed": true,
+        "states": 32,
+        "preperiod": 0,
+        "period": 32,
+        "initial_state": "323",
+        "repeat_state": "323"
+      },
+      "joint": {
+        "all_seeds_included": true,
+        "closed": true,
+        "states": 32,
+        "seeds": 32,
+        "successors_checked": 32
+      },
+      "evaluation": {
+        "complete": true,
+        "states_checked": 32,
+        "survivors": 2,
+        "distinct_tapes": 7,
+        "max_further_successes": 4,
+        "max_total_repeats": 3,
+        "max_success_witness": {
+          "state": "108",
+          "a": 2,
+          "b": 0,
+          "final_state": "415",
+          "further_tape": "1000",
+          "total_tape": "001000",
+          "further_successes": 4,
+          "total_successes": 6,
+          "total_repeats": 3,
+          "survives_depth": true
+        },
+        "max_repeat_witness": {
+          "state": "108",
+          "a": 2,
+          "b": 0,
+          "final_state": "415",
+          "further_tape": "1000",
+          "total_tape": "001000",
+          "further_successes": 4,
+          "total_successes": 6,
+          "total_repeats": 3,
+          "survives_depth": true
+        }
+      },
+      "uniform_family_mortality_proved": false
+    },
+    {
+      "depth": 8,
+      "primary": "capacity18-joint-05.data/depth-08.json",
+      "primary_sha256": "13a8bf72e05ec460f8ef1d768b697a56a16f64d7de4bc51baa91c4079a666d0d",
+      "complete": true,
+      "stop_reason": "exact_joint_closure",
+      "first_orbit": {
+        "closed": true,
+        "states": 256,
+        "preperiod": 0,
+        "period": 256,
+        "initial_state": "82243",
+        "repeat_state": "82243"
+      },
+      "joint": {
+        "all_seeds_included": true,
+        "closed": true,
+        "states": 256,
+        "seeds": 256,
+        "successors_checked": 256
+      },
+      "evaluation": {
+        "complete": true,
+        "states_checked": 256,
+        "survivors": 4,
+        "distinct_tapes": 15,
+        "max_further_successes": 8,
+        "max_total_repeats": 6,
+        "max_success_witness": {
+          "state": "99532",
+          "a": 30,
+          "b": 0,
+          "final_state": "80447",
+          "further_tape": "10100011",
+          "total_tape": "0010100011",
+          "further_successes": 8,
+          "total_successes": 10,
+          "total_repeats": 4,
+          "survives_depth": true
+        },
+        "max_repeat_witness": {
+          "state": "99948",
+          "a": 34,
+          "b": 0,
+          "final_state": "80287",
+          "further_tape": "10000011",
+          "total_tape": "0010000011",
+          "further_successes": 8,
+          "total_successes": 10,
+          "total_repeats": 6,
+          "survives_depth": true
+        }
+      },
+      "uniform_family_mortality_proved": false
+    },
+    {
+      "depth": 12,
+      "primary": "capacity18-joint-05.data/depth-12.json",
+      "primary_sha256": "df0bf43088610ae0c0e08afc5e6124e7830611b90bf2e9e5b2b313932a806715",
+      "complete": true,
+      "stop_reason": "exact_joint_closure",
+      "first_orbit": {
+        "closed": true,
+        "states": 4096,
+        "preperiod": 0,
+        "period": 4096,
+        "initial_state": "21053763",
+        "repeat_state": "21053763"
+      },
+      "joint": {
+        "all_seeds_included": true,
+        "closed": true,
+        "states": 4096,
+        "seeds": 4096,
+        "successors_checked": 4096
+      },
+      "evaluation": {
+        "complete": true,
+        "states_checked": 4096,
+        "survivors": 4,
+        "distinct_tapes": 34,
+        "max_further_successes": 12,
+        "max_total_repeats": 8,
+        "max_success_witness": {
+          "state": "32865484",
+          "a": 190,
+          "b": 0,
+          "final_state": "7119423",
+          "further_tape": "101001011000",
+          "total_tape": "00101001011000",
+          "further_successes": 12,
+          "total_successes": 14,
+          "total_repeats": 5,
+          "survives_depth": true
+        },
+        "max_repeat_witness": {
+          "state": "22251116",
+          "a": 546,
+          "b": 0,
+          "final_state": "8468895",
+          "further_tape": "10000011110",
+          "total_tape": "0010000011110",
+          "further_successes": 11,
+          "total_successes": 13,
+          "total_repeats": 8,
+          "survives_depth": false
+        }
+      },
+      "uniform_family_mortality_proved": false
+    },
+    {
+      "depth": 16,
+      "primary": "capacity18-joint-05.data/depth-16.json",
+      "primary_sha256": "703a777eed655e9109b1770d11c67144f638daa4d763130d08f396318ed0462c",
+      "complete": true,
+      "stop_reason": "exact_joint_closure",
+      "first_orbit": {
+        "closed": true,
+        "states": 32768,
+        "preperiod": 0,
+        "period": 32768,
+        "initial_state": "5389762883",
+        "repeat_state": "5389762883"
+      },
+      "joint": {
+        "all_seeds_included": true,
+        "closed": true,
+        "states": 32768,
+        "seeds": 32768,
+        "successors_checked": 32768
+      },
+      "evaluation": {
+        "complete": true,
+        "states_checked": 32768,
+        "survivors": 2,
+        "distinct_tapes": 41,
+        "max_further_successes": 16,
+        "max_total_repeats": 9,
+        "max_success_witness": {
+          "state": "4193615052",
+          "a": 16574,
+          "b": 0,
+          "final_state": "6550233663",
+          "further_tape": "1010010110001111",
+          "total_tape": "001010010110001111",
+          "further_successes": 16,
+          "total_successes": 18,
+          "total_repeats": 8,
+          "survives_depth": true
+        },
+        "max_repeat_witness": {
+          "state": "5852464748",
+          "a": 30498,
+          "b": 0,
+          "final_state": "4944247199",
+          "further_tape": "1000001101001100",
+          "total_tape": "001000001101001100",
+          "further_successes": 16,
+          "total_successes": 18,
+          "total_repeats": 9,
+          "survives_depth": true
+        }
+      },
+      "uniform_family_mortality_proved": false
+    },
+    {
+      "depth": 20,
+      "primary": "capacity18-joint-05.data/depth-20.json",
+      "primary_sha256": "2b5c40786b7a6e3315ebfd7ff2b5ec6a0c6f1bc2170a989057823b1de4230f15",
+      "complete": true,
+      "stop_reason": "exact_joint_closure",
+      "first_orbit": {
+        "closed": true,
+        "states": 524288,
+        "preperiod": 0,
+        "period": 524288,
+        "initial_state": "1379779297603",
+        "repeat_state": "1379779297603"
+      },
+      "joint": {
+        "all_seeds_included": true,
+        "closed": true,
+        "states": 524288,
+        "seeds": 524288,
+        "successors_checked": 524288
+      },
+      "evaluation": {
+        "complete": true,
+        "states_checked": 524288,
+        "survivors": 2,
+        "distinct_tapes": 47,
+        "max_further_successes": 20,
+        "max_total_repeats": 12,
+        "max_success_witness": {
+          "state": "332269979244",
+          "a": 194338,
+          "b": 0,
+          "final_state": "1009966594463",
+          "further_tape": "10000011010011000111",
+          "total_tape": "0010000011010011000111",
+          "further_successes": 20,
+          "total_successes": 22,
+          "total_repeats": 12,
+          "survives_depth": true
+        },
+        "max_repeat_witness": {
+          "state": "1947177682540",
+          "a": 30498,
+          "b": 0,
+          "final_state": "1113045809567",
+          "further_tape": "1000001101001100000",
+          "total_tape": "001000001101001100000",
+          "further_successes": 19,
+          "total_successes": 21,
+          "total_repeats": 12,
+          "survives_depth": false
+        }
+      },
+      "uniform_family_mortality_proved": false
+    },
+    {
+      "depth": 24,
+      "primary": "capacity18-joint-05.data/depth-24.json",
+      "primary_sha256": "cadf39518259fbba64a8a8ef3caf156ee4a08eb2e7c08854a727f2216b218fb3",
+      "complete": true,
+      "stop_reason": "exact_joint_closure",
+      "first_orbit": {
+        "closed": true,
+        "states": 1048576,
+        "preperiod": 0,
+        "period": 1048576,
+        "initial_state": "353223500185923",
+        "repeat_state": "353223500185923"
+      },
+      "joint": {
+        "all_seeds_included": true,
+        "closed": true,
+        "states": 1048576,
+        "seeds": 1048576,
+        "successors_checked": 1048576
+      },
+      "evaluation": {
+        "complete": true,
+        "states_checked": 1048576,
+        "survivors": 0,
+        "distinct_tapes": 48,
+        "max_further_successes": 22,
+        "max_total_repeats": 14,
+        "max_success_witness": {
+          "state": "110798828832364",
+          "a": 816930,
+          "b": 0,
+          "final_state": "453012324825503",
+          "further_tape": "1000001101001100000111",
+          "total_tape": "001000001101001100000111",
+          "further_successes": 22,
+          "total_successes": 24,
+          "total_repeats": 14,
+          "survives_depth": false
+        },
+        "max_repeat_witness": {
+          "state": "110798828832364",
+          "a": 816930,
+          "b": 0,
+          "final_state": "453012324825503",
+          "further_tape": "1000001101001100000111",
+          "total_tape": "001000001101001100000111",
+          "further_successes": 22,
+          "total_successes": 24,
+          "total_repeats": 14,
+          "survives_depth": false
+        }
+      },
+      "uniform_family_mortality_proved": true
+    }
+  ],
+  "independent": {
+    "schema": "rule30.two-block-family-independent.v1",
+    "uniform_family_mortality_verified": true,
+    "family": "21213(13)^a031(31)^b303",
+    "parameter_domain": "ALL independent integers a,b>=0",
+    "initial_scalar_tape": "00",
+    "depth": 24,
+    "first_orbit_states": 1048576,
+    "first_preperiod": 0,
+    "first_period": 1048576,
+    "transported_seeds_with_multiplicity": 1048576,
+    "joint_reachable_states": 1048576,
+    "all_representatives_verified": true,
+    "all_chronological_guards_and_births_verified": true,
+    "max_original_successful_updates": 24,
+    "max_original_repeats": 14,
+    "N_witness": {
+      "a": 816930,
+      "b": 0,
+      "tape": "001000001101001100000111",
+      "N": 24,
+      "D": 14,
+      "full_endpoint_length": 1633871,
+      "original_length_under_initial_history_label": 1633869
+    },
+    "D_witness": {
+      "a": 816930,
+      "b": 0,
+      "tape": "001000001101001100000111",
+      "N": 24,
+      "D": 14,
+      "full_endpoint_length": 1633871,
+      "original_length_under_initial_history_label": 1633869
+    },
+    "complete_histories": [
+      {
+        "tape": "00",
+        "N": 2,
+        "D": 1,
+        "joint_column_states": 524288,
+        "representative": {
+          "a": 1,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001",
+        "N": 3,
+        "D": 1,
+        "joint_column_states": 262144,
+        "representative": {
+          "a": 0,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010",
+        "N": 4,
+        "D": 1,
+        "joint_column_states": 131072,
+        "representative": {
+          "a": 6,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100",
+        "N": 5,
+        "D": 2,
+        "joint_column_states": 32768,
+        "representative": {
+          "a": 18,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00101",
+        "N": 5,
+        "D": 1,
+        "joint_column_states": 32768,
+        "representative": {
+          "a": 14,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000",
+        "N": 7,
+        "D": 4,
+        "joint_column_states": 16384,
+        "representative": {
+          "a": 2,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010100",
+        "N": 7,
+        "D": 2,
+        "joint_column_states": 16384,
+        "representative": {
+          "a": 94,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100000",
+        "N": 8,
+        "D": 5,
+        "joint_column_states": 4096,
+        "representative": {
+          "a": 162,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00101000",
+        "N": 8,
+        "D": 3,
+        "joint_column_states": 4096,
+        "representative": {
+          "a": 158,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100001",
+        "N": 8,
+        "D": 4,
+        "joint_column_states": 4096,
+        "representative": {
+          "a": 66,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00101001",
+        "N": 8,
+        "D": 2,
+        "joint_column_states": 4096,
+        "representative": {
+          "a": 62,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000100",
+        "N": 10,
+        "D": 5,
+        "joint_column_states": 2048,
+        "representative": {
+          "a": 450,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010100101",
+        "N": 10,
+        "D": 2,
+        "joint_column_states": 2048,
+        "representative": {
+          "a": 446,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000011",
+        "N": 10,
+        "D": 6,
+        "joint_column_states": 2048,
+        "representative": {
+          "a": 34,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010100011",
+        "N": 10,
+        "D": 4,
+        "joint_column_states": 2048,
+        "representative": {
+          "a": 30,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00101000111",
+        "N": 11,
+        "D": 5,
+        "joint_column_states": 1024,
+        "representative": {
+          "a": 286,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001000010010",
+        "N": 12,
+        "D": 5,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 194,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001010010110",
+        "N": 12,
+        "D": 3,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 1214,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001000010001",
+        "N": 12,
+        "D": 6,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 962,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001010010101",
+        "N": 12,
+        "D": 2,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 958,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001000001101",
+        "N": 12,
+        "D": 6,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 802,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001010001101",
+        "N": 12,
+        "D": 4,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 1566,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001000001111",
+        "N": 12,
+        "D": 8,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 1570,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010100101100",
+        "N": 13,
+        "D": 4,
+        "joint_column_states": 256,
+        "representative": {
+          "a": 2238,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000011010",
+        "N": 13,
+        "D": 6,
+        "joint_column_states": 256,
+        "representative": {
+          "a": 3874,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010100011010",
+        "N": 13,
+        "D": 4,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 542,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000011110",
+        "N": 13,
+        "D": 8,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 546,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000100101",
+        "N": 13,
+        "D": 5,
+        "joint_column_states": 256,
+        "representative": {
+          "a": 3266,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000100011",
+        "N": 13,
+        "D": 7,
+        "joint_column_states": 512,
+        "representative": {
+          "a": 1986,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010100101011",
+        "N": 13,
+        "D": 3,
+        "joint_column_states": 256,
+        "representative": {
+          "a": 1982,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100000110100",
+        "N": 14,
+        "D": 7,
+        "joint_column_states": 128,
+        "representative": {
+          "a": 1826,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100001001010",
+        "N": 14,
+        "D": 5,
+        "joint_column_states": 128,
+        "representative": {
+          "a": 1218,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00101001010111",
+        "N": 14,
+        "D": 4,
+        "joint_column_states": 256,
+        "representative": {
+          "a": 4030,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001010010110000",
+        "N": 15,
+        "D": 6,
+        "joint_column_states": 128,
+        "representative": {
+          "a": 4286,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001000010010100",
+        "N": 15,
+        "D": 6,
+        "joint_column_states": 128,
+        "representative": {
+          "a": 5314,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010100101100011",
+        "N": 16,
+        "D": 6,
+        "joint_column_states": 64,
+        "representative": {
+          "a": 8382,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000011010011",
+        "N": 16,
+        "D": 8,
+        "joint_column_states": 64,
+        "representative": {
+          "a": 5922,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100000110100110",
+        "N": 17,
+        "D": 8,
+        "joint_column_states": 32,
+        "representative": {
+          "a": 14114,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00101001011000111",
+        "N": 17,
+        "D": 7,
+        "joint_column_states": 32,
+        "representative": {
+          "a": 190,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001010010110001111",
+        "N": 18,
+        "D": 8,
+        "joint_column_states": 32,
+        "representative": {
+          "a": 16574,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000011010011000",
+        "N": 19,
+        "D": 10,
+        "joint_column_states": 16,
+        "representative": {
+          "a": 96034,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100000110100110000",
+        "N": 20,
+        "D": 11,
+        "joint_column_states": 4,
+        "representative": {
+          "a": 161570,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100000110100110001",
+        "N": 20,
+        "D": 10,
+        "joint_column_states": 4,
+        "representative": {
+          "a": 63266,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001000001101001100000",
+        "N": 21,
+        "D": 12,
+        "joint_column_states": 2,
+        "representative": {
+          "a": 30498,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001000001101001100011",
+        "N": 21,
+        "D": 11,
+        "joint_column_states": 2,
+        "representative": {
+          "a": 456482,
+          "b": 0
+        }
+      },
+      {
+        "tape": "0010000011010011000111",
+        "N": 22,
+        "D": 12,
+        "joint_column_states": 2,
+        "representative": {
+          "a": 194338,
+          "b": 0
+        }
+      },
+      {
+        "tape": "00100000110100110000011",
+        "N": 23,
+        "D": 13,
+        "joint_column_states": 1,
+        "representative": {
+          "a": 292642,
+          "b": 0
+        }
+      },
+      {
+        "tape": "001000001101001100000111",
+        "N": 24,
+        "D": 14,
+        "joint_column_states": 1,
+        "representative": {
+          "a": 816930,
+          "b": 0
+        }
+      }
+    ],
+    "guard_counts": [
+      {
+        "depth": 1,
+        "successful_joint_states": 524288,
+        "newly_failed_joint_states": 524288
+      },
+      {
+        "depth": 2,
+        "successful_joint_states": 262144,
+        "newly_failed_joint_states": 262144
+      },
+      {
+        "depth": 3,
+        "successful_joint_states": 131072,
+        "newly_failed_joint_states": 131072
+      },
+      {
+        "depth": 4,
+        "successful_joint_states": 65536,
+        "newly_failed_joint_states": 65536
+      },
+      {
+        "depth": 5,
+        "successful_joint_states": 65536,
+        "newly_failed_joint_states": 0
+      },
+      {
+        "depth": 6,
+        "successful_joint_states": 32768,
+        "newly_failed_joint_states": 32768
+      },
+      {
+        "depth": 7,
+        "successful_joint_states": 16384,
+        "newly_failed_joint_states": 16384
+      },
+      {
+        "depth": 8,
+        "successful_joint_states": 16384,
+        "newly_failed_joint_states": 0
+      },
+      {
+        "depth": 9,
+        "successful_joint_states": 8192,
+        "newly_failed_joint_states": 8192
+      },
+      {
+        "depth": 10,
+        "successful_joint_states": 7168,
+        "newly_failed_joint_states": 1024
+      },
+      {
+        "depth": 11,
+        "successful_joint_states": 3584,
+        "newly_failed_joint_states": 3584
+      },
+      {
+        "depth": 12,
+        "successful_joint_states": 1024,
+        "newly_failed_joint_states": 2560
+      },
+      {
+        "depth": 13,
+        "successful_joint_states": 512,
+        "newly_failed_joint_states": 512
+      },
+      {
+        "depth": 14,
+        "successful_joint_states": 256,
+        "newly_failed_joint_states": 256
+      },
+      {
+        "depth": 15,
+        "successful_joint_states": 128,
+        "newly_failed_joint_states": 128
+      },
+      {
+        "depth": 16,
+        "successful_joint_states": 64,
+        "newly_failed_joint_states": 64
+      },
+      {
+        "depth": 17,
+        "successful_joint_states": 32,
+        "newly_failed_joint_states": 32
+      },
+      {
+        "depth": 18,
+        "successful_joint_states": 16,
+        "newly_failed_joint_states": 16
+      },
+      {
+        "depth": 19,
+        "successful_joint_states": 8,
+        "newly_failed_joint_states": 8
+      },
+      {
+        "depth": 20,
+        "successful_joint_states": 4,
+        "newly_failed_joint_states": 4
+      },
+      {
+        "depth": 21,
+        "successful_joint_states": 2,
+        "newly_failed_joint_states": 2
+      },
+      {
+        "depth": 22,
+        "successful_joint_states": 1,
+        "newly_failed_joint_states": 1
+      },
+      {
+        "depth": 23,
+        "successful_joint_states": 0,
+        "newly_failed_joint_states": 1
+      },
+      {
+        "depth": 24,
+        "successful_joint_states": 0,
+        "newly_failed_joint_states": 0
+      }
+    ],
+    "frozen_forward_oracle_controls": [
+      {
+        "a": 0,
+        "b": 0,
+        "complete_tape": "001",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 1,
+        "b": 0,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 0,
+        "b": 1,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 1,
+        "b": 1,
+        "complete_tape": "0010000",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 2,
+        "b": 3,
+        "complete_tape": "00",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      },
+      {
+        "a": 7,
+        "b": 5,
+        "complete_tape": "001",
+        "all_bulk_column_bits_and_chronological_guards_match": true
+      }
+    ],
+    "sources": {
+      "/Volumes/A/researchpapers/13-rule30/experiments/rule30/verify_two_block_family.py": "cbc054ef480c034456f4739bbb2e2483cc13d3711eb9e32110085a656ef95a99",
+      "/Volumes/A/researchpapers/13-rule30/experiments/rule30/panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f",
+      "/Volumes/A/researchpapers/13-rule30/experiments/rule30/capacity18-joint-05.data/depth-24.json": "cadf39518259fbba64a8a8ef3caf156ee4a08eb2e7c08854a727f2216b218fb3"
+    },
+    "data_sha256": {
+      "first": "15df1f6d9f8df0f1eb86fd1d21059306446c4b85d89518cef470ea371936a22a",
+      "seeds": "a40265a35b8a8d2c87f49eb8b784e8d767bda99ff9d92fbd16ef2502fc2d4b57",
+      "joint": "a40265a35b8a8d2c87f49eb8b784e8d767bda99ff9d92fbd16ef2502fc2d4b57",
+      "survivors": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tapes": "8ee4cce74e0830014aea7bfb2d02d3f58a70c233404dfa63fbd9519e9bb7fb51"
+    },
+    "seconds": 2.058066500001587,
+    "scope": "Uniform mortality for this displayed endpoint family with its supplied initial-history label; no unrestricted mortality or period-two conclusion"
+  },
+  "final_primary": "capacity18-joint-05.data/depth-24.json",
+  "limits": {
+    "depth": 31,
+    "max_states": 2000000,
+    "seconds": 120
+  },
+  "source_sha256": {
+    "two_block_family_certificate.py": "08a321c55b9a32ac58cb348061afe1f643ad490f544c4e77df49ffefd43f2fa2",
+    "two_block_column_orbit.cpp": "a198df6f2c14cef3d6fb13238c96a445eea014fc6977cd68ac8b7a6b44d55bdd",
+    "verify_two_block_family.py": "cbc054ef480c034456f4739bbb2e2483cc13d3711eb9e32110085a656ef95a99",
+    "panel/cert33.py": "fc723bdceb17641934264d158c49952d89400e207312a11d9ab4007e63e4637f"
+  },
+  "seconds": 39.5429576660099,
+  "scope": "This exact endpoint family with its supplied initial tape. General auxiliary mortality and period-two exclusion remain open."
+}

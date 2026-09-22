@@ -1,0 +1,383 @@
+{
+  "schema": "rule30.p3-section-reward-action.v1",
+  "verification": {
+    "fixed_word_actions": [
+      {
+        "precision": 2,
+        "word": "",
+        "permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "reward": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "precision": 2,
+        "word": "A",
+        "permutation": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "reward": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "precision": 2,
+        "word": "B",
+        "permutation": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "reward": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "precision": 2,
+        "word": "C",
+        "permutation": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "reward": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "precision": 2,
+        "word": "ACAC",
+        "permutation": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "reward": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "precision": 2,
+        "word": "CACA",
+        "permutation": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "reward": [
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "precision": 2,
+        "word": "CACACACAC",
+        "permutation": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "reward": [
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "precision": 3,
+        "word": "",
+        "permutation": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "reward": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "precision": 3,
+        "word": "A",
+        "permutation": [
+          0,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        "reward": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "precision": 3,
+        "word": "B",
+        "permutation": [
+          1,
+          6,
+          7,
+          4,
+          5,
+          2,
+          3,
+          0
+        ],
+        "reward": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "precision": 3,
+        "word": "C",
+        "permutation": [
+          3,
+          6,
+          5,
+          4,
+          7,
+          2,
+          1,
+          0
+        ],
+        "reward": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "precision": 3,
+        "word": "ACAC",
+        "permutation": [
+          2,
+          3,
+          0,
+          1,
+          6,
+          7,
+          4,
+          5
+        ],
+        "reward": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "precision": 3,
+        "word": "CACA",
+        "permutation": [
+          6,
+          3,
+          4,
+          1,
+          2,
+          7,
+          0,
+          5
+        ],
+        "reward": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "precision": 3,
+        "word": "CACACACAC",
+        "permutation": [
+          3,
+          6,
+          5,
+          4,
+          7,
+          2,
+          1,
+          0
+        ],
+        "reward": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "independent_bit_serial_controls": 336,
+    "original_section_root_controls": 84,
+    "actual_core": "CACACACAC",
+    "actual_core_step": "Q(C^9)",
+    "actual_ordered_chunk_witness": [
+      {
+        "start": 3,
+        "word": "ACAC",
+        "counts": {
+          "A": 2,
+          "B": 0,
+          "C": 2
+        },
+        "actual_prefix": "CAC",
+        "actual_incoming_integer": 50,
+        "incoming_low2": 2,
+        "outgoing_low2": 0,
+        "complete_low2_permutation": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "complete_reward": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "demanded_section_root_toggle": 0
+      },
+      {
+        "start": 4,
+        "word": "CACA",
+        "counts": {
+          "A": 2,
+          "B": 0,
+          "C": 2
+        },
+        "actual_prefix": "CACA",
+        "actual_incoming_integer": 222,
+        "incoming_low2": 2,
+        "outgoing_low2": 0,
+        "complete_low2_permutation": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "complete_reward": [
+          1,
+          0,
+          1,
+          0
+        ],
+        "demanded_section_root_toggle": 1
+      }
+    ],
+    "coboundary_obstruction": {
+      "letter": "A",
+      "fixed_states": [
+        0,
+        2
+      ],
+      "rewards": [
+        0,
+        1
+      ]
+    },
+    "fixed_precision_compressed_control": {
+      "word": "C^((2^40)+3)",
+      "exponent": 1099511627779,
+      "constructed_grammar_nodes": 46,
+      "grammar_concat_requests": 43,
+      "reward_at_zero": 1,
+      "expanded_generator_letters": 0,
+      "precision": 2,
+      "contexts_per_action": 4,
+      "recursive_action_requests": 85,
+      "distinct_internal_action_queries": 42,
+      "generator_context_records_constructed": 12,
+      "identity_context_records_constructed": 4,
+      "composition_context_records_processed": 168,
+      "total_stored_context_records": 184,
+      "raw_context_payload_bits": 552
+    },
+    "largest_literal_core_width": 9,
+    "literal_core_steps": 1
+  },
+  "all_length_identity": "(pi_UV,rho_UV)(s)=(pi_V(pi_U(s)),rho_U(s) XOR rho_V(pi_U(s))) for chronological U thenV; rho_U(s) is the demanded root toggle after reading the m-bit prefix s.",
+  "explicit_context_cost": "At precision m>=2, every stored action has2^m records of m+1payload bits; each internal composition processes2^m records. SLP construction is charged separately.",
+  "scope": "Exact word-direction reward aggregation, distinct from temporal affine block summaries. Fixed precision compiles compressed words; growing-precision tables remain explicit and exponential. No sublinear singleton algorithm.",
+  "source_sha256": {
+    "p3_section_reward_action.py": "6d200e613ce170b10630833490b0952fdebbb345b65b46184a12568a5483f31b",
+    "p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29",
+    "p3_query_cone_rewrite.py": "b77990ef8a3a223a44e1d61c498832fdfe52c65bd6d7931b8058a5f4a41fbca2"
+  }
+}

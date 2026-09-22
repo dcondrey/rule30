@@ -1,0 +1,318 @@
+{
+  "schema": "rule30.p3-quaternary-section-query.v1",
+  "verification": {
+    "literal_Q_controls": [
+      {
+        "word": "C",
+        "k": 0,
+        "Q_word": "C"
+      },
+      {
+        "word": "C",
+        "k": 1,
+        "Q_word": "C"
+      },
+      {
+        "word": "C",
+        "k": 2,
+        "Q_word": "C"
+      },
+      {
+        "word": "C",
+        "k": 3,
+        "Q_word": "C"
+      },
+      {
+        "word": "C",
+        "k": 4,
+        "Q_word": "C"
+      },
+      {
+        "word": "C",
+        "k": 5,
+        "Q_word": "C"
+      },
+      {
+        "word": "CA",
+        "k": 0,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CA",
+        "k": 1,
+        "Q_word": "CB"
+      },
+      {
+        "word": "CA",
+        "k": 2,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CA",
+        "k": 3,
+        "Q_word": "CB"
+      },
+      {
+        "word": "CA",
+        "k": 4,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CA",
+        "k": 5,
+        "Q_word": "CB"
+      },
+      {
+        "word": "CB",
+        "k": 0,
+        "Q_word": "CB"
+      },
+      {
+        "word": "CB",
+        "k": 1,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CB",
+        "k": 2,
+        "Q_word": "CB"
+      },
+      {
+        "word": "CB",
+        "k": 3,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CB",
+        "k": 4,
+        "Q_word": "CB"
+      },
+      {
+        "word": "CB",
+        "k": 5,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CC",
+        "k": 0,
+        "Q_word": "CC"
+      },
+      {
+        "word": "CC",
+        "k": 1,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CC",
+        "k": 2,
+        "Q_word": "CB"
+      },
+      {
+        "word": "CC",
+        "k": 3,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CC",
+        "k": 4,
+        "Q_word": "CB"
+      },
+      {
+        "word": "CC",
+        "k": 5,
+        "Q_word": "CA"
+      },
+      {
+        "word": "CACA",
+        "k": 0,
+        "Q_word": "CACA"
+      },
+      {
+        "word": "CACA",
+        "k": 1,
+        "Q_word": "CBCC"
+      },
+      {
+        "word": "CACA",
+        "k": 2,
+        "Q_word": "CACA"
+      },
+      {
+        "word": "CACA",
+        "k": 3,
+        "Q_word": "CBCC"
+      },
+      {
+        "word": "CACA",
+        "k": 4,
+        "Q_word": "CACA"
+      },
+      {
+        "word": "CACA",
+        "k": 5,
+        "Q_word": "CBCC"
+      },
+      {
+        "word": "CCBCC",
+        "k": 0,
+        "Q_word": "CCBCC"
+      },
+      {
+        "word": "CCBCC",
+        "k": 1,
+        "Q_word": "CABCB"
+      },
+      {
+        "word": "CCBCC",
+        "k": 2,
+        "Q_word": "CBCBC"
+      },
+      {
+        "word": "CCBCC",
+        "k": 3,
+        "Q_word": "CACAC"
+      },
+      {
+        "word": "CCBCC",
+        "k": 4,
+        "Q_word": "CBCCB"
+      },
+      {
+        "word": "CCBCC",
+        "k": 5,
+        "Q_word": "CACAB"
+      },
+      {
+        "word": "CACACACAC",
+        "k": 0,
+        "Q_word": "CACACACAC"
+      },
+      {
+        "word": "CACACACAC",
+        "k": 1,
+        "Q_word": "CBCCBCAAC"
+      },
+      {
+        "word": "CACACACAC",
+        "k": 2,
+        "Q_word": "CACABCCCB"
+      },
+      {
+        "word": "CACACACAC",
+        "k": 3,
+        "Q_word": "CBCCCACAB"
+      },
+      {
+        "word": "CACACACAC",
+        "k": 4,
+        "Q_word": "CACACBCCC"
+      },
+      {
+        "word": "CACACACAC",
+        "k": 5,
+        "Q_word": "CBCCBCBCB"
+      }
+    ],
+    "actual_singleton_queries": [
+      {
+        "center": 1,
+        "n": 0,
+        "zero_sections": 0
+      },
+      {
+        "center": 1,
+        "n": 1,
+        "core_length": 1,
+        "zero_sections": 0,
+        "requested_digit_bit": 0,
+        "final_root_digit": 3,
+        "initial_grammar_nodes": 4,
+        "constructed_grammar_nodes": 4,
+        "concat_requests": 1,
+        "section_requests": 0,
+        "distinct_section_contexts": 0,
+        "permutation_entries_composed": 0,
+        "word_cuts": 0,
+        "word_appends": 0
+      },
+      {
+        "center": 0,
+        "n": 2,
+        "core_length": 2,
+        "zero_sections": 0,
+        "requested_digit_bit": 1,
+        "final_root_digit": 0,
+        "initial_grammar_nodes": 5,
+        "constructed_grammar_nodes": 5,
+        "concat_requests": 2,
+        "section_requests": 0,
+        "distinct_section_contexts": 0,
+        "permutation_entries_composed": 4,
+        "word_cuts": 0,
+        "word_appends": 0
+      },
+      {
+        "center": 1,
+        "n": 8,
+        "core_length": 5,
+        "zero_sections": 3,
+        "requested_digit_bit": 1,
+        "final_root_digit": 3,
+        "initial_grammar_nodes": 7,
+        "constructed_grammar_nodes": 17,
+        "concat_requests": 15,
+        "section_requests": 25,
+        "distinct_section_contexts": 19,
+        "permutation_entries_composed": 52,
+        "word_cuts": 0,
+        "word_appends": 0
+      },
+      {
+        "center": 0,
+        "n": 17,
+        "core_length": 9,
+        "zero_sections": 8,
+        "requested_digit_bit": 0,
+        "final_root_digit": 0,
+        "initial_grammar_nodes": 8,
+        "constructed_grammar_nodes": 38,
+        "concat_requests": 45,
+        "section_requests": 88,
+        "distinct_section_contexts": 52,
+        "permutation_entries_composed": 136,
+        "word_cuts": 0,
+        "word_appends": 0
+      },
+      {
+        "center": 0,
+        "n": 32,
+        "core_length": 17,
+        "zero_sections": 15,
+        "requested_digit_bit": 1,
+        "final_root_digit": 1,
+        "initial_grammar_nodes": 9,
+        "constructed_grammar_nodes": 90,
+        "concat_requests": 119,
+        "section_requests": 241,
+        "distinct_section_contexts": 125,
+        "permutation_entries_composed": 344,
+        "word_cuts": 0,
+        "word_appends": 0
+      }
+    ],
+    "huge_fixed_family": {
+      "word": "A^((2^40)+3)",
+      "length": 1099511627779,
+      "constructed_nodes": 46,
+      "distinct_section_contexts": 43,
+      "section_is_same_node": true
+    }
+  },
+  "source_sha256": {
+    "p3_quaternary_section_query.py": "428e53e81d5ea888de330e4547baedb6bad37522d785144d79bdb4362cfe71eb",
+    "p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29",
+    "p3_query_cone_rewrite.py": "b77990ef8a3a223a44e1d61c498832fdfe52c65bd6d7931b8058a5f4a41fbca2"
+  },
+  "scope": "Literal Q as one quaternary zero section, with no cuts or appends. Linear number of advances; no sublinear singleton algorithm.",
+  "sublinear_algorithm_proved": false
+}

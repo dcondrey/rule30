@@ -1,0 +1,323 @@
+{
+  "schema": "rule30.p3-power-node-sections.v1",
+  "verification": {
+    "literal_power_controls": [
+      {
+        "word": "A",
+        "exponent": 0
+      },
+      {
+        "word": "A",
+        "exponent": 1
+      },
+      {
+        "word": "A",
+        "exponent": 2
+      },
+      {
+        "word": "A",
+        "exponent": 3
+      },
+      {
+        "word": "A",
+        "exponent": 5
+      },
+      {
+        "word": "A",
+        "exponent": 8
+      },
+      {
+        "word": "B",
+        "exponent": 0
+      },
+      {
+        "word": "B",
+        "exponent": 1
+      },
+      {
+        "word": "B",
+        "exponent": 2
+      },
+      {
+        "word": "B",
+        "exponent": 3
+      },
+      {
+        "word": "B",
+        "exponent": 5
+      },
+      {
+        "word": "B",
+        "exponent": 8
+      },
+      {
+        "word": "C",
+        "exponent": 0
+      },
+      {
+        "word": "C",
+        "exponent": 1
+      },
+      {
+        "word": "C",
+        "exponent": 2
+      },
+      {
+        "word": "C",
+        "exponent": 3
+      },
+      {
+        "word": "C",
+        "exponent": 5
+      },
+      {
+        "word": "C",
+        "exponent": 8
+      },
+      {
+        "word": "CA",
+        "exponent": 0
+      },
+      {
+        "word": "CA",
+        "exponent": 1
+      },
+      {
+        "word": "CA",
+        "exponent": 2
+      },
+      {
+        "word": "CA",
+        "exponent": 3
+      },
+      {
+        "word": "CA",
+        "exponent": 5
+      },
+      {
+        "word": "CA",
+        "exponent": 8
+      },
+      {
+        "word": "CB",
+        "exponent": 0
+      },
+      {
+        "word": "CB",
+        "exponent": 1
+      },
+      {
+        "word": "CB",
+        "exponent": 2
+      },
+      {
+        "word": "CB",
+        "exponent": 3
+      },
+      {
+        "word": "CB",
+        "exponent": 5
+      },
+      {
+        "word": "CB",
+        "exponent": 8
+      },
+      {
+        "word": "BC",
+        "exponent": 0
+      },
+      {
+        "word": "BC",
+        "exponent": 1
+      },
+      {
+        "word": "BC",
+        "exponent": 2
+      },
+      {
+        "word": "BC",
+        "exponent": 3
+      },
+      {
+        "word": "BC",
+        "exponent": 5
+      },
+      {
+        "word": "BC",
+        "exponent": 8
+      },
+      {
+        "word": "AC",
+        "exponent": 0
+      },
+      {
+        "word": "AC",
+        "exponent": 1
+      },
+      {
+        "word": "AC",
+        "exponent": 2
+      },
+      {
+        "word": "AC",
+        "exponent": 3
+      },
+      {
+        "word": "AC",
+        "exponent": 5
+      },
+      {
+        "word": "AC",
+        "exponent": 8
+      },
+      {
+        "word": "CBCCBCAA",
+        "exponent": 0
+      },
+      {
+        "word": "CBCCBCAA",
+        "exponent": 1
+      },
+      {
+        "word": "CBCCBCAA",
+        "exponent": 2
+      },
+      {
+        "word": "CBCCBCAA",
+        "exponent": 3
+      },
+      {
+        "word": "CBCCBCAA",
+        "exponent": 5
+      },
+      {
+        "word": "CBCCBCAA",
+        "exponent": 8
+      }
+    ],
+    "nested_power_control_length": 112,
+    "actual_queries": [
+      {
+        "center": 1,
+        "n": 0,
+        "zero_sections": 0,
+        "binary_concat_baseline_nodes": 4
+      },
+      {
+        "center": 1,
+        "n": 1,
+        "zero_sections": 0,
+        "core_length": 1,
+        "initial_nodes": 4,
+        "constructed_nodes": 4,
+        "power_nodes": 0,
+        "distinct_section_contexts": 0,
+        "section_requests": 0,
+        "concat_requests": 0,
+        "power_requests": 1,
+        "permutation_entries_composed": 0,
+        "power_orbit_steps": 0,
+        "division_operand_bits": 0,
+        "exponent_arithmetic_operand_bits": 0,
+        "logical_node_metadata_bits": 36,
+        "final_root_digit": 3,
+        "binary_concat_baseline_nodes": 4
+      },
+      {
+        "center": 0,
+        "n": 2,
+        "zero_sections": 0,
+        "core_length": 2,
+        "initial_nodes": 5,
+        "constructed_nodes": 5,
+        "power_nodes": 1,
+        "distinct_section_contexts": 0,
+        "section_requests": 0,
+        "concat_requests": 0,
+        "power_requests": 1,
+        "permutation_entries_composed": 4,
+        "power_orbit_steps": 8,
+        "division_operand_bits": 8,
+        "exponent_arithmetic_operand_bits": 3,
+        "logical_node_metadata_bits": 50,
+        "final_root_digit": 0,
+        "binary_concat_baseline_nodes": 5
+      },
+      {
+        "center": 1,
+        "n": 8,
+        "zero_sections": 3,
+        "core_length": 5,
+        "initial_nodes": 5,
+        "constructed_nodes": 13,
+        "power_nodes": 3,
+        "distinct_section_contexts": 17,
+        "section_requests": 21,
+        "concat_requests": 15,
+        "power_requests": 6,
+        "permutation_entries_composed": 36,
+        "power_orbit_steps": 40,
+        "division_operand_bits": 35,
+        "exponent_arithmetic_operand_bits": 11,
+        "logical_node_metadata_bits": 177,
+        "final_root_digit": 3,
+        "binary_concat_baseline_nodes": 17
+      },
+      {
+        "center": 0,
+        "n": 17,
+        "zero_sections": 8,
+        "core_length": 9,
+        "initial_nodes": 5,
+        "constructed_nodes": 32,
+        "power_nodes": 5,
+        "distinct_section_contexts": 44,
+        "section_requests": 73,
+        "concat_requests": 45,
+        "power_requests": 10,
+        "permutation_entries_composed": 112,
+        "power_orbit_steps": 69,
+        "division_operand_bits": 67,
+        "exponent_arithmetic_operand_bits": 20,
+        "logical_node_metadata_bits": 544,
+        "final_root_digit": 0,
+        "binary_concat_baseline_nodes": 38
+      },
+      {
+        "center": 0,
+        "n": 32,
+        "zero_sections": 15,
+        "core_length": 17,
+        "initial_nodes": 5,
+        "constructed_nodes": 92,
+        "power_nodes": 8,
+        "distinct_section_contexts": 119,
+        "section_requests": 229,
+        "concat_requests": 135,
+        "power_requests": 22,
+        "permutation_entries_composed": 352,
+        "power_orbit_steps": 104,
+        "division_operand_bits": 117,
+        "exponent_arithmetic_operand_bits": 36,
+        "logical_node_metadata_bits": 1863,
+        "final_root_digit": 1,
+        "binary_concat_baseline_nodes": 90
+      }
+    ],
+    "huge_power_control": {
+      "exponent": "1000000000000000000000000000001",
+      "exponent_bits": 100,
+      "identity": "section(C^(2m+1),0)=(CA)^m C",
+      "constructed_nodes_including_A_control": 9,
+      "distinct_section_contexts": 5,
+      "logical_node_metadata_bits": 791
+    }
+  },
+  "source_sha256": {
+    "p3_power_node_sections.py": "d2dc8bfe71ed457d3dd19151be8c088d467ab8d5b5ab4c9a5bda2af864d804c3",
+    "p3_quaternary_section_query.py": "428e53e81d5ea888de330e4547baedb6bad37522d785144d79bdb4362cfe71eb",
+    "p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29"
+  },
+  "scope": "Exact root-orbit exponent division with retained ordered return words. Linear section advances remain.",
+  "sublinear_singleton_algorithm_proved": false
+}

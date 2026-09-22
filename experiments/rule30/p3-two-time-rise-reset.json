@@ -1,0 +1,487 @@
+{
+  "C_last_rise_readout_cases": 384,
+  "C_origin_and_second_site_prefix_cases": 64,
+  "actual_zero_time_control": {
+    "A_ray": "1^infinity",
+    "old_ray": "0^infinity",
+    "output_ray": "2^infinity",
+    "p_ray": "0^infinity",
+    "q_ray": "1^infinity"
+  },
+  "boundaries": {
+    "B_construct_A_previous_A_Z": [
+      1,
+      0
+    ],
+    "B_final_low_previous_p_q": [
+      1,
+      0
+    ],
+    "B_high_previous_q_Z": [
+      0,
+      0
+    ],
+    "C_construct_A_previous_A_Z": [
+      0,
+      1
+    ],
+    "C_final_low_previous_p_q": [
+      0,
+      1
+    ],
+    "C_high_initial_two_values": [
+      "H0",
+      "Z1 XOR H0"
+    ],
+    "rise_previous_A": 0
+  },
+  "complete_C_boundary_operator_cases": 64,
+  "complete_hard_core_reset_cases": 128,
+  "complete_operator_product_cases": 32,
+  "complete_raw_B_local_relations": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "complete_three_digit_prefixes": 128,
+  "cost": "Three length-m affine scans and O(m) local field work for full output; high-only marked queries may omit the final low scan. Both last-rise APIs validate all supplied fields, then read the requested prefix literally. Constructing A, reset locations, and Gray range parities is not free.",
+  "date": "2026-09-14",
+  "directed_words": [
+    {
+      "generator": "B",
+      "input": [],
+      "two_time_output": []
+    },
+    {
+      "generator": "B",
+      "input": [
+        3
+      ],
+      "two_time_output": [
+        1
+      ]
+    },
+    {
+      "generator": "B",
+      "input": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "two_time_output": [
+        2,
+        3,
+        0,
+        3
+      ]
+    },
+    {
+      "generator": "B",
+      "input": [
+        2,
+        1,
+        0,
+        3,
+        3,
+        1,
+        0
+      ],
+      "two_time_output": [
+        0,
+        2,
+        0,
+        0,
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "generator": "C",
+      "input": [],
+      "two_time_output": []
+    },
+    {
+      "generator": "C",
+      "input": [
+        3
+      ],
+      "two_time_output": [
+        3
+      ]
+    },
+    {
+      "generator": "C",
+      "input": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "two_time_output": [
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "generator": "C",
+      "input": [
+        2,
+        1,
+        0,
+        3,
+        3,
+        1,
+        0
+      ],
+      "two_time_output": [
+        2,
+        1,
+        0,
+        0,
+        3,
+        1,
+        0
+      ]
+    }
+  ],
+  "last_rise_readout_cases": 192,
+  "marked_center_index_algebra": [
+    {
+      "C_old_H0": 0,
+      "center_time": 2,
+      "generator": "C",
+      "high_digit_index": 0,
+      "intermediate_low_power": 1,
+      "old_power": 0,
+      "target_power": 2
+    },
+    {
+      "C_old_H0": null,
+      "center_time": 3,
+      "generator": "B",
+      "high_digit_index": 0,
+      "intermediate_low_power": 2,
+      "old_power": 1,
+      "target_power": 3
+    },
+    {
+      "C_old_H0": 1,
+      "center_time": 4,
+      "generator": "C",
+      "high_digit_index": 1,
+      "intermediate_low_power": 2,
+      "old_power": 1,
+      "target_power": 3
+    },
+    {
+      "C_old_H0": null,
+      "center_time": 5,
+      "generator": "B",
+      "high_digit_index": 1,
+      "intermediate_low_power": 3,
+      "old_power": 2,
+      "target_power": 4
+    },
+    {
+      "C_old_H0": 0,
+      "center_time": 6,
+      "generator": "C",
+      "high_digit_index": 2,
+      "intermediate_low_power": 3,
+      "old_power": 2,
+      "target_power": 4
+    },
+    {
+      "C_old_H0": null,
+      "center_time": 7,
+      "generator": "B",
+      "high_digit_index": 2,
+      "intermediate_low_power": 4,
+      "old_power": 3,
+      "target_power": 5
+    },
+    {
+      "C_old_H0": 0,
+      "center_time": 18,
+      "generator": "C",
+      "high_digit_index": 8,
+      "intermediate_low_power": 9,
+      "old_power": 8,
+      "target_power": 10
+    },
+    {
+      "C_old_H0": null,
+      "center_time": 19,
+      "generator": "B",
+      "high_digit_index": 8,
+      "intermediate_low_power": 10,
+      "old_power": 9,
+      "target_power": 11
+    }
+  ],
+  "origin_controls": [
+    {
+      "generator": "B",
+      "input": 0,
+      "intermediate_digit": 1,
+      "rho0": 1,
+      "two_time_digit": 2
+    },
+    {
+      "generator": "B",
+      "input": 1,
+      "intermediate_digit": 2,
+      "rho0": 0,
+      "two_time_digit": 3
+    },
+    {
+      "generator": "B",
+      "input": 2,
+      "intermediate_digit": 3,
+      "rho0": 1,
+      "two_time_digit": 0
+    },
+    {
+      "generator": "B",
+      "input": 3,
+      "intermediate_digit": 0,
+      "rho0": 0,
+      "two_time_digit": 1
+    },
+    {
+      "generator": "C",
+      "input": 0,
+      "intermediate_digit": 3,
+      "rho0": 1,
+      "two_time_digit": 0
+    },
+    {
+      "generator": "C",
+      "input": 1,
+      "intermediate_digit": 2,
+      "rho0": 0,
+      "two_time_digit": 1
+    },
+    {
+      "generator": "C",
+      "input": 2,
+      "intermediate_digit": 1,
+      "rho0": 1,
+      "two_time_digit": 2
+    },
+    {
+      "generator": "C",
+      "input": 3,
+      "intermediate_digit": 0,
+      "rho0": 0,
+      "two_time_digit": 3
+    }
+  ],
+  "saved_actual_time_four_control": {
+    "A_period": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "gray_scan_initial_and_final_carry": 1,
+    "old_gray": "0^infinity",
+    "old_ray": "(03)^infinity",
+    "output_period": [
+      2,
+      3,
+      3,
+      2
+    ],
+    "p_period": [
+      0,
+      1,
+      1,
+      0
+    ],
+    "q_period": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "saved_exponents_read": [
+      4,
+      6
+    ],
+    "zero_orbit_cascades_rebuilt": 0
+  },
+  "scope": "Exact two-time B/C rise-reset high field with both center parities expressed as high queries; the intermediate low field remains charged. Three affine scans for full output, no improved step work or P3 query bound",
+  "source_sha256": {
+    "docs/rule30/RESULTS-p3/RESULTS-p3-actual-b-query.md": "f3392d88edf726456f6adef4f4dcad02660942543671d8cfa25f2b19b8731933",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-b-two-channel-block.md": "3ee36823c8a8483f2f211690ae9019777f91615e0895671df6593f441dc07102",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-two-affine-scans.md": "b8bf00117dc2bd7ef10ff4f9aa08f7ac51923b0432974080a9bcfbe3fae4aa18",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-two-time-rise-reset.md": "00a98d23ca2275eed49d454c2ea13fb2868fbbf9bf2d71fa72f4adf90010cafd",
+    "experiments/rule30/p3-b-two-channel-block.json": "f65630422920bf82fd74d717d82370583a863b1d8a24baad08e120d538ac5399",
+    "experiments/rule30/p3_two_time_rise_reset.py": "c4ec625d72218696a76704d29fa5168ba444d198df389fd4176a190e1e4512cd"
+  },
+  "status": "PASS",
+  "verified_saved_source_hashes": {
+    "p3_b_two_channel_block.py": "66c3e8ec79d16cf0b56eb28ede27051f42196788b96132989fc6f5eb42724fc6",
+    "p3_itinerary_repeat_transduction.py": "6b831945647306f0089a6bbcad91a529a74ece954d0240692dff070272b7aa72"
+  },
+  "zero_gray_induction_local_cases": [
+    [
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      1
+    ]
+  ]
+}

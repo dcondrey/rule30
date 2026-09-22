@@ -1,0 +1,855 @@
+{
+  "schema": "rule30.p3-local-evaluation-barrier.v1",
+  "model": "Singleton initial/boundary facts and local single-gate truth-table inference; all other dependencies retained.",
+  "local_certificates": [
+    {
+      "rule": 30,
+      "all_27_partial_assignments_checked": true,
+      "every_forcing_cube_needs_left_and_another_parent": true,
+      "forcing_cubes": 12,
+      "table": [
+        {
+          "partial": [
+            null,
+            null,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            null,
+            0
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            null,
+            1
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            0,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            0,
+            0
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            0,
+            1
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            1,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            1,
+            0
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            1,
+            1
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            0,
+            null,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            0,
+            null,
+            0
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            0,
+            null,
+            1
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            0,
+            0,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            0,
+            0,
+            0
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            0,
+            0,
+            1
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            0,
+            1,
+            null
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            0,
+            1,
+            0
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            0,
+            1,
+            1
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            1,
+            null,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            1,
+            null,
+            0
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            1,
+            null,
+            1
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            1,
+            0,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            1,
+            0,
+            0
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            1,
+            0,
+            1
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            1,
+            1,
+            null
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            1,
+            1,
+            0
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            1,
+            1,
+            1
+          ],
+          "output": 0
+        }
+      ]
+    },
+    {
+      "rule": 90,
+      "all_27_partial_assignments_checked": true,
+      "every_forcing_cube_needs_left_and_another_parent": true,
+      "forcing_cubes": 12,
+      "table": [
+        {
+          "partial": [
+            null,
+            null,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            null,
+            0
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            null,
+            1
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            0,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            0,
+            0
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            0,
+            1
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            1,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            1,
+            0
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            null,
+            1,
+            1
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            0,
+            null,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            0,
+            null,
+            0
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            0,
+            null,
+            1
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            0,
+            0,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            0,
+            0,
+            0
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            0,
+            0,
+            1
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            0,
+            1,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            0,
+            1,
+            0
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            0,
+            1,
+            1
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            1,
+            null,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            1,
+            null,
+            0
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            1,
+            null,
+            1
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            1,
+            0,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            1,
+            0,
+            0
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            1,
+            0,
+            1
+          ],
+          "output": 0
+        },
+        {
+          "partial": [
+            1,
+            1,
+            null
+          ],
+          "output": null
+        },
+        {
+          "partial": [
+            1,
+            1,
+            0
+          ],
+          "output": 1
+        },
+        {
+          "partial": [
+            1,
+            1,
+            1
+          ],
+          "output": 0
+        }
+      ]
+    }
+  ],
+  "finite_set_geometry_controls": 242,
+  "arbitrary_policy_derivation_controls": [
+    {
+      "n": 17,
+      "rule": 30,
+      "center": 0,
+      "distinct_local_inferences": 104,
+      "distinct_free_facts": 22,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 52,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 30,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 30,
+      "center": 0,
+      "distinct_local_inferences": 104,
+      "distinct_free_facts": 22,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 52,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 30,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 30,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 30,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 30,
+      "center": 0,
+      "distinct_local_inferences": 140,
+      "distinct_free_facts": 29,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 76,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": "adaptive"
+    },
+    {
+      "n": 17,
+      "rule": 90,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 90,
+      "center": 0,
+      "distinct_local_inferences": 81,
+      "distinct_free_facts": 18,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 45,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 90,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 90,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 90,
+      "center": 0,
+      "distinct_local_inferences": 81,
+      "distinct_free_facts": 18,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 45,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 90,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "n": 17,
+      "rule": 90,
+      "center": 0,
+      "distinct_local_inferences": 145,
+      "distinct_free_facts": 35,
+      "certified_lower_bound": 45,
+      "upper_half_inferences": 81,
+      "all_nodes_reachable_from_query": true,
+      "all_local_truth_table_inferences_checked": true,
+      "policy": "adaptive"
+    }
+  ],
+  "negative_controls_rejected": [
+    "remove_required_left",
+    "flip_boundary_fact",
+    "flip_center"
+  ],
+  "example_derivation": {
+    "schema": "rule30.local-derivation.v1",
+    "n": 5,
+    "rule": 30,
+    "center": 1,
+    "policy": "adaptive",
+    "nodes": [
+      [
+        0,
+        -1,
+        0,
+        []
+      ],
+      [
+        0,
+        0,
+        1,
+        []
+      ],
+      [
+        1,
+        -2,
+        0,
+        []
+      ],
+      [
+        1,
+        -1,
+        1,
+        []
+      ],
+      [
+        1,
+        0,
+        1,
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        1,
+        1,
+        1,
+        []
+      ],
+      [
+        2,
+        -3,
+        0,
+        []
+      ],
+      [
+        2,
+        -2,
+        1,
+        []
+      ],
+      [
+        2,
+        -1,
+        1,
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      [
+        2,
+        0,
+        0,
+        [
+          2,
+          0
+        ]
+      ],
+      [
+        2,
+        1,
+        0,
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        2,
+        2,
+        1,
+        []
+      ],
+      [
+        3,
+        -2,
+        1,
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      [
+        3,
+        -1,
+        0,
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      [
+        3,
+        0,
+        1,
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      [
+        3,
+        1,
+        1,
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      [
+        4,
+        -1,
+        0,
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      [
+        4,
+        0,
+        1,
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      [
+        4,
+        1,
+        0,
+        [
+          1,
+          0
+        ]
+      ],
+      [
+        5,
+        0,
+        1,
+        [
+          2,
+          1,
+          0
+        ]
+      ]
+    ]
+  },
+  "theorem": "Every model derivation at horizon n uses at least (k+1)(k+2)/2 distinct nonboundary inferences, k=floor((n-1)/2).",
+  "scope": "An all-length lower bound for this local derivation model only. Rule90 has the same barrier here and a separate logarithmic-time center algorithm.",
+  "source_sha256": "194df51c4ed82b392526b46f2bb2af79218d9a6780c3e7347c40cbf123fa4032",
+  "seconds": 0.03139141699648462
+}

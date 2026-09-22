@@ -1,0 +1,9903 @@
+{
+ "T": 1048576,
+ "common_range": 1048563,
+ "lags": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12
+ ],
+ "records_sha256": "550184d89b8174bf7c750cf21e01357df2f1b93923e82a6a84ecf09d2dd6a53d",
+ "script_sha256": "a64f1662e1de7f2f73e0c3cca3e9140f01c4eb44dc98083959f8cc15ea6dd349",
+ "gates": {
+  "G1_records_sha256": true,
+  "G3_identity": true,
+  "G7_light_cone": true,
+  "G2_lag0_matches_committed_fixture": true,
+  "G4_shape_independence": true,
+  "G5_repeated_pairs_lag_invariant": true,
+  "G6_null_within_2_of_birthday": true
+ },
+ "claim_s": {
+  "radius": 18,
+  "pair": [
+   544690,
+   987828
+  ],
+  "off_centre_shapes": 361,
+  "all_shapes_agree": true,
+  "currents": [
+   54,
+   474
+  ],
+  "current_differs": true,
+  "separating_cells_outside": [
+   -30,
+   -27,
+   -23,
+   -22,
+   -20,
+   20,
+   21,
+   24,
+   25,
+   28
+  ],
+  "successor_separating_cells_outside": [
+   -29,
+   -27,
+   -26,
+   -24,
+   -20,
+   -19,
+   19,
+   22,
+   24,
+   25,
+   26,
+   28,
+   29
+  ],
+  "control_met": true
+ },
+ "null_seed": 20260919,
+ "predicted_birthday": {
+  "r_pair": 18,
+  "r_half": 19
+ },
+ "orbit_horizons": {
+  "0": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "1": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "2": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "3": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "4": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "5": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "6": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "8": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "10": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "12": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  }
+ },
+ "null_horizons": {
+  "0": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "1": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "2": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "3": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "4": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "5": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "6": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "8": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "10": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  },
+  "12": {
+   "r_pair": 18,
+   "r_one": 18,
+   "r_half": 19
+  }
+ },
+ "equal_current_rate_r9": {
+  "0": {
+   "orbit_equal": 326,
+   "orbit_pairs": 304018,
+   "null_equal": 359,
+   "null_pairs": 304337,
+   "z": -1.261,
+   "flagged": false
+  },
+  "1": {
+   "orbit_equal": 346,
+   "orbit_pairs": 304018,
+   "null_equal": 346,
+   "null_pairs": 304337,
+   "z": 0.0,
+   "flagged": false
+  },
+  "2": {
+   "orbit_equal": 316,
+   "orbit_pairs": 304018,
+   "null_equal": 320,
+   "null_pairs": 304337,
+   "z": -0.159,
+   "flagged": false
+  },
+  "3": {
+   "orbit_equal": 321,
+   "orbit_pairs": 304018,
+   "null_equal": 336,
+   "null_pairs": 304337,
+   "z": -0.585,
+   "flagged": false
+  },
+  "4": {
+   "orbit_equal": 324,
+   "orbit_pairs": 304018,
+   "null_equal": 321,
+   "null_pairs": 304337,
+   "z": 0.118,
+   "flagged": false
+  },
+  "5": {
+   "orbit_equal": 337,
+   "orbit_pairs": 304018,
+   "null_equal": 377,
+   "null_pairs": 304337,
+   "z": -1.497,
+   "flagged": false
+  },
+  "6": {
+   "orbit_equal": 341,
+   "orbit_pairs": 304018,
+   "null_equal": 311,
+   "null_pairs": 304337,
+   "z": 1.175,
+   "flagged": false
+  },
+  "8": {
+   "orbit_equal": 324,
+   "orbit_pairs": 304018,
+   "null_equal": 356,
+   "null_pairs": 304337,
+   "z": -1.227,
+   "flagged": false
+  },
+  "10": {
+   "orbit_equal": 363,
+   "orbit_pairs": 304018,
+   "null_equal": 338,
+   "null_pairs": 304337,
+   "z": 0.944,
+   "flagged": false
+  },
+  "12": {
+   "orbit_equal": 341,
+   "orbit_pairs": 304018,
+   "null_equal": 321,
+   "null_pairs": 304337,
+   "z": 0.777,
+   "flagged": false
+  }
+ },
+ "full_range_lag0": [
+  {
+   "r": 0,
+   "distinct": 2,
+   "repeated_pairs": 1048571,
+   "killing_pairs": 11760,
+   "first_killing_pair": [
+    801432,
+    1032928
+   ],
+   "returns": 1048573,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    1,
+    1
+   ]
+  },
+  {
+   "r": 1,
+   "distinct": 8,
+   "repeated_pairs": 1048551,
+   "killing_pairs": 56153,
+   "first_killing_pair": [
+    1031895,
+    1032928
+   ],
+   "returns": 1048567,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    6,
+    11
+   ]
+  },
+  {
+   "r": 2,
+   "distinct": 32,
+   "repeated_pairs": 1048479,
+   "killing_pairs": 173516,
+   "first_killing_pair": [
+    999856,
+    1001969
+   ],
+   "returns": 1048543,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    1,
+    3
+   ]
+  },
+  {
+   "r": 3,
+   "distinct": 128,
+   "repeated_pairs": 1048191,
+   "killing_pairs": 446749,
+   "first_killing_pair": [
+    629238,
+    999856
+   ],
+   "returns": 1048447,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    -19,
+    1
+   ]
+  },
+  {
+   "r": 4,
+   "distinct": 512,
+   "repeated_pairs": 1047039,
+   "killing_pairs": 783254,
+   "first_killing_pair": [
+    917186,
+    999856
+   ],
+   "returns": 1048063,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    17,
+    55
+   ]
+  },
+  {
+   "r": 5,
+   "distinct": 2048,
+   "repeated_pairs": 1042431,
+   "killing_pairs": 961974,
+   "first_killing_pair": [
+    866794,
+    931558
+   ],
+   "returns": 1046527,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    89,
+    200
+   ]
+  },
+  {
+   "r": 6,
+   "distinct": 8192,
+   "repeated_pairs": 1023999,
+   "killing_pairs": 1002906,
+   "first_killing_pair": [
+    101063,
+    391122
+   ],
+   "returns": 1040383,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    10752,
+    21149
+   ]
+  },
+  {
+   "r": 7,
+   "distinct": 32768,
+   "repeated_pairs": 950286,
+   "killing_pairs": 945069,
+   "first_killing_pair": [
+    391122,
+    981065
+   ],
+   "returns": 1015807,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    14089,
+    28499
+   ]
+  },
+  {
+   "r": 8,
+   "distinct": 131030,
+   "repeated_pairs": 693180,
+   "killing_pairs": 691871,
+   "first_killing_pair": [
+    296406,
+    978014
+   ],
+   "returns": 917545,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    1331,
+    2631
+   ]
+  },
+  {
+   "r": 9,
+   "distinct": 453607,
+   "repeated_pairs": 304025,
+   "killing_pairs": 303699,
+   "first_killing_pair": [
+    101063,
+    212834
+   ],
+   "returns": 594968,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    85387,
+    170402
+   ]
+  },
+  {
+   "r": 10,
+   "distinct": 825465,
+   "repeated_pairs": 91546,
+   "killing_pairs": 91457,
+   "first_killing_pair": [
+    613666,
+    762739
+   ],
+   "returns": 223110,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    55636,
+    111771
+   ]
+  },
+  {
+   "r": 11,
+   "distinct": 985966,
+   "repeated_pairs": 23877,
+   "killing_pairs": 23853,
+   "first_killing_pair": [
+    553726,
+    573951
+   ],
+   "returns": 62609,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    74453,
+    149073
+   ]
+  },
+  {
+   "r": 12,
+   "distinct": 1032617,
+   "repeated_pairs": 5966,
+   "killing_pairs": 5959,
+   "first_killing_pair": [
+    168626,
+    356498
+   ],
+   "returns": 15958,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    10379,
+    20225
+   ]
+  },
+  {
+   "r": 13,
+   "distinct": 1044624,
+   "repeated_pairs": 1479,
+   "killing_pairs": 1477,
+   "first_killing_pair": [
+    389328,
+    415857
+   ],
+   "returns": 3951,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    47143,
+    93936
+   ]
+  },
+  {
+   "r": 14,
+   "distinct": 1047599,
+   "repeated_pairs": 352,
+   "killing_pairs": 352,
+   "first_killing_pair": [
+    66772,
+    744943
+   ],
+   "returns": 976,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    339385,
+    678171
+   ]
+  },
+  {
+   "r": 15,
+   "distinct": 1048347,
+   "repeated_pairs": 82,
+   "killing_pairs": 82,
+   "first_killing_pair": [
+    149548,
+    171478
+   ],
+   "returns": 228,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    339385,
+    678171
+   ]
+  },
+  {
+   "r": 16,
+   "distinct": 1048515,
+   "repeated_pairs": 23,
+   "killing_pairs": 23,
+   "first_killing_pair": [
+    75287,
+    523336
+   ],
+   "returns": 60,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    93133,
+    186657
+   ]
+  },
+  {
+   "r": 17,
+   "distinct": 1048562,
+   "repeated_pairs": 4,
+   "killing_pairs": 4,
+   "first_killing_pair": [
+    544690,
+    987828
+   ],
+   "returns": 13,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    224479,
+    448049
+   ]
+  },
+  {
+   "r": 18,
+   "distinct": 1048572,
+   "repeated_pairs": 2,
+   "killing_pairs": 2,
+   "first_killing_pair": [
+    544690,
+    987828
+   ],
+   "returns": 3,
+   "all_rho": true,
+   "half": true,
+   "rho_first": [
+    110580,
+    221569
+   ]
+  },
+  {
+   "r": 19,
+   "distinct": 1048574,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 1,
+   "all_rho": false,
+   "half": true,
+   "rho_first": [
+    110580,
+    221569
+   ]
+  },
+  {
+   "r": 20,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 21,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 22,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 23,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 24,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 25,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 26,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 27,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 28,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 29,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 30,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  },
+  {
+   "r": 31,
+   "distinct": 1048575,
+   "repeated_pairs": 0,
+   "killing_pairs": 0,
+   "first_killing_pair": null,
+   "returns": 0,
+   "all_rho": false,
+   "half": false
+  }
+ ],
+ "orbit": {
+  "0": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11760,
+    "first_killing_pair": [
+     801432,
+     1032928
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56153,
+    "first_killing_pair": [
+     1031895,
+     1032928
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     6,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173516,
+    "first_killing_pair": [
+     999856,
+     1001969
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     3
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446747,
+    "first_killing_pair": [
+     629238,
+     999856
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -19,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783246,
+    "first_killing_pair": [
+     917186,
+     999856
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     17,
+     55
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961962,
+    "first_killing_pair": [
+     866794,
+     931558
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     89,
+     200
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002894,
+    "first_killing_pair": [
+     101063,
+     391122
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10752,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 945057,
+    "first_killing_pair": [
+     391122,
+     981065
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     14089,
+     28499
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691860,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1331,
+     2631
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303692,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     85387,
+     170402
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91454,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     55636,
+     111771
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23853,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     74453,
+     149073
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5959,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10379,
+     20225
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1477,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     47143,
+     93936
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339385,
+     678171
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339385,
+     678171
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     93133,
+     186657
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224479,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     110580,
+     221569
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     110580,
+     221569
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "1": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11756,
+    "first_killing_pair": [
+     863756,
+     1032927
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56097,
+    "first_killing_pair": [
+     1023596,
+     1032927
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     3,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173472,
+    "first_killing_pair": [
+     1001968,
+     1032927
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     4,
+     9
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446657,
+    "first_killing_pair": [
+     629237,
+     1001968
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     4,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783368,
+    "first_killing_pair": [
+     629237,
+     693938
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     8,
+     11
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961939,
+    "first_killing_pair": [
+     963221,
+     1033552
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     41,
+     100
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002702,
+    "first_killing_pair": [
+     296407,
+     978014
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10697,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944940,
+    "first_killing_pair": [
+     391122,
+     978014
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     14441,
+     28499
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691815,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     47105,
+     94716
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303672,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     170847,
+     340804
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91452,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     56288,
+     111771
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23851,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     2008,
+     4029
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5962,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     9819,
+     20225
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1476,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     31491,
+     62624
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339532,
+     678171
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339532,
+     678171
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     92800,
+     186657
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224446,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     110790,
+     221569
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     110790,
+     221569
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "2": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11763,
+    "first_killing_pair": [
+     863755,
+     1036822
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     4
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56118,
+    "first_killing_pair": [
+     967059,
+     1011137
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     4,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173458,
+    "first_killing_pair": [
+     709861,
+     1023595
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11,
+     18
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446707,
+    "first_killing_pair": [
+     847443,
+     852750
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     4,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 782878,
+    "first_killing_pair": [
+     558840,
+     833613
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     29,
+     55
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961653,
+    "first_killing_pair": [
+     841529,
+     963220
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11,
+     25
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002719,
+    "first_killing_pair": [
+     638113,
+     963220
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10839,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944900,
+    "first_killing_pair": [
+     296406,
+     981065
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     14159,
+     28499
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691871,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     46837,
+     94716
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303702,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     341145,
+     681608
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91467,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     55898,
+     111771
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23861,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     75101,
+     149073
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5962,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10456,
+     20225
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1477,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     31453,
+     62624
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     113114,
+     226057
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     113114,
+     226057
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     93292,
+     186657
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     223831,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     110867,
+     221569
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     110867,
+     221569
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "3": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11735,
+    "first_killing_pair": [
+     1035765,
+     1036821
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56134,
+    "first_killing_pair": [
+     909642,
+     996161
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     5,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173564,
+    "first_killing_pair": [
+     547481,
+     991877
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     3
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446650,
+    "first_killing_pair": [
+     731202,
+     991877
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -6,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783325,
+    "first_killing_pair": [
+     852749,
+     1027854
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     6,
+     11
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 962093,
+    "first_killing_pair": [
+     446023,
+     945689
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     163,
+     400
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002977,
+    "first_killing_pair": [
+     446023,
+     1045138
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10865,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944904,
+    "first_killing_pair": [
+     978014,
+     981065
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     28353,
+     56998
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691820,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     47561,
+     94716
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303697,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     342409,
+     681608
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91476,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     56054,
+     111771
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23855,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     74942,
+     149073
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5961,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10409,
+     20225
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1478,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     94265,
+     187872
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     113172,
+     226057
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     113172,
+     226057
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     93229,
+     186657
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224071,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     111061,
+     221569
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     111061,
+     221569
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "4": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11758,
+    "first_killing_pair": [
+     1036820,
+     1043004
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     2
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56173,
+    "first_killing_pair": [
+     578547,
+     909641
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     3,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173359,
+    "first_killing_pair": [
+     578547,
+     909641
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     2
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446841,
+    "first_killing_pair": [
+     852748,
+     991876
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     2,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783813,
+    "first_killing_pair": [
+     852748,
+     991876
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     31,
+     55
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 962059,
+    "first_killing_pair": [
+     852748,
+     1027853
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     187,
+     400
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002742,
+    "first_killing_pair": [
+     212834,
+     667606
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10788,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944845,
+    "first_killing_pair": [
+     391122,
+     978014
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     14180,
+     28499
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691794,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     23927,
+     47358
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303694,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     341725,
+     681608
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91458,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     55985,
+     111771
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23855,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     74624,
+     149073
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5958,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10238,
+     20225
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1478,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     94247,
+     187872
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339598,
+     678171
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339598,
+     678171
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     31202,
+     62219
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224349,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     110769,
+     221569
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     110769,
+     221569
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "5": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11745,
+    "first_killing_pair": [
+     859941,
+     1043003
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     0,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56102,
+    "first_killing_pair": [
+     727008,
+     909640
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     8,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173616,
+    "first_killing_pair": [
+     578546,
+     909640
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     4,
+     9
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 447320,
+    "first_killing_pair": [
+     578546,
+     909640
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     7,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783907,
+    "first_killing_pair": [
+     781223,
+     991875
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     21,
+     55
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961772,
+    "first_killing_pair": [
+     981066,
+     991875
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     12,
+     25
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002662,
+    "first_killing_pair": [
+     930345,
+     981066
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10700,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944955,
+    "first_killing_pair": [
+     391122,
+     978014
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     14158,
+     28499
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691813,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11867,
+     23679
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303681,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     85399,
+     170402
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91460,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     55442,
+     111771
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23858,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     74680,
+     149073
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5961,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10034,
+     20225
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1478,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     4981,
+     9888
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339731,
+     678171
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339731,
+     678171
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     92746,
+     186657
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224124,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     222285,
+     443138
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     222285,
+     443138
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "6": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11734,
+    "first_killing_pair": [
+     1019369,
+     1043002
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     4
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56176,
+    "first_killing_pair": [
+     961274,
+     1047882
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     8,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173451,
+    "first_killing_pair": [
+     991874,
+     1025030
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1,
+     3
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 447206,
+    "first_killing_pair": [
+     863896,
+     991874
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -3,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783246,
+    "first_killing_pair": [
+     981065,
+     991874
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     16,
+     55
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961579,
+    "first_killing_pair": [
+     981065,
+     991874
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     197,
+     400
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002526,
+    "first_killing_pair": [
+     981065,
+     991874
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10853,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944865,
+    "first_killing_pair": [
+     296406,
+     981065
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     28351,
+     56998
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691813,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     47423,
+     94716
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303677,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     341487,
+     681608
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91461,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     18652,
+     37257
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23860,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     4400,
+     8769
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5961,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     9977,
+     20225
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1477,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     31523,
+     62624
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339653,
+     678171
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339653,
+     678171
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     93694,
+     186657
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224681,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     221935,
+     443138
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     221935,
+     443138
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "8": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11794,
+    "first_killing_pair": [
+     1019367,
+     1043000
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     3,
+     4
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56033,
+    "first_killing_pair": [
+     859292,
+     1032920
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     4,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173341,
+    "first_killing_pair": [
+     912038,
+     984898
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     8,
+     9
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446571,
+    "first_killing_pair": [
+     723071,
+     787599
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -5,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783362,
+    "first_killing_pair": [
+     927222,
+     1026829
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     7,
+     11
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961681,
+    "first_killing_pair": [
+     927222,
+     930345
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     2,
+     5
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002639,
+    "first_killing_pair": [
+     606550,
+     930345
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10697,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944805,
+    "first_killing_pair": [
+     391122,
+     981065
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     14271,
+     28499
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691811,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11873,
+     23679
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303694,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     85303,
+     170402
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91453,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     56143,
+     111771
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23853,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     75040,
+     149073
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5959,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1946,
+     4045
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1477,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     94643,
+     187872
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339343,
+     678171
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339343,
+     678171
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     93076,
+     186657
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224150,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     110749,
+     221569
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     110749,
+     221569
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "10": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11783,
+    "first_killing_pair": [
+     863747,
+     1019365
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56167,
+    "first_killing_pair": [
+     967051,
+     1019365
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     7,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173505,
+    "first_killing_pair": [
+     870739,
+     1019365
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     7,
+     18
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 447148,
+    "first_killing_pair": [
+     612329,
+     927224
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783054,
+    "first_killing_pair": [
+     639406,
+     965768
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     6,
+     11
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961399,
+    "first_killing_pair": [
+     446023,
+     1044690
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     23,
+     50
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002520,
+    "first_killing_pair": [
+     391123,
+     446023
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10850,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944866,
+    "first_killing_pair": [
+     296406,
+     981065
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     28101,
+     56998
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691791,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     47161,
+     94716
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303655,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     85265,
+     170402
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91455,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     18484,
+     37257
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23849,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     24840,
+     49691
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5962,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10969,
+     20225
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1479,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     94307,
+     187872
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339344,
+     678171
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339344,
+     678171
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     31202,
+     62219
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224410,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     110930,
+     221569
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     110930,
+     221569
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "12": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11779,
+    "first_killing_pair": [
+     963399,
+     1036812
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1,
+     2
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56167,
+    "first_killing_pair": [
+     893462,
+     963497
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     8,
+     11
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173393,
+    "first_killing_pair": [
+     787090,
+     986309
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     7,
+     18
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446412,
+    "first_killing_pair": [
+     675070,
+     986309
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     3,
+     1
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 782982,
+    "first_killing_pair": [
+     927222,
+     932656
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     32,
+     55
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961633,
+    "first_killing_pair": [
+     927222,
+     932656
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     87,
+     200
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002710,
+    "first_killing_pair": [
+     391123,
+     930345
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     10725,
+     21149
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950274,
+    "killing_pairs": 944853,
+    "first_killing_pair": [
+     978014,
+     981065
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     14219,
+     28499
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131030,
+    "repeated_pairs": 693169,
+    "killing_pairs": 691810,
+    "first_killing_pair": [
+     296406,
+     978014
+    ],
+    "returns": 917533,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     47293,
+     94716
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453606,
+    "repeated_pairs": 304018,
+    "killing_pairs": 303677,
+    "first_killing_pair": [
+     101063,
+     212834
+    ],
+    "returns": 594957,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     85533,
+     170402
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825459,
+    "repeated_pairs": 91543,
+    "killing_pairs": 91439,
+    "first_killing_pair": [
+     613666,
+     762739
+    ],
+    "returns": 223104,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     56329,
+     111771
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985955,
+    "repeated_pairs": 23877,
+    "killing_pairs": 23854,
+    "first_killing_pair": [
+     553726,
+     573951
+    ],
+    "returns": 62608,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     75173,
+     149073
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032605,
+    "repeated_pairs": 5966,
+    "killing_pairs": 5963,
+    "first_killing_pair": [
+     168626,
+     356498
+    ],
+    "returns": 15958,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     2044,
+     4045
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044612,
+    "repeated_pairs": 1479,
+    "killing_pairs": 1479,
+    "first_killing_pair": [
+     389328,
+     415857
+    ],
+    "returns": 3951,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     31439,
+     62624
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047587,
+    "repeated_pairs": 352,
+    "killing_pairs": 352,
+    "first_killing_pair": [
+     66772,
+     744943
+    ],
+    "returns": 976,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339145,
+     678171
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048335,
+    "repeated_pairs": 82,
+    "killing_pairs": 82,
+    "first_killing_pair": [
+     149548,
+     171478
+    ],
+    "returns": 228,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     339145,
+     678171
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048503,
+    "repeated_pairs": 23,
+    "killing_pairs": 23,
+    "first_killing_pair": [
+     75287,
+     523336
+    ],
+    "returns": 60,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     93194,
+     186657
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048550,
+    "repeated_pairs": 4,
+    "killing_pairs": 4,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 13,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     224368,
+     448049
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048560,
+    "repeated_pairs": 2,
+    "killing_pairs": 2,
+    "first_killing_pair": [
+     544690,
+     987828
+    ],
+    "returns": 3,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     110944,
+     221569
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     110944,
+     221569
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ]
+ },
+ "null": {
+  "0": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11778,
+    "first_killing_pair": [
+     27385,
+     47019
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     73,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56122,
+    "first_killing_pair": [
+     276348,
+     879743
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -848,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173550,
+    "first_killing_pair": [
+     326174,
+     546913
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     2829,
+     100
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446323,
+    "first_killing_pair": [
+     916110,
+     1014637
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1718,
+     19
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783398,
+    "first_killing_pair": [
+     626338,
+     787054
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     187,
+     36
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961606,
+    "first_killing_pair": [
+     907422,
+     968127
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -11805,
+     1522
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002495,
+    "first_killing_pair": [
+     621116,
+     907422
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -21931,
+     5380
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944863,
+    "first_killing_pair": [
+     384843,
+     907422
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     751,
+     4943
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691898,
+    "first_killing_pair": [
+     384843,
+     739465
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11160,
+     5519
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 303978,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     370669,
+     311954
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91725,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     166644,
+     167545
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24221,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     323139,
+     522487
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6100,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     238970,
+     281333
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1547,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     238970,
+     281333
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     212162,
+     540645
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11382,
+     2585
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -42363,
+     15709
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -42363,
+     15709
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     142204,
+     347373
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     31621,
+     41738
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "1": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11783,
+    "first_killing_pair": [
+     27384,
+     413090
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     73,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56106,
+    "first_killing_pair": [
+     948242,
+     965141
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -865,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173648,
+    "first_killing_pair": [
+     357319,
+     948242
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     2507,
+     100
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446790,
+    "first_killing_pair": [
+     948242,
+     1001953
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1388,
+     19
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 782705,
+    "first_killing_pair": [
+     335643,
+     961562
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     6559,
+     1188
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961643,
+    "first_killing_pair": [
+     335643,
+     1028488
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -12369,
+     1522
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002573,
+    "first_killing_pair": [
+     384843,
+     739465
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -11493,
+     2690
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944797,
+    "first_killing_pair": [
+     384843,
+     739465
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     583,
+     4943
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691884,
+    "first_killing_pair": [
+     384843,
+     739465
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     156369,
+     77266
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 303991,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     371131,
+     311954
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91724,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     167044,
+     167545
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24222,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     46112,
+     74641
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6101,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     237118,
+     281333
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1547,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     237118,
+     281333
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     212651,
+     540645
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11497,
+     2585
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -41897,
+     15709
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -41897,
+     15709
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     142556,
+     347373
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     173946,
+     229559
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "2": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11746,
+    "first_killing_pair": [
+     444843,
+     948241
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     506,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56140,
+    "first_killing_pair": [
+     81296,
+     538855
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1435,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173461,
+    "first_killing_pair": [
+     621116,
+     1001952
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     3089,
+     100
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446359,
+    "first_killing_pair": [
+     613516,
+     621116
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -4137,
+     38
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783297,
+    "first_killing_pair": [
+     313877,
+     621116
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1616,
+     297
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961653,
+    "first_killing_pair": [
+     384843,
+     621116
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -6344,
+     761
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002352,
+    "first_killing_pair": [
+     384843,
+     621116
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -11573,
+     2690
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944865,
+    "first_killing_pair": [
+     384843,
+     1027129
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     474,
+     4943
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691948,
+    "first_killing_pair": [
+     384843,
+     696797
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     78082,
+     38633
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 304017,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     185656,
+     155977
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91732,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     166832,
+     167545
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24231,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     323313,
+     522487
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6099,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     18274,
+     21641
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1546,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     18274,
+     21641
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     14153,
+     36043
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11809,
+     2585
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -84169,
+     31418
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -84169,
+     31418
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     141736,
+     347373
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     173743,
+     229559
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "3": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11778,
+    "first_killing_pair": [
+     413088,
+     683776
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     340,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56128,
+    "first_killing_pair": [
+     301839,
+     935061
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1695,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173514,
+    "first_killing_pair": [
+     296416,
+     774212
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1183,
+     50
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446823,
+    "first_killing_pair": [
+     578908,
+     776686
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -4153,
+     38
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783472,
+    "first_killing_pair": [
+     106509,
+     897027
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     6583,
+     1188
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 962041,
+    "first_killing_pair": [
+     373448,
+     497618
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -11837,
+     1522
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002583,
+    "first_killing_pair": [
+     373448,
+     688629
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -23317,
+     5380
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944960,
+    "first_killing_pair": [
+     104263,
+     384843
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1757,
+     19772
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691889,
+    "first_killing_pair": [
+     384843,
+     739465
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     78056,
+     38633
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 304001,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     371815,
+     311954
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91736,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     333927,
+     335090
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24233,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     46237,
+     74641
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6099,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239128,
+     281333
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1546,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239128,
+     281333
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 398,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     30241,
+     77235
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     23479,
+     5170
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -85779,
+     31418
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -85779,
+     31418
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     141170,
+     347373
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     173531,
+     229559
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "4": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11753,
+    "first_killing_pair": [
+     27381,
+     47015
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -298,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56138,
+    "first_killing_pair": [
+     47015,
+     724844
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1153,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173570,
+    "first_killing_pair": [
+     47015,
+     512766
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     487,
+     20
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446624,
+    "first_killing_pair": [
+     47015,
+     512766
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -3777,
+     38
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783564,
+    "first_killing_pair": [
+     147676,
+     769159
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1097,
+     198
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 962078,
+    "first_killing_pair": [
+     147676,
+     451575
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -11961,
+     1522
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002770,
+    "first_killing_pair": [
+     201286,
+     842335
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -5821,
+     1345
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944925,
+    "first_killing_pair": [
+     827334,
+     907422
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1021,
+     9886
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691926,
+    "first_killing_pair": [
+     384843,
+     739465
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     155839,
+     77266
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 304016,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     186449,
+     155977
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91737,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     333631,
+     335090
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24226,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     323189,
+     522487
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6099,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239228,
+     281333
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1546,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239228,
+     281333
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     42421,
+     108129
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     23043,
+     5170
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -43094,
+     15709
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -43094,
+     15709
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     141889,
+     347373
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     346193,
+     459118
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "5": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11743,
+    "first_killing_pair": [
+     27380,
+     923468
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -142,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56087,
+    "first_killing_pair": [
+     161698,
+     361916
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1115,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173570,
+    "first_killing_pair": [
+     160439,
+     778615
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     673,
+     25
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446998,
+    "first_killing_pair": [
+     233054,
+     814043
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1954,
+     19
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783605,
+    "first_killing_pair": [
+     16488,
+     688809
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     6659,
+     1188
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961914,
+    "first_killing_pair": [
+     106840,
+     839377
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -6266,
+     761
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002624,
+    "first_killing_pair": [
+     106840,
+     839377
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -11883,
+     2690
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944820,
+    "first_killing_pair": [
+     104263,
+     1027129
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     2229,
+     19772
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691859,
+    "first_killing_pair": [
+     696797,
+     739465
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     77713,
+     38633
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 303960,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     186454,
+     155977
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91722,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     333237,
+     335090
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24217,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     323278,
+     522487
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6097,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     18328,
+     21641
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1546,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     18328,
+     21641
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     42551,
+     108129
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11411,
+     2585
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -43152,
+     15709
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -43152,
+     15709
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     15633,
+     38597
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     346053,
+     459118
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "6": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11768,
+    "first_killing_pair": [
+     47013,
+     413085
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -67,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56094,
+    "first_killing_pair": [
+     101187,
+     383936
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1126,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173604,
+    "first_killing_pair": [
+     101187,
+     190766
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     115,
+     4
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 447102,
+    "first_killing_pair": [
+     369031,
+     605355
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -2196,
+     19
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783582,
+    "first_killing_pair": [
+     369031,
+     605355
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     3425,
+     594
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961647,
+    "first_killing_pair": [
+     55673,
+     931438
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -6360,
+     761
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002774,
+    "first_killing_pair": [
+     71102,
+     930797
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -6026,
+     1345
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944928,
+    "first_killing_pair": [
+     104263,
+     384843
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1499,
+     19772
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691930,
+    "first_killing_pair": [
+     384843,
+     739465
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     155399,
+     77266
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 304026,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     186270,
+     155977
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91743,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     334071,
+     335090
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24233,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     323215,
+     522487
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6100,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     238518,
+     281333
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1546,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     238518,
+     281333
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     70697,
+     180215
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     11262,
+     2585
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -86747,
+     31418
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -86747,
+     31418
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     140311,
+     347373
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     173098,
+     229559
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "8": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11766,
+    "first_killing_pair": [
+     47011,
+     413083
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -287,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56120,
+    "first_killing_pair": [
+     296411,
+     527996
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -650,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173542,
+    "first_killing_pair": [
+     399525,
+     661698
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     2197,
+     100
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446847,
+    "first_killing_pair": [
+     375475,
+     873755
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -3473,
+     38
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783750,
+    "first_killing_pair": [
+     450115,
+     832834
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1700,
+     297
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961913,
+    "first_killing_pair": [
+     645275,
+     1027129
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -12813,
+     1522
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002641,
+    "first_killing_pair": [
+     645275,
+     1027129
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -12327,
+     2690
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944851,
+    "first_killing_pair": [
+     696797,
+     1027129
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     941,
+     19772
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691925,
+    "first_killing_pair": [
+     696797,
+     739465
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     77620,
+     38633
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 303981,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     186396,
+     155977
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91740,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     335053,
+     335090
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24230,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     321467,
+     522487
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6100,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239023,
+     281333
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1546,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239023,
+     281333
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     70618,
+     180215
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1022,
+     235
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -86811,
+     31418
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -86811,
+     31418
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     141019,
+     347373
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     346451,
+     459118
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "10": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11756,
+    "first_killing_pair": [
+     248275,
+     879733
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     62,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56135,
+    "first_killing_pair": [
+     389904,
+     489989
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1211,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173551,
+    "first_killing_pair": [
+     389904,
+     497159
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1657,
+     100
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446561,
+    "first_killing_pair": [
+     497159,
+     600828
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1624,
+     19
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783433,
+    "first_killing_pair": [
+     600828,
+     698837
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     3191,
+     594
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 961739,
+    "first_killing_pair": [
+     245450,
+     679079
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -7146,
+     761
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002440,
+    "first_killing_pair": [
+     222744,
+     827334
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -24051,
+     5380
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944851,
+    "first_killing_pair": [
+     827334,
+     1027129
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     1181,
+     19772
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691911,
+    "first_killing_pair": [
+     384843,
+     739465
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     154709,
+     77266
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 303999,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     372409,
+     311954
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91733,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     335213,
+     335090
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24227,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     322695,
+     522487
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6098,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239634,
+     281333
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1547,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239634,
+     281333
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     211048,
+     540645
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     21053,
+     5170
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -85759,
+     31418
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -85759,
+     31418
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     47107,
+     115791
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     172869,
+     229559
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ],
+  "12": [
+   {
+    "r": 0,
+    "distinct": 2,
+    "repeated_pairs": 1048559,
+    "killing_pairs": 11749,
+    "first_killing_pair": [
+     538845,
+     749615
+    ],
+    "returns": 1048561,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -23,
+     1
+    ]
+   },
+   {
+    "r": 1,
+    "distinct": 8,
+    "repeated_pairs": 1048539,
+    "killing_pairs": 56240,
+    "first_killing_pair": [
+     60004,
+     749615
+    ],
+    "returns": 1048555,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -2221,
+     37
+    ]
+   },
+   {
+    "r": 2,
+    "distinct": 32,
+    "repeated_pairs": 1048467,
+    "killing_pairs": 173669,
+    "first_killing_pair": [
+     227927,
+     331524
+    ],
+    "returns": 1048531,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -51,
+     100
+    ]
+   },
+   {
+    "r": 3,
+    "distinct": 128,
+    "repeated_pairs": 1048179,
+    "killing_pairs": 446619,
+    "first_killing_pair": [
+     309398,
+     621106
+    ],
+    "returns": 1048435,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -1284,
+     19
+    ]
+   },
+   {
+    "r": 4,
+    "distinct": 512,
+    "repeated_pairs": 1047027,
+    "killing_pairs": 783591,
+    "first_killing_pair": [
+     309398,
+     621106
+    ],
+    "returns": 1048051,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     485,
+     99
+    ]
+   },
+   {
+    "r": 5,
+    "distinct": 2048,
+    "repeated_pairs": 1042419,
+    "killing_pairs": 962117,
+    "first_killing_pair": [
+     163107,
+     679079
+    ],
+    "returns": 1046515,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -7238,
+     761
+    ]
+   },
+   {
+    "r": 6,
+    "distinct": 8192,
+    "repeated_pairs": 1023987,
+    "killing_pairs": 1002638,
+    "first_killing_pair": [
+     163107,
+     214005
+    ],
+    "returns": 1040371,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -23061,
+     5380
+    ]
+   },
+   {
+    "r": 7,
+    "distinct": 32768,
+    "repeated_pairs": 950283,
+    "killing_pairs": 944865,
+    "first_killing_pair": [
+     26997,
+     384843
+    ],
+    "returns": 1015795,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     823,
+     9886
+    ]
+   },
+   {
+    "r": 8,
+    "distinct": 131023,
+    "repeated_pairs": 693266,
+    "killing_pairs": 691916,
+    "first_killing_pair": [
+     384843,
+     696797
+    ],
+    "returns": 917540,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     153903,
+     77266
+    ]
+   },
+   {
+    "r": 9,
+    "distinct": 453481,
+    "repeated_pairs": 304337,
+    "killing_pairs": 304016,
+    "first_killing_pair": [
+     71077,
+     666534
+    ],
+    "returns": 595082,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     372081,
+     311954
+    ]
+   },
+   {
+    "r": 10,
+    "distinct": 825451,
+    "repeated_pairs": 91815,
+    "killing_pairs": 91734,
+    "first_killing_pair": [
+     187705,
+     1020144
+    ],
+    "returns": 223112,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     67029,
+     67018
+    ]
+   },
+   {
+    "r": 11,
+    "distinct": 985645,
+    "repeated_pairs": 24249,
+    "killing_pairs": 24235,
+    "first_killing_pair": [
+     77135,
+     599622
+    ],
+    "returns": 62918,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     322737,
+     522487
+    ]
+   },
+   {
+    "r": 12,
+    "distinct": 1032340,
+    "repeated_pairs": 6104,
+    "killing_pairs": 6103,
+    "first_killing_pair": [
+     57511,
+     338844
+    ],
+    "returns": 16223,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239903,
+     281333
+    ]
+   },
+   {
+    "r": 13,
+    "distinct": 1044447,
+    "repeated_pairs": 1547,
+    "killing_pairs": 1546,
+    "first_killing_pair": [
+     600990,
+     1029673
+    ],
+    "returns": 4116,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     239903,
+     281333
+    ]
+   },
+   {
+    "r": 14,
+    "distinct": 1047485,
+    "repeated_pairs": 399,
+    "killing_pairs": 399,
+    "first_killing_pair": [
+     45884,
+     51054
+    ],
+    "returns": 1078,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     29998,
+     77235
+    ]
+   },
+   {
+    "r": 15,
+    "distinct": 1048304,
+    "repeated_pairs": 97,
+    "killing_pairs": 97,
+    "first_killing_pair": [
+     60786,
+     968886
+    ],
+    "returns": 259,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     19799,
+     5170
+    ]
+   },
+   {
+    "r": 16,
+    "distinct": 1048498,
+    "repeated_pairs": 22,
+    "killing_pairs": 22,
+    "first_killing_pair": [
+     787161,
+     818579
+    ],
+    "returns": 65,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -85221,
+     31418
+    ]
+   },
+   {
+    "r": 17,
+    "distinct": 1048548,
+    "repeated_pairs": 5,
+    "killing_pairs": 5,
+    "first_killing_pair": [
+     230520,
+     577893
+    ],
+    "returns": 15,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     -85221,
+     31418
+    ]
+   },
+   {
+    "r": 18,
+    "distinct": 1048559,
+    "repeated_pairs": 1,
+    "killing_pairs": 1,
+    "first_killing_pair": [
+     65141,
+     524259
+    ],
+    "returns": 4,
+    "all_rho": true,
+    "half": true,
+    "rho_first": [
+     142178,
+     347373
+    ]
+   },
+   {
+    "r": 19,
+    "distinct": 1048562,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 1,
+    "all_rho": false,
+    "half": true,
+    "rho_first": [
+     346705,
+     459118
+    ]
+   },
+   {
+    "r": 20,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 21,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 22,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 23,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 24,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 25,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 26,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 27,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 28,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 29,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 30,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   },
+   {
+    "r": 31,
+    "distinct": 1048563,
+    "repeated_pairs": 0,
+    "killing_pairs": 0,
+    "first_killing_pair": null,
+    "returns": 0,
+    "all_rho": false,
+    "half": false
+   }
+  ]
+ }
+}

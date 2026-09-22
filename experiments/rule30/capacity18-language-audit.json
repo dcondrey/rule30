@@ -1,0 +1,740 @@
+{
+  "capacity_cap": 18,
+  "patterns": [
+    {
+      "parts": [
+        "21210"
+      ],
+      "scalars": "01",
+      "capacity": 6,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 0
+    },
+    {
+      "parts": [
+        "212100",
+        {
+          "repeat": "0"
+        }
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 1
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        }
+      ],
+      "scalars": "00",
+      "capacity": 6,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 2
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "0"
+      ],
+      "scalars": "11",
+      "capacity": 12,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 3
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "03"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 4
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "031",
+        {
+          "repeat": "31"
+        },
+        "3"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 5
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "1210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 7
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "1213",
+        {
+          "repeat": "13"
+        }
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 8
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        }
+      ],
+      "scalars": "00",
+      "capacity": 6,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 9
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "0"
+      ],
+      "scalars": "11",
+      "capacity": 12,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 10
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "03"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 11
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "031",
+        {
+          "repeat": "31"
+        },
+        "3"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 12
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "1210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 14
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "1213",
+        {
+          "repeat": "13"
+        }
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 15
+    },
+    {
+      "parts": [
+        "3"
+      ],
+      "scalars": "10",
+      "capacity": 1,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 16
+    },
+    {
+      "parts": [
+        "303"
+      ],
+      "scalars": "00",
+      "capacity": 2,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 17
+    },
+    {
+      "parts": [
+        "3030"
+      ],
+      "scalars": "11",
+      "capacity": 12,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 18
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 22
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "213",
+        {
+          "repeat": "13"
+        }
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 23
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "3"
+      ],
+      "scalars": "00",
+      "capacity": 6,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 24
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "30"
+      ],
+      "scalars": "11",
+      "capacity": 12,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 25
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "303"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 26
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "3"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 27
+    },
+    {
+      "parts": [
+        "303210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 29
+    },
+    {
+      "parts": [
+        "3032100",
+        {
+          "repeat": "0"
+        }
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 30
+    },
+    {
+      "parts": [
+        "30321210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 31
+    },
+    {
+      "parts": [
+        "30322",
+        {
+          "repeat": "2"
+        },
+        "10"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 33
+    },
+    {
+      "parts": [
+        "30322",
+        {
+          "repeat": "2"
+        },
+        "100",
+        {
+          "repeat": "0"
+        }
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 34
+    },
+    {
+      "parts": [
+        "30322",
+        {
+          "repeat": "2"
+        },
+        "1210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 35
+    },
+    {
+      "parts": [
+        "3210"
+      ],
+      "scalars": "01",
+      "capacity": 12,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 36
+    },
+    {
+      "parts": [
+        "32100",
+        {
+          "repeat": "0"
+        }
+      ],
+      "scalars": "01",
+      "capacity": 12,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 37
+    },
+    {
+      "parts": [
+        "321210"
+      ],
+      "scalars": "01",
+      "capacity": 12,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 39
+    }
+  ],
+  "new_capacity18_patterns": [
+    {
+      "parts": [
+        "212100",
+        {
+          "repeat": "0"
+        }
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 1
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "03"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 4
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "031",
+        {
+          "repeat": "31"
+        },
+        "3"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 5
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "1210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 7
+    },
+    {
+      "parts": [
+        "21213",
+        {
+          "repeat": "13"
+        },
+        "1213",
+        {
+          "repeat": "13"
+        }
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 8
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "03"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 11
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "031",
+        {
+          "repeat": "31"
+        },
+        "3"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 12
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "1210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 14
+    },
+    {
+      "parts": [
+        "213",
+        {
+          "repeat": "13"
+        },
+        "1213",
+        {
+          "repeat": "13"
+        }
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 15
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 22
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "213",
+        {
+          "repeat": "13"
+        }
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 23
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "303"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 26
+    },
+    {
+      "parts": [
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "3031",
+        {
+          "repeat": "31"
+        },
+        "3"
+      ],
+      "scalars": "00",
+      "capacity": 18,
+      "birth_suffix": "03",
+      "cap32_pattern_index": 27
+    },
+    {
+      "parts": [
+        "303210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 29
+    },
+    {
+      "parts": [
+        "3032100",
+        {
+          "repeat": "0"
+        }
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 30
+    },
+    {
+      "parts": [
+        "30321210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 31
+    },
+    {
+      "parts": [
+        "30322",
+        {
+          "repeat": "2"
+        },
+        "10"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 33
+    },
+    {
+      "parts": [
+        "30322",
+        {
+          "repeat": "2"
+        },
+        "100",
+        {
+          "repeat": "0"
+        }
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 34
+    },
+    {
+      "parts": [
+        "30322",
+        {
+          "repeat": "2"
+        },
+        "1210"
+      ],
+      "scalars": "01",
+      "capacity": 18,
+      "birth_suffix": "32",
+      "cap32_pattern_index": 35
+    }
+  ],
+  "number_of_patterns": 32,
+  "number_of_new_patterns": 19,
+  "new_pattern_counts_by_independent_stars": {
+    "0": 2,
+    "1": 10,
+    "2": 7
+  },
+  "capacities_present": [
+    1,
+    2,
+    6,
+    12,
+    18
+  ],
+  "previous_capacity17_language_is_exact_sublanguage": true,
+  "verification": {
+    "closed_product_states": 126,
+    "closed_product_edges": 504,
+    "all_lengths": true,
+    "labels_include_both_guards_and_exact_capacity": true
+  },
+  "explicit_original_fiber": {
+    "original_prefix_choices": [
+      "30011",
+      "30030",
+      "30031",
+      "31011",
+      "31030",
+      "31031"
+    ],
+    "original_suffix_choices": [
+      "1102",
+      "3002",
+      "3102"
+    ],
+    "original_word_form": "P 0^k S",
+    "all_nonnegative_k": true,
+    "second_bulk": "30322 (2)^k 1210",
+    "full_second_endpoint_birth_suffix": "32",
+    "first_two_scalars": "01",
+    "original_length": "k+9",
+    "prefix_terminal_column": [
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "original_zero_fixes_column_and_emits": 2,
+    "suffix_terminal_column": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "local_column_transitions_checked": 43,
+    "exact_fiber_size": 18,
+    "exhaustion_reason": "The 18 distinct words satisfy both guards and the exact endpoint; the complete cap18 language labels this fiber18 for every k."
+  },
+  "source_sha256": {
+    "capacity18_language_audit.py": "365c3772e905270ba855364160b75c17852c6a6da3b79a79bc30d82d9ea06636",
+    "capacity-32-language.json": "85b4c5414e7eddd436cd868f5585cabc557297040d6f77ea46894dd6b7def7e4",
+    "capacity-17-language.json": "177987dda9b6b6968325561b0051591656b541491a3d96715efb528be0aa65d5",
+    "capacity_language_decomposition.py": "babd3d1771e579452b0c5ca5a14012500e9ced147caffe73f5a8af3496cf6882",
+    "bounded_capacity_language.py": "c26120ef4f300972868a5163fa6f05f3021b0bf4426dd61d51cf42b7043c93c6",
+    "canonical_ancestry_certificate.py": "11485ffe3dcf9cb9b9a31839e9ad539e1d3d883f89e7bf7b2c1a31a9da1f9563"
+  },
+  "scope": "Every nonempty second bulk word, every original length, both original guards and both scalars. Exact full second endpoints are obtained by appending the listed birth suffix. This proves complete fiber-language classification, not mortality."
+}

@@ -1,0 +1,529 @@
+{
+  "status": "PASS",
+  "date": "2026-09-14",
+  "scope": "Conditional-affine factorization of the saved exact B equations, with a local Gray change and local observer; no improved step cost or actual B-power query algorithm",
+  "complete_raw_bitplane_local_table": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "complete_compatible_gray_seams": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "origin_digits": [
+    {
+      "input": 0,
+      "direct_output": 1,
+      "gray_output": [
+        1,
+        1
+      ]
+    },
+    {
+      "input": 1,
+      "direct_output": 2,
+      "gray_output": [
+        0,
+        1
+      ]
+    },
+    {
+      "input": 2,
+      "direct_output": 3,
+      "gray_output": [
+        1,
+        0
+      ]
+    },
+    {
+      "input": 3,
+      "direct_output": 0,
+      "gray_output": [
+        0,
+        0
+      ]
+    }
+  ],
+  "complete_eight_input_bit_prefix_checks": 256,
+  "joint_nonaffinity": {
+    "two_digit_inputs": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "raw_outputs": [
+      5,
+      14,
+      15,
+      0
+    ],
+    "raw_rectangle_xor": 4,
+    "local_gray_outputs": [
+      15,
+      6,
+      5,
+      0
+    ],
+    "gray_rectangle_xor": 12,
+    "scope": "arbitrary inputs; no actual seed ancestry is asserted"
+  },
+  "conditional_whole_field_affinity_controls": 8,
+  "directed_word_controls": [
+    {
+      "input": [
+        3
+      ],
+      "B_output": [
+        0
+      ],
+      "new_low": [
+        0
+      ],
+      "new_gray": [
+        0
+      ]
+    },
+    {
+      "input": [
+        0,
+        2,
+        1
+      ],
+      "B_output": [
+        1,
+        3,
+        2
+      ],
+      "new_low": [
+        1,
+        1,
+        0
+      ],
+      "new_gray": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "input": [
+        2,
+        0,
+        3,
+        1,
+        1,
+        0
+      ],
+      "B_output": [
+        3,
+        3,
+        0,
+        3,
+        2,
+        3
+      ],
+      "new_low": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "new_gray": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "actual_zero_seed_loop": {
+    "raw_B_initial_state": 1,
+    "input_digit": 0,
+    "output_digit": 1,
+    "next_state": 1,
+    "old_direct_planes": [
+      0,
+      0
+    ],
+    "new_direct_planes": [
+      1,
+      0
+    ],
+    "old_gray_planes": [
+      0,
+      0
+    ],
+    "new_gray_planes": [
+      1,
+      1
+    ]
+  },
+  "complete_local_marked_observer_cases": 64,
+  "boundaries": {
+    "direct_first_previous_Q": 0,
+    "direct_second_previous_P_Q": [
+      1,
+      0
+    ],
+    "gray_first_previous_old_Z_new_U": [
+      0,
+      1
+    ],
+    "gray_second_fictitious_previous_new_U_new_Z": [
+      0,
+      0
+    ]
+  },
+  "work_scope": "Each full update is two scalar scans plus local field conversion/readout; all input/output field construction remains charged",
+  "source_sha256": {
+    "experiments/rule30/p3_two_affine_scans.py": "eccf71400846b8b090833898398de8e8e6e70c6bf1050233128dc60faeb3c227",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-two-affine-scans.md": "b8bf00117dc2bd7ef10ff4f9aa08f7ac51923b0432974080a9bcfbe3fae4aa18",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-bitplane-temporal-squaring.md": "cc132a17255fcd00b337a71af4308d3b0e1fcd02b83653ba421880ad483b9a17",
+    "docs/rule30/RESULTS-p3/RESULTS-p3-actual-b-query.md": "f3392d88edf726456f6adef4f4dcad02660942543671d8cfa25f2b19b8731933"
+  }
+}

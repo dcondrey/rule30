@@ -1,0 +1,345 @@
+{
+  "schema": "rule30.p3-query-cone-rewrite.v1",
+  "status": "Exact query-specific suffix rewrite and half-width recurrence; no sublinear bound",
+  "verification": {
+    "suffix_cases": 624,
+    "sharp_threshold_witnesses": [
+      {
+        "suffix_length": 1,
+        "failing_bit": 1,
+        "original_word": "C",
+        "original_bit": 1,
+        "replaced_bit": 0
+      },
+      {
+        "suffix_length": 2,
+        "failing_bit": 3,
+        "original_word": "CA",
+        "original_bit": 1,
+        "replaced_bit": 0
+      },
+      {
+        "suffix_length": 3,
+        "failing_bit": 5,
+        "original_word": "CAA",
+        "original_bit": 1,
+        "replaced_bit": 0
+      },
+      {
+        "suffix_length": 4,
+        "failing_bit": 7,
+        "original_word": "CAAA",
+        "original_bit": 1,
+        "replaced_bit": 0
+      },
+      {
+        "suffix_length": 5,
+        "failing_bit": 9,
+        "original_word": "CAAAA",
+        "original_bit": 1,
+        "replaced_bit": 0
+      },
+      {
+        "suffix_length": 6,
+        "failing_bit": 11,
+        "original_word": "CAAAAA",
+        "original_bit": 1,
+        "replaced_bit": 0
+      },
+      {
+        "suffix_length": 7,
+        "failing_bit": 13,
+        "original_word": "CAAAAAA",
+        "original_bit": 1,
+        "replaced_bit": 0
+      },
+      {
+        "suffix_length": 8,
+        "failing_bit": 15,
+        "original_word": "CAAAAAAA",
+        "original_bit": 1,
+        "replaced_bit": 0
+      }
+    ],
+    "coupled_core_cases": 234,
+    "paid_query_controls": [
+      {
+        "n": 0,
+        "center": 1,
+        "core_steps": 0,
+        "drop_first_node_visits": 0,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 1,
+        "center": 1,
+        "active_word_length": 1,
+        "initial_grammar_nodes": 4,
+        "constructed_grammar_nodes": 4,
+        "section_requests": 0,
+        "distinct_section_subqueries": 0,
+        "concat_requests": 1,
+        "zero_bit_section_advances": 0,
+        "core_steps": 0,
+        "drop_first_node_visits": 0,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 2,
+        "center": 0,
+        "active_word_length": 2,
+        "initial_grammar_nodes": 5,
+        "constructed_grammar_nodes": 6,
+        "section_requests": 3,
+        "distinct_section_subqueries": 3,
+        "concat_requests": 3,
+        "zero_bit_section_advances": 1,
+        "core_steps": 0,
+        "drop_first_node_visits": 0,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 3,
+        "center": 1,
+        "active_word_length": 2,
+        "initial_grammar_nodes": 5,
+        "constructed_grammar_nodes": 8,
+        "section_requests": 6,
+        "distinct_section_subqueries": 5,
+        "concat_requests": 6,
+        "zero_bit_section_advances": 2,
+        "core_steps": 1,
+        "drop_first_node_visits": 2,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 4,
+        "center": 1,
+        "active_word_length": 3,
+        "initial_grammar_nodes": 6,
+        "constructed_grammar_nodes": 13,
+        "section_requests": 15,
+        "distinct_section_subqueries": 10,
+        "concat_requests": 11,
+        "zero_bit_section_advances": 3,
+        "core_steps": 1,
+        "drop_first_node_visits": 2,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 5,
+        "center": 1,
+        "active_word_length": 3,
+        "initial_grammar_nodes": 6,
+        "constructed_grammar_nodes": 16,
+        "section_requests": 20,
+        "distinct_section_subqueries": 12,
+        "concat_requests": 16,
+        "zero_bit_section_advances": 4,
+        "core_steps": 2,
+        "drop_first_node_visits": 5,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 6,
+        "center": 0,
+        "active_word_length": 4,
+        "initial_grammar_nodes": 6,
+        "constructed_grammar_nodes": 21,
+        "section_requests": 31,
+        "distinct_section_subqueries": 19,
+        "concat_requests": 22,
+        "zero_bit_section_advances": 5,
+        "core_steps": 2,
+        "drop_first_node_visits": 6,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 7,
+        "center": 0,
+        "active_word_length": 4,
+        "initial_grammar_nodes": 6,
+        "constructed_grammar_nodes": 26,
+        "section_requests": 36,
+        "distinct_section_subqueries": 21,
+        "concat_requests": 28,
+        "zero_bit_section_advances": 6,
+        "core_steps": 3,
+        "drop_first_node_visits": 10,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 16,
+        "center": 1,
+        "active_word_length": 9,
+        "initial_grammar_nodes": 8,
+        "constructed_grammar_nodes": 115,
+        "section_requests": 175,
+        "distinct_section_subqueries": 86,
+        "concat_requests": 125,
+        "zero_bit_section_advances": 15,
+        "core_steps": 7,
+        "drop_first_node_visits": 40,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 17,
+        "center": 0,
+        "active_word_length": 9,
+        "initial_grammar_nodes": 8,
+        "constructed_grammar_nodes": 129,
+        "section_requests": 190,
+        "distinct_section_subqueries": 93,
+        "concat_requests": 141,
+        "zero_bit_section_advances": 16,
+        "core_steps": 8,
+        "drop_first_node_visits": 49,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 32,
+        "center": 0,
+        "active_word_length": 17,
+        "initial_grammar_nodes": 9,
+        "constructed_grammar_nodes": 437,
+        "section_requests": 653,
+        "distinct_section_subqueries": 317,
+        "concat_requests": 469,
+        "zero_bit_section_advances": 31,
+        "core_steps": 15,
+        "drop_first_node_visits": 152,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 33,
+        "center": 1,
+        "active_word_length": 17,
+        "initial_grammar_nodes": 9,
+        "constructed_grammar_nodes": 467,
+        "section_requests": 684,
+        "distinct_section_subqueries": 332,
+        "concat_requests": 501,
+        "zero_bit_section_advances": 32,
+        "core_steps": 16,
+        "drop_first_node_visits": 169,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 64,
+        "center": 1,
+        "active_word_length": 33,
+        "initial_grammar_nodes": 10,
+        "constructed_grammar_nodes": 1708,
+        "section_requests": 2479,
+        "distinct_section_subqueries": 1214,
+        "concat_requests": 1791,
+        "zero_bit_section_advances": 63,
+        "core_steps": 31,
+        "drop_first_node_visits": 576,
+        "normalizer_calls": 0
+      },
+      {
+        "n": 65,
+        "center": 1,
+        "active_word_length": 33,
+        "initial_grammar_nodes": 10,
+        "constructed_grammar_nodes": 1770,
+        "section_requests": 2542,
+        "distinct_section_subqueries": 1245,
+        "concat_requests": 1855,
+        "zero_bit_section_advances": 64,
+        "core_steps": 32,
+        "drop_first_node_visits": 609,
+        "normalizer_calls": 0
+      }
+    ],
+    "integrated_pair_normalizer_controls": [
+      {
+        "query": {
+          "n": 8,
+          "center": 1,
+          "active_word_length": 5,
+          "initial_grammar_nodes": 7,
+          "constructed_grammar_nodes": 35,
+          "section_requests": 37,
+          "distinct_section_subqueries": 21,
+          "concat_requests": 53,
+          "zero_bit_section_advances": 7,
+          "core_steps": 3,
+          "drop_first_node_visits": 12,
+          "normalizer_calls": 4
+        },
+        "normalizer": {
+          "normalizations": 4,
+          "transduction_requests": 30,
+          "distinct_transduction_subqueries": 24,
+          "leaf_transductions": 11,
+          "changed_pair_occurrences": 5,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+          "changed_unpaired_final_letters": 0
+        },
+        "paid_distinct_section_and_transduction_subqueries": 45
+      },
+      {
+        "query": {
+          "n": 17,
+          "center": 0,
+          "active_word_length": 9,
+          "initial_grammar_nodes": 8,
+          "constructed_grammar_nodes": 116,
+          "section_requests": 132,
+          "distinct_section_subqueries": 64,
+          "concat_requests": 178,
+          "zero_bit_section_advances": 16,
+          "core_steps": 8,
+          "drop_first_node_visits": 46,
+          "normalizer_calls": 9
+        },
+        "normalizer": {
+          "normalizations": 9,
+          "transduction_requests": 101,
+          "distinct_transduction_subqueries": 70,
+          "leaf_transductions": 24,
+          "changed_pair_occurrences": 22,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 0,
+          "changed_unpaired_final_letters": 1
+        },
+        "paid_distinct_section_and_transduction_subqueries": 134
+      },
+      {
+        "query": {
+          "n": 32,
+          "center": 0,
+          "active_word_length": 17,
+          "initial_grammar_nodes": 9,
+          "constructed_grammar_nodes": 385,
+          "section_requests": 437,
+          "distinct_section_subqueries": 209,
+          "concat_requests": 559,
+          "zero_bit_section_advances": 31,
+          "core_steps": 15,
+          "drop_first_node_visits": 134,
+          "normalizer_calls": 16
+        },
+        "normalizer": {
+          "normalizations": 16,
+          "transduction_requests": 336,
+          "distinct_transduction_subqueries": 222,
+          "leaf_transductions": 62,
+          "changed_pair_occurrences": 78,
+          "genuine_pair_occurrences_beyond_single_C_to_B": 5,
+          "changed_unpaired_final_letters": 4
+        },
+        "paid_distinct_section_and_transduction_subqueries": 431
+      }
+    ],
+    "maximum_independent_query": 65
+  },
+  "source_sha256": {
+    "p3_query_cone_rewrite.py": "b77990ef8a3a223a44e1d61c498832fdfe52c65bd6d7931b8058a5f4a41fbca2",
+    "p3_dyadic_sections.py": "7ebc23d5f3c3b71cede6090f5339269f032925b220be601ca12e8a79be4b1d29",
+    "p3_observable_rewrite_pairs.py": "5e2456b9ed5277346f345418e79d525c13540d216bcf097fba1b052800d0ef34"
+  },
+  "all_length_proof": "See RESULTS-p3-query-cone-rewrite.md; finite controls validate implementation only.",
+  "sublinear_algorithm_proved": false
+}
