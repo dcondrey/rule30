@@ -1,0 +1,44 @@
+{
+  "schema": "rule30.p1-thue-morse-residual.v1",
+  "preregistration": "PREREGISTRATION-p1-thue-morse-residual.md",
+  "identity": "c_t = theta(t) XOR R_t for t >= 1 (record 0081391386ad06b3, proved)",
+  "trace": "experiments/rule30-subword-extended/rule30_center_8388608.bin",
+  "bit_order": "little",
+  "T": 8388608,
+  "samples": 8388607,
+  "lags_tested": 4194303,
+  "bonferroni_threshold": 5.700853120664559,
+  "expected_null_max_abs_z": 5.64666005962111,
+  "density": {
+    "residual": 0.500216066863068,
+    "column": 0.5002196431421808,
+    "null_sd": 0.0001726335017903808,
+    "residual_deviation_in_sd": 1.2515928879802432,
+    "column_deviation_in_sd": 1.2723089081950885
+  },
+  "residual_sweep": {
+    "max_z": 5.224398854961883,
+    "min_z": -5.05485233273846,
+    "max_abs_z": 5.224398854961883,
+    "argmax_abs_lag": 499563,
+    "fft_gate_max_error": 9.992007221626409e-16
+  },
+  "column_sweep": {
+    "max_z": 5.522031446083229,
+    "min_z": -5.270706217213129,
+    "max_abs_z": 5.522031446083229,
+    "argmax_abs_lag": 1656153,
+    "fft_gate_max_error": 9.992007221626409e-16
+  },
+  "max_abs_z_gap": 0.29763259112134577,
+  "empirical_null_max_abs_z_over_20_seeds": 5.689077274101523,
+  "control_rule90_residual_equals_thue_morse_exactly": true,
+  "control_note": "Exact array comparison over t in [1, 2^20), no threshold: for Rule 90 the centre column is 1 then identically 0, so R_t = theta(t) identically. This replaces the previous registration's unreachable numeric bar.",
+  "kills_fired": {
+    "Q1_density_outside_3sd": false,
+    "Q2_residual_exceeds_empirical_null": false,
+    "Q3_residual_column_gap_at_least_1": false
+  },
+  "verdict": "NO KILL: residual is not distinguishable from the column by these statistics",
+  "scope": "Finite T. Cannot establish R_t's asymptotics, which is what the identity's scope says is open, and cannot prove or refute P1 or P2. A null says the residual is not distinguishable from the column by these two statistics at this length, which is weaker than saying it has no structure. The identity is taken as given from 0081391386ad06b3 and is not re-derived; only its definition is rearranged."
+}
